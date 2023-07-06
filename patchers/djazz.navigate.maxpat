@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 148.0, 462.0, 846.0, 917.0 ],
+		"rect" : [ 282.0, 100.0, 1223.0, 966.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,65 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-42",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 272.91666666666697, 442.0, 282.83333333333394, 22.0 ],
+					"text" : "join 3"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-18",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 875.83333333333394, 142.0, 163.0, 60.0 ],
+					"text" : "grid position:   \"int int int\"\n1. chapter\n2.measure_pos_in_chapter \n3. beat_pos_in_measure"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"linecount" : 6,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 875.83333333333394, 46.0, 222.0, 87.0 ],
+					"text" : "chapter:   \"int int int int int\"\n1. chapter nunmber\n2. chapter start measure\n3. chapter end measure (not in chapter)\n4. chapter start beat\n5. chapter end beat (not in chapter)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 875.83333333333394, 17.0, 248.0, 20.0 ],
+					"text" : "DATA STRUCTURES (passed as symbols):"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 579.0, 622.0, 29.5, 22.0 ],
+					"text" : "zl"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-58",
 					"maxclass" : "newobj",
@@ -81,7 +140,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "bang", "bang" ],
-					"patching_rect" : [ 272.91666666666697, 396.0, 353.0, 22.0 ],
+					"patching_rect" : [ 272.91666666666697, 368.0, 282.83333333333394, 22.0 ],
 					"text" : "t i b b"
 				}
 
@@ -177,7 +236,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 272.91666666666697, 363.0, 79.0, 22.0 ],
+					"patching_rect" : [ 272.91666666666697, 335.0, 79.0, 22.0 ],
 					"text" : "r set_chapter"
 				}
 
@@ -200,7 +259,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 272.91666666666697, 546.0, 155.0, 22.0 ],
+					"patching_rect" : [ 272.91666666666697, 575.0, 155.0, 22.0 ],
 					"text" : "set_chapter $1 $2 $3 $4 $5"
 				}
 
@@ -212,7 +271,7 @@
 					"numinlets" : 5,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 272.91666666666697, 506.0, 353.0, 22.0 ],
+					"patching_rect" : [ 272.91666666666697, 535.0, 353.0, 22.0 ],
 					"text" : "pack 0 0 0 0 0"
 				}
 
@@ -224,7 +283,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 606.91666666666697, 432.0, 125.0, 22.0 ],
+					"patching_rect" : [ 404.83333333333394, 409.0, 125.0, 22.0 ],
 					"text" : "v beats_per_measure"
 				}
 
@@ -236,7 +295,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 439.91666666666697, 432.0, 163.0, 22.0 ],
+					"patching_rect" : [ 536.750000000000909, 409.0, 163.0, 22.0 ],
 					"text" : "v chapter_start_measure_list"
 				}
 
@@ -247,8 +306,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 3,
 					"numoutlets" : 5,
-					"outlettype" : [ "int", "", "", "int", "int" ],
-					"patching_rect" : [ 272.91666666666697, 469.0, 353.0, 22.0 ],
+					"outlettype" : [ "", "", "", "int", "int" ],
+					"patching_rect" : [ 272.91666666666697, 498.0, 353.0, 22.0 ],
 					"text" : "djazz.make_chapter"
 				}
 
@@ -483,7 +542,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-12", 2 ],
+					"destination" : [ "obj-42", 1 ],
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -521,7 +580,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-12", 1 ],
+					"destination" : [ "obj-42", 2 ],
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -675,22 +734,22 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
-					"source" : [ "obj-57", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
-					"source" : [ "obj-57", 2 ]
+					"source" : [ "obj-57", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
-					"source" : [ "obj-57", 1 ]
+					"source" : [ "obj-57", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-42", 0 ],
+					"source" : [ "obj-57", 0 ]
 				}
 
 			}
@@ -792,13 +851,6 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_measure_to_chapter.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{

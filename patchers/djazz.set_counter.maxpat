@@ -40,7 +40,7 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "sends messages setting counter to given min and max values, and sets counter's current value to given min. Causes no output in counter.",
 					"id" : "obj-2",
 					"index" : 1,
 					"maxclass" : "outlet",
