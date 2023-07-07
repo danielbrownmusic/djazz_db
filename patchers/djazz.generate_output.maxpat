@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 919.0, 535.0, 756.0, 647.0 ],
+		"rect" : [ 2458.0, 120.0, 776.0, 528.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,24 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 5,
+					"numoutlets" : 5,
+					"outlettype" : [ "", "", "", "", "" ],
+					"patching_rect" : [ 73.0, 37.0, 201.0, 22.0 ],
+					"text" : "route load next_beat goto_beat loop"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-13",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 290.0, 62.0, 85.0, 22.0 ],
+					"patching_rect" : [ 355.0, 266.0, 85.0, 22.0 ],
 					"text" : "prepend score"
 				}
 
@@ -54,12 +66,12 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-12",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 290.0, 18.0, 30.0, 30.0 ]
+					"patching_rect" : [ 355.0, 222.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -67,12 +79,12 @@
 				"box" : 				{
 					"comment" : "(int) beat number of events to play",
 					"id" : "obj-11",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 107.0, 18.0, 30.0, 30.0 ]
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 172.0, 222.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -80,11 +92,11 @@
 				"box" : 				{
 					"comment" : "bang when antescofo loaded score correctly",
 					"id" : "obj-8",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 217.5, 187.0, 30.0, 30.0 ]
+					"patching_rect" : [ 282.5, 391.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -92,11 +104,11 @@
 				"box" : 				{
 					"comment" : "(int int) event (pitch velocity)",
 					"id" : "obj-7",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 177.899999999999977, 187.0, 30.0, 30.0 ]
+					"patching_rect" : [ 242.899999999999977, 391.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -107,7 +119,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "int" ],
-					"patching_rect" : [ 107.0, 66.0, 29.5, 22.0 ],
+					"patching_rect" : [ 172.0, 270.0, 29.5, 22.0 ],
 					"text" : "t b i"
 				}
 
@@ -118,8 +130,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 6,
-					"outlettype" : [ "", "float", "symbol", "float", "list", "bang" ],
-					"patching_rect" : [ 19.5, 134.0, 217.0, 22.0 ],
+					"outlettype" : [ "", "", "", "", "", "" ],
+					"patching_rect" : [ 84.5, 338.0, 217.0, 22.0 ],
 					"text" : "antescofo_wrapper"
 				}
 
@@ -174,20 +186,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "antescofo_wrapper.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "antescofo~.mxo",
-				"type" : "iLaX"
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }
