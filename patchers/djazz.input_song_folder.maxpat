@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 482.0, 123.0, 535.0, 195.0 ],
+		"rect" : [ 776.0, 587.0, 660.0, 435.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,9 +40,21 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 4,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 15.808510661125183, 62.0, 532.0, 22.0 ],
+					"text" : "route form solo comp"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "(symbol) full path of song folder",
 					"id" : "obj-1",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -55,11 +67,11 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-18",
-					"index" : 0,
+					"index" : 3,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 343.808510661125183, 108.765958070755005, 30.0, 30.0 ]
+					"patching_rect" : [ 357.808510661125183, 136.765958070755005, 30.0, 30.0 ]
 				}
 
 			}
@@ -70,7 +82,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 343.808510661125183, 67.765958070755005, 156.0, 22.0 ],
+					"patching_rect" : [ 357.808510661125183, 95.765958070755005, 156.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "get_song_comping_file.js",
 						"parameter_enable" : 0
@@ -84,11 +96,11 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-16",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 194.808510661125183, 104.765958070755005, 30.0, 30.0 ]
+					"patching_rect" : [ 186.808510661125183, 132.765958070755005, 30.0, 30.0 ]
 				}
 
 			}
@@ -99,7 +111,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 194.808510661125183, 67.765958070755005, 133.0, 22.0 ],
+					"patching_rect" : [ 186.808510661125183, 95.765958070755005, 133.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "get_song_solo_file.js",
 						"parameter_enable" : 0
@@ -113,11 +125,11 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-13",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.808510661125183, 100.765958070755005, 30.0, 30.0 ]
+					"patching_rect" : [ 15.808510661125183, 128.765958070755005, 30.0, 30.0 ]
 				}
 
 			}
@@ -128,7 +140,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 15.808510661125183, 67.765958070755005, 165.0, 22.0 ],
+					"patching_rect" : [ 15.808510661125183, 95.765958070755005, 165.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_load_navigation_dict.js",
 						"parameter_enable" : 0
@@ -141,24 +153,7 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
-					"order" : 2,
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-15", 0 ],
-					"order" : 1,
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
-					"order" : 0,
+					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -184,23 +179,28 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_load_navigation_dict.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"source" : [ "obj-2", 0 ]
+				}
+
 			}
 , 			{
-				"name" : "get_song_solo_file.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
+				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"source" : [ "obj-2", 1 ]
+				}
+
 			}
- ],
-		"autosave" : 0
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"source" : [ "obj-2", 2 ]
+				}
+
+			}
+ ]
 	}
 
 }
