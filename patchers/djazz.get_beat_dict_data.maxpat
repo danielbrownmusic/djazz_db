@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 194.0, 652.0, 640.0, 480.0 ],
+		"rect" : [ 59.0, 119.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,33 +38,9 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
-		"boxes" : [ 			{
-				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 134.0, 156.0, 123.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"filename" : "djazz_load_song.js",
-						"parameter_enable" : 0
-					}
-,
-					"text" : "js djazz_load_song.js"
-				}
-
-			}
- ],
+		"boxes" : [  ],
 		"lines" : [  ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_load_song.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db",
-				"patcherrelativepath" : ".",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
- ],
+		"dependency_cache" : [  ],
 		"autosave" : 0
 	}
 
