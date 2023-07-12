@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 817.0, 122.0, 253.0, 396.0 ],
+		"rect" : [ 309.0, 188.0, 622.0, 424.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 30.0, 8.0, 62.0, 22.0 ],
+					"patching_rect" : [ 30.0, 8.0, 75.0, 22.0 ],
 					"text" : "r #0_clear"
 				}
 
@@ -69,7 +69,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 534.0, 157.0, 62.0, 22.0 ],
+					"patching_rect" : [ 534.0, 157.0, 75.0, 22.0 ],
 					"text" : "r #0_clear"
 				}
 
@@ -81,7 +81,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 324.0, 157.0, 62.0, 22.0 ],
+					"patching_rect" : [ 324.0, 157.0, 75.0, 22.0 ],
 					"text" : "r #0_clear"
 				}
 
@@ -92,7 +92,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 308.5, 40.0, 64.0, 22.0 ],
+					"patching_rect" : [ 308.5, 40.0, 77.0, 22.0 ],
 					"text" : "s #0_clear"
 				}
 
@@ -101,7 +101,7 @@
 				"box" : 				{
 					"comment" : "messages to load song in input_song_folder",
 					"id" : "obj-6",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -184,7 +184,9 @@
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 515.0, 189.0, 100.0, 22.0 ],
-					"prefix" : "~/Documents/Max 8/Packages/Djazz MIDI 2023/AutumnleavesDoMin/grid/"
+					"prefix" : "~/Documents/Max 8/Packages/Djazz MIDI 2023/AutumnleavesDoMin/grid/",
+					"presentation" : 1,
+					"presentation_rect" : [ 485.0, 62.0, 100.0, 22.0 ]
 				}
 
 			}
@@ -210,7 +212,9 @@
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 305.0, 189.0, 100.0, 22.0 ],
-					"prefix" : "~/Documents/Max 8/Packages/Djazz MIDI 2023/AutumnleavesDoMin/new/"
+					"prefix" : "~/Documents/Max 8/Packages/Djazz MIDI 2023/AutumnleavesDoMin/new/",
+					"presentation" : 1,
+					"presentation_rect" : [ 307.0, 62.0, 100.0, 22.0 ]
 				}
 
 			}
@@ -363,23 +367,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_ui_input_song_folder_form_file.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_ui_input_song_folder_umenus.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

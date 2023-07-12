@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 298.0, 153.0, 362.0, 316.0 ],
+		"rect" : [ -2661.0, 392.0, 538.0, 380.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,38 +40,74 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-5",
+					"id" : "obj-9",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 81.0, 28.0, 150.0, 20.0 ],
+					"text" : "IN: "
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 143.0, 202.0, 288.0, 20.0 ],
+					"text" : "OUT: \"go_to_chapter_measure\" + measure number"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 20.0, 64.0, 133.0, 22.0 ],
-					"text" : "load_song_form_file $1"
+					"patching_rect" : [ 112.0, 122.0, 105.0, 22.0 ],
+					"text" : "on_tab_clicked $1"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "(dict) song navigation dictionary",
-					"id" : "obj-3",
+					"comment" : "(int) beat number of tab clicked (should be tab number?)",
+					"id" : "obj-4",
 					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 20.0, 136.0, 30.0, 30.0 ]
+					"patching_rect" : [ 74.0, 194.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "(symbol) complete song form file path",
-					"id" : "obj-2",
+					"comment" : "messages: make_chapter_grid, activate_tab",
+					"id" : "obj-3",
 					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 20.0, 21.0, 30.0, 30.0 ]
+					"outlettype" : [ "dictionary" ],
+					"patching_rect" : [ 74.0, 62.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "tab",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 249.0, 62.0, 200.0, 24.0 ],
+					"tabs" : [ "no chapter loaded" ],
+					"varname" : "chapter_tab"
 				}
 
 			}
@@ -82,27 +118,28 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 20.0, 103.0, 177.0, 22.0 ],
+					"patching_rect" : [ 74.0, 162.0, 129.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_load_navigation_dict.js",
+						"filename" : "djazz_ui_navigate.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_load_navigation_dict.js"
+					"text" : "js djazz_ui_navigate.js"
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
+					"destination" : [ "obj-6", 0 ],
+					"midpoints" : [ 258.5, 97.0, 228.5, 97.0, 228.5, 109.0, 121.5, 109.0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -110,7 +147,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-5", 0 ]
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"midpoints" : [ 121.5, 152.5, 83.5, 152.5 ],
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
