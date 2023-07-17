@@ -1,148 +1,163 @@
-var left_offset = 20;
-var top_offset = 20;
+var default_box_width = 135;
+var default_box_height = 22;
+var default_space_width = 5;
+var default_space_height = 10;
 
-var mod_width 	= 150;
-var mod_height 	= 20;
-var mod_spacing = 20;
-var cell_spacing = mod_height + mod_spacing;
+// ------------------ 
 
-var mod_chain_x_pos = left_offset;
-var mod_chain_y_pos = top_offset + 2 * (mod_height + mod_spacing);
+this.inlets = 2;
+this.outlets = 2;
 
-var midi_solo;
-var midi_mute;
-var noteout;
+this.x = this.box.rect[0];
+this.y = this.box.rect[1];
 
-var mod_list = []
+this.bank_name 		= this.jsarguments[1];
+this.index 			= this.jsarguments[2];
+declareattribute("index");
+this.varname 		= "midi_out_" + index;
+this.bank_manager 	= this.patcher.getnamed(this.bank_name);
 
-var name_index = 0;
+this.effect_chain = []
+
+this.solo = false;
+this.mute = false;
+this.sending = true;
+
+declareattribute("soloed");
+declareattribute("muted", null, set_mute);
 
 
-// PUBLIC METHODS
-function initialize()
+function set_mute(val)
 {
-	post(left_offset);
-	midi_solo 	= this.patcher.newdefault(left_offset, top_offset				, "djazz.midi_solo");
-	midi_mute 	= this.patcher.newdefault(left_offset, top_offset + cell_spacing, "djazz.midi_mute");
-	noteout 	= this.patcher.newdefault(left_offset, mod_chain_y_pos			, "noteout");
-	
-	this.patcher.connect(midi_solo, 0, midi_mute, 0);
-	this.patcher.connect(midi_mute, 0, noteout, 0);
+	this.mute = val;
+	this.sending 
+}
+
+
+this.sizes =
+{
+	box: {w: default_box_width, h: default_box_height},
+	space: {w: default_space_width, h: default_space_height},
+	cell: { w: default_box_width + default_space_width, h: default_box_height + default_space_height}
+}
+
+function list()
+{
+	if (this.inlet === 0)
+	{
+		if (this.sending)
+		{
+			if (this.effect_chain.length > 0)
+				this.outlet(1, arguments);
+			else
+				this.outlet(0, arguments);
+		}	
+	}
+	else if (this.inlet === 1)
+	{
+		this.outlet(0, arguments);
+	}
+}
+
+
+
+function solo(val)
+{
+	this.patcher.message
+
+}
+
+function mute(val)
+{
+
+
+}
+
+
+function add_effect(effect_name)
+{
+	disconnect_cables_();
+	var effect = make_positioned_effect_(this.effect_chain.length, effect_name);
+	this.effect_chain.push(effect);
+	connect_cables_();
+}
+
+
+function first_effect()
+{
+	return this.effect_chain[0];
+}
+
+function last_effect()
+{
+	return this.effect_chain.slice(-1)[0];
+}
+
+
+function insert_effect(index, effect_name)
+{
+	disconnect_cables_();
+	var effect = make_positioned_effect_(index, effect_name);
+	this.effect_chain.splice(index, 0, effect);
+	connect_cables_();
+}
+
+
+function remove_effect(index)
+{
+	disconnect_cables_();
+	this.effect_chain.splice(index, 1);
+	connect_cables_();
+}
+
+
+function replace_effect(index, mod_name)
+{
+	disconnect_cables_();
+	var effect = make_positioned_effect_(index, effect_name);	
+	this.effect_chain.splice(index, 1, effect);
+	connect_cables_();
 }
 
 
 function clear()
 {
-	clear_mods();
-	this.patcher.remove(midi_solo);
-	this.patcher.remove(midi_mute);
-	this.patcher.remove(noteout);
-	midi_solo = undefined;
-	midi_mute = undefined;
-	noteout = undefined;
-}
-
-
-function clear_mods()
-{
-	disconnect_cables();
-		for (var i = 0; i < mod_list.length; i++)
-	{
-		this.patcher.remove(mod_list[i]);
-	}
-	mod_list = [];
-	noteout.rect = [mod_chain_x_pos,
-							mod_chain_y_pos, 
-							mod_chain_x_pos + mod_width, 
-							mod_chain_y_pos + mod_height];	
-}
-
-
-function add_mod(mod_name)
-{
-	disconnect_cables();
-	var mod = make_mod(mod_name);
-	mod_list.push(mod);
-	update_patcher();
-}
-
-
-function insert_mod(index, mod_name)
-{
-	disconnect_cables();
-	var mod = make_mod(mod_name);
-	mod_list.splice(index, 0, mod);
-	update_patcher();
-}
-
-
-function remove_mod(index)
-{
-	disconnect_cables();
-	mod_list.splice(index, 1);
-	update_patcher();
-}
-
-
-function replace_mod(index, mod_name)
-{
-	disconnect_cables();
-	var mod = make_mod(mod_name);
-	mod_list.splice(index, 1, mod_name);
-	update_patcher();
+	effect_chain.forEach( function(e) { patcher.remove(e); } );
+	effect_chain = [];
 }
 
 
 // PRIVATE METHODS
 
-function make_mod(mod_name)
+function disconnect_cables_()
 {
-	var mod = this.patcher.newdefault(0, 0, mod_name);
-	mod.varname = mod_name + name_index.toString();
-	name_index++;
-	return mod;
-}
-make_mod.local = 1;
-
-function disconnect_cables()
-{
-	for (var i = 0; i < mod_list.length - 1; i++)
+	if (this.effect_chain.length > 0)
 	{
-		this.patcher.disconnect(mod_list[i], 0, mod_list[i + 1], 0);
+		this.patcher.disconnect(this.box, 1, first_effect(), 0);
+		for (var i = 0; i < this.effect_chain.length - 1; i++)
+		{
+			this.patcher.disconnect(this.effect_chain[i], 0, this.effect_chain[i + 1], 0);
+		}  		
+		this.patcher.disconnect(last_effect(), 0, this.box, 1);
 	}
-	this.patcher.disconnect(mod_list.slice[-1], 0, noteout, 0);
 }
-disconnect_cables.local = 1;
+disconnect_cables_.local = 1;
 
 
-function place_mod(i)
+function connect_cables_()
 {
-		mod_list[i].rect = [mod_chain_x_pos,
-							mod_chain_y_pos + i * cell_spacing, 
-							mod_chain_x_pos 					+ mod_width, 
-							mod_chain_y_pos + i * cell_spacing 	+ mod_height];
-}
-
-function update_patcher()
-{
-	for (var i = 0; i < mod_list.length; i++)
+	this.patcher.connect(this.box, 1, first_effect(), 0);	
+	for (var i = 0; i < this.effect_chain.length - 1; i++)
 	{
-		place_mod(i);
-	}	
-	noteout.rect = [mod_chain_x_pos,
-							mod_chain_y_pos + mod_list.length * cell_spacing, 
-							mod_chain_x_pos 									+ mod_width, 
-							mod_chain_y_pos + mod_list.length * cell_spacing 	+ mod_height];
-							
-	for (var i = 0; i < mod_list.length - 1; i++)
-	{
-		this.patcher.connect(mod_list[i], 0, mod_list[i + 1], 0);
+		this.patcher.connect(this.effect_chain[i], 0, this.effect_chain[i + 1], 0);
 	}
-	this.patcher.connect(mod_list.slice[-1], 0, noteout, 0);		
-	
-	
+	this.patcher.connect(last_effect(), 0, this.box, 1);
 }
-update_patcher.local = 1;
+connect_cables_.local = 1;
 
 
-
+function make_positioned_effect_(index, effect_name)
+{
+	return this.patcher.newdefault(this.x + 100, this.y + (index + 1) * this.sizes.cell.h, effect_name);
+}
+make_positioned_effect_.local = 1;
