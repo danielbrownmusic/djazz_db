@@ -34,12 +34,7 @@ function set_mute(val)
 }
 
 
-this.sizes =
-{
-	box: {w: default_box_width, h: default_box_height},
-	space: {w: default_space_width, h: default_space_height},
-	cell: { w: default_box_width + default_space_width, h: default_box_height + default_space_height}
-}
+
 
 function list()
 {
@@ -74,57 +69,16 @@ function mute(val)
 }
 
 
-function add_effect(effect_name)
-{
-	disconnect_cables_();
-	var effect = make_positioned_effect_(this.effect_chain.length, effect_name);
-	this.effect_chain.push(effect);
-	connect_cables_();
-}
 
 
-function first_effect()
-{
-	return this.effect_chain[0];
-}
-
-function last_effect()
-{
-	return this.effect_chain.slice(-1)[0];
-}
 
 
-function insert_effect(index, effect_name)
-{
-	disconnect_cables_();
-	var effect = make_positioned_effect_(index, effect_name);
-	this.effect_chain.splice(index, 0, effect);
-	connect_cables_();
-}
 
 
-function remove_effect(index)
-{
-	disconnect_cables_();
-	this.effect_chain.splice(index, 1);
-	connect_cables_();
-}
 
 
-function replace_effect(index, mod_name)
-{
-	disconnect_cables_();
-	var effect = make_positioned_effect_(index, effect_name);	
-	this.effect_chain.splice(index, 1, effect);
-	connect_cables_();
-}
 
 
-function clear()
-{
-	effect_chain.forEach( function(e) { patcher.remove(e); } );
-	effect_chain = [];
-}
 
 
 // PRIVATE METHODS
