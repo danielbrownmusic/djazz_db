@@ -1,117 +1,56 @@
-var default_box_width = 135;
-var default_box_height = 22;
-var default_space_width = 5;
-var default_space_height = 10;
-
-// ------------------ 
-
-this.inlets = 2;
-this.outlets = 2;
-
-this.x = this.box.rect[0];
-this.y = this.box.rect[1];
-
-this.bank_name 		= this.jsarguments[1];
-this.index 			= this.jsarguments[2];
-declareattribute("index");
-this.varname 		= "midi_out_" + index;
-this.bank_manager 	= this.patcher.getnamed(this.bank_name);
-
-this.effect_chain = []
-
-this.solo = false;
-this.mute = false;
-this.sending = true;
-
-declareattribute("soloed");
-declareattribute("muted", null, set_mute);
+var sizes = require("max_layout_sizes");
+var effectChain = require("midi_effect_chain");
 
 
-function set_mute(val)
+// Class MidiOut ----------------------------------------------------------------------------
+
+function midiOut(bank_name, index, patcher, x, y)
 {
-	this.mute = val;
-	this.sending 
+	index_ 			= index;
+	patcher_ 		= patcher;
+	bank_name_ 		= bank_name;
+	view_ 			= {x: x, y: y};
+
+	solo_ 			= patcher_.newdefault(view_.x, view_.y, "djazz_midi_out_solo", bank_name_, index_);
+	mute_ 			= patcher_.newdefault(x, y + sizes.cell.h, "djazz_mute_select");
+	effect_chain_ 	= new EffectChain(index_, patcher_, x, y + sizes.cell.h * 2);
+	thru_ 			= patcher_.newdefault(x, y + sizes.cell.h * 2, "thru");
+
+	patcher_.connect(solo_, 0, mute_, 0);
+	patcher_.connect(mute_, 0, thru_, 0);
+
+
+connect_in = function(obj, i_out)
+{
+	patcher_.connect(obj, i_out, solo_select, 0);
+}
+
+
+MidiOut.prototype.connect_out = function(obj, i_in)
+{
+	patcher_.connect(thru, 0, obj, i_in);
 }
 
 
 
-
-function list()
+MidiOut.prototype.disconnect_cables = function()
 {
-	if (this.inlet === 0)
+	if (effect_chain.length > 0)
 	{
-		if (this.sending)
-		{
-			if (this.effect_chain.length > 0)
-				this.outlet(1, arguments);
-			else
-				this.outlet(0, arguments);
-		}	
-	}
-	else if (this.inlet === 1)
-	{
-		this.outlet(0, arguments);
+		patcher_.disconnect(mute_select, 0, effect_chain.first(), 0);
+		effect_chain.disconnect_cables();
+		patcher_.disconnect(effect_chain.last(), 0, thru, 1);
 	}
 }
 
-
-
-function solo(val)
+MidiOut.prototype.connect_cables = function()
 {
-	this.patcher.message
-
-}
-
-function mute(val)
-{
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// PRIVATE METHODS
-
-function disconnect_cables_()
-{
-	if (this.effect_chain.length > 0)
+	if (effect_chain.length > 0)
 	{
-		this.patcher.disconnect(this.box, 1, first_effect(), 0);
-		for (var i = 0; i < this.effect_chain.length - 1; i++)
-		{
-			this.patcher.disconnect(this.effect_chain[i], 0, this.effect_chain[i + 1], 0);
-		}  		
-		this.patcher.disconnect(last_effect(), 0, this.box, 1);
+		patcher_.connect(mute_select, 0, effect_chain.first(), 0);
+		effect_chain.connect_cables();
+		patcher_.connect(effect_chain.last(), 0, thru, 1);
 	}
 }
-disconnect_cables_.local = 1;
 
 
-function connect_cables_()
-{
-	this.patcher.connect(this.box, 1, first_effect(), 0);	
-	for (var i = 0; i < this.effect_chain.length - 1; i++)
-	{
-		this.patcher.connect(this.effect_chain[i], 0, this.effect_chain[i + 1], 0);
-	}
-	this.patcher.connect(last_effect(), 0, this.box, 1);
-}
-connect_cables_.local = 1;
-
-
-function make_positioned_effect_(index, effect_name)
-{
-	return this.patcher.newdefault(this.x + 100, this.y + (index + 1) * this.sizes.cell.h, effect_name);
-}
-make_positioned_effect_.local = 1;
