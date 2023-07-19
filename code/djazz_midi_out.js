@@ -4,16 +4,16 @@ var effectChain = require("midi_effect_chain");
 
 // Class MidiOut ----------------------------------------------------------------------------
 
-function midiOut(bank_name, index, patcher, x, y)
+function make_midi_out(bank_name, index, patcher, x, y)
 {
-	index_ 			= index;
-	patcher_ 		= patcher;
-	bank_name_ 		= bank_name;
-	view_ 			= {x: x, y: y};
+	index_: index;
+	patcher_: patcher;
+	bank_name_: bank_name;
+	view_: {x: x; y: y};
 
-	solo_ 			= patcher_.newdefault(view_.x, view_.y, "djazz_midi_out_solo", bank_name_, index_);
+	solo_: patcher_.newdefault(view_.x, view_.y, "djazz_midi_out_solo", bank_name_, index_);
 	mute_ 			= patcher_.newdefault(x, y + sizes.cell.h, "djazz_mute_select");
-	effect_chain_ 	= new EffectChain(index_, patcher_, x, y + sizes.cell.h * 2);
+	effect_chain_ 	= make_effect_chain(index_, patcher_, x, y + sizes.cell.h * 2);
 	thru_ 			= patcher_.newdefault(x, y + sizes.cell.h * 2, "thru");
 
 	patcher_.connect(solo_, 0, mute_, 0);

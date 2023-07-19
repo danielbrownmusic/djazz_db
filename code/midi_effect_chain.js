@@ -1,7 +1,7 @@
 var sizes = require("max_layout_sizes");
 
 
-function effectChain(index, patcher, x, y)
+function make_effect_chain(index, patcher, x, y)
 {
 	view_: {patcher: patcher; x: x; y: y};
 	index_: index;
