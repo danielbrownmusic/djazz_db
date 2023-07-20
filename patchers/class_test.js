@@ -30,4 +30,4 @@ post("no");
 var bar = [make_test_class(31), make_test_class(37)];
 declareattribute("bar");
 var ploo = 5;
-declareattribute("ploo");
+declareattribute("ploo		");

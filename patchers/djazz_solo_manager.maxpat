@@ -64,7 +64,7 @@
 					}
 ,
 					"text" : "js djazz_solo_manager.js",
-					"varname" : "solo_manager_js"
+					"varname" : "js_patch"
 				}
 
 			}
