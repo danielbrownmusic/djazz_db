@@ -1,6 +1,8 @@
+
+
 //this.name = name;
-this.solo_objects 	= []; //js objects
-this.solo_listeners = [];
+solo_objects 	= []; //js objects
+solo_listeners = [];
 solo_states 	= [];	
 
 function postval(name, val)
@@ -10,9 +12,9 @@ function postval(name, val)
 
 function add(solo_obj)
 {
-	var listener = new MaxobjListener(solo_obj, "solo", this.set_solo_obj_send_attr);
-	this.solo_objects.push(solo_obj);
-	this.solo_listeners.push(listener);
+	var listener = new MaxobjListener(solo_obj, "solo", set_solo_obj_send_attr);
+	solo_objects.push(solo_obj);
+	solo_listeners.push(listener);
 	solo_states.push(0);
 };
 
