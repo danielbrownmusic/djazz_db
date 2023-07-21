@@ -1,5 +1,3 @@
-
-
 var state_patch;
 
 var state =

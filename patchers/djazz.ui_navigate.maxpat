@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 455.0, 254.0, 538.0, 380.0 ],
+		"rect" : [ -2755.0, 49.0, 1577.0, 760.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,60 +40,102 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-9",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 81.0, 28.0, 150.0, 20.0 ],
-					"text" : "IN: "
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-7",
-					"maxclass" : "comment",
+					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 143.0, 202.0, 288.0, 20.0 ],
-					"text" : "OUT: \"go_to_chapter_measure\" + measure number"
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 37.0, 58.0, 163.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"filename" : "djazz_ui_navigate_listen.js",
+						"parameter_enable" : 0
+					}
+,
+					"text" : "js djazz_ui_navigate_listen.js"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-6",
-					"maxclass" : "message",
-					"numinlets" : 2,
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 112.0, 122.0, 105.0, 22.0 ],
-					"text" : "on_tab_clicked $1"
+					"patching_rect" : [ 166.0, 456.0, 261.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"filename" : "djazz_ui_navigate_chapter_grid_broadcast.js",
+						"parameter_enable" : 0
+					}
+,
+					"text" : "js djazz_ui_navigate_chapter_grid_broadcast.js"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "(int) beat number of tab clicked (should be tab number?)",
-					"id" : "obj-4",
-					"index" : 1,
-					"maxclass" : "outlet",
+					"id" : "obj-9",
+					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 74.0, 194.0, 30.0, 30.0 ]
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 166.0, 405.0, 103.0, 22.0 ],
+					"text" : "loadmess bind #1"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "messages: make_chapter_grid, activate_tab",
+					"id" : "obj-10",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 37.0, 21.0, 103.0, 22.0 ],
+					"text" : "loadmess bind #1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "tab",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 467.0, 405.0, 200.0, 24.0 ],
+					"tabs" : [ "no chapter loaded" ],
+					"varname" : "chapter_tab[1]"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-3",
-					"index" : 1,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 74.0, 62.0, 30.0, 30.0 ]
+					"patching_rect" : [ 149.0, 177.0, 247.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"filename" : "djazz_ui_navigate_song_grid_broadcast.js",
+						"parameter_enable" : 0
+					}
+,
+					"text" : "js djazz_ui_navigate_song_grid_broadcast.js"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-17",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 149.0, 126.0, 103.0, 22.0 ],
+					"text" : "loadmess bind #1"
 				}
 
 			}
@@ -105,61 +147,86 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 249.0, 62.0, 200.0, 24.0 ],
+					"patching_rect" : [ 450.0, 126.0, 200.0, 24.0 ],
 					"tabs" : [ "no chapter loaded" ],
 					"varname" : "chapter_tab"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 74.0, 162.0, 129.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"filename" : "djazz_ui_navigate.js",
-						"parameter_enable" : 0
-					}
-,
-					"text" : "js djazz_ui_navigate.js"
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
-					"source" : [ "obj-1", 0 ]
+					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-10", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"midpoints" : [ 258.5, 97.0, 228.5, 97.0, 228.5, 109.0, 121.5, 109.0 ],
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-3", 0 ]
+					"destination" : [ "obj-11", 0 ],
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"midpoints" : [ 121.5, 152.5, 83.5, 152.5 ],
-					"source" : [ "obj-6", 0 ]
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-7", 1 ]
 				}
 
 			}
- ]
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-9", 0 ]
+				}
+
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "djazz_ui_navigate_chapter_grid_broadcast.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_ui_navigate_listen.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_ui_navigate_song_grid_broadcast.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }
