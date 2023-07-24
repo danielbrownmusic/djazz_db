@@ -10,7 +10,7 @@ function clear()
 	song_dict.clear();
 }
 
-function make_folder(file_path)
+function make_folders(file_path)
 {
 	var song_init_coll = this.patcher.newdefault(0, 0, "coll", "song_data");
 	var song_init_dict = new Dict();
