@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 309.0, 188.0, 1019.0, 424.0 ],
+		"rect" : [ 706.0, 95.0, 802.0, 318.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,35 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 30.0, 215.0, 135.0, 22.0 ],
+					"text" : "input_navigation_file $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 30.0, 176.0, 262.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"filename" : "djazz_ui_input_song_folder_navigation_file.js",
+						"parameter_enable" : 0
+					}
+,
+					"text" : "js djazz_ui_input_song_folder_navigation_file.js"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "newobj",
@@ -116,37 +145,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 30.0, 94.0, 95.0, 22.0 ],
-					"text" : "get_form_file $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-25",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 30.0, 127.0, 231.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"filename" : "djazz_ui_input_song_folder_form_file.js",
-						"parameter_enable" : 0
-					}
-,
-					"text" : "js djazz_ui_input_song_folder_form_file.js"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-21",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 30.0, 223.0, 49.0, 22.0 ],
-					"text" : "form $1"
+					"patching_rect" : [ 30.0, 94.0, 125.0, 22.0 ],
+					"text" : "get_navigation_file $1"
 				}
 
 			}
@@ -184,7 +184,7 @@
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 620.0, 189.0, 155.0, 22.0 ],
-					"prefix" : "~/Documents/Max 8/Packages/Djazz MIDI 2023/BluesFamaj/grid/",
+					"prefix" : "Macintosh HD:/Users/danielbrown/Documents/Max 8/Projects/djazz_db/data/song_data/Cerebral/grid",
 					"presentation" : 1,
 					"presentation_rect" : [ 620.0, 62.0, 266.0, 22.0 ]
 				}
@@ -212,7 +212,7 @@
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 305.0, 189.0, 278.0, 22.0 ],
-					"prefix" : "~/Documents/Max 8/Packages/Djazz MIDI 2023/BluesFamaj/new/",
+					"prefix" : "Macintosh HD:/Users/danielbrown/Documents/Max 8/Projects/djazz_db/data/song_data/Cerebral/new",
 					"presentation" : 1,
 					"presentation_rect" : [ 307.0, 62.0, 261.0, 22.0 ]
 				}
@@ -239,14 +239,14 @@
 				"box" : 				{
 					"autopopulate" : 1,
 					"id" : "obj-4",
-					"items" : [ "__DJAZZ MIDI_2022_10_25_043marc.maxpat", ",", "_Corpus", ",", "_Externals", ",", "_MidiArchives", ",", "_ObjectsCommon", ",", "_ObjectsMidi", ",", "_Oracles", ",", "AutumnleavesDoMin", ",", "BluesFamaj", ",", "bordeaux-threads", ",", "Capture d’écran 2022-12-20", ",", "E.txt", ",", "elements", ",", "Free4", ",", "globals", ",", "improtek", ",", "in-files", ",", "MIDI_tunes_and_info.txt", ",", "midibuff.mid", ",", "midibuffAutumnLeavesMarcaccomp.mid", ",", "out-files", ",", "preferences.lisp", ",", "resources", ",", "user" ],
+					"items" : [ "AutumnleavesDoMin", ",", "BluesFamaj", ",", "Cerebral", ",", "MIDI_tunes_and_info.txt" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 30.0, 42.0, 241.0, 22.0 ],
-					"prefix" : "~/Documents/Max 8/Packages/Djazz MIDI 2023/",
+					"prefix" : "~/Documents/Max 8/Projects/djazz_db/data/song_data/",
 					"presentation" : 1,
 					"presentation_rect" : [ 22.0, 62.0, 241.0, 22.0 ]
 				}
@@ -290,22 +290,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"source" : [ "obj-17", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-18", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"source" : [ "obj-19", 0 ]
 				}
 
 			}
@@ -327,13 +313,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-21", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-21", 0 ],
-					"source" : [ "obj-25", 0 ]
 				}
 
 			}
@@ -362,8 +341,15 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-25", 0 ],
+					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}

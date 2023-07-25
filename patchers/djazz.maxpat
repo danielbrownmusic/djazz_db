@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2530.0, -113.0, 2336.0, 1226.0 ],
+		"rect" : [ -3005.0, -117.0, 2336.0, 1226.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -253,7 +253,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 1765.250023245811462, 544.75431422980455, 175.0, 22.0 ],
+					"patching_rect" : [ 2051.250023245811462, 787.75431422980455, 175.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -273,7 +273,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1290.250023245811462, 544.75431422980455, 127.0, 22.0 ],
+					"patching_rect" : [ 1280.698971534503471, 562.75431422980455, 127.0, 22.0 ],
 					"style" : "dj finished encapsulation",
 					"text" : "djazz.input_navigation"
 				}
@@ -286,7 +286,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1597.083325952291489, 600.114369695758569, 129.0, 22.0 ],
+					"patching_rect" : [ 1639.833329379558563, 583.114369695758569, 129.0, 22.0 ],
 					"style" : "dj finished encapsulation",
 					"text" : "djazz.load_score_data"
 				}
@@ -310,8 +310,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 3,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1290.250023245811462, 653.832839846028037, 164.499984622001648, 22.0 ],
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 1125.500030934810638, 621.832839846028037, 329.397881199385665, 22.0 ],
 					"style" : "dj finished encapsulation",
 					"text" : "djazz.navigate",
 					"varname" : "djazz.navigate"
@@ -820,7 +820,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 1765.250023245811462, 472.596912625251889, 191.0, 22.0 ],
+					"patching_rect" : [ 2051.250023245811462, 715.596912625251889, 191.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1550,10 +1550,10 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1435.897912134196304, 600.114369695758569, 154.0, 22.0 ],
+					"outlettype" : [ "dictionary" ],
+					"patching_rect" : [ 1435.897912134196304, 583.114369695758569, 179.0, 22.0 ],
 					"style" : "dj finished encapsulation",
-					"text" : "djazz.load_navigation_data"
+					"text" : "djazz.load_song_navigation_file"
 				}
 
 			}
@@ -2579,7 +2579,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1435.897912134196304, 544.75431422980455, 180.185413818095185, 22.0 ],
+					"patching_rect" : [ 1435.897912134196304, 544.75431422980455, 222.93541724536226, 22.0 ],
 					"style" : "dj finished encapsulation",
 					"text" : "djazz.input_song_folder"
 				}
@@ -3043,7 +3043,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1290.250023245811462, 690.832839846028037, 325.833302706480026, 22.0 ],
+					"patching_rect" : [ 1290.250023245811462, 690.832839846028037, 368.833302706480026, 22.0 ],
 					"style" : "dj finished encapsulation",
 					"text" : "djazz.generate_output"
 				}
@@ -3818,7 +3818,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"order" : 0,
+					"order" : 1,
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -3834,7 +3834,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-75", 0 ],
-					"order" : 1,
+					"order" : 0,
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -4157,8 +4157,8 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-1::obj-222::obj-16::obj-26" : [ "gswitch2", "gswitch2", 0 ],
-			"obj-1::obj-222::obj-16::obj-64" : [ "gswitch2[1]", "gswitch2[1]", 0 ],
+			"obj-1::obj-16::obj-26" : [ "gswitch2", "gswitch2", 0 ],
+			"obj-1::obj-16::obj-64" : [ "gswitch2[1]", "gswitch2[1]", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
@@ -4200,14 +4200,14 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz.load_navigation_data.maxpat",
+				"name" : "djazz.load_score_data.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz.load_score_data.maxpat",
+				"name" : "djazz.load_song_navigation_file.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -4242,6 +4242,20 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "djazz_SONG_DATABASE.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_SONG_DATABASE.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "djazz_input_beat_manual_tap.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
@@ -4253,13 +4267,6 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_load_navigation_dict.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
@@ -4298,13 +4305,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_navigation_state.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_song_beat_data.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
@@ -4326,7 +4326,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_ui_input_song_folder_form_file.js",
+				"name" : "djazz_ui_input_song_folder_navigation_file.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",

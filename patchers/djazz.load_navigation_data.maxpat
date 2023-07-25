@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -82,13 +82,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 20.0, 103.0, 177.0, 22.0 ],
+					"patching_rect" : [ 20.0, 103.0, 175.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_load_navigation_dict.js",
+						"filename" : "djazz_load_song_form_file.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_load_navigation_dict.js"
+					"text" : "js djazz_load_song_form_file.js"
 				}
 
 			}

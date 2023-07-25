@@ -8,7 +8,7 @@ function get_navigation_file(folder_full_path)
 		{
 			if (f.extension == '.json')
 			{
-				outlet(0, folder_full_path + '/' + f.filename + f.extension);
+				outlet(0, folder_full_path + '/' + f.filename);
 				return;
 			}
 		}
