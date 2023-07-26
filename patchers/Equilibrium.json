@@ -53,13 +53,6 @@
 			"min_beat" : 480,
 			"max_beat" : 608
 		}
-,
-		"7" : 		{
-			"min_measure" : 110,
-			"max_measure" : 126,
-			"min_beat" : 440,
-			"max_beat" : 504
-		}
 
 	}
 ,

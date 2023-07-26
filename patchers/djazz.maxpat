@@ -309,8 +309,8 @@
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 3,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "dictionary" ],
 					"patching_rect" : [ 1125.500030934810638, 621.832839846028037, 329.397881199385665, 22.0 ],
 					"style" : "dj finished encapsulation",
 					"text" : "djazz.navigate",
@@ -840,9 +840,9 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1538.897912134196304, 331.628800458090154, 164.0, 22.0 ],
+					"patching_rect" : [ 1538.897912134196304, 331.628800458090154, 211.0, 22.0 ],
 					"style" : "dj finished encapsulation",
-					"text" : "djazz_ui_make_song_folders"
+					"text" : "djazz_ui_make_song_navigation_files"
 				}
 
 			}
@@ -1480,9 +1480,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1538.897912134196304, 377.371812543422948, 148.0, 22.0 ],
+					"patching_rect" : [ 1538.897912134196304, 377.371812543422948, 195.0, 22.0 ],
 					"style" : "dj finished encapsulation",
-					"text" : "djazz_make_song_folders"
+					"text" : "djazz_make_song_navigation_files"
 				}
 
 			}
@@ -4242,14 +4242,21 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_SONG_DATABASE.js",
+				"name" : "djazz_get_beat_data.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
-				"type" : "TEXT",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_SONG_DATABASE.maxpat",
+				"name" : "djazz_get_chapter_data.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_get_measure_data.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -4270,14 +4277,14 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_load_song.js",
+				"name" : "djazz_make_song_navigation_files.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_make_song_folders.maxpat",
+				"name" : "djazz_make_song_navigation_files.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -4305,24 +4312,17 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_song_beat_data.maxpat",
+				"name" : "djazz_song_database.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_song_chapter_data.maxpat",
+				"name" : "djazz_song_database_methods.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_song_data.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
@@ -4340,7 +4340,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_ui_make_song_folders.maxpat",
+				"name" : "djazz_ui_make_song_navigation_files.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",

@@ -35,6 +35,7 @@ function make_song_files(file_path)
 function make_song_navigation_file(folder_path, song_data_array)
 {
 	var song_name = song_data_array[0];
+    post(song_name, "\n");
 	var file_path = folder_path + "/" + song_name + ".json";
 	var song_dict = make_song_dict_from_data_array(song_data_array);	
 	song_dict.export_json(file_path);
@@ -79,10 +80,14 @@ function make_song_dict_from_data_array(song_data)
 	//chapter_start_beats.push(beat_count + beats_per_measure);
 	post("chapter_start_beats = ", chapter_start_beats, "\n");
 
+    post("meta \n");
 	var metadata_dict 	= make_song_metadata_dict	(song_name, tempo);
+    post("chapters \n");
 	var chapters_dict 	= make_song_chapters_dict	(chapter_start_measures, chapter_start_beats);
-	var beats_dict 		= make_song_beats_dict		(beats_per_measure, chapter_start_measures, chapter_start_beats);
-	var grid_dict 		= make_grid_dict			(chapter_start_measures, beats_per_measure);
+    post("beats \n");
+    var beats_dict 		= make_song_beats_dict		(beats_per_measure, chapter_start_measures, chapter_start_beats);
+    post("grid \n");
+    var grid_dict 		= make_grid_dict			(chapter_start_measures, beats_per_measure);
 
 	song_dict 			= fill_song_dict 			(metadata_dict, chapters_dict, beats_dict, grid_dict);
 
@@ -177,10 +182,10 @@ make_beat_dict.local = 1;
 
 function get_chapter(beat, chapter_start_beats)
 {
-	for (var i = 0; i < chapter_start_beats.length; i++)
+	for (var i = 1; i < chapter_start_beats.length; i++)
 	{
-		if (beat > chapter_start_beats[i])
-			return i;
+		if (beat < chapter_start_beats[i])
+			return i - 1;
 	}
 }
 get_chapter.local = 1;

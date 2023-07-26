@@ -47,7 +47,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 84.0, 195.765958070755005, 486.0, 35.0 ],
-					"text" : "load \"Macintosh HD:/Users/danielbrown/Documents/Max 8/Projects/djazz_db/data/song_data/AutumnleavesDoMin/AutumnleavesDoMin.json\""
+					"text" : "load \"Macintosh HD:/Users/danielbrown/Documents/Max 8/Projects/djazz_db/data/song_data/Cerebral/Cerebral.json\""
 				}
 
 			}
@@ -72,18 +72,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 238.212765991687888, 89.0, 78.0, 22.0 ],
 					"text" : "prepend solo"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-8",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 18.0, 89.0, 79.0, 22.0 ],
-					"text" : "prepend load"
 				}
 
 			}
@@ -172,7 +160,16 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
+					"destination" : [ "obj-13", 0 ],
+					"order" : 1,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 1 ],
+					"order" : 0,
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -188,22 +185,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
 					"source" : [ "obj-7", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-13", 0 ],
-					"order" : 1,
-					"source" : [ "obj-8", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4", 1 ],
-					"order" : 0,
-					"source" : [ "obj-8", 0 ]
 				}
 
 			}

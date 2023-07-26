@@ -1,8 +1,8 @@
 autowatch = 1;
 
 inlets = 2;
-var SONG_DATABASE_maxobj;
 var SONG_DATABASE;
+//var SONG_DATABASE;
 
 
 function dictionary()
@@ -19,8 +19,18 @@ function clear()
 }
 
 
+function set_database(name)
+{
+    SONG_DATABASE = new Dict(name);
+}
+
+
 function get_beat_data()
 {
+
+    var d = new Dict("SONG_DATABASE");
+    post(d.get("beats").get("1").get("chapter"));
+
     if (arguments.length === 1)
     {
         var beat_number = arguments[0];
