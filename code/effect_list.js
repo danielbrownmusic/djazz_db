@@ -87,7 +87,7 @@ function get_new_patcher_x_(x_inlet, x_outlet)
 function get_new_patcher_y_()
 {
     var inlet_bottom   = inlet_.rect[3];
-    post("inlet bottom = " + inlet_bottom + "\n");
+    //post("inlet bottom = " + inlet_bottom + "\n");
     var list_length    = (1 + count) * (y_obj_ + y_space_);  
     return inlet_bottom + list_length;    
 }
@@ -96,7 +96,7 @@ function get_new_patcher_y_()
 function get_initial_count_()
 {
     var effect_list = get_effect_list();
-    post("initial count = " + effect_list.length);
+    //post("initial count = " + effect_list.length);
     return effect_list.length;
 
 }
@@ -109,15 +109,15 @@ function get_effect_list()
     {
         if (obj.varname && !isNaN(obj.varname))
         {
-            post(obj.varname);
+            //post(obj.varname);
             temp_effect_list.push(obj);
         }
     }
 
-    post("unordered effect list = ");
-    temp_effect_list.forEach(function(e) {post(e ? e.varname : "_");})
-    post("\n");
-    post("\n");
+    //post("unordered effect list = ");
+    //temp_effect_list.forEach(function(e) {post(e ? e.varname : "_");})
+    //post("\n");
+    //post("\n");
 
     var effect_list = Array(temp_effect_list.length);
     temp_effect_list.forEach( 
@@ -127,10 +127,10 @@ function get_effect_list()
         }
     );
 
-    post("ordered effect list = ");
-    effect_list.forEach(function(e) {post(e ? e.varname : "-");})
-    post("\n");
-    post("\n");
+    //post("ordered effect list = ");
+    //effect_list.forEach(function(e) {post(e ? e.varname : "-");})
+    //post("\n");
+    //post("\n");
 
     return effect_list;
 }

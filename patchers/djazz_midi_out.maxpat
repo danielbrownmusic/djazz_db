@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1523.0, 183.0, 581.0, 421.0 ],
+		"rect" : [ 34.0, 183.0, 352.0, 113.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 434.0, 212.0, 74.0, 22.0 ],
+					"patching_rect" : [ 505.0, 211.0, 74.0, 22.0 ],
 					"text" : "route effects"
 				}
 
@@ -57,7 +57,7 @@
 					"numinlets" : 5,
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 235.0, 133.0, 217.0, 22.0 ],
+					"patching_rect" : [ 153.0, 67.0, 371.0, 22.0 ],
 					"text" : "routepass bank_name index solo mute"
 				}
 
@@ -69,7 +69,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 434.0, 294.0, 94.0, 22.0 ],
+					"patching_rect" : [ 417.0, 269.0, 94.0, 22.0 ],
 					"text" : "djazz_effect_list"
 				}
 
@@ -81,7 +81,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 291.5, 255.0, 122.0, 22.0 ],
+					"patching_rect" : [ 417.0, 121.0, 122.0, 22.0 ],
 					"text" : "djazz_midi_out_mute"
 				}
 
@@ -93,7 +93,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 60.0, 61.0, 109.0, 22.0 ],
+					"patching_rect" : [ 23.0, 22.0, 109.0, 22.0 ],
 					"text" : "loadmess index #1"
 				}
 
@@ -105,7 +105,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 171.0, 212.0, 117.0, 22.0 ],
+					"patching_rect" : [ 153.0, 127.0, 117.0, 22.0 ],
 					"text" : "djazz_midi_out_solo",
 					"varname" : "solo_patch"
 				}
@@ -119,7 +119,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 434.0, 330.0, 30.0, 30.0 ]
+					"patching_rect" : [ 417.0, 305.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -132,7 +132,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 235.0, 80.0, 30.0, 30.0 ]
+					"patching_rect" : [ 153.0, 14.0, 30.0, 30.0 ]
 				}
 
 			}
