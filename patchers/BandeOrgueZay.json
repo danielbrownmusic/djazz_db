@@ -18,48 +18,6 @@
 			"min_beat" : 128,
 			"max_beat" : 192
 		}
-,
-		"2" : 		{
-			"min_measure" : 33,
-			"max_measure" : 65,
-			"min_beat" : 132,
-			"max_beat" : 260
-		}
-,
-		"3" : 		{
-			"min_measure" : 65,
-			"max_measure" : 79,
-			"min_beat" : 260,
-			"max_beat" : 316
-		}
-,
-		"4" : 		{
-			"min_measure" : 79,
-			"max_measure" : 105,
-			"min_beat" : 316,
-			"max_beat" : 420
-		}
-,
-		"5" : 		{
-			"min_measure" : 72,
-			"max_measure" : 96,
-			"min_beat" : 288,
-			"max_beat" : 384
-		}
-,
-		"6" : 		{
-			"min_measure" : 96,
-			"max_measure" : 110,
-			"min_beat" : 384,
-			"max_beat" : 440
-		}
-,
-		"7" : 		{
-			"min_measure" : 110,
-			"max_measure" : 126,
-			"min_beat" : 440,
-			"max_beat" : 504
-		}
 
 	}
 ,

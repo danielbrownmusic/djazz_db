@@ -18,55 +18,13 @@
 			"min_beat" : 128,
 			"max_beat" : 192
 		}
-,
-		"2" : 		{
-			"min_measure" : 33,
-			"max_measure" : 65,
-			"min_beat" : 132,
-			"max_beat" : 260
-		}
-,
-		"3" : 		{
-			"min_measure" : 65,
-			"max_measure" : 79,
-			"min_beat" : 260,
-			"max_beat" : 316
-		}
-,
-		"4" : 		{
-			"min_measure" : 79,
-			"max_measure" : 105,
-			"min_beat" : 316,
-			"max_beat" : 420
-		}
-,
-		"5" : 		{
-			"min_measure" : 72,
-			"max_measure" : 96,
-			"min_beat" : 288,
-			"max_beat" : 384
-		}
-,
-		"6" : 		{
-			"min_measure" : 96,
-			"max_measure" : 110,
-			"min_beat" : 384,
-			"max_beat" : 440
-		}
-,
-		"7" : 		{
-			"min_measure" : 110,
-			"max_measure" : 126,
-			"min_beat" : 440,
-			"max_beat" : 504
-		}
 
 	}
 ,
 	"beats" : 	{
 		"0" : 		{
-			"chapter" : "",
-			"measure" : 0.0,
+			"chapter" : 0,
+			"measure" : 0,
 			"position" : 0
 		}
 ,
@@ -833,386 +791,386 @@
 		}
 ,
 		"128" : 		{
-			"chapter" : 0,
-			"measure" : 32,
+			"chapter" : 1,
+			"measure" : 0,
 			"position" : 0
 		}
 ,
 		"129" : 		{
-			"chapter" : 0,
-			"measure" : 32,
+			"chapter" : 1,
+			"measure" : 0,
 			"position" : 1
 		}
 ,
 		"130" : 		{
-			"chapter" : 0,
-			"measure" : 32,
+			"chapter" : 1,
+			"measure" : 0,
 			"position" : 2
 		}
 ,
 		"131" : 		{
-			"chapter" : 0,
-			"measure" : 32,
+			"chapter" : 1,
+			"measure" : 0,
 			"position" : 3
 		}
 ,
 		"132" : 		{
-			"chapter" : 0,
-			"measure" : 33,
+			"chapter" : 1,
+			"measure" : 1,
 			"position" : 0
 		}
 ,
 		"133" : 		{
-			"chapter" : 0,
-			"measure" : 33,
+			"chapter" : 1,
+			"measure" : 1,
 			"position" : 1
 		}
 ,
 		"134" : 		{
-			"chapter" : 0,
-			"measure" : 33,
+			"chapter" : 1,
+			"measure" : 1,
 			"position" : 2
 		}
 ,
 		"135" : 		{
-			"chapter" : 0,
-			"measure" : 33,
+			"chapter" : 1,
+			"measure" : 1,
 			"position" : 3
 		}
 ,
 		"136" : 		{
-			"chapter" : 0,
-			"measure" : 34,
+			"chapter" : 1,
+			"measure" : 2,
 			"position" : 0
 		}
 ,
 		"137" : 		{
-			"chapter" : 0,
-			"measure" : 34,
+			"chapter" : 1,
+			"measure" : 2,
 			"position" : 1
 		}
 ,
 		"138" : 		{
-			"chapter" : 0,
-			"measure" : 34,
+			"chapter" : 1,
+			"measure" : 2,
 			"position" : 2
 		}
 ,
 		"139" : 		{
-			"chapter" : 0,
-			"measure" : 34,
+			"chapter" : 1,
+			"measure" : 2,
 			"position" : 3
 		}
 ,
 		"140" : 		{
-			"chapter" : 0,
-			"measure" : 35,
+			"chapter" : 1,
+			"measure" : 3,
 			"position" : 0
 		}
 ,
 		"141" : 		{
-			"chapter" : 0,
-			"measure" : 35,
+			"chapter" : 1,
+			"measure" : 3,
 			"position" : 1
 		}
 ,
 		"142" : 		{
-			"chapter" : 0,
-			"measure" : 35,
+			"chapter" : 1,
+			"measure" : 3,
 			"position" : 2
 		}
 ,
 		"143" : 		{
-			"chapter" : 0,
-			"measure" : 35,
+			"chapter" : 1,
+			"measure" : 3,
 			"position" : 3
 		}
 ,
 		"144" : 		{
-			"chapter" : 0,
-			"measure" : 36,
+			"chapter" : 1,
+			"measure" : 4,
 			"position" : 0
 		}
 ,
 		"145" : 		{
-			"chapter" : 0,
-			"measure" : 36,
+			"chapter" : 1,
+			"measure" : 4,
 			"position" : 1
 		}
 ,
 		"146" : 		{
-			"chapter" : 0,
-			"measure" : 36,
+			"chapter" : 1,
+			"measure" : 4,
 			"position" : 2
 		}
 ,
 		"147" : 		{
-			"chapter" : 0,
-			"measure" : 36,
+			"chapter" : 1,
+			"measure" : 4,
 			"position" : 3
 		}
 ,
 		"148" : 		{
-			"chapter" : 0,
-			"measure" : 37,
+			"chapter" : 1,
+			"measure" : 5,
 			"position" : 0
 		}
 ,
 		"149" : 		{
-			"chapter" : 0,
-			"measure" : 37,
+			"chapter" : 1,
+			"measure" : 5,
 			"position" : 1
 		}
 ,
 		"150" : 		{
-			"chapter" : 0,
-			"measure" : 37,
+			"chapter" : 1,
+			"measure" : 5,
 			"position" : 2
 		}
 ,
 		"151" : 		{
-			"chapter" : 0,
-			"measure" : 37,
+			"chapter" : 1,
+			"measure" : 5,
 			"position" : 3
 		}
 ,
 		"152" : 		{
-			"chapter" : 0,
-			"measure" : 38,
+			"chapter" : 1,
+			"measure" : 6,
 			"position" : 0
 		}
 ,
 		"153" : 		{
-			"chapter" : 0,
-			"measure" : 38,
+			"chapter" : 1,
+			"measure" : 6,
 			"position" : 1
 		}
 ,
 		"154" : 		{
-			"chapter" : 0,
-			"measure" : 38,
+			"chapter" : 1,
+			"measure" : 6,
 			"position" : 2
 		}
 ,
 		"155" : 		{
-			"chapter" : 0,
-			"measure" : 38,
+			"chapter" : 1,
+			"measure" : 6,
 			"position" : 3
 		}
 ,
 		"156" : 		{
-			"chapter" : 0,
-			"measure" : 39,
+			"chapter" : 1,
+			"measure" : 7,
 			"position" : 0
 		}
 ,
 		"157" : 		{
-			"chapter" : 0,
-			"measure" : 39,
+			"chapter" : 1,
+			"measure" : 7,
 			"position" : 1
 		}
 ,
 		"158" : 		{
-			"chapter" : 0,
-			"measure" : 39,
+			"chapter" : 1,
+			"measure" : 7,
 			"position" : 2
 		}
 ,
 		"159" : 		{
-			"chapter" : 0,
-			"measure" : 39,
+			"chapter" : 1,
+			"measure" : 7,
 			"position" : 3
 		}
 ,
 		"160" : 		{
-			"chapter" : 0,
-			"measure" : 40,
+			"chapter" : 1,
+			"measure" : 8,
 			"position" : 0
 		}
 ,
 		"161" : 		{
-			"chapter" : 0,
-			"measure" : 40,
+			"chapter" : 1,
+			"measure" : 8,
 			"position" : 1
 		}
 ,
 		"162" : 		{
-			"chapter" : 0,
-			"measure" : 40,
+			"chapter" : 1,
+			"measure" : 8,
 			"position" : 2
 		}
 ,
 		"163" : 		{
-			"chapter" : 0,
-			"measure" : 40,
+			"chapter" : 1,
+			"measure" : 8,
 			"position" : 3
 		}
 ,
 		"164" : 		{
-			"chapter" : 0,
-			"measure" : 41,
+			"chapter" : 1,
+			"measure" : 9,
 			"position" : 0
 		}
 ,
 		"165" : 		{
-			"chapter" : 0,
-			"measure" : 41,
+			"chapter" : 1,
+			"measure" : 9,
 			"position" : 1
 		}
 ,
 		"166" : 		{
-			"chapter" : 0,
-			"measure" : 41,
+			"chapter" : 1,
+			"measure" : 9,
 			"position" : 2
 		}
 ,
 		"167" : 		{
-			"chapter" : 0,
-			"measure" : 41,
+			"chapter" : 1,
+			"measure" : 9,
 			"position" : 3
 		}
 ,
 		"168" : 		{
-			"chapter" : 0,
-			"measure" : 42,
+			"chapter" : 1,
+			"measure" : 10,
 			"position" : 0
 		}
 ,
 		"169" : 		{
-			"chapter" : 0,
-			"measure" : 42,
+			"chapter" : 1,
+			"measure" : 10,
 			"position" : 1
 		}
 ,
 		"170" : 		{
-			"chapter" : 0,
-			"measure" : 42,
+			"chapter" : 1,
+			"measure" : 10,
 			"position" : 2
 		}
 ,
 		"171" : 		{
-			"chapter" : 0,
-			"measure" : 42,
+			"chapter" : 1,
+			"measure" : 10,
 			"position" : 3
 		}
 ,
 		"172" : 		{
-			"chapter" : 0,
-			"measure" : 43,
+			"chapter" : 1,
+			"measure" : 11,
 			"position" : 0
 		}
 ,
 		"173" : 		{
-			"chapter" : 0,
-			"measure" : 43,
+			"chapter" : 1,
+			"measure" : 11,
 			"position" : 1
 		}
 ,
 		"174" : 		{
-			"chapter" : 0,
-			"measure" : 43,
+			"chapter" : 1,
+			"measure" : 11,
 			"position" : 2
 		}
 ,
 		"175" : 		{
-			"chapter" : 0,
-			"measure" : 43,
+			"chapter" : 1,
+			"measure" : 11,
 			"position" : 3
 		}
 ,
 		"176" : 		{
-			"chapter" : 0,
-			"measure" : 44,
+			"chapter" : 1,
+			"measure" : 12,
 			"position" : 0
 		}
 ,
 		"177" : 		{
-			"chapter" : 0,
-			"measure" : 44,
+			"chapter" : 1,
+			"measure" : 12,
 			"position" : 1
 		}
 ,
 		"178" : 		{
-			"chapter" : 0,
-			"measure" : 44,
+			"chapter" : 1,
+			"measure" : 12,
 			"position" : 2
 		}
 ,
 		"179" : 		{
-			"chapter" : 0,
-			"measure" : 44,
+			"chapter" : 1,
+			"measure" : 12,
 			"position" : 3
 		}
 ,
 		"180" : 		{
-			"chapter" : 0,
-			"measure" : 45,
+			"chapter" : 1,
+			"measure" : 13,
 			"position" : 0
 		}
 ,
 		"181" : 		{
-			"chapter" : 0,
-			"measure" : 45,
+			"chapter" : 1,
+			"measure" : 13,
 			"position" : 1
 		}
 ,
 		"182" : 		{
-			"chapter" : 0,
-			"measure" : 45,
+			"chapter" : 1,
+			"measure" : 13,
 			"position" : 2
 		}
 ,
 		"183" : 		{
-			"chapter" : 0,
-			"measure" : 45,
+			"chapter" : 1,
+			"measure" : 13,
 			"position" : 3
 		}
 ,
 		"184" : 		{
-			"chapter" : 0,
-			"measure" : 46,
+			"chapter" : 1,
+			"measure" : 14,
 			"position" : 0
 		}
 ,
 		"185" : 		{
-			"chapter" : 0,
-			"measure" : 46,
+			"chapter" : 1,
+			"measure" : 14,
 			"position" : 1
 		}
 ,
 		"186" : 		{
-			"chapter" : 0,
-			"measure" : 46,
+			"chapter" : 1,
+			"measure" : 14,
 			"position" : 2
 		}
 ,
 		"187" : 		{
-			"chapter" : 0,
-			"measure" : 46,
+			"chapter" : 1,
+			"measure" : 14,
 			"position" : 3
 		}
 ,
 		"188" : 		{
-			"chapter" : 0,
-			"measure" : 47,
+			"chapter" : 1,
+			"measure" : 15,
 			"position" : 0
 		}
 ,
 		"189" : 		{
-			"chapter" : 0,
-			"measure" : 47,
+			"chapter" : 1,
+			"measure" : 15,
 			"position" : 1
 		}
 ,
 		"190" : 		{
-			"chapter" : 0,
-			"measure" : 47,
+			"chapter" : 1,
+			"measure" : 15,
 			"position" : 2
 		}
 ,
 		"191" : 		{
-			"chapter" : 0,
-			"measure" : 47,
+			"chapter" : 1,
+			"measure" : 15,
 			"position" : 3
 		}
 
