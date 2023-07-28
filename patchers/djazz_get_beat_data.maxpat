@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 503.0, 135.0, 509.0, 300.0 ],
+		"rect" : [ 503.0, 135.0, 509.0, 446.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "int", "int", "int" ],
-					"patching_rect" : [ 31.0, 153.0, 141.0, 22.0 ],
+					"patching_rect" : [ 31.0, 182.0, 141.0, 22.0 ],
 					"text" : "unpack 0 0 0 0"
 				}
 
@@ -81,7 +81,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 31.0, 117.0, 202.0, 22.0 ],
+					"patching_rect" : [ 30.0, 132.0, 202.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_song_database_methods.js",
 						"parameter_enable" : 0
@@ -137,7 +137,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 153.0, 195.0, 30.0, 30.0 ]
+					"patching_rect" : [ 153.0, 224.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -149,7 +149,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 112.333333333333329, 195.0, 30.0, 30.0 ]
+					"patching_rect" : [ 112.333333333333329, 224.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -161,7 +161,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 71.666666666666657, 195.0, 30.0, 30.0 ]
+					"patching_rect" : [ 71.666666666666657, 224.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -173,7 +173,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 31.0, 195.0, 30.0, 30.0 ]
+					"patching_rect" : [ 31.0, 224.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -185,7 +185,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "int" ],
 					"patching_rect" : [ 31.0, 20.0, 30.0, 30.0 ]
 				}
 

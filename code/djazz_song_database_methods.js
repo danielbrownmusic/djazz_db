@@ -28,9 +28,10 @@ function get_beat_data()
 
     var song_database = new Dict(song_database_name);
     //post(d.get("beats").get("1").get("chapter"));
-
+    //post(arguments.length + "\n");
     if (arguments.length === 1)
     {
+
         var beat_number = arguments[0];
         var beat        = song_database.get("beats").get(beat_number.toString());
         var chapter     = beat.get("chapter");
@@ -58,9 +59,9 @@ function get_chapter_data()
         return;
 
     var song_database   = new Dict(song_database_name);
-    post(song_database_name);
+/*     post(song_database_name);
     post("\n");
-    post(arguments[0]);
+    post(arguments[0]); */
 
     var chapter_number  = arguments[0];
     var chapter         = song_database.get("chapters").get(chapter_number.toString());
