@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1253.0, 64.0, 640.0, 480.0 ],
+		"rect" : [ 470.0, 376.0, 199.0, 252.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -46,32 +46,32 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 202.0, 107.0, 138.0, 138.0 ]
+					"patching_rect" : [ 50.0, 68.0, 73.0, 73.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "anything: control message",
+					"comment" : "bang to output next beart",
 					"id" : "obj-2",
 					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 202.0, 59.0, 30.0, 30.0 ]
+					"patching_rect" : [ 50.0, 25.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "bang when next beat received",
+					"comment" : "bang",
 					"id" : "obj-1",
 					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 202.0, 262.0, 30.0, 30.0 ]
+					"patching_rect" : [ 50.0, 159.0, 30.0, 30.0 ]
 				}
 
 			}

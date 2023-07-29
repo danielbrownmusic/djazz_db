@@ -40,9 +40,25 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "",
+					"fontsize" : 36.0,
+					"format" : 6,
+					"id" : "obj-10",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 296.0, 107.0, 88.0, 49.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 104.0, 21.0, 123.0, 49.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "(int) non-zero: turn on metronome; zero: turn off",
 					"id" : "obj-8",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -61,15 +77,15 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 219.0, 107.0, 31.0, 31.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 28.0, 21.0, 51.0, 51.0 ]
+					"presentation_rect" : [ 28.0, 21.0, 49.0, 49.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "(int) non-zero or zero",
 					"id" : "obj-5",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -79,24 +95,9 @@
 			}
 , 			{
 				"box" : 				{
-					"fontsize" : 30.0,
-					"id" : "obj-4",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 291.0, 107.0, 80.0, 42.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 122.0, 21.0, 98.0, 42.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
+					"comment" : "(float) metronome tempo",
 					"id" : "obj-3",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -107,9 +108,9 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "(anything) control messages",
+					"comment" : "(float) metronome tempo",
 					"id" : "obj-1",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -120,15 +121,15 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
-					"source" : [ "obj-3", 0 ]
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-10", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-4", 0 ]
+					"destination" : [ "obj-10", 0 ],
+					"source" : [ "obj-3", 0 ]
 				}
 
 			}
@@ -146,7 +147,9 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [  ],
+		"autosave" : 0
 	}
 
 }

@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -57,9 +57,9 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "bang to output nexgt beat",
 					"id" : "obj-3",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -70,9 +70,9 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "bang when next beat received",
+					"comment" : "bang",
 					"id" : "obj-1",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -96,6 +96,8 @@
 
 			}
  ],
+		"dependency_cache" : [  ],
+		"autosave" : 0,
 		"bgcolor" : [ 0.196078431372549, 0.231372549019608, 0.964705882352941, 1.0 ],
 		"editing_bgcolor" : [ 0.196078431372549, 0.294117647058824, 1.0, 1.0 ]
 	}

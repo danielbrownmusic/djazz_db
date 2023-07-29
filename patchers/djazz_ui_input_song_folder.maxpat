@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 172.0, 651.0, 994.0, 519.0 ],
+		"rect" : [ 353.0, 319.0, 867.0, 406.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,36 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "(symbol) comp antescofo file path",
+					"id" : "obj-17",
+					"index" : 0,
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 716.5, 316.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "(symbol) solo antescofo file path",
+					"id" : "obj-16",
+					"index" : 0,
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 463.0, 316.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-7",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 98.0, 180.0, 262.0, 22.0 ],
+					"patching_rect" : [ 31.0, 147.0, 262.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_ui_input_song_folder_navigation_file.js",
 						"parameter_enable" : 0
@@ -62,7 +86,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 98.0, 12.0, 75.0, 22.0 ],
+					"patching_rect" : [ 31.0, 22.0, 75.0, 22.0 ],
 					"text" : "r #0_clear"
 				}
 
@@ -74,7 +98,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 376.5, 12.0, 35.0, 22.0 ],
+					"patching_rect" : [ 309.5, 22.0, 35.0, 22.0 ],
 					"text" : "clear"
 				}
 
@@ -86,7 +110,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 707.0, 161.0, 75.0, 22.0 ],
+					"patching_rect" : [ 667.5, 177.0, 75.0, 22.0 ],
 					"text" : "r #0_clear"
 				}
 
@@ -98,7 +122,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 392.0, 161.0, 75.0, 22.0 ],
+					"patching_rect" : [ 352.5, 177.0, 75.0, 22.0 ],
 					"text" : "r #0_clear"
 				}
 
@@ -109,20 +133,20 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 376.5, 44.0, 77.0, 22.0 ],
+					"patching_rect" : [ 309.5, 54.0, 77.0, 22.0 ],
 					"text" : "s #0_clear"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "messages to load song in input_song_folder",
+					"comment" : "(symbol) navigation file path",
 					"id" : "obj-6",
 					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 127.0, 320.0, 30.0, 30.0 ]
+					"patching_rect" : [ 31.0, 316.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -133,32 +157,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 98.0, 98.0, 125.0, 22.0 ],
+					"patching_rect" : [ 31.0, 114.0, 125.0, 22.0 ],
 					"text" : "get_navigation_file $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-19",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 373.0, 227.0, 67.0, 22.0 ],
-					"text" : "set solo $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-17",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 688.0, 227.0, 74.0, 22.0 ],
-					"text" : "set comp $1"
 				}
 
 			}
@@ -171,10 +171,10 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 688.0, 193.0, 155.0, 22.0 ],
+					"patching_rect" : [ 543.5, 269.0, 155.0, 22.0 ],
 					"prefix" : "~/Documents/Max 8/Projects/djazz_db/data/song_data/BluesFamaj/grid/",
 					"presentation" : 1,
-					"presentation_rect" : [ 620.0, 62.0, 266.0, 22.0 ]
+					"presentation_rect" : [ 22.0, 141.0, 500.0, 22.0 ]
 				}
 
 			}
@@ -185,7 +185,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 373.0, 98.0, 91.0, 22.0 ],
+					"patching_rect" : [ 333.5, 114.0, 91.0, 22.0 ],
 					"text" : "set_umenus $1"
 				}
 
@@ -199,10 +199,10 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 373.0, 193.0, 278.0, 22.0 ],
+					"patching_rect" : [ 333.5, 209.0, 393.0, 22.0 ],
 					"prefix" : "~/Documents/Max 8/Projects/djazz_db/data/song_data/BluesFamaj/new/",
 					"presentation" : 1,
-					"presentation_rect" : [ 307.0, 62.0, 261.0, 22.0 ]
+					"presentation_rect" : [ 22.0, 100.0, 500.0, 22.0 ]
 				}
 
 			}
@@ -213,7 +213,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 373.0, 131.0, 229.0, 22.0 ],
+					"patching_rect" : [ 333.5, 147.0, 229.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_ui_input_song_folder_umenus.js",
 						"parameter_enable" : 0
@@ -227,13 +227,13 @@
 				"box" : 				{
 					"autopopulate" : 1,
 					"id" : "obj-4",
-					"items" : [ "AutumnleavesDoMin", ",", "BluesFamaj", ",", "Cerebral" ],
+					"items" : [ "AutumnleavesDoMin", ",", "BluesFamaj", ",", "Cerebral", ",", "MIDI_tunes_and_info.txt" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 98.0, 46.0, 241.0, 22.0 ],
+					"patching_rect" : [ 31.0, 56.0, 241.0, 22.0 ],
 					"prefix" : "~/Documents/Max 8/Projects/djazz_db/data/song_data/",
 					"presentation" : 1,
 					"presentation_rect" : [ 22.0, 62.0, 241.0, 22.0 ]
@@ -265,7 +265,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
-					"source" : [ "obj-14", 0 ]
+					"source" : [ "obj-14", 1 ]
 				}
 
 			}
@@ -299,8 +299,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-19", 0 ],
-					"source" : [ "obj-3", 0 ]
+					"destination" : [ "obj-16", 0 ],
+					"source" : [ "obj-3", 1 ]
 				}
 
 			}
