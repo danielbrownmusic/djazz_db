@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 59.0, 119.0, 659.0, 261.0 ],
+		"rect" : [ 59.0, 119.0, 690.0, 272.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -64,7 +64,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "(int int int int) midi_channel, pitch, velocity, duration (in ms)",
 					"id" : "obj-1",
 					"index" : 1,
 					"maxclass" : "outlet",
@@ -112,7 +112,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "(int int float float float int) event in antescofo format",
 					"id" : "obj-41",
 					"index" : 1,
 					"maxclass" : "inlet",
@@ -125,7 +125,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "(float) tempo",
 					"id" : "obj-42",
 					"index" : 2,
 					"maxclass" : "inlet",
@@ -138,7 +138,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "(int) time signature",
 					"id" : "obj-43",
 					"index" : 3,
 					"maxclass" : "inlet",

@@ -91,14 +91,14 @@ function make_midi_out(index, channel, x, y, w, h)
 
 function connect_in_midi_out(midi_out, in_obj, in_outlet)
 {
-	post("connect in " + midi_out.get("index") + "\n");
+	//post("connect in " + midi_out.get("index") + "\n");
 	this.patcher.connect(in_obj, in_outlet, get_solo_obj(midi_out), 0);
 }
 
 
 function connect_out_midi_out(midi_out, out_obj, out_inlet)
 {
-	post("connect out " + midi_out.get("index") + "\n");
+	//post("connect out " + midi_out.get("index") + "\n");
 	this.patcher.connect(get_effect_list_obj(midi_out), 0, out_obj, out_inlet);
 }
 

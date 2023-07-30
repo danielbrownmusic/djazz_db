@@ -93,12 +93,15 @@
 			}
 , 			{
 				"box" : 				{
+					"fontsize" : 24.0,
 					"id" : "obj-18",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 309.5, 22.0, 35.0, 22.0 ],
+					"patching_rect" : [ 309.5, 22.0, 61.0, 35.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 291.5, 49.0, 61.0, 35.0 ],
 					"text" : "clear"
 				}
 
@@ -165,14 +168,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-14",
-					"items" : [ "BluesFamaj-grid-param.txt", ",", "BluesFamaj-grid.txt" ],
+					"items" : "<empty>",
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 543.5, 269.0, 155.0, 22.0 ],
-					"prefix" : "~/Documents/Max 8/Projects/djazz_db/data/song_data/BluesFamaj/grid/",
+					"prefix" : "~/Documents/Max 8/Projects/djazz_db/data/song_data/AutumnleavesDoMin/grid",
 					"presentation" : 1,
 					"presentation_rect" : [ 22.0, 141.0, 500.0, 22.0 ]
 				}
@@ -193,14 +196,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-3",
-					"items" : [ "BluesFamaj-new-2016.01.29-09h32.txt", ",", "BluesFamaj-new-2016.01.29-12h24.txt", ",", "BluesFamaj-new-2016.01.29-12h25.txt", ",", "BluesFamaj-new-2016.01.29-12h26.txt", ",", "BluesFamaj-new-2016.01.30-08h36.txt", ",", "BluesFamaj-new-2016.01.30-09h02.txt", ",", "BluesFamaj-new-2016.01.30-09h05.txt", ",", "BluesFamaj-new-2016.01.30-09h06.txt", ",", "BluesFamaj-new-2016.01.30-09h07.txt", ",", "BluesFamaj-new-2016.01.30-09h09.txt", ",", "BluesFamaj-new-2016.01.30-09h10.txt", ",", "BluesFamaj-new-2016.01.30-09h11.txt", ",", "BluesFamaj-new-2016.01.30-09h12.txt", ",", "BluesFamaj-new-2016.01.30-09h13.txt", ",", "BluesFamaj-new-2016.01.30-09h14.txt", ",", "BluesFamaj-new-2016.01.30-09h16.txt", ",", "BluesFamaj-new-2016.01.30-09h17.txt", ",", "BluesFamaj-new-2016.01.30-09h19.txt", ",", "BluesFamaj-new-2016.01.30-09h36.txt", ",", "BluesFamaj-new-2016.01.30-09h37.txt", ",", "BluesFamaj-new-2016.01.30-09h57twist.txt", ",", "BluesFamaj-new-2016.01.30-10h29shuffle.txt", ",", "BluesFamaj-new-2016.05.04-09h27.txt", ",", "BluesFamaj-new-2016.05.04-09h34.txt", ",", "BluesFamaj-new-2016.05.04-10h16.txt", ",", "BluesFamaj-new-2016.05.04-10h17.txt", ",", "BluesFamaj-new-2021.11.23-12h59.txt", ",", "BluesFamaj-new-2021.11.23-13h00.txt" ],
+					"items" : "<empty>",
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 333.5, 209.0, 393.0, 22.0 ],
-					"prefix" : "~/Documents/Max 8/Projects/djazz_db/data/song_data/BluesFamaj/new/",
+					"prefix" : "~/Documents/Max 8/Projects/djazz_db/data/song_data/AutumnleavesDoMin/new",
 					"presentation" : 1,
 					"presentation_rect" : [ 22.0, 100.0, 500.0, 22.0 ]
 				}
@@ -227,7 +230,7 @@
 				"box" : 				{
 					"autopopulate" : 1,
 					"id" : "obj-4",
-					"items" : [ "AutumnleavesDoMin", ",", "BluesFamaj", ",", "Cerebral", ",", "MIDI_tunes_and_info.txt" ],
+					"items" : "<empty>",
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -316,7 +319,9 @@
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"order" : 1,
-					"source" : [ "obj-4", 1 ]
+					"source" : [ "obj-4", 1 ],
+					"watchpoint_flags" : 5,
+					"watchpoint_id" : 8
 				}
 
 			}
@@ -330,7 +335,9 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-6", 0 ],
-					"source" : [ "obj-7", 0 ]
+					"source" : [ "obj-7", 0 ],
+					"watchpoint_flags" : 5,
+					"watchpoint_id" : 7
 				}
 
 			}

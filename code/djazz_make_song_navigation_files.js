@@ -12,6 +12,8 @@ function clear()
 
 function make_song_files(file_path)
 {
+	post("MAKING SONG FILES!!!!");
+
 	var c = this.patcher.newdefault(0, 0, "coll", "songs");
 	var d = new Dict();
 
