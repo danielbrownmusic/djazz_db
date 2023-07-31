@@ -23,12 +23,12 @@ function set_database(name)
 
 function get_beat_data()
 {
+    post("get beat data");
     if (!song_database_name)
         return;
 
     var song_database = new Dict(song_database_name);
-    //post(d.get("beats").get("1").get("chapter"));
-    //post(arguments.length + "\n");
+    post(arguments.length + "\n");
     if (arguments.length === 1)
     {
 
@@ -46,7 +46,8 @@ function get_beat_data()
         var chapter     = arguments[0];
         var measure     = arguments[1];
         var position    = arguments[2];
-        var beat_number = song_database.get("grid").get("chapter").get("measure").get("position");
+        post([chapter, measure, position].join(", "), "\n");
+        var beat_number = song_database.get("grid").get(chapter.toString()).get(measure.toString()).get(position.toString());
 
         outlet(0, [beat_number, chapter, measure, position]);
     }

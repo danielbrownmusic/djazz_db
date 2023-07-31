@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 91.0, 125.0, 1231.0, 693.0 ],
+		"rect" : [ -2660.0, 64.0, 1231.0, 693.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -44,7 +44,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 644.0, 74.0, 106.0, 20.0 ],
+					"patching_rect" : [ 934.0, 115.0, 106.0, 20.0 ],
 					"text" : "currently unused"
 				}
 
@@ -53,7 +53,7 @@
 				"box" : 				{
 					"comment" : "(int int) chapter min and max measures",
 					"id" : "obj-9",
-					"index" : 0,
+					"index" : 3,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -66,12 +66,12 @@
 				"box" : 				{
 					"comment" : "(int) current measure position",
 					"id" : "obj-8",
-					"index" : 0,
+					"index" : 5,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 674.0, 33.0, 30.0, 30.0 ]
+					"patching_rect" : [ 964.0, 74.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -79,7 +79,7 @@
 				"box" : 				{
 					"comment" : "(int) current measure number",
 					"id" : "obj-7",
-					"index" : 0,
+					"index" : 4,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -92,7 +92,7 @@
 				"box" : 				{
 					"comment" : "(int) current chapter number",
 					"id" : "obj-1",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -105,7 +105,7 @@
 				"box" : 				{
 					"comment" : "(0 or 1) loop chapter",
 					"id" : "obj-5",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -180,13 +180,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 59.0, 119.0, 640.0, 480.0 ],
+						"rect" : [ -1241.0, -43.0, 434.0, 245.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -214,6 +214,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-11",
@@ -293,13 +294,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 59.0, 119.0, 640.0, 480.0 ],
+						"rect" : [ -1283.0, 333.0, 464.0, 359.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -384,7 +385,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "int" ],
 									"patching_rect" : [ 50.0, 40.0, 30.0, 30.0 ]
 								}
 
@@ -417,7 +418,7 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"destination" : [ "obj-9", 0 ],
+									"destination" : [ "obj-8", 0 ],
 									"source" : [ "obj-14", 0 ]
 								}
 
@@ -490,7 +491,7 @@
 				"box" : 				{
 					"comment" : "(int int int) grid position: chapter measure position_in_measure",
 					"id" : "obj-50",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -550,7 +551,7 @@
 					"patching_rect" : [ 146.0, 169.0, 244.0, 62.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 191.0, 196.0, 251.0, 63.0 ],
-					"tabs" : [ "4", "5", "6", "7", "8" ],
+					"tabs" : [ "0", "1", "2", "3", "4", "5", "6" ],
 					"varname" : "chapters"
 				}
 
@@ -576,7 +577,7 @@
 				"box" : 				{
 					"comment" : "(int int) song min and max chapters",
 					"id" : "obj-4",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -596,7 +597,7 @@
 					"patching_rect" : [ 579.0, 169.0, 244.0, 62.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 191.0, 99.0, 653.0, 25.0 ],
-					"tabs" : [ "4", "5", "6", "7", "8" ],
+					"tabs" : [ "0", "1", "2", "3", "4", "5", "6" ],
 					"varname" : "measures"
 				}
 
@@ -663,7 +664,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"order" : 0,
+					"source" : [ "obj-39", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-21", 0 ],
+					"order" : 1,
 					"source" : [ "obj-39", 0 ]
 				}
 
@@ -703,16 +713,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_ui_navigate_set_tabs.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

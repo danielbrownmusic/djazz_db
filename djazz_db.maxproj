@@ -2,7 +2,7 @@
 	"name" : "djazz_db",
 	"version" : 1,
 	"creationdate" : 3770802008,
-	"modificationdate" : 3773575063,
+	"modificationdate" : 3773652733,
 	"viewrect" : [ 707.0, 279.0, 610.0, 782.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
