@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 503.0, 135.0, 509.0, 446.0 ],
+		"rect" : [ -2805.0, 640.0, 509.0, 446.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -69,7 +69,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 31.0, 86.0, 133.0, 22.0 ],
+					"patching_rect" : [ 31.0, 77.0, 133.0, 22.0 ],
 					"text" : "prepend get_beat_data"
 				}
 
@@ -185,7 +185,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 31.0, 20.0, 30.0, 30.0 ]
 				}
 
@@ -201,7 +201,9 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
-					"source" : [ "obj-10", 0 ]
+					"source" : [ "obj-10", 0 ],
+					"watchpoint_flags" : 1,
+					"watchpoint_id" : 3
 				}
 
 			}
