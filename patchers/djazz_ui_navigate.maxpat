@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2660.0, 64.0, 1231.0, 693.0 ],
+		"rect" : [ 34.0, 100.0, 1085.0, 551.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -41,11 +41,12 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-12",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 934.0, 115.0, 106.0, 20.0 ],
-					"text" : "currently unused"
+					"patching_rect" : [ 747.5, 79.0, 114.0, 33.0 ],
+					"text" : "currently unused (measure position)"
 				}
 
 			}
@@ -53,12 +54,12 @@
 				"box" : 				{
 					"comment" : "(int int) chapter min and max measures",
 					"id" : "obj-9",
-					"index" : 3,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 579.0, 74.0, 30.0, 30.0 ]
+					"patching_rect" : [ 475.0, 32.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -66,12 +67,12 @@
 				"box" : 				{
 					"comment" : "(int) current measure position",
 					"id" : "obj-8",
-					"index" : 5,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 964.0, 74.0, 30.0, 30.0 ]
+					"patching_rect" : [ 777.5, 38.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -79,12 +80,12 @@
 				"box" : 				{
 					"comment" : "(int) current measure number",
 					"id" : "obj-7",
-					"index" : 4,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 786.0, 74.0, 30.0, 30.0 ]
+					"patching_rect" : [ 682.0, 32.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -92,12 +93,12 @@
 				"box" : 				{
 					"comment" : "(int) current chapter number",
 					"id" : "obj-1",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 339.0, 74.0, 30.0, 30.0 ]
+					"patching_rect" : [ 235.0, 32.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -105,11 +106,11 @@
 				"box" : 				{
 					"comment" : "(0 or 1) loop chapter",
 					"id" : "obj-5",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 43.0, 543.0, 30.0, 30.0 ]
+					"patching_rect" : [ 939.0, 448.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -119,7 +120,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 856.5, 248.0, 55.0, 20.0 ],
+					"patching_rect" : [ 752.5, 206.0, 55.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 196.0, 39.0, 55.0, 20.0 ],
 					"text" : "SONG"
@@ -132,7 +133,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 419.0, 230.0, 78.0, 20.0 ],
+					"patching_rect" : [ 315.0, 188.0, 78.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 191.0, 161.0, 78.0, 20.0 ],
 					"text" : "CHAPTER"
@@ -146,7 +147,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 43.0, 120.0, 88.0, 33.0 ],
+					"patching_rect" : [ 939.0, 25.0, 88.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 50.0, 139.0, 88.0, 33.0 ],
@@ -162,7 +163,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 43.0, 169.0, 81.0, 81.0 ],
+					"patching_rect" : [ 939.0, 74.0, 81.0, 81.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 50.0, 178.0, 81.0, 81.0 ]
 				}
@@ -180,13 +181,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ -1241.0, -43.0, 434.0, 245.0 ],
+						"rect" : [ 34.0, 100.0, 434.0, 245.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -270,7 +271,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 150.0, 482.0, 150.0, 22.0 ],
+					"patching_rect" : [ 46.0, 440.0, 150.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -294,13 +295,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ -1283.0, 333.0, 464.0, 359.0 ],
+						"rect" : [ 34.0, 333.0, 464.0, 359.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -475,7 +476,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 441.0, 482.0, 157.0, 22.0 ],
+					"patching_rect" : [ 337.0, 440.0, 157.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -491,11 +492,11 @@
 				"box" : 				{
 					"comment" : "(int int int) grid position: chapter measure position_in_measure",
 					"id" : "obj-50",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 284.0, 548.0, 30.0, 30.0 ]
+					"patching_rect" : [ 180.0, 506.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -506,7 +507,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 786.0, 125.5, 41.0, 22.0 ],
+					"patching_rect" : [ 682.0, 83.5, 41.0, 22.0 ],
 					"text" : "set $1"
 				}
 
@@ -518,7 +519,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 339.0, 125.5, 41.0, 22.0 ],
+					"patching_rect" : [ 235.0, 83.5, 41.0, 22.0 ],
 					"text" : "set $1"
 				}
 
@@ -530,7 +531,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 146.0, 125.5, 181.0, 22.0 ],
+					"patching_rect" : [ 42.0, 83.5, 181.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_ui_navigate_set_tabs.js",
 						"parameter_enable" : 0
@@ -548,7 +549,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 146.0, 169.0, 244.0, 62.0 ],
+					"patching_rect" : [ 42.0, 127.0, 244.0, 62.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 191.0, 196.0, 251.0, 63.0 ],
 					"tabs" : [ "0", "1", "2", "3", "4", "5", "6" ],
@@ -563,7 +564,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 579.0, 125.5, 181.0, 22.0 ],
+					"patching_rect" : [ 475.0, 83.5, 181.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_ui_navigate_set_tabs.js",
 						"parameter_enable" : 0
@@ -577,12 +578,12 @@
 				"box" : 				{
 					"comment" : "(int int) song min and max chapters",
 					"id" : "obj-4",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 146.0, 74.0, 30.0, 30.0 ]
+					"patching_rect" : [ 42.0, 32.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -594,7 +595,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 579.0, 169.0, 244.0, 62.0 ],
+					"patching_rect" : [ 475.0, 127.0, 244.0, 62.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 191.0, 99.0, 653.0, 25.0 ],
 					"tabs" : [ "0", "1", "2", "3", "4", "5", "6" ],
@@ -606,7 +607,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-18", 0 ],
-					"midpoints" : [ 348.5, 116.0, 450.5, 116.0 ],
+					"midpoints" : [ 244.5, 74.0, 346.5, 74.0 ],
 					"order" : 0,
 					"source" : [ "obj-1", 0 ]
 				}
@@ -713,7 +714,16 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "djazz_ui_navigate_set_tabs.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }

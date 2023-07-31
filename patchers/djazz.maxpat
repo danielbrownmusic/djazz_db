@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 70.0, 100.0, 1489.0, 891.0 ],
+		"rect" : [ 70.0, 100.0, 899.0, 545.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -46,7 +46,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 3518.800101697444916, 1243.666702687740326, 50.0, 22.0 ],
-					"style" : "dj finished message"
+					"style" : "dj finished message",
+					"text" : "*"
 				}
 
 			}
@@ -58,7 +59,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 3442.200100779533386, 1248.66670298576355, 50.0, 22.0 ],
-					"style" : "dj finished message"
+					"style" : "dj finished message",
+					"text" : "84"
 				}
 
 			}
@@ -70,7 +72,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 4143.55002161860466, 1248.66670298576355, 50.0, 22.0 ],
-					"style" : "dj finished message"
+					"style" : "dj finished message",
+					"text" : "*"
 				}
 
 			}
@@ -82,7 +85,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 4031.750020176171802, 1248.66670298576355, 50.0, 22.0 ],
-					"style" : "dj finished message"
+					"style" : "dj finished message",
+					"text" : "84"
 				}
 
 			}
@@ -94,7 +98,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 3964.750018626451038, 1253.666703581809998, 50.0, 22.0 ],
-					"style" : "dj finished message"
+					"style" : "dj finished message",
+					"text" : "bang"
 				}
 
 			}
@@ -106,7 +111,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 3336.000099420547485, 1257.333370804786682, 50.0, 22.0 ],
-					"style" : "dj finished message"
+					"style" : "dj finished message",
+					"text" : "bang"
 				}
 
 			}
@@ -117,7 +123,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 4188.995574941288396, 142.959654827055886, 163.0, 26.0 ],
+					"patching_rect" : [ 4188.995574941288396, 142.959654827055886, 163.0, 22.0 ],
 					"style" : "djazz_to_UI",
 					"text" : "r from_navigate_to_ui"
 				}
@@ -129,7 +135,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 3829.333380937576294, 1007.99999463558197, 196.0, 26.0 ],
+					"patching_rect" : [ 3844.333380937576294, 989.99999463558197, 196.0, 22.0 ],
 					"style" : "djazz_to_UI",
 					"text" : "s from_navigate_to_ui"
 				}
@@ -258,8 +264,8 @@
 					"numinlets" : 5,
 					"numoutlets" : 2,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "int", "" ],
-					"patching_rect" : [ 3823.528907460024584, 295.67225627497811, 864.333332180977322, 342.66666674613964 ],
+					"outlettype" : [ "", "int" ],
+					"patching_rect" : [ 3763.528907460024584, 313.67225627497811, 864.333332180977322, 342.66666674613964 ],
 					"viewvisibility" : 1
 				}
 
@@ -374,7 +380,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -506,12 +512,12 @@
 				"box" : 				{
 					"id" : "obj-39",
 					"maxclass" : "newobj",
-					"numinlets" : 6,
-					"numoutlets" : 1,
-					"outlettype" : [ "dictionary" ],
-					"patching_rect" : [ 3739.528907460024584, 958.600039431878145, 148.0, 26.0 ],
+					"numinlets" : 5,
+					"numoutlets" : 2,
+					"outlettype" : [ "dictionary", "dictionary" ],
+					"patching_rect" : [ 3779.528907460024584, 944.600039431878145, 117.0, 26.0 ],
 					"style" : "dj finished encapsulation",
-					"text" : "djazz.navigate",
+					"text" : "djazz_get_beat",
 					"varname" : "djazz.navigate[1]"
 				}
 
@@ -645,7 +651,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -837,7 +843,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -926,7 +932,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1015,7 +1021,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1104,7 +1110,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1193,7 +1199,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1282,7 +1288,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1371,7 +1377,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1545,7 +1551,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1649,7 +1655,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1779,7 +1785,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1882,7 +1888,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1986,7 +1992,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2062,7 +2068,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2151,7 +2157,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2387,7 +2393,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2476,7 +2482,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2565,7 +2571,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2681,7 +2687,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2785,7 +2791,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2874,7 +2880,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -3716,17 +3722,22 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-119", 0 ],
-					"source" : [ "obj-4", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 2
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-39", 4 ],
+					"source" : [ "obj-47", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"color" : [ 0.595981121063232, 0.71068662405014, 0.792471170425415, 1.0 ],
-					"destination" : [ "obj-39", 5 ],
-					"source" : [ "obj-47", 0 ],
+					"destination" : [ "obj-4", 3 ],
+					"source" : [ "obj-47", 1 ],
 					"watchpoint_flags" : 5,
 					"watchpoint_id" : 3
 				}
@@ -3735,16 +3746,10 @@
 , 			{
 				"patchline" : 				{
 					"color" : [ 0.595981121063232, 0.71068662405014, 0.792471170425415, 1.0 ],
-					"destination" : [ "obj-4", 3 ],
-					"source" : [ "obj-47", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"color" : [ 0.595981121063232, 0.71068662405014, 0.792471170425415, 1.0 ],
 					"destination" : [ "obj-6", 3 ],
-					"source" : [ "obj-47", 2 ]
+					"source" : [ "obj-47", 2 ],
+					"watchpoint_flags" : 5,
+					"watchpoint_id" : 2
 				}
 
 			}
@@ -3806,42 +3811,34 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-75", 2 ],
-					"source" : [ "obj-52", 4 ],
-					"watchpoint_flags" : 2,
-					"watchpoint_id" : 12
+					"source" : [ "obj-52", 4 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-75", 3 ],
-					"source" : [ "obj-52", 3 ],
-					"watchpoint_flags" : 2,
-					"watchpoint_id" : 11
+					"source" : [ "obj-52", 3 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-75", 4 ],
-					"source" : [ "obj-52", 2 ],
-					"watchpoint_flags" : 2,
-					"watchpoint_id" : 10
+					"source" : [ "obj-52", 2 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-75", 1 ],
-					"source" : [ "obj-52", 1 ],
-					"watchpoint_flags" : 2,
-					"watchpoint_id" : 9
+					"source" : [ "obj-52", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-39", 0 ],
+					"destination" : [ "obj-39", 1 ],
 					"source" : [ "obj-53", 1 ]
 				}
 
@@ -3911,7 +3908,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-39", 3 ],
+					"destination" : [ "obj-39", 0 ],
 					"source" : [ "obj-75", 0 ]
 				}
 
@@ -3933,18 +3930,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-47", 1 ],
-					"source" : [ "obj-78", 1 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 5
+					"source" : [ "obj-78", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-47", 0 ],
-					"source" : [ "obj-78", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 6
+					"source" : [ "obj-78", 0 ]
 				}
 
 			}
@@ -4013,8 +4006,8 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-39::obj-57::obj-11::obj-26" : [ "gswitch2[5]", "gswitch2", 0 ],
-			"obj-39::obj-57::obj-11::obj-64" : [ "gswitch2[4]", "gswitch2[1]", 0 ],
+			"obj-39::obj-11::obj-14::obj-64" : [ "gswitch2[4]", "gswitch2[1]", 0 ],
+			"obj-39::obj-11::obj-9::obj-26" : [ "gswitch2[5]", "gswitch2", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
@@ -4033,13 +4026,6 @@
 			}
 , 			{
 				"name" : "convert_antescofo_output_to_event.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz.navigate.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -4102,6 +4088,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "djazz_get_beat.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "djazz_get_beat_data.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
@@ -4117,13 +4110,6 @@
 			}
 , 			{
 				"name" : "djazz_get_navigation_state.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_get_next_beat.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -4173,6 +4159,13 @@
 			}
 , 			{
 				"name" : "djazz_loop_beats.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_loop_chapter.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -4263,7 +4256,21 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "djazz_play_loop.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "djazz_read_gen_database.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_record_loop.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -4351,6 +4358,12 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
+				"type" : "JSON",
 				"implicit" : 1
 			}
  ],
