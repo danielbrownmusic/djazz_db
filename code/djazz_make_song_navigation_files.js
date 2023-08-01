@@ -3,12 +3,11 @@ autowatch = 1;
 setinletassist(0, "");
 setoutletassist(0, "");
 
-var song_dict = new Dict();
 
-function clear()
+/* function clear()
 {
 	song_dict.clear();
-}
+} */
 
 function make_song_files(file_path)
 {
@@ -52,60 +51,29 @@ function make_song_dict_from_data_array(song_data)
 	var beats_per_measure 		= song_data[3];
 	var chapter_start_measures 	= song_data.slice(4);
 
-/* 	post("song_name = ", song_name, "\n");
-	post("beat_count = ", beat_count, "\n");
-	post("tempo = ", tempo, "\n");
-	post("beats_per_measure = ", beats_per_measure, "\n");
-	post("chapter_start_measures = ", chapter_start_measures, "\n");
-	post(typeof chapter_start_measures, "\n"); */
-
-	//chapter_start_measures = chapter_start_measures.split(" ");
-	//post("chapter_start_measures string = ", chapter_start_measures.toString(), "\n");
-
 	chapter_start_measures = chapter_start_measures	.toString()
 													.split(" ")
 													.filter(function(e) { return !isNaN(e); })
-													.map(function(e) { return Number(e); });
-	chapter_start_measures.shift();
-/* 	for (var i = 0; i < chapter_start_measures.length; i++)
-	{
-		post("  chapter_start_measures element = ", chapter_start_measures[i] == 0 ? "a fucking ZERO" : chapter_start_measures[i], "\n");	
-	} */
-	chapter_start_measures = chapter_start_measures.map(function(x) { return x - 1; });
-	//post("chapter_start_measures = ", chapter_start_measures, "\n");
-
+													.slice(1)
+													.map(function(e) { return Number(e) - 1; });
 	chapter_start_measures.push(beat_count / beats_per_measure);
-	//post("chapter_start_measures = ", chapter_start_measures);
-	//post(", length = ", chapter_start_measures.length, "\n");
+	post(chapter_start_measures, "\n");
 	var chapter_start_beats = chapter_start_measures.map(function(x) { return x * beats_per_measure; })
-	//post("chapter_start_beats = ", chapter_start_beats, "\n");
-	//chapter_start_beats.push(beat_count + beats_per_measure);
-	post("chapter_start_beats = ", chapter_start_beats, "\n");
 
-    post("meta \n");
 	var metadata_dict 	= make_song_metadata_dict	(song_name, tempo);
-    post("chapters \n");
 	var chapters_dict 	= make_song_chapters_dict	(chapter_start_measures, chapter_start_beats);
-    post("beats \n");
+	var measures_dict 	= make_song_measures_dict	(chapter_start_measures, beats_per_measure);
     var beats_dict 		= make_song_beats_dict		(beats_per_measure, chapter_start_measures, chapter_start_beats);
-    post("grid \n");
     var grid_dict 		= make_grid_dict			(chapter_start_measures, beats_per_measure);
 
-	song_dict 			= fill_song_dict 			(metadata_dict, chapters_dict, beats_dict, grid_dict);
+	var song_dict 		= new Dict();
 
-	return song_dict;
-}
-
-
-// ------------------------------------------------------------------------------------------------------
-
-
-function fill_song_dict(metadata_dict, chapters_dict, beats_dict, grid_dict)
-{
 	song_dict.set( "metadata", 	metadata_dict);
 	song_dict.set( "chapters",	chapters_dict);
+	song_dict.set( "measures",	measures_dict);
 	song_dict.set( "beats", 	beats_dict);
 	song_dict.set( "grid", 		grid_dict);
+
 	return song_dict;
 }
 
@@ -115,9 +83,9 @@ function fill_song_dict(metadata_dict, chapters_dict, beats_dict, grid_dict)
 
 function make_song_metadata_dict(song_name, tempo)
 {
-	var song_dict = new Dict("metadata");
-	song_dict.set("name", song_name);
-	song_dict.set("tempo", tempo);
+	var d = new Dict("metadata");
+	d.set("name", song_name);
+	d.set("tempo", tempo);
 	return song_dict;
 }
 
@@ -127,8 +95,9 @@ function make_song_metadata_dict(song_name, tempo)
 
 function make_song_chapters_dict(chapter_start_measures, chapter_start_beats)
 {	
-	//post("in make_chapter_dicts \n");	
-	var chapters_dict = new Dict("chapters")
+	post("in make_chapter_dicts \n");
+	post(chapter_start_measures, "\n");
+	var chapters_dict = new Dict("chapters");
 	for (var i = 0; i < chapter_start_measures.length - 1; i++)
 	{
 		chapters_dict.set(i, make_chapter_dict(i, chapter_start_measures, chapter_start_beats));
@@ -140,7 +109,8 @@ make_song_chapters_dict.local = 1;
 
 function make_chapter_dict(i, chapter_start_measures, chapter_start_beats)
 {
-	//post("  in make_chapter_dict, i = ", i, "\n");
+	post("  in make_chapter_dict, i = ", i, "\n");
+	post(chapter_start_measures, "\n");
 	var chapter_dict = new Dict();	
 	chapter_dict.set( "min_measure", 	chapter_start_measures[i]		);
 	chapter_dict.set( "max_measure", 	chapter_start_measures[i + 1]	);
@@ -150,6 +120,33 @@ function make_chapter_dict(i, chapter_start_measures, chapter_start_beats)
 }
 make_chapter_dict.local = 1;
 
+
+// ------------------------------------------------------------------------------------------------------
+
+
+function make_song_measures_dict(chapter_start_measures, beats_per_measure)
+{
+	var measures_dict = new Dict("measures");
+	post("chapter start meeasures = ", chapter_start_measures,"\n" );
+	var n_measures = chapter_start_measures.slice(-1);
+	post("n meeasures = ", n_measures,"\n" );
+	for (var m = 0; m < n_measures; m++)
+	{
+		measures_dict.set(m, make_measure_dict(m, beats_per_measure));
+	}
+	return measures_dict;
+}
+make_song_measures_dict.local = 1;
+
+
+function make_measure_dict(measure_number, beats_per_measure)
+{
+	var measure_dict = new Dict();
+	measure_dict.set("min_beat", measure_number * beats_per_measure);
+	measure_dict.set("length_in_beats", beats_per_measure);
+	return measure_dict;
+}
+make_measure_dict.local = 1;
 
 // ------------------------------------------------------------------------------------------------------
 
