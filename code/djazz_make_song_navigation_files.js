@@ -27,6 +27,7 @@ function make_song_files(file_path)
 		{
 			var song_folder_path = f + "/" + name;
 			var song_data_array = [name].concat(d.get(name));
+			post("song data array: ", song_data_array.join(" "), "\n");
 			make_song_navigation_file(song_folder_path, song_data_array);
 		}
 	);
@@ -38,8 +39,10 @@ function make_song_navigation_file(folder_path, song_data_array)
 	var song_name = song_data_array[0];
     post(song_name, "\n");
 	var file_path = folder_path + "/" + song_name + ".json";
-	var song_dict = make_song_dict_from_data_array(song_data_array);	
+	var song_dict = make_song_dict_from_data_array(song_data_array);
 	song_dict.export_json(file_path);
+	post("exported \n");
+	song_dict.clear();
 }
 
 
@@ -83,10 +86,10 @@ function make_song_dict_from_data_array(song_data)
 
 function make_song_metadata_dict(song_name, tempo)
 {
-	var d = new Dict("metadata");
+	var d = new Dict();
 	d.set("name", song_name);
 	d.set("tempo", tempo);
-	return song_dict;
+	return d;
 }
 
 
@@ -97,7 +100,7 @@ function make_song_chapters_dict(chapter_start_measures, chapter_start_beats)
 {	
 	post("in make_chapter_dicts \n");
 	post(chapter_start_measures, "\n");
-	var chapters_dict = new Dict("chapters");
+	var chapters_dict = new Dict();
 	for (var i = 0; i < chapter_start_measures.length - 1; i++)
 	{
 		chapters_dict.set(i, make_chapter_dict(i, chapter_start_measures, chapter_start_beats));
@@ -126,7 +129,7 @@ make_chapter_dict.local = 1;
 
 function make_song_measures_dict(chapter_start_measures, beats_per_measure)
 {
-	var measures_dict = new Dict("measures");
+	var measures_dict = new Dict();
 	post("chapter start meeasures = ", chapter_start_measures,"\n" );
 	var n_measures = chapter_start_measures.slice(-1);
 	post("n meeasures = ", n_measures,"\n" );
@@ -154,7 +157,7 @@ make_measure_dict.local = 1;
 function make_song_beats_dict(beats_per_measure, chapter_start_measures, chapter_start_beats)
 {
 	//post("in make_song_beats_dict \n");	
-	var beats_dict = new Dict("beats")
+	var beats_dict = new Dict()
 	for (var b = 0; b < chapter_start_beats.slice(-1); b++)
 	{
 		beats_dict.set(b, make_beat_dict(b, beats_per_measure, chapter_start_measures, chapter_start_beats));
