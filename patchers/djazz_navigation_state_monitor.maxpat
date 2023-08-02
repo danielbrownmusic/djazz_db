@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 505.0, 341.0, 454.0, 206.0 ],
+		"rect" : [ 505.0, 341.0, 585.0, 402.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,13 +40,25 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "(int) measure number",
-					"id" : "obj-10",
-					"index" : 3,
+					"comment" : "(int) chapter number",
+					"id" : "obj-2",
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 274.0, 108.0, 30.0, 30.0 ]
+					"patching_rect" : [ 32.0, 130.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "(int) measure number",
+					"id" : "obj-10",
+					"index" : 4,
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 384.5, 138.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -54,11 +66,11 @@
 				"box" : 				{
 					"comment" : "(int int) chapter min and max measures",
 					"id" : "obj-9",
-					"index" : 2,
+					"index" : 3,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 153.0, 108.0, 30.0, 30.0 ]
+					"patching_rect" : [ 263.5, 138.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -66,11 +78,11 @@
 				"box" : 				{
 					"comment" : "(int) chapter number",
 					"id" : "obj-8",
-					"index" : 1,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 32.0, 108.0, 30.0, 30.0 ]
+					"patching_rect" : [ 142.5, 138.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -91,11 +103,11 @@
 				"box" : 				{
 					"id" : "obj-6",
 					"maxclass" : "newobj",
-					"numinlets" : 4,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 32.0, 67.0, 382.0, 22.0 ],
-					"text" : "route chapter_number chapter_min_max_measures measure_number"
+					"numinlets" : 5,
+					"numoutlets" : 5,
+					"outlettype" : [ "", "", "", "", "" ],
+					"patching_rect" : [ 32.0, 67.0, 461.0, 22.0 ],
+					"text" : "route chapter_count chapter_number chapter_min_max_measures measure_number"
 				}
 
 			}
@@ -103,21 +115,28 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
-					"source" : [ "obj-6", 2 ]
+					"source" : [ "obj-6", 3 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
+					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-6", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
+					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-6", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"source" : [ "obj-6", 2 ]
 				}
 
 			}

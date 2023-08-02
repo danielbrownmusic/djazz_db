@@ -48,26 +48,26 @@ function make_song_files(songs_text_file_path)
 
  function format_chapter_start_measures(arr, n_beats, time_signature)
  {
-	//post(arr,"\n");
+	post(arr,"\n");
 	arr = arr.slice(1);
-	//post(arr,"\n");
+	post(arr,"\n");
 
 	var e = arr[arr.length - 1];
-	var e = e.slice(0, e.length - 2);
+	e = e.slice(0, e.length - 2);
 	arr[arr.length - 1] = e;
 
-	//post(arr,"\n");
+	post(arr,"\n");
 	arr = arr.map( function(e) { return +e - 1; } );
-	//post(arr,"\n");
+	post(arr,"\n");
 	arr.push(n_beats / time_signature);
-	//post(arr,"\n");
+	post(arr,"\n");
 	return arr;
 }
 
 
 function make_song_dict_from_data_array([song_name, tempo, beats_per_measure, chapter_start_measures, chapter_start_beats])
 {
-	var metadata_dict 	= make_song_metadata_dict	(song_name, tempo);
+	var metadata_dict 	= make_song_metadata_dict	(song_name, tempo, beats_per_measure, chapter_start_measures);
 	var chapters_dict 	= make_song_chapters_dict	(chapter_start_measures, chapter_start_beats);
 	var measures_dict 	= make_song_measures_dict	(chapter_start_measures, beats_per_measure);
     var beats_dict 		= make_song_beats_dict		(beats_per_measure, chapter_start_measures, chapter_start_beats);
@@ -88,11 +88,13 @@ function make_song_dict_from_data_array([song_name, tempo, beats_per_measure, ch
 // ------------------------------------------------------------------------------------------------------
 
 
-function make_song_metadata_dict(song_name, tempo)
+function make_song_metadata_dict(song_name, tempo, beats_per_measure, chapter_start_measures)
 {
 	var d = new Dict();
 	d.set("name", song_name);
 	d.set("tempo", tempo);
+	d.set("time_signature", beats_per_measure)
+	d.set("chapter_count", chapter_start_measures.length - 1);
 	return d;
 }
 
