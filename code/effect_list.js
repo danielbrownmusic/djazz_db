@@ -35,14 +35,14 @@ function add(effect_name)
     var new_effect = this.patcher.newdefault(x_new, y_new, effect_name);
 
     var prev = (count === 0) ? inlet_ : get_at_(count);
-    this.patcher.disconnect(prev, 0, outlet, 0);
+    this.patcher.disconnect(prev, 0, outlet_, 0);
     this.patcher.connect(prev, 0, new_effect, 0);
     this.patcher.connect(new_effect, 0, outlet_, 0);
 
     new_effect.varname = count.toString();
     count++;
 
-    get_effect_list();
+    //get_effect_list();
 }
 
 
