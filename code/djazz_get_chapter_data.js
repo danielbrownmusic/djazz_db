@@ -1,6 +1,6 @@
 autowatch = 1;
 
-outlets = 5;
+outlets = 3;
 
 function get_chapter_data()
 {
@@ -26,7 +26,7 @@ function get_chapter_data_(song_database_name, chapter_number)
 
     chapter.freepeer();
 
-    return [chapter_number, min_measure, max_measure, min_beat, max_beat];
+    return [chapter_number, [min_measure, max_measure], [min_beat, max_beat]];
 
 }
 
