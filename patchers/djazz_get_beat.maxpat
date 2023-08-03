@@ -66,13 +66,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-108",
-					"linecount" : 2,
+					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 240.200000333336448, 425.0, 75.0, 35.0 ],
-					"text" : "state::chapter_count 1"
+					"patching_rect" : [ 240.200000333336448, 425.0, 75.0, 49.0 ],
+					"text" : "read u422000883.json 0"
 				}
 
 			}
@@ -94,7 +94,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ -1989.0, 258.0, 1489.0, 354.0 ],
+						"rect" : [ -3207.0, 247.0, 1489.0, 354.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -428,9 +428,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-36", 0 ],
-									"source" : [ "obj-2", 0 ],
-									"watchpoint_flags" : 1,
-									"watchpoint_id" : 16
+									"source" : [ "obj-2", 0 ]
 								}
 
 							}
@@ -474,9 +472,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-99", 0 ],
-									"source" : [ "obj-36", 0 ],
-									"watchpoint_flags" : 1,
-									"watchpoint_id" : 15
+									"source" : [ "obj-36", 0 ]
 								}
 
 							}
@@ -504,9 +500,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-103", 0 ],
-									"source" : [ "obj-45", 0 ],
-									"watchpoint_flags" : 1,
-									"watchpoint_id" : 12
+									"source" : [ "obj-45", 0 ]
 								}
 
 							}
@@ -527,9 +521,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-45", 0 ],
-									"source" : [ "obj-6", 1 ],
-									"watchpoint_flags" : 1,
-									"watchpoint_id" : 10
+									"source" : [ "obj-6", 1 ]
 								}
 
 							}

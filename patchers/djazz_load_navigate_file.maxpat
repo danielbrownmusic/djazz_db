@@ -10,9 +10,9 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1796.0, 274.0, 391.0, 763.0 ],
+		"rect" : [ -1232.0, 85.0, 389.0, 259.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 0,
+		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -40,13 +40,30 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-22",
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 21.0, 105.0, 262.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"filename" : "djazz_ui_input_song_folder_navigation_file.js",
+						"parameter_enable" : 0
+					}
+,
+					"text" : "js djazz_ui_input_song_folder_navigation_file.js"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 213.0, 37.0, 35.0, 22.0 ],
-					"text" : "clear"
+					"patching_rect" : [ 21.0, 72.0, 125.0, 22.0 ],
+					"text" : "get_navigation_file $1"
 				}
 
 			}
@@ -57,7 +74,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "", "clear" ],
-					"patching_rect" : [ 27.0, 94.0, 57.0, 22.0 ],
+					"patching_rect" : [ 21.0, 176.0, 57.0, 22.0 ],
 					"text" : "t b l clear"
 				}
 
@@ -69,7 +86,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 27.0, 56.0, 59.0, 22.0 ],
+					"patching_rect" : [ 21.0, 138.0, 59.0, 22.0 ],
 					"text" : "import $1"
 				}
 
@@ -80,7 +97,9 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 106.0, 177.0, 186.0, 511.0 ]
+					"patching_rect" : [ 100.0, 259.0, 251.0, 202.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 3.0, 3.0, 245.0, 103.0 ]
 				}
 
 			}
@@ -91,7 +110,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 46.0, 137.0, 50.5, 22.0 ],
+					"patching_rect" : [ 40.0, 219.0, 50.5, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0,
@@ -110,7 +129,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 46.0, 177.0, 30.0, 30.0 ]
+					"patching_rect" : [ 40.0, 259.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -123,7 +142,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 27.0, 12.0, 30.0, 30.0 ]
+					"patching_rect" : [ 21.0, 15.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -151,7 +170,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-20", 0 ],
+					"destination" : [ "obj-5", 0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -160,13 +179,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-18", 0 ],
 					"source" : [ "obj-20", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
-					"source" : [ "obj-22", 0 ]
 				}
 
 			}
@@ -183,6 +195,20 @@
 					"destination" : [ "obj-3", 0 ],
 					"order" : 1,
 					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}
