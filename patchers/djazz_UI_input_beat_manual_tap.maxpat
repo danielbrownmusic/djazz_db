@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -51,7 +51,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 36.0, 79.0, 128.0, 128.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 22.0, 19.0, 128.0, 128.0 ]
+					"presentation_rect" : [ 27.0, 15.0, 218.0, 218.0 ]
 				}
 
 			}

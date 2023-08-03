@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 100.0, 1085.0, 551.0 ],
+		"rect" : [ -2328.0, 149.0, 1085.0, 551.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -134,8 +134,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 752.5, 206.0, 55.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 196.0, 39.0, 55.0, 20.0 ],
-					"text" : "SONG"
+					"presentation_rect" : [ 161.0, 120.5, 37.0, 20.0 ],
+					"text" : "BAR"
 				}
 
 			}
@@ -147,7 +147,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 315.0, 188.0, 78.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 191.0, 161.0, 78.0, 20.0 ],
+					"presentation_rect" : [ 139.0, 28.0, 74.0, 20.0 ],
 					"text" : "CHAPTER"
 				}
 
@@ -162,7 +162,7 @@
 					"patching_rect" : [ 939.0, 25.0, 88.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 50.0, 139.0, 88.0, 33.0 ],
+					"presentation_rect" : [ 35.0, 28.0, 88.0, 33.0 ],
 					"text" : "LOOP CHAPTER"
 				}
 
@@ -177,7 +177,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 939.0, 74.0, 81.0, 81.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 50.0, 178.0, 81.0, 81.0 ]
+					"presentation_rect" : [ 35.0, 67.0, 81.0, 81.0 ]
 				}
 
 			}
@@ -193,7 +193,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -307,7 +307,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -563,7 +563,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 42.0, 127.0, 244.0, 62.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 191.0, 196.0, 251.0, 63.0 ],
+					"presentation_rect" : [ 227.0, 28.0, 213.0, 41.0 ],
 					"tabs" : [ "0", "1", "2", "3", "4", "5", "6" ],
 					"varname" : "chapters"
 				}
@@ -609,7 +609,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 475.0, 127.0, 244.0, 62.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 191.0, 99.0, 653.0, 25.0 ],
+					"presentation_rect" : [ 213.0, 120.5, 290.0, 66.0 ],
 					"tabs" : [ "0", "1", "2", "3", "4", "5", "6" ],
 					"varname" : "measures"
 				}
