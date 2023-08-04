@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 59.0, 119.0, 640.0, 480.0 ],
+		"rect" : [ 768.0, 113.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,23 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 349.0, 249.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-14",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 22.0, 163.0, 140.0, 22.0 ],
+					"patching_rect" : [ 22.0, 184.0, 140.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "connect_ui_element.js",
 						"parameter_enable" : 0
@@ -63,8 +74,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 22.0, 19.0, 244.0, 33.0 ],
-					"presentation_linecount" : 2,
+					"patching_rect" : [ 104.0, 17.0, 244.0, 33.0 ],
 					"text" : "16vb   8vb   8va  16va",
 					"textcolor" : [ 1.0, 0.968627450980392, 0.0, 1.0 ]
 				}
@@ -79,7 +89,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "list", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 22.0, 47.0, 244.0, 67.0 ],
+					"patching_rect" : [ 149.0, 65.0, 244.0, 67.0 ],
 					"rows" : 1,
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
@@ -102,7 +112,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 22.0, 129.0, 39.0, 22.0 ]
+					"patching_rect" : [ 22.0, 150.0, 39.0, 22.0 ],
+					"text" : "3 0 0"
 				}
 
 			}
@@ -116,7 +127,32 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 1 ],
+					"order" : 0,
+					"source" : [ "obj-9", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"order" : 1,
+					"source" : [ "obj-9", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 1 ],
+					"order" : 0,
+					"source" : [ "obj-9", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
+					"order" : 1,
 					"source" : [ "obj-9", 0 ]
 				}
 
@@ -136,12 +172,15 @@
 			"inherited_shortname" : 1
 		}
 ,
-		"dependency_cache" : [  ],
-		"autosave" : 0,
-		"boxgroups" : [ 			{
-				"boxes" : [ "obj-9", "obj-11" ]
+		"dependency_cache" : [ 			{
+				"name" : "connect_ui_element.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/_DeletedItems/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
 			}
- ]
+ ],
+		"autosave" : 0
 	}
 
 }

@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 59.0, 106.0, 640.0, 480.0 ],
+		"rect" : [ 175.0, 179.0, 439.0, 741.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 50.0, 100.0, 81.0, 22.0 ],
+					"patching_rect" : [ 75.0, 570.0, 81.0, 22.0 ],
 					"style" : "dj_unfinished_message",
 					"text" : "comp_rhythm"
 				}
@@ -58,7 +58,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 76.071862770282678, 116.523408699666561, 63.0, 22.0 ],
+					"patching_rect" : [ 101.071862770282678, 586.523408699666561, 63.0, 22.0 ],
 					"style" : "dj_unfinished_message",
 					"text" : "pitch_shift"
 				}
@@ -71,7 +71,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 54.0, 134.698892720537742, 47.0, 22.0 ],
+					"patching_rect" : [ 79.0, 604.698892720537742, 47.0, 22.0 ],
 					"style" : "dj_unfinished_message",
 					"text" : "solo $1"
 				}
@@ -84,7 +84,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 109.085794241648955, 134.698892720537742, 52.0, 22.0 ],
+					"patching_rect" : [ 134.085794241648955, 604.698892720537742, 52.0, 22.0 ],
 					"style" : "dj_unfinished_message",
 					"text" : "mute $1"
 				}
@@ -97,7 +97,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 152.516241432179186, 116.523408699666561, 61.0, 22.0 ],
+					"patching_rect" : [ 177.516241432179186, 586.523408699666561, 61.0, 22.0 ],
 					"style" : "dj_unfinished_message",
 					"text" : "8ve $1 $2"
 				}
@@ -112,7 +112,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 82.334811281184557, 39.999986153998861, 30.0, 30.0 ]
+					"patching_rect" : [ 111.334811281184557, 137.999986153998861, 30.0, 30.0 ]
 				}
 
 			}
@@ -124,7 +124,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 82.334811281184557, 216.698899153998809, 30.0, 30.0 ]
+					"patching_rect" : [ 107.334811281184557, 686.698899153998809, 30.0, 30.0 ]
 				}
 
 			}

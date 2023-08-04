@@ -1,55 +1,141 @@
 autowatch = 1;
 
+var channel;
+declareattribute("channel");
+
 var inlet_;
 var outlet_;
 
-/* var x_;
-var y_; */
-//var count;
 var effects = [];
-
-
-declareattribute("count");
 
 var y_obj_  = 22;
 var y_space_ = 22;
 
-function bang()
-{
-    loadbang();
-}
 
-
-function loadbang()
+function init()
 {
+    if (arguments.length > 0)
+    {
+        channel = arguments[0];
+    }
     inlet_ = this.patcher.getnamed("inlet_");
     outlet_ = this.patcher.getnamed("outlet_");
-    this.patcher.connect(inlet_, 0, outlet_, 0);
-    //x_      = this.box.rect[0];
-    //y_      = this.box.rect[1];
-    count  = get_initial_count_();
+    effects= get_effect_list();
+	outlet(0, channel);
 }
+
+function get_effect_list()
+{
+    var temp_effect_list = [];
+    for (var obj = this.patcher.firstobject; obj !== null; obj = obj.nextobject)
+    {
+        if (obj.varname && !isNaN(obj.varname))
+        {
+            temp_effect_list.push(obj);
+        }
+    }
+    var effect_list = Array(temp_effect_list.length);
+    temp_effect_list.forEach( 
+        function(e) 
+        {
+            effect_list[Number(e.varname)] = e;
+        }
+    );
+
+    return effect_list;
+}
+
+
+//------------------------------------------------
+// debugging
+
+function print_effects()
+{
+    post("there are", effects.length, "effect slots. \n");
+    if (!effects)
+    {
+        post("no effects \n\n");
+    }
+    else
+    {
+        for (var i = 0; i < effects.length; i++)
+        {
+            print_effect_at(i);
+        }
+        post("\n");
+    }
+}
+
+
+function print_effect_at(i)
+{
+    var effect = effects[i];
+    post("effect ", i.toString(), ": ");
+    if (effect)
+    {
+        post(effect.subpatcher.name, "\n");
+    }
+    else
+    {
+        post("none \n");
+    }
+}
+
+//------------------------------------------------
 
 
 function add(effect_name)
 {
-    var x_new = get_new_patcher_x_();
-    var y_new = get_new_patcher_y_();
-    var new_effect = this.patcher.newdefault(x_new, y_new, effect_name);
-
-    var prev = (count === 0) ? inlet_ : get_at_(count);
-    this.patcher.disconnect(prev, 0, outlet_, 0);
-    this.patcher.connect(prev, 0, new_effect, 0);
-    this.patcher.connect(new_effect, 0, outlet_, 0);
-
-    effects.push(new_effect);
-    new_effect.varname = effects.length.toString();
-
-    //get_effect_list();
+    effects.push(null);
+    replace(effects.length - 1, effect_name);
+    print_effects()
 }
 
 
-function insert(effect_name, i)
+function clear()
+{
+    var count = effects.length;
+    for (var i = 0; i < count; i++)
+    {
+        var effect = effects.pop();
+        this.patcher.remove(effect);
+    }
+    this.patcher.connect(inlet_, 0, outlet_, 0);
+    print_effects()
+}
+
+
+function remove(i)
+{
+    disconnect_all_();
+    this.patcher.remove(effects[i]);
+    effects[i] = null;
+    connect_all_();
+    print_effects()
+}
+
+
+function replace(i, effect_name)
+{
+    disconnect_all_();
+    if (effects[i])
+    {
+        this.patcher.remove(effects[i]);
+    }
+    var x = get_x_at_(i);
+    var y = get_y_at_(i);
+    var effect = this.patcher.newdefault(x, y, effect_name);
+    effect.varname = i.toString();
+    effects[i] = effect;
+    connect_all_();
+    print_effects()
+}
+
+
+
+
+
+/* function insert(effect_name, i)
 {
     // disconnect all
     disconnect_all_();
@@ -65,14 +151,17 @@ function insert(effect_name, i)
         }
     }
     connect_all_();
-}
+} */
 
+// ------------------------------------------------
+// connect/disconnect cables
 
 function disconnect_all_()
 {
     if (!effects)
         return;
 
+    this.patcher.disconnect(inlet_, 0, outlet_, 0);
     var e1 = get_first_effect();
     this.patcher.disconnect(inlet_, 0, e1, 0);
     var e2 = get_next_effect(e1);
@@ -89,7 +178,10 @@ function disconnect_all_()
 function connect_all_()
 {
     if (!effects)
+    {
+        this.patcher.connect(inlet_, 0, outlet_, 0);
         return;
+    }
 
     var e1 = get_first_effect();
     this.patcher.connect(inlet_, 0, e1, 0);
@@ -103,7 +195,10 @@ function connect_all_()
     this.patcher.connect(e1, 0, outlet_, 0);
 }
 
-
+// ------------------------------------------------
+// Linked-list style functions for accessing effects in the list,
+// since there can be empty slots but the cable connections
+// must be traced.
 
 function get_first_effect()
 {
@@ -155,99 +250,23 @@ function get_previous_effect(effect)
     return null;
 }
 
+// -------------------------------------------------
+// patcher position accessors
 
-function remove(index)
-{}
-
-
-function replace(index, effect_name)
-{}
-
-
-function clear()
-{
-    var count = effects.length;
-    for (var i = 0; i < count; i++)
-    {
-        var effect = effects.pop();
-        this.patcher.remove(effect);
-    }
-    this.patcher.connect(inlet_, 0, outlet_, 0);
-}
-
-
-function get_at_(i)
-{
-    return effects[i];
-}
-
-
-function get_effect_x_(i)
+function get_x_at_(i)
 {
     return inlet_.rect[0];
 }
 
 
-function get_effect_y_(i)
+function get_y_at_(i)
 {
     var inlet_bottom   = inlet_.rect[3];
     var list_position    = (1 + i) * (y_obj_ + y_space_);  
     return inlet_bottom + list_position;    
 }
 
+// ------------------------------------------------------------------------------------
 
-/* function get_new_effect_x_(x_inlet, x_outlet)
-{
-    return inlet_.rect[0];
-}
+// Initialization functions that gather the effect list each time the patcher is loaded.
 
-
-function get_new_effect_y_()
-{
-    var inlet_bottom   = inlet_.rect[3];
-    var list_length    = (1 + effects.length) * (y_obj_ + y_space_);  
-    return inlet_bottom + list_length;    
-}
- */
-
-function get_initial_count_()
-{
-    var effect_list = get_effect_list();
-    //post("initial count = " + effect_list.length);
-    return effect_list.length;
-
-}
-
-
-function get_effect_list()
-{
-    var temp_effect_list= [];
-    for (var obj = this.patcher.firstobject; obj !== null; obj = obj.nextobject)
-    {
-        if (obj.varname && !isNaN(obj.varname))
-        {
-            //post(obj.varname);
-            temp_effect_list.push(obj);
-        }
-    }
-
-    //post("unordered effect list = ");
-    //temp_effect_list.forEach(function(e) {post(e ? e.varname : "_");})
-    //post("\n");
-    //post("\n");
-
-    var effect_list = Array(temp_effect_list.length);
-    temp_effect_list.forEach( 
-        function(e) 
-        {
-            effect_list[Number(e.varname)] = e;
-        }
-    );
-
-    //post("ordered effect list = ");
-    //effect_list.forEach(function(e) {post(e ? e.varname : "-");})
-    //post("\n");
-    //post("\n");
-
-    return effect_list;
-}
