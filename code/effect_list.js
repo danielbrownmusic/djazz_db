@@ -3,31 +3,12 @@ autowatch = 1;
 var channel;
 declareattribute("channel");
 
-var inlet_;
-var outlet_;
-
 var effect_slots_ = [];
 
 var y_obj_  = 22;
 var y_space_ = 22;
 
 
-function bang()
-{
-    loadbang();
-}
-
-
-function loadbang()
-{
-    if (arguments.length > 0)
-    {
-        channel = arguments[0];
-    }
-    inlet_          = this.patcher.getnamed("inlet_");
-    outlet_         = this.patcher.getnamed("outlet_");
-    clear();
-}
 
 function clear()
 {
@@ -76,16 +57,19 @@ function set_effect(i, name)
 
 function push_back_()
 {
-    var l = effect_slots_.length;
-    var x = get_x_at_(l);
-    var y = get_y_at_(l);
-    var prev = (l === 0) ? inlet_ : effect_slots_[l - 1];
+    var l       = effect_slots_.length;
+    var x       = get_x_at_(l);
+    var y       = get_y_at_(l);
+    var prev    = (l === 0) ? inlet : effect_slots_[l - 1];
 
-    var slot = this.patcher.newdefault(x, y, "djazz_effect_slot");
+    var slot    = this.patcher.newdefault(x, y, "djazz_effect_slot");
 
-    this.patcher.disconnect(prev, 0, outlet_, 0);
-    this.patcher.connect(prev, 0, slot, 0);
-    this.patcher.connect(slot, 0, outlet_, 0);
+    var inlet      = this.patcher.getnamed("inlet");
+    var outlet     = this.patcher.getnamed("outlet");
+
+    this.patcher.disconnect (prev, 0, outlet, 0);
+    this.patcher.connect    (prev, 0, slot, 0);
+    this.patcher.connect    (slot, 0, outlet, 0);
 
     effect_slots_.push(slot);
 }
@@ -96,9 +80,14 @@ function pop_back_()
 {
     var effect = effect_slots_.pop();
     this.patcher.remove(effect);
-    var l = effect_slots_.length;
-    var prev = (l === 0) ? inlet_ : effect_slots_[l - 1];
-    this.patcher.connect(prev, 0, outlet_, 0);
+
+    var inlet      = this.patcher.getnamed("inlet");
+    var outlet     = this.patcher.getnamed("outlet");
+
+    var l       = effect_slots_.length;
+    var prev    = (l === 0) ? inlet : effect_slots_[l - 1];
+
+    this.patcher.connect(prev, 0, outlet, 0);
 }
 pop_back_.local = 1;
 
@@ -107,28 +96,31 @@ pop_back_.local = 1;
 
 function get_x_at_(i)
 {
-    return inlet_.rect[0];
+    var inlet = this.patcher.getnamed("inlet");    
+    return inlet.rect[0];
 }
 get_x_at_.local = 1
 
 
 function get_y_at_(i)
 {
-    var inlet_bottom   = inlet_.rect[3];
-    var list_position    = (1 + i) * (y_obj_ + y_space_);  
+    var inlet          = this.patcher.getnamed("inlet");    
+    var inlet_bottom    = inlet.rect[3];
+    var list_position   = (1 + i) * (y_obj_ + y_space_);  
     return inlet_bottom + list_position;    
 }
 get_y_at_.local = 1
 
 
-function disconnect_all_()
+
+/* function disconnect_all_()
 {
     if (!effect_slots_)
         return;
 
-    this.patcher.disconnect(inlet_, 0, outlet_, 0);
+    this.patcher.disconnect(inlet, 0, outlet, 0);
     var e1 = get_first_effect();
-    this.patcher.disconnect(inlet_, 0, e1, 0);
+    this.patcher.disconnect(inlet, 0, e1, 0);
     var e2 = get_next_effect(e1);
     while (e2)
     {
@@ -136,7 +128,7 @@ function disconnect_all_()
         e1 = e2;
         e2 = get_next_effect(e1);
     }
-    this.patcher.disconnect(e1, 0, outlet_, 0);
+    this.patcher.disconnect(e1, 0, outlet, 0);
 }
 disconnect_all_.local = 1
 
@@ -145,12 +137,12 @@ function connect_all_()
 {
     if (!effect_slots_)
     {
-        this.patcher.connect(inlet_, 0, outlet_, 0);
+        this.patcher.connect(inlet, 0, outlet, 0);
         return;
     }
 
     var e1 = get_first_effect();
-    this.patcher.connect(inlet_, 0, e1, 0);
+    this.patcher.connect(inlet, 0, e1, 0);
     var e2 = get_next_effect(e1);
     while (e2)
     {
@@ -158,9 +150,9 @@ function connect_all_()
         e1 = e2;
         e2 = get_next_effect(e1);
     }
-    this.patcher.connect(e1, 0, outlet_, 0);
+    this.patcher.connect(e1, 0, outlet, 0);
 }
-connect_all_.local = 1
+connect_all_.local = 1 */
 
 
 
@@ -250,7 +242,7 @@ function clear()
         var effect = effect_slots_.pop();
         this.patcher.remove(effect);
     }
-    this.patcher.connect(inlet_, 0, outlet_, 0);
+    this.patcher.connect(inlet, 0, outlet, 0);
     print_effects()
 }
 
@@ -368,13 +360,13 @@ function get_previous_effect(effect)
 
 function get_x_at_(i)
 {
-    return inlet_.rect[0];
+    return inlet.rect[0];
 }
 
 
 function get_y_at_(i)
 {
-    var inlet_bottom   = inlet_.rect[3];
+    var inlet_bottom   = inlet.rect[3];
     var list_position    = (1 + i) * (y_obj_ + y_space_);  
     return inlet_bottom + list_position;    
 }

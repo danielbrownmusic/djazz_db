@@ -1,10 +1,24 @@
+autowatch = 1;
+
+var count = jsarguments[0];
+var solo_states = Array(count);
+for (var i = 0; i < count; i++) { solo_states[i] = 0; }
+
+
+function list()
+{
+	var i = arguments[0];
+	var s = arguments[1];
+	solo_states[i] = s;
+	outlet(0, solo_states.some(function(e) { e !== 0; }));//) ? 1 : 0);
+}
+
 
 
 //this.name = name;
-solo_objects 	= []; //js objects
-solo_listeners = [];
-solo_states 	= [];	
-
+//solo_objects 	= []; //js objects
+//solo_listeners = [];
+/* 
 function postval(name, val)
 {
 	post(name + ": " + val + '\n');
@@ -37,3 +51,4 @@ function set_solo_obj_send_attr(data)
 		}
 	);
 }
+ */
