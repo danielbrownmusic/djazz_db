@@ -12,6 +12,7 @@ function init()
     {
         var effect_name = arguments[0];
         effect_ = this.patcher.newdefault(50, 100, effect_name);
+        effect_.varname = "effect";
         this.patcher.disconnect(inlet_, 0, outlet_, 0);
         this.patcher.connect(inlet_, 0, effect_, 0);
         this.patcher.connect(effect_, 0, outlet_, 0);

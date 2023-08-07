@@ -6,24 +6,174 @@ declareattribute("channel");
 var inlet_;
 var outlet_;
 
-var effects = [];
+var effect_slots_ = [];
 
 var y_obj_  = 22;
 var y_space_ = 22;
 
 
-function init()
+function bang()
+{
+    loadbang();
+}
+
+
+function loadbang()
 {
     if (arguments.length > 0)
     {
         channel = arguments[0];
     }
-    inlet_ = this.patcher.getnamed("inlet_");
-    outlet_ = this.patcher.getnamed("outlet_");
-    effects= get_effect_list();
-	outlet(0, channel);
+    inlet_          = this.patcher.getnamed("inlet_");
+    outlet_         = this.patcher.getnamed("outlet_");
+    clear();
 }
 
+function clear()
+{
+    set_slot_count(0);
+}
+
+
+function set_slot_count(n)
+{
+    if (n < 0)
+        return;
+   
+    var l = effect_slots_.length;
+
+    if (n === l)
+        return;
+
+    if (n < l)
+    {
+        for (var i = l - 1; i > n - 1; i--)
+        {
+            pop_back_();
+        }        
+        return;
+    }
+
+    if (n > l)
+    {
+        for (var i = 0; i < n - l; i++)
+        {
+            push_back_();
+        }
+    }
+}
+
+
+function set_effect(i, name)
+{
+    post(effect_slots_.join(", "), "\n");
+    effect_slots_[i].subpatcher().getnamed("effect_type").message(name);
+}
+
+
+//---------------------------------------------------------
+
+
+function push_back_()
+{
+    var l = effect_slots_.length;
+    var x = get_x_at_(l);
+    var y = get_y_at_(l);
+    var prev = (l === 0) ? inlet_ : effect_slots_[l - 1];
+
+    var slot = this.patcher.newdefault(x, y, "djazz_effect_slot");
+
+    this.patcher.disconnect(prev, 0, outlet_, 0);
+    this.patcher.connect(prev, 0, slot, 0);
+    this.patcher.connect(slot, 0, outlet_, 0);
+
+    effect_slots_.push(slot);
+}
+push_back_.local = 1;
+
+
+function pop_back_()
+{
+    var effect = effect_slots_.pop();
+    this.patcher.remove(effect);
+    var l = effect_slots_.length;
+    var prev = (l === 0) ? inlet_ : effect_slots_[l - 1];
+    this.patcher.connect(prev, 0, outlet_, 0);
+}
+pop_back_.local = 1;
+
+//---------------------------------------------------------
+
+
+function get_x_at_(i)
+{
+    return inlet_.rect[0];
+}
+get_x_at_.local = 1
+
+
+function get_y_at_(i)
+{
+    var inlet_bottom   = inlet_.rect[3];
+    var list_position    = (1 + i) * (y_obj_ + y_space_);  
+    return inlet_bottom + list_position;    
+}
+get_y_at_.local = 1
+
+
+function disconnect_all_()
+{
+    if (!effect_slots_)
+        return;
+
+    this.patcher.disconnect(inlet_, 0, outlet_, 0);
+    var e1 = get_first_effect();
+    this.patcher.disconnect(inlet_, 0, e1, 0);
+    var e2 = get_next_effect(e1);
+    while (e2)
+    {
+        this.patcher.disconnect(e1, 0, e2, 0);
+        e1 = e2;
+        e2 = get_next_effect(e1);
+    }
+    this.patcher.disconnect(e1, 0, outlet_, 0);
+}
+disconnect_all_.local = 1
+
+
+function connect_all_()
+{
+    if (!effect_slots_)
+    {
+        this.patcher.connect(inlet_, 0, outlet_, 0);
+        return;
+    }
+
+    var e1 = get_first_effect();
+    this.patcher.connect(inlet_, 0, e1, 0);
+    var e2 = get_next_effect(e1);
+    while (e2)
+    {
+        this.patcher.connect(e1, 0, e2, 0);
+        e1 = e2;
+        e2 = get_next_effect(e1);
+    }
+    this.patcher.connect(e1, 0, outlet_, 0);
+}
+connect_all_.local = 1
+
+
+
+
+
+
+
+
+
+
+//------------------------------------------------
+
+/* 
 function get_effect_list()
 {
     var temp_effect_list = [];
@@ -51,14 +201,14 @@ function get_effect_list()
 
 function print_effects()
 {
-    post("there are", effects.length, "effect slots. \n");
-    if (!effects)
+    post("there are", effect_slots_.length, "effect slots. \n");
+    if (!effect_slots_)
     {
-        post("no effects \n\n");
+        post("no effect_slots_ \n\n");
     }
     else
     {
-        for (var i = 0; i < effects.length; i++)
+        for (var i = 0; i < effect_slots_.length; i++)
         {
             print_effect_at(i);
         }
@@ -69,7 +219,7 @@ function print_effects()
 
 function print_effect_at(i)
 {
-    var effect = effects[i];
+    var effect = effect_slots_[i];
     post("effect ", i.toString(), ": ");
     if (effect)
     {
@@ -86,18 +236,18 @@ function print_effect_at(i)
 
 function add(effect_name)
 {
-    effects.push(null);
-    replace(effects.length - 1, effect_name);
+    effect_slots_.push(null);
+    replace(effect_slots_.length - 1, effect_name);
     print_effects()
 }
 
 
 function clear()
 {
-    var count = effects.length;
+    var count = effect_slots_.length;
     for (var i = 0; i < count; i++)
     {
-        var effect = effects.pop();
+        var effect = effect_slots_.pop();
         this.patcher.remove(effect);
     }
     this.patcher.connect(inlet_, 0, outlet_, 0);
@@ -108,8 +258,8 @@ function clear()
 function remove(i)
 {
     disconnect_all_();
-    this.patcher.remove(effects[i]);
-    effects[i] = null;
+    this.patcher.remove(effect_slots_[i]);
+    effect_slots_[i] = null;
     connect_all_();
     print_effects()
 }
@@ -118,15 +268,15 @@ function remove(i)
 function replace(i, effect_name)
 {
     disconnect_all_();
-    if (effects[i])
+    if (effect_slots_[i])
     {
-        this.patcher.remove(effects[i]);
+        this.patcher.remove(effect_slots_[i]);
     }
     var x = get_x_at_(i);
     var y = get_y_at_(i);
     var effect = this.patcher.newdefault(x, y, effect_name);
     effect.varname = i.toString();
-    effects[i] = effect;
+    effect_slots_[i] = effect;
     connect_all_();
     print_effects()
 }
@@ -139,15 +289,15 @@ function replace(i, effect_name)
 {
     // disconnect all
     disconnect_all_();
-    var p = effects[i] ? 0 : 1;
-    effects.splice(i, p, new_effect);
-    for (var i = 0; i < effects.length; i++)
+    var p = effect_slots_[i] ? 0 : 1;
+    effect_slots_.splice(i, p, new_effect);
+    for (var i = 0; i < effect_slots_.length; i++)
     {
-        if (effects[i])
+        if (effect_slots_[i])
         {
             var x = get_effect_x_(i);
             var y = get_effect_y_(i);
-            effects[i].message("patching_position", [x, y]);
+            effect_slots_[i].message("patching_position", [x, y]);
         }
     }
     connect_all_();
@@ -156,56 +306,19 @@ function replace(i, effect_name)
 // ------------------------------------------------
 // connect/disconnect cables
 
-function disconnect_all_()
-{
-    if (!effects)
-        return;
-
-    this.patcher.disconnect(inlet_, 0, outlet_, 0);
-    var e1 = get_first_effect();
-    this.patcher.disconnect(inlet_, 0, e1, 0);
-    var e2 = get_next_effect(e1);
-    while (e2)
-    {
-        this.patcher.disconnect(e1, 0, e2, 0);
-        e1 = e2;
-        e2 = get_next_effect(e1);
-    }
-    this.patcher.disconnect(e1, 0, outlet_, 0);
-}
-
-
-function connect_all_()
-{
-    if (!effects)
-    {
-        this.patcher.connect(inlet_, 0, outlet_, 0);
-        return;
-    }
-
-    var e1 = get_first_effect();
-    this.patcher.connect(inlet_, 0, e1, 0);
-    var e2 = get_next_effect(e1);
-    while (e2)
-    {
-        this.patcher.connect(e1, 0, e2, 0);
-        e1 = e2;
-        e2 = get_next_effect(e1);
-    }
-    this.patcher.connect(e1, 0, outlet_, 0);
-}
 
 // ------------------------------------------------
-// Linked-list style functions for accessing effects in the list,
+// Linked-list style functions for accessing effect_slots_ in the list,
 // since there can be empty slots but the cable connections
 // must be traced.
 
+/*
 function get_first_effect()
 {
-    for (var i = 0; i < effects.length; i++)
+    for (var i = 0; i < effect_slots_.length; i++)
     {
-        if (effects[i])
-            return effects[i];
+        if (effect_slots_[i])
+            return effect_slots_[i];
     }
     return null;
 }
@@ -213,10 +326,10 @@ function get_first_effect()
 
 function get_last_effect()
 {
-    for (var i = effects.length - 1; i >= 0; i--)
+    for (var i = effect_slots_.length - 1; i >= 0; i--)
     {
-        if (effects[i])
-            return effects[i];
+        if (effect_slots_[i])
+            return effect_slots_[i];
     }
     return null;
 }
@@ -225,13 +338,13 @@ function get_last_effect()
 
 function get_next_effect(effect)
 {
-    var j = effects.indexOf(effect) + 1;
-    while (j < effects.length && !effects[j])
+    var j = effect_slots_.indexOf(effect) + 1;
+    while (j < effect_slots_.length && !effect_slots_[j])
     {
         j++;
     }
-    if (j < effects.length)
-        return effects[j];
+    if (j < effect_slots_.length)
+        return effect_slots_[j];
 
     return null;
 }
@@ -239,13 +352,13 @@ function get_next_effect(effect)
 
 function get_previous_effect(effect)
 {
-    var j = effects.indexOf(effect) - 1;
-    while (j >= 0 && !effects[j])
+    var j = effect_slots_.indexOf(effect) - 1;
+    while (j >= 0 && !effect_slots_[j])
     {
         j--;
     }
     if (j >= 0)
-        return effects[j];
+        return effect_slots_[j];
 
     return null;
 }
@@ -270,3 +383,4 @@ function get_y_at_(i)
 
 // Initialization functions that gather the effect list each time the patcher is loaded.
 
+ */
