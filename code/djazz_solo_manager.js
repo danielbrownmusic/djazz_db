@@ -1,16 +1,36 @@
 autowatch = 1;
 
-var count = jsarguments[0];
-var solo_states = Array(count);
-for (var i = 0; i < count; i++) { solo_states[i] = 0; }
+var solos;
+var any_solos;
 
+
+
+function loadbang()
+{
+	if (!arguments[1])
+		return;
+
+	if (isNaN(arguments[1]))
+		return;
+
+	if (arguments[1] < 1)
+		return;
+
+	solos = Array(arguments[1]);
+	for (var i = 0; i < solos.length; i++) { solos[i] = 0; }
+	any_solos = 0;
+}
 
 function list()
 {
 	var i = arguments[0];
 	var s = arguments[1];
-	solo_states[i] = s;
-	outlet(0, solo_states.some(function(e) { e !== 0; }));//) ? 1 : 0);
+	solos[i] = s;
+	any_solos = solos.some(function(e) { e !== 0; });
+	for (var i = 0; i < solos.length; i++)
+	{
+		outlet(0, [i, "active", solos[i] === any_solos]);
+	}
 }
 
 
