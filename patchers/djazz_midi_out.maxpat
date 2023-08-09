@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 436.0, 258.0, 640.0, 480.0 ],
+		"rect" : [ 136.0, 585.0, 403.0, 294.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,18 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "(0/1) soloed",
+					"id" : "obj-7",
+					"index" : 0,
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 348.0, 221.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-6",
 					"maxclass" : "newobj",
 					"numinlets" : 4,
@@ -52,7 +64,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "midi events",
 					"id" : "obj-5",
 					"index" : 0,
 					"maxclass" : "outlet",
@@ -64,7 +76,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "messages: event, solo, effect",
 					"id" : "obj-3",
 					"index" : 0,
 					"maxclass" : "inlet",
@@ -118,6 +130,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"midpoints" : [ 152.5, 143.0, 357.5, 143.0 ],
+					"source" : [ "obj-1", 1 ]
 				}
 
 			}
