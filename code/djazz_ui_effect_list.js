@@ -1,22 +1,8 @@
 autowatch = 1;
 
-var channel;
-declareattribute("channel");
-
-var effect_slots_ = [];
-
+var count;
 var y_obj_  = 22;
 var y_space_ = 22;
-
-var thru;
-
-var effect_names =
-[
-    " ",
-    "add octaves",
-    "pitch shift"
-];
-
 
 
 function clear()
@@ -25,9 +11,15 @@ function clear()
 }
 
 
+function bang()
+{
+    loadbang();
+}
+
+
 function loadbang()
 {
-    clear();
+    count = 0;
     set_slot_count(3);
 }
 
@@ -36,24 +28,22 @@ function set_slot_count(n)
 {
     if (n < 0)
         return;
-   
-    var l = effect_slots_.length;
 
-    if (n === l)
+    if (n === count)
         return;
 
-    if (n < l)
+    if (n < count)
     {
-        for (var i = l - 1; i > n - 1; i--)
+        for (var i = n; i < count; i++)
         {
             pop_back_();
         }        
         return;
     }
 
-    if (n > l)
+    if (n > count)
     {
-        for (var i = 0; i < n - l; i++)
+        for (var i = 0; i < n - count; i++)
         {
             push_back_();
         }
@@ -61,58 +51,63 @@ function set_slot_count(n)
 }
 
 
-function anything()
+function slot_selected(i_menu, i_item)
 {
-    var i_menu = arguments[0];
-    var item_name = arguments[1];
-    post(i_menu,"\n");
-    post(item_name,"\n");
-    post(effect_slots_.length,"\n");
-
-    if ((i_menu === effect_slots_.length - 1) && (effect_names[0] !== item_name))
+    if ((i_menu === count- 1) && (i_item !== 0))
     {
         push_back_();
     }
-
 }
 
+// --------------------------------------------------------------------
 
 function push_back_()
 {
-    var slot = make_effect_slot_(effect_slots_.length);
-    effect_slots_.push(slot);
+    new_effect_slot_(count);
+    count++;
 }
 push_back_.local = 1;
 
 
 function pop_back_()
-{
-    var slot = effect_slots_.pop();
-    this.patcher.remove(slot);
+{   
+    count--;
+    delete_effect_slot_(count);
 }
 pop_back_.local = 1;
 
+// --------------------------------------------------------------------
 
-function make_effect_slot_(i)
+function new_effect_slot_(i)
 {
     var x       = get_x_at_(i);
     var y       = get_y_at_(i);
 
-    var slot    = this.patcher.newdefault(x, y, "umenu");
-    slot.message("prefix", i.toString());
-    slot.message("prefix_mode", 1);
-    effect_names.forEach( function(e) { slot.message("append", e); } );
-    slot.message("set", 0);
+    var slot    = this.patcher.newdefault(x, y, "djazz_ui_effect_slot", i);
+    this.patcher.connect(slot, 0, this.box, 0);
+    this.patcher.connect(slot, 1, this.patcher.getnamed("outlet"), 0);
 
-    this.patcher.connect(slot, 1, this.box, 0);
+    slot.varname    = "effect_" + i.toString();
+
 }
-make_effect_slot_.local = 1;
+new_effect_slot_.local = 1;
 
 
+function delete_effect_slot_(i)
+{
+    var slot_varname    = "effect_" + i.toString();
+    var slot            = this.patcher.getnamed(slot_varname);
+    
+    this.patcher.remove(slot);
+
+}
+delete_effect_slot_.local = 1;
+
+// --------------------------------------------------------------------
 
 function get_x_at_(i)
 {   
-    return 100;
+    return 200;
 }
 get_x_at_.local = 1
 

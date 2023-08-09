@@ -4,10 +4,11 @@ var sizes = {	box: 	{ w: 155 , 	h: 22 },
 				space: 	{ w: 20	 , 	h: 40 },
 				cell: 	{ w: 160 ,	h: 48 }};
 
-//var spray;
-//var solo_manager;
-//var midi_outs;
-//var funnel;
+var spray;
+var solo_manager;
+var midi_outs;
+var funnel;
+
 
 
 function init(min_channel, max_channel)
@@ -50,31 +51,24 @@ function init(min_channel, max_channel)
 	var y_sol 	 = y_mid;	
 
 	midi_outs = [];
-
-	spray  = this.patcher.newdefault(x_spr, y_spr, "spray", n_channels, min_channel, 1);
-	funnel = this.patcher.newdefault(x_fun, y_fun, "funnel", n_channels);
-
 	for (var channel = min_channel; channel <= max_channel; channel++)
 	{
 		var i 		= channel - min_channel;
 		var x_ch 	= x_mid + w * i;
-		var midi_out = this.patcher.newdefault(x, y, "djazz_midi_out", channel);		
 		midi_outs.push(make_midi_out(i, channel, x_ch, y_mid, h));
-		this.patcher.connect(spray, i, get_solo(midi_outs[i]), 0);
-				this.patcher.connect(get_effect_list(midi_outs[i]), 0, funnel, i);
 	}
 
-	
+	spray  = this.patcher.newdefault(x_spr, y_spr, "spray", n_channels, min_channel, 1);
 	this.patcher.connect(the_inlet, 0, spray, 0);
 	for (var i = 0; i < n_channels; i++)
 	{	
-
+		this.patcher.connect(spray, i, get_solo(midi_outs[i]), 0);
 	}
 
-
+	funnel = this.patcher.newdefault(x_fun, y_fun, "funnel", n_channels);
 	for (var i = 0; i < n_channels; i++)
 	{	
-
+		this.patcher.connect(get_effect_list(midi_outs[i]), 0, funnel, i);
 	}	
 	this.patcher.connect(funnel, 0, the_outlet, 0);
 
@@ -85,41 +79,4 @@ function init(min_channel, max_channel)
 		this.patcher.connect(s, 1, solo_manager, 0);
 		this.patcher.connect(solo_manager, 0, s, 1);
 	}
-}
-
-
-function make_midi_out(index, channel, x, y, h)
-{
-	var midi_out = this.patcher.newdefault(x, y, "djazz_midi_out", channel);
-	return [index, channel, midi_out_solo, midi_out_mute, effect_list];
-}
-
-
-function get_index(arr)
-{
-	return arr[0];
-}
-
-
-function get_channel(arr)
-{
-	return arr[1];
-}
-
-
-function get_solo(arr)
-{
-	return arr[2];
-}
-
-
-function get_mute(arr)
-{
-	return arr[3];
-}
-
-
-function get_effect_list(arr)
-{
-	return arr[4];
 }
