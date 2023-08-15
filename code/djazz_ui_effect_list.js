@@ -83,7 +83,12 @@ function new_effect_slot_(i)
     var x       = get_x_at_(i);
     var y       = get_y_at_(i);
 
-    var slot    = this.patcher.newdefault(x, y, "djazz_ui_effect_slot", i);
+    var slot    = this.patcher.newdefault(x, y, "bpatcher",
+                    "@name", "djazz_ui_effect_slot",
+                    "@args", i);
+	slot.setboxattr("presentation", 1);
+    slot.setboxattr("presentation_rect", [0, i * 22, 128, 22]);
+
     this.patcher.connect(slot, 0, this.box, 0);
     this.patcher.connect(slot, 1, this.patcher.getnamed("outlet"), 0);
 

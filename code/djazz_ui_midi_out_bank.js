@@ -1,15 +1,7 @@
 autowatch = 1;
 
-var sizes = {	box: 	{ w: 155 , 	h: 22 },
-				space: 	{ w: 20	 , 	h: 40 },
-				cell: 	{ w: 160 ,	h: 48 }};
-
-var spray;
-var solo_manager;
-var midi_outs;
-var funnel;
-
-
+var w = 160;
+var h = 48;	
 
 function init(min_channel, max_channel)
 {
@@ -30,53 +22,47 @@ function init(min_channel, max_channel)
 
 	var n_channels = max_channel - min_channel + 1;
 
-	var the_inlet 	= this.patcher.getnamed("inlet");
-	var the_outlet 	= this.patcher.getnamed("outlet");
+	var inl 	= this.patcher.getnamed("inlet");
+	var outl 	= this.patcher.getnamed("outlet");
 
-	var w = sizes.cell.w;
-	var h = sizes.cell.h;	
-	var x = the_inlet.rect[0];
-	var y = the_inlet.rect[3] + h;
+	var x = inl.rect[0];
+	var y = inl.rect[3];
 
-	var x_spr = x;
-	var y_spr = y;
+	var x_spr 	= x;
+	var y_spr 	= y + h;
+	var spray  	= this.patcher.newdefault(x_spr, y_spr, "spray", n_channels, min_channel, 1);
+	this.patcher.connect(inl, 0, spray, 0);
 
-	var x_mid = x;
-	var y_mid = y_spr + h;
+	var x_fun 	= x_spr;
+	var y_fun 	= y_spr + 4 * h;
+	var funnel 	= this.patcher.newdefault(x_fun, y_fun, "funnel", n_channels);
+	this.patcher.connect(funnel, 0, outl, 0);
 
-	var x_fun = x;
-	var y_fun = y_mid + 3 * h;
+	var x_sol 	 = x_spr + n_channels * w;
+	var y_sol 	 = y_spr + h;
+	var x_sol_pres = 0;
+	var y_sol_pres = 0;
+	var solo_mgr = this.patcher.newdefault(x_sol, y_sol, "bpatcher", "djazz_ui_solo_manager");
+	solo_mgr.presentation(1);
+	this.patcher.connect(inl, 0, solo_mgr, 0);
 
-	var x_sol 	 = x_mid + n_channels * w;
-	var y_sol 	 = y_mid;	
-
-	midi_outs = [];
 	for (var channel = min_channel; channel <= max_channel; channel++)
 	{
-		var i 		= channel - min_channel;
-		var x_ch 	= x_mid + w * i;
-		midi_outs.push(make_midi_out(i, channel, x_ch, y_mid, h));
+		var i 		 = channel - min_channel;
+		var x_mid 	 = x_spr + w * i;
+		var y_mid 	 = y_spr + h;	
+		var x_mid_pres = i * 128;
+		var y_mid_pres = 0;
+		var midi_out = this.patcher.newdefault(x_mid, y_mid, "bpatcher", 
+											"@name", "djazz_ui_midi_out", 
+											"@args", channel);
+		midi_out.setboxattr("presentation", 1);
+		midi_out.setboxattr("presentation_rect", [x_mid_pres, y_mid_pres, 128, 236]);
+		this.patcher.connect(spray,    i, midi_out, 0);
+		this.patcher.connect(midi_out, 0, funnel, 	i);
 	}
 
-	spray  = this.patcher.newdefault(x_spr, y_spr, "spray", n_channels, min_channel, 1);
-	this.patcher.connect(the_inlet, 0, spray, 0);
-	for (var i = 0; i < n_channels; i++)
-	{	
-		this.patcher.connect(spray, i, get_solo(midi_outs[i]), 0);
-	}
 
-	funnel = this.patcher.newdefault(x_fun, y_fun, "funnel", n_channels);
-	for (var i = 0; i < n_channels; i++)
-	{	
-		this.patcher.connect(get_effect_list(midi_outs[i]), 0, funnel, i);
-	}	
-	this.patcher.connect(funnel, 0, the_outlet, 0);
 
-	solo_manager = this.patcher.newdefault(x_sol, y_sol, "djazz_solo_manager", n_channels);
-	for (var i = 0; i < n_channels; i++)
-	{	
-		var s = get_solo(midi_outs[i]);
-		this.patcher.connect(s, 1, solo_manager, 0);
-		this.patcher.connect(solo_manager, 0, s, 1);
-	}
+
 }
