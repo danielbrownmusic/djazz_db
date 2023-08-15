@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 136.0, 585.0, 403.0, 294.0 ],
+		"rect" : [ 636.0, 146.0, 381.0, 296.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,13 +40,26 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "(0/1) soloed",
+					"comment" : "messages: event, solo, effect",
+					"id" : "obj-8",
+					"index" : 1,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 35.0, 27.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "(0/1) soloed (send to solo manager)",
 					"id" : "obj-7",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 348.0, 221.0, 30.0, 30.0 ]
+					"patching_rect" : [ 301.5, 224.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -54,11 +67,11 @@
 				"box" : 				{
 					"id" : "obj-6",
 					"maxclass" : "newobj",
-					"numinlets" : 4,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 35.0, 78.0, 342.999999999999943, 22.0 ],
-					"text" : "route event solo effect"
+					"numinlets" : 5,
+					"numoutlets" : 5,
+					"outlettype" : [ "", "", "", "", "" ],
+					"patching_rect" : [ 90.5, 78.0, 241.0, 22.0 ],
+					"text" : "route solo active mute effect"
 				}
 
 			}
@@ -66,11 +79,11 @@
 				"box" : 				{
 					"comment" : "midi events",
 					"id" : "obj-5",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 35.0, 221.0, 30.0, 30.0 ]
+					"patching_rect" : [ 35.0, 224.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -78,12 +91,12 @@
 				"box" : 				{
 					"comment" : "messages: event, solo, effect",
 					"id" : "obj-3",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 35.0, 36.0, 30.0, 30.0 ]
+					"patching_rect" : [ 90.5, 27.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -91,10 +104,10 @@
 				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 35.0, 112.0, 127.0, 22.0 ],
+					"patching_rect" : [ 35.0, 112.0, 130.0, 22.0 ],
 					"text" : "djazz_midi_out_solo 9",
 					"varname" : "djazz_midi_out_solo"
 				}
@@ -104,11 +117,12 @@
 				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 35.0, 148.0, 132.0, 22.0 ],
-					"text" : "djazz_midi_out_mute 9"
+					"patching_rect" : [ 35.0, 151.0, 185.5, 22.0 ],
+					"text" : "djazz_midi_out_mute 9",
+					"varname" : "djazz_midi_out_mute"
 				}
 
 			}
@@ -119,7 +133,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 35.0, 184.0, 235.0, 22.0 ],
+					"patching_rect" : [ 35.0, 186.0, 241.0, 22.0 ],
 					"text" : "djazz_effect_list 9",
 					"varname" : "djazz_effect_list"
 				}
@@ -136,7 +150,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
-					"midpoints" : [ 152.5, 143.0, 357.5, 143.0 ],
+					"midpoints" : [ 155.5, 145.5, 311.0, 145.5 ],
 					"source" : [ "obj-1", 1 ]
 				}
 
@@ -164,56 +178,40 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
+					"destination" : [ "obj-1", 2 ],
 					"source" : [ "obj-6", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-1", 1 ],
 					"source" : [ "obj-6", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 1 ],
+					"destination" : [ "obj-2", 1 ],
 					"source" : [ "obj-6", 2 ]
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_effect_list.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 1 ],
+					"source" : [ "obj-6", 3 ]
+				}
+
 			}
 , 			{
-				"name" : "djazz_midi_out_mute.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-8", 0 ]
+				}
+
 			}
-, 			{
-				"name" : "djazz_midi_out_solo.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "effect_list.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

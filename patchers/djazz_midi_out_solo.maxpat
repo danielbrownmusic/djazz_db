@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1829.0, 87.0, 526.0, 254.0 ],
+		"rect" : [ 644.0, 150.0, 575.0, 667.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,37 +40,26 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-2",
-					"maxclass" : "newobj",
-					"numinlets" : 3,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 112.0, 59.0, 96.0, 22.0 ],
-					"text" : "route active solo"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-14",
-					"maxclass" : "message",
-					"numinlets" : 2,
+					"comment" : "connect to solo manager",
+					"id" : "obj-3",
+					"index" : 3,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 130.5, 129.0, 39.0, 22.0 ],
-					"text" : "#1 $1"
+					"patching_rect" : [ 153.0, 14.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "(int 0/1) channel soloed",
+					"comment" : "cxonnect to solo manager",
 					"id" : "obj-10",
 					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 130.5, 166.0, 30.0, 30.0 ]
+					"patching_rect" : [ 112.0, 145.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -88,7 +77,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "input from solo manager",
+					"comment" : "midi event",
 					"id" : "obj-7",
 					"index" : 1,
 					"maxclass" : "inlet",
@@ -106,7 +95,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 150.5, 93.0, 71.0, 22.0 ],
+					"patching_rect" : [ 112.0, 100.0, 71.0, 22.0 ],
 					"restore" : [ 0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
@@ -126,13 +115,13 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 23.0, 166.0, 30.0, 30.0 ]
+					"patching_rect" : [ 23.0, 145.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "midi event; \"solo\" + 0/1",
+					"comment" : "\"solo\" + 0/1",
 					"id" : "obj-5",
 					"index" : 2,
 					"maxclass" : "inlet",
@@ -146,35 +135,21 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-14", 1 ],
+					"destination" : [ "obj-10", 0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
-					"source" : [ "obj-14", 0 ]
+					"destination" : [ "obj-8", 1 ],
+					"source" : [ "obj-3", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-2", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
