@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1074.0, 540.0, 607.0, 596.0 ],
+		"rect" : [ 720.0, 136.0, 893.0, 783.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -84,7 +84,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 15.0, 54.0, 134.0, 22.0 ],
+					"patching_rect" : [ 15.0, 100.0, 134.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_ui_effect_list.js",
 						"parameter_enable" : 0
@@ -108,10 +108,10 @@
 					"maxclass" : "bpatcher",
 					"name" : "djazz_ui_effect_slot.maxpat",
 					"numinlets" : 0,
-					"numoutlets" : 2,
+					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 50.0, 76.0, 128.0, 35.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 368.0, 90.0, 128.0, 35.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 128.0, 22.0 ],
 					"varname" : "effect_0",
@@ -133,10 +133,10 @@
 					"maxclass" : "bpatcher",
 					"name" : "djazz_ui_effect_slot.maxpat",
 					"numinlets" : 0,
-					"numoutlets" : 2,
+					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 78.0, 130.0, 128.0, 38.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 368.0, 284.0, 128.0, 38.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 22.0, 128.0, 22.0 ],
 					"varname" : "effect_1",
@@ -154,22 +154,65 @@
 					"mode" : 1,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 8.0, 61.5, 128.0, 236.0 ],
+					"patching_rect" : [ 648.0, 59.5, 128.0, 236.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 128.0, 236.0 ],
 					"proportion" : 0.5
 				}
 
 			}
- ],
-		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-21", 0 ],
-					"source" : [ "obj-2", 1 ]
+, 			{
+				"box" : 				{
+					"args" : [ 0 ],
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-3",
+					"lockeddragscroll" : 0,
+					"lockedsize" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "djazz_ui_effect_slot.maxpat",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 200.0, 100.0, 128.0, 128.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 0.0, 128.0, 22.0 ],
+					"varname" : "effect_0[1]",
+					"viewvisibility" : 1
 				}
 
 			}
 , 			{
+				"box" : 				{
+					"args" : [ 1 ],
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-6",
+					"lockeddragscroll" : 0,
+					"lockedsize" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "djazz_ui_effect_slot.maxpat",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 200.0, 144.0, 128.0, 128.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 22.0, 128.0, 22.0 ],
+					"varname" : "effect_1[1]",
+					"viewvisibility" : 1
+				}
+
+			}
+ ],
+		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-30", 0 ],
 					"source" : [ "obj-2", 0 ]
@@ -178,17 +221,17 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
-					"source" : [ "obj-30", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 12
+					"destination" : [ "obj-30", 0 ],
+					"source" : [ "obj-3", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-21", 0 ],
-					"source" : [ "obj-4", 1 ]
+					"destination" : [ "obj-9", 0 ],
+					"source" : [ "obj-30", 0 ],
+					"watchpoint_flags" : 1,
+					"watchpoint_id" : 44
 				}
 
 			}
@@ -203,6 +246,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-30", 0 ],
 					"source" : [ "obj-40", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-30", 0 ],
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}

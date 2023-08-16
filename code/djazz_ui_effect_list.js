@@ -1,7 +1,9 @@
 autowatch = 1;
 
-var count;
-var y_obj_  = 22;
+//var count;
+var slot_listeners_ = [];
+
+var y_obj_   = 22;
 var y_space_ = 22;
 
 
@@ -62,15 +64,15 @@ function slot_selected(i_menu, i_item)
 
 function push_back_()
 {
-    new_effect_slot_(count);
-    count++;
+    new_effect_slot_(slot_listeners_.length);
+    //count++;
 }
 push_back_.local = 1;
 
 
 function pop_back_()
 {   
-    count--;
+    //count--;
     delete_effect_slot_(count);
 }
 pop_back_.local = 1;
@@ -83,15 +85,16 @@ function new_effect_slot_(i)
     var y       = get_y_at_(i);
 
     var slot    = this.patcher.newdefault(x, y, "bpatcher",
-                    "@name", "djazz_ui_effect_slot",
-                    "@args", i);
-	slot.setboxattr("presentation", 1);
-    slot.setboxattr("presentation_rect", [0, i * 22, 128, 22]);
+                    "@name",                "djazz_ui_effect_slot",
+                    "@args",                i,
+                    "@presentation",        1,
+                    "@presentation_rect",   [0, i * 22, 128, 22]);
+    var outl = this.patcher.getnamed("outlet");
 
     this.patcher.connect(slot, 0, this.box, 0);
-    this.patcher.connect(slot, 1, this.patcher.getnamed("outlet"), 0);
+    this.patcher.connect(slot, 1, outl,     0);
 
-    slot.varname    = "effect_" + i.toString();
+    //slot.varname    = "effect_" + i.toString();
 
 }
 new_effect_slot_.local = 1;

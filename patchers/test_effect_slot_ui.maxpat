@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 533.0, 627.0, 640.0, 480.0 ],
+		"rect" : [ 71.0, 128.0, 237.0, 120.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 166.0, 262.0, 98.0, 22.0 ],
+					"patching_rect" : [ 18.0, 73.0, 98.0, 22.0 ],
 					"text" : "djazz_effect_slot",
 					"varname" : "djazz_effect_slot"
 				}
@@ -56,9 +56,9 @@
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 166.0, 118.0, 114.0, 22.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 97.0, 17.0, 114.0, 22.0 ],
 					"text" : "djazz_ui_effect_slot"
 				}
 
@@ -66,10 +66,10 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
+					"destination" : [ "obj-2", 1 ],
 					"source" : [ "obj-1", 0 ],
 					"watchpoint_flags" : 1,
-					"watchpoint_id" : 15
+					"watchpoint_id" : 43
 				}
 
 			}
