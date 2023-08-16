@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1268.0, 103.0, 234.0, 90.0 ],
+		"rect" : [ 1268.0, 103.0, 290.0, 554.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -81,7 +81,7 @@
 					"maxclass" : "led",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"oncolor" : [ 0.105882352941176, 0.862745098039216, 0.964705882352941, 1.0 ],
+					"oncolor" : [ 0.964705882352941, 0.384313725490196, 0.105882352941176, 1.0 ],
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 68.0, 10.0, 30.0, 30.0 ],

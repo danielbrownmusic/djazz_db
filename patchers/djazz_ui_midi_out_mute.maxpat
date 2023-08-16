@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1275.0, 318.0, 390.0, 64.0 ],
+		"rect" : [ 692.0, 352.0, 490.0, 457.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -58,7 +58,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 106.0, 31.0, 52.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "mute $1"
 				}
 
@@ -82,7 +81,7 @@
 					"maxclass" : "led",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"oncolor" : [ 0.945098039215686, 0.372549019607843, 0.0, 1.0 ],
+					"oncolor" : [ 0.0, 0.858823529411765, 0.945098039215686, 1.0 ],
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 62.0, 31.0, 30.0, 30.0 ],

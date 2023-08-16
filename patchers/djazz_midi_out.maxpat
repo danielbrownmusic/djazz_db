@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 636.0, 146.0, 381.0, 296.0 ],
+		"rect" : [ 636.0, 146.0, 415.0, 299.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -41,6 +41,19 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"comment" : "messages: event, solo, effect",
+					"id" : "obj-9",
+					"index" : 3,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 352.0, 27.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "messages: event, solo, effect",
 					"id" : "obj-8",
 					"index" : 1,
 					"maxclass" : "inlet",
@@ -59,7 +72,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 301.5, 224.0, 30.0, 30.0 ]
+					"patching_rect" : [ 352.0, 232.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -67,11 +80,11 @@
 				"box" : 				{
 					"id" : "obj-6",
 					"maxclass" : "newobj",
-					"numinlets" : 5,
-					"numoutlets" : 5,
-					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 90.5, 78.0, 241.0, 22.0 ],
-					"text" : "route solo active mute effect"
+					"numinlets" : 4,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 90.5, 73.0, 236.0, 22.0 ],
+					"text" : "route solo mute effect"
 				}
 
 			}
@@ -83,7 +96,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 35.0, 224.0, 30.0, 30.0 ]
+					"patching_rect" : [ 35.0, 232.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -107,7 +120,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 35.0, 112.0, 130.0, 22.0 ],
+					"patching_rect" : [ 35.0, 116.0, 130.0, 22.0 ],
 					"text" : "djazz_midi_out_solo 9",
 					"varname" : "djazz_midi_out_solo"
 				}
@@ -120,7 +133,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 35.0, 151.0, 185.5, 22.0 ],
+					"patching_rect" : [ 35.0, 161.0, 146.833333333333314, 22.0 ],
 					"text" : "djazz_midi_out_mute 9",
 					"varname" : "djazz_midi_out_mute"
 				}
@@ -133,7 +146,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 35.0, 186.0, 241.0, 22.0 ],
+					"patching_rect" : [ 35.0, 195.0, 219.166666666666657, 22.0 ],
 					"text" : "djazz_effect_list 9",
 					"varname" : "djazz_effect_list"
 				}
@@ -150,7 +163,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
-					"midpoints" : [ 155.5, 145.5, 311.0, 145.5 ],
+					"midpoints" : [ 155.5, 151.5, 361.5, 151.5 ],
 					"source" : [ "obj-1", 1 ]
 				}
 
@@ -178,13 +191,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 2 ],
-					"source" : [ "obj-6", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-1", 1 ],
 					"source" : [ "obj-6", 0 ]
 				}
@@ -193,14 +199,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 1 ],
-					"source" : [ "obj-6", 2 ]
+					"source" : [ "obj-6", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 1 ],
-					"source" : [ "obj-6", 3 ]
+					"source" : [ "obj-6", 2 ]
 				}
 
 			}
@@ -208,6 +214,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 2 ],
+					"midpoints" : [ 361.5, 102.5, 155.5, 102.5 ],
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}
