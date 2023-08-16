@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2044.0, 101.0, 580.0, 882.0 ],
+		"rect" : [ 524.0, 675.0, 683.0, 508.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,31 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 385.0, 117.0, 29.0, 22.0 ],
+					"text" : "thru",
+					"varname" : "to_spray"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 227.0, 73.0, 177.0, 22.0 ],
+					"text" : "route effect_list"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "",
 					"id" : "obj-40",
 					"index" : 2,
@@ -47,7 +72,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 186.0, 26.0, 28.0, 28.0 ],
+					"patching_rect" : [ 227.0, 26.0, 28.0, 28.0 ],
 					"varname" : "inlet_[1]"
 				}
 
@@ -59,7 +84,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 186.0, 75.0, 133.0, 22.0 ],
+					"patching_rect" : [ 227.0, 117.0, 117.0, 22.0 ],
 					"text" : "route set_slot_count"
 				}
 
@@ -71,7 +96,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 186.0, 143.0, 103.0, 22.0 ],
+					"patching_rect" : [ 227.0, 199.0, 103.0, 22.0 ],
 					"text" : "set_slot_count $1"
 				}
 
@@ -83,7 +108,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 186.0, 108.0, 91.0, 22.0 ],
+					"patching_rect" : [ 227.0, 158.0, 91.0, 22.0 ],
 					"restore" : [ 0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
@@ -129,7 +154,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 300.0, 190.0, 83.0, 22.0 ],
+					"patching_rect" : [ 227.0, 240.0, 83.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "effect_list.js",
 						"parameter_enable" : 0
@@ -174,13 +199,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-39", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-21", 0 ],
 					"source" : [ "obj-39", 0 ]
 				}
@@ -188,8 +206,22 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-39", 0 ],
+					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-40", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-39", 0 ],
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"source" : [ "obj-8", 1 ]
 				}
 
 			}

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 47.0, 105.0, 282.0, 84.0 ],
+		"rect" : [ -1643.0, 768.0, 1247.0, 360.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,23 +40,12 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-34",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1754.0, 1193.0, 41.0, 22.0 ],
-					"text" : "sprintf"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-50",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "list" ],
-					"patching_rect" : [ 1976.83333694934845, 1352.887488120828039, 186.0, 26.0 ],
+					"patching_rect" : [ 1976.833336949348904, 1396.887488120828039, 186.0, 26.0 ],
 					"style" : "dj finished encapsulation",
 					"text" : "djazz_midi_out_bank 1 8",
 					"varname" : "djazz_midi_outs"
@@ -517,7 +506,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 2073.137766677090895, 1421.472202250264672, 162.0, 26.0 ],
+					"patching_rect" : [ 2073.137766677090895, 1545.472202250264672, 162.0, 26.0 ],
 					"style" : "dj finished encapsulation",
 					"text" : "djazz_events_to_midi"
 				}
@@ -530,7 +519,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1890.83333694934845, 1421.472202250264672, 172.0, 26.0 ],
+					"patching_rect" : [ 1890.83333694934845, 1545.472202250264672, 172.0, 26.0 ],
 					"style" : "dj finished encapsulation",
 					"text" : "djazz_events_to_notes"
 				}
@@ -1751,7 +1740,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1890.83333694934845, 1463.299481808556266, 147.0, 26.0 ],
+					"patching_rect" : [ 1890.83333694934845, 1587.299481808556266, 147.0, 26.0 ],
 					"style" : "dj finished encapsulation",
 					"text" : "djazz_output_notes"
 				}
@@ -3689,7 +3678,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-72", 0 ],
-					"midpoints" : [ 1986.33333694934845, 1388.887488120828039, 2370.83333694934845, 1388.887488120828039, 2370.83333694934845, 1303.887488120828039, 2153.333336949348904, 1303.887488120828039 ],
+					"midpoints" : [ 1986.333336949348904, 1456.887488120828039, 2370.83333694934845, 1456.887488120828039, 2370.83333694934845, 1303.887488120828039, 2153.333336949348904, 1303.887488120828039 ],
 					"source" : [ "obj-50", 0 ]
 				}
 
@@ -3819,7 +3808,9 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-50", 1 ],
-					"source" : [ "obj-72", 0 ]
+					"source" : [ "obj-72", 0 ],
+					"watchpoint_flags" : 1,
+					"watchpoint_id" : 8
 				}
 
 			}
@@ -4151,6 +4142,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "djazz_midi_out_bank_layout.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "djazz_midi_out_mute.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
@@ -4214,6 +4212,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "djazz_solo_manager_layout.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "djazz_ui_effect_list.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
@@ -4263,14 +4268,21 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_ui_midi_out_bank.js",
+				"name" : "djazz_ui_midi_out_bank.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_ui_midi_out_bank_layout.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_ui_midi_out_bank.maxpat",
+				"name" : "djazz_ui_midi_out_mute.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -4309,6 +4321,12 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
+				"type" : "JSON",
 				"implicit" : 1
 			}
  ],

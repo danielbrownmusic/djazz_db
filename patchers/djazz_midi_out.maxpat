@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 636.0, 146.0, 415.0, 299.0 ],
+		"rect" : [ -1647.0, -105.0, 415.0, 299.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -60,7 +60,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 35.0, 27.0, 30.0, 30.0 ]
+					"patching_rect" : [ 33.0, 27.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -96,7 +96,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 35.0, 232.0, 30.0, 30.0 ]
+					"patching_rect" : [ 33.0, 232.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -120,8 +120,8 @@
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 35.0, 116.0, 130.0, 22.0 ],
-					"text" : "djazz_midi_out_solo 9",
+					"patching_rect" : [ 33.0, 116.0, 134.0, 22.0 ],
+					"text" : "djazz_midi_out_solo #1",
 					"varname" : "djazz_midi_out_solo"
 				}
 
@@ -133,8 +133,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 35.0, 161.0, 146.833333333333314, 22.0 ],
-					"text" : "djazz_midi_out_mute 9",
+					"patching_rect" : [ 33.0, 162.0, 148.833333333333314, 22.0 ],
+					"text" : "djazz_midi_out_mute #1",
 					"varname" : "djazz_midi_out_mute"
 				}
 
@@ -146,8 +146,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 35.0, 195.0, 219.166666666666657, 22.0 ],
-					"text" : "djazz_effect_list 9",
+					"patching_rect" : [ 33.0, 198.0, 219.166666666666657, 22.0 ],
+					"text" : "djazz_effect_list #1",
 					"varname" : "djazz_effect_list"
 				}
 
@@ -163,7 +163,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
-					"midpoints" : [ 155.5, 151.5, 361.5, 151.5 ],
+					"midpoints" : [ 157.5, 151.5, 361.5, 151.5 ],
 					"source" : [ "obj-1", 1 ]
 				}
 
@@ -206,7 +206,9 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 1 ],
-					"source" : [ "obj-6", 2 ]
+					"source" : [ "obj-6", 2 ],
+					"watchpoint_flags" : 1,
+					"watchpoint_id" : 11
 				}
 
 			}
@@ -220,7 +222,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 2 ],
-					"midpoints" : [ 361.5, 102.5, 155.5, 102.5 ],
+					"midpoints" : [ 361.5, 102.5, 157.5, 102.5 ],
 					"source" : [ "obj-9", 0 ]
 				}
 

@@ -37,17 +37,16 @@ function set_slot_count(n)
         for (var i = n; i < count; i++)
         {
             pop_back_();
-        }        
-        return;
+        }
     }
-
-    if (n > count)
+    else
     {
         for (var i = 0; i < n - count; i++)
         {
             push_back_();
         }
     }
+    outlet(0, "set_slot_count " + count.toString());
 }
 
 

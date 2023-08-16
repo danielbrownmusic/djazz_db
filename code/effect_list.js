@@ -31,8 +31,7 @@ function set_slot_count(n)
         for (var i = l - 1; i > n - 1; i--)
         {
             pop_back_();
-        }        
-        return;
+        }
     }
 
     if (n > l)
@@ -42,7 +41,35 @@ function set_slot_count(n)
             push_back_();
         }
     }
+
+    update_spray_();
 }
+
+
+function update_spray_()
+{
+    var spray = this.patcher.getnamed("spray");
+    if (spray)
+    {
+        this.patcher.remove(spray);
+    }
+    var to_spray = this.patcher.getnamed("to_spray");
+    var x = to_spray.rect[0];
+    var y = to_spray.rect[3] + 44;
+    var l = effect_slots_.length;
+
+    if (l === 0)
+        return;
+
+    spray = this.patcher.newdefault(x, y, "spray", l);
+    spray.varname = "spray";
+    this.patcher.connect(to_spray, 0, spray, 0);
+    for (var i = 0; i < l; i++)
+    {
+        this.patcher.connect(spray, i, effect_slots_[i], 1);
+    }
+}
+
 
 
 function set_effect(i, name)
@@ -60,12 +87,12 @@ function push_back_()
     var l       = effect_slots_.length;
     var x       = get_x_at_(l);
     var y       = get_y_at_(l);
-    var prev    = (l === 0) ? inlet : effect_slots_[l - 1];
 
     var slot    = this.patcher.newdefault(x, y, "djazz_effect_slot");
+    var inlet   = this.patcher.getnamed("inlet");
+    var outlet  = this.patcher.getnamed("outlet");
 
-    var inlet      = this.patcher.getnamed("inlet");
-    var outlet     = this.patcher.getnamed("outlet");
+    var prev    = (l === 0) ? inlet : effect_slots_[l - 1];
 
     this.patcher.disconnect (prev, 0, outlet, 0);
     this.patcher.connect    (prev, 0, slot, 0);

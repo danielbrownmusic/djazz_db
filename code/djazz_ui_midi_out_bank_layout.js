@@ -37,7 +37,7 @@ function loadbang()
 	this.patcher.connect(inl, 0, spray, 0);
 
 	var x_fun 	= x_spr;
-	var y_fun 	= y_spr + 4 * h;
+	var y_fun 	= y_spr + 344;
 	var funnel 	= this.patcher.newdefault(x_fun, y_fun, "funnel", n_channels, min_channel);
 	this.patcher.connect(funnel, 0, outl, 0);
 
@@ -58,7 +58,8 @@ function loadbang()
 		var y_mid_pres = 0;
 		var midi_out = this.patcher.newdefault(x_mid, y_mid, "bpatcher", 
 											"@name", "djazz_ui_midi_out", 
-											"@args", channel);
+											"@args", channel);	
+		midi_out.setboxattr("patching_rect", [x_mid, y_mid, 128, 236]);
 		midi_out.setboxattr("presentation", 1);
 		midi_out.setboxattr("presentation_rect", [x_mid_pres, y_mid_pres, 128, 236]);
 		this.patcher.connect(spray,    i, midi_out, 0);
