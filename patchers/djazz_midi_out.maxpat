@@ -122,7 +122,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 33.0, 122.0, 117.0, 22.0 ],
 					"text" : "djazz_midi_out_solo",
-					"varname" : "djazz_midi_out_solo"
+					"varname" : "solo"
 				}
 
 			}
@@ -135,7 +135,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 33.0, 162.0, 135.0, 22.0 ],
 					"text" : "djazz_midi_out_mute",
-					"varname" : "djazz_midi_out_mute"
+					"varname" : "mute"
 				}
 
 			}
@@ -148,7 +148,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 33.0, 205.0, 94.0, 22.0 ],
 					"text" : "djazz_effect_list",
-					"varname" : "djazz_effect_list"
+					"varname" : "effects"
 				}
 
 			}
@@ -172,7 +172,7 @@
 					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-3", 0 ],
 					"watchpoint_flags" : 1,
-					"watchpoint_id" : 42
+					"watchpoint_id" : 11
 				}
 
 			}

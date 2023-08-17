@@ -40,6 +40,23 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 344.0, 18.0, 56.0, 22.0 ],
+					"restore" : 					{
+						"slot_count" : [ 0 ]
+					}
+,
+					"text" : "autopattr",
+					"varname" : "u227006007"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "messages to individual effects (start with int index)",
 					"id" : "obj-7",
 					"index" : 2,
@@ -154,7 +171,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 21.0, 68.0, 100.0, 22.0 ],
-					"text" : "djazz_effect_slot"
+					"text" : "djazz_effect_slot",
+					"varname" : "djazz_effect_slot"
 				}
 
 			}
@@ -166,7 +184,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 21.0, 112.0, 100.0, 22.0 ],
-					"text" : "djazz_effect_slot"
+					"text" : "djazz_effect_slot",
+					"varname" : "djazz_effect_slot[1]"
 				}
 
 			}
@@ -178,7 +197,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 21.0, 156.0, 100.0, 22.0 ],
-					"text" : "djazz_effect_slot"
+					"text" : "djazz_effect_slot",
+					"varname" : "djazz_effect_slot[2]"
 				}
 
 			}
@@ -242,9 +262,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-39", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 7
+					"source" : [ "obj-39", 0 ]
 				}
 
 			}
@@ -258,9 +276,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-39", 0 ],
-					"source" : [ "obj-40", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 8
+					"source" : [ "obj-40", 0 ]
 				}
 
 			}

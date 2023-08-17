@@ -58,9 +58,9 @@ function update_spray_()
     {
         this.patcher.remove(spray);
     }
-    var ctrl_in = this.patcher.getnamed("ctrl_in");
-    var x = ctrl_in.rect[0];
-    var y = ctrl_in.rect[3] + 22;
+    var to_spray = this.patcher.getnamed("route");
+    var x = to_spray.rect[0];
+    var y = to_spray.rect[3] + 22;
     var l = effect_slots_.length;
 
     if (l === 0)
@@ -68,7 +68,7 @@ function update_spray_()
 
     spray = this.patcher.newdefault(x, y, "spray", l, 0, 1);
     spray.varname = "spray";
-    this.patcher.connect(ctrl_in, 0, spray, 0);
+    this.patcher.connect(to_spray, 0, spray, 0);
     for (var i = 0; i < l; i++)
     {
         this.patcher.connect(spray, i, effect_slots_[i], 1);
@@ -87,7 +87,7 @@ function push_back_()
     var y       = midi_in.rect[3] + 22 + l * 44;
 
     var slot    = this.patcher.newdefault(x, y, "djazz_effect_slot");
-
+    slot.varname = l;
     var prev    = (l === 0) ? midi_in : effect_slots_[l - 1];
 
     this.patcher.disconnect (prev, 0, midi_out, 0);

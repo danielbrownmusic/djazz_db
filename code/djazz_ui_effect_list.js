@@ -14,13 +14,19 @@ function clear()
 }
 
 
+function set_slot_count(n)
+{
+    set_slot_count_no_output(n);
+    outlet(0, "slot_count", effect_slots_.length);
+}
+
 function msg_int(n)
 {
     set_slot_count(n);
 }
 
 
-function set_slot_count(n)
+function set_slot_count_no_output(n)
 {
     if (n < 0)
         return;
@@ -47,7 +53,6 @@ function set_slot_count(n)
 
     update_spray_();
     update_funnel_();
-    outlet(0, "slot_count", effect_slots_.length);
 }
 
 

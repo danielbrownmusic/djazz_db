@@ -41,14 +41,14 @@ function loadbang()
 	var funnel 	= this.patcher.newdefault(x_fun, y_fun, "funnel", n_channels, min_channel);
 	this.patcher.connect(funnel, 0, outl, 0);
 
-	var x_sol 	 = x_spr + n_channels * w;
+/* 	var x_sol 	 = x_spr + n_channels * w;
 	var y_sol 	 = y_spr + h;
 	var x_sol_pres = 0;
 	var y_sol_pres = 0;
 	var solo_mgr = this.patcher.newdefault(x_sol, y_sol, "bpatcher", "djazz_ui_solo_manager");
 	solo_mgr.presentation(1);
 	this.patcher.connect(inl, 0, solo_mgr, 0);
-
+ */
 	for (var channel = min_channel; channel <= max_channel; channel++)
 	{
 		var i 		 = channel - min_channel;
@@ -58,10 +58,10 @@ function loadbang()
 		var y_mid_pres = 0;
 		var midi_out = this.patcher.newdefault(x_mid, y_mid, "bpatcher", 
 											"@name", "djazz_ui_midi_out", 
-											"@args", channel);	
-		midi_out.setboxattr("patching_rect", [x_mid, y_mid, 128, 236]);
-		midi_out.setboxattr("presentation", 1);
-		midi_out.setboxattr("presentation_rect", [x_mid_pres, y_mid_pres, 128, 236]);
+											"@args", channel,
+											"@patching_rect", [x_mid, y_mid, 128, 236],
+											"@presentation", 1,
+											"@presentation_rect", [x_mid_pres, y_mid_pres, 128, 236]);
 		this.patcher.connect(spray,    i, midi_out, 0);
 		this.patcher.connect(midi_out, 0, funnel, 	i);
 	}

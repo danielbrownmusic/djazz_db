@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2790.0, 156.0, 306.0, 254.0 ],
+		"rect" : [ 723.0, 222.0, 419.0, 381.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -45,8 +45,8 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 28.0, 60.0, 241.0, 22.0 ],
-					"text" : "route active effect"
+					"patching_rect" : [ 28.0, 60.0, 335.0, 22.0 ],
+					"text" : "route effect active"
 				}
 
 			}
@@ -75,11 +75,11 @@
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "djazz_ui_effect_select.maxpat",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 139.0, 103.0, 132.0, 24.0 ],
+					"patching_rect" : [ 28.0, 103.0, 99.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 26.0, 1.0, 174.0, 24.0 ],
 					"viewvisibility" : 1
@@ -102,7 +102,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 28.0, 103.0, 23.0, 24.0 ],
+					"patching_rect" : [ 186.0, 103.0, 23.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 1.0, 1.0, 23.0, 24.0 ],
 					"viewvisibility" : 1
@@ -116,7 +116,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 28.0, 144.0, 87.0, 22.0 ],
+					"patching_rect" : [ 186.0, 144.0, 87.0, 22.0 ],
 					"text" : "prepend active"
 				}
 
@@ -128,7 +128,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 139.0, 144.0, 85.0, 22.0 ],
+					"patching_rect" : [ 28.0, 144.0, 85.0, 22.0 ],
 					"text" : "prepend effect"
 				}
 
@@ -141,7 +141,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 28.0, 190.0, 30.0, 30.0 ]
+					"patching_rect" : [ 186.0, 190.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -156,14 +156,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
-					"source" : [ "obj-2", 0 ]
+					"source" : [ "obj-2", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-2", 1 ]
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}
@@ -191,7 +191,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
+					"destination" : [ "obj-5", 1 ],
 					"order" : 1,
 					"source" : [ "obj-4", 0 ]
 				}
