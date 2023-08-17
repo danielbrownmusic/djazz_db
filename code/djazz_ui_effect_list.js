@@ -1,7 +1,9 @@
 autowatch = 1;
 
-//var count;
-var slot_listeners_ = [];
+var last_slot_listener_ = null;
+
+
+var effect_slots_ = []
 
 var y_obj_   = 22;
 var y_space_ = 22;
@@ -13,16 +15,9 @@ function clear()
 }
 
 
-function bang()
+function msg_int(n)
 {
-    loadbang();
-}
-
-
-function loadbang()
-{
-    count = 0;
-    set_slot_count(3);
+    set_slot_count(n);
 }
 
 
@@ -31,84 +26,83 @@ function set_slot_count(n)
     if (n < 0)
         return;
 
-    if (n === count)
+    var l = effect_slots_.length;
+
+    if (n === l)
         return;
 
-    if (n < count)
+    if (n < l)
     {
-        for (var i = n; i < count; i++)
+        for (var i = n; i < l; i++)
         {
             pop_back_();
         }
     }
     else
     {
-        for (var i = 0; i < n - count; i++)
+        for (var i = 0; i < n - l; i++)
         {
             push_back_();
         }
     }
-    outlet(0, "set_slot_count " + count.toString());
+
+    update_funnel_();
+    outlet(0, "slot_count", effect_slots_.length);
 }
 
 
-function slot_selected(i_menu, i_item)
+function update_funnel_()
 {
-    if ((i_menu === count- 1) && (i_item !== 0))
+    var funnel = this.patcher.getnamed("funnel");
+    if (funnel)
     {
-        push_back_();
+        this.patcher.remove(funnel);
+    }
+    var ctrl_out = this.patcher.getnamed("ctrl_out");
+    var x = ctrl_out.rect[0];
+    var y = ctrl_out.rect[1] - 44;
+    var l = effect_slots_.length;
+
+    if (l === 0)
+        return;
+
+    funnel = this.patcher.newdefault(x, y, "funnel", l);
+    funnel.varname = "funnel";
+    this.patcher.connect(funnel, 0, ctrl_out, 0);
+    for (var i = 0; i < l; i++)
+    {
+        this.patcher.connect(effect_slots_[i], 0, funnel, i);
     }
 }
+
 
 // --------------------------------------------------------------------
 
 function push_back_()
 {
-    new_effect_slot_(slot_listeners_.length);
-    //count++;
+    var outl = this.patcher.getnamed("outlet");
+
+    var l   = effect_slots_.length;
+    var x   = 200;
+    var y   = 100 + l * 44;
+
+    var slot    = this.patcher.newdefault(x, y, "bpatcher",
+                    "@name",                "djazz_ui_effect_slot",
+                    "@patching_rect",       [0, l * 22, 128, 22],
+                    "@presentation",        1,
+                    "@presentation_rect",   [0, l * 22, 128, 22]);
+                  
+    effect_slots_.push(slot);
 }
 push_back_.local = 1;
 
 
 function pop_back_()
 {   
-    //count--;
-    delete_effect_slot_(count);
+    var effect_slot = effect_slots_.pop();
+    this.patcher.remove(effect_slot);
 }
 pop_back_.local = 1;
-
-// --------------------------------------------------------------------
-
-function new_effect_slot_(i)
-{
-    var x       = get_x_at_(i);
-    var y       = get_y_at_(i);
-
-    var slot    = this.patcher.newdefault(x, y, "bpatcher",
-                    "@name",                "djazz_ui_effect_slot",
-                    "@args",                i,
-                    "@presentation",        1,
-                    "@presentation_rect",   [0, i * 22, 128, 22]);
-    var outl = this.patcher.getnamed("outlet");
-
-    this.patcher.connect(slot, 0, this.box, 0);
-    this.patcher.connect(slot, 1, outl,     0);
-
-    //slot.varname    = "effect_" + i.toString();
-
-}
-new_effect_slot_.local = 1;
-
-
-function delete_effect_slot_(i)
-{
-    var slot_varname    = "effect_" + i.toString();
-    var slot            = this.patcher.getnamed(slot_varname);
-    
-    this.patcher.remove(slot);
-
-}
-delete_effect_slot_.local = 1;
 
 // --------------------------------------------------------------------
 
@@ -124,3 +118,15 @@ function get_y_at_(i)
     return 100 + i * (y_obj_ + y_space_);  
 }
 get_y_at_.local = 1
+
+
+
+
+function slot_selected(i_menu, i_item)
+{
+    if ((i_menu === count- 1) && (i_item !== 0))
+    {
+        push_back_();
+    }
+}
+
