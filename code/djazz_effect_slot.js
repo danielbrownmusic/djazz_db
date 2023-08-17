@@ -34,6 +34,9 @@ function clear()
 {
     if (effect)
     {
+        var bypass_switch  = this.patcher.getnamed("bypass_switch");
+        var midi_outlet    = this.patcher.getnamed("midi_out");
+                
         this.patcher.remove(effect);
         this.patcher.connect(bypass_switch, 1, midi_outlet, 0);        
         effect         = null;

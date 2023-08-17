@@ -64,12 +64,11 @@ function update_spray_()
     if (l === 0)
         return;    
 
-    var slots_in    = this.patcher.getnamed("slots_in");
-    var x           = slots_in.rect[0];
-    var y           = slots_in.rect[3] + 22;
-    spray           = this.patcher.newdefault(x, y, "spray", l, 0, 1);
-    spray.varname   = "spray";
-
+    var slots_in = this.patcher.getnamed("slots_in");
+    var x = slots_in.rect[0];
+    var y = slots_out.rect[3] + 22;
+    spray = this.patcher.newdefault(x, y, "spray", l);
+    spray.varname = "spray";
     this.patcher.connect(slots_in, 0, spray, 0);
     for (var i = 0; i < l; i++)
     {
@@ -109,15 +108,15 @@ function update_funnel_()
 
 function push_back_()
 {
-    var slots_panel = this.patcher.getnamed("slots_panel");
+    var outl = this.patcher.getnamed("outlet");
 
     var l   = effect_slots_.length;
-    var x   = slots_panel.rect[0];
-    var y   = slots_panel.rect[1] + l * 22;
+    var x   = 200;
+    var y   = 100 + l * 44;
 
     var slot    = this.patcher.newdefault(x, y, "bpatcher",
                     "@name",                "djazz_ui_effect_slot",
-                    "@patching_rect",       [x, y, 128, 22],
+                    "@patching_rect",       [0, l * 22, 128, 22],
                     "@presentation",        1,
                     "@presentation_rect",   [0, l * 22, 128, 22]);
                   

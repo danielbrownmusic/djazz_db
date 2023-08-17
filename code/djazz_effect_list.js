@@ -66,7 +66,7 @@ function update_spray_()
     if (l === 0)
         return;
 
-    spray = this.patcher.newdefault(x, y, "spray", l);
+    spray = this.patcher.newdefault(x, y, "spray", l, 0, 1);
     spray.varname = "spray";
     this.patcher.connect(ctrl_in, 0, spray, 0);
     for (var i = 0; i < l; i++)
