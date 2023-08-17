@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -45,7 +45,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 125.0, 149.0, 22.0 ],
+					"patching_rect" : [ 25.0, 137.0, 149.0, 22.0 ],
 					"text" : "djazz_effect_list_impl",
 					"varname" : "djazz_effect_list_impl"
 				}
@@ -58,7 +58,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 90.0, 74.0, 149.0, 22.0 ],
+					"patching_rect" : [ 90.0, 75.0, 149.0, 22.0 ],
 					"text" : "route slot ctrl"
 				}
 
@@ -114,25 +114,21 @@
 					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-3", 0 ],
 					"watchpoint_flags" : 1,
-					"watchpoint_id" : 20
+					"watchpoint_id" : 9
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 2 ],
-					"source" : [ "obj-4", 1 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 23
+					"source" : [ "obj-4", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 1 ],
-					"source" : [ "obj-4", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 22
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
