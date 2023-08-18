@@ -54,7 +54,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-2",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -154,7 +154,7 @@
 				"box" : 				{
 					"comment" : "(dict) navigate patcher data",
 					"id" : "obj-11",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -181,13 +181,14 @@
 				"box" : 				{
 					"autopopulate" : 1,
 					"id" : "obj-4",
-					"items" : "<empty>",
+					"items" : [ "AutumnleavesDoMin", ",", "BluesFamaj", ",", "Cerebral", ",", "MIDI_tunes_and_info.txt", ",", "tunes_et_infos.txt" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 460.0, 373.0, 569.0, 22.0 ],
+					"prefix" : "~/Desktop/song_data/",
 					"presentation" : 1,
 					"presentation_rect" : [ 129.0, 11.0, 426.0, 22.0 ]
 				}
@@ -241,9 +242,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
-					"source" : [ "obj-4", 1 ],
-					"watchpoint_flags" : 2,
-					"watchpoint_id" : 76
+					"source" : [ "obj-4", 1 ]
 				}
 
 			}
@@ -277,9 +276,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [  ],
-		"autosave" : 0
+ ]
 	}
 
 }

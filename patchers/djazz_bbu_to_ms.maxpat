@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2315.0, 738.0, 927.0, 394.0 ],
+		"rect" : [ -2403.0, 428.0, 927.0, 394.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -184,18 +184,14 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-35", 0 ],
-					"source" : [ "obj-1", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 97
+					"source" : [ "obj-1", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-39", 1 ],
-					"source" : [ "obj-13", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 93
+					"source" : [ "obj-13", 0 ]
 				}
 
 			}
@@ -203,72 +199,56 @@
 				"patchline" : 				{
 					"destination" : [ "obj-35", 1 ],
 					"midpoints" : [ 553.5, 66.5, 147.5, 66.5 ],
-					"source" : [ "obj-16", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 96
+					"source" : [ "obj-16", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-34", 0 ],
-					"source" : [ "obj-2", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 95
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-36", 0 ],
-					"source" : [ "obj-3", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 94
+					"source" : [ "obj-3", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-38", 1 ],
-					"source" : [ "obj-34", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 99
+					"source" : [ "obj-34", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-38", 0 ],
-					"source" : [ "obj-35", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 100
+					"source" : [ "obj-35", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-38", 2 ],
-					"source" : [ "obj-36", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 98
+					"source" : [ "obj-36", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-39", 0 ],
-					"source" : [ "obj-38", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 101
+					"source" : [ "obj-38", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-42", 0 ],
-					"source" : [ "obj-39", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 102
+					"source" : [ "obj-39", 0 ]
 				}
 
 			}

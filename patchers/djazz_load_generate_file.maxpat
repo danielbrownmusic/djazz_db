@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1542.0, 297.0, 743.0, 394.0 ],
+		"rect" : [ 906.0, 239.0, 743.0, 394.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 363.5, 74.0, 65.0, 22.0 ],
+					"patching_rect" : [ 190.0, 60.0, 275.0, 22.0 ],
 					"text" : "route clear"
 				}
 
@@ -57,7 +57,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 504.0, 195.0, 107.0, 22.0 ],
+					"patching_rect" : [ 540.5, 194.0, 107.0, 22.0 ],
 					"text" : "prefix $1, populate"
 				}
 
@@ -71,19 +71,20 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 363.5, 25.0, 30.0, 30.0 ]
+					"patching_rect" : [ 190.0, 20.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-18",
+					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 409.5, 116.0, 107.0, 22.0 ],
-					"text" : "prefix $1, populate"
+					"patching_rect" : [ 446.0, 98.0, 68.0, 49.0 ],
+					"text" : "types fold, prefix $1, populate"
 				}
 
 			}
@@ -96,10 +97,10 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 409.5, 154.0, 208.0, 22.0 ],
+					"patching_rect" : [ 446.0, 161.0, 208.0, 22.0 ],
 					"prefix" : "~/Documents/Max 8/Projects/djazz_db/data/song_data/AutumnleavesDoMin/grid",
 					"presentation" : 1,
-					"presentation_rect" : [ 12.0, 13.0, 131.0, 22.0 ]
+					"presentation_rect" : [ 12.0, 13.0, 81.0, 22.0 ]
 				}
 
 			}
@@ -261,7 +262,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 141.0, 168.0, 161.0, 22.0 ],
+					"patching_rect" : [ 190.0, 194.0, 226.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -281,7 +282,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 46.0, 325.0, 30.0, 30.0 ]
+					"patching_rect" : [ 190.0, 326.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -292,7 +293,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "dictionary" ],
-					"patching_rect" : [ 46.0, 274.0, 571.5, 22.0 ],
+					"patching_rect" : [ 46.0, 274.0, 582.5, 22.0 ],
 					"text" : "dict.pack initial_tempo: time_signature: score_file: @triggers -1"
 				}
 
@@ -306,9 +307,9 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 504.0, 239.0, 208.0, 22.0 ],
+					"patching_rect" : [ 397.0, 233.0, 208.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 169.0, 13.0, 500.0, 22.0 ]
+					"presentation_rect" : [ 104.0, 13.0, 289.0, 22.0 ]
 				}
 
 			}
@@ -320,7 +321,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 322.25, 239.0, 50.0, 22.0 ]
+					"patching_rect" : [ 328.0, 233.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -346,7 +347,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 322.25, 25.0, 30.0, 30.0 ]
+					"patching_rect" : [ 97.25, 25.0, 30.0, 30.0 ]
 				}
 
 			}

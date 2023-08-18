@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 699.0, 590.0, 176.0, 237.0 ],
+		"rect" : [ -2308.0, 550.0, 447.0, 368.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -47,6 +47,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 104.0, 141.0, 56.0, 22.0 ],
 					"restore" : 					{
+						"gswitch" : [ 0 ],
 						"soloed" : [ 0 ]
 					}
 ,
@@ -62,8 +63,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 36.5, 106.0, 42.5, 22.0 ],
-					"text" : "=="
+					"patching_rect" : [ 36.5, 106.0, 29.5, 22.0 ],
+					"text" : "<"
 				}
 
 			}
@@ -100,8 +101,22 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 36.5, 146.0, 42.0, 33.0 ]
+					"parameter_enable" : 1,
+					"patching_rect" : [ 36.5, 146.0, 42.0, 33.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_enum" : [ "0", "1" ],
+							"parameter_initial" : [ 1 ],
+							"parameter_initial_enable" : 1,
+							"parameter_longname" : "gswitch[15]",
+							"parameter_mmax" : 1,
+							"parameter_shortname" : "gswitch",
+							"parameter_type" : 2
+						}
+
+					}
+,
+					"varname" : "gswitch"
 				}
 
 			}
@@ -175,8 +190,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 2 ],
-					"midpoints" : [ 29.0, 136.5, 69.0, 136.5 ],
+					"destination" : [ "obj-8", 1 ],
+					"midpoints" : [ 29.0, 136.5, 57.5, 136.5 ],
 					"source" : [ "obj-7", 0 ]
 				}
 

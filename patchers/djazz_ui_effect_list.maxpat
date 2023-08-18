@@ -161,18 +161,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-5", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 16
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-6", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 19
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}

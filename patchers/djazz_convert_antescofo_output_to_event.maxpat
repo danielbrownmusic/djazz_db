@@ -105,7 +105,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 167.455555555555577, 200.0, 177.711111111111052, 22.0 ],
+					"patching_rect" : [ 167.455555555555577, 195.0, 177.711111111111052, 22.0 ],
 					"text" : "pack 0 0 0 0"
 				}
 
@@ -229,9 +229,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-39", 3 ],
-					"source" : [ "obj-37", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 2
+					"source" : [ "obj-37", 0 ]
 				}
 
 			}
