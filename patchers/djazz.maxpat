@@ -320,6 +320,7 @@
 			}
 , 			{
 				"box" : 				{
+					"autorestore" : "djazz_session_presets.json",
 					"bgcolor" : [ 0.631372549019608, 0.529411764705882, 0.125490196078431, 1.0 ],
 					"color" : [ 0.631372549019608, 0.529411764705882, 0.125490196078431, 1.0 ],
 					"id" : "obj-47",
@@ -515,7 +516,7 @@
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "djazz_ui_input_song_folder.maxpat",
-					"numinlets" : 0,
+					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
@@ -3783,7 +3784,9 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-50", 0 ],
-					"source" : [ "obj-4", 0 ]
+					"source" : [ "obj-4", 0 ],
+					"watchpoint_flags" : 1,
+					"watchpoint_id" : 90
 				}
 
 			}
@@ -4365,6 +4368,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "djazz_session_presets.json",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/data",
+				"patcherrelativepath" : "../data",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "djazz_solo_manager.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
@@ -4495,6 +4505,13 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "modf.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
 				"implicit" : 1
 			}
  ],
