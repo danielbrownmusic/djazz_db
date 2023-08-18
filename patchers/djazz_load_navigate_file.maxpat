@@ -10,9 +10,9 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1232.0, 85.0, 389.0, 259.0 ],
+		"rect" : [ -1232.0, 85.0, 661.0, 625.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 1,
+		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -88,18 +88,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 21.0, 138.0, 59.0, 22.0 ],
 					"text" : "import $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-11",
-					"maxclass" : "dict.view",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 100.0, 259.0, 251.0, 202.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 3.0, 3.0, 245.0, 103.0 ]
 				}
 
 			}
@@ -184,16 +172,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"order" : 0,
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
-					"order" : 1,
 					"source" : [ "obj-4", 0 ]
 				}
 

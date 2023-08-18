@@ -60,7 +60,7 @@ function loadbang()
 		var x_mid 	 = x_esp + w * i;
 		var y_mid 	 = y_esp + h;	
 		var midi_out = this.patcher.newdefault(x_mid, y_mid, "djazz_midi_out", channel);		
-		midi_out.varname = i;
+		midi_out.varname = channel;
 
 		this.patcher.connect(event_spray, i, midi_out,  0);
 		this.patcher.connect(ctrl_spray,  i, midi_out,  1);
