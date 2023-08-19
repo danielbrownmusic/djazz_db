@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -50,13 +50,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ -1875.0, 618.0, 1022.0, 480.0 ],
+						"rect" : [ 109.0, 554.0, 1022.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -84,6 +84,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-16",
@@ -117,7 +118,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 468.0, 188.0, 260.0, 62.0 ],
-									"text" : "\"Macintosh HD:/Users/danielbrown/Desktop/song_data/AutumnleavesDoMin/new/AutumnleavesDoMin-new-02.24.2013-17-20.txt\""
+									"text" : "\"Macintosh HD:/Users/danielbrown/Desktop/test_djazz/AutumnleavesDoMin/new/AutumnleavesDoMin-new-2013.10.27-19h24.txt\""
 								}
 
 							}
@@ -177,8 +178,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 200.0, 139.0, 287.0, 22.0 ],
-									"text" : "dict.unpack initial_tempo: time_signature: score_file:"
+									"patching_rect" : [ 200.0, 139.0, 315.0, 22.0 ],
+									"text" : "dict.unpack initial_tempo: beats_per_measure: score_file:"
 								}
 
 							}
@@ -425,7 +426,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "clear" ],
+					"outlettype" : [ "dictionary" ],
 					"patching_rect" : [ 461.583333333333258, 18.0, 30.0, 30.0 ]
 				}
 
@@ -455,7 +456,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -710,6 +711,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-4",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,

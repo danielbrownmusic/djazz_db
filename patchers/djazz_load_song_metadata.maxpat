@@ -42,12 +42,12 @@
 				"box" : 				{
 					"comment" : "(int) beats_per_measure",
 					"id" : "obj-21",
-					"index" : 0,
+					"index" : 3,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 99.5, 23.0, 30.0, 30.0 ]
+					"patching_rect" : [ 138.0, 23.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -55,7 +55,7 @@
 				"box" : 				{
 					"comment" : "(dict) song data for generate_events",
 					"id" : "obj-11",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -66,13 +66,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-10",
-					"linecount" : 5,
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "dictionary" ],
-					"patching_rect" : [ 24.0, 72.0, 94.5, 76.0 ],
-					"text" : "dict.pack initial_tempo: time_signature: score_file: @triggers -1"
+					"patching_rect" : [ 24.0, 72.0, 133.0, 49.0 ],
+					"text" : "dict.pack tempo: beats_per_measure: score_file: @triggers -1"
 				}
 
 			}
@@ -80,12 +80,12 @@
 				"box" : 				{
 					"comment" : "(int) beats_per_measure",
 					"id" : "obj-2",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 61.75, 23.0, 30.0, 30.0 ]
+					"patching_rect" : [ 81.0, 23.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -93,7 +93,7 @@
 				"box" : 				{
 					"comment" : "(float) initial_tempo; clear",
 					"id" : "obj-1",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -131,9 +131,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [  ],
-		"autosave" : 0
+ ]
 	}
 
 }
