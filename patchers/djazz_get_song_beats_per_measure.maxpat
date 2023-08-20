@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 791.0, 681.0, 269.0, 387.0 ],
+		"rect" : [ 832.0, 313.0, 289.0, 224.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,25 +40,25 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "(dict) song metadata",
+					"comment" : "(float) song initial tempo",
 					"id" : "obj-2",
 					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 21.0, 99.0, 30.0, 30.0 ]
+					"patching_rect" : [ 19.0, 134.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-6",
+					"id" : "obj-4",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 21.0, 62.0, 126.0, 22.0 ],
-					"text" : "dict.unpack metadata:"
+					"patching_rect" : [ 19.0, 95.0, 183.0, 22.0 ],
+					"text" : "dict.unpack beats_per_measure:"
 				}
 
 			}
@@ -70,15 +70,28 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
+					"outlettype" : [ "dictionary" ],
+					"patching_rect" : [ 19.0, 14.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-51",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 21.0, 14.0, 30.0, 30.0 ]
+					"patching_rect" : [ 19.0, 60.82004888238248, 159.0, 22.0 ],
+					"style" : "dj finished encapsulation",
+					"text" : "djazz_get_song_metadata"
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
+					"destination" : [ "obj-51", 0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -86,7 +99,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-6", 0 ]
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"source" : [ "obj-51", 0 ]
 				}
 
 			}
