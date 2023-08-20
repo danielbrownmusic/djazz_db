@@ -83,8 +83,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 313.0, 106.0, 40.0, 22.0 ],
-					"text" : "* 125."
+					"patching_rect" : [ 313.0, 106.0, 60.0, 22.0 ],
+					"text" : "* 125000."
 				}
 
 			}
@@ -149,7 +149,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "int" ],
 					"patching_rect" : [ 313.0, 25.0, 30.0, 30.0 ]
 				}
 
@@ -175,7 +175,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "float" ],
 					"patching_rect" : [ 29.0, 25.0, 30.0, 30.0 ]
 				}
 

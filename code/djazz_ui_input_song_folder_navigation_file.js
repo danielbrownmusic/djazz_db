@@ -1,10 +1,11 @@
 autowatch = 1;
 
 setinletassist(0, "a song folder name");
-setoutletassist(0, "the full path of the song's form file");
+setoutletassist(0, "the full path of the song's json file");
 
-function get_navigation_file(folder_full_path)
+function anything()
 {
+	var folder_full_path = messagename;
 	f = new Folder(folder_full_path);	
 	while (!f.end) {
 		{

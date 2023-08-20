@@ -45,7 +45,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 21.0, 105.0, 262.0, 22.0 ],
+					"patching_rect" : [ 21.0, 69.0, 262.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_ui_input_song_folder_navigation_file.js",
 						"parameter_enable" : 0
@@ -57,24 +57,12 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 21.0, 72.0, 125.0, 22.0 ],
-					"text" : "get_navigation_file $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-18",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "", "clear" ],
-					"patching_rect" : [ 21.0, 176.0, 57.0, 22.0 ],
+					"patching_rect" : [ 21.0, 140.0, 57.0, 22.0 ],
 					"text" : "t b l clear"
 				}
 
@@ -86,7 +74,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 21.0, 138.0, 59.0, 22.0 ],
+					"patching_rect" : [ 21.0, 102.0, 59.0, 22.0 ],
 					"text" : "import $1"
 				}
 
@@ -98,7 +86,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 40.0, 219.0, 50.5, 22.0 ],
+					"patching_rect" : [ 40.0, 183.0, 50.5, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0,
@@ -117,7 +105,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 40.0, 259.0, 30.0, 30.0 ]
+					"patching_rect" : [ 40.0, 223.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -158,7 +146,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
+					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -174,13 +162,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"source" : [ "obj-5", 0 ]
 				}
 
 			}

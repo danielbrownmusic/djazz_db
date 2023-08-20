@@ -40,6 +40,18 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 414.0, 216.0, 48.0, 22.0 ],
+					"text" : "dummy"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "messages to antescofo: nextbeat, gotobeat, tempo, score",
 					"id" : "obj-10",
 					"index" : 4,
@@ -145,7 +157,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 201.699999999999989, 212.0, 30.0, 30.0 ]
+					"patching_rect" : [ 201.699999999999989, 257.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -180,7 +192,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 6,
 					"outlettype" : [ "", "float", "symbol", "float", "list", "bang" ],
-					"patching_rect" : [ 163.0, 142.0, 212.5, 22.0 ],
+					"patching_rect" : [ 163.0, 187.0, 212.5, 22.0 ],
 					"saved_object_attributes" : 					{
 						"IncomingOscPort" : 5678,
 						"Warning" : 1,
@@ -204,7 +216,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 163.0, 18.0, 30.0, 30.0 ]
 				}
 
