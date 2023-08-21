@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 875.0, 526.0, 367.0, 339.0 ],
+		"rect" : [ -803.0, 507.0, 588.0, 430.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,13 +40,25 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 27.0, 116.0, 71.0, 22.0 ],
+					"text" : "set_tabs $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "",
 					"id" : "obj-2",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 27.0, 251.0, 30.0, 30.0 ]
+					"patching_rect" : [ 27.0, 318.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -54,7 +66,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-1",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -81,7 +93,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 167.0, 251.0, 78.0, 20.0 ],
+					"patching_rect" : [ 167.0, 318.0, 78.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 16.0, 17.0, 74.0, 20.0 ],
 					"text" : "CHAPTERS"
@@ -95,7 +107,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 214.0, 109.5, 41.0, 22.0 ],
+					"patching_rect" : [ 214.0, 152.5, 41.0, 22.0 ],
 					"text" : "set $1"
 				}
 
@@ -107,13 +119,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 27.0, 109.5, 181.0, 22.0 ],
+					"patching_rect" : [ 27.0, 152.5, 161.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_ui_navigate_set_tabs.js",
+						"filename" : "djazz_ui_navigate_song.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_ui_navigate_set_tabs.js"
+					"text" : "js djazz_ui_navigate_song.js"
 				}
 
 			}
@@ -124,11 +136,24 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 27.0, 168.0, 244.0, 62.0 ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 27.0, 235.0, 244.0, 62.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 104.0, 17.0, 213.0, 41.0 ],
-					"tabs" : [ "0", "1", "2", "3", "4", "5", "6" ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_enum" : [ "1", "2" ],
+							"parameter_initial" : [ 0.0 ],
+							"parameter_longname" : "chapters",
+							"parameter_mmax" : 1,
+							"parameter_shortname" : "chapters",
+							"parameter_type" : 2,
+							"parameter_unitstyle" : 9
+						}
+
+					}
+,
+					"tabs" : [ "1", "2" ],
 					"varname" : "chapters"
 				}
 
@@ -143,7 +168,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-38", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-10", 0 ]
 				}
 
@@ -158,7 +183,9 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-39", 0 ],
-					"source" : [ "obj-38", 0 ]
+					"source" : [ "obj-38", 0 ],
+					"watchpoint_flags" : 5,
+					"watchpoint_id" : 1
 				}
 
 			}
@@ -171,22 +198,22 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-39", 0 ],
-					"midpoints" : [ 223.5, 148.75, 36.5, 148.75 ],
-					"source" : [ "obj-41", 0 ]
+					"destination" : [ "obj-38", 0 ],
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_ui_navigate_set_tabs.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-39", 0 ],
+					"midpoints" : [ 223.5, 211.75, 36.5, 211.75 ],
+					"source" : [ "obj-41", 0 ],
+					"watchpoint_flags" : 5,
+					"watchpoint_id" : 2
+				}
+
 			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

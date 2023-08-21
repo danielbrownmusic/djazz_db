@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 59.0, 119.0, 640.0, 480.0 ],
+		"rect" : [ 845.0, 488.0, 779.0, 721.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,36 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 147.200000000000045, 128.0, 95.0, 22.0 ],
+					"text" : "set_measure $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 273.200000000000045, 128.0, 101.0, 22.0 ],
+					"text" : "prepend set_tabs"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-32",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 50.0, 359.0, 32.0, 22.0 ],
+					"patching_rect" : [ 209.0, 364.0, 32.0, 22.0 ],
 					"text" : "$1 0"
 				}
 
@@ -53,13 +77,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-10",
-					"linecount" : 4,
 					"maxclass" : "newobj",
 					"numinlets" : 4,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 50.0, 100.0, 167.0, 62.0 ],
-					"text" : "route chapter_min_max_measures measure_number measure_position"
+					"patching_rect" : [ 21.200000000000045, 72.0, 397.0, 22.0 ],
+					"text" : "route measure_position measure_number chapter_min_max_measures"
 				}
 
 			}
@@ -69,22 +92,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 105.200000000000045, 189.0, 55.0, 20.0 ],
+					"patching_rect" : [ 416.200000000000045, 195.5, 55.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 3.0, 3.0, 44.0, 20.0 ],
 					"text" : "BARS"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-42",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 250.599999999999909, 235.5, 41.0, 22.0 ],
-					"text" : "set $1"
 				}
 
 			}
@@ -95,13 +106,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 50.0, 235.5, 181.0, 22.0 ],
+					"patching_rect" : [ 209.0, 193.5, 175.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_ui_navigate_set_tabs.js",
+						"filename" : "djazz_ui_navigate_chapter.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_ui_navigate_set_tabs.js"
+					"text" : "js djazz_ui_navigate_chapter.js"
 				}
 
 			}
@@ -113,10 +124,10 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 50.0, 280.0, 244.0, 62.0 ],
+					"patching_rect" : [ 209.0, 261.0, 244.0, 62.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 3.0, 36.5, 290.0, 66.0 ],
-					"tabs" : [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" ],
+					"tabs" : [ "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47" ],
 					"varname" : "measures"
 				}
 
@@ -125,12 +136,12 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-33",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 50.0, 40.0, 30.0, 30.0 ]
+					"patching_rect" : [ 21.200000000000045, 12.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -138,25 +149,25 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-34",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 50.0, 441.0, 30.0, 30.0 ]
+					"patching_rect" : [ 209.0, 418.0, 30.0, 30.0 ]
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-26", 0 ],
-					"source" : [ "obj-10", 0 ]
+					"destination" : [ "obj-4", 0 ],
+					"source" : [ "obj-10", 2 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
+					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-10", 1 ]
 				}
 
@@ -191,22 +202,19 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"midpoints" : [ 260.099999999999909, 268.25, 59.5, 268.25 ],
-					"source" : [ "obj-42", 0 ]
+					"destination" : [ "obj-26", 0 ],
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_ui_navigate_set_tabs.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-26", 0 ],
+					"source" : [ "obj-7", 0 ]
+				}
+
 			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

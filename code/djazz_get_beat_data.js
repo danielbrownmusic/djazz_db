@@ -47,9 +47,9 @@ get_beat_data_from_beat_number_.local = 1;
 
 function get_beat_data_from_grid_position_(song_database, grid_position)
 {
-    var chapter     = grid_position[0].toString();
-    var measure     = grid_position[1].toString();
-    var position    = grid_position[2].toString();
+    var chapter     = grid_position[0];
+    var measure     = grid_position[1];
+    var position    = grid_position[2];
 
     var beat_number = song_database.get("grid").get(chapter).get(measure).get(position);
 

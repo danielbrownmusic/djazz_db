@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 508.0, 214.0, 894.0, 693.0 ],
+		"rect" : [ -2428.0, 417.0, 602.0, 418.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -53,6 +53,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-21",
+					"int" : 1,
 					"maxclass" : "gswitch2",
 					"numinlets" : 2,
 					"numoutlets" : 2,
@@ -70,7 +71,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 362.799999999999955, 305.0, 83.0, 22.0 ],
-					"restore" : [ 0 ],
+					"restore" : [ 91 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -91,18 +92,6 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 330.799999999999955, 341.0, 50.0, 22.0 ],
 					"varname" : "number"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-11",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 491.733333333333235, 261.0, 48.0, 22.0 ],
-					"text" : "dummy"
 				}
 
 			}

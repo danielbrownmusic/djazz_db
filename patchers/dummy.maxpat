@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2194.0, -105.0, 974.0, 361.0 ],
+		"rect" : [ 59.0, 106.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,37 +40,33 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "newobj",
+					"comment" : "does nothing",
+					"id" : "obj-2",
+					"index" : 0,
+					"maxclass" : "outlet",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 536.0, 54.0, 209.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"filename" : "djazz_output_notes_layout.js",
-						"parameter_enable" : 0
-					}
-,
-					"text" : "js djazz_output_notes_layout.js #1 #2"
+					"numoutlets" : 0,
+					"patching_rect" : [ 111.0, 178.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
-					"id" : "obj-2",
-					"index" : 1,
+					"comment" : "does nothing",
+					"id" : "obj-1",
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "list" ],
-					"patching_rect" : [ 26.0, 16.0, 30.0, 30.0 ],
-					"varname" : "inlet"
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 135.0, 43.0, 30.0, 30.0 ]
 				}
 
 			}
  ],
-		"lines" : [  ]
+		"lines" : [  ],
+		"dependency_cache" : [  ],
+		"autosave" : 0
 	}
 
 }
