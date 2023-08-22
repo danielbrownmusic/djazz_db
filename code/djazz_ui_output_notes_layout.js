@@ -1,7 +1,10 @@
 autowatch = 1;
 
-var w = 160;
-var h = 48;
+var w       = 5;
+var w_obj   = 128;
+var h       = 48;
+var h_obj   = 22;
+
 
 function loadbang()
 {
@@ -37,6 +40,12 @@ function loadbang()
     var ctrl_spray  = this.patcher.newdefault(x_cspr, y_cspr, "spray", n_channels, min_channel, 1);    
     this.patcher.connect(ctrl_in, 0, ctrl_spray, 0);
 
+    var outl        = this.patcher.getnamed("outlet");
+    var x_fun       = outl.rect[0];
+    var y_fun       = outl.rect[1] - (h_obj + h); 
+    var funnel  = this.patcher.newdefault(x_fun, y_fun, "funnel", n_channels, min_channel);
+    this.patcher.connect(funnel, 0, outl, 0);
+
     var x = x_nspr;
     var y = note_spray.rect[3] + h;
 
@@ -44,21 +53,23 @@ function loadbang()
 	{
 		var i 		 = channel - min_channel;
 
-        var x_m 	 = x + i * w;
+        var x_m 	 = x + i * (w + w_obj);
 		var y_m 	 = y;
-        var velocity = 128;
-        var duration = 500;
-		var make_note = this.patcher.newdefault(x_m, y_m, "makenote", velocity, duration, channel);
+		var midi_info = this.patcher.newdefault(x_m, y_m, "midiinfo");
 
-        var x_n = x_m;
-        var y_n = make_note.rect[3] + h;
-        var note_out = this.patcher.newdefault(x_n, y_n, "noteout", channel);
+        var x_u = x_m;
+        var y_u = midi_info.rect[3] + h;
 
-        this.patcher.connect(note_spray, i, make_note, 0);
-        this.patcher.connect(ctrl_spray, i, note_out, 0);
-        for (var j = 0; j < 3; j++)
-        {
-            this.patcher.connect(make_note, j, note_out, j);
-        }
+        var x_u_pres = i * w_obj;
+        var y_u_pres = 0;
+
+        var umenu = this.patcher.newdefault(x_u, y_u, "umenu",
+                                            "@presentation", 1,
+                                            "@presentation_rect", [x_u_pres, y_u_pres, w_obj, h_obj]);
+
+        this.patcher.connect(ctrl_spray, i, umenu, 0);
+        this.patcher.connect(midi_info, 0, umenu, 0);
+        this.patcher.connect(umenu, 1, funnel, i)
+        midi_info.message("bang");
     }
 }

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2194.0, -105.0, 974.0, 361.0 ],
+		"rect" : [ -2974.0, 106.0, 1134.0, 496.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,26 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "set port (channel port_name)",
+					"id" : "obj-1",
+					"index" : 0,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 589.0, 76.0, 30.0, 30.0 ],
+					"varname" : "ctrl_in"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-3",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 536.0, 54.0, 209.0, 22.0 ],
+					"patching_rect" : [ 11.0, 13.0, 209.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_output_notes_layout.js",
 						"parameter_enable" : 0
@@ -57,20 +71,29 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "midi events (channel pitch velocity duration)",
 					"id" : "obj-2",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "list" ],
-					"patching_rect" : [ 26.0, 16.0, 30.0, 30.0 ],
-					"varname" : "inlet"
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 11.0, 72.0, 30.0, 30.0 ],
+					"varname" : "note_in"
 				}
 
 			}
  ],
-		"lines" : [  ]
+		"lines" : [  ],
+		"dependency_cache" : [ 			{
+				"name" : "djazz_output_notes_layout.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }
