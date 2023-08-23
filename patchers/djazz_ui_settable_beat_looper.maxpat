@@ -54,7 +54,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 293.0, 195.0, 375.0, 67.0 ],
+					"patching_rect" : [ 272.0, 136.0, 358.0, 51.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 169.0, 8.0, 358.0, 54.0 ],
 					"varname" : "patcher",
@@ -69,7 +69,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 86.0, 70.0, 381.999999999999943, 22.0 ],
+					"patching_rect" : [ 30.0, 29.0, 381.999999999999943, 22.0 ],
 					"text" : "route record play length"
 				}
 
@@ -82,7 +82,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 86.0, 463.0, 30.0, 30.0 ]
+					"patching_rect" : [ 272.0, 289.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -93,7 +93,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 207.0, 150.0, 41.0, 22.0 ],
+					"patching_rect" : [ 151.0, 90.0, 41.0, 22.0 ],
 					"text" : "set $1"
 				}
 
@@ -105,7 +105,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 86.0, 150.0, 41.0, 22.0 ],
+					"patching_rect" : [ 30.0, 90.0, 41.0, 22.0 ],
 					"text" : "set $1"
 				}
 
@@ -117,7 +117,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 207.0, 278.0, 47.0, 22.0 ],
+					"patching_rect" : [ 151.0, 218.0, 47.0, 22.0 ],
 					"text" : "play $1"
 				}
 
@@ -129,7 +129,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 86.0, 278.0, 59.0, 22.0 ],
+					"patching_rect" : [ 30.0, 218.0, 59.0, 22.0 ],
 					"text" : "record $1"
 				}
 
@@ -144,7 +144,7 @@
 					"oncolor" : [ 1.0, 0.968627450980392, 0.0, 1.0 ],
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 207.0, 196.0, 51.0, 51.0 ],
+					"patching_rect" : [ 151.0, 136.0, 51.0, 51.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 66.0, 8.0, 48.0, 48.0 ]
 				}
@@ -160,7 +160,7 @@
 					"oncolor" : [ 1.0, 0.023529411764706, 0.023529411764706, 1.0 ],
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 86.0, 196.0, 51.0, 51.0 ],
+					"patching_rect" : [ 30.0, 136.0, 51.0, 51.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 9.0, 8.0, 48.0, 48.0 ]
 				}
