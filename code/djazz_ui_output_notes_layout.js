@@ -28,12 +28,6 @@ function loadbang()
 
 	var n_channels = max_channel - min_channel + 1;
 
-    var note_in     = this.patcher.getnamed("note_in");
-    var x_nspr      = note_in.rect[0];
-    var y_nspr      = note_in.rect[3] + h;
-    var note_spray  = this.patcher.newdefault(x_nspr, y_nspr, "spray", n_channels, min_channel, 1);
-    this.patcher.connect(note_in, 0, note_spray, 0);
-
     var ctrl_in     = this.patcher.getnamed("ctrl_in");
     var x_cspr      = ctrl_in.rect[0];
     var y_cspr      = ctrl_in.rect[3] + h;

@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 100.0, 933.0, 741.0 ],
+		"rect" : [ -2220.0, 369.0, 933.0, 741.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -424,18 +424,6 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 626.593822288513138, 29.0, 38.0, 20.0 ],
 					"text" : "color"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-6",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 50.737105488777161, 658.649500131607056, 240.0, 22.0 ],
-					"text" : "append red, append orange, append yellow"
 				}
 
 			}
