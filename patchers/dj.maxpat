@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 100.0, 415.0, 299.0 ],
+		"rect" : [ 494.0, 440.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,69 +40,88 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "midi events",
 					"id" : "obj-1",
-					"index" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 23.0, 16.0, 160.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"filename" : "dj.js",
+						"parameter_enable" : 0
+					}
+,
+					"text" : "js dj.js #1 #2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-6",
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 48.0, 254.0, 30.0, 30.0 ]
+					"patching_rect" : [ 22.0, 257.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "messages: event, solo, effect",
-					"id" : "obj-9",
-					"index" : 3,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 352.0, 27.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "messages: event, solo, effect",
-					"id" : "obj-8",
-					"index" : 1,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 33.0, 27.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "midi events",
 					"id" : "obj-5",
-					"index" : 1,
-					"maxclass" : "outlet",
+					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 33.0, 239.0, 30.0, 30.0 ]
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 22.0, 207.75, 75.0, 22.0 ],
+					"text" : "prepend #2",
+					"varname" : "prepend"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "messages: event, solo, effect",
 					"id" : "obj-3",
-					"index" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 22.0, 115.25, 59.0, 22.0 ],
+					"text" : "route #2",
+					"varname" : "route"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-2",
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 82.0, 27.0, 30.0, 30.0 ]
+					"patching_rect" : [ 22.0, 67.0, 30.0, 30.0 ]
 				}
 
 			}
  ],
-		"lines" : [  ]
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+ ]
 	}
 
 }
