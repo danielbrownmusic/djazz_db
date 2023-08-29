@@ -1,8 +1,8 @@
 autowatch = 1;
 
-var n 		= jsarguments[1];
-inlets      = (n && !isNaN(n) && (n > 0)) ? n : 1;
-outlets     = inlets + 1;
+var n 			= jsarguments[1];
+inlets      	= (n && !isNaN(n) && (n > 0)) ? n : 1;
+outlets     	= inlets + 1;
 var any_solos   = 0;
 var solos       = Array.apply(null, Array(n)).map(Number.prototype.valueOf, 0);
 

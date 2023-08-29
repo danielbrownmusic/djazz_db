@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2058.0, 348.0, 1561.0, 546.0 ],
+		"rect" : [ -2404.0, 191.0, 1561.0, 546.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -41,13 +41,27 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"comment" : "",
-					"id" : "obj-16",
-					"index" : 2,
+					"id" : "obj-1",
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "list" ],
-					"patching_rect" : [ 1154.0, 148.0, 30.0, 30.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 391.0, 119.0, 30.0, 30.0 ],
+					"varname" : "load_inlet"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-16",
+					"index" : 0,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 212.5, 119.0, 30.0, 30.0 ],
 					"varname" : "control_inlet"
 				}
 
@@ -56,7 +70,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-3",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -70,7 +84,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-13",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -97,7 +111,16 @@
 
 			}
  ],
-		"lines" : [  ]
+		"lines" : [  ],
+		"dependency_cache" : [ 			{
+				"name" : "djazz_midi_out_bank_layout.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }
