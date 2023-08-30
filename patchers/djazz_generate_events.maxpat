@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2653.0, -60.0, 723.0, 402.0 ],
+		"rect" : [ 276.0, 224.0, 515.0, 715.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,13 +40,37 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "",
+					"id" : "obj-8",
+					"index" : 2,
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 256.0, 406.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 291.458333333333258, 77.0, 200.0, 22.0 ],
+					"text" : "route tempo beats_per_measure"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-12",
 					"maxclass" : "number",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 554.499999999999886, 93.0, 50.0, 22.0 ]
+					"patching_rect" : [ 381.958333333333258, 126.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -59,13 +83,13 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 291.458333333333258, 93.0, 50.0, 22.0 ]
+					"patching_rect" : [ 291.458333333333258, 126.0, 50.0, 22.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "(float) tempo",
+					"comment" : "runtime ctrl messages: tempo, beats_per_measure",
 					"id" : "obj-2",
 					"index" : 2,
 					"maxclass" : "inlet",
@@ -83,14 +107,14 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 28.416666666666629, 93.0, 173.0, 22.0 ],
+					"patching_rect" : [ 28.416666666666629, 77.0, 173.0, 22.0 ],
 					"text" : "routepass int reset"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "bang: trigger next events; int, go to next beat and output events; reset: reset to inital state",
+					"comment" : "(int) output events at beat; reset: reset to inital state",
 					"id" : "obj-3",
 					"index" : 1,
 					"maxclass" : "inlet",
@@ -103,27 +127,15 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "(symbol) score file full path (for loading score follower)",
+					"comment" : "load messages: (symbol) score file full path (for loading score follower)",
 					"id" : "obj-1",
-					"index" : 4,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 668.416666666666629, 21.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "(int) beats per measure",
-					"id" : "obj-45",
+					"ignoreclick" : 1,
 					"index" : 3,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 554.499999999999886, 21.0, 30.0, 30.0 ]
+					"patching_rect" : [ 532.416666666666629, 21.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -442,7 +454,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 28.416666666666629, 296.0, 545.083333333333258, 22.0 ],
+					"patching_rect" : [ 28.416666666666629, 296.0, 372.541666666666629, 22.0 ],
 					"text" : "djazz_convert_antescofo_output_to_event 60 4"
 				}
 
@@ -464,7 +476,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 3 ],
-					"midpoints" : [ 677.916666666666629, 204.0, 268.916666666666629, 204.0 ],
+					"midpoints" : [ 541.916666666666629, 204.0, 268.916666666666629, 204.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -481,6 +493,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-44", 1 ],
+					"midpoints" : [ 300.958333333333258, 271.0, 214.687499999999943, 271.0 ],
 					"order" : 0,
 					"source" : [ "obj-10", 0 ]
 				}
@@ -495,7 +508,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
+					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -537,13 +550,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
-					"source" : [ "obj-45", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-29", 1 ],
 					"source" : [ "obj-5", 1 ]
 				}
@@ -553,6 +559,20 @@
 				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
 					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"source" : [ "obj-6", 1 ]
 				}
 
 			}

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1487.0, -59.0, 827.0, 663.0 ],
+		"rect" : [ 266.0, 249.0, 827.0, 663.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -197,7 +197,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "1 sets chapter loop, 0 turns off",
+					"comment" : "bang to output next beat number",
 					"id" : "obj-33",
 					"index" : 1,
 					"maxclass" : "inlet",
@@ -222,26 +222,26 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "1 sets chapter loop, 0 turns off",
+					"comment" : "runtime ctrl messages: reset, int or list to set beat with no output, loop chapter (0/1)",
 					"id" : "obj-5",
 					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 414.450000333336448, 35.535714285713539, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "(dict) navigation data",
+					"comment" : "load messages",
 					"id" : "obj-3",
 					"index" : 3,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "dictionary" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 554.200000333336448, 35.535714285713539, 30.0, 30.0 ]
 				}
 

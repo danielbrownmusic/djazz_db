@@ -41,6 +41,20 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"comment" : "set port (channel port_name)",
+					"id" : "obj-4",
+					"index" : 0,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1004.0, 72.0, 30.0, 30.0 ],
+					"varname" : "ctrl_in[1]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "set port (channel port_name)",
 					"id" : "obj-1",
 					"index" : 0,
 					"maxclass" : "inlet",

@@ -49,9 +49,9 @@
 					"outlettype" : [ "bang" ],
 					"outlinecolor" : [ 0.674509803921569, 0.466666666666667, 0.964705882352941, 1.0 ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 36.0, 79.0, 128.0, 128.0 ],
+					"patching_rect" : [ 36.0, 79.0, 73.0, 73.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 15.0, 15.0, 108.0, 108.0 ]
+					"presentation_rect" : [ 7.0, 6.0, 57.0, 57.0 ]
 				}
 
 			}
