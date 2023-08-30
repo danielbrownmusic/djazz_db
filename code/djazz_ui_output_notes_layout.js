@@ -40,8 +40,8 @@ function loadbang()
     var funnel  = this.patcher.newdefault(x_fun, y_fun, "funnel", n_channels, min_channel);
     this.patcher.connect(funnel, 0, outl, 0);
 
-    var x = x_nspr;
-    var y = note_spray.rect[3] + h;
+    var x = x_cspr;
+    var y = ctrl_spray.rect[3] + h;
 
     for (var channel = min_channel; channel <= max_channel; channel++)
 	{
