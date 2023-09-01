@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 708.0, 308.0, 210.0, 215.0 ],
+		"rect" : [ 84.0, 131.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,75 +40,38 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-7",
+					"id" : "obj-3",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 85.0, 15.0, 56.0, 22.0 ],
+					"patching_rect" : [ 315.0, 82.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"muted" : [ 0 ]
+						"blinky" : [ 0 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u490003638"
+					"varname" : "u849015071"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "gswitch2",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 16.0, 96.0, 30.0, 33.0 ],
-					"varname" : "muted"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "midi event if passed through",
-					"id" : "obj-3",
-					"index" : 1,
-					"maxclass" : "outlet",
+					"id" : "obj-2",
+					"maxclass" : "number",
 					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 16.0, 144.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "midi event",
-					"id" : "obj-1",
-					"index" : 1,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 27.0, 15.0, 30.0, 30.0 ]
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 161.0, 192.0, 50.0, 22.0 ],
+					"varname" : "blinky"
 				}
 
 			}
  ],
-		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4", 1 ],
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
- ]
+		"lines" : [  ],
+		"dependency_cache" : [  ],
+		"autosave" : 0
 	}
 
 }

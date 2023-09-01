@@ -111,46 +111,8 @@
 				}
 
 			}
-, 			{
-				"box" : 				{
-					"args" : [ "#1", "#2" ],
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-1",
-					"lockeddragscroll" : 0,
-					"lockedsize" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "djazz_ui_midi_out_bank.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 300.0, 179.0, 118.0, 134.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 2319.0, 300.0 ],
-					"viewvisibility" : 1
-				}
-
-			}
  ],
 		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-34", 1 ]
-				}
-
-			}
-, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-34", 0 ],
 					"source" : [ "obj-4", 0 ]
@@ -172,21 +134,7 @@
 
 			}
  ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_ui_midi_out_bank.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_ui_midi_out_bank_layout.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
- ],
+		"dependency_cache" : [  ],
 		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "dj FINISDHED encapsulation",

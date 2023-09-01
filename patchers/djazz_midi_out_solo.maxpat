@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2308.0, 550.0, 447.0, 368.0 ],
+		"rect" : [ -1422.0, 611.0, 447.0, 368.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,26 +45,14 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 104.0, 141.0, 56.0, 22.0 ],
+					"patching_rect" : [ 100.0, 12.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"gswitch" : [ 0 ],
+						"active" : [ 0 ],
 						"soloed" : [ 0 ]
 					}
 ,
 					"text" : "autopattr",
 					"varname" : "u643003525"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-20",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 36.5, 106.0, 29.5, 22.0 ],
-					"text" : "<"
 				}
 
 			}
@@ -76,21 +64,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 60.0, 70.0, 50.0, 22.0 ],
+					"patching_rect" : [ 100.0, 64.0, 50.0, 22.0 ],
 					"varname" : "soloed"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "connect to solo manager",
-					"id" : "obj-3",
-					"index" : 3,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 98.0, 12.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -102,7 +77,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 36.5, 146.0, 42.0, 33.0 ],
+					"patching_rect" : [ 37.0, 64.0, 42.0, 33.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "0", "1" ],
@@ -116,7 +91,7 @@
 
 					}
 ,
-					"varname" : "gswitch"
+					"varname" : "active"
 				}
 
 			}
@@ -129,7 +104,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 19.5, 12.0, 30.0, 30.0 ]
+					"patching_rect" : [ 48.5, 12.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -141,57 +116,14 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 36.5, 189.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "\"solo\" + 0/1",
-					"id" : "obj-5",
-					"index" : 2,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 60.0, 12.0, 30.0, 30.0 ]
+					"patching_rect" : [ 37.0, 107.0, 30.0, 30.0 ]
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-20", 1 ],
-					"source" : [ "obj-18", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"source" : [ "obj-20", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-20", 0 ],
-					"midpoints" : [ 107.5, 55.5, 46.0, 55.5 ],
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-18", 0 ],
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-8", 1 ],
-					"midpoints" : [ 29.0, 136.5, 57.5, 136.5 ],
 					"source" : [ "obj-7", 0 ]
 				}
 

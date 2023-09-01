@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1508.0, 624.0, 360.0, 440.0 ],
+		"rect" : [ -1169.0, 276.0, 390.0, 254.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,31 +40,32 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "",
-					"id" : "obj-4",
-					"index" : 0,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 115.0, 12.0, 30.0, 30.0 ]
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 157.0, 27.0, 56.0, 22.0 ],
+					"restore" : 					{
+						"active" : [ 0 ],
+						"effect_index" : [ 0 ]
+					}
+,
+					"text" : "autopattr",
+					"varname" : "u182006183"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
+					"id" : "obj-4",
+					"maxclass" : "number",
 					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 181.0, 12.0, 56.0, 22.0 ],
-					"restore" : 					{
-						"active" : [ 0 ]
-					}
-,
-					"text" : "autopattr",
-					"varname" : "u689006150"
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 91.0, 27.0, 50.0, 22.0 ],
+					"varname" : "effect_index"
 				}
 
 			}
@@ -76,7 +77,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 19.333333333333343, 128.0, 57.666666666666657, 34.0 ],
+					"patching_rect" : [ 19.333333333333343, 99.0, 37.666666666666657, 34.0 ],
 					"varname" : "active"
 				}
 
@@ -88,7 +89,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 115.0, 94.0, 122.0, 22.0 ],
+					"patching_rect" : [ 91.0, 88.0, 122.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_effect_slot.js",
 						"parameter_enable" : 0
@@ -120,7 +121,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 58.0, 12.0, 30.0, 30.0 ],
+					"patching_rect" : [ 38.0, 19.0, 30.0, 30.0 ],
 					"varname" : "midi_in"
 				}
 

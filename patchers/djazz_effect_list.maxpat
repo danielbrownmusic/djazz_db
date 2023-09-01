@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2145.0, 188.0, 792.0, 670.0 ],
+		"rect" : [ -1594.0, 277.0, 423.0, 447.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,25 +40,12 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "",
-					"id" : "obj-12",
-					"index" : 3,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 439.0, 17.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-8",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 505.0, 17.0, 56.0, 22.0 ],
+					"patching_rect" : [ 169.0, 25.0, 56.0, 22.0 ],
 					"restore" : 					{
 						"slot_count" : [ 0 ]
 					}
@@ -76,20 +63,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 439.0, 163.0, 50.0, 22.0 ],
+					"patching_rect" : [ 103.0, 25.0, 50.0, 22.0 ],
 					"varname" : "slot_count"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-39",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 439.0, 115.0, 122.0, 22.0 ],
-					"text" : "route slot_count"
 				}
 
 			}
@@ -100,7 +75,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 439.0, 213.0, 118.0, 22.0 ],
+					"patching_rect" : [ 103.0, 86.0, 118.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_effect_list.js",
 						"parameter_enable" : 0
@@ -113,21 +88,8 @@
 , 			{
 				"box" : 				{
 					"comment" : "",
-					"id" : "obj-3",
-					"index" : 2,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 213.0, 17.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
 					"id" : "obj-2",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -140,7 +102,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-1",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -160,34 +122,21 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-39", 0 ],
-					"source" : [ "obj-12", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"source" : [ "obj-39", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"midpoints" : [ 551.5, 199.0, 448.5, 199.0 ],
-					"source" : [ "obj-39", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-6", 0 ]
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "djazz_effect_list.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -570.0, 622.0, 414.0, 400.0 ],
+		"rect" : [ -1962.0, 292.0, 728.0, 768.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,13 +40,13 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "newobj",
+					"comment" : "to view: output on updates",
+					"id" : "obj-5",
+					"index" : 1,
+					"maxclass" : "outlet",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 90.0, 140.0, 72.0, 22.0 ],
-					"text" : "prepend set"
+					"numoutlets" : 0,
+					"patching_rect" : [ 58.5, 223.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -55,9 +55,9 @@
 					"id" : "obj-6",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 276.0, 182.0, 103.0, 22.0 ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 49.0, 101.0, 103.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_design.js",
 						"parameter_enable" : 0
@@ -69,25 +69,7 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 4,
-					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 146.0, 232.0, 50.5, 22.0 ],
-					"saved_object_attributes" : 					{
-						"embed" : 0,
-						"parameter_enable" : 0,
-						"parameter_mappable" : 0
-					}
-,
-					"text" : "dict"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
+					"comment" : "load dict",
 					"id" : "obj-3",
 					"index" : 2,
 					"maxclass" : "inlet",
@@ -100,19 +82,19 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "to view: full dict every time update is made",
 					"id" : "obj-2",
-					"index" : 1,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 139.0, 350.0, 30.0, 30.0 ]
+					"patching_rect" : [ 165.5, 223.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "change dict entries",
 					"id" : "obj-1",
 					"index" : 1,
 					"maxclass" : "inlet",
@@ -126,14 +108,14 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
+					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
+					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -141,14 +123,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-5", 0 ]
+					"source" : [ "obj-6", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-7", 0 ]
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}

@@ -8,6 +8,106 @@ var effect_slots_ = [];
 var y_obj_  = 22;
 var y_space_ = 22;
 
+var index           = null;
+var value           = [];
+var on_btns         = [];
+var umenus          = [];
+var umenu_listeners = [];
+
+
+function loadbang()
+{
+    index = jsarguments[1];
+}
+
+
+function push()
+{
+    var l       = effect_slots_.length;    
+    var x_on_btn = 0;
+    var y_on_btn = 0;
+
+    var x_umenu = 0;
+    var y_umenu = 0;
+
+    var on_btn    = this.patcher.newdefault(x, y, "led");
+    on_btn.varname = l.toString() + "::active";
+    on_btns.push(on_btn);
+
+    var umenu    = this.patcher.newdefault(x, y, "umenu");
+    umenus.push(umenu);
+    umenu_listeners.push(new MaxobjListener(umenu, on_umenu_selection_made));
+}
+//push.local = 1;
+
+
+function pop()
+{
+    var on_btn = on_btns.pop();
+    this.patcher.remove(on_btn);
+
+    var umenu = umenus.pop();
+    this.patcher.remove(umenu);
+
+    var listener = umenu_listeners.pop();
+}
+//pop_back_.local = 1;
+
+
+function on_umenu_selection_made(data)
+{
+    notify_clients();
+}
+
+
+function getvalueof()
+{
+    return ()
+}
+
+
+/* function push_back_()
+{
+    var midi_in   = this.patcher.getnamed("midi_in");
+    var midi_out  = this.patcher.getnamed("midi_out");
+
+    var l       = effect_slots_.length;
+    var x       = midi_in.rect[0];
+    var y       = midi_in.rect[3] + 22 + l * 44;
+
+    var slot    = this.patcher.newdefault(x, y, "djazz_effect_slot");
+    slot.varname = l;
+    var prev    = (l === 0) ? midi_in : effect_slots_[l - 1];
+
+    this.patcher.disconnect (prev, 0, midi_out, 0);
+    this.patcher.connect    (prev, 0, slot, 0);
+    this.patcher.connect    (slot, 0, midi_out, 0);
+
+    effect_slots_.push(slot);
+}
+push_back_.local = 1; */
+
+
+function pop_back_()
+{
+    var effect_slot = effect_slots_.pop();
+    this.patcher.remove(effect_slot);
+
+    var midi_in   = this.patcher.getnamed("midi_in");
+    var midi_out  = this.patcher.getnamed("midi_out");
+
+    var l       = effect_slots_.length;
+    var prev    = (l === 0) ? midi_in : effect_slots_[l - 1];
+
+    this.patcher.connect(prev, 0, midi_out, 0);
+}
+pop_back_.local = 1;
+
+
+
+
+
+
 
 function clear()
 {

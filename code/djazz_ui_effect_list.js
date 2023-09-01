@@ -1,24 +1,35 @@
 autowatch = 1;
 
-var last_slot_listener_ = null;
+var slots_ = []
 
-var effect_slots_ = []
+
+function on_last_slot_changed(data)
+{
+    post("changing - " + data.value);
+    if (data.value !== 0)
+    {
+        push_back_();
+    }
+}
+
+var last_slot_listener_ = new MaxobjListener(null, on_last_slot_changed);
 
 var y_obj_   = 22;
 var y_space_ = 22;
 
 
+function loadbang()
+{
+    set_slot_count(1);
+}
+
+
 function clear()
 {
     set_slot_count(0);
+    var last_slot_listener_ = new MaxobjListener(null, on_last_slot_changed);
 }
 
-
-function set_slot_count(n)
-{
-    set_slot_count_no_output(n);
-    outlet(0, "slot_count", effect_slots_.length);
-}
 
 function msg_int(n)
 {
@@ -26,12 +37,12 @@ function msg_int(n)
 }
 
 
-function set_slot_count_no_output(n)
+function set_slot_count(n)
 {
     if (n < 0)
         return;
 
-    var l = effect_slots_.length;
+    var l = slots_.length;
 
     if (n === l)
         return;
@@ -51,12 +62,12 @@ function set_slot_count_no_output(n)
         }
     }
 
-    update_spray_();
-    update_funnel_();
+/*     update_spray_();
+    update_funnel_(); */
 }
 
 
-function update_spray_()
+/* function update_spray_()
 {
     var spray = this.patcher.getnamed("spray");
     if (spray)
@@ -80,10 +91,10 @@ function update_spray_()
     {
         this.patcher.connect(spray, i, effect_slots_[i], 0);
     }    
-}
+} */
 
 
-function update_funnel_()
+/* function update_funnel_()
 {
     var funnel = this.patcher.getnamed("funnel");
     if (funnel)
@@ -107,7 +118,7 @@ function update_funnel_()
     {
         this.patcher.connect(effect_slots_[i], 0, funnel, i);
     }
-}
+} */
 
 
 // --------------------------------------------------------------------
@@ -116,7 +127,7 @@ function push_back_()
 {
     var slots_panel = this.patcher.getnamed("slots_panel");
 
-    var l   = effect_slots_.length;
+    var l   = slots_.length;
     var x   = slots_panel.rect[0];
     var y   = slots_panel.rect[1] + l * 22;
 
@@ -126,21 +137,26 @@ function push_back_()
                     "@presentation",        1,
                     "@presentation_rect",   [0, l * 22, 128, 22]);
                   
-    effect_slots_.push(slot);
+    last_slot_listener_.maxobject = slot.subpatcher().getnamed("effect_index");
+    slots_.push(slot);
 }
 push_back_.local = 1;
 
 
 function pop_back_()
 {   
-    var effect_slot = effect_slots_.pop();
-    this.patcher.remove(effect_slot);
+    var slot = slots_.pop();
+    this.patcher.remove(slot);
+    if (slots_.length > 0)
+    {
+        last_slot_listener_.maxobject = slots_.slice[-1].subpatcher().getnamed("effect_index");
+    }
 }
 pop_back_.local = 1;
 
 // --------------------------------------------------------------------
 
-function get_x_at_(i)
+/* function get_x_at_(i)
 {   
     return 200;
 }
@@ -152,15 +168,9 @@ function get_y_at_(i)
     return 100 + i * (y_obj_ + y_space_);  
 }
 get_y_at_.local = 1
+ */
 
 
 
 
-function slot_selected(i_menu, i_item)
-{
-    if ((i_menu === count- 1) && (i_item !== 0))
-    {
-        push_back_();
-    }
-}
 

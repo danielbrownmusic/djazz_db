@@ -66,7 +66,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-5",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -78,7 +78,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-2",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -87,41 +87,11 @@
 				}
 
 			}
-, 			{
-				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "led",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"oncolor" : [ 0.964705882352941, 0.384313725490196, 0.105882352941176, 1.0 ],
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 22.0, 130.0, 30.0, 30.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 60.0, 60.0 ],
-					"thickness" : 100.0
-				}
-
-			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-3", 0 ]
 				}
 
 			}
@@ -132,7 +102,9 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [  ],
+		"autosave" : 0
 	}
 
 }
