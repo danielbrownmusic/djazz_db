@@ -53,7 +53,7 @@ function loadbang()
 
 
 	var x_sol 	 = x_esp + w;
-	var y_sol 	 = y_esp + h;
+	var y_sol 	 = y_esp;
 	var solo_mgr = this.patcher.newdefault(x_sol, y_sol, "djazz_solo_manager", n_channels);
 
 	var x_fun 	= x_esp;
@@ -72,9 +72,9 @@ function loadbang()
 		this.patcher.connect(event_spray, i, midi_out,  0);
 /* 		this.patcher.connect(ctrl_spray,  i, midi_out,  1);
 		this.patcher.connect(load_spray,  i, midi_out,  3);	 */	
-
+/* 
 		this.patcher.connect(midi_out, 	  1, solo_mgr,  0);
-		this.patcher.connect(solo_mgr, 	  0, midi_out,  2);
+		this.patcher.connect(solo_mgr, 	  0, midi_out,  2); */
 
 		this.patcher.connect(midi_out, 	  0, funnel, 	i);     
 	}

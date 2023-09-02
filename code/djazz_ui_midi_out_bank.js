@@ -62,11 +62,12 @@ function loadbang()
 		var y_pres = 0;
 		var midi_out = this.patcher.newdefault(x, y, 
 											"bpatcher", 
-											"@name", "djazz_ui_midi_out", 
+											"@name", "djazz_ui_midi_out_channel", 
 											"@args", channel,
 											"@patching_rect", [x, y, 128, 216],
 											"@presentation", 1,
 											"@presentation_rect", [x_pres, y_pres, 128, 216]);
+		midi_out.varname = channel;
 		/* this.patcher.connect(spray,    i, midi_out, 0);
 		this.patcher.connect(midi_out, 0, funnel, 	i); */
 	}

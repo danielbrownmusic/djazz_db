@@ -1,6 +1,5 @@
 autowatch = 1;
 
-outlets = 2;
 
 /*
 midi_out
@@ -22,39 +21,7 @@ midi_out
 */
 
 
-/*
-0: effect_0, effect_1, ...
-1: ...
-...
-*/
-
-var effect_names    = ["", "djazz_add_octaves", "djazz_pitch_shift"];
-
 var ddd = new Dict("*DESIGN*"); // Djazz Design Dictionary
-ddd.replace("effects", effect_names);
-
-
-function set_effect(i_channel, i_slot, i_effect)
-{
-    if (i_slot > ddd.get_size)
-        return; //error
-    if (i_slot === ddd.getsize(i_channel))
-    {
-        ddd.append(i_channel, i_effect);
-    }
-    else
-    {
-        ddd.set(i_channel[i_slot], i_effect);
-    }
-    var effect_name = ddd.get("effects"[i_effect]);
-    output(0, [i_channel, i_slot, effect_name])
-    output(1, ddd);
-}
-
-
-
-
-
 
 function loadbang()
 {

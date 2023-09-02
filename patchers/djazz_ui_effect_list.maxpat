@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1604.0, -102.0, 325.0, 255.0 ],
+		"rect" : [ 34.0, 100.0, 325.0, 255.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -104,6 +104,7 @@
 					"patching_rect" : [ 1.0, 0.0, 128.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 128.0, 22.0 ],
+					"varname" : "djazz_ui_effect_slot",
 					"viewvisibility" : 1
 				}
 
@@ -124,6 +125,29 @@
 					"presentation_rect" : [ 0.0, 0.0, 128.0, 236.0 ],
 					"proportion" : 0.5,
 					"varname" : "slots_panel"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-3",
+					"lockeddragscroll" : 0,
+					"lockedsize" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "djazz_ui_effect_slot.maxpat",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ 1.0, 0.0, 128.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 0.0, 128.0, 22.0 ],
+					"varname" : "djazz_ui_effect_slot[1]",
+					"viewvisibility" : 1
 				}
 
 			}
@@ -152,13 +176,6 @@
 			}
 , 			{
 				"name" : "djazz_ui_effect_list.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_ui_effect_slot.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
