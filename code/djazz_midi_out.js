@@ -19,7 +19,7 @@ function make()
 
         var bank = this.patcher.newdefault(x, y, "djazz_midi_out_bank", min_channel, max_channel);
         bank.varname = i_bank;
-        post ("made bank", bank.varname)
+        post ("made model bank ", bank.varname, "\n")
 
         this.patcher.connect(inl, 0, bank, 0);
         this.patcher.connect(bank, 0, outl, 0);

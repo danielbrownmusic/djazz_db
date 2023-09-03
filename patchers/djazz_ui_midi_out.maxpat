@@ -45,7 +45,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 20.0, 135.666666666666686, 85.0, 22.0 ],
+					"patching_rect" : [ 22.0, 74.333333333333343, 85.0, 22.0 ],
 					"text" : "prepend make"
 				}
 
@@ -57,20 +57,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 20.0, 74.333333333333343, 72.0, 22.0 ],
+					"patching_rect" : [ 22.0, 13.0, 72.0, 22.0 ],
 					"text" : "patcherargs"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 20.0, 13.0, 58.0, 22.0 ],
-					"text" : "loadbang"
 				}
 
 			}
@@ -81,7 +69,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 20.0, 197.000000000000028, 129.0, 22.0 ],
+					"patching_rect" : [ 22.0, 135.666666666666686, 129.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_ui_midi_out.js",
 						"parameter_enable" : 0
@@ -98,7 +86,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 117.0, 13.0, 56.0, 22.0 ],
+					"patching_rect" : [ 150.0, 13.0, 56.0, 22.0 ],
 					"text" : "autopattr",
 					"varname" : "u681022515"
 				}
@@ -106,13 +94,6 @@
 			}
  ],
 		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-6", 0 ]

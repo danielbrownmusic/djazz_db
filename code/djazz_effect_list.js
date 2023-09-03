@@ -3,19 +3,19 @@ autowatch = 1;
 var slots_ = [];
 
 
-function loadbang()
+/* function loadbang()
 {
     set_slot_count(0);
-}
+} */
+
+
+/* function msg_int(n)
+{
+    set_slot_count(n);
+} */
 
 
 function msg_int(n)
-{
-    set_slot_count(n);
-}
-
-
-function set_slot_count(n)
 {
     if (n < 0)
         return;
@@ -47,6 +47,7 @@ function set_slot_count(n)
 
 function push_back_()
 {
+    post ("pushing back in ui  ");
     var midi_in   = this.patcher.getnamed("midi_in");
     var midi_out  = this.patcher.getnamed("midi_out");
 
@@ -63,6 +64,7 @@ function push_back_()
     this.patcher.connect    (slot, 0, midi_out, 0);
 
     slots_.push(slot);
+    post ("pushed back in ui  \n");
 }
 push_back_.local = 1;
 
@@ -81,6 +83,7 @@ function pop_back_()
     this.patcher.connect(prev, 0, midi_out, 0);
 }
 pop_back_.local = 1;
+
 /* 
 
 function update_spray_()
