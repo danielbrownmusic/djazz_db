@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1936.0, -98.0, 277.0, 233.0 ],
+		"rect" : [ 34.0, 100.0, 405.0, 344.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,25 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "load effect list umenus",
+					"id" : "obj-2",
+					"index" : 0,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 150.0, 11.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-7",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 189.0, 15.0, 56.0, 22.0 ],
+					"patching_rect" : [ 195.0, 11.0, 56.0, 22.0 ],
 					"restore" : 					{
 						"mute" : [ 0 ],
 						"solo" : [ 0 ]
@@ -116,10 +129,10 @@
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "djazz_ui_effect_list.maxpat",
-					"numinlets" : 0,
+					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 2.0, 104.0, 130.0, 96.0 ],
+					"patching_rect" : [ 2.0, 137.0, 130.0, 96.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 86.0, 128.0, 128.0 ],
 					"varname" : "effects",
@@ -128,7 +141,29 @@
 
 			}
  ],
-		"lines" : [  ],
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"midpoints" : [ 159.5, 114.5, 11.5, 114.5 ],
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+ ],
+		"parameters" : 		{
+			"obj-4::obj-9" : [ "slot_count", "slot_count", 0 ],
+			"parameterbanks" : 			{
+				"0" : 				{
+					"index" : 0,
+					"name" : "",
+					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+				}
+
+			}
+,
+			"inherited_shortname" : 1
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "djazz_set_umenu_bgfillcolor.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
@@ -155,13 +190,6 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_ui_effect_slot.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{

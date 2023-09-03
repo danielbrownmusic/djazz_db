@@ -40,12 +40,25 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "load effect slot umenus",
+					"id" : "obj-5",
+					"index" : 0,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 160.0, 15.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-3",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 158.0, 33.0, 70.0, 22.0 ],
+					"patching_rect" : [ 208.0, 15.0, 70.0, 22.0 ],
 					"text" : "loadmess 1"
 				}
 
@@ -57,7 +70,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 244.0, 91.0, 56.0, 22.0 ],
+					"patching_rect" : [ 306.0, 15.0, 56.0, 22.0 ],
 					"restore" : 					{
 						"slot_count" : [ 1 ]
 					}
@@ -77,13 +90,13 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 158.0, 76.0, 50.0, 22.0 ],
+					"patching_rect" : [ 208.0, 58.0, 50.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_initial" : [ 1.0 ],
 							"parameter_initial_enable" : 1,
 							"parameter_linknames" : 1,
-							"parameter_longname" : "slot_count[7]",
+							"parameter_longname" : "slot_count",
 							"parameter_shortname" : "slot_count",
 							"parameter_type" : 1,
 							"parameter_unitstyle" : 0
@@ -102,7 +115,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 158.0, 128.0, 134.0, 22.0 ],
+					"patching_rect" : [ 160.0, 118.0, 134.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_ui_effect_list.js",
 						"parameter_enable" : 0
@@ -132,6 +145,29 @@
 				}
 
 			}
+, 			{
+				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-2",
+					"lockeddragscroll" : 0,
+					"lockedsize" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "djazz_ui_effect_slot.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ 1.0, 0.0, 128.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 0.0, 128.0, 22.0 ],
+					"varname" : "0",
+					"viewvisibility" : 1
+				}
+
+			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -143,11 +179,62 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-30", 0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-30", 0 ],
 					"source" : [ "obj-9", 0 ]
 				}
 
 			}
- ]
+ ],
+		"parameters" : 		{
+			"obj-9" : [ "slot_count", "slot_count", 0 ],
+			"parameterbanks" : 			{
+				"0" : 				{
+					"index" : 0,
+					"name" : "",
+					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+				}
+
+			}
+,
+			"inherited_shortname" : 1
+		}
+,
+		"dependency_cache" : [ 			{
+				"name" : "djazz_set_umenu_bgfillcolor.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_ui_effect_bypass.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_ui_effect_list.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_ui_effect_slot.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }

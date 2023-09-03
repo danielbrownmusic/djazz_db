@@ -40,12 +40,50 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 81.0, 214.0, 41.0, 22.0 ],
+					"text" : "set $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 81.0, 171.0, 50.0, 22.0 ],
+					"varname" : "effect_index"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "messages to umenu ",
+					"id" : "obj-5",
+					"index" : 1,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 268.0, 36.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-6",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 242.0, 72.0, 160.0, 22.0 ],
+					"patching_rect" : [ 329.0, 73.0, 160.0, 22.0 ],
 					"text" : "dictionary *EFFECTS*, set 0"
 				}
 
@@ -57,7 +95,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 164.0, 35.0, 56.0, 22.0 ],
+					"patching_rect" : [ 185.0, 36.0, 56.0, 22.0 ],
 					"restore" : 					{
 						"effect_index" : [ 0 ]
 					}
@@ -74,7 +112,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 242.0, 31.0, 58.0, 22.0 ],
+					"patching_rect" : [ 329.0, 32.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -95,10 +133,9 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 25.0, 120.0, 100.0, 22.0 ],
+					"patching_rect" : [ 81.0, 126.0, 100.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 26.0, 1.0, 100.0, 22.0 ],
-					"varname" : "effect_index"
+					"presentation_rect" : [ 26.0, 1.0, 100.0, 22.0 ]
 				}
 
 			}
@@ -109,7 +146,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 72.0, 160.0, 22.0 ],
+					"patching_rect" : [ 81.0, 73.0, 160.0, 22.0 ],
 					"text" : "djazz_set_umenu_bgfillcolor"
 				}
 
@@ -130,7 +167,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 25.0, 22.0, 23.0, 24.0 ],
+					"patching_rect" : [ 81.0, 23.0, 23.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 1.0, 1.0, 23.0, 24.0 ],
 					"varname" : "active",
@@ -149,7 +186,22 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
+					"midpoints" : [ 90.5, 245.0, 62.0, 245.0, 62.0, 112.0, 90.5, 112.0 ],
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-3", 0 ]
 				}
 
 			}
@@ -163,40 +215,19 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
-					"source" : [ "obj-6", 0 ]
+					"midpoints" : [ 277.5, 110.5, 90.5, 110.5 ],
+					"source" : [ "obj-5", 0 ]
 				}
 
-			}
- ],
-		"parameters" : 		{
-			"parameterbanks" : 			{
-				"0" : 				{
-					"index" : 0,
-					"name" : "",
-					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-				}
-
-			}
-,
-			"inherited_shortname" : 1
-		}
-,
-		"dependency_cache" : [ 			{
-				"name" : "djazz_set_umenu_bgfillcolor.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_ui_effect_bypass.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
+				"patchline" : 				{
+					"destination" : [ "obj-11", 0 ],
+					"source" : [ "obj-8", 0 ]
+				}
+
 			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

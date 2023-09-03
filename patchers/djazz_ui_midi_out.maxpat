@@ -40,6 +40,19 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "load stuff",
+					"id" : "obj-3",
+					"index" : 1,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 132.0, 13.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-7",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -66,7 +79,7 @@
 				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 22.0, 135.666666666666686, 129.0, 22.0 ],
@@ -86,7 +99,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 150.0, 13.0, 56.0, 22.0 ],
+					"patching_rect" : [ 260.0, 13.0, 56.0, 22.0 ],
 					"text" : "autopattr",
 					"varname" : "u681022515"
 				}
@@ -94,6 +107,13 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 1 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-6", 0 ]
@@ -107,16 +127,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_ui_midi_out.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

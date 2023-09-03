@@ -40,12 +40,38 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "loading from files",
+					"id" : "obj-3",
+					"index" : 0,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 190.0, 14.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-2",
+					"index" : 0,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 14.0, 14.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 230.0, 14.0, 56.0, 22.0 ],
+					"patching_rect" : [ 87.0, 18.0, 56.0, 22.0 ],
 					"text" : "autopattr",
 					"varname" : "u881009636"
 				}
@@ -58,20 +84,27 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 13.0, 14.0, 195.0, 22.0 ],
+					"patching_rect" : [ 14.0, 55.0, 233.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_ui_midi_out_bank.js",
+						"filename" : "djazz_ui_midi_out_bank_layout.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_ui_midi_out_bank.js #1 #2"
+					"text" : "js djazz_ui_midi_out_bank_layout.js #1 #2"
 				}
 
 			}
  ],
-		"lines" : [  ],
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-308", 0 ],
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+ ],
 		"dependency_cache" : [ 			{
-				"name" : "djazz_ui_midi_out_bank.js",
+				"name" : "djazz_ui_midi_out_bank_layout.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",

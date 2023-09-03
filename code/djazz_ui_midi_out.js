@@ -1,5 +1,6 @@
 autowatch = 1;
 
+inlets = 2;
 
 function make()
 {
