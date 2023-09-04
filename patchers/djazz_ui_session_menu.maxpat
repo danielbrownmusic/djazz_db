@@ -47,24 +47,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 19.0, 111.0, 136.0, 49.0 ],
-					"presentation_linecount" : 3,
 					"text" : "clear, append Session, append Open Session, append Save Session"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontsize" : 16.0,
-					"id" : "obj-68",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 155.0, 284.0, 115.0, 26.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 179.0, 0.0, 115.0, 26.0 ],
-					"style" : "dj finished message",
-					"text" : "storagewindow"
 				}
 
 			}
@@ -100,8 +83,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 19.0, 286.0, 33.0, 22.0 ],
-					"text" : "read"
+					"patching_rect" : [ 19.0, 286.0, 31.0, 22.0 ],
+					"text" : "load"
 				}
 
 			}
@@ -114,7 +97,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 61.5, 286.0, 34.0, 22.0 ],
-					"text" : "write"
+					"text" : "save"
 				}
 
 			}
@@ -185,13 +168,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-117", 0 ],
 					"source" : [ "obj-6", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"source" : [ "obj-68", 0 ]
 				}
 
 			}

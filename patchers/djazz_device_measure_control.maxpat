@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 322.0, 677.0, 604.0 ],
+		"rect" : [ -2173.0, 536.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -36,18 +36,17 @@
 		"digest" : "",
 		"tags" : "",
 		"style" : "",
-		"subpatcher_template" : "",
+		"subpatcher_template" : "empty_in_out",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-10",
-					"maxclass" : "newobj",
+					"comment" : "",
+					"id" : "obj-4",
+					"index" : 2,
+					"maxclass" : "outlet",
 					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 240.0, 17.0, 56.0, 22.0 ],
-					"text" : "autopattr",
-					"varname" : "#1"
+					"numoutlets" : 0,
+					"patching_rect" : [ 397.0, 240.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -55,57 +54,42 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-3",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 34.0, 119.0, 30.0, 30.0 ],
-					"varname" : "event_inlet"
+					"patching_rect" : [ 397.0, 133.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"comment" : "",
-					"id" : "obj-13",
-					"index" : 0,
+					"id" : "obj-2",
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 34.0, 530.0, 30.0, 30.0 ],
-					"varname" : "outlet"
+					"patching_rect" : [ 382.0, 225.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-308",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"comment" : "",
+					"id" : "obj-1",
+					"index" : 1,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 19.0, 17.0, 217.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"filename" : "djazz_midi_out_bank_layout.js",
-						"parameter_enable" : 0
-					}
-,
-					"text" : "js djazz_midi_out_bank_layout.js #1 #2"
+					"patching_rect" : [ 382.0, 118.0, 30.0, 30.0 ]
 				}
 
 			}
  ],
-		"lines" : [  ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_midi_out_bank_layout.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+		"lines" : [  ]
 	}
 
 }

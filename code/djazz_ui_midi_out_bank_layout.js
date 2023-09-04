@@ -7,8 +7,9 @@ var h = 48;
 
 function loadbang()
 {
-    var min_channel = jsarguments[1];
-    var max_channel = jsarguments[2];
+	var name 		= jsarguments[1];
+    var min_channel = jsarguments[2];
+    var max_channel = jsarguments[3];
 
 	post ("in djazz_ui_midi_bank_layout.js \n");
 	post (min_channel, max_channel, "\n");
