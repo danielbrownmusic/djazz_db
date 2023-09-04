@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 247.0, 659.0, 1106.0, 424.0 ],
+		"rect" : [ -1631.0, -93.0, 1093.0, 479.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 140.0, 97.0, 53.0, 22.0 ],
+					"text" : "pattrhub"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-3",
 					"maxclass" : "message",
@@ -70,8 +82,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 234.0, 88.0, 92.0, 22.0 ],
-					"text" : "autopattr model",
+					"patching_rect" : [ 227.0, 97.0, 56.0, 22.0 ],
+					"text" : "autopattr",
 					"varname" : "model"
 				}
 
@@ -85,7 +97,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 234.0, 28.0, 30.0, 30.0 ]
+					"patching_rect" : [ 140.0, 28.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -98,10 +110,10 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 234.0, 395.0, 197.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 1354, 652, 1712, 1042 ],
+						"client_rect" : [ 460, 102, 846, 1148 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
-						"storage_rect" : [ 583, 69, 1034, 197 ]
+						"storage_rect" : [ -1489, 4, -1038, 132 ]
 					}
 ,
 					"text" : "pattrstorage model @outputmode 1",
@@ -192,7 +204,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -587,7 +599,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
+					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-9", 0 ]
 				}
 
