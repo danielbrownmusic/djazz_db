@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 276.0, 766.0, 237.0, 108.0 ],
+		"rect" : [ -2041.0, 111.0, 694.0, 428.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,18 +45,20 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 16.0, 14.0, 159.0, 22.0 ],
+					"patching_rect" : [ 16.0, 14.0, 189.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_solo_manager.js",
+						"filename" : "djazz_solo_manager_impl.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_solo_manager.js #1"
+					"text" : "js djazz_solo_manager_impl.js #1"
 				}
 
 			}
  ],
-		"lines" : [  ]
+		"lines" : [  ],
+		"dependency_cache" : [  ],
+		"autosave" : 0
 	}
 
 }
