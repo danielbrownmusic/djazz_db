@@ -1,64 +1,9 @@
 autowatch = 1;
 
+outlets = 2;
 
-function bang()
-{
-    make_cell_matrix(jsarguments[1], jsarguments[2]);
-}
-
-
-
-function make_cell_matrix(i_max, j_max)
-{
-    var cells       = Array(i_max);
-    var listeners   = Array(i_max);
-
-    var connect_to = this.patcher.getnamed("selected_cell");
-
-    for (var i = 0; i < i_max; i++)
-    {
-        cells[i]        = Array(j_max);
-        listeners[i]    = Array(j_max);
-
-        for (var j = 0; j < j_max; j++)
-        {
-            var w = 44;
-            var h = 44;
-
-            var x_start = 40;
-            var y_start = 40;
-
-            var x = x_start + i * w;
-            var y = y_start + j * h;
-            
-            var n    = coords_to_cell_number(i, j);
-
-            var cell        = this.patcher.newdefault
-            (
-                x, y, 
-                "textbutton"        ,
-                "@text"             ,   n,
-                "@texton"           ,   n,
-                "@mode"             ,   1,
-                "@patching_rect"    ,   [x, y, w, h],
-                "@presentation"     ,   1,
-                "@presentation_rect",   [x, y, w, h],
-                "@usebgoncolor"     ,   1
-            );
-            cell.varname = n;
-            this.patcher.connect(cell, 1, connect_to, 0);
-        }
-    }
-}
-
-
-function coords_to_cell_number(i, j)
-{
-    return 81 - (j * 10) + i;
-} 
-
-
-var color_dict = new Dict ("*LAUNCHPAD_PRO_MK3_COLORS*");
+var mk3_dict    = new Dict ("*LAUNCHPAD_MK3_PRO_VIEW*");
+var color_dict  = new Dict ("*LAUNCHPAD_PRO_MK3_COLORS*");
 
 color_dict.replace("red::mk3", 5);
 color_dict.replace("red::max", [255, 0, 0]);
@@ -116,7 +61,7 @@ function make_color_picker()
 }
 
 
-var mk3_dict = new Dict ("*LAUNCHPAD_MK3_PRO_VIEW*");
+
 for (var i = 1; i < 5; i++)
 {
     for (var j = 1; j < 10; j++)
@@ -152,4 +97,5 @@ function set_color(midi_number, ctrl, color)
     var max_color = color_dict.get([color, "max"].join("::"));
     cell.setattr(attr, max_color);
     outlet(0, "bang");
+    outlet(1, )
 }
