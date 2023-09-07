@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2969.0, -65.0, 1076.0, 1125.0 ],
+		"rect" : [ -2492.0, -89.0, 1784.0, 1133.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,28 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1379.0, 2161.0, 59.0, 22.0 ],
+					"text" : "print view"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1485.0, 2018.0, 51.0, 22.0 ],
+					"text" : "print ctrl"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-86",
 					"maxclass" : "message",
@@ -368,7 +390,7 @@
 				"box" : 				{
 					"id" : "obj-84",
 					"maxclass" : "newobj",
-					"numinlets" : 3,
+					"numinlets" : 4,
 					"numoutlets" : 2,
 					"outlettype" : [ "list", "" ],
 					"patching_rect" : [ 504.318572225851312, 1950.763851143302873, 859.333344101905823, 22.0 ],
@@ -3440,8 +3462,17 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"order" : 0,
+					"source" : [ "obj-109", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-84", 1 ],
 					"midpoints" : [ 1353.818572225851312, 1909.73682083844642, 933.985244276804224, 1909.73682083844642 ],
+					"order" : 1,
 					"source" : [ "obj-109", 1 ]
 				}
 
@@ -3820,7 +3851,7 @@
 				"patchline" : 				{
 					"color" : [ 0.595981121063232, 0.71068662405014, 0.792471170425415, 1.0 ],
 					"destination" : [ "obj-76", 0 ],
-					"order" : 1,
+					"order" : 2,
 					"source" : [ "obj-78", 0 ]
 				}
 
@@ -3829,7 +3860,7 @@
 				"patchline" : 				{
 					"color" : [ 0.595981121063232, 0.71068662405014, 0.792471170425415, 1.0 ],
 					"destination" : [ "obj-79", 0 ],
-					"order" : 2,
+					"order" : 1,
 					"source" : [ "obj-78", 0 ]
 				}
 
@@ -3876,7 +3907,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-109", 0 ],
 					"midpoints" : [ 1354.151916327757135, 2019.0, 443.0, 2019.0, 443.0, 1397.0, 513.818572225851312, 1397.0 ],
-					"order" : 1,
+					"order" : 2,
 					"source" : [ "obj-84", 1 ]
 				}
 
@@ -3884,6 +3915,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-67", 0 ],
+					"order" : 1,
+					"source" : [ "obj-84", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
 					"order" : 0,
 					"source" : [ "obj-84", 1 ]
 				}
@@ -3891,7 +3930,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-84", 2 ],
+					"destination" : [ "obj-84", 3 ],
 					"source" : [ "obj-86", 0 ]
 				}
 
@@ -4600,13 +4639,6 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "test_djazz_preset_file.blahblah.json",
-				"bootpath" : "~/Desktop",
-				"patcherrelativepath" : "../../../../../Desktop",
-				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{

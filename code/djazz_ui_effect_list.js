@@ -94,6 +94,25 @@ function set_slot_count(n)
 
 function set_listeners_()
 {
+
+    last_slot_listener_ =
+        (slots_.length > 0) ?
+        new MaxobjListener
+        (
+            slots_.slice(-1)[0].subpatcher().getnamed("effect_index"), 
+            on_last_slot_changed
+        ) :
+        null;
+
+    next_to_last_slot_listener_ =
+        (slots_.length > 1) ?
+        new MaxobjListener
+        (
+            slots_.slice(-2)[0].subpatcher().getnamed("effect_index"), 
+            on_next_to_last_slot_changed
+        ) :
+        null;
+
 /*     last_slot_listener_.maxobject = (slots_.length > 0) ?
         null;
     
@@ -115,25 +134,6 @@ function set_listeners_()
         last_slot_listener_ = null;
     } */
 
-    last_slot_listener_ =
-        (slots_.length > 0) ?
-        new MaxobjListener
-        (
-            slots_.slice(-1)[0].subpatcher().getnamed("effect_index"), 
-            on_last_slot_changed
-        ) :
-        null;
-
-    next_to_last_slot_listener_ =
-        (slots_.length > 1) ?
-        new MaxobjListener
-        (
-            slots_.slice(-2)[0].subpatcher().getnamed("effect_index"), 
-            on_next_to_last_slot_changed
-        ) :
-        null;
-
-
 
 /*     if (slots_.length > 1)
     {
@@ -142,8 +142,6 @@ function set_listeners_()
     }   */
 
 }
-
-
 set_listeners_.local = 1;
 
 

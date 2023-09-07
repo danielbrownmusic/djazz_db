@@ -72,7 +72,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 306.0, 15.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"slot_count" : [ 0 ]
+						"slot_count" : [ 1 ]
 					}
 ,
 					"text" : "autopattr",
