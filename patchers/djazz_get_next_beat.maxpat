@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1485.0, 421.0, 460.0, 467.0 ],
+		"rect" : [ -1651.0, 563.0, 460.0, 467.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -54,12 +54,12 @@
 				"box" : 				{
 					"comment" : "(int) sets next beat number with no output",
 					"id" : "obj-1",
-					"index" : 2,
+					"index" : 3,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 99.0, 10.0, 30.0, 30.0 ]
+					"patching_rect" : [ 168.0, 10.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -166,12 +166,12 @@
 				"box" : 				{
 					"comment" : "1: loop chapter; 0: don't",
 					"id" : "obj-206",
-					"index" : 3,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 160.333333666666647, 10.0, 30.0, 30.0 ]
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 99.0, 10.0, 30.0, 30.0 ]
 				}
 
 			}

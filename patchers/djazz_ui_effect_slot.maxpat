@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 134.0, 172.0, 602.0, 659.0 ],
+		"rect" : [ -1981.0, 164.0, 602.0, 659.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,21 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-12",
+					"maxclass" : "led",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 81.0, 32.0, 24.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 0.0, 24.0, 24.0 ],
+					"varname" : "active"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-11",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -67,7 +82,7 @@
 				"box" : 				{
 					"comment" : "messages to umenu ",
 					"id" : "obj-5",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -97,6 +112,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 185.0, 36.0, 56.0, 22.0 ],
 					"restore" : 					{
+						"active" : [ 0 ],
 						"effect_index" : [ 0 ]
 					}
 ,
@@ -151,30 +167,6 @@
 				}
 
 			}
-, 			{
-				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-4",
-					"lockeddragscroll" : 0,
-					"lockedsize" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "djazz_ui_effect_bypass.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 81.0, 23.0, 23.0, 24.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 1.0, 1.0, 23.0, 24.0 ],
-					"varname" : "active",
-					"viewvisibility" : 1
-				}
-
-			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -188,6 +180,13 @@
 					"destination" : [ "obj-3", 0 ],
 					"midpoints" : [ 90.5, 245.0, 62.0, 245.0, 62.0, 112.0, 90.5, 112.0 ],
 					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-12", 0 ]
 				}
 
 			}
@@ -207,13 +206,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"midpoints" : [ 277.5, 110.5, 90.5, 110.5 ],
 					"source" : [ "obj-5", 0 ]
@@ -227,7 +219,16 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "djazz_set_umenu_bgfillcolor.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }

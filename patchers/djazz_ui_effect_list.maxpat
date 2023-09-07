@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 100.0, 545.0, 427.0 ],
+		"rect" : [ -2472.0, 288.0, 545.0, 427.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -72,7 +72,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 306.0, 15.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"slot_count" : [ 1 ]
+						"slot_count" : [ 0 ]
 					}
 ,
 					"text" : "autopattr",
@@ -121,8 +121,7 @@
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_ui_effect_list.js",
-					"varname" : "mgr"
+					"text" : "js djazz_ui_effect_list.js"
 				}
 
 			}

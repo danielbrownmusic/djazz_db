@@ -94,7 +94,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 226.0, 167.243811956346462, 121.0, 22.0 ],
+					"patching_rect" : [ 226.0, 167.243811956346462, 73.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 529, 92, 1092, 1108 ],
 						"parameter_enable" : 0,
@@ -102,8 +102,8 @@
 						"storage_rect" : [ 583, 69, 1034, 197 ]
 					}
 ,
-					"text" : "pattrstorage midi_out",
-					"varname" : "midi_out"
+					"text" : "pattrstorage",
+					"varname" : "u616000464"
 				}
 
 			}

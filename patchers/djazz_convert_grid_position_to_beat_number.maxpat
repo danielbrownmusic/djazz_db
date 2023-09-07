@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1594.0, 277.0, 423.0, 447.0 ],
+		"rect" : [ -1654.0, 168.0, 640.0, 649.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -36,100 +36,87 @@
 		"digest" : "",
 		"tags" : "",
 		"style" : "",
-		"subpatcher_template" : "",
+		"subpatcher_template" : "empty_in_out",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-8",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 286.0, 17.0, 56.0, 22.0 ],
-					"restore" : 					{
-						"slot_count" : [ 0 ]
-					}
-,
-					"text" : "autopattr",
-					"varname" : "u227006007"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-6",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 220.0, 17.0, 50.0, 22.0 ],
-					"varname" : "slot_count"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 220.0, 78.0, 118.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"filename" : "djazz_effect_list.js",
-						"parameter_enable" : 0
-					}
-,
-					"text" : "js djazz_effect_list.js"
+					"patching_rect" : [ 49.0, 102.0, 217.0, 22.0 ],
+					"text" : "prepend convert_grid_position_to_beat"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"comment" : "",
-					"id" : "obj-2",
+					"id" : "obj-9",
 					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 25.0, 371.0, 30.0, 30.0 ],
-					"varname" : "midi_out"
+					"patching_rect" : [ 49.0, 212.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 49.0, 162.0, 161.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"filename" : "navigate_database_mgr.js",
+						"parameter_enable" : 0
+					}
+,
+					"text" : "js navigate_database_mgr.js"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"comment" : "",
-					"id" : "obj-1",
+					"id" : "obj-4",
 					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 17.0, 30.0, 30.0 ],
-					"varname" : "midi_in"
+					"patching_rect" : [ 49.0, 32.0, 30.0, 30.0 ]
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-1", 0 ]
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"source" : [ "obj-6", 0 ]
+					"destination" : [ "obj-9", 0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-8", 0 ]
 				}
 
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "djazz_effect_list.js",
+				"name" : "navigate_database_mgr.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",

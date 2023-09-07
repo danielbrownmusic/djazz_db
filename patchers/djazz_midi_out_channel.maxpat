@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 276.0, 257.0, 357.0 ],
+		"rect" : [ -1990.0, 215.0, 400.0, 471.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -47,7 +47,6 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 125.0, 28.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"active" : [ 0 ],
 						"mute" : [ 0 ],
 						"solo" : [ 0 ]
 					}
@@ -100,7 +99,7 @@
 				"box" : 				{
 					"comment" : "messages: event, solo, effect",
 					"id" : "obj-8",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -113,7 +112,7 @@
 				"box" : 				{
 					"comment" : "midi events",
 					"id" : "obj-5",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -136,6 +135,13 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-10", 1 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-3", 0 ]
@@ -163,23 +169,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_effect_list.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_effect_list.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }
