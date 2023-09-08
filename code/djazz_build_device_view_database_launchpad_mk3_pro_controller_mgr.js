@@ -1,5 +1,20 @@
 autowatch = 1;
 
+var cell_max = 100;
+
+function msg_int(n)
+{
+    for (var i = 0; i < cell_max; i++)
+    {
+        var cell = this.patcher.getnamed(i);
+        if (cell)
+        {
+            cell.message("set", i === n ? 1 : 0);            
+        }
+    }
+}
+
+
 function set_cell_color(midi_number, ctrl, color)
 {}
 
