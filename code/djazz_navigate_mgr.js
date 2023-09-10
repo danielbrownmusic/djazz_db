@@ -1,7 +1,7 @@
 autowatch = 1;
 
 
-function get_beat_data(database_name, beat_number)
+function get_grid_position(database_name, beat_number)
 {
     var d           = new Dict(database_name);
     var chapter     = d.get("beats").get(beat_number).get("chapter");
@@ -9,7 +9,7 @@ function get_beat_data(database_name, beat_number)
     var position    = d.get("beats").get(beat_number).get("position"); 
 
     d.freepeer();
-    outlet (0, [beat_number, chapter, measure, position]);
+    outlet (0, [position, measure, chapter]);
 }
 
 
@@ -24,7 +24,7 @@ function get_chapter_data(database_name, chapter_number)
 
     d.freepeer();
 
-    outlet(0, [chapter_number, min_measure, max_measure, min_beat, max_beat]);
+    outlet(0, [min_measure, max_measure, min_beat, max_beat]);
 
 }
 

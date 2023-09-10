@@ -1,12 +1,5 @@
 autowatch = 1;
 
-
-function loadbang()
-{
-    outlet(0, "tabs", " ");    
-}
-
-
 function list()
 {
     var min_measure = arguments[0];
