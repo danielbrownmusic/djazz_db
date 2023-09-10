@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -49,9 +49,9 @@
 					"outlettype" : [ "bang" ],
 					"outlinecolor" : [ 0.674509803921569, 0.466666666666667, 0.964705882352941, 1.0 ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 36.0, 79.0, 73.0, 73.0 ],
+					"patching_rect" : [ 36.0, 79.0, 25.0, 25.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 7.0, 6.0, 57.0, 57.0 ]
+					"presentation_rect" : [ 7.0, 6.0, 22.0, 22.0 ]
 				}
 
 			}
@@ -98,7 +98,7 @@
  ],
 		"dependency_cache" : [  ],
 		"autosave" : 0,
-		"bgcolor" : [ 0.196078431372549, 0.231372549019608, 0.964705882352941, 1.0 ],
+		"bgcolor" : [ 0.329411764705882, 0.349019607843137, 0.76078431372549, 1.0 ],
 		"editing_bgcolor" : [ 0.196078431372549, 0.294117647058824, 1.0, 1.0 ]
 	}
 

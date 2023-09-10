@@ -10,7 +10,7 @@ function anything()
 	while (!f.end) {
 		{
 			post(f.filename);
-			if (f.extension == '.djazz')
+			if (f.extension == '.json')
 			{
 				outlet(0, folder_full_path + '/' + f.filename);
 				return;

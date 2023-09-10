@@ -22,7 +22,7 @@ function make()
         var bank = this.patcher.newdefault(x, y, "bpatcher",
         "@name",                "djazz_ui_midi_out_bank",
         "@args",                min_channel, max_channel,
-        "@patching_rect",       [x, y + 230, w, h],
+        "@patching_rect",       [x, y + 300, w, h],
         "@presentation",        1,
         "@presentation_rect",   [0, y, w, h]);
         bank.varname = i_bank;

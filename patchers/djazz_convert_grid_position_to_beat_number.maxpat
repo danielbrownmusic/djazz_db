@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1654.0, 168.0, 640.0, 649.0 ],
+		"rect" : [ 34.0, 168.0, 640.0, 649.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -54,7 +54,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-9",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -69,13 +69,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 49.0, 162.0, 161.0, 22.0 ],
+					"patching_rect" : [ 49.0, 162.0, 228.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "navigate_database_mgr.js",
+						"filename" : "djazz_convert_grid_position_to_beat.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js navigate_database_mgr.js"
+					"text" : "js djazz_convert_grid_position_to_beat.js"
 				}
 
 			}
@@ -83,7 +83,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-4",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -114,16 +114,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "navigate_database_mgr.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }
