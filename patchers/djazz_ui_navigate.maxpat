@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 375.0, 555.0, 708.0 ],
+		"rect" : [ -2367.0, 67.0, 1215.0, 866.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -116,7 +116,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 690.0, 88.0, 50.0, 22.0 ],
+					"patching_rect" : [ 668.0, 33.0, 50.0, 22.0 ],
 					"varname" : "next_chapter"
 				}
 
@@ -129,7 +129,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 629.0, 88.0, 50.0, 22.0 ],
+					"patching_rect" : [ 607.0, 33.0, 50.0, 22.0 ],
 					"varname" : "next_bar"
 				}
 
@@ -142,7 +142,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 935.0, 86.0, 50.0, 22.0 ],
+					"patching_rect" : [ 913.0, 31.0, 50.0, 22.0 ],
 					"varname" : "next_chapter_max_measure"
 				}
 
@@ -155,7 +155,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 856.0, 86.0, 50.0, 22.0 ],
+					"patching_rect" : [ 834.0, 31.0, 50.0, 22.0 ],
 					"varname" : "next_chapter_min_measure"
 				}
 
@@ -168,8 +168,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 564.0, 88.0, 50.0, 22.0 ],
-					"varname" : "next_beat"
+					"patching_rect" : [ 542.0, 33.0, 50.0, 22.0 ],
+					"varname" : "beat"
 				}
 
 			}
@@ -328,9 +328,9 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 47.0, 158.696428500000025, 74.0, 22.0 ],
 					"restore" : 					{
+						"beat" : [ 0 ],
 						"loop_chapter" : [ 0 ],
 						"next_bar" : [ 0 ],
-						"next_beat" : [ 0 ],
 						"next_chapter" : [ 0 ],
 						"next_chapter_max_measure" : [ 0 ],
 						"next_chapter_min_measure" : [ 0 ],
