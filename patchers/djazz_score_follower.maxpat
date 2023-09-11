@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2655.0, 225.0, 981.0, 612.0 ],
+		"rect" : [ -2655.0, 225.0, 757.0, 612.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -84,7 +84,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-26",
@@ -414,7 +413,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "messages to antescofo: nextbeat, gotobeat, tempo, score",
+					"comment" : "(symbol) full path of score file for antescofo",
 					"id" : "obj-10",
 					"index" : 4,
 					"maxclass" : "inlet",
@@ -427,7 +426,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "messages to antescofo: nextbeat, gotobeat, tempo, score",
+					"comment" : "(float) tempo",
 					"id" : "obj-8",
 					"index" : 3,
 					"maxclass" : "inlet",
@@ -440,7 +439,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "messages to antescofo: nextbeat, gotobeat, tempo, score",
+					"comment" : "(int) sets next beat",
 					"id" : "obj-7",
 					"index" : 2,
 					"maxclass" : "inlet",
@@ -501,7 +500,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "(int int float float float int) event data in antescofo format",
+					"comment" : "(int int float float float int) MIDI event in antescofo format",
 					"id" : "obj-2",
 					"index" : 1,
 					"maxclass" : "outlet",
@@ -548,7 +547,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "messages to antescofo: nextbeat, gotobeat, tempo, score",
+					"comment" : "(bang) triggers next events",
 					"id" : "obj-3",
 					"index" : 1,
 					"maxclass" : "inlet",

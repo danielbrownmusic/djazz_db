@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -57,7 +57,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 205.0, 190.666666666666686, 135.0, 22.0 ],
+					"patching_rect" : [ 205.0, 190.666666666666686, 224.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 4, 44, 358, 172 ],
 						"parameter_enable" : 0,
@@ -65,7 +65,7 @@
 						"storage_rect" : [ 583, 100, 1520, 798 ]
 					}
 ,
-					"text" : "pattrstorage @greedy 1",
+					"text" : "pattrstorage @greedy 1 @outputmode 5",
 					"varname" : "u601005728"
 				}
 

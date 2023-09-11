@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2041.0, 111.0, 694.0, 428.0 ],
+		"rect" : [ -2051.0, 343.0, 694.0, 428.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,19 +45,26 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 16.0, 14.0, 189.0, 22.0 ],
+					"patching_rect" : [ 45.0, 95.0, 187.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_solo_manager_impl.js",
+						"filename" : "djazz_solo_manager_mgr.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_solo_manager_impl.js #1"
+					"text" : "js djazz_solo_manager_mgr.js #1"
 				}
 
 			}
  ],
 		"lines" : [  ],
-		"dependency_cache" : [  ],
+		"dependency_cache" : [ 			{
+				"name" : "djazz_solo_manager_mgr.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+ ],
 		"autosave" : 0
 	}
 

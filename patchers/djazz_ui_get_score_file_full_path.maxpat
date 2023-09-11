@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 781.0, 231.0, 468.0, 385.0 ],
+		"rect" : [ -1866.0, 230.0, 468.0, 385.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -151,7 +151,7 @@
 					"patching_rect" : [ 112.0, 179.0, 208.0, 22.0 ],
 					"prefix" : "~/Documents/Max 8/Projects/djazz_db/data/song_data/AutumnleavesDoMin/grid",
 					"presentation" : 1,
-					"presentation_rect" : [ 12.0, 13.0, 81.0, 22.0 ],
+					"presentation_rect" : [ 1.0, 1.0, 81.0, 22.0 ],
 					"varname" : "umenu"
 				}
 
@@ -167,7 +167,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 206.5, 286.0, 208.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 104.0, 13.0, 289.0, 22.0 ],
+					"presentation_rect" : [ 89.0, 1.0, 206.0, 22.0 ],
 					"varname" : "umenu[1]"
 				}
 
