@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1875.0, 67.0, 640.0, 480.0 ],
+		"rect" : [ 1258.0, 108.0, 431.0, 226.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 314.0, 59.0, 58.0, 22.0 ],
+					"patching_rect" : [ 305.0, 25.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -56,14 +56,14 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-4",
-					"items" : [ "AU DLS Synth 1", ",", "from Max 1", ",", "from Max 2" ],
+					"items" : [ "AU DLS Synth 1", ",", "Launchpad Pro MK3 LPProMK3 MIDI", ",", "Launchpad Pro MK3 LPProMK3 DIN", ",", "Launchpad Pro MK3 LPProMK3 DAW", ",", "from Max 1", ",", "from Max 2" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 327.0, 156.0, 100.0, 23.0 ],
+					"patching_rect" : [ 305.0, 104.0, 100.0, 23.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 4.0, 7.0, 100.0, 23.0 ]
 				}
@@ -78,7 +78,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 327.0, 115.5, 55.0, 23.0 ],
+					"patching_rect" : [ 305.0, 63.5, 55.0, 23.0 ],
 					"text" : "midiinfo"
 				}
 
@@ -91,7 +91,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 248.0, 170.0, 24.0, 24.0 ]
+					"patching_rect" : [ 35.0, 104.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -103,7 +103,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 32.0, 39.0, 100.0, 20.0 ],
+					"patching_rect" : [ 95.0, 56.0, 100.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 118.0, 7.0, 102.0, 23.0 ],
 					"text" : "connect"
@@ -117,7 +117,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 42.0, 170.0, 169.0, 22.0 ],
+					"patching_rect" : [ 95.0, 104.0, 169.0, 22.0 ],
 					"text" : "240 0 32 41 2 14 0 17 0 0 247"
 				}
 
@@ -128,7 +128,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 70.0, 351.0, 47.0, 22.0 ],
+					"patching_rect" : [ 95.0, 162.0, 47.0, 22.0 ],
 					"text" : "midiout"
 				}
 
@@ -141,7 +141,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 248.0, 237.0, 30.0, 30.0 ]
+					"patching_rect" : [ 35.0, 171.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -149,7 +149,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
-					"order" : 0,
+					"order" : 1,
 					"source" : [ "obj-17", 0 ]
 				}
 
@@ -157,7 +157,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
-					"order" : 1,
+					"order" : 0,
 					"source" : [ "obj-17", 0 ]
 				}
 

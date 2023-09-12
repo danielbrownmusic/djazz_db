@@ -8,6 +8,9 @@
 #### Open a new song
 #### Open a saved song
 #### Save a song
+#### Make Djazz song files
+##### Djazz file
+##### Score files
 
 ### MIDI OUT
 #### Save a MIDI out preset
