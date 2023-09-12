@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 59.0, 106.0, 640.0, 480.0 ],
+		"rect" : [ 826.0, 419.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,23 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 70.0, 169.0, 233.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"filename" : "djazz_view_launchpad_pro_mk3_mgr.js",
+						"parameter_enable" : 0
+					}
+,
+					"text" : "js djazz_view_launchpad_pro_mk3_mgr.js"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "",
 					"id" : "obj-3",
 					"index" : 2,
@@ -47,7 +64,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 454.0, 122.0, 30.0, 30.0 ]
+					"patching_rect" : [ 270.0, 74.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -72,7 +89,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 382.0, 118.0, 30.0, 30.0 ]
+					"patching_rect" : [ 69.0, 74.0, 30.0, 30.0 ]
 				}
 
 			}
