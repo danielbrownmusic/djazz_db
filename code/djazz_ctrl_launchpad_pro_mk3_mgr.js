@@ -17,7 +17,7 @@ clear_bars_();
 function list()
 {
     var ctrl_type   = messagename
-    var ctrl_val    = jsarguments[1];
+    var ctrl_val    = arguments[1];
 
     switch (ctrl_type)
     {

@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2050.0, 291.0, 405.0, 462.0 ],
+		"rect" : [ 34.0, 291.0, 432.0, 478.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -122,7 +122,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 217.0, 288.0, 117.0, 22.0 ],
+					"patching_rect" : [ 236.0, 288.0, 117.0, 22.0 ],
 					"text" : "set_chapter_tabs $1"
 				}
 
@@ -134,7 +134,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 217.0, 124.0, 77.0, 22.0 ],
+					"patching_rect" : [ 236.0, 124.0, 77.0, 22.0 ],
 					"text" : "dictionary $1"
 				}
 
@@ -146,7 +146,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 217.0, 232.348214250000069, 152.0, 22.0 ],
+					"patching_rect" : [ 236.0, 232.348214250000069, 152.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0,
@@ -164,7 +164,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 217.0, 176.0, 126.0, 22.0 ],
+					"patching_rect" : [ 236.0, 176.0, 126.0, 22.0 ],
 					"text" : "dict.unpack metadata:"
 				}
 
@@ -176,7 +176,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 217.0, 72.0, 103.0, 22.0 ],
+					"patching_rect" : [ 236.0, 72.0, 103.0, 22.0 ],
 					"text" : "value DATABASE"
 				}
 
@@ -190,7 +190,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "dictionary" ],
-					"patching_rect" : [ 217.0, 12.0, 30.0, 30.0 ]
+					"patching_rect" : [ 236.0, 12.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -202,7 +202,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 24.0, 421.0, 30.0, 30.0 ]
+					"patching_rect" : [ 24.0, 416.0, 30.0, 30.0 ]
 				}
 
 			}
