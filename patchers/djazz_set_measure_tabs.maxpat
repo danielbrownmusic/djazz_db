@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -3347.0, 231.0, 240.0, 366.0 ],
+		"rect" : [ 1852.0, 576.0, 194.0, 268.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 50.0, 100.0, 128.305555555555429, 22.0 ],
+					"patching_rect" : [ 14.0, 70.0, 128.305555555555429, 22.0 ],
 					"text" : "pack name 0"
 				}
 
@@ -57,7 +57,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 50.0, 154.303559250000262, 155.0, 22.0 ],
+					"patching_rect" : [ 14.0, 124.303559250000262, 155.0, 22.0 ],
 					"text" : "prepend set_measure_tabs"
 				}
 
@@ -69,7 +69,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 50.0, 204.303559250000262, 155.0, 22.0 ],
+					"patching_rect" : [ 14.0, 174.303559250000262, 155.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_ui_navigate_mgr.js",
 						"parameter_enable" : 0
@@ -88,7 +88,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 50.0, 40.000009750000004, 30.0, 30.0 ]
+					"patching_rect" : [ 14.0, 10.000009750000004, 30.0, 30.0 ]
 				}
 
 			}
@@ -101,7 +101,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 159.0, 40.000009750000004, 30.0, 30.0 ]
+					"patching_rect" : [ 123.0, 10.000009750000004, 30.0, 30.0 ]
 				}
 
 			}
@@ -113,7 +113,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 50.0, 286.303537750000032, 30.0, 30.0 ]
+					"patching_rect" : [ 14.0, 223.303537750000032, 30.0, 30.0 ]
 				}
 
 			}
