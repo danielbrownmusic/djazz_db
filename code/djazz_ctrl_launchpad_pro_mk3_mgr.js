@@ -5,9 +5,10 @@ inlets = 2;
 // inlet 1: view values from system model, for changing controller layout
 
 var chapter_     = null;
+var bar_         = null;
+
 var chapters_    = Array(100);
 var bars_        = Array(100);
-
 
 clear_chapters_();
 clear_bars_();
@@ -22,26 +23,29 @@ function list()
     switch (ctrl_type)
     {
         case ("midi"):
-            set_bar(ctrl_val);
+            bar_        = set_bar_(ctrl_val);
             break;
         case ("cc"):
-            set_chapter(ctrl_val);
+            chapter_    = set_chapter_(ctrl_val);
+            bar_        = 0;
             break;
     }
+    var beat_waiting = grid_position_to_beat_(chapter_, bar_, 0);
+    outlet(0, "beat_waiting", beat_waiting);
 }
 
 
-function set_chapter(cc_val)
+function set_chapter_(cc_val)
 {
-    var chapter = chapters_[cc_val];
-    outlet (0, [chapter, 0, 0]);
+    chapter_ = chapters_[cc_val];
+    outlet (0, [chapter_, 0, 0]);
 }
 
 
-function set_bar(midi_val)
+function set_bar_(midi_val)
 {
-    var bar = bars_[midi_val];
-    outlet (0, [chapter_, bar, 0]);
+    bar_ = bars_[midi_val];
+    outlet (0, [chapter_, bar_, 0]);
 }
 
 
@@ -58,30 +62,40 @@ MIDI    81 - 88
         51 - 58
 */
 
-function set_chapter_tabs(n)
+function set_chapters_in_song(n)
 {
     clear_chapters_();
-    for (var v = 0; v < n; v++)
+    for (var i = 0; i < n; i++)
     {
-        var i = 89 - 10 * v;
-        chapters_[i] = v;
+        var cc_val = chapter_to_cell(i);
+        chapters_[cc_val] = i;
     }
 }
 
 
-function set_bar_tabs(n, min_measure, max_measure)
+function chapter_to_cell_(i)
+{
+    return 89 - 10 * i;
+}
+
+
+function set_bars_in_chapter(min_measure, max_measure)
 {
     clear_bars_();
-    chapter_ = n;
-    var m = max_measure - min_measure;
-    for (var v = 0; v < m; v++)
+    for (var i = 0; i < max_measure - min_measure; i++)
     {
-        // v = 8 * q + p, or "qp" base 8
-        var p = v % 8;
-        var q = (v - p) / 8;
-        var i = 81 - (10 * q) + p;
-        bars_[i] = v;
+        var midi_val = bar_to_cell(i);
+        bars_[midi_val] = i;
     }
+}
+
+
+function bar_to_cell_(i)
+{
+    // v = 8 * q + p, or "qp" base 8
+    var p = i % 8;
+    var q = (i - p) / 8;
+    return 81 - (10 * q) + p;
 }
 
 
@@ -103,6 +117,3 @@ function clear_bars_()
     }
 }
 clear_bars_.local = 1;
-
-
-
