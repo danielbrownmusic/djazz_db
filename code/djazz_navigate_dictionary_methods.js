@@ -25,6 +25,15 @@ function chapter_bar_position_to_beat(database_name, chapter_bar_position)
 }
 
 
+function get_chapter_measures(database_name, i)
+{
+    var d = Dict(database_name);
+    var min_measure = d.get("chapters").get(i).get("min_measure");
+    var max_measure = d.get("chapters").get(i).get("max_measure");
+    outlet(0, min_measure, max_measure);
+}
+
+
 function set_chapter_tabs(n_chapters)
 {
     outlet(0, "tabs", make_tabs_(1, n_chapters + 1));
