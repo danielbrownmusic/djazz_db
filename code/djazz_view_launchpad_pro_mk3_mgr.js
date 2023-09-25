@@ -28,10 +28,10 @@ var COLOR_CODES     = new Dict("COLOR_CODES");
 var BEHAVIOR_CODES  = new Dict("BEHAVIOR_CODES");
 
 MESSAGE_FORMATS.parse(  '{"chapter" : "cc": "bar", "midi" }');
-LED_VIEWS.parse(        '{  "chapter" : {"on": { "color", "behavior" },  "off":        { "color", "behavior" }, "waiting":    { "color", "behavior" } }, "bar" :     {   "on":         { "color", "behavior" }, "off":        { "color", "behavior" },"waiting":    { "color", "behavior" } } }' );
+//LED_VIEWS.parse(        '{  "chapter" : {"on": { "color", "behavior" },  "off":        { "color", "behavior" }, "waiting":    { "color", "behavior" } }, "bar" :     {   "on":         { "color", "behavior" }, "off":        { "color", "behavior" },"waiting":    { "color", "behavior" } } }' );
 COLOR_CODES.parse(      '{ "red" : 5, "orange" : 9, "yellow", 13, "green", 21, "blue", 37, "indigo", 41, "purple", 49 }' );
 BEHAVIOR_CODES.parse(   '{ "static" : 1, "flashing" : 2, "pulsing" : 3 }');
-
+LED_VIEWS.parse( '{ chapter_on_color, chapter_on_behavior, chapter_off_color, chapter_off_behavior, bar_on_color, bar_on_behavior, bar_off_color, bar_off_behavior }');
 
 clear_chapters_();
 clear_bars_();
