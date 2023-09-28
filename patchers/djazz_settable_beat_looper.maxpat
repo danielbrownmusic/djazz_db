@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 249.0, 297.0, 845.0, 756.0 ],
+		"rect" : [ -1964.0, 233.0, 845.0, 756.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,7 +40,7 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "preset",
 					"id" : "obj-21",
 					"index" : 3,
 					"maxclass" : "inlet",
@@ -53,13 +53,13 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "changed variables: \"record\" + 0/1; \"play\" + 0/1; \"length\" + int",
 					"id" : "obj-20",
 					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 697.0, 199.0, 30.0, 30.0 ]
+					"patching_rect" : [ 697.0, 263.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -85,7 +85,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "\"record\" + 0/1; \"play\" + 0/1; \"length\" + int",
 					"id" : "obj-18",
 					"index" : 2,
 					"maxclass" : "inlet",
