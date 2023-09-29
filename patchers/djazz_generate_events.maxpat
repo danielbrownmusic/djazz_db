@@ -45,7 +45,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 168.4166666666666, 86.0, 208.0, 22.0 ],
+					"patching_rect" : [ 197.916666666666487, 77.0, 208.0, 22.0 ],
 					"text" : "routepass tempo beats_per_measure"
 				}
 
@@ -71,7 +71,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 168.4166666666666, 21.0, 30.0, 30.0 ]
+					"patching_rect" : [ 197.916666666666487, 21.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -257,7 +257,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
+					"midpoints" : [ 207.416666666666487, 197.5, 37.916666666666629, 197.5 ],
 					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-44", 2 ],
+					"source" : [ "obj-6", 1 ]
 				}
 
 			}
