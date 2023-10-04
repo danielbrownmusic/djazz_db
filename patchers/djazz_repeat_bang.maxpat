@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1861.0, 103.0, 660.0, 562.0 ],
+		"rect" : [ 905.0, 404.0, 660.0, 562.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,7 +40,7 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "bang",
+					"comment" : "count",
 					"id" : "obj-4",
 					"index" : 3,
 					"maxclass" : "inlet",
@@ -53,7 +53,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "bang",
+					"comment" : "tempo",
 					"id" : "obj-2",
 					"index" : 2,
 					"maxclass" : "inlet",

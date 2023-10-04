@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -3012.0, -124.0, 2362.0, 1169.0 ],
+		"rect" : [ 1737.0, 172.0, 1272.0, 1191.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,32 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-35",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 898.251898977235669, 2567.0, 93.0, 22.0 ],
+					"text" : "djazz_controller",
+					"varname" : "djazz_controller"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-29",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "" ],
+					"patching_rect" : [ 829.251898977235669, 2662.0, 157.0, 22.0 ],
+					"text" : "djazz_score_follower mnote",
+					"varname" : "djazz_score_follower"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-50",
 					"maxclass" : "newobj",
@@ -4411,8 +4437,23 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-35", 2 ],
+					"midpoints" : [ 838.751898977235669, 2843.0, 1146.625949488617835, 2843.0, 1146.625949488617835, 2521.0, 981.751898977235669, 2521.0 ],
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-32", 0 ],
 					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-29", 1 ],
+					"source" : [ "obj-35", 0 ]
 				}
 
 			}
@@ -4667,8 +4708,7 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-109::obj-7::obj-26" : [ "gswitch2", "gswitch2", 0 ],
-			"obj-109::obj-7::obj-64" : [ "gswitch2[1]", "gswitch2[1]", 0 ],
+			"obj-109::obj-7::obj-8::obj-64" : [ "gswitch2[1]", "gswitch2[1]", 0 ],
 			"obj-122::obj-10::obj-11::obj-4::obj-9" : [ "slot_count[5]", "slot_count", 0 ],
 			"obj-122::obj-10::obj-13::obj-4::obj-9" : [ "slot_count[4]", "slot_count", 0 ],
 			"obj-122::obj-10::obj-15::obj-4::obj-9" : [ "slot_count[3]", "slot_count", 0 ],
@@ -4685,10 +4725,9 @@
 			"obj-122::obj-12::obj-21::obj-4::obj-9" : [ "slot_count[8]", "slot_count", 0 ],
 			"obj-122::obj-12::obj-7::obj-4::obj-9" : [ "slot_count[15]", "slot_count", 0 ],
 			"obj-122::obj-12::obj-9::obj-4::obj-9" : [ "slot_count[14]", "slot_count", 0 ],
-			"obj-51::obj-110::obj-7::obj-26" : [ "gswitch2[13]", "gswitch2", 0 ],
-			"obj-51::obj-110::obj-7::obj-64" : [ "gswitch2[12]", "gswitch2[1]", 0 ],
-			"obj-54::obj-110::obj-7::obj-26" : [ "gswitch2[11]", "gswitch2", 0 ],
-			"obj-54::obj-110::obj-7::obj-64" : [ "gswitch2[2]", "gswitch2[1]", 0 ],
+			"obj-35::obj-85::obj-7::obj-8::obj-64" : [ "gswitch2[14]", "gswitch2[1]", 0 ],
+			"obj-51::obj-110::obj-7::obj-8::obj-64" : [ "gswitch2[7]", "gswitch2[1]", 0 ],
+			"obj-54::obj-110::obj-7::obj-8::obj-64" : [ "gswitch2[8]", "gswitch2[1]", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
@@ -4741,6 +4780,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "djazz_beat_loop_length_ctrl.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "djazz_beat_to_chapter_bar_position.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
@@ -4784,6 +4830,13 @@
 			}
 , 			{
 				"name" : "djazz_compose_midi.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_controller.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -4972,6 +5025,34 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "djazz_midi_effect_bank.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_midi_event_gate.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_midi_event_gate_layout.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_midi_event_gate_solo_mute_ctrl.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "djazz_midi_out.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
@@ -5091,6 +5172,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "djazz_set_umenu_bgfillcolor.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "djazz_tempo_to_ms.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
@@ -5106,6 +5194,13 @@
 			}
 , 			{
 				"name" : "djazz_ui_effect_list.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_ui_effect_slot.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",

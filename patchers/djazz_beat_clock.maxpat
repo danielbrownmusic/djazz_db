@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2331.0, 55.0, 678.0, 668.0 ],
+		"rect" : [ 750.0, 376.0, 754.0, 718.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -62,19 +62,6 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 91.999972999999954, 39.0, 50.0, 22.0 ],
 					"varname" : "tempo"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-6",
-					"maxclass" : "toggle",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 213.0, 39.0, 24.0, 24.0 ],
-					"varname" : "loop_chapter[1]"
 				}
 
 			}
@@ -140,7 +127,7 @@
 						"client_rect" : [ 4, 44, 358, 172 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
-						"storage_rect" : [ 583, 69, 1034, 197 ]
+						"storage_rect" : [ 583, 100, 1520, 798 ]
 					}
 ,
 					"text" : "pattrstorage @greedy 1 @outputmode 1",
@@ -172,7 +159,6 @@
 					"restore" : 					{
 						"beat" : [ 4 ],
 						"count" : [ 0 ],
-						"loop_chapter[1]" : [ 0 ],
 						"tempo" : [ 0.0 ]
 					}
 ,
@@ -476,13 +462,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-21", 0 ],
 					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-17", 1 ],
-					"source" : [ "obj-6", 0 ]
 				}
 
 			}
