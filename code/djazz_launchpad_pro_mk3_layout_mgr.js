@@ -114,12 +114,9 @@ function list()
 }
 
 var bar_offset_         = 19;
+var chapter_count_  = 0;
 
-var bar_count_  = 0;
 
-
-var bar_off_color_      = 25;
-var bar_on_color_       = 79;
 
 
 function dictionary(name)
