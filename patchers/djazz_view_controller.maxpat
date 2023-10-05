@@ -40,6 +40,32 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "load database",
+					"id" : "obj-4",
+					"index" : 3,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 343.0, 71.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "from controller",
+					"id" : "obj-1",
+					"index" : 2,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 98.0, 39.999995000000013, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-5",
 					"maxclass" : "number",
 					"numinlets" : 1,
@@ -80,7 +106,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 50.0, 106.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"beat" : [ 6 ],
+						"beat" : [ 8 ],
 						"tempo" : [ 0.0 ]
 					}
 ,
@@ -105,7 +131,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "from model",
 					"id" : "obj-69",
 					"index" : 1,
 					"maxclass" : "inlet",
@@ -130,6 +156,13 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-70", 0 ],
 					"source" : [ "obj-3", 0 ]
