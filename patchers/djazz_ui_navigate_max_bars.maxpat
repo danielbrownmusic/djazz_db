@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1235.0, 338.0, 795.0, 926.0 ],
+		"rect" : [ 442.0, 149.0, 795.0, 926.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -53,26 +53,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 325.0, 181.0, 161.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"client_rect" : [ -2314, 278, -1931, 640 ],
-						"parameter_enable" : 0,
-						"parameter_mappable" : 0,
-						"storage_rect" : [ -2766, 601, -2315, 729 ]
-					}
-,
-					"text" : "pattrstorage @outputmode 5",
-					"varname" : "u365015202"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-5",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -81,7 +61,7 @@
 					"patching_rect" : [ 325.0, 111.0, 56.0, 22.0 ],
 					"restore" : 					{
 						"bar" : [ 0 ],
-						"bar_count" : [ 0 ]
+						"count" : [ 0 ]
 					}
 ,
 					"text" : "autopattr",
@@ -98,7 +78,7 @@
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 41.000000000000114, 36.0, 50.0, 22.0 ],
-					"varname" : "bar_count"
+					"varname" : "count"
 				}
 
 			}
@@ -133,18 +113,6 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
-					"id" : "obj-39",
-					"index" : 0,
-					"maxclass" : "outlet",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 325.0, 247.399999976158142, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-21",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -169,13 +137,6 @@
 			}
  ],
 		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-39", 0 ],
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
 					"source" : [ "obj-13", 0 ]
