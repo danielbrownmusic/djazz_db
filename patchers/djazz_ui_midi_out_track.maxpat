@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 288.0, 342.0, 328.0 ],
+		"rect" : [ 34.0, 100.0, 405.0, 344.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,63 +40,80 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "load effect slot umenus",
-					"id" : "obj-5",
+					"comment" : "load effect list umenus",
+					"id" : "obj-2",
 					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 160.0, 15.0, 30.0, 30.0 ]
+					"patching_rect" : [ 150.0, 11.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-4",
+					"id" : "obj-7",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 238.0, 15.0, 56.0, 22.0 ],
-					"text" : "autopattr",
-					"varname" : "u365017391"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-30",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 160.0, 73.0, 134.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"filename" : "djazz_ui_effect_list.js",
-						"parameter_enable" : 0
+					"patching_rect" : [ 195.0, 11.0, 56.0, 22.0 ],
+					"restore" : 					{
+						"mute" : [ 0 ],
+						"solo" : [ 0 ]
 					}
 ,
-					"text" : "js djazz_ui_effect_list.js"
+					"text" : "autopattr",
+					"varname" : "u109010710"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"angle" : 270.0,
-					"background" : 1,
-					"grad1" : [ 0.258823529411765, 0.576470588235294, 0.592156862745098, 1.0 ],
-					"grad2" : [ 0.2, 0.2, 0.2, 1.0 ],
-					"id" : "obj-11",
-					"maxclass" : "panel",
-					"mode" : 1,
+					"id" : "obj-5",
+					"maxclass" : "led",
 					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1.0, 0.0, 128.0, 236.0 ],
+					"numoutlets" : 1,
+					"oncolor" : [ 0.0, 0.858823529411765, 0.945098039215686, 1.0 ],
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 66.0, 44.0, 58.0, 58.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 128.0, 236.0 ],
-					"proportion" : 0.5,
-					"varname" : "slots_panel"
+					"presentation_rect" : [ 64.0, 22.0, 64.0, 64.0 ],
+					"varname" : "mute"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "led",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"oncolor" : [ 0.964705882352941, 0.384313725490196, 0.105882352941176, 1.0 ],
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 2.0, 44.0, 58.0, 58.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 22.0, 64.0, 64.0 ],
+					"thickness" : 100.0,
+					"varname" : "solo"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 7.0, 6.0, 124.5, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 0.0, 128.0, 22.0 ],
+					"text" : "#1",
+					"textjustification" : 1
 				}
 
 			}
@@ -107,18 +124,18 @@
 					"clickthrough" : 0,
 					"enablehscroll" : 0,
 					"enablevscroll" : 0,
-					"id" : "obj-2",
+					"id" : "obj-4",
 					"lockeddragscroll" : 0,
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "djazz_ui_effect_slot.maxpat",
+					"name" : "djazz_ui_effect_list.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 1.0, 0.0, 128.0, 22.0 ],
+					"patching_rect" : [ 2.0, 137.0, 130.0, 96.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 128.0, 22.0 ],
-					"varname" : "0",
+					"presentation_rect" : [ 0.0, 86.0, 128.0, 128.0 ],
+					"varname" : "effects",
 					"viewvisibility" : 1
 				}
 
@@ -126,13 +143,15 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-30", 0 ],
-					"source" : [ "obj-5", 0 ]
+					"destination" : [ "obj-4", 0 ],
+					"midpoints" : [ 159.5, 114.5, 11.5, 114.5 ],
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}
  ],
 		"parameters" : 		{
+			"obj-4::obj-9" : [ "slot_count", "slot_count", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
@@ -157,6 +176,13 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_ui_effect_list.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{

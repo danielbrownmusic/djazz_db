@@ -33,10 +33,6 @@ function anything()
 
 	//var a 			= arrayfromargs(messagename, arguments);
 	//var t 			= messagename;
-
-	// 5::effects::3 effect_name
-	// 5::
-
 	var track 		= this.patcher.getnamed(messagename);
 	var track_mgr 	= track.subpatcher().getnamed("mgr");
 	track_mgr.message(arguments);
@@ -65,8 +61,8 @@ function loadbang()
 
 	var n_tracks = max_track - min_track + 1;
 
-	var inl 	= this.patcher.getnamed("event_inlet");
-	var outl 	= this.patcher.getnamed("event_outlet");
+	var inl 	= this.patcher.getnamed("inlet");
+	var outl 	= this.patcher.getnamed("outlet");
 
 	var x 	= inl.rect[0];
 	var y 	= inl.rect[3];
@@ -85,13 +81,13 @@ function loadbang()
 	var funnel 	= this.patcher.newdefault(x_fun, y_fun, "funnel", n_tracks, min_track);
 	this.patcher.connect(funnel, 0, outl, 0);
 
-	for (var t = min_track; t <= max_track; t++)
+	for (var t = min_track; track <= max_track; track++)
 	{
 		var i 		 		= t - min_track;
 		var x_mid 	 		= x_spr + w * i;
 		var y_mid 	 		= y_spr + 2 * h;	
-		var track 		= this.patcher.newdefault(x_mid, y_mid, "djazz_midi_out_track", t);		
-		track.varname 	= t;
+		var track 		= this.patcher.newdefault(x_mid, y_mid, "djazz_midi_out_track", track);		
+		track.varname 	= track;
 		tracks.push(track);
 
 		this.patcher.connect(spray, i, track,  0);

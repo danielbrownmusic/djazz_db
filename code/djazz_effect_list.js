@@ -15,6 +15,11 @@ var slots_ = [];
 } */
 
 
+function hi()
+{
+    post ("hi!!!! \n");
+}
+
 function msg_int(n)
 {
     if (n < 0)

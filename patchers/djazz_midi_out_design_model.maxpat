@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 277.0, 423.0, 447.0 ],
+		"rect" : [ 196.0, 265.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,49 +40,19 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 174.0, 278.0, 50.0, 22.0 ],
-					"varname" : "butter"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-8",
+					"id" : "obj-3",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 242.0, 17.0, 56.0, 22.0 ],
-					"restore" : 					{
-						"butter" : [ 0 ]
-					}
-,
-					"text" : "autopattr",
-					"varname" : "u227006007"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 91.0, 17.0, 118.0, 22.0 ],
+					"outlettype" : [ "dictionary", "", "", "" ],
+					"patching_rect" : [ 166.0, 135.0, 50.5, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_effect_list.js",
-						"parameter_enable" : 0
+						"embed" : 0,
+						"parameter_enable" : 0,
+						"parameter_mappable" : 0
 					}
 ,
-					"text" : "js djazz_effect_list.js",
-					"varname" : "mge"
+					"text" : "dict"
 				}
 
 			}
@@ -94,8 +64,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 25.0, 371.0, 30.0, 30.0 ],
-					"varname" : "midi_out"
+					"patching_rect" : [ 166.0, 227.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -108,16 +77,22 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 17.0, 30.0, 30.0 ],
-					"varname" : "midi_in"
+					"patching_rect" : [ 166.0, 50.0, 30.0, 30.0 ]
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
+					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-3", 0 ]
 				}
 
 			}

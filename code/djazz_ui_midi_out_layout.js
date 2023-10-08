@@ -5,6 +5,16 @@ inlets = 2;
 var w = 160;
 var h = 48;	
 
+function anything()
+{
+	// Dispatch layout messages to individual tracks.
+
+	var track 		= this.patcher.getnamed(messagename);
+	//var track_mgr 	= track.subpatcher().getnamed("mgr");
+	track.message(arguments);
+}
+
+
 function loadbang()
 {
     var min_channel = jsarguments[1];
@@ -61,8 +71,8 @@ function loadbang()
 		var i 		 = channel - min_channel;
 		//var x_mid 	 = x;//x_spr + w * i;
 		//var y_mid 	 = y;//y_spr + h;	
-		var x = i * 128;;
-		var y = 50;
+		var x = this.box.rect[0] + i * 128;
+		var y = this.box.rect[1] + 66;
 		var x_pres = i * 128;
 		var y_pres = 0;
 		var midi_out = this.patcher.newdefault(x, y, 

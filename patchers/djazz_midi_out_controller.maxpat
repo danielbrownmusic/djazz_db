@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 277.0, 423.0, 447.0 ],
+		"rect" : [ 109.0, 169.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -36,53 +36,42 @@
 		"digest" : "",
 		"tags" : "",
 		"style" : "",
-		"subpatcher_template" : "",
+		"subpatcher_template" : "djazz_empty_object",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 174.0, 278.0, 50.0, 22.0 ],
-					"varname" : "butter"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-8",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 242.0, 17.0, 56.0, 22.0 ],
-					"restore" : 					{
-						"butter" : [ 0 ]
-					}
-,
-					"text" : "autopattr",
-					"varname" : "u227006007"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"comment" : "",
+					"id" : "obj-5",
+					"index" : 2,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 91.0, 17.0, 118.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"filename" : "djazz_effect_list.js",
-						"parameter_enable" : 0
-					}
-,
-					"text" : "js djazz_effect_list.js",
-					"varname" : "mge"
+					"patching_rect" : [ 239.0, 119.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-4",
+					"index" : 3,
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 220.0, 293.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-3",
+					"index" : 2,
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 205.0, 278.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -94,8 +83,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 25.0, 371.0, 30.0, 30.0 ],
-					"varname" : "midi_out"
+					"patching_rect" : [ 190.0, 263.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -108,20 +96,12 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 17.0, 30.0, 30.0 ],
-					"varname" : "midi_in"
+					"patching_rect" : [ 224.0, 104.0, 30.0, 30.0 ]
 				}
 
 			}
  ],
-		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
- ]
+		"lines" : [  ]
 	}
 
 }

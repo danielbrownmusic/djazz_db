@@ -2,32 +2,22 @@ autowatch = 1;
 
 var slots_  = []
 
-
-function on_next_to_last_slot_changed(data)
+function list()
 {
-    post("changing next to last - " + data.value);
-    if (data.value !== 0) 
-        return;
+    var new_slots = arrayfromargs(arguments);
+    set_slot_count_(new_slots.length);
+    for (var i = 0; i < new_slots.length; i++)
+    {
+        if (new_slots[i] === slots_[i])
+            continue;
 
-    set_slot_count(slots_.length - 1);
+        slots_[i] = new_slots[i];
+    }
+    slots_.push_back_();
 }
 
-var next_to_last_slot_listener_ = null;//new MaxobjListener(null, on_next_to_last_slot_changed);
 
-
-function on_last_slot_changed(data)
-{
-    post("changing last - " + data.value);
-    if (data.value === 0)
-        return;
-    set_slot_count(slots_.length + 1);
-}
-
-var last_slot_listener_ = null;//new MaxobjListener(null, on_last_slot_changed);
-
-// ------------------------------------------------------------------------------------
-
-function msg_int(n)
+function set_slot_count_(n)
 {
     if (n < 0)
         return;
@@ -52,6 +42,7 @@ function msg_int(n)
         }
     }
 }
+set_slot_count_.local = 1;
 
 
 function push_back_()
@@ -70,7 +61,7 @@ function push_back_()
     slot.varname = l;
 
     slots_.push(slot);
-    set_listeners_();
+    //set_listeners_();
 
 }
 push_back_.local = 1;
@@ -80,18 +71,43 @@ function pop_back_()
 {   
     slot = slots_.pop();
     this.patcher.remove(slot);
-    set_listeners_();
+    //set_listeners_();
 }
 pop_back_.local = 1;
 
 
-function set_slot_count(n)
+/* function on_next_to_last_slot_changed(data)
+{
+    post("changing next to last - " + data.value);
+    if (data.value !== 0) 
+        return;
+
+    set_slot_count(slots_.length - 1);
+}
+
+var next_to_last_slot_listener_ = null;//new MaxobjListener(null, on_next_to_last_slot_changed);
+
+
+function on_last_slot_changed(data)
+{
+    post("changing last - " + data.value);
+    if (data.value === 0)
+        return;
+    set_slot_count(slots_.length + 1);
+}
+
+var last_slot_listener_ = null;//new MaxobjListener(null, on_last_slot_changed); */
+
+// ------------------------------------------------------------------------------------
+
+
+/* function set_slot_count(n)
 {
     post ("setting slot count to ", n, "\n");
     this.patcher.getnamed("slot_count").message(n);
-}
+} */
 
-
+/*
 function set_listeners_()
 {
 
@@ -139,10 +155,9 @@ function set_listeners_()
     {
         var obj                     = slots_.slice(-2)[0].subpatcher().getnamed("effect_index");
         next_to_last_slot_listener_ = new MaxobjListener(obj, on_next_to_last_slot_changed);
-    }   */
-
+    }
 }
-set_listeners_.local = 1;
+set_listeners_.local = 1; */
 
 
 /* function update_spray_()
