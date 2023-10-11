@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 653.0, 160.0, 1516.0, 710.0 ],
+		"rect" : [ 284.0, 261.0, 521.0, 527.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -80,7 +80,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 125.0, 394.0, 174.0, 22.0 ],
+					"patching_rect" : [ 125.0, 414.0, 174.0, 22.0 ],
 					"text" : "djazz_launchpad_pro_mk3_init"
 				}
 

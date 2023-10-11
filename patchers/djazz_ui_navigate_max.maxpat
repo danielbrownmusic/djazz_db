@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 514.0, 134.0, 560.0, 506.0 ],
+		"rect" : [ 1311.0, 336.0, 560.0, 506.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,34 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 31.783333227038383, 126.844659894704819, 105.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 352.087386906147003, 11.940783160924866, 103.0, 20.0 ],
+					"text" : "LOOP CHAPTER"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "led",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 89.383333191275597, 166.844659894704819, 24.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 329.087386906147003, 11.940783160924866, 19.5, 19.5 ],
+					"varname" : "loop_chapter"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-3",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -63,12 +91,11 @@
 					"maxclass" : "bpatcher",
 					"name" : "djazz_ui_navigate_max_bars.maxpat",
 					"numinlets" : 1,
-					"numoutlets" : 1,
+					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "" ],
 					"patching_rect" : [ 247.30096507072426, 188.485436201095581, 190.279126226902122, 70.718447387218475 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 9.611663103103638, 40.440783846378281, 445.475723803043365, 70.685431139987998 ],
+					"presentation_rect" : [ 9.611663103103638, 48.440783846378281, 445.475723803043365, 70.685431139987998 ],
 					"varname" : "bars",
 					"viewvisibility" : 1
 				}
@@ -106,6 +133,10 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 18.337377680706027, 73.203883588314056, 56.0, 22.0 ],
+					"restore" : 					{
+						"loop_chapter" : [ 0 ]
+					}
+,
 					"text" : "autopattr",
 					"varname" : "u571012724"
 				}
