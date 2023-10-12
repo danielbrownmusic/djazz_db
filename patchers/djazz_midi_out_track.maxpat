@@ -58,7 +58,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 151.0, 106.0, 50.0, 22.0 ]
+					"patching_rect" : [ 151.0, 106.0, 50.0, 22.0 ],
+					"varname" : "track"
 				}
 
 			}
@@ -80,7 +81,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+						"rect" : [ 59.0, 119.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -202,7 +203,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 65.0, 279.0, 105.0, 22.0 ],
+					"patching_rect" : [ 65.0, 279.0, 111.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -210,7 +211,7 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p set_channel"
+					"text" : "p prepend_channel"
 				}
 
 			}
@@ -222,7 +223,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 151.0, 223.0, 50.0, 22.0 ]
+					"patching_rect" : [ 157.0, 223.0, 50.0, 22.0 ],
+					"varname" : "channel"
 				}
 
 			}
@@ -235,7 +237,9 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 151.0, 25.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"mute" : [ 0 ]
+						"active" : [ 0 ],
+						"channel" : [ 0 ],
+						"track" : [ 1 ]
 					}
 ,
 					"text" : "autopattr",
@@ -252,7 +256,7 @@
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 45.0, 96.0, 39.0, 32.0 ],
-					"varname" : "mute"
+					"varname" : "active"
 				}
 
 			}
@@ -260,7 +264,7 @@
 				"box" : 				{
 					"comment" : "messages: event, solo, effect",
 					"id" : "obj-8",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -273,7 +277,7 @@
 				"box" : 				{
 					"comment" : "midi events",
 					"id" : "obj-5",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -337,23 +341,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_effect_list.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_effect_list.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

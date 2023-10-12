@@ -1,93 +1,96 @@
 autowatch = 1;
 
-inlets = 2;
-
 var w = 160;
 var h = 48;	
 
-function anything()
+function track()
 {
 	// Dispatch layout messages to individual tracks.
-
-	var track 		= this.patcher.getnamed(messagename);
-	//var track_mgr 	= track.subpatcher().getnamed("mgr");
-	track.message(arguments);
+	var a 	= arrayfromargs(arguments);
+	var t 	= a[0];
+	var i 	= t - min_track;
+	var msg = a.slice(1);
+	post("sending track", t, "(zero-based =", i, ") message ");
+	post(msg);
+	post("\n");
+	outlet(i, msg);
 }
 
 
 function loadbang()
 {
-    var min_channel = jsarguments[1];
-    var max_channel = jsarguments[2];
-
-	post ("in djazz_ui_midi_out_layout.js \n");
-	post (min_channel, max_channel, "\n");
-
-	if (!min_channel)
+    var min_track = jsarguments[1];
+    var max_track = jsarguments[2];
+    
+	if (!min_track)
 		return;
 
-	if (!max_channel)
+	if (!max_track)
 		return;
 
-	if (isNaN(min_channel))
+	if (isNaN(min_track))
 		return;
 
-	if (isNaN(max_channel))
+	if (isNaN(max_track))
 		return;
 
-	if (max_channel < min_channel)
+	if (max_track < min_track)
 		return;
 
-	var n_channels = max_channel - min_channel + 1;
+	var n_tracks = max_track - min_track + 1;
 
-/* 	var inl 	= this.patcher.getnamed("inlet");
-	var outl 	= this.patcher.getnamed("outlet");
+ 	var inl 	= this.patcher.getnamed("component_msg_inlet");
+	var outl 	= this.patcher.getnamed("component_msg_outlet");
 
-	var x = inl.rect[0];
-	var y = inl.rect[3]; */
+	var x 	= inl.rect[0];
+	var y 	= inl.rect[3];
 
-
-
-/* 	var x_spr 	= x;
-	var y_spr 	= y + h;
-	var spray  	= this.patcher.newdefault(x_spr, y_spr, "spray", n_channels, min_channel, 1);
+	var x_spr = x;
+	var y_spr = y + h;
+	var spray = this.patcher.newdefault(x_spr, y_spr, "spray", n_tracks, min_track, 1);
 	this.patcher.connect(inl, 0, spray, 0);
-
+/*
 	var x_fun 	= x_spr;
-	var y_fun 	= y_spr + 344;
-	var funnel 	= this.patcher.newdefault(x_fun, y_fun, "funnel", n_channels, min_channel);
+	var y_fun 	= y_spr + 4 * h;
+	var funnel 	= this.patcher.newdefault(x_fun, y_fun, "funnel", n_tracks, min_track);
 	this.patcher.connect(funnel, 0, outl, 0); */
 
-/* 	var x_sol 	 = x_spr + n_channels * w;
-	var y_sol 	 = y_spr + h;
-	var x_sol_pres = 0;
-	var y_sol_pres = 0;
-	var solo_mgr = this.patcher.newdefault(x_sol, y_sol, "bpatcher", "djazz_ui_solo_manager");
-	solo_mgr.presentation(1);
-	this.patcher.connect(inl, 0, solo_mgr, 0);
- */
-	for (var channel = min_channel; channel <= max_channel; channel++)
+ 	for (var t = min_track; t <= max_track; t++)
 	{
-		var i 		 = channel - min_channel;
-		//var x_mid 	 = x;//x_spr + w * i;
-		//var y_mid 	 = y;//y_spr + h;	
-		var x = this.box.rect[0] + i * 128;
-		var y = this.box.rect[1] + 66;
-		var x_pres = i * 128;
-		var y_pres = 0;
-		var midi_out = this.patcher.newdefault(x, y, 
+		var i 			= t - min_track;
+		var x 			= this.box.rect[0] + i * 128;
+		var y 			= this.box.rect[1] + 66;
+		var x_pres 		= i * 128;
+		var y_pres 		= 0;
+		var track 	= this.patcher.newdefault(x, y, 
 											"bpatcher", 
-											"@name", "djazz_ui_midi_out_channel", 
-											"@args", channel,
+											"@name", "djazz_ui_midi_out_track", 
+											"@args", t,
 											"@patching_rect", [x, y, 128, 216],
 											"@presentation", 1,
 											"@presentation_rect", [x_pres, y_pres, 128, 216]);
-		midi_out.varname = channel;
-		/* this.patcher.connect(spray,    i, midi_out, 0);
-		this.patcher.connect(midi_out, 0, funnel, 	i); */
+		track.varname = t;
+
+ 		this.patcher.connect(spray, i, track,  0);
+/*		this.patcher.connect(track,	0, funnel, i); */
+
 	}
-
-
-
-
 }
+
+
+
+
+/* if (!min_track)
+	return;
+
+if (!max_track)
+	return;
+
+if (isNaN(min_track))
+	return;
+
+if (isNaN(max_track))
+	return;
+
+if (max_track < min_track)
+	return; */

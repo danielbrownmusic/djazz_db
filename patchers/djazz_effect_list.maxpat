@@ -40,19 +40,6 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 174.0, 278.0, 50.0, 22.0 ],
-					"varname" : "butter"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-8",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -60,7 +47,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 242.0, 17.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"butter" : [ 0 ]
+
 					}
 ,
 					"text" : "autopattr",

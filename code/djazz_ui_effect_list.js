@@ -1,19 +1,60 @@
 autowatch = 1;
 
+inlets = 2;
+
 var slots_  = []
 
-function list()
-{
-    var new_slots = arrayfromargs(arguments);
-    set_slot_count_(new_slots.length);
-    for (var i = 0; i < new_slots.length; i++)
-    {
-        if (new_slots[i] === slots_[i])
-            continue;
 
-        slots_[i] = new_slots[i];
+function effect(i_slot, i_effect)
+{
+    slots_[i_slot] = i_effect;
+    var msg = slots_.join(" ");
+    outlet(0, msg);
+}
+
+
+function effects()
+{
+    var new_slots = arguments ? arrayfromargs(arguments) : [];
+    var L = new_slots.length;
+    post ("setting new slots \n")
+    post ("slot count =", L);
+    set_slot_count_(L);
+
+    var is_list_empty                   = false;
+    var is_last_slot_full               = false;
+    var are_last_two_slots_empty        = false;
+
+    is_list_empty = (L === 0) ? true : false;
+
+    for (var i = 0; i < L; i++)
+    {
+        if ((i === L - 1) && (new_slots[i] !== 0))
+        {
+            post ("last slot is full \n")
+            is_last_slot_full = true;
+        }
+        else
+        {
+            if ((L >= 2) && (i === L - 1) && (new_slots[i - 1] === 0))
+                are_last_two_slots_empty = true;
+        }
+
+        if (new_slots[i] !== slots_[i])
+        {
+            slots_[i] = new_slots[i];
+        }
     }
-    slots_.push_back_();
+
+    if (is_list_empty || is_last_slot_full)
+    {
+        // Add one more empty slot:
+        push_back_();
+    }
+    else if (are_last_two_slots_empty)
+    {
+        pop_back_();
+    }
 }
 
 
@@ -26,7 +67,7 @@ function set_slot_count_(n)
 
     if (n === l)
         return;
-
+    post ("n =", n.toString(), "; l =", l.toString(), "\n");
     if (n < l)
     {
         for (var i = n; i < l; i++)
@@ -54,15 +95,13 @@ function push_back_()
 
     var slot   = this.patcher.newdefault(x, y, "bpatcher",
                     "@name",                "djazz_ui_effect_slot",
+                    "@args",                l,
                     "@patching_rect",       [x, y, 128, 22],
                     "@presentation",        1,
                     "@presentation_rect",   [0, l * 22, 128, 22]);
-    post ("made slot");
+    this.patcher.connect(slot, 0, this.box, 0);
     slot.varname = l;
-
     slots_.push(slot);
-    //set_listeners_();
-
 }
 push_back_.local = 1;
 
@@ -71,7 +110,6 @@ function pop_back_()
 {   
     slot = slots_.pop();
     this.patcher.remove(slot);
-    //set_listeners_();
 }
 pop_back_.local = 1;
 
