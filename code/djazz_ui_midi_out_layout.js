@@ -3,7 +3,7 @@ autowatch = 1;
 var w = 160;
 var h = 48;	
 
-function track()
+/* function track()
 {
 	// Dispatch layout messages to individual tracks.
 	var a 	= arrayfromargs(arguments);
@@ -15,7 +15,7 @@ function track()
 	post("\n");
 	outlet(i, msg);
 }
-
+ */
 
 function loadbang()
 {
@@ -39,8 +39,7 @@ function loadbang()
 
 	var n_tracks = max_track - min_track + 1;
 
- 	var inl 	= this.patcher.getnamed("component_msg_inlet");
-	var outl 	= this.patcher.getnamed("component_msg_outlet");
+ 	var inl = this.patcher.getnamed("component_msg_inlet");
 
 	var x 	= inl.rect[0];
 	var y 	= inl.rect[3];
@@ -49,11 +48,6 @@ function loadbang()
 	var y_spr = y + h;
 	var spray = this.patcher.newdefault(x_spr, y_spr, "spray", n_tracks, min_track, 1);
 	this.patcher.connect(inl, 0, spray, 0);
-/*
-	var x_fun 	= x_spr;
-	var y_fun 	= y_spr + 4 * h;
-	var funnel 	= this.patcher.newdefault(x_fun, y_fun, "funnel", n_tracks, min_track);
-	this.patcher.connect(funnel, 0, outl, 0); */
 
  	for (var t = min_track; t <= max_track; t++)
 	{
@@ -62,7 +56,7 @@ function loadbang()
 		var y 			= this.box.rect[1] + 66;
 		var x_pres 		= i * 128;
 		var y_pres 		= 0;
-		var track 	= this.patcher.newdefault(x, y, 
+		var track 		= this.patcher.newdefault(x, y, 
 											"bpatcher", 
 											"@name", "djazz_ui_midi_out_track", 
 											"@args", t,
@@ -70,27 +64,6 @@ function loadbang()
 											"@presentation", 1,
 											"@presentation_rect", [x_pres, y_pres, 128, 216]);
 		track.varname = t;
-
  		this.patcher.connect(spray, i, track,  0);
-/*		this.patcher.connect(track,	0, funnel, i); */
-
 	}
 }
-
-
-
-
-/* if (!min_track)
-	return;
-
-if (!max_track)
-	return;
-
-if (isNaN(min_track))
-	return;
-
-if (isNaN(max_track))
-	return;
-
-if (max_track < min_track)
-	return; */

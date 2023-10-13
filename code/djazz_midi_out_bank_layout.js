@@ -76,10 +76,6 @@ function loadbang()
 	var spray = this.patcher.newdefault(x_spr, y_spr, "spray", n_tracks, min_track, 1);
 	this.patcher.connect(inl, 0, spray, 0);
 
-/* 	var x_sol 	 = x_esp + w;
-	var y_sol 	 = y_esp;
-	var solo_mgr = this.patcher.newdefault(x_sol, y_sol, "djazz_solo_manager", n_channels); */
-
 	var x_fun 	= x_spr;
 	var y_fun 	= y_spr + 4 * h;
 	var funnel 	= this.patcher.newdefault(x_fun, y_fun, "funnel", n_tracks, min_track);
@@ -96,10 +92,5 @@ function loadbang()
 
 		this.patcher.connect(spray, i, track,  0);
 		this.patcher.connect(track,	0, funnel, i);
-
-/* 		solo_listeners.push(new MaxobjListener(midi_out.subpatcher().getnamed("solo"), on_solo_changed));
-		solo_values.push(0); */
 	}
-
-	//any_solos_obj = this.patcher.getnamed("any_solos");
 }
