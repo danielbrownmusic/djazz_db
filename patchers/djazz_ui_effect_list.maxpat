@@ -41,12 +41,25 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"comment" : "",
-					"id" : "obj-1",
+					"id" : "obj-2",
 					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 160.0, 149.0, 30.0, 30.0 ]
+					"patching_rect" : [ 248.0, 157.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-1",
+					"index" : 0,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 159.0, 21.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -59,7 +72,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 275.0, 13.0, 30.0, 30.0 ]
+					"patching_rect" : [ 248.0, 21.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -70,7 +83,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 327.0, 13.0, 56.0, 22.0 ],
+					"patching_rect" : [ 159.0, 92.0, 56.0, 22.0 ],
 					"text" : "autopattr",
 					"varname" : "u365017391"
 				}
@@ -83,13 +96,13 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 160.0, 84.0, 134.0, 22.0 ],
+					"patching_rect" : [ 248.0, 92.0, 150.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_ui_effect_list.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_ui_effect_list.js"
+					"text" : "js djazz_ui_effect_list.js #1"
 				}
 
 			}
@@ -104,7 +117,7 @@
 					"mode" : 1,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ -4.0, 0.0, 128.0, 236.0 ],
+					"patching_rect" : [ -1.0, -1.0, 128.0, 236.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 128.0, 236.0 ],
 					"proportion" : 0.5,
@@ -115,14 +128,21 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-4", 0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-30", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-30", 1 ],
+					"destination" : [ "obj-30", 0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 

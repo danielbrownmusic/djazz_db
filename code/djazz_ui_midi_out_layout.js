@@ -41,19 +41,19 @@ function loadbang()
 
  	var inl = this.patcher.getnamed("component_msg_inlet");
 
-	var x 	= inl.rect[0];
-	var y 	= inl.rect[3];
+	var x_inl 	= inl.rect[0];
+	var y_inl 	= inl.rect[3];
 
-	var x_spr = x;
+/* 	var x_spr = x;
 	var y_spr = y + h;
 	var spray = this.patcher.newdefault(x_spr, y_spr, "spray", n_tracks, min_track, 1);
 	this.patcher.connect(inl, 0, spray, 0);
-
+ */
  	for (var t = min_track; t <= max_track; t++)
 	{
 		var i 			= t - min_track;
-		var x 			= this.box.rect[0] + i * 128;
-		var y 			= this.box.rect[1] + 66;
+		var x 			= x_inl + i * 128;
+		var y 			= y_inl + 66;
 		var x_pres 		= i * 128;
 		var y_pres 		= 0;
 		var track 		= this.patcher.newdefault(x, y, 
@@ -64,6 +64,8 @@ function loadbang()
 											"@presentation", 1,
 											"@presentation_rect", [x_pres, y_pres, 128, 216]);
 		track.varname = t;
- 		this.patcher.connect(spray, i, track,  0);
+ 		this.patcher.connect(inl, 0, track, 1);
 	}
 }
+
+
