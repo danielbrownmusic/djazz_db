@@ -62,7 +62,6 @@ function append()
     var d = new Dict(dict_name);
 
     append_(d, track_index, effect_number);
-    remove_trailing_zeroes_(d, track_index);
     send_effect_array_(d, track_index);
 }
 
