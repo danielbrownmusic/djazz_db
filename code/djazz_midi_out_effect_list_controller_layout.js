@@ -36,6 +36,8 @@ function set_effect_slots()
     push_back_("NULL");
 }
 
+
+
 //--------------------------------------------------------------------------------
 
 function replace_slot_(i, effect_name)
@@ -50,17 +52,16 @@ replace_slot_.local = 1;
 
 function make_slot_(i, effect_name)
 {
-    var slots_panel = this.patcher.getnamed("slots_panel");
     var x   = slots_panel.rect[0];
     var y   = slots_panel.rect[1] + i * 22;
 
     var slot   = this.patcher.newdefault(x, y, "bpatcher",
-                    "@name",                "djazz_ui_effect_slot",
+                    "@name",                "djazz_ui_effect_controller_slot",
                     "@args",                effect_name,
                     "@patching_rect",       [x, y, 128, 22],
                     "@presentation",        1,
                     "@presentation_rect",   [0, i * 22, 128, 22]);
-    //this.patcher.connect(slot, 0, this.box, 0);
+    this.patcher.connect(slot, 0, this.box, 0);
     slot.varname = "effect_" + i.toString();
     return slot;
 }
@@ -82,34 +83,3 @@ function pop_back_()
 }
 pop_back_.local = 1;
 
-
-
-
-
-/* 
-function set_slot_count_(n)
-{
-    if (n < 0)
-        return;
-
-    var l = slots_.length;
-
-    if (n === l)
-        return;
-
-    if (n < l)
-    {
-        for (var i = 0; i < l - n; i++)
-        {
-            pop_back_();
-        }
-    }
-    else
-    {
-        for (var i = 0; i < n - l; i++)
-        {
-            push_back_();
-        }
-    }
-}
-set_slot_count_.local = 1; */

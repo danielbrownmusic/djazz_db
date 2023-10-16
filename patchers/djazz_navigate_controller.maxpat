@@ -84,7 +84,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"format" : 6,
@@ -198,7 +197,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 172.689372000000049, 22.0, 79.0, 22.0 ],
+					"patching_rect" : [ 177.689372000000049, 22.0, 79.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -276,10 +275,10 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 393.0, 660.068048499999918, 102.0, 49.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 633, 640, 975, 1095 ],
+						"client_rect" : [ 1162, 173, 1602, 636 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
-						"storage_rect" : [ 583, 69, 1034, 197 ]
+						"storage_rect" : [ 583, 100, 1520, 798 ]
 					}
 ,
 					"text" : "pattrstorage @greedy 1 @outputmode 1",

@@ -123,6 +123,7 @@ function send_effect_array_(d, track_index)
     outlet(1, "bang");
 }
 send_effect_array_.local = 1;
+
 // ----------------------------------------------------------------
 
 function make_track_key_(track_index)
