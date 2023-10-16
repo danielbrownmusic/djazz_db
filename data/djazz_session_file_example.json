@@ -1,0 +1,63 @@
+{
+    "MIDI_players" : [
+        {
+            "score" : " "
+        ,
+            "tracks" : [
+                {   
+                    "name" : " "
+                    ,
+                    "number" : 1
+                    ,
+                    "effects" : [1, 2, 0, 3]
+                }
+            ,
+                {   
+                    "name" : " "
+                    ,
+                    "number" : 2
+                    ,
+                    "effects" : [3]
+                }
+            ,
+                {   
+                    "name" : " "
+                    ,
+                    "number" : 3
+                    ,
+                    "effects" : [1]
+                }
+            ]
+        }
+    ,
+        {
+            "score" : " "
+        ,
+            "tracks" : [
+                {   
+                    "name" : " "
+                    ,
+                    "number" : 4
+                    ,
+                    "effects" : [1, 2, 0, 3]
+                }
+            ,
+                {   
+                    "name" : " "
+                    ,
+                    "number" : 5
+                    ,
+                    "effects" : [3]
+                }
+            ,
+                {   
+                    "name" : " "
+                    ,
+                    "number" : 6
+                    ,
+                    "effects" : [1]
+                }
+            ]
+        }
+    ]
+}

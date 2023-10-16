@@ -1,0 +1,15 @@
+{
+    "MIDI_players" : 
+    {
+        "1" : {
+            "score" : " "
+            ,
+            "tracks" :
+            {
+                "1" : {
+                    "effects" : []
+                }
+            }
+        }
+    }
+}
