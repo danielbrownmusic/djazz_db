@@ -1,0 +1,45 @@
+{
+    "name"   : "midi_out_1"
+,
+    "tracks" : [
+        {   
+            "name" : "flute"
+            ,
+            "number" : 1
+            ,
+            "effects" : ["", "add octaves"]
+        }
+,
+        {   
+            "name" : "oboe"
+            ,
+            "number" : 2
+            ,
+            "effects" : ["pitch shift"]
+        }
+,
+        {   
+            "name" : "clarinet"
+            ,
+            "number" : 3
+            ,
+            "effects" : []
+        }
+,
+        {   
+            "name" : "french horn"
+            ,
+            "number" : 4
+            ,
+            "effects" : []
+        }
+,
+        {
+            "name" : "bassoon"
+            ,
+            "number" : 5
+            ,
+            "effects" : ["add octaves", "", "", "pitch shift"]            
+        }         
+    ]
+}

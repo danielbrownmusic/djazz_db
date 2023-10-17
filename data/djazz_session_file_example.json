@@ -1,63 +1,21 @@
 {
-    "MIDI_players" : [
-        {
-            "score" : " "
-        ,
-            "tracks" : [
-                {   
-                    "name" : " "
-                    ,
-                    "number" : 1
-                    ,
-                    "effects" : [1, 2, 0, 3]
-                }
-            ,
-                {   
-                    "name" : " "
-                    ,
-                    "number" : 2
-                    ,
-                    "effects" : [3]
-                }
-            ,
-                {   
-                    "name" : " "
-                    ,
-                    "number" : 3
-                    ,
-                    "effects" : [1]
-                }
-            ]
+    "name"              : "session_name"
+,
+    "midi_players"      : {
+        "name_1"      : {
+            "navigate"  : ""
+,
+            "generate"  : ""
+,
+            "midi_out"  : ""
         }
-    ,
-        {
-            "score" : " "
-        ,
-            "tracks" : [
-                {   
-                    "name" : " "
-                    ,
-                    "number" : 4
-                    ,
-                    "effects" : [1, 2, 0, 3]
-                }
-            ,
-                {   
-                    "name" : " "
-                    ,
-                    "number" : 5
-                    ,
-                    "effects" : [3]
-                }
-            ,
-                {   
-                    "name" : " "
-                    ,
-                    "number" : 6
-                    ,
-                    "effects" : [1]
-                }
-            ]
+,
+        "name_2"      : {
+            "navigate"  : ""
+,
+            "generate"  : ""
+,
+            "midi_out"  : ""
         }
-    ]
+    }
 }
