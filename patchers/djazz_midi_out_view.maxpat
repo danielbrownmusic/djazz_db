@@ -41,12 +41,25 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"comment" : "",
+					"id" : "obj-1",
+					"index" : 2,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 141.0, 16.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
 					"id" : "obj-23",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 198.0, 464.0, 30.0, 30.0 ],
+					"patching_rect" : [ 318.0, 200.0, 30.0, 30.0 ],
 					"varname" : "component_msg_outlet"
 				}
 
@@ -55,12 +68,12 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-22",
-					"index" : 0,
+					"index" : 3,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 198.0, 16.0, 30.0, 30.0 ],
+					"patching_rect" : [ 400.0, 16.0, 30.0, 30.0 ],
 					"varname" : "component_msg_inlet"
 				}
 
@@ -69,11 +82,11 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-5",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 21.0, 464.0, 30.0, 30.0 ]
+					"patching_rect" : [ 141.0, 200.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -85,12 +98,12 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 21.0, 339.0, 97.0, 49.0 ],
+					"patching_rect" : [ 141.0, 75.0, 97.0, 49.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 4, 100, 444, 563 ],
+						"client_rect" : [ 1162, 173, 1602, 636 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
-						"storage_rect" : [ 583, 69, 1034, 197 ]
+						"storage_rect" : [ 583, 100, 1520, 798 ]
 					}
 ,
 					"text" : "pattrstorage @greedy 1 @outputmode 5",
@@ -114,7 +127,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-6",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -143,7 +156,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 276.0, 16.0, 201.0, 22.0 ],
+					"patching_rect" : [ 478.0, 16.0, 201.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_ui_midi_out_layout.js",
 						"parameter_enable" : 0
@@ -155,6 +168,13 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-23", 0 ],
 					"order" : 0,
@@ -177,16 +197,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_ui_midi_out_layout.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }
