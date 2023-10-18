@@ -1,21 +1,15 @@
 {
     "name"              : "session_name"
 ,
-    "midi_players"      : {
-        "name_1"      : {
-            "navigate"  : ""
+    "navigation"  : ""
 ,
-            "generate"  : ""
-,
-            "midi_out"  : ""
+    "midi_players"      : [
+        {
+            "score"  : ""
         }
 ,
-        "name_2"      : {
-            "navigate"  : ""
-,
-            "generate"  : ""
-,
-            "midi_out"  : ""
+        {
+            "score"  : ""
         }
-    }
+    ]
 }

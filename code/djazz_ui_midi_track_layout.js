@@ -4,6 +4,12 @@ outlets = 2;
 var track_index = jsarguments[1];
 var effect_slots_  = []
 
+
+function load()
+{}
+*
+
+
 function set_effect_slots()
 {
     var a = arrayfromargs(arguments);
@@ -168,3 +174,14 @@ function set_slot_count_(n)
     }
 }
 set_slot_count_.local = 1; */
+
+
+/* function replace_slot_(i, effect_name)
+{
+    slots_.splice(i, 1);
+    this.patcher.remove(this.patcher.getnamed("effect_" + i.toString()));
+    var slot = make_slot_(i, effect_name);
+    slots_.splice(i, 0, slot);
+}
+replace_slot_.local = 1;
+ */

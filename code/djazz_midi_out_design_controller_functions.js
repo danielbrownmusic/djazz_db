@@ -1,29 +1,3 @@
-/* empty arrays seem to be stored as NULL in dictionaries!!!!!
- arrays inside messages are sent as JS OBJECTS!!!!
- dict keys that are numbers have to be converted to strings to look up their values!!!!
-
- USING ARRAYS AS VALUES FOR KEYS:
- for a dictionary d, track index t, array index i, and value v:
-
-    keys are strings, not numbers
-    array indices are numbers, not strings.
-   
- d.get(t.toString())[i] = v         WORKS
- d.set(t.toString())[i], v)         DOES NOT WORK. YOU MUST JUST REWRITE THE WHOLE FUCKING ARRAY.
-
-An array of one element is stored as an element, not an array. 
-So d.get(key)[0] returns a fucking error.
-You just call d.get(key).
-
-You can't fucking store an array of zero elements. Every key must have non-null value, I guess, and an empty list ([]) is null.
-
-THIS IS WHY I WROTE THESE RIDICULOUS INEFFICIENT HELPER METHODS. 
-THIS SHOULD BE EASY, NOT REALLY COMPLICATED.
-THIS FILE SHOULD BE ABOUT TEN LINES OF CODE, NOT 200.
-AND IT SHOULD BE FUCKING DOCUMENTED.
-FIGURING THIS OUT HAS WASTED A FUCKING WEEK OF MY LIFE IN PARIS.
-*/
-
 
 autowatch = 1;
 outlets = 2;
@@ -39,18 +13,6 @@ function load(dict_name)
         send_effect_array_(d, i);
     }
 }
-
-
-/* function remove_last()
-{
-    var dict_name   = arguments[0];
-    var track_index = arguments[1];
-  
-    var d = new Dict(dict_name);    
-
-    remove_last_(d, track_index);
-    send_effect_array_(d, track_index);
-} */
 
 
 function append()
@@ -204,3 +166,46 @@ remove_trailing_zeroes_.local = 1;
 }
 make_track_subscript_key_.local = 1;
  */
+
+
+
+
+/* empty arrays seem to be stored as NULL in dictionaries!!!!!
+ arrays inside messages are sent as JS OBJECTS!!!!
+ dict keys that are numbers have to be converted to strings to look up their values!!!!
+
+ USING ARRAYS AS VALUES FOR KEYS:
+ for a dictionary d, track index t, array index i, and value v:
+
+    keys are strings, not numbers
+    array indices are numbers, not strings.
+   
+ d.get(t.toString())[i] = v         WORKS
+ d.set(t.toString())[i], v)         DOES NOT WORK. YOU MUST JUST REWRITE THE WHOLE FUCKING ARRAY.
+
+An array of one element is stored as an element, not an array. 
+So d.get(key)[0] returns a fucking error.
+You just call d.get(key).
+
+You can't fucking store an array of zero elements. Every key must have non-null value, I guess, and an empty list ([]) is null.
+
+THIS IS WHY I WROTE THESE RIDICULOUS INEFFICIENT HELPER METHODS. 
+THIS SHOULD BE EASY, NOT REALLY COMPLICATED.
+THIS FILE SHOULD BE ABOUT TEN LINES OF CODE, NOT 200.
+AND IT SHOULD BE FUCKING DOCUMENTED.
+FIGURING THIS OUT HAS WASTED A FUCKING WEEK OF MY LIFE IN PARIS.
+*/
+
+
+
+/* function remove_last()
+{
+    var dict_name   = arguments[0];
+    var track_index = arguments[1];
+  
+    var d = new Dict(dict_name);    
+
+    remove_last_(d, track_index);
+    send_effect_array_(d, track_index);
+} */
+

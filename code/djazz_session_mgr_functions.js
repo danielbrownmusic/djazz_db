@@ -7,7 +7,9 @@ var NAVIGATE        = "navigate";
 var GENERATE        = "generate";
 var MIDI_OUT        = "midi_out";
 
-var CMD_LOAD            = "load";
+var DICTIONARY      = "dictionary";
+
+var CMD_LOAD            = "load_from_dict";
 
 var DATABASE_NAME_PREFIX = "database";
 
@@ -15,7 +17,7 @@ var SEPARATOR_DICT = "::";
 var SEPARATOR_ADDR = " ";
 var SEPARATOR_DATABASE_NAME = "_";
 
-function load_session()
+function load_from_file()
 {
     var dict_name   = arguments[0]; 
     var filename    = arguments[1];
@@ -23,33 +25,46 @@ function load_session()
     var d = new Dict(dict_name);
     d.import_json(filename);
 
-    var player_names = d.get(MIDI_PLAYERS).getkeys();
-    for (var i = 0; i < player_names.length; i++)
+    var file_types = [NAVIGATE, GENERATE, MIDI_OUT];
+
+    for (var i = 0; i < file_types.length; i++)
     {
-        var name = player_names[i];
-        var data = d.get(MIDI_PLAYERS).get(name);
-        make_midi_player_(i, name);
+        var file_type       = file_types[i];
+        var a               = [MIDI_PLAYERS, name, file_type];
+        var key             = a.join(SEPARATOR_DICT);
+        var addr            = a.join(SEPARATOR_ADDR);
+        var database_name   = DATABASE_NAME_PREFIX + SEPARATOR_DATABASE_NAME + a.join(SEPARATOR_DATABASE_NAME);
+        var file_path       = d.get(key);
 
-        var file_types = [NAVIGATE, GENERATE, MIDI_OUT];
+        var msg = [addr, CMD_LOAD, database_name, file_path];
+    }
+}
 
-        for (var i = 0; i < file_types.length; i++)
-        {
-            var file_type       = file_types[i];
-            var a               = [MIDI_PLAYERS, name, file_type];
-            var key             = a.join(SEPARATOR_DICT);
-            var addr            = a.join(SEPARATOR_ADDR);
-            var database_name   = DATABASE_NAME_PREFIX + SEPARATOR_DATABASE_NAME + a.join(SEPARATOR_DATABASE_NAME);
-            var file_path       = d.get(key);
 
-            var msg = [addr, CMD_LOAD, database_name, file_path];
-        }
+function load_from_dict()
+{
+    if (arguments[0] !== "dictionary")
+    {
+        post ("error loading.\n");
+        return;
+    }
+
+    var dict_name   = arguments[1];
+    var d           = new Dict(dict_name);
+
+    for (var i = 0; i < get_array_length(d, MIDI_PLAYERS); i++)
+    {
+        make_midi_player_(i);
+        var addr    = "midi_player_" + i;
+        var msg     = [addr, "load_from_dict", get_at(d, MIDI_PLAYERS, i)];
         outlet(0, msg);
     }
+
 }
 
 //------------------------------------------------------
 
-function make_midi_player_(i, name)
+function make_midi_player_(i)
 {
     var a = 0;  var b = 0;
     var c = 0;  var d = 0;
@@ -57,7 +72,20 @@ function make_midi_player_(i, name)
     var x = a * i + b;
     var y = c + i + d;
 
-    var midi_player = this.patcher.newdefault(x, y, "djazz_midi_player", name);
+    var midi_player = this.patcher.newdefault(x, y, "djazz_midi_player", "midi_player_" + i);
+    this.patcher.connect(this.box, 0, midi_player, 1);
+}
+
+
+function make_midi_player_view_(i)
+{
+    var a = 0;  var b = 0;
+    var c = 0;  var d = 0;
+
+    var x = a * i + b;
+    var y = c + i + d;
+
+    var midi_player = this.patcher.newdefault(x, y, "djazz_midi_player_view", "midi_player_view_" + i);
     this.patcher.connect(this.box, 0, midi_player, 1);
 }
 
