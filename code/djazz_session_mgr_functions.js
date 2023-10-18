@@ -1,6 +1,8 @@
 autowatch = 1;
 
-var mmdu = require("dbdict");
+outlets = 2;
+
+var dutils = require("dictionary_array_utilities");
 
 var MIDI_PLAYERS    = "midi_players";
 var NAVIGATE        = "navigate";
@@ -52,11 +54,11 @@ function load_from_dict()
     var dict_name   = arguments[1];
     var d           = new Dict(dict_name);
 
-    for (var i = 0; i < get_array_length(d, MIDI_PLAYERS); i++)
+    for (var i = 0; i < dutils.get_array_length(d, MIDI_PLAYERS); i++)
     {
         make_midi_player_(i);
         var addr    = "midi_player_" + i;
-        var msg     = [addr, "load_from_dict", get_at(d, MIDI_PLAYERS, i)];
+        var msg     = [addr, "load_from_dict", dutils.get_at(d, MIDI_PLAYERS, i)];
         outlet(0, msg);
     }
 

@@ -7,7 +7,7 @@ var effect_slots_  = []
 
 function load()
 {}
-*
+
 
 
 function set_effect_slots()
@@ -66,42 +66,6 @@ function set_effect_slots_(effect_numbers)
 }
 set_effect_slots_.local = 1;
 
-//--------------------------------------------------------------------------------
-
-
-
-function get_slot_umenu_(i)
-{
-    post ("get_slot_umenu", i.toString(), "\n");
-    post (effect_slots_.length, "\n");
-    post ("slot", i, "is", effect_slots_[i].varname, "\n");
-    return effect_slots_[i].subpatcher().getnamed("effect_umenu");
-}
-get_slot_umenu_.local = 1;
-
-
-function get_slot_number_box_(i)
-{
-    return effect_slots_[i].subpatcher().getnamed("effect_number");
-}
-get_slot_number_box_.local = 1;
-
-
-function get_effect_(i)
-{
-    post ("get effect", i, "returned", get_slot_number_box_(i).value, "\n");
-    return get_slot_number_box_(i).value;
-}
-get_effect_.local = 1;
-
-
-function set_effect_(i, val)
-{
-    post ("setting effect", i.toString(), "\n");
-    get_slot_umenu_(i).message("set", val);
-}
-set_effect_.local = 1;
-
 
 function make_slot_(i)
 {
@@ -130,12 +94,12 @@ function make_slot_(i)
 make_slot_.local = 1;
 
 
-function add_slot_(effect_name)
+function set_effect_(i, val)
 {
-    var slot = make_slot_(effect_slots_.length);
-    effect_slots_.push(slot);
+    post ("setting effect", i.toString(), "\n");
+    get_slot_umenu_(i).message("set", val);
 }
-add_slot_.local = 1;
+set_effect_.local = 1;
 
 
 function remove_last_slot_()
@@ -145,6 +109,49 @@ function remove_last_slot_()
     this.patcher.remove(slot);
 }
 remove_last_slot_.local = 1;
+
+
+function add_slot_(effect_name)
+{
+    var slot = make_slot_(effect_slots_.length);
+    effect_slots_.push(slot);
+}
+add_slot_.local = 1;
+
+//--------------------------------------------------------------------------------
+
+
+function get_slot_umenu_(i)
+{
+    return effect_slots_[i].subpatcher().getnamed("effect_umenu");
+}
+get_slot_umenu_.local = 1;
+
+
+function get_slot_number_box_(i)
+{
+    return effect_slots_[i].subpatcher().getnamed("effect_number");
+}
+get_slot_number_box_.local = 1;
+
+
+function get_effect_(i)
+{
+    return get_slot_number_box_(i).value;
+}
+get_effect_.local = 1;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* 
