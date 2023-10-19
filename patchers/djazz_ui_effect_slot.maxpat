@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 164.0, 757.0, 665.0 ],
+		"rect" : [ 1180.0, 368.0, 757.0, 665.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,19 +39,6 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
-				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 126.0, 247.0, 50.0, 22.0 ],
-					"varname" : "effect_number"
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"id" : "obj-12",
 					"maxclass" : "led",
@@ -89,7 +76,7 @@
 					"patching_rect" : [ 25.0, 103.0, 56.0, 22.0 ],
 					"restore" : 					{
 						"active" : [ 0 ],
-						"effect_number" : [ 0 ]
+						"effect_index" : [ 0 ]
 					}
 ,
 					"text" : "autopattr",
@@ -116,7 +103,7 @@
 					"patching_rect" : [ 126.0, 187.0, 100.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 26.0, 1.0, 100.0, 22.0 ],
-					"varname" : "effect_umenu"
+					"varname" : "effect_index"
 				}
 
 			}
@@ -135,13 +122,6 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"source" : [ "obj-1", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-12", 0 ]
 				}
@@ -151,13 +131,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"source" : [ "obj-3", 0 ]
 				}
 
 			}

@@ -4,7 +4,36 @@ autowatch = 1;
 outlets = 2;
 
 //var track_index = jsarguments[1];
-var effect_slots_  = []
+var effect_slots_  = [];
+var effect_numbers_ = [];
+
+
+/* function getvalueof()
+{
+    return effect_numbers_;
+}
+
+
+function setvalueof(effect_numbers)
+{
+    set_slots_(effect_numbers);
+}
+
+
+function anything()
+{
+    var [slot_name, index_tag] = messagename.split('::');
+    var [slot_tag, slot_index] = slot_name.split('_');
+
+    var effect_number = arguments[0];
+    effect_numbers_[slot_index] = effect_index;
+    trim_effects_();
+    notifyclients();
+} */
+
+//--------------------------------------------------------------------------------
+
+
 
 
 function load_from_dict()
@@ -60,8 +89,21 @@ function set_effect_slots(effect_numbers)
     }    
     add_slot_();
 }
+set_effect_slots_.local = 1;
 
-//--------------------------------------------------------------------------------
+
+
+
+function trim_effects_()
+{
+    for (var i = effect_slots_.length - 1; i >= 0; i++)
+    {
+        if (effect_numbers_[i] > 0)
+            break;
+        remove_last_slot_();
+    }
+}
+trim_effects_.local = 1;
 
 
 function add_slot_(effect_name)

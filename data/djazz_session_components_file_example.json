@@ -1,15 +1,18 @@
 {
-    "midi_players" : [
+    "midi_player_1" :
+    {
+        "components" : 
         {
-            "name"   : "winds"
-        ,
-            "tracks" : [
+            "tracks" : 
+            [
                 {   
                     "name" : "flute"
                     ,
                     "number" : 1
                     ,
-                    "effects" : ["", "add octaves"]
+                    "components" : {
+                        "effects": ["", "add octaves"]
+                    }
                 }
         ,
                 {   
@@ -17,7 +20,9 @@
                     ,
                     "number" : 2
                     ,
-                    "effects" : ["pitch shift"]
+                    "components" : {
+                        "effects": ["", "add octaves"]
+                    }
                 }
         ,
                 {   
@@ -25,7 +30,9 @@
                     ,
                     "number" : 3
                     ,
-                    "effects" : []
+                    "components" : {
+                        "effects": ["", "add octaves"]
+                    }
                 }
         ,
                 {   
@@ -45,53 +52,8 @@
                 }         
             ]
         }
-        ,
-        {
-            "name"   : "strings"
-        ,
-            "tracks" : [
-                {   
-                    "name" : "violin 1"
-                    ,
-                    "number" : 1
-                    ,
-                    "effects" : ["", "add octaves"]
-                }
-        ,
-                {   
-                    "name" : "violin 2"
-                    ,
-                    "number" : 2
-                    ,
-                    "effects" : []
-                }
-        ,
-                {   
-                    "name" : "viola"
-                    ,
-                    "number" : 3
-                    ,
-                    "effects" : []
-                }
-        ,
-                {   
-                    "name" : "cello"
-                    ,
-                    "number" : 4
-                    ,
-                    "effects" : []
-                }
-        ,
-                {
-                    "name" : "contrabass"
-                    ,
-                    "number" : 5
-                    ,
-                    "effects" : ["", "", "pitch shift"]            
-                }         
-            ]
-        }
-    ]
+    }
 }
+
 
 

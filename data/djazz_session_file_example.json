@@ -1,15 +1,16 @@
 {
-    "name"              : "session_name"
-,
-    "navigation"  : ""
-,
-    "midi_players"      : [
-        {
-            "score"  : ""
-        }
-,
-        {
-            "score"  : ""
-        }
-    ]
+    "name"          : "example_session_name"
+    ,
+    "navigation"    : ""
+    ,
+    "components"    : ""
+    ,
+    "presets"       : ""
+    ,    
+    "scores"      : 
+    {
+        "name_of_player_1" : ""
+        ,
+        "name_of_player_2" : ""
+    }
 }
