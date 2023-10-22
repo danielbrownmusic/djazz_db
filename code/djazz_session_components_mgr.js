@@ -77,7 +77,7 @@ autowatch = 1;
 
 outlets = 2;
 
-var dutils = require("dictionary_array_utilities");
+var dutils = require("db_dictionary_array_utils");
 
 var MIDI_PLAYERS    = "midi_players";
 var NAVIGATE        = "navigate";
@@ -95,14 +95,14 @@ var SEPARATOR_ADDR = " ";
 var SEPARATOR_DATABASE_NAME = "_";
 
 
-
+/* 
 function load_from_file()
 {
     var components_file_full_path    = arguments[0];
     var d                            = new Dict();
     d.import_json(components_file_full_path);
 
-/*     d.getkeys().forEach(
+       d.getkeys().forEach(
         function (key)
         {
             var obj = this.patcher.getnamed("key");
@@ -110,7 +110,7 @@ function load_from_file()
             obj_file_mgr.message("load");
         }, 
         this
-    ); */
+    );
 
     var file_types = [NAVIGATE, GENERATE, MIDI_OUT];
 
@@ -126,6 +126,17 @@ function load_from_file()
         var msg = [addr, CMD_LOAD, database_name, file_path];
     }
 }
+ */
+
+
+function load_from_file()
+{
+    var components_file_full_path    = arguments[0];
+    post (components_file_full_path);
+    var d                            = new Dict();
+    d.import_json(components_file_full_path);
+    load_from_dict("dictionary", d.name);
+}
 
 
 function load_from_dict()
@@ -138,15 +149,15 @@ function load_from_dict()
 
     var dict_name   = arguments[1];
     var d           = new Dict(dict_name);
-
-    d.getkeys().forEach(
+    post ("keys = \n");
+    post (d.getkeys());
+    dutils.get_array_of_keys(d).forEach(
         function (key)
         {
-            var obj     = this.patcher.getnamed("key");
-            var mgr     = obj.subpatcher().getnamed("component_mgr");
-            var msg     = "load_from_dict";
-            var args    = d.get(key);
-            mgr.message(msg, args);
+/*             var obj     = this.patcher.getnamed(key);
+            var mgr     = obj.subpatcher().getnamed("tracks");
+ */            var args    = ["dictionary", d.get(key).name];
+            outlet(0, "tracks", args);
         }, 
         this
     );
@@ -165,7 +176,7 @@ function load_from_dict()
 } */
 
 //------------------------------------------------------
-
+/* 
 function make_midi_player_(i)
 {
     var a = 0;  var b = 0;
@@ -192,3 +203,4 @@ function make_midi_player_view_(i)
 }
 
 make_midi_player_.local = 1;
+ */

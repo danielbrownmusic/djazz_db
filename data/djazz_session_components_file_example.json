@@ -1,59 +1,10 @@
 {
-    "midi_player_1" :
-    {
-        "components" : 
-        {
-            "tracks" : 
-            [
-                {   
-                    "name" : "flute"
-                    ,
-                    "number" : 1
-                    ,
-                    "components" : {
-                        "effects": ["", "add octaves"]
-                    }
-                }
-        ,
-                {   
-                    "name" : "oboe"
-                    ,
-                    "number" : 2
-                    ,
-                    "components" : {
-                        "effects": ["", "add octaves"]
-                    }
-                }
-        ,
-                {   
-                    "name" : "clarinet"
-                    ,
-                    "number" : 3
-                    ,
-                    "components" : {
-                        "effects": ["", "add octaves"]
-                    }
-                }
-        ,
-                {   
-                    "name" : "french horn"
-                    ,
-                    "number" : 4
-                    ,
-                    "effects" : []
-                }
-        ,
-                {
-                    "name" : "bassoon"
-                    ,
-                    "number" : 5
-                    ,
-                    "effects" : ["add octaves", "", "", "pitch shift"]            
-                }         
-            ]
-        }
+    "midi_out_1" : {
+        "tracks" : [    { "effects": ["", "add octaves"] },                  
+                        { "effects": ["", "add octaves"] },
+                        { "effects": ["", "add octaves"] },
+                        { "effects" : "" },
+                        { "effects" : ["add octaves", "", "", "pitch shift"] }
+        ]
     }
 }
-
-
-

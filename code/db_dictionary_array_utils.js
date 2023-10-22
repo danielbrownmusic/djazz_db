@@ -74,6 +74,26 @@ post ("foo::bar[0] =", d.get("foo::bar[" + 0 + "]"), "\n");
 */
 
 
+exports.get_array_of_keys = function(d)
+{
+    var entry = d.getkeys();
+
+    if (!entry)
+    {
+        post ("WARNING: get_array_of_keys(", d.name, ") returned NULL.\n")
+        return null;
+    }
+
+    else if (entry === "" || entry === "*")
+        return [];
+
+    else if (Array.isArray(entry) === false)
+        return [entry];
+
+    return entry;
+}
+
+
 exports.make_key = function () 
 {
     return arguments.join("");
@@ -90,7 +110,7 @@ exports.get_array = function (d, key)
         return null;
     }
 
-    else if (["", "*"].includes(entry))
+    else if (entry === "" || entry === "*")
         return [];
 
     else if (d.getsize(key) === 1)
@@ -202,7 +222,7 @@ exports.get_array_length = function (d, key)
         return null;
     }
 
-    else if (["", "*"].includes(entry))
+    else if (entry === "" || entry === "*")
         return 0;
 
     else

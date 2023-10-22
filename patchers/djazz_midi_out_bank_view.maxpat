@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1023.0, 367.0, 1268.0, 585.0 ],
+		"rect" : [ 129.0, 238.0, 771.0, 585.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -41,40 +41,25 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"comment" : "",
-					"id" : "obj-1",
-					"index" : 2,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 141.0, 16.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-23",
+					"id" : "obj-13",
 					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 318.0, 200.0, 30.0, 30.0 ],
-					"varname" : "component_msg_outlet"
+					"patching_rect" : [ 345.0, 364.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"comment" : "",
-					"id" : "obj-22",
-					"index" : 3,
+					"id" : "obj-12",
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 400.0, 16.0, 30.0, 30.0 ],
-					"varname" : "component_msg_inlet"
+					"patching_rect" : [ 88.0, 16.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -86,7 +71,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 141.0, 200.0, 30.0, 30.0 ]
+					"patching_rect" : [ 21.0, 330.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -98,12 +83,12 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 141.0, 75.0, 97.0, 49.0 ],
+					"patching_rect" : [ 21.0, 205.0, 97.0, 49.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 1162, 173, 1602, 636 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
-						"storage_rect" : [ 583, 69, 1034, 197 ]
+						"storage_rect" : [ 583, 100, 1520, 798 ]
 					}
 ,
 					"text" : "pattrstorage @greedy 1 @outputmode 5",
@@ -160,28 +145,28 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 478.0, 16.0, 275.0, 22.0 ],
+					"patching_rect" : [ 274.0, 69.0, 215.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_midi_out_bank_view_components_mgr.js",
+						"filename" : "djazz_midi_out_bank_view_tracks.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_midi_out_bank_view_components_mgr.js",
-					"varname" : "component_mgr"
+					"text" : "js djazz_midi_out_bank_view_tracks.js",
+					"varname" : "tracks"
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
-					"source" : [ "obj-1", 0 ]
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-12", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-23", 0 ],
+					"destination" : [ "obj-13", 0 ],
 					"order" : 0,
 					"source" : [ "obj-4", 0 ]
 				}
