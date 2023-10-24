@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 100.0, 585.0, 490.0 ],
+		"rect" : [ 34.0, 100.0, 1113.0, 746.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,54 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "dict.view",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 176.0, 104.0, 170.0, 164.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "led",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"offcolor" : [ 0.0, 0.545098039215686, 0.545098039215686, 1.0 ],
+					"oncolor" : [ 0.0, 0.886274509803922, 1.0, 1.0 ],
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 64.0, 0.0, 64.0, 64.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 64.0, 0.0, 64.0, 64.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "led",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"offcolor" : [ 0.545098039215686, 0.0, 0.0, 1.0 ],
+					"oncolor" : [ 1.0, 0.0, 0.0, 1.0 ],
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 0.0, 0.0, 64.0, 64.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 0.0, 64.0, 64.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-30",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 13.0, 14.0, 218.0, 22.0 ],
+					"patching_rect" : [ 176.0, 22.0, 218.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_midi_out_track_view_effects.js",
 						"parameter_enable" : 0
@@ -63,7 +105,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 266.0, 14.0, 56.0, 22.0 ],
+					"patching_rect" : [ 439.0, 22.0, 56.0, 22.0 ],
 					"restore" : 					{
 
 					}
@@ -73,17 +115,33 @@
 				}
 
 			}
- ],
-		"lines" : [  ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_midi_out_track_view_effects.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
+, 			{
+				"box" : 				{
+					"angle" : 270.0,
+					"background" : 1,
+					"bgcolor" : [ 0.474509803921569, 0.474509803921569, 0.482352941176471, 1.0 ],
+					"id" : "obj-3",
+					"maxclass" : "panel",
+					"mode" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 0.0, 66.0, 128.0, 192.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 64.0, 128.0, 192.0 ],
+					"proportion" : 0.5,
+					"varname" : "effects_panel"
+				}
+
 			}
  ],
-		"autosave" : 0
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"source" : [ "obj-30", 0 ]
+				}
+
+			}
+ ]
 	}
 
 }

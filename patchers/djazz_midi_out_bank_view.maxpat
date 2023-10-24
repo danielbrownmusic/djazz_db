@@ -46,7 +46,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 345.0, 364.0, 30.0, 30.0 ]
+					"patching_rect" : [ 246.0, 182.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -59,7 +59,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 88.0, 16.0, 30.0, 30.0 ]
+					"patching_rect" : [ 246.0, 16.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -71,7 +71,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 21.0, 330.0, 30.0, 30.0 ]
+					"patching_rect" : [ 110.0, 182.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -83,7 +83,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 21.0, 205.0, 97.0, 49.0 ],
+					"patching_rect" : [ 110.0, 16.0, 97.0, 49.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 1162, 173, 1602, 636 ],
 						"parameter_enable" : 0,
@@ -103,7 +103,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 21.0, 77.0, 53.0, 22.0 ],
+					"patching_rect" : [ 21.0, 102.0, 53.0, 22.0 ],
 					"text" : "pattrhub"
 				}
 
@@ -128,7 +128,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 21.0, 142.0, 56.0, 22.0 ],
+					"patching_rect" : [ 21.0, 153.0, 56.0, 22.0 ],
 					"restore" : 					{
 
 					}
@@ -145,7 +145,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 274.0, 69.0, 215.0, 22.0 ],
+					"patching_rect" : [ 246.0, 102.0, 215.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_midi_out_bank_view_tracks.js",
 						"parameter_enable" : 0
@@ -159,7 +159,7 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
+					"destination" : [ "obj-308", 0 ],
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -167,15 +167,13 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
-					"order" : 0,
-					"source" : [ "obj-4", 0 ]
+					"source" : [ "obj-308", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
-					"order" : 1,
 					"source" : [ "obj-4", 0 ]
 				}
 

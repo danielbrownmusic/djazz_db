@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 53.0, 139.0, 1072.0, 839.0 ],
+		"rect" : [ 1043.0, 101.0, 636.0, 485.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,19 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"items" : "<empty>",
+					"maxclass" : "umenu",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 392.0, 442.0, 100.0, 22.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-68",
 					"maxclass" : "newobj",
@@ -4561,7 +4574,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 75.416690282914942, 558.480456837635757, 119.0, 22.0 ],
+					"patching_rect" : [ 121.416690282914942, 557.480456837635757, 119.0, 22.0 ],
 					"text" : "djazz_navigate_view",
 					"varname" : "djazz_navigate_view"
 				}
@@ -4585,7 +4598,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 492.360204436951108, 561.909603128159233, 152.0, 22.0 ],
+					"patching_rect" : [ 454.360204436951108, 547.909603128159233, 152.0, 22.0 ],
 					"text" : "djazz_midi_out_bank_view",
 					"varname" : "midi_out_1"
 				}
@@ -4755,7 +4768,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-77", 0 ],
+					"destination" : [ "obj-77", 1 ],
 					"source" : [ "obj-23", 0 ]
 				}
 
@@ -4856,31 +4869,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-75", 0 ],
-					"midpoints" : [ 501.860204436951108, 697.430197766101173, 472.860204436951108, 697.430197766101173, 472.860204436951108, 550.909603128159233, 501.860204436951108, 550.909603128159233 ],
+					"midpoints" : [ 501.860204436951108, 697.430197766101173, 472.860204436951108, 697.430197766101173, 472.860204436951108, 550.909603128159233, 463.860204436951108, 550.909603128159233 ],
 					"source" : [ "obj-67", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-37", 1 ],
-					"order" : 0,
-					"source" : [ "obj-68", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-67", 2 ],
-					"order" : 2,
-					"source" : [ "obj-68", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-75", 1 ],
-					"order" : 1,
 					"source" : [ "obj-68", 0 ]
 				}
 
@@ -4918,7 +4914,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-68", 0 ],
-					"midpoints" : [ 634.860204436951108, 586.909599128159243, 637.860204436951108, 586.909599128159243, 637.860204436951108, 453.909599128159243, 666.860204436951108, 453.909599128159243 ],
+					"midpoints" : [ 596.860204436951108, 586.909599128159243, 653.860204436951108, 586.909599128159243, 653.860204436951108, 453.909599128159243, 666.860204436951108, 453.909599128159243 ],
 					"source" : [ "obj-75", 1 ]
 				}
 
@@ -4933,7 +4929,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-23", 0 ],
-					"midpoints" : [ 84.916690282914942, 697.430197766101173, 52.916690282914942, 697.430197766101173, 52.916690282914942, 543.480460837635746, 84.916690282914942, 543.480460837635746 ],
+					"midpoints" : [ 84.916690282914942, 697.430197766101173, 52.916690282914942, 697.430197766101173, 52.916690282914942, 543.480460837635746, 130.916690282914942, 543.480460837635746 ],
 					"source" : [ "obj-77", 0 ]
 				}
 
@@ -5287,6 +5283,20 @@
 			}
 , 			{
 				"name" : "djazz_midi_out_design_controller_functions.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_midi_out_track_view.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_midi_out_track_view_effects.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",

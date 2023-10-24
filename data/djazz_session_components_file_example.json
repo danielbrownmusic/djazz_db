@@ -1,10 +1,41 @@
 {
-    "midi_out_1" : {
-        "tracks" : [    { "effects": ["", "add octaves"] },                  
-                        { "effects": ["", "add octaves"] },
-                        { "effects": ["", "add octaves"] },
-                        { "effects" : "" },
-                        { "effects" : ["add octaves", "", "", "pitch shift"] }
-        ]
-    }
+    "tracks" : [    { 
+            "effects": [    {
+                    "name" : "", 
+                    "active" : 1
+                }
+                ,
+                {
+                    "name" : "add octaves",
+                    "active" : 1
+                }
+            ]
+        }
+        ,
+        { 
+            "effects": [    {
+                    "name" : "", 
+                    "active" : 1
+                }
+                ,
+                {
+                    "name" : "add octaves",
+                    "active" : 1
+                }
+            ]
+        }
+        ,
+        { 
+            "effects": [    {
+                    "name" : "", 
+                    "active" : 1
+                }
+                ,
+                {
+                    "name" : "add octaves",
+                    "active" : 1
+                }
+            ]
+        }
+    ]
 }
