@@ -125,6 +125,7 @@ exports.set_array = function (d, key, a)
     if (a.length === 0)
     {
         d.set(key);
+
     }
     else if (a.length === 1)
     {
@@ -134,7 +135,7 @@ exports.set_array = function (d, key, a)
     {
         d.set(key, a);
     }
-    return get_array(d, key);
+    return true;
 }
 
 
@@ -163,10 +164,13 @@ exports.set_at = function (d, key, index, value)
         return null;
     }
 
-    var a = get_array(d, key);
+    var indexed_key = key + "[" + index.toString() + "]";
+    d.set(indexed_key, value)
+    return true;
+/*     var a = get_array(d, key);
     a[index] = value;
     return set_array(d, key, a);
-}
+ */}
 
 
 exports.clear_entry = function (d, key)
