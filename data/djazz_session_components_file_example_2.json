@@ -1,0 +1,18 @@
+{
+    "tracks" : [    { 
+            "effects": [ "add octaves", "", "pitch shift"]
+        }
+        ,
+        { 
+            "effects": [ "pitch shift"]
+        }
+        ,
+        { 
+            "effects": [ "", "pitch shift"]
+        }
+        ,
+        { 
+            "effects": []
+        }
+    ]
+}

@@ -7,21 +7,16 @@ var track_listeners_ = [];
 
 function on_track_listener_changed(data)
 {
-    for (var i = 0; i < track_listeners_.length; i++)
-    {
-        if (data.listener == track_listeners_[i])
-        {
-            post ("in bank-- track", i, "changed to", value, "\n");
-            var msg = ["tracks", i, data.value];
-            outlet (0, msg);
-        } 
-    }
+    var i   = track_listeners_.indexOf(data.listener);
+    var msg = ["tracks", i, data.value];
+    outlet (0, msg);
 }
 
 
-function set_track(i, dict_name)
+function set_track(i, effect_array)
 {
-    track_listeners_[i].setvalue_silent(dict_name);
+    post ("setting track \n");
+    track_listeners_[i].setvalue_silent(effect_array);
 }
 
 
@@ -42,6 +37,7 @@ function set_tracks(tracks_dict_name, menus_dict_name)
 
 function add_track_(menus_dict_name, effects_dict_name)
 {
+    post ("making track.\n");
     var i = track_listeners_.length;
 
     var a = 22;
@@ -80,12 +76,21 @@ function add_track_(menus_dict_name, effects_dict_name)
                                     "@presentation_rect",   presentation_rect
                                     );
 
+    post ("made track\n");
+
+
     var track_effects   = track.subpatcher().getnamed("effects");
-    track_effects.message("set_menus", menus_dict_name);
+    track_effects.message("set_effect_menu_items", menus_dict_name);
 
+    post ("making listener \n");
+    var d               = new Dict (effects_dict_name);
+    var effect_array    = dutils.get_array(d, "effects");
     var listener        = new MaxobjListener(track_effects, on_track_listener_changed);
-    listener.setvalue_silent(effects_dict_name);
-
+    post ("made listener \n");
+    post ("setting menus. \n");
+    post ("setting listener value silent. \n");
+    listener.setvalue_silent(effect_array);
+    post ("set listener value silent. \n");
     track_listeners_.push(listener);
 
     return listener;

@@ -19,14 +19,18 @@ function tracks()
     var i = arguments[0];
     var d = arguments[1];
 
-    var effect_array = dutils.get_array(d, "effects");
+    post (i);
+    post (d);
+
+
+/*     var effect_array = dutils.get_array(d, "effects");
     d.set("effects", trim_(effect_array));
     dutils.set_at(tracks_dict, "tracks", i, d);
     outlet(0, "set_track", i, tracks_dict.get("tracks")[i].name);
-}
+ */}
 
 
-function trim_(effect_array)
+/* function trim_(effect_array)
 {
     var n = effect_array.length - 1;
     for (var i = n; i >= 0; i--)
@@ -37,4 +41,4 @@ function trim_(effect_array)
         effect_dict.pop();
     }
 }
-trim_.local = 1;
+trim_.local = 1; */

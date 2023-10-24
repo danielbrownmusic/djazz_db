@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -77,7 +77,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 176.0, 22.0, 218.0, 22.0 ],
+					"patching_rect" : [ 190.333333333333314, 92.0, 218.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_midi_out_track_view_effects.js",
 						"parameter_enable" : 0
@@ -95,14 +95,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 439.0, 22.0, 56.0, 22.0 ],
-					"restore" : 					{
-						"effects" : [ 							{
-								"effects" : ""
-							}
- ]
-					}
-,
+					"patching_rect" : [ 178.0, 17.0, 56.0, 22.0 ],
 					"text" : "autopattr",
 					"varname" : "u758005487"
 				}
@@ -127,7 +120,14 @@
 
 			}
  ],
-		"lines" : [  ],
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-30", 0 ],
+					"source" : [ "obj-7", 1 ]
+				}
+
+			}
+ ],
 		"dependency_cache" : [ 			{
 				"name" : "db_dictionary_array_utils.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
