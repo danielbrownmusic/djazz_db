@@ -17,17 +17,17 @@ function load_from_dict(dict_name)
 function tracks()
 {
     var i = arguments[0];
-    var d = arguments[1];
+    var effect_name_array = arguments[1];
 
     post (i);
-    post (d);
+    post (effect_name_array);
 
+    var name = tracks_dict.get("tracks")[i].name;
+    var d = new Dict (name);
+    dutils.set_dict_array(d, "effects", effect_name_array);
 
-/*     var effect_array = dutils.get_array(d, "effects");
-    d.set("effects", trim_(effect_array));
-    dutils.set_at(tracks_dict, "tracks", i, d);
-    outlet(0, "set_track", i, tracks_dict.get("tracks")[i].name);
- */}
+    outlet(0, "set_track", i, dutils.get_dict_array(d, "effects"));
+ }
 
 
 /* function trim_(effect_array)

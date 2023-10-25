@@ -1,5 +1,9 @@
 /*
 
+
+MAXOBJLISTENERS HANG AROUND UNTIL THE GC PICKS THEM UP. IF THEY ARE POPPED FROM AN ARRAY, THEY BECOME UNDETECTABLE, BUT STILL OPERATE FOR A LITTLE WHILE.
+
+
 JS require: if you change something in a required file, you must re-require it in any files that use it. For autowatched files, make a change in the require declaration, fix the change manually, then save the file. 
 
 

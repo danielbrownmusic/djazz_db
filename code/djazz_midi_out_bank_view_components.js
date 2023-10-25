@@ -8,6 +8,8 @@ var track_listeners_ = [];
 function on_track_listener_changed(data)
 {
     var i   = track_listeners_.indexOf(data.listener);
+    post ("on_track_listener_changed:\n");
+    post ("   - track index =", i, "\n");
     var msg = ["tracks", i, data.value];
     outlet (0, msg);
 }
@@ -37,8 +39,8 @@ function set_tracks(tracks_dict_name, menus_dict_name)
 
 function add_track_(menus_dict_name, effects_dict_name)
 {
-    post ("\n");
-    post ("<<<< MAKING TRACK >>>> \n");
+    //post ("\n");
+    //post ("<<<< MAKING TRACK >>>> \n");
     var i = track_listeners_.length;
 
     var a = 22;
@@ -86,7 +88,7 @@ function add_track_(menus_dict_name, effects_dict_name)
     //post ("making listener \n");
     var d               = new Dict (effects_dict_name);
     var effect_array    = dutils.get_dict_array(d, "effects");
-    post ("effects:\n");
+/*     post ("effects:\n");
     if (effect_array.length === 0)
     {
         post ("[] - no effects! \n");
@@ -94,11 +96,11 @@ function add_track_(menus_dict_name, effects_dict_name)
     for (var post_index = 0; post_index < effect_array.length; post_index++)
     {
         post (effect_array[post_index]);
-    }
+    } */
     var listener        = new MaxobjListener(track_effects, on_track_listener_changed);
     //post ("made listener \n");
     //post ("setting menus. \n");
-    //post ("setting listener value silent. \n");
+    post ("setting listener value silent. \n");
     effect_array = dutils.make_sendable_array(effect_array);
     listener.setvalue_silent(effect_array);
     //post ("set listener value silent. \n");

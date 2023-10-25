@@ -101,29 +101,29 @@ exports.get_array = function (a)
 
     if (Array.isArray(a) && a.length === 0)
     {
-        post ("DUTILS: Entry is []\n");
+        //post ("DUTILS: Entry is []\n");
         return [];
     }
 
     else if (a === EMPTY_STRING || a === EMPTY_ARRAY_TOKEN)
     {
-        post ("DUTILS: Entry is empty token.\n");
+        //post ("DUTILS: Entry is empty token.\n");
         return [];
     }
 
     else if (!a)
     {
-        post ("DUTILS: Entry exists and is NULL! Converting tp empty array.\n");
+        //post ("DUTILS: Entry exists and is NULL! Converting tp empty array.\n");
         return [];
     }
 
     else if (!Array.isArray(a) && [a].length === 1)
     {
-        post ("DUTILS: Entry is a single atom. \n");
+        //post ("DUTILS: Entry is a single atom. \n");
         return [a];
     }
 
-    post ("DUTILS: SEntry is an actual array.\n");
+    //post ("DUTILS: SEntry is an actual array.\n");
     return a;
 }
 
@@ -171,29 +171,29 @@ exports.get_dict_array = function (d, key)
 
     if (Array.isArray(entry) && entry.length === 0)
     {
-        post ("DUTILS: Entry is []\n");
+        //post ("DUTILS: Entry is []\n");
         return [];
     }
 
     else if (entry === EMPTY_STRING || entry === EMPTY_ARRAY_TOKEN)
     {
-        post ("DUTILS: Entry is empty token.\n");
+        //post ("DUTILS: Entry is empty token.\n");
         return [];
     }
 
     else if (!entry)
     {
-        post ("DUTILS: Entry exists and is NULL! Converting tp empty array.\n");
+        //post ("DUTILS: Entry exists and is NULL! Converting tp empty array.\n");
         return [];
     }
 
     else if (d.getsize(key) === 1)
     {
-        post ("DUTILS: Entry is a single atom. \n");
+        //post ("DUTILS: Entry is a single atom. \n");
         return [entry];
     }
 
-    post ("DUTILS: SEntry is an actual array.\n");
+    //post ("DUTILS: SEntry is an actual array.\n");
     return entry;
 }
 

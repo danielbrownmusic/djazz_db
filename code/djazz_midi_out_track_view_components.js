@@ -12,8 +12,15 @@ var effect_number_listeners_ = [];
 
 function on_effect_number_box_changed(data)
 {
-    post ("in track--some effect listener has changed.\n");
-    notifyclients();
+    var i = effect_number_listeners_.indexOf(data.listener);
+
+ /*   post ();
+    post ("   - listener value:", data.value, "\n");
+    post ("   notifying track_listener in bank.\n");
+ */    if (i !== -1)
+    {     post ("   - listener index:", i, "just popped off to", data.value, "\n");
+        notifyclients();
+    }
 }
 
 
@@ -39,13 +46,13 @@ function setvalueof()
     {
         effect_name_array = dutils.get_array(arrayfromargs(arguments));
     }
-    post ("setting effects value\n");
+/*     post ("setting effects value\n");
     post ("effects:\n");
     for (var i = 0; i < effect_name_array.length; i++)
     {
         post (effect_name_array[i]);
     }
-    post ("\n");
+    post ("\n"); */
     set_effect_slots_(effect_name_array);
 }
 
@@ -67,12 +74,13 @@ function set_effect_slots_(effect_name_array)
     //var effect_array = dutils.get_array("effects");
     var l_old   = effect_slots_.length;
     var l_new   = effect_name_array.length;
-    mlog ("l old", l_old);
-    mlog ("l_new", l_new);
+/*     mlog ("l old", l_old);
+    mlog ("l_new", l_new); */
     for (var i = 0; i < Math.min(l_old, l_new); i++)
     {
         var effect_number = get_effect_number_(effect_name_array[i]);
-        effect_number_listeners_[i].setvalue_silent([effect_number, 1]);
+        post ("1 - setting listener", i, "value silent to", effect_number, ". \n");
+        effect_number_listeners_[i].setvalue_silent(effect_number);
     }
 
     if (l_old < l_new)
@@ -86,6 +94,7 @@ function set_effect_slots_(effect_name_array)
             effect_number_listeners_.push(listener);
 
             var effect_number = get_effect_number_(effect_name_array[i]);
+            post ("2 - setting listener", i, "value silent to", effect_number, ". \n");
             listener.setvalue_silent(effect_number);
         }
     }
@@ -100,6 +109,10 @@ function set_effect_slots_(effect_name_array)
 
     var slot = make_slot_();
     effect_slots_.push(slot);
+    var listener = make_listener_(slot);
+    effect_number_listeners_.push(listener);
+    post ("3 - setting listener", effect_number_listeners_.length - 1, "value silent to", 0, ". \n");
+    listener.setvalue_silent(0);
 }
 
 set_effect_slots_.local = 1;
@@ -116,8 +129,10 @@ remove_last_slot_.local = 1;
 function remove_last_listener_()
 {   
     var listener = effect_number_listeners_.pop();
-    listener.maxobject = null;
-}
+    listener = null;
+/*     listener.maxobject = null;
+    listener.silent = 1;
+ */}
 remove_last_listener_.local = 1;
 
 
@@ -159,6 +174,7 @@ make_slot_.local = 1;
 function make_listener_(effect_slot)
 {
     var effect_number_box       = effect_slot.subpatcher().getnamed("effect_number");
+    post("making listener.\n");
     var effect_number_listener  = new MaxobjListener(effect_number_box, on_effect_number_box_changed);
     return effect_number_listener;
 }
@@ -175,6 +191,8 @@ get_effect_number_.local = 1;
 
 function get_effect_name_(effect_number)
 {
+    var effect_name = effect_menu_items_dict_.get("items")[effect_number];
+    //post ("effect name for", effect_number, "is", effect_name, "\n");
     return effect_menu_items_dict_.get("items")[effect_number];
 }
 get_effect_name_.local = 1;
@@ -182,14 +200,15 @@ get_effect_name_.local = 1;
 
 function get_listener_effect_name_(listener)
 {
-    return get_effect_name_(listener.value);
+    //post ("listener value =", listener.getvalue(), "\n");
+    return get_effect_name_(listener.getvalue());
 }
 get_listener_effect_name_.local = 1;
 
 
 function get_effect_name_array_()
 {
-    return effect_number_listeners_.map(get_effect_name_);
+    return effect_number_listeners_.map(get_listener_effect_name_);
 }
 get_effect_name_array_.local = 1;
 
