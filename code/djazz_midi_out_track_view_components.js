@@ -129,9 +129,10 @@ remove_last_slot_.local = 1;
 function remove_last_listener_()
 {   
     var listener = effect_number_listeners_.pop();
+    listener.silent = 1;
     listener = null;
 /*     listener.maxobject = null;
-    listener.silent = 1;
+
  */}
 remove_last_listener_.local = 1;
 
