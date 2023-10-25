@@ -74,7 +74,64 @@ post ("foo::bar[0] =", d.get("foo::bar[" + 0 + "]"), "\n");
 */
 
 
-exports.get_array_of_keys = function(d)
+var EMPTY_ARRAY_TOKEN = "*";
+var EMPTY_STRING = "";
+
+exports.EMPTY_ARRAY_TOKEN = EMPTY_ARRAY_TOKEN;
+exports.EMPTY_STRING = EMPTY_STRING;
+
+
+exports.make_sendable_array = function (a)
+{
+    if (!a)
+        return EMPTY_ARRAY_TOKEN;  // should we do this? Or should we return null?
+    if (Array.isArray(a))
+    {
+        if (a.length === 0)
+            return EMPTY_ARRAY_TOKEN;
+        return a;
+    } 
+    return [a];
+}
+
+
+
+exports.get_array = function (a)
+{
+
+    if (Array.isArray(a) && a.length === 0)
+    {
+        post ("DUTILS: Entry is []\n");
+        return [];
+    }
+
+    else if (a === EMPTY_STRING || a === EMPTY_ARRAY_TOKEN)
+    {
+        post ("DUTILS: Entry is empty token.\n");
+        return [];
+    }
+
+    else if (!a)
+    {
+        post ("DUTILS: Entry exists and is NULL! Converting tp empty array.\n");
+        return [];
+    }
+
+    else if (!Array.isArray(a) && [a].length === 1)
+    {
+        post ("DUTILS: Entry is a single atom. \n");
+        return [a];
+    }
+
+    post ("DUTILS: SEntry is an actual array.\n");
+    return a;
+}
+
+
+
+
+
+exports.get_dict_array_of_keys = function(d)
 {
     var entry = d.getkeys();
 
@@ -94,33 +151,54 @@ exports.get_array_of_keys = function(d)
 }
 
 
-exports.make_key = function () 
+exports.make_dict_key = function () 
 {
     return arguments.join("");
 }
 
 
-exports.get_array = function (d, key)
+exports.get_dict_array = function (d, key)
 {
-    var entry = d.get(key);
+    var contains = d.contains(key);
 
-    if (!entry)
+    if (contains === 0)
     {
-        post ("WARNING: get_array(", d.name, ", ", key, ") returned NULL.\n")
+        post ("DUTILS WARNING: get_array(", d.name, ", ", key, ") returned NULL.\n")
         return null;
     }
 
-    else if (entry === "" || entry === "*")
+    var entry = d.get(key);
+
+    if (Array.isArray(entry) && entry.length === 0)
+    {
+        post ("DUTILS: Entry is []\n");
         return [];
+    }
+
+    else if (entry === EMPTY_STRING || entry === EMPTY_ARRAY_TOKEN)
+    {
+        post ("DUTILS: Entry is empty token.\n");
+        return [];
+    }
+
+    else if (!entry)
+    {
+        post ("DUTILS: Entry exists and is NULL! Converting tp empty array.\n");
+        return [];
+    }
 
     else if (d.getsize(key) === 1)
+    {
+        post ("DUTILS: Entry is a single atom. \n");
         return [entry];
+    }
 
+    post ("DUTILS: SEntry is an actual array.\n");
     return entry;
 }
 
 
-exports.set_array = function (d, key, a)
+exports.set_dict_array = function (d, key, a)
 {
     if (a.length === 0)
     {
@@ -140,11 +218,11 @@ exports.set_array = function (d, key, a)
 
 
 
-exports.get_at = function (d, key, index)
+exports.get_dict_array_at = function (d, key, index)
 {
-    var is_in = d.contains(key);
+    var contains = d.contains(key);
 
-    if (!is_in)
+    if (contains === 0)
     {
         post ("WARNING: get_subscript(", d.name, ", ", key, ", ", index, ") called on an array which is null. Null returned.\n")
         return null;
@@ -154,11 +232,11 @@ exports.get_at = function (d, key, index)
 }
 
 
-exports.set_at = function (d, key, index, value)
+exports.set_dict_array_at = function (d, key, index, value)
 {
-    var is_in = d.contains(key);
+    var contains = d.contains(key);
 
-    if (!is_in)
+    if (contains === 0)
     {
         post ("WARNING: set_subscript(", d.name, ", ", key, ", ", index, ") called on a nonexistent key. Nothing done. Null returned.\n")
         return null;
@@ -173,17 +251,17 @@ exports.set_at = function (d, key, index, value)
  */}
 
 
-exports.clear_entry = function (d, key)
+exports.clear_dict_entry = function (d, key)
 {
     d.set(key);
 }
 
 
-exports.remove_from_array = function (d, key, index)
+exports.remove_from_dict_array = function (d, key, index)
 {
-    var is_in = d.contains(key);
+    var contains = d.contains(key);
 
-    if (!is_in)
+    if (contains === 0)
     {
         post ("WARNING: remove_from_array(", d.name, ", ", key, ", ", index, ") called on a nonexistent key. Nothing done. Null returned.\n")
         return null;
@@ -195,11 +273,11 @@ exports.remove_from_array = function (d, key, index)
 }
 
 
-exports.trim_array = function (d, key, value)
+exports.trim_dict_array = function (d, key, value)
 {
-    var is_in = d.contains(key);
+    var contains = d.contains(key);
 
-    if (!is_in)
+    if (contains === 0)
     {
         post ("WARNING: trim_array(", d.name, ", ", key, ", ", value, ") called on a nonexistent key. Nothing done. Null returned.\n")
         return null;
@@ -216,17 +294,22 @@ exports.trim_array = function (d, key, value)
 }
 
 
-exports.get_array_length = function (d, key)
+exports.get_dict_array_length = function (d, key)
 {
-    var entry = d.get(key);
+    var contains = d.contains(key);
 
-    if (!entry)
+    if (contains === 0)
     {
         post ("WARNING: get_array_length(", d.name, ", ", key, ") returned NULL.\n")
         return null;
     }
 
-    else if (entry === "" || entry === "*")
+    var entry = d.get(key);
+
+    if (Array.isArray(entry) && entry.length === 0)
+        return 0;
+
+    if (entry === "" || entry === "*")
         return 0;
 
     else
@@ -235,11 +318,11 @@ exports.get_array_length = function (d, key)
 
 
 
-exports.is_array_empty = function (d, key)
+exports.is_dict_array_empty = function (d, key)
 {
-    var is_in = d.contains(key);
+    var contains = d.contains(key);
 
-    if (!is_in)
+    if (contains === 0)
     {
         post ("WARNING: get_arrayis_array_empty_length(", d.name, ", ", key, ") called on a nonexistent key. Null returned.\n")
         return null;

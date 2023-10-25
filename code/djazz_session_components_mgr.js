@@ -1,4 +1,38 @@
 /*
+
+JS require: if you change something in a required file, you must re-require it in any files that use it. For autowatched files, make a change in the require declaration, fix the change manually, then save the file. 
+
+
+
+Sending arrays in js:
+
+to objects and objectlisteners, as well as just object messages, you can use arrayfromargs(arguments) to get variable numbers of passed arguments.
+BUT
+if you are expressly passing an array, it will be passed as a bunch of arguments that you must use the function arrayfrom arguments to receive.
+
+Otherwise, the argument received will just be the first element of the array.
+
+example: function f sends [1, 2, 3, 4] to function g
+function g receives 1, 2, 3, 4.
+if function g is defined as function g(arg), expecting arg to be an array, it will not work. 
+In this case, arg = 1.
+arrayfromargs(arg) = [1, 2, 3, 4]
+
+Ok fine. BUT:
+
+Empty arrays are NOT received!
+
+If f sends [] to g, g will NOT be called. 
+
+You could use a placekeeper like Max uses for arrays in dicts, like sending "*".
+Then you have to check if arg = "*", and if it does, convert that to []. Otherwise, take arrayfromargs.
+And be sure not to use arrayfromargs BEFORE checking if it's a placeholder! Because the, of course, you'll be looking at ["*"].
+*/
+
+
+
+
+/*
 Basic Javascript programming: Global Methods
 notifyclients
 Notifies any clients (such as the pattr family of objects), that the object’s current value has
