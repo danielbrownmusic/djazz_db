@@ -14,19 +14,10 @@ function load_from_dict(dict_name)
 }
 
 
-function tracks()
+function set_effects(track_index, effects_dict_name)
 {
-    var i = arguments[0];
-    var effect_name_array = arguments[1];
-
-    post (i);
-    post (effect_name_array);
-
-    var name = tracks_dict.get("tracks")[i].name;
-    var d = new Dict (name);
-    dutils.set_dict_array(d, "effects", effect_name_array);
-
-    outlet(0, "set_track", i, dutils.get_dict_array(d, "effects"));
+    dutils.set_dict_array_at(tracks_dict, "tracks", track_index, new Dict(effects_dict_name));
+    outlet(0, "effects", track_index, effects_dict_name);
  }
 
 

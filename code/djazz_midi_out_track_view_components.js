@@ -3,57 +3,25 @@ var dutils = require("db_dictionary_array_utils");
 autowatch = 1;
 outlets = 2;
 
-
-var effect_menu_items_dict_;
-
+var effect_menu_items_dict_ = null;
 var effect_slots_ = [];
-var effect_number_listeners_ = [];
 
+//var effect_number_listeners_ = [];
 
-function on_effect_number_box_changed(data)
+/* function getvalueof()
 {
-    var i = effect_number_listeners_.indexOf(data.listener);
-
- /*   post ();
-    post ("   - listener value:", data.value, "\n");
-    post ("   notifying track_listener in bank.\n");
- */    if (i !== -1)
-    {     post ("   - listener index:", i, "just popped off to", data.value, "\n");
-        notifyclients();
-    }
-}
-
-
-function getvalueof()
-{
-    //var d = new Dict();
-    //var effect_array = effect_number_listeners_.map(listener_to_dict_);
-    //dutils.set_array(d, "effects", effect_array);
-    //return d;
-    //post ("getting value of effect list with", effect_number_listeners_.length, "listeners. \n");
     return trim_(get_effect_name_array_());
-}
+} */
 
 
 function setvalueof()
 {
-    var effect_name_array = null;
-    if (arguments[0] === dutils.EMPTY_ARRAY_TOKEN)
-    {
-        effect_name_array = [];
-    }
-    else
-    {
-        effect_name_array = dutils.get_array(arrayfromargs(arguments));
-    }
-/*     post ("setting effects value\n");
-    post ("effects:\n");
-    for (var i = 0; i < effect_name_array.length; i++)
-    {
-        post (effect_name_array[i]);
-    }
-    post ("\n"); */
-    set_effect_slots_(effect_name_array);
+    var effects_dict_name       = arguments[0];
+    var effects_dict            = new Dict (effects_dict_name);
+    var effect_names_array      = dutils.get_dict_array(effects_dict);
+    var effect_numbers_array    = effect_names_array.map(effect_name_to_number_);
+    effect_numbers_array.push(0);
+    set_effect_slots_(effect_numbers_array);
 }
 
 
@@ -64,25 +32,16 @@ function set_effect_menu_items(effect_menu_items_dict_name)
 
 //--------------------------------------------------------------------------------
 
-function mlog(name, val)
+function set_effect_slots_(effect_numbers)
 {
-    post (name, "=", val, "\n");
-}
-
-function set_effect_slots_(effect_name_array)
-{
-    //var effect_array = dutils.get_array("effects");
     var l_old   = effect_slots_.length;
-    var l_new   = effect_name_array.length;
-/*     mlog ("l old", l_old);
-    mlog ("l_new", l_new); */
+    var l_new   = effect_numbers.length;
     for (var i = 0; i < Math.min(l_old, l_new); i++)
     {
-        var effect_number = get_effect_number_(effect_name_array[i]);
-        post ("1 - setting listener", i, "value silent to", effect_number, ". \n");
-        effect_number_listeners_[i].setvalue_silent(effect_number);
+        var listener = effect_slots_[i].subpatcher().getnamed("listener");
+        var value   = effect_numbers[i];
+        listener.message("set_value_silent", value);
     }
-
     if (l_old < l_new)
     {
         for (var i = l_old; i < l_new; i++)
@@ -229,7 +188,15 @@ trim_.local = 1;
 
 
 
-
+/* function on_effect_number_box_changed(data)
+{
+    var i = effect_number_listeners_.indexOf(data.listener);
+    if (i !== -1)
+    {     post ("   - listener index:", i, "just popped off to", data.value, "\n");
+        notifyclients();
+    }
+}
+ */
 
 
 
