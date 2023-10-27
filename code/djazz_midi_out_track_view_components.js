@@ -1,42 +1,22 @@
 autowatch = 1;
 
-//var effect_menu_items_dict_name_ = null;
 var effect_slots_ = [];
 
 
-function setvalueof()
-{
-    var effect_numbers  = arrayfromargs(arguments);
-    //var effect_names      = arrayfromargs(arguments);
-    //var effect_numbers    = effect_names.map(effect_name_to_number_);
-    effect_numbers.push(0);
-    set_effect_slots_(effect_numbers);
-}
-
-
-function set_effect_menu_items(effect_menu_items_dict_name)
-{
-    effect_menu_items_dict_name_ = effect_menu_items_dict_name;
-}
-
-//--------------------------------------------------------------------------------
-
-
-function set_effects(effect_menu_items_dict_name, effect_numbers)
+function set_effects(effect_menu_items_dict_name, effect_names)
 {
     var l_old   = effect_slots_.length;
-    var l_new   = effect_numbers.length;
+    var l_new   = effect_names.length;
     for (var i = 0; i < Math.min(l_old, l_new); i++)
     {
-        set_effect_number_(slot, effect_numbers[i]);
+        set_effect_(slot, effect_menu_items_dict_name, effect_names[i]);
     }
     if (l_old < l_new)
     {
         for (var i = l_old; i < l_new; i++)
         {
             var slot = make_slot_(effect_menu_items_dict_name);
-            effect_slots_.push(slot);
-            set_effect_number_(slot, effect_numbers[i]);
+            set_effect_(slot, effect_menu_items_dict_name, effect_names[i]);
         }
     }
     else
@@ -47,8 +27,8 @@ function set_effects(effect_menu_items_dict_name, effect_numbers)
         }
     }
 }
-set_effect_slots_.local = 1;
 
+//--------------------------------------------------------------------------------
 
 function remove_last_slot_()
 {   
@@ -87,9 +67,26 @@ function make_slot_(effect_menu_items_dict_name)
                     "@presentation_rect",   presentation_rect);
 
     init_slot_umenu_(effect_slot, effect_menu_items_dict_name);
+    effect_slots_.push(effect_slot);
     return effect_slot;
 }
 make_slot_.local = 1;
+
+
+function set_effect_(slot, effect_menu_items_dict_name, name)
+{
+    var effect_number_box   = slot.subpatcher().getnamed("effect_number");
+    var d                   = new Dict (effect_menu_items_dict_name);
+    var effect_names        = d.get("items");
+
+    if (effect_number_box.value !== effect_names.indexOf(name))
+    {
+        var umenu = slot.subpatcher().getnamed("umenu");
+        umenu.message("setsymbol", name);
+    }
+}
+set_effect_.local = 1;
+
 
 
 function init_slot_umenu_(effect_slot, effect_menu_items_dict_name)
@@ -99,21 +96,23 @@ function init_slot_umenu_(effect_slot, effect_menu_items_dict_name)
 init_slot_umenu_.local = 1;
 
 
-function set_effect_number_(slot, n)
+
+
+
+/* function setvalueof()
 {
-    var effect_number_box = slot.subpatcher().getnamed("effect_number");
-    if (effect_number_box.value !== n)
-    {
-        effect_number_box.message(n);
-    }
-}
-set_effect_number_.local = 1;
+    var effect_numbers  = arrayfromargs(arguments);
+    //var effect_names      = arrayfromargs(arguments);
+    //var effect_numbers    = effect_names.map(effect_name_to_number_);
+    effect_numbers.push(0);
+    set_effect_slots_(effect_numbers);
+} */
 
 
-
-
-
-
+/* function set_effect_menu_items(effect_menu_items_dict_name)
+{
+    effect_menu_items_dict_name_ = effect_menu_items_dict_name;
+} */
 
 
 

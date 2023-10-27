@@ -1,17 +1,27 @@
 {
+    "min_track" : 1,
+    "max_track" : 4,
     "tracks" : [    { 
+            "name" : "flute",
+            "number" : 1,
             "effects": [ "add octaves", "", "pitch shift"]
         }
         ,
         { 
+            "name" : "oboe",
+            "number" : 2,
             "effects": [ "pitch shift", "add octaves", "add octaves", "add octaves"]
         }
         ,
         { 
+            "name" : "piano",
+            "number" : 3,
             "effects": [ "", "pitch shift"]
         }
         ,
         { 
+            "name" : "trombone",
+            "number" : 4,
             "effects": []
         }
     ]

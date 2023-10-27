@@ -7,29 +7,29 @@ var tracks_ = [];
 
 function set_tracks(tracks_dict_name, effect_menu_items_dict_name)
 {
-    var d = new Dict (tracks_dict_name);
+    var d           = new Dict (tracks_dict_name);
     var track_array = dutils.get_dict_array(d, "tracks");
+
     for (var i = 0; i < track_array.length; i++)
     {
-        var effects_dict_name = track_array[i].name;
-        add_track_(menus_dict_name, effects_dict_name);
+        var effect_name_array = dutils.get_dict_array(track_array[i], "effects");
+        add_track_(effect_menu_items_dict_name, effect_name_array);
     }
 }
 
 
-function set_track_effects(i, effect_menu_items_dict_name, effect_number_array)
+function set_track_effects(i, effect_menu_items_dict_name, effect_name_array)
 {
-    //post ("setting track \n");
-    set_track_effects_(tracks_[i], effect_menu_items_dict_name, effect_number_array);
+    set_track_effects_(tracks_[i], effect_menu_items_dict_name, effect_name_array);
 }
 
 
-//------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------
 
 
-function add_track_(effect_menu_items_dict_name, effect_number_array)
+function add_track_(effect_menu_items_dict_name, effect_name_array)
 {
-    var i = track_listeners_.length;
+    var i = tracks_.length;
 
     var w = 128;
     var h = 216;
@@ -56,16 +56,15 @@ function add_track_(effect_menu_items_dict_name, effect_number_array)
                                     "@presentation_rect",   presentation_rect
                                     );
     tracks_.push(track);
-    set_track_effects_(track);
+    set_track_effects_(track, effect_menu_items_dict_name, effect_name_array);
     return track;
 }
 add_track_.local = 1;
 
 
-function set_track_effects_(track, effect_menu_items_dict_name, effect_number_array)
+function set_track_effects_(track, effect_menu_items_dict_name, effect_name_array)
 {
-    //post ("setting track \n");
-    track.getname("components").message("set_effects", effect_menu_items_dict_name, effect_number_array);
+    track.getname("components").message("set_effects", effect_menu_items_dict_name, effect_name_array);
 }
 set_track_effects_.local = 1;
 
