@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 71.0, 491.0, 985.0, 601.0 ],
+		"rect" : [ 51.0, 105.0, 985.0, 601.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -963,7 +963,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 296.16666579246521, 159.394394009299504, 155.0, 22.0 ],
+					"patching_rect" : [ 261.16666579246521, 361.0, 155.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -995,7 +995,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 269.0, 285.0, 157.0, 22.0 ],
+					"patching_rect" : [ 261.0, 309.0, 157.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_session_file_mgr.js",
 						"parameter_enable" : 0
@@ -1019,18 +1019,6 @@
 					}
 ,
 					"text" : "js djazz_session_components_mgr.js"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1010.0, 607.430197766101173, 95.0, 22.0 ],
-					"text" : "djazz_midi_outs"
 				}
 
 			}
@@ -5216,13 +5204,6 @@
 			}
 , 			{
 				"name" : "djazz_midi_out_effects_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_outs.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",

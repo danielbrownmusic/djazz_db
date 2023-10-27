@@ -1,56 +1,47 @@
 autowatch = 1;
 inlets = 2;
 
-var slots_  = []
+var effect_slots_ = [];
 
 
-function set_effect_slots()
+function set_effects(effect_menu_items_dict_name, effect_names)
 {
-    var a               = arrayfromargs(arguments);
-    var effect_names    = a.length > 1 ? a : [];
-    var l_old           = slots_.length;
-    var l_new           = effect_names.length;
-
+    var l_old   = effect_slots_.length;
+    var l_new   = effect_names.length;
     for (var i = 0; i < Math.min(l_old, l_new); i++)
     {
-        if (effect_names[i] !== slots_[i].subpatcher.getnamed("effect_name"));
-        {
-            replace_slot_(i, effect_names[i]);
-        }
+        set_effect_(slot, effect_menu_items_dict_name, effect_names[i]);
     }
-
     if (l_old < l_new)
     {
         for (var i = l_old; i < l_new; i++)
         {
-            make_slot_(i, effect_names[i]);
+            var slot = make_slot_(effect_menu_items_dict_name);
+            set_effect_(slot, effect_menu_items_dict_name, effect_names[i]);
         }
     }
     else
     {
         for (var i = l_new; i < l_old; i++)
         {
-            pop_back_();
+            remove_last_slot_();
         }
-    }    
-    push_back_("NULL");
+    }
 }
 
 
 
 //--------------------------------------------------------------------------------
 
-function replace_slot_(i, effect_name)
-{
-    slots_.splice(i, 1);
-    this.patcher.remove(this.patcher.getnamed("effect_" + i.toString()));
-    var slot = make_slot_(i, effect_name);
-    slots_.splice(i, 0, slot);
+function remove_last_slot_()
+{   
+    var slot = effect_slots_.pop();
+    this.patcher.remove(slot);
 }
-replace_slot_.local = 1;
+remove_last_slot_.local = 1;
 
 
-function make_slot_(i, effect_name)
+function make_slot_()
 {
     var x   = slots_panel.rect[0];
     var y   = slots_panel.rect[1] + i * 22;

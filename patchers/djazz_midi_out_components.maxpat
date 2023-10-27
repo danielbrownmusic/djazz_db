@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1235.0, 193.0, 1893.0, 1202.0 ],
+		"rect" : [ 1183.0, 106.0, 831.0, 715.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -194,7 +194,7 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 513.0, 419.590633928775787, 272.0, 329.0 ]
+					"patching_rect" : [ 513.0, 419.590633928775787, 313.0, 420.0 ]
 				}
 
 			}
