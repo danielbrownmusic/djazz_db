@@ -1,60 +1,42 @@
-var dutils = require("db_dictionary_array_utils");
-
 autowatch = 1;
-outlets = 2;
 
-var effect_menu_items_dict_ = null;
+//var effect_menu_items_dict_name_ = null;
 var effect_slots_ = [];
-
-//var effect_number_listeners_ = [];
-
-/* function getvalueof()
-{
-    return trim_(get_effect_name_array_());
-} */
 
 
 function setvalueof()
 {
-    var effects_dict_name       = arguments[0];
-    var effects_dict            = new Dict (effects_dict_name);
-    var effect_names_array      = dutils.get_dict_array(effects_dict);
-    var effect_numbers_array    = effect_names_array.map(effect_name_to_number_);
-    effect_numbers_array.push(0);
-    set_effect_slots_(effect_numbers_array);
+    var effect_numbers  = arrayfromargs(arguments);
+    //var effect_names      = arrayfromargs(arguments);
+    //var effect_numbers    = effect_names.map(effect_name_to_number_);
+    effect_numbers.push(0);
+    set_effect_slots_(effect_numbers);
 }
 
 
 function set_effect_menu_items(effect_menu_items_dict_name)
 {
-    effect_menu_items_dict_ = new Dict (effect_menu_items_dict_name);
+    effect_menu_items_dict_name_ = effect_menu_items_dict_name;
 }
 
 //--------------------------------------------------------------------------------
 
-function set_effect_slots_(effect_numbers)
+
+function set_effects(effect_menu_items_dict_name, effect_numbers)
 {
     var l_old   = effect_slots_.length;
     var l_new   = effect_numbers.length;
     for (var i = 0; i < Math.min(l_old, l_new); i++)
     {
-        var listener = effect_slots_[i].subpatcher().getnamed("listener");
-        var value   = effect_numbers[i];
-        listener.message("set_value_silent", value);
+        set_effect_number_(slot, effect_numbers[i]);
     }
     if (l_old < l_new)
     {
         for (var i = l_old; i < l_new; i++)
         {
-            var slot = make_slot_();
+            var slot = make_slot_(effect_menu_items_dict_name);
             effect_slots_.push(slot);
-
-            var listener = make_listener_(slot);
-            effect_number_listeners_.push(listener);
-
-            var effect_number = get_effect_number_(effect_name_array[i]);
-            post ("2 - setting listener", i, "value silent to", effect_number, ". \n");
-            listener.setvalue_silent(effect_number);
+            set_effect_number_(slot, effect_numbers[i]);
         }
     }
     else
@@ -62,18 +44,9 @@ function set_effect_slots_(effect_numbers)
         for (var i = l_new; i < l_old; i++)
         {
             remove_last_slot_();
-            remove_last_listener_();
         }
     }
-
-    var slot = make_slot_();
-    effect_slots_.push(slot);
-    var listener = make_listener_(slot);
-    effect_number_listeners_.push(listener);
-    post ("3 - setting listener", effect_number_listeners_.length - 1, "value silent to", 0, ". \n");
-    listener.setvalue_silent(0);
 }
-
 set_effect_slots_.local = 1;
 
 
@@ -85,18 +58,7 @@ function remove_last_slot_()
 remove_last_slot_.local = 1;
 
 
-function remove_last_listener_()
-{   
-    var listener = effect_number_listeners_.pop();
-    listener.silent = 1;
-    listener = null;
-/*     listener.maxobject = null;
-
- */}
-remove_last_listener_.local = 1;
-
-
-function make_slot_()
+function make_slot_(effect_menu_items_dict_name)
 {
     var effects_panel   = this.patcher.getnamed("effects_panel");
     var i               = effect_slots_.length;
@@ -124,32 +86,67 @@ function make_slot_()
                     "@patching_rect",       patching_rect,
                     "@presentation_rect",   presentation_rect);
 
-    var umenu = effect_slot.subpatcher().getnamed("umenu");
-    umenu.message("dictionary", effect_menu_items_dict_.name);
+    init_slot_umenu_(effect_slot, effect_menu_items_dict_name);
     return effect_slot;
 }
 make_slot_.local = 1;
 
 
-function make_listener_(effect_slot)
+function init_slot_umenu_(effect_slot, effect_menu_items_dict_name)
+{
+    effect_slot.subpatcher().getnamed("umenu").message("dictionary", effect_menu_items_dict_name);
+}
+init_slot_umenu_.local = 1;
+
+
+function set_effect_number_(slot, n)
+{
+    var effect_number_box = slot.subpatcher().getnamed("effect_number");
+    if (effect_number_box.value !== n)
+    {
+        effect_number_box.message(n);
+    }
+}
+set_effect_number_.local = 1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+//var dutils = require("db_dictionary_array_utils");
+
+
+
+/* function make_listener_(effect_slot)
 {
     var effect_number_box       = effect_slot.subpatcher().getnamed("effect_number");
     post("making listener.\n");
     var effect_number_listener  = new MaxobjListener(effect_number_box, on_effect_number_box_changed);
     return effect_number_listener;
 }
-make_listener_.local = 1;
+make_listener_.local = 1; */
 
 //--------------------------------------------------------------------------------
 
-function get_effect_number_(effect_name)
+
+//var effect_number_listeners_ = [];
+
+/* function getvalueof()
 {
-    return effect_menu_items_dict_.get("items").indexOf(effect_name);
-}
-get_effect_number_.local = 1;
+    return trim_(get_effect_name_array_());
+} */
 
 
-function get_effect_name_(effect_number)
+
+/* function get_effect_name_(effect_number)
 {
     var effect_name = effect_menu_items_dict_.get("items")[effect_number];
     //post ("effect name for", effect_number, "is", effect_name, "\n");
@@ -170,10 +167,10 @@ function get_effect_name_array_()
 {
     return effect_number_listeners_.map(get_listener_effect_name_);
 }
-get_effect_name_array_.local = 1;
+get_effect_name_array_.local = 1; */
 
 
-function trim_(effect_name_array)
+/* function trim_(effect_name_array)
 {
     for (var i = effect_name_array.length - 1; i >= 0; i--)
     {
@@ -183,7 +180,7 @@ function trim_(effect_name_array)
     }
     return effect_name_array;
 }
-trim_.local = 1;
+trim_.local = 1; */
 
 
 

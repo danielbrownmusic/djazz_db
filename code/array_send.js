@@ -29,3 +29,9 @@ function send_nested_array()
 {
     send(["hello", ["who", "what", "why"]]);
 }
+
+
+function send_array_of_empty_string() /// SENDS !!!!!!!!!!!!!!
+{
+    send ([""]);
+}

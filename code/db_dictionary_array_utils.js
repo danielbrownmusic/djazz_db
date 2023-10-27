@@ -228,7 +228,7 @@ exports.get_dict_array_at = function (d, key, index)
         return null;
     }
 
-    return get_array(d, key)[index];        
+    return exports.get_dict_array(d, key)[index];        
 }
 
 
