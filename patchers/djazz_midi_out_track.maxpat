@@ -239,7 +239,7 @@
 					"restore" : 					{
 						"active" : [ 0 ],
 						"channel" : [ 0 ],
-						"track" : [ 1 ]
+						"track" : [ 0 ]
 					}
 ,
 					"text" : "autopattr",
@@ -292,8 +292,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 65.0, 178.0, 94.0, 22.0 ],
-					"text" : "djazz_effect_list",
+					"patching_rect" : [ 65.0, 178.0, 146.0, 22.0 ],
+					"text" : "djazz_midi_out_effect_list",
 					"varname" : "effects"
 				}
 

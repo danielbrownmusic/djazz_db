@@ -5,21 +5,22 @@ autowatch = 1;
 var tracks_ = [];
 
 
-function tracks(bank_dict_name, effect_menu_items_dict_name)
+function set_tracks(tracks_dict_name, effect_menu_items_dict_name)
 {
-    var d           = new Dict (bank_dict_name);
+    var d           = new Dict (tracks_dict_name);
     var track_array = dutils.get_dict_array(d, "tracks");
 
     for (var i = 0; i < track_array.length; i++)
     {
-        add_track_(track_array[i].name, effect_menu_items_dict_name);
+        var effect_name_array = dutils.get_dict_array(track_array[i], "effects");
+        add_track_(effect_menu_items_dict_name, effect_name_array);
     }
 }
 
 
-function effects(i, track_dict_name, effect_menu_items_dict_name)
+function set_track_effects(i, effect_menu_items_dict_name, effect_name_array)
 {
-    set_track_effects_(tracks_[i], track_dict_name, effect_menu_items_dict_name);
+    set_track_effects_(tracks_[i], effect_menu_items_dict_name, effect_name_array);
 }
 
 
@@ -48,29 +49,22 @@ function add_track_(effect_menu_items_dict_name, effect_name_array)
                                     (
                                     x, y, 
                                     "bpatcher", 
-                                    "@name",                "djazz_midi_out_view_track", 
+                                    "@name",                "djazz_midi_out_track_view", 
                                     "@args",                i,
                                     "@presentation",        1,
                                     "@patching_rect",       patching_rect,
                                     "@presentation_rect",   presentation_rect
                                     );
     tracks_.push(track);
-    set_track_effects_(track, track_dict_name, effect_menu_items_dict_name);
+    set_track_effects_(track, effect_menu_items_dict_name, effect_name_array);
     return track;
 }
 add_track_.local = 1;
 
 
-function set_track_effects_(track, track_dict_name, effect_menu_items_dict_name)
+function set_track_effects_(track, effect_menu_items_dict_name, effect_name_array)
 {
-    var track_components    = track.getname("components");
-    var d                   = new Dict(track_dict_name);
-    var effect_name_array   = dutils.get_dict_array(d, "effects");
-
-    var msg                 = "effects";
-    var args                = [effect_menu_items_dict_name, effect_name_array];
-
-    track_components.message(msg, args);
+    track.getname("components").message("set_effects", effect_menu_items_dict_name, effect_name_array);
 }
 set_track_effects_.local = 1;
 

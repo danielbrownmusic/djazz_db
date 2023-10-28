@@ -34,12 +34,13 @@ function loadbang()
 }
 
 
-function set_tracks(tracks_dict_name, effect_menu_items_dict_name)
+function tracks(bank_dict_name, effect_menu_items_dict_name)
 {
-    var d           = new Dict (tracks_dict_name);
+    var d           = new Dict (bank_dict_name);
+    var track_array = dutils.get_dict_array(d, "tracks");
+
     var min_track   = d.get("min_track");
     var max_track   = d.get("max_track");
-    var track_array = dutils.get_dict_array(d, "tracks");
     var track_count = track_array.length();
 
     var spray = this.patcher.newdefault(x_spray_, y_spray_, "spray", track_count, min_track, 1);
@@ -50,22 +51,21 @@ function set_tracks(tracks_dict_name, effect_menu_items_dict_name)
 
     for (var i = 0; i < track_array.length; i++)
     {
-        var track_dict_name = dutils.get_dict_array(track_array[i], "effects").name;
-        add_track_(effect_menu_items_dict_name, track_dict_name);
+        add_track_(track_array[i].name, effect_menu_items_dict_name);
     }
 }
 
 
-function set_track_effects(i, effect_menu_items_dict_name, effect_name_array)
+function effects(i, track_dict_name, effect_menu_items_dict_name)
 {
-    set_track_effects_(tracks_[i], effect_menu_items_dict_name, effect_name_array);
+    set_track_effects_(tracks_[i], track_dict_name, effect_menu_items_dict_name);
 }
 
 
 //----------------------------------------------------------------------------------------------------
 
 
-function add_track_(effect_menu_items_dict_name, track_dict_name)
+function add_track_(track_dict_name, effect_menu_items_dict_name)
 {
     var i = tracks_.length;
 
@@ -80,16 +80,26 @@ function add_track_(effect_menu_items_dict_name, track_dict_name)
     tracks_.push(track);
 
     var effect_name_array = d.get("effects");
-    set_track_effects_(track, effect_menu_items_dict_name, effect_name_array);
+    set_track_effects_(track, track_dict_name, effect_menu_items_dict_name);
 
     this.patcher.connect(spray, i, track,  0);
     this.patcher.connect(track,	0, funnel, i);
+
+    return track;
 }
+add_track_.local = 1;
 
 
-function set_track_effects_(track, effect_menu_items_dict_name, effect_name_array)
+function set_track_effects_(track, track_dict_name, effect_menu_items_dict_name)
 {
-    track.getname("effect_list").getname("components").message("set_effects", effect_menu_items_dict_name, effect_name_array);
+    var track_components    = track.getname("effect_list").getname("components");
+    var d                   = new Dict(track_dict_name);
+    var effect_name_array   = dutils.get_dict_array(d, "effects");
+
+    var msg                 = "effects";
+    var args                = [effect_menu_items_dict_name, effect_name_array];
+
+    track_components.message(msg, args);
 }
 set_track_effects_.local = 1;
 

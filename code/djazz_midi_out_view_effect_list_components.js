@@ -3,13 +3,13 @@ autowatch = 1;
 var effect_slots_ = [];
 
 
-function set_effects(effect_menu_items_dict_name, effect_names)
+function effects(effect_menu_items_dict_name, effect_name_array)
 {
     var l_old   = effect_slots_.length;
-    var l_new   = effect_names.length;
+    var l_new   = effect_name_array.length;
     for (var i = 0; i < Math.min(l_old, l_new); i++)
     {
-        set_effect_(slot, effect_menu_items_dict_name, effect_names[i]);
+        set_effect_(slot, effect_menu_items_dict_name, effect_name_array[i]);
     }
     if (l_old < l_new)
     {
@@ -29,6 +29,7 @@ function set_effects(effect_menu_items_dict_name, effect_names)
 }
 
 //--------------------------------------------------------------------------------
+
 
 function remove_last_slot_()
 {   
@@ -61,7 +62,7 @@ function make_slot_(effect_menu_items_dict_name)
                     x, 
                     y,
                     "bpatcher",
-                    "djazz_midi_out_view_effect_slot",
+                    "djazz_midi_out_effect_slot_view",
                     "@presentation",        1,
                     "@patching_rect",       patching_rect,
                     "@presentation_rect",   presentation_rect);
@@ -73,16 +74,19 @@ function make_slot_(effect_menu_items_dict_name)
 make_slot_.local = 1;
 
 
-function set_effect_(slot, effect_menu_items_dict_name, name)
+function set_effect_(slot, effect_menu_items_dict_name, effect_name)
 {
     var effect_number_box   = slot.subpatcher().getnamed("effect_number");
+    var old_number          = effect_number_box.value;
+
     var d                   = new Dict (effect_menu_items_dict_name);
     var effect_names        = d.get("items");
+    var new_number          = effect_names.indexOf(name)
 
-    if (effect_number_box.value !== effect_names.indexOf(name))
+    if (old_number !== new_number)
     {
         var umenu = slot.subpatcher().getnamed("umenu");
-        umenu.message("setsymbol", name);
+        umenu.message("setsymbol", effect_name);
     }
 }
 set_effect_.local = 1;
@@ -94,6 +98,13 @@ function init_slot_umenu_(effect_slot, effect_menu_items_dict_name)
     effect_slot.subpatcher().getnamed("umenu").message("dictionary", effect_menu_items_dict_name);
 }
 init_slot_umenu_.local = 1;
+
+
+
+
+
+
+
 
 
 
