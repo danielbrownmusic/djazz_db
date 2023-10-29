@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 540.0, 773.0, 415.0, 296.0 ],
+		"rect" : [ 575.0, 368.0, 615.0, 537.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,26 +40,38 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-8",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 76.33333300000001, 136.0, 50.0, 22.0 ],
-					"varname" : "effect_number"
+					"id" : "obj-11",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 187.33333300000001, 310.0, 41.0, 22.0 ],
+					"text" : "set $1"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-6",
-					"maxclass" : "message",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 187.33333300000001, 210.0, 50.0, 22.0 ],
+					"varname" : "effect_number"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 76.33333300000001, 194.0, 41.0, 22.0 ],
-					"text" : "set $1"
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 168.33333300000001, 145.0, 38.0, 22.0 ],
+					"text" : "sel -1"
 				}
 
 			}
@@ -71,7 +83,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 185.333333000000039, 194.0, 24.0, 24.0 ],
+					"patching_rect" : [ 329.333333000000039, 191.0, 24.0, 24.0 ],
 					"varname" : "active"
 				}
 
@@ -83,7 +95,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 185.333333000000039, 136.0, 29.5, 22.0 ],
+					"patching_rect" : [ 329.333333000000039, 133.0, 29.5, 22.0 ],
 					"text" : "$2"
 				}
 
@@ -98,7 +110,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 76.33333300000001, 75.0, 128.0, 22.0 ],
+					"patching_rect" : [ 168.33333300000001, 68.0, 180.000000000000028, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 128.0, 22.0 ],
 					"varname" : "umenu"
@@ -112,7 +124,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 63.999999666666668, 2.0, 56.0, 22.0 ],
+					"patching_rect" : [ 155.999999666666668, -5.0, 56.0, 22.0 ],
 					"restore" : 					{
 						"active" : [ 1 ],
 						"effect_number" : [ 0 ]
@@ -140,6 +152,14 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"midpoints" : [ 196.83333300000001, 379.0, 107.666666500000019, 379.0, 107.666666500000019, 57.0, 177.83333300000001, 57.0 ],
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"source" : [ "obj-2", 2 ]
 				}
@@ -147,23 +167,32 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"midpoints" : [ 85.83333300000001, 226.0, 56.83333300000001, 226.0, 56.83333300000001, 64.0, 85.83333300000001, 64.0 ],
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-4", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 0 ],
+					"order" : 1,
 					"source" : [ "obj-6", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"source" : [ "obj-8", 0 ]
+					"destination" : [ "obj-4", 1 ],
+					"midpoints" : [ 196.83333300000001, 278.0, 256.833332999999982, 278.0, 256.833332999999982, 134.0, 196.83333300000001, 134.0 ],
+					"order" : 0,
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}

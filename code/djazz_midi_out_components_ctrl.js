@@ -53,12 +53,12 @@ function set_effect()
         effect_names[effect_index] = effect_name;
     }
 
-    for (var i = effect_names.length - 1; i >= 0; i--)
+/*     for (var i = effect_names.length - 1; i >= 0; i--)
     {
         if (effect_names[i] !== "")
             break;
             effect_names.pop();
-    }
+    } */
 
     set_effect_name_array_(track_index, effect_names);
 

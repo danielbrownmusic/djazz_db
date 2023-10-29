@@ -30,6 +30,7 @@ function effects(track_dict_name, effect_menu_items_dict_name)
     {
         for (var i = l_new; i < l_old; i++)
         {
+            post ("removing slot", l_old - 1, "\n");
             remove_last_slot_();
         }
     }
@@ -107,10 +108,15 @@ function set_effect_(slot, effect_menu_items_dict_name, effect_name)
     post (effect_names);
     post ("\n");
     post (new_number, old_number, effect_name, "\n");
+    if (new_number < 0 || isNaN(new_number))
+    {
+        post ("bad effect number!", new_number, "\n");
+        return;
+    }
     if (old_number !== new_number)
     {
         var umenu = slot.subpatcher().getnamed("umenu");
-        umenu.message("setsymbol", effect_name);
+        umenu.message("set", new_number);
     }
 }
 set_effect_.local = 1;

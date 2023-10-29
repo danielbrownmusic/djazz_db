@@ -4,25 +4,25 @@
     "tracks" : [    { 
             "name" : "flute",
             "number" : 1,
-            "effects": [ "add octaves", "", "pitch shift"]
+            "effects": [ "", "", ""]
         }
         ,
         { 
             "name" : "oboe",
             "number" : 2,
-            "effects": [ "pitch shift", "add octaves", "add octaves", "add octaves"]
+            "effects": [ "", "", "", ""]
         }
         ,
         { 
             "name" : "piano",
             "number" : 3,
-            "effects": [ "", "pitch shift"]
+            "effects": [ "", "", ""]
         }
         ,
         { 
             "name" : "trombone",
             "number" : 4,
-            "effects": []
+            "effects": ["", "", ""]
         }
     ]
 }
