@@ -1,24 +1,31 @@
+var dutils = require("db_dictionary_array_utils");
+
 autowatch = 1;
 
 var effect_slots_ = [];
 
 
-function effects(effect_menu_items_dict_name, effect_name_array)
+function effects(track_dict_name, effect_menu_items_dict_name)
 {
+    var d                   = new Dict(track_dict_name);
+    var effect_name_array   = dutils.get_dict_array(d, "effects");
+
     var l_old   = effect_slots_.length;
     var l_new   = effect_name_array.length;
     for (var i = 0; i < Math.min(l_old, l_new); i++)
     {
-        set_effect_(slot, effect_menu_items_dict_name, effect_name_array[i]);
+        set_effect_(effect_slots_[i], effect_menu_items_dict_name, effect_name_array[i]);
     }
+
     if (l_old < l_new)
     {
         for (var i = l_old; i < l_new; i++)
         {
             var slot = make_slot_(effect_menu_items_dict_name);
-            set_effect_(slot, effect_menu_items_dict_name, effect_names[i]);
+            set_effect_(slot, effect_menu_items_dict_name, effect_name_array[i]);
         }
     }
+
     else
     {
         for (var i = l_new; i < l_old; i++)
@@ -26,13 +33,26 @@ function effects(effect_menu_items_dict_name, effect_name_array)
             remove_last_slot_();
         }
     }
+    //make_extra_slot_(effect_menu_items_dict_name);
 }
+
 
 //--------------------------------------------------------------------------------
 
 
+function make_extra_slot_(effect_menu_items_dict_name)
+{
+    var slot = make_slot_(effect_menu_items_dict_name);
+    set_effect_(slot, effect_menu_items_dict_name, "");    
+}
+make_extra_slot_.local = 1;
+
+
 function remove_last_slot_()
 {   
+    if (effect_slots_.length === 0)
+        return;
+
     var slot = effect_slots_.pop();
     this.patcher.remove(slot);
 }
@@ -62,10 +82,12 @@ function make_slot_(effect_menu_items_dict_name)
                     x, 
                     y,
                     "bpatcher",
-                    "djazz_midi_out_effect_slot_view",
+                    "djazz_midi_out_view_effect_slot",
+                    "@args",                i,                    
                     "@presentation",        1,
                     "@patching_rect",       patching_rect,
                     "@presentation_rect",   presentation_rect);
+    effect_slot.varname = "effect_" + i;
 
     init_slot_umenu_(effect_slot, effect_menu_items_dict_name);
     effect_slots_.push(effect_slot);
@@ -77,12 +99,14 @@ make_slot_.local = 1;
 function set_effect_(slot, effect_menu_items_dict_name, effect_name)
 {
     var effect_number_box   = slot.subpatcher().getnamed("effect_number");
-    var old_number          = effect_number_box.value;
+    var old_number          = effect_number_box.getvalueof();
 
     var d                   = new Dict (effect_menu_items_dict_name);
-    var effect_names        = d.get("items");
-    var new_number          = effect_names.indexOf(name)
-
+    var effect_names        = dutils.get_dict_array(d, "items");
+    var new_number          = effect_names.indexOf(effect_name)
+    post (effect_names);
+    post ("\n");
+    post (new_number, old_number, effect_name, "\n");
     if (old_number !== new_number)
     {
         var umenu = slot.subpatcher().getnamed("umenu");

@@ -156,13 +156,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 400.0, 105.0, 217.0, 22.0 ],
+					"patching_rect" : [ 400.0, 105.0, 205.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_midi_out_bank_layout.js",
+						"filename" : "djazz_midi_out_bank_components",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_midi_out_bank_layout.js #1 #2"
+					"text" : "js djazz_midi_out_bank_components"
 				}
 
 			}

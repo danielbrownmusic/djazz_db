@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1191.0, 323.0, 503.0, 318.0 ],
+		"rect" : [ 492.0, 387.0, 503.0, 318.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -84,7 +84,7 @@
 					}
 ,
 					"text" : "js djazz_midi_out_view_effect_list_components.js",
-					"varname" : "effects"
+					"varname" : "components"
 				}
 
 			}
@@ -96,6 +96,10 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 178.0, 17.0, 56.0, 22.0 ],
+					"restore" : 					{
+
+					}
+,
 					"text" : "autopattr",
 					"varname" : "u758005487"
 				}
@@ -127,7 +131,16 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "djazz_midi_out_view_effect_list_components.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }

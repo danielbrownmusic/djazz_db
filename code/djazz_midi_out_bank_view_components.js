@@ -5,11 +5,22 @@ autowatch = 1;
 var tracks_ = [];
 
 
+function clear()
+{
+    var l = tracks_.length;
+    for (var i = 0; i < l; i++)
+    {
+        remove_last_track_();
+    }
+}
+
+
 function tracks(bank_dict_name, effect_menu_items_dict_name)
 {
+    clear();
+
     var d           = new Dict (bank_dict_name);
     var track_array = dutils.get_dict_array(d, "tracks");
-
     for (var i = 0; i < track_array.length; i++)
     {
         add_track_(track_array[i].name, effect_menu_items_dict_name);
@@ -26,7 +37,7 @@ function effects(i, track_dict_name, effect_menu_items_dict_name)
 //----------------------------------------------------------------------------------------------------
 
 
-function add_track_(effect_menu_items_dict_name, effect_name_array)
+function add_track_(track_dict_name, effect_menu_items_dict_name)
 {
     var i = tracks_.length;
 
@@ -54,6 +65,7 @@ function add_track_(effect_menu_items_dict_name, effect_name_array)
                                     "@patching_rect",       patching_rect,
                                     "@presentation_rect",   presentation_rect
                                     );
+    track.varname = "track_" + i;
     tracks_.push(track);
     set_track_effects_(track, track_dict_name, effect_menu_items_dict_name);
     return track;
@@ -63,18 +75,24 @@ add_track_.local = 1;
 
 function set_track_effects_(track, track_dict_name, effect_menu_items_dict_name)
 {
-    var track_components    = track.getname("components");
-    var d                   = new Dict(track_dict_name);
-    var effect_name_array   = dutils.get_dict_array(d, "effects");
-
+    var track_components    = track.subpatcher().getnamed("components");
     var msg                 = "effects";
-    var args                = [effect_menu_items_dict_name, effect_name_array];
+    var args                = [track_dict_name, effect_menu_items_dict_name];
 
     track_components.message(msg, args);
 }
 set_track_effects_.local = 1;
 
 
+function remove_last_track_()
+{
+    if (tracks_.length === 0)
+        return;
+    
+    var track = tracks_.pop();
+    this.patcher.remove(track);
+}
+remove_last_track_.local = 1;
 
 
 //var track_listeners_ = [];

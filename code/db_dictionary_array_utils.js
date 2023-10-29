@@ -200,10 +200,13 @@ exports.get_dict_array = function (d, key)
 
 exports.set_dict_array = function (d, key, a)
 {
-    if (a.length === 0)
+    if (!a)
     {
         d.set(key);
-
+    }
+    else if (a.length === 0)
+    {
+        d.set(key);
     }
     else if (a.length === 1)
     {

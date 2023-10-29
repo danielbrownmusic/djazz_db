@@ -56,7 +56,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 177.0, 100.0, 993.0, 292.0 ],
+						"rect" : [ 375.0, 100.0, 720.0, 292.0 ],
 						"bglocked" : 1,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -84,7 +84,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"bgcolor" : [ 0.701960784313725, 0.529411764705882, 0.290196078431373, 1.0 ],
@@ -182,7 +181,6 @@
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 0.2, 0.2, 0.2, 1.0 ],
 									"id" : "obj-63",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -255,7 +253,6 @@
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 0.2, 0.2, 0.2, 1.0 ],
 									"id" : "obj-82",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -1403,7 +1400,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 34.16666579246521, 161.0, 155.0, 22.0 ],
+					"patching_rect" : [ 34.0, 178.0, 155.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -4962,7 +4959,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 491.360204436951108, 689.430197766101173, 123.0, 22.0 ],
+					"patching_rect" : [ 491.360204436951108, 682.430197766101173, 123.0, 22.0 ],
 					"text" : "djazz_midi_out_bank",
 					"varname" : "djazz_midi_out_bank"
 				}
@@ -5197,25 +5194,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-37", 1 ],
-					"order" : 0,
-					"source" : [ "obj-68", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-67", 2 ],
-					"order" : 2,
-					"source" : [ "obj-68", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-75", 1 ],
-					"order" : 1,
-					"source" : [ "obj-68", 0 ]
+					"source" : [ "obj-68", 0 ],
+					"watchpoint_flags" : 5,
+					"watchpoint_id" : 3
 				}
 
 			}
@@ -5235,27 +5217,11 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-37", 0 ],
-					"midpoints" : [ 552.860204436951108, 583.715098883050587, 614.860204436951108, 583.715098883050587 ],
-					"order" : 1,
-					"source" : [ "obj-75", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-67", 1 ],
-					"order" : 2,
-					"source" : [ "obj-75", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-68", 0 ],
 					"midpoints" : [ 552.860204436951108, 584.0, 502.360204436951108, 584.0, 502.360204436951108, 460.909603128159233, 685.860204436951108, 460.909603128159233 ],
-					"order" : 0,
-					"source" : [ "obj-75", 0 ]
+					"source" : [ "obj-75", 0 ],
+					"watchpoint_flags" : 5,
+					"watchpoint_id" : 2
 				}
 
 			}
@@ -5588,13 +5554,6 @@
 			}
 , 			{
 				"name" : "djazz_midi_out_bank_components.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_bank_layout.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
@@ -6154,11 +6113,11 @@
 				"multi" : 0
 			}
  ],
-		"default_bgcolor" : [ 0.184313725490196, 0.258823529411765, 0.815686274509804, 1.0 ],
+		"default_bgcolor" : [ 0.407843137254902, 0.466666666666667, 0.92156862745098, 1.0 ],
 		"elementcolor" : [ 0.258823529411765, 0.254901960784314, 0.254901960784314, 1.0 ],
-		"accentcolor" : [ 0.286274509803922, 0.694117647058824, 0.670588235294118, 1.0 ],
+		"accentcolor" : [ 0.019607843137255, 0.015686274509804, 0.16078431372549, 1.0 ],
 		"textcolor" : [ 0.0, 0.0, 0.0, 0.980392156862745 ],
-		"textcolor_inverse" : [ 1.0, 0.968627450980392, 0.654901960784314, 0.98 ],
+		"textcolor_inverse" : [ 1.0, 0.929411764705882, 0.584313725490196, 0.980392156862745 ],
 		"patchlinecolor" : [ 0.847058823529412, 0.568627450980392, 0.325490196078431, 1.0 ],
 		"bgcolor" : [ 0.815686274509804, 0.725490196078431, 0.603921568627451, 1.0 ],
 		"stripecolor" : [ 0.250980392156863, 0.247058823529412, 0.235294117647059, 1.0 ],
