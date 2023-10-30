@@ -359,7 +359,7 @@
 								"box" : 								{
 									"id" : "obj-18",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 43.0, 136.0, 150.0, 22.0 ],
@@ -385,7 +385,7 @@
 								"box" : 								{
 									"id" : "obj-10",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 43.0, 90.810065922033687, 150.0, 22.0 ],
@@ -4959,7 +4959,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 491.360204436951108, 682.430197766101173, 123.0, 22.0 ],
+					"patching_rect" : [ 491.360204436951108, 682.430197766101173, 121.0, 22.0 ],
 					"text" : "djazz_midi_out_bank",
 					"varname" : "djazz_midi_out_bank"
 				}
@@ -5194,10 +5194,17 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-67", 2 ],
+					"order" : 1,
+					"source" : [ "obj-68", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-75", 1 ],
-					"source" : [ "obj-68", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 3
+					"order" : 0,
+					"source" : [ "obj-68", 0 ]
 				}
 
 			}
@@ -5219,9 +5226,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-68", 0 ],
 					"midpoints" : [ 552.860204436951108, 584.0, 502.360204436951108, 584.0, 502.360204436951108, 460.909603128159233, 685.860204436951108, 460.909603128159233 ],
-					"source" : [ "obj-75", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 2
+					"source" : [ "obj-75", 0 ]
 				}
 
 			}
@@ -5452,13 +5457,6 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_effect_list_components.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{

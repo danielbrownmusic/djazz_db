@@ -1,14 +1,20 @@
+var dutils = require("db_dictionary_array_utils");
+
 autowatch = 1;
 
 var effect_slots_ = [];
 
 
-function effects(effect_menu_items_dict_name, effect_name_array)
+function effects(track_dict_name, effect_menu_items_dict_name)
 {
+    var d                   = new Dict(track_dict_name);
+    var effect_name_array   = dutils.get_dict_array(d, "effects");
+    //post (effect_name_array);
     var l_old   = effect_slots_.length;
     var l_new   = effect_name_array.length;
     for (var i = 0; i < Math.min(l_old, l_new); i++)
     {
+        if effect names are the same , don't change.
         set_effect_(slot, effect_menu_items_dict_name, effect_name_array[i]);
     }
     if (l_old < l_new)
@@ -42,7 +48,7 @@ remove_last_slot_.local = 1;
 
 function make_slot_()
 {
-    var inl 	= this.patcher.getnamed("event_inlet");
+    var inl 	= this.patcher.getnamed("events_inlet");
 
     var x_inlet 	= inl.rect[0];
     var y_inlet 	= inl.rect[3];
@@ -50,7 +56,7 @@ function make_slot_()
     var i = effect_slots_.length;
 
     var w = 128;
-    var h = 22;
+    var h = 44;
 	var x = x_inlet;
 	var y = y_inlet + h * i;
 
@@ -65,7 +71,8 @@ function set_effect_(slot, effect_menu_items_dict_name, effect_name)
 {
     var c                   = slot.subpatcher().getnamed("components");    
     var old_patcher_name    = c.value;
-    
+    post(effect_name);
+    if (effect_name === "")
     var d                   = new Dict (effect_menu_items_dict_name);
     var new_patcher_name    = d.get("effects").get(effect_name).get("patcher");
 

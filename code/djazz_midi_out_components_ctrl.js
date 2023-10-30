@@ -86,9 +86,9 @@ function set_effect_name_array_(track_index, effect_names)
     var tracks_dict     = new Dict(tracks_dict_name_);
     var effects_dict    = dutils.get_dict_array_at(tracks_dict, "tracks", track_index);
 
-    post (effect_names);
-    post ("\n");
-    post(dutils.get_dict_array(dutils.get_dict_array_at(tracks_dict, "tracks", track_index), "effects"));
+    //post (effect_names);
+    //post ("\n");
+    //post(dutils.get_dict_array(dutils.get_dict_array_at(tracks_dict, "tracks", track_index), "effects"));
     dutils.set_dict_array(effects_dict, "effects", effect_names);
     dutils.set_dict_array_at(tracks_dict, "tracks", track_index, effects_dict);
 }

@@ -40,12 +40,25 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "",
+					"id" : "obj-3",
+					"index" : 2,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 254.333333333333314, 17.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-8",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 242.0, 17.0, 56.0, 22.0 ],
+					"patching_rect" : [ 440.333333333333258, 40.0, 56.0, 22.0 ],
 					"text" : "autopattr",
 					"varname" : "u227006007"
 				}
@@ -58,14 +71,14 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 254.333333333333314, 85.0, 191.666666666666686, 22.0 ],
+					"patching_rect" : [ 254.333333333333314, 106.0, 242.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_effect_list_components.js",
+						"filename" : "djazz_midi_out_effect_list_components.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_effect_list_components.js",
-					"varname" : "mge"
+					"text" : "js djazz_midi_out_effect_list_components.js",
+					"varname" : "components"
 				}
 
 			}
@@ -73,12 +86,12 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-2",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 25.0, 371.0, 30.0, 30.0 ],
-					"varname" : "midi_out"
+					"varname" : "events_outlet"
 				}
 
 			}
@@ -86,13 +99,13 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-1",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 25.0, 17.0, 30.0, 30.0 ],
-					"varname" : "midi_in"
+					"varname" : "events_inlet"
 				}
 
 			}
@@ -107,20 +120,18 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-8", 1 ]
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_effect_list_components.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

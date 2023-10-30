@@ -105,12 +105,12 @@ function set_effect_(slot, effect_menu_items_dict_name, effect_name)
     var d                   = new Dict (effect_menu_items_dict_name);
     var effect_names        = dutils.get_dict_array(d, "items");
     var new_number          = effect_names.indexOf(effect_name)
-    post (effect_names);
-    post ("\n");
-    post (new_number, old_number, effect_name, "\n");
+    //post (effect_names);
+    //post ("\n");
+    //post (new_number, old_number, effect_name, "\n");
     if (new_number < 0 || isNaN(new_number))
     {
-        post ("bad effect number!", new_number, "\n");
+        //post ("bad effect number!", new_number, "\n");
         return;
     }
     if (old_number !== new_number)

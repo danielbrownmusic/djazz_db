@@ -382,7 +382,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 126.0, 401.0, 50.0, 22.0 ],
-									"text" : "1 4 0"
+									"text" : "1 0 0"
 								}
 
 							}
@@ -417,7 +417,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 375.333341419696808, 214.000007152557373, 215.0, 22.0 ],
-									"text" : "track_2::djazz_midi_out_view_effect_slot::active 1"
+									"text" : "track_3::djazz_midi_out_view_effect_slot::active 1"
 								}
 
 							}
@@ -429,7 +429,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 313.666672646999359, 376.666671931743622, 218.0, 22.0 ],
-									"text" : "\"track_1::effect_4::effect_number 0\""
+									"text" : "\"track_1::effect_0::effect_number 0\""
 								}
 
 							}
@@ -746,18 +746,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-28", 0 ],
-					"source" : [ "obj-2", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 4
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-63", 0 ],
-					"source" : [ "obj-28", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 1
+					"source" : [ "obj-28", 0 ]
 				}
 
 			}

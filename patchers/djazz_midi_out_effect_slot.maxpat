@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 134.0, 172.0, 390.0, 254.0 ],
+		"rect" : [ 134.0, 172.0, 404.0, 374.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,27 +45,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 157.0, 27.0, 56.0, 22.0 ],
+					"patching_rect" : [ 107.0, 72.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"active" : [ 0 ],
-						"effect_index" : [ 0 ]
+						"active" : [ 0 ]
 					}
 ,
 					"text" : "autopattr",
 					"varname" : "u182006183"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 91.0, 27.0, 50.0, 22.0 ],
-					"varname" : "effect_index"
 				}
 
 			}
@@ -89,13 +75,14 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 91.0, 88.0, 246.0, 22.0 ],
+					"patching_rect" : [ 107.0, 23.0, 246.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_midi_out_effect_slot_components.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_midi_out_effect_slot_components.js"
+					"text" : "js djazz_midi_out_effect_slot_components.js",
+					"varname" : "components"
 				}
 
 			}
@@ -103,11 +90,11 @@
 				"box" : 				{
 					"comment" : "MIDI output processed by the effect",
 					"id" : "obj-3",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 19.333333333333343, 187.0, 30.0, 30.0 ],
+					"patching_rect" : [ 19.333333333333343, 219.0, 30.0, 30.0 ],
 					"varname" : "midi_out"
 				}
 
@@ -116,7 +103,7 @@
 				"box" : 				{
 					"comment" : "(int int int int) MIDI input",
 					"id" : "obj-2",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -136,19 +123,21 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-9", 0 ]
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "djazz_midi_out_effect_slot_components.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }
