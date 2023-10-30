@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -143,11 +143,11 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 246.0, 98.0, 248.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_midi_out_bank_view_components.js",
+						"filename" : "djazz_midi_out_view_bank_components.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_midi_out_bank_view_components.js",
+					"text" : "js djazz_midi_out_view_bank_components.js",
 					"varname" : "tracks"
 				}
 

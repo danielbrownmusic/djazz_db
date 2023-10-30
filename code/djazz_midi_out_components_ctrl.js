@@ -111,6 +111,21 @@ function effect_number_to_name_(effect_number)
 effect_number_to_name_.local = 1;
 
 
+//----------------------------------------------------------------------------------------------------
+
+
+function log_msg_received_(msg, args)
+{
+    outlet (2, msg, args);
+}
+log_msg_received_.local = 1;
+
+
+function log_msg_sending_(addr, msg, args)
+{
+    outlet (1, addr, msg, args);
+}
+log_msg_sending_.local = 1;
 
 
 
