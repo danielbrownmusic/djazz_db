@@ -5,13 +5,13 @@
         "1" : {
             "name"          : "add octaves",
             "controller"    : "djazz_add_octaves_controller",
-            "patcher"       : "djazz_add_octaves"
+            "patcher"       : "djazz_add_semitones"
         }
         ,
         "2" : {
             "name"          : "pitch_shift",
             "controller"    : "djazz_pitch_shift_controller",
-            "patcher"       : "djazz_pitch_shift"
+            "patcher"       : "djazz_add_semitones"
         }
     }
 }

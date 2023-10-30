@@ -7,8 +7,6 @@ setoutletassist(1, "log messages received");
 
 function effect()
 {
-    log_msg_received_(messagename, arrayfromargs(arguments));
-
     var effect_patcher_name = arguments[0];
 
     if (!effect_patcher_name)
@@ -72,17 +70,3 @@ set_effect_.local = 1;
 
 
 //----------------------------------------------------------------------------------------------------
-
-
-function log_msg_received_(msg, args)
-{
-    outlet (1, msg, args);
-}
-log_msg_received_.local = 1;
-
-
-function log_msg_sending_(addr, msg, args)
-{
-    outlet (0, addr, msg, args);
-}
-log_msg_sending_.local = 1;

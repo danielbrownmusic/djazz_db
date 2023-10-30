@@ -2,24 +2,23 @@ var dutils = require("db_dictionary_array_utils");
 
 autowatch = 1;
 
-outlets = 2;
-setoutletassist(0, "log messages sent");
-setoutletassist(1, "log messages received");
+outlets = 1;
 
 var tracks_ = [];
 
 
 function tracks(bank_dict_name, effect_menu_items_dict_name)
 {
-    log_msg_received_(messagename, [bank_dict_name, effect_menu_items_dict_name]);
-
     clear();
 
     var d           = new Dict (bank_dict_name);
     var track_array = dutils.get_dict_array(d, "tracks");
+    for (var i = 0; i < track_array.length; i++)
+    {
+        post (track_array[i].name);
+        post (track_array[i].getsize("effects"));
+    }
     var track_count = track_array.length;
-
-    //make_spray_(track_count);
 
     for (var i = 0; i < track_count; i++)
     {
@@ -33,55 +32,30 @@ function tracks(bank_dict_name, effect_menu_items_dict_name)
 function effects(i, track_dict_name, effect_menu_items_dict_name)
 {
     var track = tracks_[i];
-    //var comp = track.subpatcher().getnamed();
-
-    var addr = [track.varname, "components"].join("::");
+    var addr = [track.varname, "effect_list", "components"].join("::");
     var msg = "effects";
     var args = [track_dict_name, effect_menu_items_dict_name];
-    post (addr);
-    send_(addr, msg, args);
-    //comp.message(msg, args);
+    outlet (0, addr, msg, args);
 }
 
 
 function clear()
 {
-    log_msg_received_(messagename, []);
-    clear_();
+    clear();
 }
 
 
-//----------------------------------------------------------------------------------------------------
-
-function clear_()
+function clear()
 {
     var l = tracks_.length;
     for (var i = 0; i < l; i++)
     {
         remove_last_track_();
     }
-/*     var spray = this.patcher.getnamed("spray");
-    if (spray)
-    {
-        this.patcher.remove(spray);
-    } */
 }
-clear_.local = 1;
 
 
-function effects_(i, track_dict_name, effect_menu_items_dict_name)
-{
-    var track = tracks_[i];
-    var comp = track.subpatcher().getnamed("components");
-
-    var addr = [track.varname, comp.varname].join("::");
-    var msg = i;
-    var args = ["effects", track_dict_name, effect_menu_items_dict_name];
-
-    log_msg_sending_(addr, msg, args);
-    comp.message(msg, args);
-}
-effects_.local = 1;
+//----------------------------------------------------------------------------------------------------
 
 
 function add_track_(track_dict_name)
@@ -125,25 +99,6 @@ remove_last_track_.local = 1;
 
 
 //----------------------------------------------------------------------------------------------------
-
-
-function log_msg_received_(msg, args)
-{
-    outlet (1, msg, args);
-}
-log_msg_received_.local = 1;
-
-
-function send_(addr, msg, args)
-{
-    post (this.patcher.getnamed(addr));
-    post (msg);
-    post (args);
-    //post (this.patcher.getnamed(addr).varname);
-    this.patcher.getnamed(addr).message(msg, args);
-    outlet (0, addr, msg, args);
-}
-send_.local = 1;
 
 
 
