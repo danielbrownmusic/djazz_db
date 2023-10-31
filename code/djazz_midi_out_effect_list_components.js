@@ -1,9 +1,5 @@
 var dutils = require("db_dictionary_array_utils");
 
-outlets = 2;
-setoutletassist(0, "log messages sent");
-setoutletassist(1, "log messages received");
-
 autowatch = 1;
 
 var effect_slots_ = [];
@@ -12,22 +8,23 @@ var effect_slots_ = [];
 function effects(track_dict_name, effect_menu_items_dict_name)
 {
     var d                   = new Dict(track_dict_name);
-    post (track_dict_name);
-    post (d.getsize("effects"));;
     var effect_name_array   = dutils.get_dict_array(d, "effects");
-    post (effect_name_array);
-    post (effect_name_array.length);
+
     var l_old   = effect_slots_.length;
     var l_new   = effect_name_array.length;
+
     for (var i = 0; i < Math.min(l_old, l_new); i++)
     {
-        effect(slot, effect_menu_items_dict_name, effect_name_array[i]);
+        var slot        = effect_slots_[i];
+        var effect_name = effect_name_array[i];
+        effect(slot, effect_menu_items_dict_name, effect_name);
     }
     if (l_old < l_new)
     {
         for (var i = l_old; i < l_new; i++)
         {
             var slot = make_slot_();
+            var effect_name = effect_name_array[i];            
             effect(slot, effect_menu_items_dict_name, effect_name_array[i]);
         }
     }
@@ -43,16 +40,16 @@ function effects(track_dict_name, effect_menu_items_dict_name)
 
 function effect(slot, effect_menu_items_dict_name, effect_name)
 {
-    post ("new patcher name = ", effect_name, " ! \n");
     var d                   = new Dict (effect_menu_items_dict_name);
     var new_patcher_name    =   d.get("effects").contains(effect_name) === 1 ?
                                 d.get("effects").get(effect_name).get("patcher") :
                                 null;
 
-    var addr = [slot.varname, "components"].join("::");
-    var msg = "effect";
-    var args = new_patcher_name;
-    outlet (0, addr, msg, args);
+    var addr    = [slot.varname, "components"];
+    var msg     = "effect";
+    var args    = new_patcher_name;
+
+    send_(addr, msg, args);
 }
 
 //--------------------------------------------------------------------------------
@@ -60,6 +57,9 @@ function effect(slot, effect_menu_items_dict_name, effect_name)
 
 function remove_last_slot_()
 {   
+    if (effect_slots_.length === 0)
+        return;
+
     var slot = effect_slots_.pop();
     this.patcher.remove(slot);
 }
@@ -81,7 +81,18 @@ function make_slot_()
 	var y = y_inlet + h + h * i;
 
     var effect_slot = this.patcher.newdefault(x, y, "djazz_midi_out_effect_slot");
+
+    effect_slot.varname = "effect_" + i;    
     effect_slots_.push(effect_slot);
+
     return effect_slot;
 }
 make_slot_.local = 1;
+
+
+function send_(addr_array, msg, args)
+{
+    var addr = addr_array.join("::");
+    outlet(0, addr, msg, args);
+}
+send_.local = 1;

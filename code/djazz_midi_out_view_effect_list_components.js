@@ -12,17 +12,21 @@ function effects(track_dict_name, effect_menu_items_dict_name)
 
     var l_old   = effect_slots_.length;
     var l_new   = effect_name_array.length;
+
     for (var i = 0; i < Math.min(l_old, l_new); i++)
     {
-        set_effect_(effect_slots_[i], effect_menu_items_dict_name, effect_name_array[i]);
+        var slot        = effect_slots_[i];
+        var effect_name = effect_name_array[i];
+        effect(slot, effect_menu_items_dict_name, effect_name);
     }
 
     if (l_old < l_new)
     {
         for (var i = l_old; i < l_new; i++)
         {
-            var slot = make_slot_(effect_menu_items_dict_name);
-            set_effect_(slot, effect_menu_items_dict_name, effect_name_array[i]);
+            var slot        = make_slot_(effect_menu_items_dict_name);    
+            var effect_name = effect_name_array[i];
+            effect(slot, effect_menu_items_dict_name, effect_name);
         }
     }
 
@@ -30,23 +34,38 @@ function effects(track_dict_name, effect_menu_items_dict_name)
     {
         for (var i = l_new; i < l_old; i++)
         {
-            post ("removing slot", l_old - 1, "\n");
             remove_last_slot_();
         }
     }
-    //make_extra_slot_(effect_menu_items_dict_name);
+    //make_extra_slot_();
 }
 
+
+function effect(slot, effect_menu_items_dict_name, effect_name)
+{
+    var d                   = new Dict (effect_menu_items_dict_name);
+    var effect_names        = dutils.get_dict_array(d, "items");
+    var new_number          = effect_names.indexOf(effect_name);
+
+    var effect_number_box   = slot.subpatcher().getnamed("effect_number");
+    var old_number          = effect_number_box.getvalueof();
+
+    if (new_number < 0 || isNaN(new_number))
+    {
+        return;
+    }
+    if (old_number !== new_number)
+    {
+        var addr    = [slot.varname, "umenu"];
+        var msg     = "set";
+        var args    = new_number;
+
+        send_(addr, msg, args);
+    }
+}
+effect.local = 1;
 
 //--------------------------------------------------------------------------------
-
-
-function make_extra_slot_(effect_menu_items_dict_name)
-{
-    var slot = make_slot_(effect_menu_items_dict_name);
-    set_effect_(slot, effect_menu_items_dict_name, "");    
-}
-make_extra_slot_.local = 1;
 
 
 function remove_last_slot_()
@@ -88,49 +107,34 @@ function make_slot_(effect_menu_items_dict_name)
                     "@presentation",        1,
                     "@patching_rect",       patching_rect,
                     "@presentation_rect",   presentation_rect);
-    effect_slot.varname = "effect_" + i;
 
+    effect_slot.varname = "effect_" + i;
     init_slot_umenu_(effect_slot, effect_menu_items_dict_name);
     effect_slots_.push(effect_slot);
+
     return effect_slot;
 }
 make_slot_.local = 1;
 
 
-function set_effect_(slot, effect_menu_items_dict_name, effect_name)
-{
-    var effect_number_box   = slot.subpatcher().getnamed("effect_number");
-    var old_number          = effect_number_box.getvalueof();
-
-    var d                   = new Dict (effect_menu_items_dict_name);
-    var effect_names        = dutils.get_dict_array(d, "items");
-    var new_number          = effect_names.indexOf(effect_name)
-    //post (effect_names);
-    //post ("\n");
-    //post (new_number, old_number, effect_name, "\n");
-    if (new_number < 0 || isNaN(new_number))
-    {
-        //post ("bad effect number!", new_number, "\n");
-        return;
-    }
-    if (old_number !== new_number)
-    {
-        var umenu = slot.subpatcher().getnamed("umenu");
-        umenu.message("set", new_number);
-    }
-}
-set_effect_.local = 1;
-
-
 
 function init_slot_umenu_(effect_slot, effect_menu_items_dict_name)
 {
-    effect_slot.subpatcher().getnamed("umenu").message("dictionary", effect_menu_items_dict_name);
+    var addr    = [effect_slot.varname, "umenu"];
+    var msg     = "dictionary";
+    var args    = effect_menu_items_dict_name;
+    send_(addr, msg, args);
 }
 init_slot_umenu_.local = 1;
 
 
 
+function send_(addr_array, msg, args)
+{
+    var addr = addr_array.join("::");
+    outlet(0, addr, msg, args);
+}
+send_.local = 1;
 
 
 

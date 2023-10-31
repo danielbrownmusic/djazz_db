@@ -2,8 +2,6 @@ var dutils = require("db_dictionary_array_utils");
 
 autowatch = 1;
 
-outlets = 1;
-
 var tracks_ = [];
 
 
@@ -13,14 +11,8 @@ function tracks(bank_dict_name, effect_menu_items_dict_name)
 
     var d           = new Dict (bank_dict_name);
     var track_array = dutils.get_dict_array(d, "tracks");
-    for (var i = 0; i < track_array.length; i++)
-    {
-        post (track_array[i].name);
-        post (track_array[i].getsize("effects"));
-    }
-    var track_count = track_array.length;
 
-    for (var i = 0; i < track_count; i++)
+    for (var i = 0; i < track_array.length; i++)
     {
         var track_dict_name = track_array[i].name;
         add_track_(track_dict_name);
@@ -41,12 +33,6 @@ function effects(i, track_dict_name, effect_menu_items_dict_name)
 
 function clear()
 {
-    clear();
-}
-
-
-function clear()
-{
     var l = tracks_.length;
     for (var i = 0; i < l; i++)
     {
@@ -60,11 +46,11 @@ function clear()
 
 function add_track_(track_dict_name)
 {
-    //var spray           = this.patcher.getnamed("spray");   
     var events_inlet    = this.patcher.getnamed("events_inlet");
     var events_outlet 	= this.patcher.getnamed("events_outlet");
 
     var i = tracks_.length;
+
     var w = 160;
     var h = 48;	
 
@@ -78,7 +64,6 @@ function add_track_(track_dict_name)
     track.varname 	    = "track_" + i;
     tracks_.push(track);
 
-    //this.patcher.connect(spray, i, track, 1);
     this.patcher.connect(events_inlet, 0, track, 0);
     this.patcher.connect(track, 0, events_outlet, 0);
 
