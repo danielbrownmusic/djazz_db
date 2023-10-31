@@ -197,13 +197,12 @@
 							}
 , 							{
 								"box" : 								{
-									"bgcolor" : [ 0.701960784313725, 0.529411764705882, 0.290196078431373, 1.0 ],
 									"id" : "obj-55",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 651.142439778224798, 461.1899340779662, 295.0, 22.0 ],
+									"patching_rect" : [ 651.142439778224798, 461.1899340779662, 287.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"filename" : "djazz_midi_out_view_window_slot_components.js",
 										"parameter_enable" : 0
@@ -5007,7 +5006,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 714.083354525659388, 539.0, 199.0, 22.0 ],
-					"text" : "djazz_midi_out_view_window_bank"
+					"text" : "djazz_midi_out_view_window_bank",
+					"varname" : "djazz_midi_out_view_window_bank"
 				}
 
 			}
@@ -5266,8 +5266,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-37", 0 ],
+					"order" : 0,
+					"source" : [ "obj-68", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-67", 2 ],
-					"order" : 1,
+					"order" : 2,
 					"source" : [ "obj-68", 0 ],
 					"watchpoint_flags" : 5,
 					"watchpoint_id" : 1
@@ -5277,7 +5285,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-75", 1 ],
-					"order" : 0,
+					"order" : 1,
 					"source" : [ "obj-68", 0 ]
 				}
 
@@ -5562,13 +5570,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_effect_controller_window.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/_DeletedItems/patchers",
-				"patcherrelativepath" : "../_DeletedItems/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_events_to_midi.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
@@ -5807,7 +5808,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_midi_out_window_slot_components.js",
+				"name" : "djazz_midi_out_view_window_slot_components.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
@@ -5860,6 +5861,13 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_pitch_shift_controller.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{

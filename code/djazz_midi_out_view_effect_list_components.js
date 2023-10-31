@@ -15,20 +15,15 @@ function effects(track_dict_name, effect_menu_items_dict_name)
 
     for (var i = 0; i < Math.min(l_old, l_new); i++)
     {
-        var slot        = effect_slots_[i];
-        var effect_name = effect_name_array[i];
-
-        effect(slot, effect_menu_items_dict_name, effect_name);
+        dispatch_effect_name_(i, effect_name_array);
     }
 
     if (l_old < l_new)
     {
         for (var i = l_old; i < l_new; i++)
         {
-            var slot        = make_slot_(effect_menu_items_dict_name);    
-            var effect_name = effect_name_array[i];
-
-            effect(slot, effect_menu_items_dict_name, effect_name);
+            make_slot_(effect_menu_items_dict_name);    
+            dispatch_effect_name_(i, effect_name_array);
         }
     }
 
@@ -43,16 +38,15 @@ function effects(track_dict_name, effect_menu_items_dict_name)
 }
 
 
-function effect(slot, effect_name)
+function effect()
 {
-    var addr    = [slot.varname, "components"];
-    var msg     = "effect";
-    var args    = effect_name;
+    var a       = arrayfromargs(arguments);
+    var i       = a[0];
+    var msg     = a[1];
+    var args    = a.slice(2);
 
-    send_(addr, msg, args);
-
+    dispatch_(i, msg, args);
 }
-effect.local = 1;
 
 //--------------------------------------------------------------------------------
 
@@ -98,9 +92,8 @@ function make_slot_(effect_menu_items_dict_name)
                     "@presentation_rect",   presentation_rect);
 
     effect_slot.varname = "effect_" + i;
-    load_slot_menu_items_(effect_slot, effect_menu_items_dict_name);
     effect_slots_.push(effect_slot);
-
+    dispatch_menu_items_(i, effect_menu_items_dict_name);
     return effect_slot;
 }
 make_slot_.local = 1;
@@ -108,33 +101,29 @@ make_slot_.local = 1;
 
 //--------------------------------------------------------------------------------
 
-function load_slot_menu_items_(slot, effect_menu_items_dict_name)
+
+function dispatch_(i, msg, args)
 {
-    var addr    = [slot.varname, "components"];
-    var msg     = "load_menu_items";
-    var args    = effect_menu_items_dict_name;
-    send_(addr, msg, args)
+    var slot   = effect_slots_[i];
+    var addr    = [slot.varname, "components"].join("::");    
+
+    outlet (0, addr, msg, args);
 }
-load_slot_menu_items_.local = 1;
+dispatch_.local = 1;
 
 
-//--------------------------------------------------------------------------------
-
-
-function send_(addr, msg, args)
+function dispatch_effect_name_(i, effect_name_array)
 {
-    if (Array.isArray(addr))
-    {
-        var addr = addr.join("::");
-    }
-    outlet(0, addr, msg, args);
+    dispatch_(i, "name", effect_name_array[i]);    
 }
-send_.local = 1;
+dispatch_effect_name_.local = 1;
 
 
-
-
-
+function dispatch_menu_items_(i, effect_menu_items_dict_name)
+{
+    dispatch_(i, "menu_items", effect_menu_items_dict_name); 
+}
+dispatch_menu_items_.local = 1;
 
 
 

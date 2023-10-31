@@ -15,17 +15,15 @@ function effects(track_dict_name, effect_menu_items_dict_name)
 
     for (var i = 0; i < Math.min(l_old, l_new); i++)
     {
-        var slot        = effect_slots_[i];
-        var effect_name = effect_name_array[i];
-        effect(slot, effect_menu_items_dict_name, effect_name);
+        dispatch_effect_name_(i, effect_menu_items_dict_name, effect_name_array);
     }
+
     if (l_old < l_new)
     {
         for (var i = l_old; i < l_new; i++)
         {
-            var slot = make_slot_();
-            var effect_name = effect_name_array[i];            
-            effect(slot, effect_menu_items_dict_name, effect_name_array[i]);
+            make_slot_();
+            dispatch_effect_name_(i, effect_menu_items_dict_name, effect_name_array);
         }
     }
     else
@@ -38,19 +36,16 @@ function effects(track_dict_name, effect_menu_items_dict_name)
 }
 
 
-function effect(slot, effect_menu_items_dict_name, effect_name)
+function effect()
 {
-    var d               = new Dict (effect_menu_items_dict_name);
-    var patcher_name    = d.get("effects").contains(effect_name) === 1 ?
-                            d.get("effects").get(effect_name).get("patcher") :
-                            null;
+    var a       = arrayfromargs(arguments);
+    var i       = a[0];
+    var msg     = a[1];
+    var args    = a.slice(2);
 
-    var addr    = [slot.varname, "components"];
-    var msg     = "effect";
-    var args    = patcher_name;
-
-    send_(addr, msg, args);
+    dispatch_(i, msg, args);
 }
+
 
 //--------------------------------------------------------------------------------
 
@@ -93,7 +88,7 @@ make_slot_.local = 1;
 //--------------------------------------------------------------------------------
 
 
-function send_(addr, msg, args)
+/* function send_(addr, msg, args)
 {
     if (Array.isArray(addr))
     {
@@ -101,4 +96,21 @@ function send_(addr, msg, args)
     }
     outlet(0, addr, msg, args);
 }
-send_.local = 1;
+send_.local = 1; */
+
+
+function dispatch_(i, msg, args)
+{
+    var slot   = effect_slots_[i];
+    var addr    = [slot.varname, "components"].join("::");    
+
+    outlet (0, addr, msg, args);
+}
+dispatch_.local = 1;
+
+
+function dispatch_effect_name_(i, effect_menu_items_dict_name, effect_name_array)
+{
+    dispatch_(i, "name", [effect_name_array[i], effect_menu_items_dict_name]);    
+}
+dispatch_effect_name_.local = 1;

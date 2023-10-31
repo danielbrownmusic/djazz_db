@@ -16,18 +16,23 @@ function tracks(bank_dict_name, effect_menu_items_dict_name)
     {
         var track_dict_name = track_array[i].name;
         add_track_(track_dict_name);
-        effects(i, track_dict_name, effect_menu_items_dict_name);
+
+        var msg     = "effects";
+        var args    = [track_dict_name, effect_menu_items_dict_name];
+        dispatch_(i, msg, args);
+        //effects(i, track_dict_name, effect_menu_items_dict_name);
     }
 }
 
 
-function effects(i, track_dict_name, effect_menu_items_dict_name)
+function track()
 {
-    var track = tracks_[i];
-    var addr = [track.varname, "effect_list", "components"].join("::");
-    var msg = "effects";
-    var args = [track_dict_name, effect_menu_items_dict_name];
-    outlet (0, addr, msg, args);
+    var a       = arrayfromargs(arguments);
+    var i       = a[0];
+    var msg     = a[1];
+    var args    = a.slice(2);
+
+    dispatch_(i, msg, args);
 }
 
 
@@ -84,6 +89,27 @@ remove_last_track_.local = 1;
 
 
 //----------------------------------------------------------------------------------------------------
+
+function dispatch_(i, msg, args)
+{
+    var track   = tracks_[i];
+    var addr    = [track.varname, "effect_list", "components"].join("::");    
+    outlet (0, addr, msg, args);
+}
+dispatch_.local = 1;
+
+
+
+
+/* function effects(i, track_dict_name, effect_menu_items_dict_name)
+{
+    var track = tracks_[i];
+    var addr = [track.varname, "effect_list", "components"].join("::");
+    var msg = "effects";
+    var args = [track_dict_name, effect_menu_items_dict_name];
+} */
+
+
 
 
 

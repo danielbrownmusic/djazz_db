@@ -62,11 +62,10 @@ function set_effect()
 
     set_effect_name_array_(track_index, effect_names);
 
-    var msg = "effects";
     var d = new Dict(tracks_dict_name_);
     var track_dict_name = d.get("tracks")[track_index].name;
-    var args = [track_index, track_dict_name, effects_menu_items_dict_name_];
-    outlet (0, msg, args);
+    var msg = ["track", track_index, "effects", track_dict_name, effects_menu_items_dict_name_];
+    outlet (0, msg);
 }
 
 // ----------------------------------------------------------------------------------

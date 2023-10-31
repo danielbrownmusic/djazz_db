@@ -40,12 +40,29 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 24.0, 97.0, 112.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"filename" : "djazz_dispatch.js",
+						"parameter_enable" : 0
+					}
+,
+					"text" : "js djazz_dispatch.js"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-53",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 300.0, 85.0, 283.0, 22.0 ],
+					"patching_rect" : [ 24.0, 30.0, 283.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_midi_out_view_window_list_components.js",
 						"parameter_enable" : 0
@@ -57,8 +74,29 @@
 
 			}
  ],
-		"lines" : [  ],
+		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-53", 0 ]
+				}
+
+			}
+ ],
 		"dependency_cache" : [ 			{
+				"name" : "db_dictionary_array_utils.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_dispatch.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "djazz_midi_out_view_window_list_components.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",

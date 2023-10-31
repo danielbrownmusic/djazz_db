@@ -1,23 +1,28 @@
 autowatch  = 1;
 
 
-function effect()
+function name()
 {
-    var effect_patcher_name = arguments[0];
+    var effect_name                 = arguments[0];
+    var effect_menu_items_dict_name = arguments[1];
+    
+    var patcher_class = get_patcher_class_(effect_name, effect_menu_items_dict_name);
 
-    if (!effect_patcher_name)
+    if (!patcher_class)
     {
         remove_effect_();
         return;
     }
-
+    
     var effect = this.patcher.getnamed('effect');
     if (!effect)
     {
-        make_new_effect_(effect_patcher_name);
+        make_new_effect_(patcher_class);
     }
-
-    set_effect_(effect_patcher_name);
+    else
+    {
+        set_effect_(patcher_class);
+    }
 }
 
 
@@ -57,12 +62,25 @@ function make_new_effect_(effect_patcher_name)
 make_new_effect_.local = 1;
 
 
-function set_effect_(effect_patcher_name)
+function set_effect_(patcher_class)
 {
-    if (this.patcher.getnamed('effect').maxclass === effect_patcher_name)
+    if (this.patcher.getnamed('effect').maxclass === patcher_class)
         return;
 
     remove_effect_();
-    make_new_effect_(effect_patcher_name);
+    make_new_effect_(patcher_class);
 }
 set_effect_.local = 1;
+
+
+//----------------------------------------------------------------------------------------------------
+
+
+function get_patcher_class_(effect_name, effect_menu_items_dict_name)
+{
+    var d = new Dict(effect_menu_items_dict_name);
+    return  d.get("effects").contains(effect_name) ?
+            d.get("effects").get(effect_name).get("patcher") :
+            null;
+}
+get_patcher_class_.local = 1;
