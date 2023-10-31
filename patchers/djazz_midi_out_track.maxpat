@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 566.0, 318.0, 536.0, 627.0 ],
+		"rect" : [ 1227.0, 390.0, 357.0, 515.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 350.0, 12.0, 56.0, 22.0 ],
+					"patching_rect" : [ 189.5, 13.0, 56.0, 22.0 ],
 					"restore" : 					{
 						"active" : [ 0 ],
 						"channel" : [ 0 ]
@@ -58,25 +58,12 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
-					"id" : "obj-2",
-					"index" : 0,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 280.0, 12.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-17",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "int" ],
-					"patching_rect" : [ 128.0, 98.0, 111.5, 22.0 ],
+					"patching_rect" : [ 112.0, 84.0, 133.5, 22.0 ],
 					"text" : "t i i"
 				}
 
@@ -88,7 +75,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 65.0, 146.0, 82.0, 22.0 ],
+					"patching_rect" : [ 49.0, 145.0, 82.0, 22.0 ],
 					"text" : "route"
 				}
 
@@ -101,7 +88,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 128.0, 31.0, 50.0, 22.0 ],
+					"patching_rect" : [ 112.0, 13.0, 50.0, 22.0 ],
 					"varname" : "channel"
 				}
 
@@ -114,7 +101,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 45.0, 201.0, 39.0, 32.0 ],
+					"patching_rect" : [ 29.0, 207.0, 39.0, 32.0 ],
 					"varname" : "active"
 				}
 
@@ -123,12 +110,12 @@
 				"box" : 				{
 					"comment" : "messages: event, solo, effect",
 					"id" : "obj-8",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 65.0, 12.0, 30.0, 30.0 ]
+					"outlettype" : [ "float" ],
+					"patching_rect" : [ 49.0, 13.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -136,11 +123,11 @@
 				"box" : 				{
 					"comment" : "midi events",
 					"id" : "obj-5",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 65.0, 464.0, 30.0, 30.0 ]
+					"patching_rect" : [ 49.0, 427.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -151,7 +138,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 65.0, 281.0, 146.0, 22.0 ],
+					"patching_rect" : [ 49.0, 280.0, 146.0, 22.0 ],
 					"text" : "djazz_midi_out_effect_list",
 					"varname" : "effect_list"
 				}
@@ -164,7 +151,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 220.5, 338.0, 41.0, 22.0 ],
+					"patching_rect" : [ 226.5, 280.0, 41.0, 22.0 ],
 					"text" : "set $1"
 				}
 
@@ -176,7 +163,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 65.0, 392.0, 53.0, 22.0 ],
+					"patching_rect" : [ 49.0, 355.0, 53.0, 22.0 ],
 					"text" : "prepend"
 				}
 
@@ -207,14 +194,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
 					"source" : [ "obj-17", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4", 1 ],
-					"midpoints" : [ 289.5, 240.5, 201.5, 240.5 ],
-					"source" : [ "obj-2", 0 ]
 				}
 
 			}
@@ -253,23 +232,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_midi_out_effect_list.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_effect_list_components.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

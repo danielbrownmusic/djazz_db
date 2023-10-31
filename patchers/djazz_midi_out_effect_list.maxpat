@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 509.0, 384.0, 726.0, 447.0 ],
+		"rect" : [ 2025.0, 377.0, 726.0, 447.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 254.333333333333314, 170.0, 112.0, 22.0 ],
+					"patching_rect" : [ 254.333333333333314, 188.0, 112.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_dispatch.js",
 						"parameter_enable" : 0
@@ -86,8 +86,8 @@
 					"id" : "obj-7",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 254.333333333333314, 106.0, 242.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_midi_out_effect_list_components.js",

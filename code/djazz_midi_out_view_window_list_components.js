@@ -40,14 +40,14 @@ function effects(track_dict_name, effect_menu_items_dict_name)
 
 function effect(slot, effect_menu_items_dict_name, effect_name)
 {
-    var d               = new Dict (effect_menu_items_dict_name);
-    var patcher_name    = d.get("effects").contains(effect_name) === 1 ?
-                            d.get("effects").get(effect_name).get("patcher") :
-                            null;
+    var d                   = new Dict (effect_menu_items_dict_name);
+    var new_patcher_name    =   d.get("effects").contains(effect_name) === 1 ?
+                                d.get("effects").get(effect_name).get("controller") :
+                                null;
 
-    var addr    = [slot.varname, "components"];
-    var msg     = "effect";
-    var args    = patcher_name;
+    var addr    = [slot.varname, "pcontrol"];
+    var msg     = "load";
+    var args    = new_patcher_name;
 
     send_(addr, msg, args);
 }
@@ -80,7 +80,7 @@ function make_slot_()
 	var x = x_inlet;
 	var y = y_inlet + h + h * i;
 
-    var effect_slot = this.patcher.newdefault(x, y, "djazz_midi_out_effect_slot");
+    var effect_slot = this.patcher.newdefault(x, y, "djazz_midi_out_view_window_slot");
 
     effect_slot.varname = "effect_" + i;    
     effect_slots_.push(effect_slot);
@@ -90,15 +90,9 @@ function make_slot_()
 make_slot_.local = 1;
 
 
-//--------------------------------------------------------------------------------
-
-
-function send_(addr, msg, args)
+function send_(addr_array, msg, args)
 {
-    if (Array.isArray(addr))
-    {
-        var addr = addr.join("::");
-    }
+    var addr = addr_array.join("::");
     outlet(0, addr, msg, args);
 }
 send_.local = 1;

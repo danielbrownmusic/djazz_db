@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 269.0, 127.0, 409.0, 481.0 ],
+		"rect" : [ 1083.0, 711.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,44 +40,33 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-54",
+					"id" : "obj-53",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 28.0, 98.0, 295.0, 22.0 ],
+					"patching_rect" : [ 300.0, 85.0, 283.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_midi_out_view_window_bank_components.js",
+						"filename" : "djazz_midi_out_view_window_list_components.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_midi_out_view_window_bank_components.js",
-					"varname" : "midi_out_1[3]"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-1",
-					"index" : 1,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 28.0, 20.0, 30.0, 30.0 ]
+					"text" : "js djazz_midi_out_view_window_list_components.js",
+					"varname" : "components"
 				}
 
 			}
  ],
-		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-54", 0 ],
-					"source" : [ "obj-1", 0 ]
-				}
-
+		"lines" : [  ],
+		"dependency_cache" : [ 			{
+				"name" : "djazz_midi_out_view_window_list_components.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
 			}
- ]
+ ],
+		"autosave" : 0
 	}
 
 }

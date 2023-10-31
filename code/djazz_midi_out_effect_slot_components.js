@@ -1,9 +1,5 @@
 autowatch  = 1;
 
-outlets = 2;
-setoutletassist(0, "log messages sent");
-setoutletassist(1, "log messages received");
-
 
 function effect()
 {
@@ -23,6 +19,9 @@ function effect()
 
     set_effect_(effect_patcher_name);
 }
+
+
+//----------------------------------------------------------------------------------------------------
 
 
 function remove_effect_()
@@ -67,6 +66,3 @@ function set_effect_(effect_patcher_name)
     make_new_effect_(effect_patcher_name);
 }
 set_effect_.local = 1;
-
-
-//----------------------------------------------------------------------------------------------------
