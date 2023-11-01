@@ -131,22 +131,35 @@ exports.get_array = function (a)
 
 
 
-exports.get_dict_array_of_keys = function(d)
+exports.get_dict_key_array = function(d)
 {
     var entry = d.getkeys();
 
     if (!entry)
     {
-        post ("WARNING: get_array_of_keys(", d.name, ") returned NULL.\n")
-        return null;
+        //post ("DUTILS: Entry exists and is NULL! Converting tp empty array.\n");
+        return [];
     }
 
-    else if (entry === "" || entry === "*")
+    if (Array.isArray(entry) && entry.length === 0)
+    {
+        //post ("DUTILS: Entry is []\n");
         return [];
+    }
 
-    else if (Array.isArray(entry) === false)
+    else if (entry === EMPTY_STRING || entry === EMPTY_ARRAY_TOKEN)
+    {
+        //post ("DUTILS: Entry is empty token.\n");
+        return [];
+    }
+
+    else if (d.getsize(key) === 1)
+    {
+        //post ("DUTILS: Entry is a single atom. \n");
         return [entry];
+    }
 
+    //post ("DUTILS: SEntry is an actual array.\n");
     return entry;
 }
 

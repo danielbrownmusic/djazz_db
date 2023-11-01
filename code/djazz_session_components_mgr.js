@@ -1,3 +1,88 @@
+var dutils = require("db_dictionary_array_utils");
+
+autowatch = 1;
+
+outlets = 2;
+
+var SESSION_COMPONENTS_DICT_NAME    = "SESSION_COMPONENTS";
+var SESSION_COMPONENTS_DICT         = null;
+
+var x = 66;
+var y = 132;
+var h = 88;
+
+function load_from_file(components_file_full_path)
+{
+    SESSION_COMPONENTS_DICT = new Dict(SESSION_COMPONENTS_DICT_NAME);
+    SESSION_COMPONENTS_DICT.import_json(components_file_full_path);
+    outlet (1, SESSION_COMPONENTS_DICT_NAME);
+    load_from_dict();
+}
+
+
+function load_from_dict()
+{
+    make_components_();
+    load_components_();
+}
+
+// ----------------------------------------------------------------------------------
+
+function make_components_()
+{
+    var keys = get_dict_key_array(SESSION_COMPONENTS_DICT);
+    for (var i = 0; i < keys.length; i++)
+    {
+        var key = keys[i];
+        
+        var x_player        = x;
+        var y_player        = y + h * i; 
+
+        var midi_player     = this.patcher.newdefault(x_player, y_player, "djazz_midi_player", key);
+        midi_player.name    = key;
+
+        this.patcher.connect(this.box, 0, midi_player, 1);
+    }
+}
+make_components_.local = 1;
+
+
+function load_components_()
+{
+    outlet (0, SESSION_COMPONENTS_DICT_NAME);
+}
+load_components_.local = 1;
+
+
+/* function dispatch_(addr, msg, args)
+{
+    var slot   = effect_slots_[i];
+    var addr    = [addr, "loader"].join("::");    
+
+    outlet (0, addr, msg, args);
+}
+dispatch_.local = 1;
+ */
+
+
+
+var MIDI_PLAYERS    = "midi_players";
+var NAVIGATE        = "navigate";
+var GENERATE        = "generate";
+var MIDI_OUT        = "midi_out";
+
+var DICTIONARY      = "dictionary";
+
+var CMD_LOAD            = "load_from_dict";
+
+var DATABASE_NAME_PREFIX = "database";
+
+var SEPARATOR_DICT = "::";
+var SEPARATOR_ADDR = " ";
+var SEPARATOR_DATABASE_NAME = "_";
+
+
+
 /*
 
 
@@ -111,28 +196,6 @@ The current value of the observed object or attribute. List values are represent
 */
 
 
-autowatch = 1;
-
-outlets = 2;
-
-var dutils = require("db_dictionary_array_utils");
-
-var MIDI_PLAYERS    = "midi_players";
-var NAVIGATE        = "navigate";
-var GENERATE        = "generate";
-var MIDI_OUT        = "midi_out";
-
-var DICTIONARY      = "dictionary";
-
-var CMD_LOAD            = "load_from_dict";
-
-var DATABASE_NAME_PREFIX = "database";
-
-var SEPARATOR_DICT = "::";
-var SEPARATOR_ADDR = " ";
-var SEPARATOR_DATABASE_NAME = "_";
-
-
 /* 
 function load_from_file()
 {
@@ -167,39 +230,6 @@ function load_from_file()
  */
 
 
-function load_from_file()
-{
-    var components_file_full_path    = arguments[0];
-    post (components_file_full_path);
-    var d                            = new Dict();
-    d.import_json(components_file_full_path);
-    load_from_dict("dictionary", d.name);
-}
-
-
-function load_from_dict()
-{
-    if (arguments[0] !== "dictionary")
-    {
-        post ("error loading.\n");
-        return;
-    }
-
-    var dict_name   = arguments[1];
-    var d           = new Dict(dict_name);
-    post ("keys = \n");
-    post (d.getkeys());
-    dutils.get_array_of_keys(d).forEach(
-        function (key)
-        {
-/*             var obj     = this.patcher.getnamed(key);
-            var mgr     = obj.subpatcher().getnamed("tracks");
- */            var args    = ["dictionary", d.get(key).name];
-            outlet(0, "tracks", args);
-        }, 
-        this
-    );
-}
 
 /* 
     for (var i = 0; i < dutils.get_array_length(d, MIDI_PLAYERS); i++)
