@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -40,6 +40,19 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 337.0, 63.0, 56.0, 22.0 ],
+					"text" : "autopattr",
+					"varname" : "u866005393"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-5",
 					"linecount" : 3,
 					"maxclass" : "newobj",
@@ -48,7 +61,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 635.666683717085107, 283.430197766101173, 99.0, 49.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 1162, 173, 1602, 636 ],
+						"client_rect" : [ 2905, 138, 3355, 868 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
 						"storage_rect" : [ 583, 100, 1520, 798 ]
@@ -118,7 +131,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 25.0, 283.430197766101173, 111.0, 22.0 ],
 					"text" : "djazz_navigate_ctrl",
-					"varname" : "patcher[1]"
+					"varname" : "navigator"
 				}
 
 			}
@@ -131,7 +144,7 @@
 					"outlettype" : [ "", "float" ],
 					"patching_rect" : [ 215.109501964952869, 283.430197766101173, 157.0, 22.0 ],
 					"text" : "djazz_score_follower mnote",
-					"varname" : "djazz_score_follower"
+					"varname" : "composer"
 				}
 
 			}
@@ -144,7 +157,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 449.725749495309856, 283.430197766101173, 121.0, 22.0 ],
 					"text" : "djazz_midi_out_bank",
-					"varname" : "djazz_midi_out_bank"
+					"varname" : "midi_out"
 				}
 
 			}

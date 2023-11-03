@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1068.0, 241.0, 984.0, 636.0 ],
+		"rect" : [ 288.0, 526.0, 984.0, 636.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,19 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 667.0, 30.0, 56.0, 22.0 ],
+					"text" : "autopattr",
+					"varname" : "u738006783"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-21",
 					"maxclass" : "newobj",
@@ -333,11 +346,11 @@
 					"id" : "obj-151",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 61.0, 154.362824104583638, 145.0, 22.0 ],
 					"text" : "djazz_navigate_controller",
-					"varname" : "controller"
+					"varname" : "navigation_control"
 				}
 
 			}
@@ -408,11 +421,12 @@
 				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numinlets" : 3,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 187.0, 92.999996128159182, 213.0, 22.0 ],
-					"text" : "djazz_navigate_parameter_handler_in"
+					"text" : "djazz_navigate_parameter_handler_in",
+					"varname" : "parameters_in"
 				}
 
 			}
@@ -425,7 +439,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 187.0, 219.803977444544216, 220.0, 22.0 ],
 					"text" : "djazz_navigate_parameter_handler_out",
-					"varname" : "djazz_view_controller"
+					"varname" : "parameters_out"
 				}
 
 			}
@@ -434,13 +448,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-151", 1 ],
 					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-152", 0 ],
-					"source" : [ "obj-151", 1 ]
 				}
 
 			}
@@ -495,13 +502,6 @@
 					"destination" : [ "obj-152", 1 ],
 					"order" : 1,
 					"source" : [ "obj-6", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-63", 0 ]
 				}
 
 			}

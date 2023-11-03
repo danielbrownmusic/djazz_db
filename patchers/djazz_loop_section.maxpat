@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 481.0, 345.0, 352.0, 339.0 ],
+		"rect" : [ 481.0, 345.0, 324.0, 345.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -46,7 +46,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 30.0, 273.0, 30.0, 30.0 ]
+					"patching_rect" : [ 30.0, 288.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -85,7 +85,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 30.0, 173.0, 156.0, 35.0 ],
-					"text" : "if ($i3 * $i2 <= 0) then $i1 else ($i1 - $i2) % ($i3 - $i2)"
+					"text" : "if ($i3 <= $i2) then $i1 else ($i1 - $i2) % ($i3 - $i2)"
 				}
 
 			}
