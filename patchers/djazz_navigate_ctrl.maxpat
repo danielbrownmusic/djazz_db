@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 288.0, 526.0, 984.0, 636.0 ],
+		"rect" : [ 833.0, 168.0, 859.0, 375.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -63,7 +63,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -319,7 +319,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 589.0, 490.85934005662466, 145.0, 22.0 ],
+					"patching_rect" : [ 451.0, 255.85934005662466, 145.0, 22.0 ],
 					"text" : "djazz_input_beat_manual",
 					"varname" : "input_beat_manual"
 				}
@@ -333,7 +333,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 589.0, 533.803977444544216, 145.0, 22.0 ],
+					"patching_rect" : [ 451.0, 298.803977444544216, 145.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 2927.138448834619339, 2392.904615020979236, 171.0, 22.0 ],
 					"text" : "djazz_input_beat_metro",

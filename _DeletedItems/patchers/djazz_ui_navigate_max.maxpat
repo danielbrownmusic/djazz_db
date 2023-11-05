@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1311.0, 336.0, 560.0, 506.0 ],
+		"rect" : [ 638.0, 400.0, 560.0, 506.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -180,7 +180,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "djazz_enumerate.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/_DeletedItems/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -188,20 +188,20 @@
 , 			{
 				"name" : "djazz_range.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
+				"patcherrelativepath" : "../../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "djazz_ui_navigate_max_bars.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/_DeletedItems/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "djazz_ui_navigate_max_chapters.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/_DeletedItems/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
