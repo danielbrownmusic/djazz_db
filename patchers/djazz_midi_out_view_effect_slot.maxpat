@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 985.0, 368.0, 430.0, 541.0 ],
+		"rect" : [ 4035.0, 450.0, 722.0, 597.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,13 +40,28 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "led",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 132.0, 169.0, 24.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 0.0, 22.0, 22.0 ],
+					"varname" : "window_open"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-4",
 					"maxclass" : "number",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 43.0, 239.0, 50.0, 22.0 ],
+					"patching_rect" : [ 158.0, 236.0, 50.0, 22.0 ],
 					"varname" : "effect_number"
 				}
 
@@ -58,7 +73,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 43.0, 103.0, 281.0, 22.0 ],
+					"patching_rect" : [ 158.0, 100.0, 281.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_midi_out_view_effect_slot_components.js",
 						"parameter_enable" : 0
@@ -77,7 +92,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 204.0, 297.0, 24.0, 24.0 ],
+					"patching_rect" : [ 319.0, 294.0, 24.0, 24.0 ],
 					"varname" : "active"
 				}
 
@@ -89,7 +104,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 204.0, 239.0, 29.5, 22.0 ],
+					"patching_rect" : [ 319.0, 236.0, 29.5, 22.0 ],
 					"text" : "$2"
 				}
 
@@ -104,9 +119,9 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 43.0, 174.0, 180.000000000000028, 22.0 ],
+					"patching_rect" : [ 158.0, 171.0, 180.000000000000028, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 128.0, 22.0 ]
+					"presentation_rect" : [ 22.0, 0.0, 106.0, 22.0 ]
 				}
 
 			}
@@ -117,10 +132,11 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 30.666666666666657, 23.0, 56.0, 22.0 ],
+					"patching_rect" : [ 145.666666666666657, 20.0, 56.0, 22.0 ],
 					"restore" : 					{
 						"active" : [ 1 ],
-						"effect_number" : [ 2 ]
+						"effect_number" : [ 0 ],
+						"window_open" : [ 0 ]
 					}
 ,
 					"text" : "autopattr",
@@ -164,7 +180,16 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "djazz_midi_out_view_effect_slot_components.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }

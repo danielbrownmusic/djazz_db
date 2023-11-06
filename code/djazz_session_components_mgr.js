@@ -2,57 +2,137 @@ var dutils = require("db_dictionary_array_utils");
 
 autowatch = 1;
 
-outlets = 2;
+outlets = 3;
 
 var SESSION_COMPONENTS_DICT_NAME    = "SESSION_COMPONENTS";
 var SESSION_COMPONENTS_DICT         = null;
 
 var x = 66;
-var y = 132;
+var y = 528;
 var h = 88;
 
-function load_from_file(components_file_full_path)
+
+function load_session_from_file(components_file_full_path)
 {
     SESSION_COMPONENTS_DICT = new Dict(SESSION_COMPONENTS_DICT_NAME);
     SESSION_COMPONENTS_DICT.import_json(components_file_full_path);
-    outlet (1, SESSION_COMPONENTS_DICT_NAME);
+
     load_from_dict();
+    outlet (1, SESSION_COMPONENTS_DICT_NAME);
+    outlet (2, "dictionary", SESSION_COMPONENTS_DICT_NAME);
+}
+
+
+
+
+
+function clear()
+{
+
+    if (SESSION_COMPONENTS_DICT)
+    {
+        remove_components_();
+        SESSION_COMPONENTS_DICT.clear();
+        outlet (2, "dictionary", SESSION_COMPONENTS_DICT_NAME);
+        outlet (1, "set");
+    
+        SESSION_COMPONENTS_DICT.freepeer();
+        SESSION_COMPONENTS_DICT = null;
+    }
+}
+
+
+function load_components_from_file(components_file_full_path)
+{
+    SESSION_COMPONENTS_DICT = new Dict(SESSION_COMPONENTS_DICT_NAME);
+    SESSION_COMPONENTS_DICT.import_json(components_file_full_path);
+
+    load_from_dict();
+    outlet (1, SESSION_COMPONENTS_DICT_NAME);
+    outlet (2, "dictionary", SESSION_COMPONENTS_DICT_NAME);
 }
 
 
 function load_from_dict()
 {
     make_components_();
-    load_components_();
+    outlet (0, "load_player_from_dict", SESSION_COMPONENTS_DICT_NAME);
 }
 
 // ----------------------------------------------------------------------------------
 
 function make_components_()
 {
-    var keys = get_dict_key_array(SESSION_COMPONENTS_DICT);
+    var keys = dutils.get_dict_key_array(SESSION_COMPONENTS_DICT.get("components"));
     for (var i = 0; i < keys.length; i++)
     {
-        var key = keys[i];
-        
-        var x_player        = x;
-        var y_player        = y + h * i; 
+        var key = keys[i];        
+        make_component_(i, SESSION_COMPONENTS_DICT.get("components").get(key));
 
-        var midi_player     = this.patcher.newdefault(x_player, y_player, "djazz_midi_player", key);
-        midi_player.name    = key;
-
-        this.patcher.connect(this.box, 0, midi_player, 1);
     }
 }
 make_components_.local = 1;
 
 
-function load_components_()
+function remove_components_()
 {
-    outlet (0, SESSION_COMPONENTS_DICT_NAME);
+    var keys = dutils.get_dict_key_array(SESSION_COMPONENTS_DICT);
+    for (var i = 0; i < keys.length; i++)
+    {
+        var key = keys[i];
+        remove_component_(SESSION_COMPONENTS_DICT.get(key));
+    }
 }
-load_components_.local = 1;
+remove_components_.local = 1;
 
+
+function make_component_(i, d)
+{
+        var x_view      = x;
+        var y_view      = y + 2 * h * i;
+        var x_player    = x_view;
+        var y_player    = y_view + h; 
+
+        var top_patcher         = this.patcher.box.patcher;
+
+        var name        = d.get("name");
+        var player_name = name;
+        var view_name   = name + "_view";
+
+        var midi_player_view    = top_patcher.newdefault(   x_view,     y_view,     "djazz_midi_player_view",   player_name);
+        var midi_player         = top_patcher.newdefault(   x_player,   y_player,   "djazz_midi_player",        player_name);
+        midi_player.name        = player_name;
+        midi_player_view.name   = view_name
+        
+        top_patcher.connect(    midi_player_view,   0,  midi_player,        0);
+        top_patcher.connect(    midi_player,        1,  midi_player_view,   0);
+        top_patcher.connect(    midi_player,        2,  midi_player_view,   1);
+
+        midi_player.subpatcher().getnamed("loader").message("load_player_from_dict", d.name);
+}
+make_component_.local = 1;
+
+
+function remove_component_(d)
+{
+    var [player_name, view_name]    = get_varnames_(d);
+    var top_patcher                 = this.patcher.box.patcher;
+
+    top_patcher.remove(top_patcher.getnamed(player_name));
+    top_patcher.remove(top_patcher.getnamed(view_name));
+}
+remove_component_.local = 1;
+
+
+function get_varnames_(d)
+{
+    var name        = d.get("name");
+    var player_name = name;
+    var view_name   = name + "_view";
+
+    return [player_name, view_name];
+}
+get_varnames_.locval = 1;
 
 /* function dispatch_(addr, msg, args)
 {

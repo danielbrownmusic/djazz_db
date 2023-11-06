@@ -153,7 +153,7 @@ exports.get_dict_key_array = function(d)
         return [];
     }
 
-    else if (d.getsize(key) === 1)
+    else if (!Array.isArray(entry))
     {
         //post ("DUTILS: Entry is a single atom. \n");
         return [entry];

@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 59.0, 119.0, 876.0, 597.0 ],
+		"rect" : [ 54.0, 97.0, 876.0, 597.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -50,13 +50,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 84.0, 144.0, 640.0, 480.0 ],
+						"rect" : [ 1100.0, 134.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -89,9 +89,9 @@
 								"box" : 								{
 									"id" : "obj-37",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 220.72315008870828, 125.0, 199.0, 22.0 ],
+									"patching_rect" : [ 300.72315008870828, 125.0, 199.0, 22.0 ],
 									"text" : "djazz_midi_out_view_window_bank",
 									"varname" : "djazz_midi_out_view_window_bank"
 								}
@@ -132,7 +132,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 220.72315008870828, 40.0, 30.0, 30.0 ]
+									"patching_rect" : [ 480.72315008870828, 34.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -151,7 +151,7 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"destination" : [ "obj-37", 0 ],
+									"destination" : [ "obj-37", 1 ],
 									"order" : 0,
 									"source" : [ "obj-10", 0 ]
 								}
@@ -168,6 +168,15 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-11", 0 ],
+									"order" : 1,
+									"source" : [ "obj-75", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-37", 0 ],
+									"order" : 0,
 									"source" : [ "obj-75", 0 ]
 								}
 
@@ -182,7 +191,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 196.725749778224781, 100.0, 129.0, 22.0 ],
+					"patching_rect" : [ 196.725735999999984, 100.0, 129.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",

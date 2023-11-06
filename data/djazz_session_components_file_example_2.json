@@ -1,4 +1,5 @@
-{   "midi_out_1" :  {
+{   
+    "midi_out_1" :  {
         "score" : "",
         "min_track" : 1,
         "max_track" : 4,

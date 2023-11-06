@@ -1,43 +1,39 @@
 autowatch  = 1;
 
+var x = 132;
+var y = 528;
+
+
 function name()
 {
     var effect_name                 = arguments[0];
     var effect_menu_items_dict_name = arguments[1];
     
-    var patcher_class = get_patcher_class_(effect_name, effect_menu_items_dict_name);
-    set_effect_(patcher_class);
+    var old_patcher         = this.patcher.getnamed("effect");
+
+    var old_patcher_class   = old_patcher   ? old_patcher.maxclass  : null;
+    var new_patcher_class   = get_patcher_class_(effect_name, effect_menu_items_dict_name);
+
+    if (old_patcher_class === new_patcher_class)
+        return;
+
+    if (old_patcher)
+    {
+        this.patcher.remove(old_patcher);
+    }
+
+    var effect = this.patcher.newdefault(x, y, new_patcher_class);
+    effect.varname = "effect";
 }
 
 
 function window_open()
 {
-    this.patcher.wind.visible = arguments[0];    
-}
-
-
-//----------------------------------------------------------------------------------------------------
-
-
-function set_effect_()
-{
-    var old_patcher_class   = this.patcher.getnamed("effect").getattr("name");
-
-    if (!arguments)
-    {
-        if (!old_patcher_class)
-            return;
-        this.patcher.message("script", "sendbox", "effect", "replace");
-    }
-
-    var patcher_class = arguments[0];
-    if (old_patcher_class === patcher_class)
+    var effect = this.patcher.getnamed("effect");
+    if (!effect)
         return;
-
-    this.patcher.message("script", "sendbox", "effect", "replace", patcher_class);
-
+    effect.subpatcher().wind.visible = arguments[0];    
 }
-set_effect_.local = 1;
 
 
 //----------------------------------------------------------------------------------------------------

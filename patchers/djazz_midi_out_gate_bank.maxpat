@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1098.0, 851.0, 1474.0, 480.0 ],
+		"rect" : [ 1578.0, 727.0, 1113.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,65 +40,32 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 368.0, 30.0, 56.0, 22.0 ],
-					"restore" : 					{
-
-					}
-,
-					"text" : "autopattr",
-					"varname" : "u924006684"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 24.0, 97.0, 112.0, 22.0 ],
+					"patching_rect" : [ 638.0, 147.0, 264.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_dispatch.js",
+						"filename" : "djazz_midi_out_gate_bank_components.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_dispatch.js"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-53",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 24.0, 30.0, 283.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"filename" : "djazz_midi_out_view_window_list_components.js",
-						"parameter_enable" : 0
-					}
-,
-					"text" : "js djazz_midi_out_view_window_list_components.js",
-					"varname" : "components"
+					"text" : "js djazz_midi_out_gate_bank_components.js #1"
 				}
 
 			}
  ],
-		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-53", 0 ]
-				}
-
+		"lines" : [  ],
+		"dependency_cache" : [ 			{
+				"name" : "djazz_midi_out_gate_bank_components.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
 			}
- ]
+ ],
+		"autosave" : 0
 	}
 
 }
