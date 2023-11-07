@@ -84,7 +84,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-37",
@@ -191,7 +190,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 196.725735999999984, 100.0, 129.0, 22.0 ],
+					"patching_rect" : [ 192.725735999999984, 100.0, 129.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",

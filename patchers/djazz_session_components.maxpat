@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 3892.0, 338.0, 792.0, 800.0 ],
+		"rect" : [ 2932.0, 125.0, 413.0, 522.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 518.0, 168.0, 35.0, 22.0 ],
+					"patching_rect" : [ 244.0, 62.0, 35.0, 22.0 ],
 					"text" : "clear"
 				}
 
@@ -59,7 +59,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 141.083354525659388, 90.0, 30.0, 30.0 ]
+					"patching_rect" : [ 20.083354525659388, 21.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -71,7 +71,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 141.083354525659388, 318.0, 30.0, 30.0 ]
+					"patching_rect" : [ 20.083354525659388, 171.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -83,7 +83,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 284.083354525659388, 90.0, 335.0, 35.0 ],
+					"patching_rect" : [ 60.0, 21.0, 335.0, 35.0 ],
 					"text" : "load_session_from_file \"/Users/danielbrown/Documents/Max 8/Projects/djazz_db/data/djazz_session_file_example.json\""
 				}
 
@@ -95,7 +95,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 141.25, 257.0, 207.0, 22.0 ],
+					"patching_rect" : [ 20.25, 110.0, 207.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_session_components_mgr.js",
 						"parameter_enable" : 0
@@ -111,7 +111,7 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 329.25, 390.0, 271.0, 324.0 ]
+					"patching_rect" : [ 79.25, 171.0, 271.0, 324.0 ]
 				}
 
 			}

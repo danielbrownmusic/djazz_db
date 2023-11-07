@@ -7,6 +7,9 @@ outlets = 3;
 var SESSION_COMPONENTS_DICT_NAME    = "SESSION_COMPONENTS";
 var SESSION_COMPONENTS_DICT         = null;
 
+var NAVIGATION_DICT_NAME            = "NAVIGATION";
+var NAVIGATION_DICT                 = null;
+
 var x = 66;
 var y = 528;
 var h = 88;
@@ -17,13 +20,13 @@ function load_session_from_file(components_file_full_path)
     SESSION_COMPONENTS_DICT = new Dict(SESSION_COMPONENTS_DICT_NAME);
     SESSION_COMPONENTS_DICT.import_json(components_file_full_path);
 
-    load_from_dict();
+    make_components_();
+    outlet (0, "load_player_from_dict", SESSION_COMPONENTS_DICT_NAME);
     outlet (1, SESSION_COMPONENTS_DICT_NAME);
     outlet (2, "dictionary", SESSION_COMPONENTS_DICT_NAME);
+
+    load_navigation_file(SESSION_COMPONENTS_DICT.get("navigation"));
 }
-
-
-
 
 
 function clear()
@@ -42,22 +45,42 @@ function clear()
 }
 
 
-function load_components_from_file(components_file_full_path)
+function load_navigation_file(navigation_file_full_path)
 {
-    SESSION_COMPONENTS_DICT = new Dict(SESSION_COMPONENTS_DICT_NAME);
-    SESSION_COMPONENTS_DICT.import_json(components_file_full_path);
-
-    load_from_dict();
-    outlet (1, SESSION_COMPONENTS_DICT_NAME);
-    outlet (2, "dictionary", SESSION_COMPONENTS_DICT_NAME);
+    NAVIGATION_DICT = new Dict(NAVIGATION_DICT_NAME);
+    NAVIGATION_DICT.import_json(navigation_file_full_path);
+    send_out_navigation_dict_();
 }
 
 
-function load_from_dict()
+function get_loaders_()
 {
-    make_components_();
-    outlet (0, "load_player_from_dict", SESSION_COMPONENTS_DICT_NAME);
+    var keys    = dutils.get_dict_key_array(SESSION_COMPONENTS_DICT.get("components"));
+    return keys.map(get_loader_, this);
+
 }
+get_loaders_.local = 1;
+
+
+function get_loader_(obj_varname)
+{
+    post (obj_varname, "is the damn varname.\n");
+    return this.patcher.getnamed(obj_varname).subpatcher().getnamed("loader");
+}
+get_loaders_.local = 1;
+
+
+function send_out_navigation_dict_()
+{
+    get_loaders_().forEach(
+        function (ldr)
+        {
+            loader.message("load_navigation_dict", NAVIGATION_DICT_NAME);
+        },
+        this
+    );
+}
+send_out_navigation_dict_.local = 1;
 
 // ----------------------------------------------------------------------------------
 
@@ -67,8 +90,7 @@ function make_components_()
     for (var i = 0; i < keys.length; i++)
     {
         var key = keys[i];        
-        make_component_(i, SESSION_COMPONENTS_DICT.get("components").get(key));
-
+        make_component_(i, key);
     }
 }
 make_components_.local = 1;
@@ -86,7 +108,7 @@ function remove_components_()
 remove_components_.local = 1;
 
 
-function make_component_(i, d)
+function make_component_(i, key)
 {
         var x_view      = x;
         var y_view      = y + 2 * h * i;
@@ -95,20 +117,20 @@ function make_component_(i, d)
 
         var top_patcher         = this.patcher.box.patcher;
 
-        var name        = d.get("name");
-        var player_name = name;
-        var view_name   = name + "_view";
+        var d = SESSION_COMPONENTS_DICT.get("components").get(key);
+        var player_name = key;
+        var view_name   = key + "_view";
 
         var midi_player_view    = top_patcher.newdefault(   x_view,     y_view,     "djazz_midi_player_view",   player_name);
         var midi_player         = top_patcher.newdefault(   x_player,   y_player,   "djazz_midi_player",        player_name);
-        midi_player.name        = player_name;
-        midi_player_view.name   = view_name
+        midi_player.varname        = player_name;
+        midi_player_view.varname   = view_name
         
         top_patcher.connect(    midi_player_view,   0,  midi_player,        0);
         top_patcher.connect(    midi_player,        1,  midi_player_view,   0);
         top_patcher.connect(    midi_player,        2,  midi_player_view,   1);
 
-        midi_player.subpatcher().getnamed("loader").message("load_player_from_dict", d.name);
+        midi_player.subpatcher().getnamed("loader").message("load_player_from_dict", key);
 }
 make_component_.local = 1;
 

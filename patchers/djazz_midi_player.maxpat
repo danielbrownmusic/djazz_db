@@ -271,6 +271,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-77", 2 ],
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-37", 0 ],
 					"source" : [ "obj-67", 0 ]
 				}
@@ -290,7 +297,7 @@
 					"order" : 1,
 					"source" : [ "obj-68", 0 ],
 					"watchpoint_flags" : 5,
-					"watchpoint_id" : 8
+					"watchpoint_id" : 7
 				}
 
 			}

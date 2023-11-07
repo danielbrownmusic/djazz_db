@@ -4,10 +4,10 @@
     "navigation"    : ""
     ,
     "components"    : {
-        "component_1" :  {
-            "name" : "midi_player_1"
-            ,
-            "score" : ""
+        "midi_player_1" :  {
+            "data" : {
+                "score" : ""
+            }
             ,
             "components" : {
                 "tracks" : [    { 
@@ -38,10 +38,10 @@
         }
         ,
         
-        "component_2" :  {
-            "name" : "midi_player_1"
-            ,
-            "score" : ""
+        "midi_player_2" :  {
+            "data" : {
+                "score" : ""
+            }
             ,
             "components" : {
                 "tracks" : [    { 
