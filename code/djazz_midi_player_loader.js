@@ -7,8 +7,10 @@ function load_player_from_dict(player_dict_name)
 {
     var d = new Dict (player_dict_name);
 
-    load_components(d.get("components").name);
-    load_data(d.get("data").name);
+    var player_key = this.patcher.box.varname;
+
+    load_components (d.get(player_key).get("components").name);
+    load_data       (d.get(player_key).get("data").name);
 }
 
 
@@ -21,7 +23,13 @@ function load_components(components_dict_name)
 
 function load_data(data_dict_name)
 {
-    outlet (1, d.get("score"));
+    load_score(d.get("score"));
+}
+
+
+function load_score(score_file_full_path)
+{
+        outlet (1, "score", score_file_full_path);
 }
 
 

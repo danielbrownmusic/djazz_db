@@ -36,40 +36,6 @@
                 ]
             }
         }
-        ,
-        
-        "midi_player_2" :  {
-            "data" : {
-                "score" : ""
-            }
-            ,
-            "components" : {
-                "tracks" : [    { 
-                        "name" : "flute",
-                        "number" : 1,
-                        "effects": [ "", "", ""]
-                    }
-                    ,
-                    { 
-                        "name" : "oboe",
-                        "number" : 2,
-                        "effects": [ "", "", "", ""]
-                    }
-                    ,
-                    { 
-                        "name" : "piano",
-                        "number" : 3,
-                        "effects": [ "", "", ""]
-                    }
-                    ,
-                    { 
-                        "name" : "trombone",
-                        "number" : 4,
-                        "effects": ["", "", ""]
-                    }
-                ]
-            }
-        }  
     }
     ,
     "presets"       : {}

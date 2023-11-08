@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 139.0, 142.0, 1816.0, 917.0 ],
+		"rect" : [ 590.0, 217.0, 895.0, 917.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -5738,58 +5738,6 @@
 				}
 
 			}
-, 			{
-				"box" : 				{
-					"id" : "obj-80",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 66.0, 528.0, 213.0, 22.0 ],
-					"text" : "djazz_midi_player_view midi_player_1",
-					"varname" : "midi_player_1_view"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-81",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 66.0, 616.0, 183.0, 22.0 ],
-					"text" : "djazz_midi_player midi_player_1",
-					"varname" : "midi_player_1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-82",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 66.0, 704.0, 213.0, 22.0 ],
-					"text" : "djazz_midi_player_view midi_player_2",
-					"varname" : "midi_player_2_view"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-84",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 66.0, 792.0, 183.0, 22.0 ],
-					"text" : "djazz_midi_player midi_player_2",
-					"varname" : "midi_player_2"
-				}
-
-			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -6048,48 +5996,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-81", 0 ],
-					"source" : [ "obj-80", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-80", 1 ],
-					"source" : [ "obj-81", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-80", 0 ],
-					"source" : [ "obj-81", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-84", 0 ],
-					"source" : [ "obj-82", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-82", 1 ],
-					"source" : [ "obj-84", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-82", 0 ],
-					"source" : [ "obj-84", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-158", 0 ],
 					"source" : [ "obj-92", 0 ]
 				}
@@ -6129,8 +6035,6 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-81::obj-77::obj-151::obj-7::obj-8::obj-64" : [ "gswitch2[1]", "gswitch2[1]", 0 ],
-			"obj-84::obj-77::obj-151::obj-7::obj-8::obj-64" : [ "gswitch2[2]", "gswitch2[1]", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
@@ -6144,10 +6048,6 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "antescofo~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "db_dictionary_array_utils.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
@@ -6169,41 +6069,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_bang_if_next_beat.maxpat",
-				"bootpath" : "~/Desktop",
-				"patcherrelativepath" : "../../../../../Desktop",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_bbu_string_to_ms.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_beat_clock.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_beat_loop_length_ctrl.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_beat_to_chapter_bar_position.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_build_device_view_database_launchpad_mk3_pro_controller.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
@@ -6218,13 +6083,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_chapter_bar_position_to_beat.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_connect_launchpad_pro_mk3_patcher.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
@@ -6233,13 +6091,6 @@
 			}
 , 			{
 				"name" : "djazz_controller_midi_out_bank_effect_lists.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_convert_antescofo_output_to_event.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -6288,35 +6139,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_input_beat_manual.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_input_beat_metro.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_launchpad_pro_mk3_init.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_loop_beats.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_loop_section.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -6352,20 +6175,6 @@
 			}
 , 			{
 				"name" : "djazz_midi_out_bank_components.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_components.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_components_ctrl.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
@@ -6491,90 +6300,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_midi_player.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_player_loader.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_player_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_navigate_controller.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_navigate_ctrl.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_navigate_parameter_handler_in.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_navigate_parameter_handler_out.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_navigate_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_navigate_view_chapter_bar_beat.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_navigate_view_get_chapter_bars.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_navigate_view_loop_ctrl.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_navigate_view_speed_ctrl.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_output_notes.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
@@ -6603,20 +6328,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_prepend_preset.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_preset_to_list.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_range.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
@@ -6625,20 +6336,6 @@
 			}
 , 			{
 				"name" : "djazz_record_midi.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_repeat_bang.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_score_follower.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -6786,20 +6483,6 @@
 			}
 , 			{
 				"name" : "djazz_view_ui_send_launchpad.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "dummy.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "modf.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",

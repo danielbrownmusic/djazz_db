@@ -2,9 +2,9 @@ var dutils = require("db_dictionary_array_utils");
 
 autowatch = 1;
 
-outlets = 3;
+outlets = 5;
 
-var SESSION_COMPONENTS_DICT_NAME    = "SESSION_COMPONENTS";
+var session_components_dict_name_    = "SESSION_COMPONENTS";
 var SESSION_COMPONENTS_DICT         = null;
 
 var NAVIGATION_DICT_NAME            = "NAVIGATION";
@@ -14,6 +14,7 @@ var x = 66;
 var y = 528;
 var h = 88;
 
+var MAIN_PATCHER_ = null;
 
 function load_session_from_file(components_file_full_path)
 {
@@ -21,24 +22,25 @@ function load_session_from_file(components_file_full_path)
     SESSION_COMPONENTS_DICT.import_json(components_file_full_path);
 
     make_components_();
+
     outlet (0, "load_player_from_dict", SESSION_COMPONENTS_DICT_NAME);
+    load_navigation_file(SESSION_COMPONENTS_DICT.get("navigation"));
+
+    //log output:
     outlet (1, SESSION_COMPONENTS_DICT_NAME);
     outlet (2, "dictionary", SESSION_COMPONENTS_DICT_NAME);
-
-    load_navigation_file(SESSION_COMPONENTS_DICT.get("navigation"));
 }
 
 
 function clear()
 {
-
     if (SESSION_COMPONENTS_DICT)
     {
         remove_components_();
         SESSION_COMPONENTS_DICT.clear();
-        outlet (2, "dictionary", SESSION_COMPONENTS_DICT_NAME);
         outlet (1, "set");
-    
+        outlet (2, "dictionary", SESSION_COMPONENTS_DICT_NAME);
+
         SESSION_COMPONENTS_DICT.freepeer();
         SESSION_COMPONENTS_DICT = null;
     }
@@ -50,13 +52,22 @@ function load_navigation_file(navigation_file_full_path)
     NAVIGATION_DICT = new Dict(NAVIGATION_DICT_NAME);
     NAVIGATION_DICT.import_json(navigation_file_full_path);
     send_out_navigation_dict_();
+
+    //log output:
+    outlet (3, NAVIGATION_DICT_NAME);
+    outlet (4, "dictionary", NAVIGATION_DICT_NAME);
 }
 
 
 function get_loaders_()
 {
     var keys    = dutils.get_dict_key_array(SESSION_COMPONENTS_DICT.get("components"));
-    return keys.map(get_loader_, this);
+    var p       = this.patcher;
+    return keys.map(
+        function (key)
+            {
+                p.getnamed(key).subpatcher().getnamed("loader");
+}
 
 }
 get_loaders_.local = 1;
@@ -64,10 +75,23 @@ get_loaders_.local = 1;
 
 function get_loader_(obj_varname)
 {
-    post (obj_varname, "is the damn varname.\n");
-    return this.patcher.getnamed(obj_varname).subpatcher().getnamed("loader");
+    var obj = this.patcher.getnamed(obj_varname)
+    //.subpatcher().getnamed("loader");
 }
 get_loaders_.local = 1;
+
+
+function send_out_components_dicts_()
+{
+    get_loaders_().forEach(
+        function (ldr)
+        {
+            loader.message("load_player_from_dict", NAVIGATION_DICT_NAME);
+        },
+        this
+    );    
+}
+send_out_components_dicts_.local = 1;
 
 
 function send_out_navigation_dict_()
@@ -75,7 +99,7 @@ function send_out_navigation_dict_()
     get_loaders_().forEach(
         function (ldr)
         {
-            loader.message("load_navigation_dict", NAVIGATION_DICT_NAME);
+            loader.message("load_navigator", NAVIGATION_DICT_NAME);
         },
         this
     );
