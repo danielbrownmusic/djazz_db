@@ -2,12 +2,19 @@ autowatch = 1;
 
 outlets = 3;
 
+var player_name_ = "";
+var session_dict_name_ = "";
 
-function load_player_from_dict(player_dict_name)
+function name(player_name)
 {
-    var d = new Dict (player_dict_name);
+    player_name_ = player_name;
+}
 
-    var player_key = this.patcher.box.varname;
+
+function load_from_session_dict(session_dict_name)
+{
+    session_dict_name_ = session_dict_name;
+    var d = new Dict (session_dict_name);
 
     load_components (d.get(player_key).get("components").name);
     load_data       (d.get(player_key).get("data").name);
