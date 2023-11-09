@@ -5,21 +5,16 @@ autowatch = 1;
 var tracks_ = [];
 
 
-function tracks(bank_dict_name, effect_menu_items_dict_name)
+function bank(bank_dict, effect_menu_items_dict)
 {
     clear();
-
-    var d           = new Dict (bank_dict_name);
-    var track_array = dutils.get_dict_array(d, "tracks");
+    var track_array = dutils.get_dict_array(bank_dict, "tracks");
 
     for (var i = 0; i < track_array.length; i++)
     {
-        var track_dict_name = track_array[i].name;
-        add_track_(track_dict_name);
-
-        var msg     = "effects";
-        var args    = [track_dict_name, effect_menu_items_dict_name];
-        dispatch_(i, msg, args);
+        var track_dict = track_array[i];
+        add_track_(track_dict);
+        message_track_(i, "effects", [track_dict, effect_menu_items_dict]);
     }
 }
 
@@ -31,7 +26,7 @@ function track()
     var msg     = a[1];
     var args    = a.slice(2);
 
-    dispatch_(i, msg, args);
+    message_track_(i, msg, args);
 }
 
 
@@ -58,7 +53,7 @@ function add_track_()
     var x = this.box.rect[0] + w * i;
     var y = this.box.rect[3] + h;
 
-    var track = this.patcher.newdefault(x, y, "djazz_midi_out_view_window_list");
+    var track = this.patcher.newdefault(x, y, "djazz_midi_out_view_window_track");
 
     track.varname = "track_" + i;
     tracks_.push(track);
@@ -81,10 +76,10 @@ remove_last_track_.local = 1;
 
 //----------------------------------------------------------------------------------------------------
 
-function dispatch_(i, msg, args)
+function message_track_(i, msg, args)
 {
     var track   = tracks_[i];
     var addr    = [track.varname, "components"].join("::");    
     outlet (0, addr, msg, args);
 }
-dispatch_.local = 1;
+message_track_.local = 1;

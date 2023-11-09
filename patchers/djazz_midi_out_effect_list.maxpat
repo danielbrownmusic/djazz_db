@@ -88,13 +88,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 254.333333333333314, 106.0, 242.0, 22.0 ],
+					"patching_rect" : [ 254.333333333333314, 106.0, 217.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_midi_out_effect_list_components.js",
+						"filename" : "djazz_midi_out_track_components.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_midi_out_effect_list_components.js",
+					"text" : "js djazz_midi_out_track_components.js",
 					"varname" : "components"
 				}
 
@@ -123,6 +123,19 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 25.0, 17.0, 30.0, 30.0 ],
 					"varname" : "events_inlet"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 25.0, 91.0, 150.0, 22.0 ],
+					"text" : "djazz_midi_out_effect_slot",
+					"varname" : "effect_0"
 				}
 
 			}

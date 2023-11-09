@@ -2,30 +2,32 @@ var dutils = require("db_dictionary_array_utils");
 
 autowatch = 1;
 
-
 inlets = 2;
-outlets = 3;
+outlets = 2;
 
-var tracks_dict_name_;
-var effects_menu_items_dict_name_;
+var database                = null;    // { "tracks" : [ {"effects" : [] } , ... ] }
+declareattribute("database", null, load_database);
+
+var effect_patchers_database = null;
+declareattribute("effect_patchers_database", null, load_effect_patchers_database, 1);
 
 
-function load_effects_menu_dict(effects_menu_items_dict_name)
+function load_effect_patchers_database(effect_patcher_database_name)
 {
-    effects_menu_items_dict_name_ = effects_menu_items_dict_name;
-    outlet (1, effects_menu_items_dict_name_);
+    effect_patcher_database = new Dict (effect_patcher_database_name);
 }
 
 
-function load_tracks_dict(tracks_dict_name)
+function load(in_database)
 {
-    tracks_dict_name_ = tracks_dict_name;
+    database = new Dict();
+    database.clone(in_database.name);
 
-    var msg     = "tracks";
-    var args    = [tracks_dict_name_, effects_menu_items_dict_name_];
-
+    var msg     = "bank";
+    var args    = [database, effect_patchers_database];
+    post ("shhhhyeeeahhhh");
     outlet (0, msg, args);
-    outlet (2, tracks_dict_name_);
+    outlet (1, database.name);
 }
 
 
@@ -34,117 +36,41 @@ function set_effect()
     var track_index     = arguments[0];
     var effect_index    = arguments[1];
     var effect_number   = arguments[2];
-    var effect_name     = effect_number_to_name_(effect_number);
 
-    var effect_names = get_effect_name_array_(track_index);
+    var t = track_index;
+    var e = effect_index;
+    var n = effect_number;
 
-    if ((effect_index === effect_names.length) && (effect_name === ""))
+    var track           = get_track_dict_(t);
+    var effect_names    = dutils.get_dict_array(track_dict, "effects");
+    var name            = effect_patchers_database.get("items")[n];
+    
+    if ((e === effect_names.length) && (name === ""))
         return;
 
-    if (effect_name === effect_names[effect_index])
+    if (name === effect_names[e])
         return;
 
-    if (effect_index === effect_names.length)
+    if (e === effect_names.length)
     {
-        effect_names.push(effect_name);
+        effect_names.push(name);
     }
     else
     {
-        effect_names[effect_index] = effect_name;
+        effect_names[e] = name;
     }
 
-/*     for (var i = effect_names.length - 1; i >= 0; i--)
-    {
-        if (effect_names[i] !== "")
-            break;
-            effect_names.pop();
-    } */
+    dutils.set_dict_array(track, "effects", effect_names);
+    dutils.set_dict_array_at(database, "tracks", t, track);
 
-    set_effect_name_array_(track_index, effect_names);
-
-    var d = new Dict(tracks_dict_name_);
-    var track_dict_name = d.get("tracks")[track_index].name;
-    var msg = ["track", track_index, "effects", track_dict_name, effects_menu_items_dict_name_];
+    var msg = ["track", t, "effects", track, effect_patchers_database];
     outlet (0, msg);
 }
 
 // ----------------------------------------------------------------------------------
 
-function get_effect_name_array_(track_index)
+function get_track_dict_(i)
 {
-    var tracks_dict     = new Dict(tracks_dict_name_);
-    var effects_dict    = dutils.get_dict_array_at(tracks_dict, "tracks", track_index);
-
-    return dutils.get_dict_array(effects_dict, "effects");
+    return  dutils.get_dict_array_at(database, "tracks", track_index);
 }
-get_effect_name_array_.local = 1;
-
-
-function set_effect_name_array_(track_index, effect_names)
-{
-    var tracks_dict     = new Dict(tracks_dict_name_);
-    var effects_dict    = dutils.get_dict_array_at(tracks_dict, "tracks", track_index);
-
-    //post (effect_names);
-    //post ("\n");
-    //post(dutils.get_dict_array(dutils.get_dict_array_at(tracks_dict, "tracks", track_index), "effects"));
-    dutils.set_dict_array(effects_dict, "effects", effect_names);
-    dutils.set_dict_array_at(tracks_dict, "tracks", track_index, effects_dict);
-}
-set_effect_name_array_.local = 1;
-
-
-function effect_name_to_number_(effect_name)
-{
-    var d = new Dict(effects_menu_items_dict_name_);
-    return d.get("items").indexOf(effect_name);
-}
-effect_name_to_number_.local = 1;
-
-
-function effect_number_to_name_(effect_number)
-{
-    var d = new Dict(effects_menu_items_dict_name_);
-    return d.get("items")[effect_number];
-}
-effect_number_to_name_.local = 1;
-
-
-//----------------------------------------------------------------------------------------------------
-
-
-function log_msg_received_(msg, args)
-{
-    outlet (2, msg, args);
-}
-log_msg_received_.local = 1;
-
-
-function log_msg_sending_(addr, msg, args)
-{
-    outlet (1, addr, msg, args);
-}
-log_msg_sending_.local = 1;
-
-
-
-/* function set_effects(track_index, effects_dict_name)
-{
-    dutils.set_dict_array_at(tracks_dict_, "tracks", track_index, new Dict(effects_dict_name));
-    outlet(0, "effects", track_index, effects_dict_name);
- } */
-
-
-
-/* function trim_(effect_array)
-{
-    var n = effect_array.length - 1;
-    for (var i = n; i >= 0; i--)
-    {
-        var effect_dict = effect_array[i];
-        if (effect_dict.get("name") != "")
-            return effect_dict;
-        effect_dict.pop();
-    }
-}
-trim_.local = 1; */
+get_track_dict_.local = 1;

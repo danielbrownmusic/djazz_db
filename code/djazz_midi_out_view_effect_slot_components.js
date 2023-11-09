@@ -3,6 +3,7 @@ autowatch  = 1;
 var NO_EFFECT       = "no effect";
 var effect_name_    = NO_EFFECT;
 
+
 function name()
 {
     var no_effect   = arguments ? true          : false;
@@ -19,22 +20,10 @@ function name()
 }
 
 
-function menu_items(effect_menu_items_dict_name)
+function menu_items(effect_menu_items_dict)
 {
     var msg     = "dictionary";
-    var args    = effect_menu_items_dict_name;
+    var args    = effect_menu_items_dict.name;
     outlet(0, msg, args);
 }
 
-
-//----------------------------------------------------------------------------------------------------
-
-
-function get_effect_name_(effect_name, effect_menu_items_dict_name)
-{
-    var d = new Dict(effect_menu_items_dict_name);
-    return  d.get("effects").contains(effect_name) ?
-            d.get("effects").get(effect_name).get("patcher") :
-            null;
-}
-get_effect_name_.local = 1;

@@ -5,24 +5,18 @@ autowatch = 1;
 var effect_slots_ = [];
 
 
-function effects(track_dict, effect_menu_items_dict)
+function effects(track_dict, effect_patchers_database)
 {
     var effect_name_array   = dutils.get_dict_array(track_dict, "effects");
 
     var l_old   = effect_slots_.length;
     var l_new   = effect_name_array.length;
 
-    for (var i = 0; i < Math.min(l_old, l_new); i++)
-    {
-        dispatch_effect_name_(i, effect_menu_items_dict_name, effect_name_array);
-    }
-
     if (l_old < l_new)
     {
         for (var i = l_old; i < l_new; i++)
         {
-            make_slot_();
-            dispatch_effect_name_(i, effect_menu_items_dict_name, effect_name_array);
+            effect_slots_.push(make_slot_(i));
         }
     }
     else
@@ -31,6 +25,11 @@ function effects(track_dict, effect_menu_items_dict)
         {
             remove_last_slot_();
         }
+    }
+
+    for (var i = 0; i < effect_slots_.length; i++)
+    {
+        send_to_slot_(i, "name", [effect_name_array[i], effect_patchers_database]);
     }
 }
 
@@ -42,7 +41,7 @@ function effect()
     var msg     = a[1];
     var args    = a.slice(2);
 
-    dispatch_(i, msg, args);
+    send_to_slot_(i, msg, args);
 }
 
 
@@ -60,14 +59,12 @@ function remove_last_slot_()
 remove_last_slot_.local = 1;
 
 
-function make_slot_()
+function make_slot_(i)
 {
     var inl 	= this.patcher.getnamed("events_inlet");
 
     var x_inlet 	= inl.rect[0];
     var y_inlet 	= inl.rect[3];
-
-    var i = effect_slots_.length;
 
     var w = 128;
     var h = 44;
@@ -77,7 +74,6 @@ function make_slot_()
     var effect_slot = this.patcher.newdefault(x, y, "djazz_midi_out_effect_slot");
 
     effect_slot.varname = "effect_" + i;    
-    effect_slots_.push(effect_slot);
 
     return effect_slot;
 }
@@ -86,18 +82,11 @@ make_slot_.local = 1;
 
 //--------------------------------------------------------------------------------
 
-function dispatch_(i, msg, args)
+function send_to_slot_(i, msg, args)
 {
     var slot   = effect_slots_[i];
     var addr    = [slot.varname, "components"].join("::");    
 
     outlet (0, addr, msg, args);
 }
-dispatch_.local = 1;
-
-
-function dispatch_effect_name_(i, effect_menu_items_dict_name, effect_name_array)
-{
-    dispatch_(i, "name", [effect_name_array[i], effect_menu_items_dict_name]);    
-}
-dispatch_effect_name_.local = 1;
+send_to_slot_.local = 1;

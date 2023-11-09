@@ -94,13 +94,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 190.333333333333314, 92.0, 272.0, 22.0 ],
+					"patching_rect" : [ 190.333333333333314, 92.0, 248.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_midi_out_view_effect_list_components.js",
+						"filename" : "djazz_midi_out_view_track_components.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_midi_out_view_effect_list_components.js",
+					"text" : "js djazz_midi_out_view_track_components.js",
 					"varname" : "components"
 				}
 
@@ -167,7 +167,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_midi_out_view_effect_list_components.js",
+				"name" : "djazz_midi_out_view_track_components.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",

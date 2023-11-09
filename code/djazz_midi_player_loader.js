@@ -1,46 +1,33 @@
 autowatch = 1;
 
-outlets = 3;
+outlets = 4;
 
-var player_name_ = "";
-var session_dict_name_ = "";
+var database_name       = null;
+declareattribute("database_name");
+var database    = null;
+declareattribute("database", null, load);
 
-function name(player_name)
+
+function load(in_database)
 {
-    player_name_ = player_name;
+    database = new Dict(database_name);
+    database.clone(in_database.name);
+    post (database_name);
+    outlet (3, database_name);
+    load_composer_();
+    load_midi_out_();
 }
 
 
-function load_from_session_dict(session_dict_name)
+function load_composer_()
 {
-    session_dict_name_ = session_dict_name;
-    var d = new Dict (session_dict_name);
-
-    load_components (d.get(player_key).get("components").name);
-    load_data       (d.get(player_key).get("data").name);
+    outlet (1, "score", database.get("composer").get("score"));
 }
+load_composer_.local = 1
 
 
-function load_components(components_dict_name)
+function load_midi_out_()
 {
-    var d = new Dict(components_dict_name)
-    outlet (2, "load_tracks_dict", d.get("components").name);
+    outlet (2, "load", database.get("midi_out"));
 }
-
-
-function load_data(data_dict_name)
-{
-    load_score(d.get("score"));
-}
-
-
-function load_score(score_file_full_path)
-{
-        outlet (1, "score", score_file_full_path);
-}
-
-
-function load_navigator(nav_dict_name)
-{
-    outlet (0, nav_dict_name);
-}
+load_midi_out_.local = 1;

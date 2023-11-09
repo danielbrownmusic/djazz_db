@@ -4,11 +4,11 @@ autowatch = 1;
 
 outlets = 5;
 
-var session_components_dict_name_    = "SESSION_COMPONENTS";
-var SESSION_COMPONENTS_DICT         = null;
+var SESSION_COMPONENTS_DICT_NAME   = "SESSION_COMPONENTS";                                                                                                                                
+var session_components_dict_         = null;
 
-var NAVIGATION_DICT_NAME            = "NAVIGATION";
-var NAVIGATION_DICT                 = null;
+var NAVIGATION_DICT_NAME           = "NAVIGATION";
+var navigation_dict_                 = null;
 
 var x = 66;
 var y = 528;
@@ -18,13 +18,10 @@ var MAIN_PATCHER_ = null;
 
 function load_session_from_file(components_file_full_path)
 {
-    SESSION_COMPONENTS_DICT = new Dict(SESSION_COMPONENTS_DICT_NAME);
-    SESSION_COMPONENTS_DICT.import_json(components_file_full_path);
+    session_components_dict_ = new Dict(SESSION_COMPONENTS_DICT_NAME);
+    session_components_dict_.import_json(components_file_full_path);
 
     make_components_();
-
-    outlet (0, "load_player_from_dict", SESSION_COMPONENTS_DICT_NAME);
-    load_navigation_file(SESSION_COMPONENTS_DICT.get("navigation"));
 
     //log output:
     outlet (1, SESSION_COMPONENTS_DICT_NAME);
@@ -34,23 +31,23 @@ function load_session_from_file(components_file_full_path)
 
 function clear()
 {
-    if (SESSION_COMPONENTS_DICT)
+    if (session_components_dict_)
     {
         remove_components_();
-        SESSION_COMPONENTS_DICT.clear();
+        session_components_dict_.clear();
         outlet (1, "set");
         outlet (2, "dictionary", SESSION_COMPONENTS_DICT_NAME);
 
-        SESSION_COMPONENTS_DICT.freepeer();
-        SESSION_COMPONENTS_DICT = null;
+        session_components_dict_.freepeer();
+        session_components_dict_ = null;
     }
 }
 
 
 function load_navigation_file(navigation_file_full_path)
 {
-    NAVIGATION_DICT = new Dict(NAVIGATION_DICT_NAME);
-    NAVIGATION_DICT.import_json(navigation_file_full_path);
+    navigation_dict_ = new Dict(NAVIGATION_DICT_NAME);
+    navigation_dict_.import_json(navigation_file_full_path);
     send_out_navigation_dict_();
 
     //log output:
@@ -59,77 +56,18 @@ function load_navigation_file(navigation_file_full_path)
 }
 
 
-function get_loaders_()
-{
-    var keys    = dutils.get_dict_key_array(SESSION_COMPONENTS_DICT.get("components"));
-    var p       = this.patcher;
-    return keys.map(
-        function (key)
-            {
-                p.getnamed(key).subpatcher().getnamed("loader");
-}
-
-}
-get_loaders_.local = 1;
-
-
-function get_loader_(obj_varname)
-{
-    var obj = this.patcher.getnamed(obj_varname)
-    //.subpatcher().getnamed("loader");
-}
-get_loaders_.local = 1;
-
-
-function send_out_components_dicts_()
-{
-    get_loaders_().forEach(
-        function (ldr)
-        {
-            loader.message("load_player_from_dict", NAVIGATION_DICT_NAME);
-        },
-        this
-    );    
-}
-send_out_components_dicts_.local = 1;
-
-
-function send_out_navigation_dict_()
-{
-    get_loaders_().forEach(
-        function (ldr)
-        {
-            loader.message("load_navigator", NAVIGATION_DICT_NAME);
-        },
-        this
-    );
-}
-send_out_navigation_dict_.local = 1;
-
 // ----------------------------------------------------------------------------------
+
 
 function make_components_()
 {
-    var keys = dutils.get_dict_key_array(SESSION_COMPONENTS_DICT.get("components"));
+    var keys = dutils.get_dict_key_array(session_components_dict_.get("components"));
     for (var i = 0; i < keys.length; i++)
-    {
-        var key = keys[i];        
-        make_component_(i, key);
+    {   
+        make_component_(i, keys[i]);
     }
 }
 make_components_.local = 1;
-
-
-function remove_components_()
-{
-    var keys = dutils.get_dict_key_array(SESSION_COMPONENTS_DICT);
-    for (var i = 0; i < keys.length; i++)
-    {
-        var key = keys[i];
-        remove_component_(SESSION_COMPONENTS_DICT.get(key));
-    }
-}
-remove_components_.local = 1;
 
 
 function make_component_(i, key)
@@ -141,7 +79,7 @@ function make_component_(i, key)
 
         var top_patcher         = this.patcher.box.patcher;
 
-        var d = SESSION_COMPONENTS_DICT.get("components").get(key);
+        var d = session_components_dict_.get("components").get(key);
         var player_name = key;
         var view_name   = key + "_view";
 
@@ -154,9 +92,26 @@ function make_component_(i, key)
         top_patcher.connect(    midi_player,        1,  midi_player_view,   0);
         top_patcher.connect(    midi_player,        2,  midi_player_view,   1);
 
-        midi_player.subpatcher().getnamed("loader").message("load_player_from_dict", key);
+        var ldr = midi_player.subpatcher().getnamed("loader");
+        post (d.getkeys());
+        ldr.message("load", d);
+        var fullkey = ["components", key].join("::");
+        session_components_dict_.set("fullkey", ldr.database);
+
 }
 make_component_.local = 1;
+
+
+function remove_components_()
+{
+    var keys = dutils.get_dict_key_array(session_components_dict_);
+    for (var i = 0; i < keys.length; i++)
+    {
+        var key = keys[i];
+        remove_component_(session_components_dict_.get(key));
+    }
+}
+remove_components_.local = 1;
 
 
 function remove_component_(d)
@@ -170,6 +125,49 @@ function remove_component_(d)
 remove_component_.local = 1;
 
 
+function send_out_navigation_dict_()
+{
+    get_loaders_().forEach(
+        function (ldr)
+        {
+            loader.message("load_navigator", navigation_dict_name_);
+        },
+        this
+    );
+}
+send_out_navigation_dict_.local = 1;
+
+
+// --------------------------------------------------------------------------------------------
+
+function get_loaders_()
+{
+    var keys    = dutils.get_dict_key_array(session_components_dict_.get("components"));
+    var p       = this.patcher;
+    return keys.map( function (key) { p.getnamed(key).subpatcher().getnamed("loader") })
+}
+get_loaders_.local = 1;
+
+
+/* 
+function send_out_components_dicts_()
+{
+    get_loaders_().forEach(
+        function (ldr)
+        {
+            loader.message("load_player_from_dict", navigation_dict_name_);
+        },
+        this
+    );    
+}
+send_out_components_dicts_.local = 1;
+
+
+
+
+
+
+
 function get_varnames_(d)
 {
     var name        = d.get("name");
@@ -179,7 +177,7 @@ function get_varnames_(d)
     return [player_name, view_name];
 }
 get_varnames_.locval = 1;
-
+ */
 /* function dispatch_(addr, msg, args)
 {
     var slot   = effect_slots_[i];
@@ -192,7 +190,7 @@ dispatch_.local = 1;
 
 
 
-var MIDI_PLAYERS    = "midi_players";
+/* var MIDI_PLAYERS    = "midi_players";
 var NAVIGATE        = "navigate";
 var GENERATE        = "generate";
 var MIDI_OUT        = "midi_out";
@@ -208,7 +206,7 @@ var SEPARATOR_ADDR = " ";
 var SEPARATOR_DATABASE_NAME = "_";
 
 
-
+ */
 /*
 
 

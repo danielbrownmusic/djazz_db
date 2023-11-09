@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1081.0, 215.0, 1371.0, 1021.0 ],
+		"rect" : [ -1048.0, 277.0, 1371.0, 1021.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -133,8 +133,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 306.0, 184.0, 152.0, 22.0 ],
-					"text" : "load_effects_menu_dict $1"
+					"patching_rect" : [ 306.0, 184.0, 192.0, 22.0 ],
+					"text" : "load_effect_patchers_database $1"
 				}
 
 			}
@@ -362,11 +362,12 @@
 			}
 , 			{
 				"box" : 				{
+					"embedstate" : [ [ "effect_patchers_database", "jsobject", -1407374883553280 ] ],
 					"id" : "obj-28",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 33.0, 269.681267857551575, 246.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_midi_out_components_ctrl.js",
@@ -514,7 +515,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-28", 2 ]
+					"source" : [ "obj-28", 1 ]
 				}
 
 			}

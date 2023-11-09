@@ -5,11 +5,11 @@
     ,
     "components"    : {
         "midi_player_1" :  {
-            "data" : {
+            "composer" : {
                 "score" : ""
             }
             ,
-            "components" : {
+            "midi_out" : {
                 "tracks" : [    { 
                         "name" : "flute",
                         "number" : 1,

@@ -3,10 +3,10 @@ autowatch  = 1;
 
 function name()
 {
-    var effect_name                 = arguments[0];
-    var effect_menu_items_dict_name = arguments[1];
+    var effect_name             = arguments[0];
+    var effect_menu_items_dict  = arguments[1];
     
-    var patcher_class = get_patcher_class_(effect_name, effect_menu_items_dict_name);
+    var patcher_class = get_patcher_class_(effect_name, effect_menu_items_dict);
 
     if (!patcher_class)
     {
@@ -76,11 +76,10 @@ set_effect_.local = 1;
 //----------------------------------------------------------------------------------------------------
 
 
-function get_patcher_class_(effect_name, effect_menu_items_dict_name)
+function get_patcher_class_(effect_name, effect_menu_items_dict)
 {
-    var d = new Dict(effect_menu_items_dict_name);
-    return  d.get("effects").contains(effect_name) ?
-            d.get("effects").get(effect_name).get("patcher") :
+    return  effect_menu_items_dict.get("effects").contains(effect_name) ?
+            effect_menu_items_dict.get("effects").get(effect_name).get("patcher") :
             null;
 }
 get_patcher_class_.local = 1;
