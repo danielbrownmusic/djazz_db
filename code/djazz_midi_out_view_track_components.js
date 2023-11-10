@@ -29,7 +29,7 @@ function effects(track_dict, effect_patchers_database)
     
     for (var i = 0; i < effect_slots_.length; i++)
     {
-        send_to_slot_(i, "name", [effect_name_array[i], effect_menu_items_dict_name]);
+        send_to_slot_(i, "name", [effect_name_array[i], effect_patchers_database]);
     }
 }
 
@@ -58,7 +58,7 @@ function remove_last_slot_()
 remove_last_slot_.local = 1;
 
 
-function make_slot_(i, effect_menu_items_dict_name)
+function make_slot_(i, effect_patchers_database)
 {
     var effects_panel   = this.patcher.getnamed("effects_panel");
 

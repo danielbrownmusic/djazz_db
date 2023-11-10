@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -872.0, 278.0, 721.0, 587.0 ],
+		"rect" : [ -1451.0, 278.0, 709.0, 531.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,18 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 494.0, 58.0, 182.0, 22.0 ],
+					"text" : "load_component_ midi_player_1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-8",
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
@@ -66,7 +78,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 81.5, 163.0, 271.0, 22.0 ]
+					"patching_rect" : [ 81.5, 163.0, 271.0, 22.0 ],
+					"text" : "SESSION_COMPONENTS"
 				}
 
 			}
@@ -201,6 +214,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}

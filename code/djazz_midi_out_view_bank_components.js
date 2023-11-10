@@ -8,11 +8,11 @@ var tracks_ = [];
 function bank(bank_dict, effect_menu_items_dict)
 {
     clear();
-    var track_array = dutils.get_dict_array(d, "tracks");
+    var track_array = dutils.get_dict_array(bank_dict, "tracks");
 
     for (var i = 0; i < track_array.length; i++)
     {
-        var track_dict = track_array[i].name;        
+        var track_dict = track_array[i];        
         add_track_(track_dict);
         message_track_(i, "effects", [track_dict, effect_menu_items_dict]);
     }

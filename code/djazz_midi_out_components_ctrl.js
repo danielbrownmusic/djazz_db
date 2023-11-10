@@ -6,15 +6,15 @@ inlets = 2;
 outlets = 2;
 
 var database                = null;    // { "tracks" : [ {"effects" : [] } , ... ] }
-declareattribute("database", null, load_database);
+declareattribute("database", null, load);
 
 var effect_patchers_database = null;
 declareattribute("effect_patchers_database", null, load_effect_patchers_database, 1);
 
 
-function load_effect_patchers_database(effect_patcher_database_name)
+function load_effect_patchers_database(effect_patchers_database_name)
 {
-    effect_patcher_database = new Dict (effect_patcher_database_name);
+    effect_patchers_database = new Dict (effect_patchers_database_name);
 }
 
 
@@ -25,7 +25,7 @@ function load(in_database)
 
     var msg     = "bank";
     var args    = [database, effect_patchers_database];
-    post ("shhhhyeeeahhhh");
+    post (effect_patchers_database.getkeys());
     outlet (0, msg, args);
     outlet (1, database.name);
 }
