@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 94.0, 394.0, 663.0, 568.0 ],
+		"rect" : [ -1568.0, 454.0, 641.0, 790.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,24 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-37",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 0,
+					"patching_rect" : [ 487.72315008870828, 198.0, 199.0, 22.0 ],
+					"text" : "djazz_midi_out_view_window_bank",
+					"varname" : "djazz_midi_out_view_window_bank"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-16",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 246.0, 169.0, 112.0, 22.0 ],
+					"patching_rect" : [ 133.0, 173.0, 112.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_dispatch.js",
 						"parameter_enable" : 0
@@ -57,26 +69,26 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "component messages in",
 					"id" : "obj-12",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 246.0, 16.0, 30.0, 30.0 ]
+					"patching_rect" : [ 667.72315008870828, 16.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "ctrl variables out name + value",
 					"id" : "obj-5",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 110.0, 182.0, 30.0, 30.0 ]
+					"patching_rect" : [ 448.0, 190.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -88,7 +100,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 110.0, 16.0, 97.0, 49.0 ],
+					"patching_rect" : [ 448.0, 88.5, 97.0, 49.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 1162, 173, 1602, 636 ],
 						"parameter_enable" : 0,
@@ -115,9 +127,9 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "ctrl variables in name + value",
 					"id" : "obj-6",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -133,7 +145,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 319.0, 16.0, 56.0, 22.0 ],
+					"patching_rect" : [ 120.666666666666686, 32.5, 56.0, 22.0 ],
 					"text" : "autopattr",
 					"varname" : "u881009636"
 				}
@@ -146,7 +158,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 246.0, 98.0, 248.0, 22.0 ],
+					"patching_rect" : [ 133.0, 102.0, 248.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_midi_out_view_bank_components.js",
 						"parameter_enable" : 0
@@ -161,6 +173,15 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-308", 0 ],
+					"order" : 1,
+					"source" : [ "obj-12", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-37", 1 ],
+					"order" : 0,
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -170,13 +191,22 @@
 					"destination" : [ "obj-16", 0 ],
 					"source" : [ "obj-308", 0 ],
 					"watchpoint_flags" : 5,
-					"watchpoint_id" : 3
+					"watchpoint_id" : 9
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-37", 0 ],
+					"order" : 0,
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
+					"order" : 1,
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -195,7 +225,44 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "db_dictionary_array_utils.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_dispatch.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_midi_out_view_bank_components.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_midi_out_view_window_bank.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_midi_out_view_window_bank_components.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }

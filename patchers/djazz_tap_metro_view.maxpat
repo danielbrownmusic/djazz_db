@@ -40,26 +40,34 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "toggle",
+					"id" : "obj-7",
+					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 116.0, 33.0, 24.0, 24.0 ],
-					"varname" : "active"
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 144.0, 14.0, 56.0, 22.0 ],
+					"restore" : 					{
+						"active" : [ 0 ],
+						"tempo" : [ 1.0 ]
+					}
+,
+					"text" : "autopattr",
+					"varname" : "u069004963"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-12",
-					"maxclass" : "newobj",
+					"id" : "obj-6",
+					"maxclass" : "led",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "float" ],
-					"patching_rect" : [ 192.0, 91.0, 116.0, 22.0 ],
-					"text" : "djazz_tempo_to_ms"
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 7.0, 6.0, 24.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 7.0, 6.0, 24.0, 24.0 ],
+					"varname" : "active"
 				}
 
 			}
@@ -74,75 +82,16 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 192.0, 33.0, 52.0, 24.0 ],
+					"patching_rect" : [ 37.0, 6.0, 52.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 89.0, 4.0, 52.0, 24.0 ],
+					"presentation_rect" : [ 39.0, 6.0, 52.0, 24.0 ],
 					"varname" : "tempo"
 				}
 
 			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 116.0, 145.0, 95.0, 22.0 ],
-					"text" : "metro 1000"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "bang at regular time intervals",
-					"id" : "obj-1",
-					"index" : 0,
-					"maxclass" : "outlet",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 116.0, 275.464285714286461, 30.0, 30.0 ]
-				}
-
-			}
  ],
-		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 1 ],
-					"source" : [ "obj-12", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
-					"source" : [ "obj-8", 0 ]
-				}
-
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_tempo_to_ms.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
+		"lines" : [  ],
+		"dependency_cache" : [  ],
 		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "dj FINISDHED encapsulation",

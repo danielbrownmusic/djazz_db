@@ -1,21 +1,15 @@
+autowatch = 1;
 
-function make_player_view_(i, key, patcher)
+var x_0 = 0;
+var y_0 = 0;
+
+var x = x_0;
+var y = y_0;
+
+
+function make_player_view_(key)
 {
     var view_name   = key + "_view";
-
-    var w = 128;
-    var h = 216;
-	var x = 22 + w * i;
-	var y = 220;
-
-    var patching_rect = [x, y, w, h];
-
-    var w_pres  = 128;
-    var h_pres  = 216;
-	var x_pres  = w_pres * i;
-	var y_pres  = 0;
-	
-    var presentation_rect = [x_pres, y_pres, w_pres, h_pres];
 
     var midi_player_view = patcher.newdefault
                                     (
@@ -23,11 +17,18 @@ function make_player_view_(i, key, patcher)
                                     "bpatcher", 
                                     "@name",                "djazz_midi_player_view", 
                                     "@args",                view_name,
-                                    "@presentation",        1,
-                                    "@patching_rect",       patching_rect,
-                                    "@presentation_rect",   presentation_rect
+                                    "@presentation",        1
                                     );
-    midi_player_view.varname    = view_name    
 
+    var background_panel = midi_player_view.subpatcher().getnamed("background_panel");
+    var w = background_panel[2];
+    var h = background_panel[3];
+    var rect = [x, y, w, h];
+
+    midi_player_view.patching_rect      = rect;
+    midi_player_view.presentation_rect  = rect;
+    midi_player_view.varname            = view_name;
+
+    x += w;
 }
-make_player_view_local = 1;
+make_player_view_.local = 1;

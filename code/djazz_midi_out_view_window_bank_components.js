@@ -19,6 +19,15 @@ function bank(bank_dict, effect_menu_items_dict)
 }
 
 
+function add_tracks(n)
+{
+    for (var i = 0; i < n; i++)
+    {
+        add_track_();
+    }
+}
+
+
 function track()
 {
     var a       = arrayfromargs(arguments);

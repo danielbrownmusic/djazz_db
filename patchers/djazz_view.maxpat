@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 59.0, 119.0, 1079.0, 670.0 ],
+		"rect" : [ -2043.0, 326.0, 1324.0, 975.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,37 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 25.0, 154.0, 56.0, 22.0 ],
+					"text" : "autopattr",
+					"varname" : "u412008997"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 25.0, 95.0, 53.0, 22.0 ],
+					"text" : "pattrhub"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-4",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 114.0, 87.0, 163.0, 22.0 ],
+					"patching_rect" : [ 876.0, 94.0, 163.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_view_components.js",
 						"parameter_enable" : 0
@@ -63,7 +88,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 34.0, 165.0, 30.0, 30.0 ]
+					"patching_rect" : [ 71.0, 751.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -76,7 +101,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 114.0, 25.0, 30.0, 30.0 ]
+					"patching_rect" : [ 876.0, 32.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -89,12 +114,19 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 34.0, 25.0, 30.0, 30.0 ]
+					"patching_rect" : [ 25.0, 19.0, 30.0, 30.0 ]
 				}
 
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-2", 0 ]

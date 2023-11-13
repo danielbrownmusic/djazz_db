@@ -19,7 +19,28 @@ function load(in_database)
 }
 
 
-function load_composer_()
+function navigator()
+{
+    var [msg, args] = get_msg_(arguments);
+    outlet (0, msg, args);
+}
+
+
+function composer()
+{
+    var [msg, args] = get_msg_(arguments);
+    outlet (1, msg, args);
+}
+
+
+function midi_out()
+{
+    var [msg, args] = get_msg_(arguments);
+    outlet (2, msg, args);
+}
+
+
+/* function load_composer_()
 {
     outlet (1, "score", database.get("composer").get("score"));
 }
@@ -30,4 +51,17 @@ function load_midi_out_()
 {
     outlet (2, "load", database.get("midi_out"));
 }
-load_midi_out_.local = 1;
+load_midi_out_.local = 1; */
+
+//----------------------------------------------------------------------------------------------------
+
+
+
+
+
+function get_msg_(arg_obj)
+{
+    var a = arrayfromargs(arg_obj);
+    return [a[0], a.slice(0)];
+}
+get_msg_.local = 1;
