@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 119.0, 289.0, 1464.0, 764.0 ],
+		"rect" : [ 119.0, 289.0, 909.0, 764.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -59,7 +59,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 238.0, 518.0, 128.0, 35.0 ],
+					"patching_rect" : [ 238.0, 518.0, 131.0, 35.0 ],
 					"text" : "djazz_prepend_preset navigator"
 				}
 
@@ -110,7 +110,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1049.25, 167.0, 215.0, 127.0 ],
-					"presentation_linecount" : 9,
 					"text" : "CTRL SURFACE PARAMS\n\n1. cbb numbers\n2. cbb view params\n3. loop chapter button\n3. tempo\n4. metro on/off\n5. speed\n6. loop length button"
 				}
 
@@ -119,7 +118,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-56",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -183,7 +182,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 264.0, 323.0, 128.0, 35.0 ],
+					"patching_rect" : [ 264.0, 323.0, 131.0, 35.0 ],
 					"text" : "djazz_prepend_preset repeat_bang",
 					"varname" : "djazz_speed_control[1]"
 				}
@@ -197,7 +196,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 26.0, 323.0, 127.0, 35.0 ],
+					"patching_rect" : [ 26.0, 323.0, 131.0, 35.0 ],
 					"text" : "djazz_prepend_preset loop_beats"
 				}
 
@@ -419,57 +418,11 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-105",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1361.445454545454595, 313.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-104",
-					"linecount" : 2,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1361.445454545454595, 223.0, 100.0, 35.0 ],
-					"saved_object_attributes" : 					{
-						"client_rect" : [ 1368, 426, 1720, 713 ],
-						"parameter_enable" : 0,
-						"parameter_mappable" : 0,
-						"storage_rect" : [ 583, 69, 1034, 197 ]
-					}
-,
-					"text" : "pattrstorage @outputmode 1",
-					"varname" : "u477001087"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-103",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 1361.445454545454595, 167.0, 56.0, 22.0 ],
-					"text" : "autopattr",
-					"varname" : "u042000813"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-102",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1361.445454545454595, 107.0, 53.0, 22.0 ],
-					"text" : "pattrhub"
 				}
 
 			}
@@ -493,7 +446,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1049.25, 440.0, 214.0, 127.0 ],
-					"presentation_linecount" : 9,
 					"text" : "THRU PARAMS (TO MODEL)\n\n1. beat in\n2. tempo\n3. bangs per tap (count)\n4. loop record\n5. loop play\n6. loop section min beat\n7. loop section max beat"
 				}
 
@@ -514,7 +466,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-114",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -525,20 +477,6 @@
 			}
  ],
 		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-105", 0 ],
-					"source" : [ "obj-104", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-102", 0 ],
-					"source" : [ "obj-114", 0 ]
-				}
-
-			}
-, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-59", 0 ],
 					"source" : [ "obj-12", 0 ]
@@ -689,30 +627,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_beat_loop_length_ctrl.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_prepend_preset.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_speed_control.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

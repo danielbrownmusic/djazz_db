@@ -4,15 +4,15 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1202.0, 801.0, 716.0, 535.0 ],
+		"rect" : [ 438.0, 322.0, 716.0, 535.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 1,
+		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -40,13 +40,26 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "",
+					"id" : "obj-4",
+					"index" : 1,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 281.0, 22.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-5",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 116.0, 33.0, 24.0, 24.0 ],
+					"patching_rect" : [ 30.0, 22.0, 24.0, 24.0 ],
 					"varname" : "active"
 				}
 
@@ -58,7 +71,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 192.0, 91.0, 116.0, 22.0 ],
+					"patching_rect" : [ 106.0, 80.0, 116.0, 22.0 ],
 					"text" : "djazz_tempo_to_ms"
 				}
 
@@ -74,9 +87,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 192.0, 33.0, 52.0, 24.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 89.0, 4.0, 52.0, 24.0 ],
+					"patching_rect" : [ 106.0, 22.0, 52.0, 24.0 ],
 					"varname" : "tempo"
 				}
 
@@ -88,7 +99,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 116.0, 145.0, 95.0, 22.0 ],
+					"patching_rect" : [ 30.0, 134.0, 95.0, 22.0 ],
 					"text" : "metro 1000"
 				}
 
@@ -97,11 +108,11 @@
 				"box" : 				{
 					"comment" : "bang at regular time intervals",
 					"id" : "obj-1",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 116.0, 275.464285714286461, 30.0, 30.0 ]
+					"patching_rect" : [ 30.0, 264.464285714286461, 30.0, 30.0 ]
 				}
 
 			}
@@ -135,15 +146,6 @@
 
 			}
  ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_tempo_to_ms.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "dj FINISDHED encapsulation",
 				"parentstyle" : "dj unfinished encapsulation",
