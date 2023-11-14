@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 868.0, 189.0, 826.0, 599.0 ],
+		"rect" : [ 675.0, 227.0, 826.0, 599.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,37 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-54",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 27.0, 16.0, 57.0, 33.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 473.0, 23.0, 82.0, 20.0 ],
+					"text" : "TEMPO OUT"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 20.0,
+					"format" : 6,
+					"id" : "obj-23",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 27.0, 50.0, 62.0, 31.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 565.0, 23.0, 62.0, 31.0 ],
+					"varname" : "tempo_in"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-59",
 					"maxclass" : "led",
 					"numinlets" : 1,
@@ -47,20 +78,6 @@
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 61.0, 286.0, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-12",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 22.0, 286.0, 24.0, 24.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 640.0, 27.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -78,29 +95,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bgmode" : 0,
-					"border" : 1,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-4",
-					"lockeddragscroll" : 0,
-					"lockedsize" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "djazz_tap_metro_view.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 22.0, 231.0, 105.0, 38.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 502.0, 19.0, 100.0, 40.0 ],
-					"varname" : "djazz_tap_metro_view",
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-6",
 					"linecount" : 2,
 					"maxclass" : "message",
@@ -108,8 +102,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 600.0, 46.0, 52.0, 35.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 644.0, 302.0, 72.0, 22.0 ],
 					"text" : "0 0 700 320",
 					"varname" : "size"
 				}
@@ -702,7 +694,7 @@
 					"outlettype" : [ "", "int" ],
 					"patching_rect" : [ 152.0, 180.0, 623.0, 140.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 18.0, 126.0, 640.0, 147.0 ],
+					"presentation_rect" : [ 9.0, 13.0, 640.0, 147.0 ],
 					"varname" : "grid",
 					"viewvisibility" : 1
 				}
@@ -743,7 +735,8 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 22.0, 153.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"navigation" : [ 0 ]
+						"navigation" : [ 0 ],
+						"tempo_in" : [ 0.0 ]
 					}
 ,
 					"text" : "autopattr",
@@ -789,13 +782,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
 					"source" : [ "obj-10", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"source" : [ "obj-12", 0 ]
 				}
 
 			}
@@ -916,13 +902,6 @@
 			}
 , 			{
 				"name" : "djazz_range.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_tap_metro_view.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
