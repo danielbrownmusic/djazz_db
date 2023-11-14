@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 131.0, 292.0, 640.0, 480.0 ],
+		"rect" : [ 1056.0, 825.0, 420.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -57,7 +57,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 256.0, 95.0, 56.0, 22.0 ],
+					"patching_rect" : [ 264.0, 40.0, 56.0, 22.0 ],
 					"text" : "autopattr",
 					"varname" : "u238006365"
 				}
@@ -70,12 +70,12 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 256.0, 40.0, 73.0, 22.0 ],
+					"patching_rect" : [ 264.0, 95.0, 73.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 1162, 173, 1602, 636 ],
+						"client_rect" : [ 1057, 45, 1440, 407 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
-						"storage_rect" : [ 583, 100, 1520, 798 ]
+						"storage_rect" : [ 583, 69, 1034, 197 ]
 					}
 ,
 					"text" : "pattrstorage",
@@ -130,7 +130,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 50.0, 304.0, 30.0, 30.0 ],
+					"patching_rect" : [ 50.0, 392.0, 30.0, 30.0 ],
 					"varname" : "parameters"
 				}
 
@@ -142,7 +142,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 50.0, 128.0, 76.0, 22.0 ],
+					"patching_rect" : [ 49.999986000000035, 165.0, 76.0, 22.0 ],
 					"text" : "djazz_bangs",
 					"varname" : "djazz_bangs"
 				}
@@ -155,7 +155,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 50.0, 183.430197766101173, 117.0, 22.0 ],
+					"patching_rect" : [ 49.999986000000035, 247.430197766101173, 117.0, 22.0 ],
 					"text" : "djazz_bang_to_beat",
 					"varname" : "navigator"
 				}
@@ -168,7 +168,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "float" ],
-					"patching_rect" : [ 50.0, 235.430197766101173, 149.0, 22.0 ],
+					"patching_rect" : [ 50.0, 335.430197766101173, 149.0, 22.0 ],
 					"text" : "djazz_beat_to_midi mnote",
 					"varname" : "composer"
 				}

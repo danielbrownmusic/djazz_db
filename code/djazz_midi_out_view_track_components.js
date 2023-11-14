@@ -16,7 +16,7 @@ function effects(track_dict, effect_patchers_database)
     {
         for (var i = l_old; i < l_new; i++)
         {
-            effect_slots_.push(make_slot_(i, effect_patchers_database));
+            add_effect();
         }
     }
     else
@@ -41,7 +41,13 @@ function effect()
     var msg     = a[1];
     var args    = a.slice(2);
 
-    dispatch_(i, msg, args);
+    send_to_slot_(i, msg, args);
+}
+
+
+function add_effect()
+{
+    effect_slots_.push(make_slot_());
 }
 
 //--------------------------------------------------------------------------------
@@ -58,10 +64,10 @@ function remove_last_slot_()
 remove_last_slot_.local = 1;
 
 
-function make_slot_(i, effect_patchers_database)
+function make_slot_()
 {
     var effects_panel   = this.patcher.getnamed("effects_panel");
-
+    var i = effect_slots_.length;
     var w = 128;
     var h = 22;
 	var x = effects_panel.rect[0];
@@ -88,7 +94,7 @@ function make_slot_(i, effect_patchers_database)
 
     effect_slot.varname = "effect_" + i;
     effect_slots_.push(effect_slot);
-    send_to_slot_(i, "menu_items",  effect_patchers_database);
+    //send_to_slot_(i, "menu_items",  effect_patchers_database);
     return effect_slot;
 }
 make_slot_.local = 1;

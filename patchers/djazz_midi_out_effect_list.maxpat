@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 2025.0, 377.0, 726.0, 447.0 ],
+		"rect" : [ 788.0, 872.0, 726.0, 447.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -123,19 +123,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 25.0, 17.0, 30.0, 30.0 ],
 					"varname" : "events_inlet"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 91.0, 150.0, 22.0 ],
-					"text" : "djazz_midi_out_effect_slot",
-					"varname" : "effect_0"
 				}
 
 			}

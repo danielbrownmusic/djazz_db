@@ -71,6 +71,6 @@ function set_effect()
 
 function get_track_dict_(i)
 {
-    return  dutils.get_dict_array_at(database, "tracks", track_index);
+    return  dutils.get_dict_array_at(database, "tracks", i);
 }
 get_track_dict_.local = 1;

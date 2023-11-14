@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1866.0, 230.0, 468.0, 385.0 ],
+		"rect" : [ 2123.0, 383.0, 468.0, 385.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,9 +40,34 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 370.0, 111.0, 35.0, 22.0 ],
+					"text" : "clear"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"linecount" : 3,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 245.0, 39.0, 222.0, 49.0 ],
+					"text" : "\"Macintosh HD:/Users/danielbrown/Desktop/song_data/AutumnleavesDoMin/\""
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "(symbol) full path of chosen score file",
 					"id" : "obj-5",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -117,7 +142,7 @@
 				"box" : 				{
 					"comment" : "(symbol) full path of song folder",
 					"id" : "obj-21",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -142,16 +167,17 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-13",
-					"items" : "<empty>",
+					"items" : [ "grid", ",", "new", ",", "new2" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 112.0, 179.0, 208.0, 22.0 ],
-					"prefix" : "~/Documents/Max 8/Projects/djazz_db/data/song_data/AutumnleavesDoMin/grid",
+					"prefix" : "~/Desktop/song_data/AutumnleavesDoMin/",
 					"presentation" : 1,
 					"presentation_rect" : [ 1.0, 1.0, 81.0, 22.0 ],
+					"types" : "fold",
 					"varname" : "umenu"
 				}
 
@@ -168,6 +194,7 @@
 					"patching_rect" : [ 206.5, 286.0, 208.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 89.0, 1.0, 206.0, 22.0 ],
+					"types" : "TEXT",
 					"varname" : "umenu[1]"
 				}
 
@@ -249,9 +276,21 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [  ],
-		"autosave" : 0
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+ ]
 	}
 
 }

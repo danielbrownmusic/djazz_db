@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -40,6 +40,31 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 255.0, 229.310650500000008, 56.0, 22.0 ],
+					"text" : "autopattr",
+					"varname" : "u739009954"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 255.0, 135.810650500000008, 53.0, 22.0 ],
+					"text" : "pattrhub"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "",
 					"id" : "obj-3",
 					"index" : 1,
@@ -59,7 +84,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 322.0, 34.310650500000008, 30.0, 30.0 ]
+					"patching_rect" : [ 255.0, 34.310650500000008, 30.0, 30.0 ]
 				}
 
 			}
@@ -84,7 +109,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 77.063124000000016, 191.910650500000003, 111.0, 22.0 ],
+					"patching_rect" : [ 77.063124000000016, 229.310650500000008, 111.0, 22.0 ],
 					"text" : "djazz_loop_section",
 					"varname" : "loop_section"
 				}
@@ -97,7 +122,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 77.063124000000016, 117.110650500000006, 104.0, 22.0 ],
+					"patching_rect" : [ 77.063124000000016, 135.810650500000008, 104.0, 22.0 ],
 					"text" : "djazz_beat_clock",
 					"varname" : "beat_clock"
 				}
@@ -110,7 +135,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 77.063124000000016, 294.510652499999992, 108.0, 22.0 ],
+					"patching_rect" : [ 77.063124000000016, 322.810650500000008, 108.0, 22.0 ],
 					"text" : "djazz_loop_beats",
 					"varname" : "loop_beats"
 				}
@@ -118,6 +143,13 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-2", 0 ]

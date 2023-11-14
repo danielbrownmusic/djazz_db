@@ -16,7 +16,7 @@ function effects(track_dict, effect_patchers_database)
     {
         for (var i = l_old; i < l_new; i++)
         {
-            effect_slots_.push(make_slot_(i));
+            add_effect();
         }
     }
     else
@@ -45,6 +45,11 @@ function effect()
 }
 
 
+function add_effect()
+{
+    effect_slots_.push(make_slot_());
+}
+
 //--------------------------------------------------------------------------------
 
 
@@ -66,6 +71,7 @@ function make_slot_(i)
     var x_inlet 	= inl.rect[0];
     var y_inlet 	= inl.rect[3];
 
+    var i = effect_slots_.length;
     var w = 128;
     var h = 44;
 	var x = x_inlet;

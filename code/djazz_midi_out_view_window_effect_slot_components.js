@@ -14,6 +14,9 @@ function name()
     var old_patcher_class   = old_patcher   ? old_patcher.maxclass  : null;
     var new_patcher_class   = get_patcher_class_(effect_name, effect_menu_items_dict);
 
+    post ("old patcher =", old_patcher_class ? old_patcher_class : "no old patcher \n");
+    post ("new patcher =", new_patcher_class ? new_patcher_class : "no new patcher \n");
+
     if (old_patcher_class === new_patcher_class)
         return;
 
@@ -22,6 +25,7 @@ function name()
         this.patcher.remove(old_patcher);
     }
 
+    post (new_patcher_class)
     var effect = this.patcher.newdefault(x, y, new_patcher_class);
     effect.varname = "effect";
 }

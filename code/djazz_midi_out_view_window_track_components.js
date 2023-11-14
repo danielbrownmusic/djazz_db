@@ -16,7 +16,7 @@ function effects(track_dict, effect_patchers_database)
     {
         for (var i = l_old; i < l_new; i++)
         {
-            effect_slots_.push(make_slot_(i));
+            add_effect();
         }
     }
     else
@@ -45,6 +45,12 @@ function effect()
 }
 
 
+function add_effect()
+{
+    effect_slots_.push(make_slot_());
+}
+
+
 //--------------------------------------------------------------------------------
 
 
@@ -59,10 +65,12 @@ function remove_last_slot_()
 remove_last_slot_.local = 1;
 
 
-function make_slot_(i)
+function make_slot_()
 {
+    var i = effect_slots_.length;
+
     var w = 264;
-    var h = 132;	
+    var h = 132;
 
     var x = this.box.rect[0] + w * i;
     var y = this.box.rect[3] + h;

@@ -50,7 +50,7 @@ function track()
     var msg     = a[1];
     var args    = a.slice(2);
 
-    dispatch_(i, msg, args);
+    message_track_(i, msg, args);
 }
 
 

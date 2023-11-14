@@ -1,5 +1,7 @@
 autowatch  = 1;
 
+var items = ["", "add octaves", "pitch shift"];
+
 var NO_EFFECT       = "no effect";
 var effect_name_    = NO_EFFECT;
 
