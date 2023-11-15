@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 60.0, 708.0, 722.0, 597.0 ],
+		"rect" : [ 95.0, 366.0, 722.0, 597.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,38 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 277.5, 292.0, 102.0, 22.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_initial" : [ "" ],
+							"parameter_initial_enable" : 1,
+							"parameter_invisible" : 1,
+							"parameter_linknames" : 1,
+							"parameter_longname" : "effect_name",
+							"parameter_shortname" : "effect_name",
+							"parameter_type" : 3
+						}
+
+					}
+,
+					"saved_object_attributes" : 					{
+						"initial" : [ "" ],
+						"parameter_enable" : 1,
+						"parameter_mappable" : 0
+					}
+,
+					"text" : "pattr effect_name",
+					"varname" : "effect_name"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-7",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -59,7 +91,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 501.0, 93.5, 180.0, 35.0 ],
-					"text" : "append , append \"add octaves\", append \"pitch shift\""
+					"text" : "append, append \"add octaves\", append \"pitch shift\""
 				}
 
 			}
@@ -75,19 +107,6 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 22.0, 22.0 ],
 					"varname" : "window_open"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 158.0, 236.0, 50.0, 22.0 ],
-					"varname" : "effect_number"
 				}
 
 			}
@@ -117,7 +136,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 319.0, 294.0, 24.0, 24.0 ],
+					"patching_rect" : [ 397.0, 292.0, 24.0, 24.0 ],
 					"varname" : "active"
 				}
 
@@ -129,7 +148,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 319.0, 236.0, 29.5, 22.0 ],
+					"patching_rect" : [ 397.0, 234.0, 29.5, 22.0 ],
 					"text" : "$2"
 				}
 
@@ -137,14 +156,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-2",
-					"items" : [ "", ",", "add octaves", ",", "pitch shift" ],
+					"items" : [ ",", "add octaves", ",", "pitch shift" ],
 					"maxclass" : "umenu",
 					"menumode" : 3,
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 158.0, 171.0, 180.000000000000028, 22.0 ],
+					"patching_rect" : [ 158.0, 171.0, 258.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 22.0, 0.0, 106.0, 22.0 ]
 				}
@@ -160,7 +179,6 @@
 					"patching_rect" : [ 145.666666666666657, 20.0, 56.0, 22.0 ],
 					"restore" : 					{
 						"active" : [ 1 ],
-						"effect_number" : [ 0 ],
 						"window_open" : [ 0 ]
 					}
 ,
@@ -193,8 +211,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
-					"source" : [ "obj-2", 0 ]
+					"destination" : [ "obj-9", 0 ],
+					"source" : [ "obj-2", 1 ]
 				}
 
 			}
@@ -219,7 +237,30 @@
 				}
 
 			}
- ]
+ ],
+		"parameters" : 		{
+			"obj-9" : [ "effect_name", "effect_name", 0 ],
+			"parameterbanks" : 			{
+				"0" : 				{
+					"index" : 0,
+					"name" : "",
+					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+				}
+
+			}
+,
+			"inherited_shortname" : 1
+		}
+,
+		"dependency_cache" : [ 			{
+				"name" : "djazz_midi_out_view_effect_slot_components.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }

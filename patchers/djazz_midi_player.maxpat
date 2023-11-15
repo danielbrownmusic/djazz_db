@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1491.0, 434.0, 776.0, 895.0 ],
+		"rect" : [ 121.0, 150.0, 776.0, 895.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,27 +40,13 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"format" : 6,
-					"id" : "obj-8",
-					"maxclass" : "flonum",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 325.999986000000035, 486.0, 50.0, 22.0 ],
-					"varname" : "tempo_out"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-5",
 					"maxclass" : "newobj",
-					"numinlets" : 3,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 325.999986000000035, 124.833333333333329, 150.333333333333258, 22.0 ],
-					"text" : "route composer midi_out"
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 391.666652666666664, 124.833333333333329, 114.0, 22.0 ],
+					"text" : "route midi_player_1"
 				}
 
 			}
@@ -112,7 +98,7 @@
 					"outlettype" : [ "", "float" ],
 					"patching_rect" : [ 24.999986000000035, 427.333333333333314, 320.0, 22.0 ],
 					"text" : "djazz_composer mnote",
-					"varname" : "composer[1]"
+					"varname" : "composer"
 				}
 
 			}
@@ -124,10 +110,6 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 231.33331933333335, 124.833333333333329, 56.0, 22.0 ],
-					"restore" : 					{
-						"tempo_out" : [ 0.0 ]
-					}
-,
 					"text" : "autopattr",
 					"varname" : "u251008474"
 				}
@@ -217,7 +199,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 325.999986000000035, 16.0, 30.0, 30.0 ]
+					"patching_rect" : [ 391.666652666666664, 16.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -238,13 +220,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"source" : [ "obj-29", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-33", 0 ]
 				}
@@ -252,15 +227,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-29", 2 ],
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-67", 2 ],
-					"source" : [ "obj-5", 1 ]
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}

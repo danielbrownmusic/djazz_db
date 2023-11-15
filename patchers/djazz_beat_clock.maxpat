@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1406.0, 445.0, 393.0, 756.0 ],
+		"rect" : [ 621.0, 238.0, 393.0, 756.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -86,11 +86,11 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 102.500013500000023, 92.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"beat_out" : [ 5 ],
+						"beat_out" : [ 14 ],
 						"loop_end_beat" : [ 0 ],
 						"loop_start_beat" : [ 0 ],
-						"next_beat" : [ 5 ],
-						"step" : [ 0 ]
+						"next_beat" : [ 14 ],
+						"step" : [ 1 ]
 					}
 ,
 					"text" : "autopattr",
@@ -178,11 +178,27 @@
 				"box" : 				{
 					"id" : "obj-4",
 					"maxclass" : "number",
+					"maximum" : 127,
+					"minimum" : -127,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
+					"parameter_enable" : 1,
 					"patching_rect" : [ 113.500013500000023, 243.5, 50.0, 22.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_initial" : [ 1.0 ],
+							"parameter_initial_enable" : 1,
+							"parameter_invisible" : 1,
+							"parameter_longname" : "step",
+							"parameter_mmin" : -127.0,
+							"parameter_shortname" : "step",
+							"parameter_type" : 1,
+							"parameter_unitstyle" : 0
+						}
+
+					}
+,
 					"varname" : "step"
 				}
 
