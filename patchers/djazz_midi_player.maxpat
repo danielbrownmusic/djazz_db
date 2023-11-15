@@ -97,7 +97,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "float" ],
 					"patching_rect" : [ 24.999986000000035, 427.333333333333314, 320.0, 22.0 ],
-					"text" : "djazz_beat_to_midi mnote",
+					"text" : "djazz_composer mnote",
 					"varname" : "composer[1]"
 				}
 
@@ -172,7 +172,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 25.0, 16.0, 30.0, 30.0 ]
 				}
 
@@ -185,7 +185,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 139.666652666666693, 16.0, 30.0, 30.0 ]
 				}
 

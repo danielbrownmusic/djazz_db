@@ -64,16 +64,16 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 7.0, 6.0, 24.0, 24.0 ],
+					"patching_rect" : [ 0.0, 0.0, 33.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 7.0, 6.0, 24.0, 24.0 ],
+					"presentation_rect" : [ 74.0, 0.0, 33.0, 33.0 ],
 					"varname" : "active"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontsize" : 14.0,
+					"fontsize" : 22.0,
 					"format" : 6,
 					"id" : "obj-8",
 					"maxclass" : "flonum",
@@ -82,9 +82,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 37.0, 6.0, 52.0, 24.0 ],
+					"patching_rect" : [ 42.0, 0.0, 76.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 39.0, 6.0, 52.0, 24.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 70.0, 33.0 ],
 					"varname" : "tempo"
 				}
 

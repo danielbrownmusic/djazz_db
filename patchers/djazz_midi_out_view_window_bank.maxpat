@@ -57,10 +57,6 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 246.0, 81.0, 56.0, 22.0 ],
-					"restore" : 					{
-
-					}
-,
 					"text" : "autopattr",
 					"varname" : "u415008648"
 				}
@@ -152,7 +148,7 @@
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-54", 0 ],
 					"watchpoint_flags" : 5,
-					"watchpoint_id" : 7
+					"watchpoint_id" : 4
 				}
 
 			}
@@ -167,6 +163,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"source" : [ "obj-8", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-54", 0 ],
+					"source" : [ "obj-9", 1 ]
 				}
 
 			}

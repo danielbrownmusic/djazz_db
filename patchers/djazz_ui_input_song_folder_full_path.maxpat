@@ -94,8 +94,6 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 224.0, 160.0, 100.0, 22.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 259.0, 12.0, 56.0, 22.0 ],
 					"restore" : 					{
 						"song_folder" : [ "\"Macintosh HD:/Users/danielbrown/Desktop/song_data/AutumnleavesDoMin/\"" ]
 					}
@@ -117,7 +115,7 @@
 					"patching_rect" : [ 40.75, 307.0, 100.0, 50.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
-					"presentation_rect" : [ 8.0, 48.0, 317.0, 23.0 ],
+					"presentation_rect" : [ 8.0, 48.0, 204.0, 78.0 ],
 					"text" : "\"Macintosh HD:/Users/danielbrown/Desktop/song_data/AutumnleavesDoMin/\"",
 					"varname" : "song_folder"
 				}
@@ -175,6 +173,7 @@
 			}
 , 			{
 				"box" : 				{
+					"bordercolor" : [ 0.0, 1.0, 0.945098039215686, 1.0 ],
 					"id" : "obj-5",
 					"maxclass" : "dropfile",
 					"numinlets" : 1,
@@ -182,7 +181,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 40.75, 77.0, 107.0, 42.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 7.0, 148.0, 31.0 ]
+					"presentation_rect" : [ 12.0, 12.0, 140.0, 20.0 ]
 				}
 
 			}
@@ -190,7 +189,7 @@
 				"box" : 				{
 					"comment" : "(symbol) song folder full path",
 					"id" : "obj-16",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -200,6 +199,7 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.898039215686275, 0.898039215686275, 0.898039215686275, 1.0 ],
 					"id" : "obj-25",
 					"linecount" : 2,
 					"maxclass" : "comment",
@@ -290,7 +290,11 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [  ],
+		"autosave" : 0,
+		"bgcolor" : [ 0.490196078431373, 0.490196078431373, 0.490196078431373, 1.0 ],
+		"editing_bgcolor" : [ 0.76078431372549, 0.76078431372549, 0.76078431372549, 1.0 ]
 	}
 
 }
