@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 801.0, 246.0, 436.0, 682.0 ],
+		"rect" : [ 956.0, 484.0, 436.0, 682.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -46,7 +46,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 58.0, 317.0, 30.0, 30.0 ]
+					"patching_rect" : [ 58.0, 309.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -88,7 +88,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -431,7 +431,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -465,7 +465,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-4",
@@ -668,7 +667,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 190.600002110004425, 115.940930306280165, 36.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 120.600002110004482, 0.837539131400263, 36.0, 33.0 ],
+					"presentation_rect" : [ 108.0, 0.0, 33.0, 33.0 ],
 					"text" : "4",
 					"texton" : "4"
 				}
@@ -685,7 +684,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 146.400001406669617, 115.940930306280165, 36.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 80.733334740002988, 0.837539131400263, 36.0, 33.0 ],
+					"presentation_rect" : [ 72.0, 0.0, 33.0, 33.0 ],
 					"text" : "3",
 					"texton" : "3"
 				}
@@ -702,7 +701,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 102.0, 115.940930306280165, 36.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 40.866667370001494, 0.837539131400263, 36.0, 33.0 ],
+					"presentation_rect" : [ 36.0, 0.0, 33.0, 33.0 ],
 					"text" : "2",
 					"texton" : "2"
 				}
@@ -719,7 +718,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 58.0, 115.940930306280165, 36.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1.0, 0.837539131400263, 36.0, 33.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 33.0, 33.0 ],
 					"text" : "1/2",
 					"texton" : "1/2"
 				}

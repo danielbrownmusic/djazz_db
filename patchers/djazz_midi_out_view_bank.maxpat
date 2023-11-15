@@ -330,7 +330,7 @@
 					"destination" : [ "obj-16", 0 ],
 					"source" : [ "obj-308", 0 ],
 					"watchpoint_flags" : 5,
-					"watchpoint_id" : 5
+					"watchpoint_id" : 6
 				}
 
 			}
@@ -401,7 +401,9 @@
 				"implicit" : 1
 			}
  ],
-		"autosave" : 0
+		"autosave" : 0,
+		"bgcolor" : [ 0.490196078431373, 0.490196078431373, 0.490196078431373, 1.0 ],
+		"editing_bgcolor" : [ 0.490196078431373, 0.490196078431373, 0.490196078431373, 1.0 ]
 	}
 
 }

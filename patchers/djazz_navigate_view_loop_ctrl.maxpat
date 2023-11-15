@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -74,7 +74,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 161.600002110004425, 178.599996328353882, 36.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 114.0, -0.162460868599737, 36.0, 33.0 ],
+					"presentation_rect" : [ 108.0, 0.0, 33.0, 33.0 ],
 					"text" : "8",
 					"texton" : "8",
 					"varname" : "loop_4[1]"
@@ -93,7 +93,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -374,7 +374,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -545,7 +545,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 118.666666666666686, 178.599996328353882, 36.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 76.0, -0.162460868599737, 36.0, 33.0 ],
+					"presentation_rect" : [ 72.0, 0.0, 33.0, 33.0 ],
 					"text" : "4",
 					"texton" : "4",
 					"varname" : "loop_4"
@@ -563,7 +563,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 75.333333333333343, 178.599996328353882, 36.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 38.0, -0.162460868599737, 36.0, 33.0 ],
+					"presentation_rect" : [ 36.0, 0.0, 33.0, 33.0 ],
 					"text" : "3",
 					"texton" : "3",
 					"varname" : "loop_3"
@@ -581,7 +581,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 32.0, 178.599996328353882, 36.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, -0.162460868599737, 36.0, 33.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 33.0, 33.0 ],
 					"text" : "2",
 					"texton" : "2",
 					"varname" : "loop_2"
