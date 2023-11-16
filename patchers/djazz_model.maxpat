@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 700.0, 725.0, 707.0, 617.0 ],
+		"rect" : [ 1063.0, 270.0, 1011.0, 1073.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,19 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 229.333333000000039, 155.0, 213.0, 22.0 ],
+					"text" : "djazz_midi_player_parameter_handler",
+					"varname" : "parameters"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-3",
 					"maxclass" : "newobj",
@@ -81,16 +94,17 @@
 					"active" : 					{
 						"master_clock" : 0,
 						"master_clock::u933007353" : 0,
+						"master_clock::beat_out" : 0,
 						"master_clock::loop_end_beat" : 0,
 						"master_clock::loop_start_beat" : 0,
 						"master_clock::next_beat" : 0,
 						"master_clock::step" : 0,
 						"midi_player_1::midi_out" : 0,
 						"midi_player_1::midi_out::u421000787" : 0,
-						"midi_player_1::djazz_bangs" : 0,
-						"midi_player_1::djazz_bangs::u494008851" : 0,
-						"midi_player_1::djazz_bangs::count" : 0,
-						"midi_player_1::djazz_bangs::tempo" : 0,
+						"midi_player_1::tap" : 0,
+						"midi_player_1::tap::u494008851" : 0,
+						"midi_player_1::tap::count" : 0,
+						"midi_player_1::tap::tempo" : 0,
 						"midi_player_1::loop_beats" : 0,
 						"midi_player_1::loop_beats::u346010348" : 0,
 						"midi_player_1::loop_beats::mode" : 0,
@@ -99,11 +113,7 @@
 						"midi_player_1::beat_clock::loop_end_beat" : 0,
 						"midi_player_1::beat_clock::loop_start_beat" : 0,
 						"midi_player_1::beat_clock::next_beat" : 0,
-						"midi_player_1::beat_clock::step" : 0,
-						"midi_player_1::tap" : 0,
-						"midi_player_1::tap::u494008851" : 0,
-						"midi_player_1::tap::count" : 0,
-						"midi_player_1::tap::tempo" : 0
+						"midi_player_1::beat_clock::step" : 0
 					}
 ,
 					"id" : "obj-1",
@@ -114,7 +124,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 466.833333000000039, 203.228515625, 112.0, 35.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ -520, 882, -106, 1357 ],
+						"client_rect" : [ -521, 279, -113, 1013 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
 						"storage_rect" : [ 583, 69, 1034, 197 ]
@@ -283,6 +293,13 @@
 					"destination" : [ "obj-42", 0 ],
 					"order" : 1,
 					"source" : [ "obj-47", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-100", 1 ],
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}

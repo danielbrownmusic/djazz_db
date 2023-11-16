@@ -50,6 +50,39 @@ function add_effect()
     effect_slots_.push(make_slot_());
 }
 
+
+function update()
+{
+    var names = effect_slots_.map(get_name_);
+    for (var i = names.length - 1; i >= 0; i++)
+    {
+        if (names[i] !== "")
+            break;
+        names.pop();
+    }
+    var d = new Dict();
+    dutils.set_dict_array(d, "effects", names);
+    setvalueof(d);
+}
+
+
+function setvalueof()
+{
+    var d = arguments[0];
+    
+}
+
+
+function getvalueof()
+{
+    var d   = new Dict ();
+    var arr = effect_slots_.map( function (slot) { return get_name_(slot); } );
+    dutils.set_dict_array(d, "effects", arr);
+    return d;
+}
+
+
+
 //--------------------------------------------------------------------------------
 
 
@@ -94,10 +127,15 @@ function make_slot_()
 
     effect_slot.varname = "effect_" + i;
     effect_slots_.push(effect_slot);
+    this.patcher.connect(effect_slot, 0, this.box, 0);
     //send_to_slot_(i, "menu_items",  effect_patchers_database);
     return effect_slot;
 }
 make_slot_.local = 1;
+
+
+
+
 
 
 //--------------------------------------------------------------------------------
@@ -111,3 +149,10 @@ function send_to_slot_(i, msg, args)
     outlet (0, addr, msg, args);
 }
 send_to_slot_.local = 1;
+
+
+function get_name_(slot)
+{
+    return slot.subpatcher().getnamed("components").getattr("effect_name");
+}
+

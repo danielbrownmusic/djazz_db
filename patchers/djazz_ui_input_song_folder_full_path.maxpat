@@ -115,7 +115,7 @@
 					"patching_rect" : [ 40.75, 307.0, 100.0, 50.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
-					"presentation_rect" : [ 8.0, 48.0, 204.0, 78.0 ],
+					"presentation_rect" : [ 8.0, 48.0, 244.0, 48.0 ],
 					"text" : "\"Macintosh HD:/Users/danielbrown/Desktop/song_data/AutumnleavesDoMin/\"",
 					"varname" : "song_folder"
 				}

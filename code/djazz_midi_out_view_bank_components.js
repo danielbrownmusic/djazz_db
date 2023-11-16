@@ -20,16 +20,20 @@ var h_track     = 216;
 var size = [0, 0, x_pres, y_pres];
 declareattribute("size");
 
-function bank(bank_dict, effect_menu_items_dict)
+
+
+
+
+function bank(bank_database, effect_factory)
 {
     clear();
-    var track_array = dutils.get_dict_array(bank_dict, "tracks");
+    var track_array = dutils.get_dict_array(bank_database, "tracks");
 
     for (var i = 0; i < track_array.length; i++)
     {
         var track_dict = track_array[i];        
         add_track_(track_dict);
-        message_track_(i, "effects", [track_dict, effect_menu_items_dict]);
+        message_track_(i, "effects", [track_dict, effect_factory]);
     }
 }
 
@@ -63,6 +67,24 @@ function clear()
     }
     set_size_();
 }
+
+
+function serialize()
+{
+    var d   = new Dict ();
+    var arr = tracks_.map( function (track) { return track.serialize(); } );
+    dutils.set_dict_array(d, "tracks", track_dicts_array);
+    return d;
+}
+
+
+function deserialize_(d)
+{
+
+}
+deserialize_.local = 1;
+
+
 
 //----------------------------------------------------------------------------------------------------
 
@@ -122,3 +144,12 @@ function message_track_(i, msg, args)
     outlet (0, addr, msg, args);
 }
 message_track_.local = 1;
+
+
+
+
+
+
+
+
+

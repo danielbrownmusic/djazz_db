@@ -75,10 +75,10 @@ function make_slot_()
     var x = this.box.rect[0] + w * i;
     var y = this.box.rect[3] + h;
 
-    var effect_slot = this.patcher.newdefault(x, y, "djazz_midi_out_view_window_effect_slot");
+    var effect_slot = this.patcher.newdefault(x, y, "djazz_midi_out_view_window_effect_slot", i);
 
     effect_slot.varname = "effect_" + i;
-
+    this.patcher.connect
     return effect_slot;
 }
 make_slot_.local = 1;

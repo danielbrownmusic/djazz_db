@@ -69,8 +69,45 @@ function set_effect()
 
 // ----------------------------------------------------------------------------------
 
+function send_to_model_()
+{}
+send_to_model_.local = 1;
+
+
+function send_to_view_()
+{}
+send_to_view_.local = 1;
+
+
+function serialize_()
+{
+
+    
+}
+serialize_.local = 1;
+
+
+function deserialize_()
+{}
+deserialize_.local = 1;
+
+
 function get_track_dict_(i)
 {
     return  dutils.get_dict_array_at(database, "tracks", i);
 }
 get_track_dict_.local = 1;
+
+
+function get_patcher_class_(name)
+{
+    return effect_patchers_database.get("effects").get(name).get("patcher");
+}
+get_patcher_class_.local = 1;
+
+
+function get_controller_class_()
+{
+    return effect_patchers_database.get("effects").get(name).get("controller");
+}
+get_controller_class_.local = 1;
