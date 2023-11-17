@@ -45,8 +45,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 141.5, 266.0, 86.0, 22.0 ],
-					"text" : "prepend name"
+					"patching_rect" : [ 168.5, 261.0, 108.0, 22.0 ],
+					"text" : "prepend set_effect"
 				}
 
 			}
@@ -70,7 +70,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 276.0, 204.0, 24.0, 24.0 ],
+					"patching_rect" : [ 352.0, 204.0, 24.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 22.0, 22.0 ],
 					"varname" : "window_open"
@@ -103,7 +103,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 234.0, 324.0, 24.0, 24.0 ],
+					"patching_rect" : [ 288.0, 323.0, 24.0, 24.0 ],
 					"varname" : "active"
 				}
 
@@ -115,7 +115,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 234.0, 266.0, 29.5, 22.0 ],
+					"patching_rect" : [ 288.0, 261.0, 29.5, 22.0 ],
 					"text" : "$2"
 				}
 
@@ -123,14 +123,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-2",
-					"items" : [ "hi", ",", "yo", ",", "hi", ",", "yo" ],
+					"items" : [ "", ",", "add octaves", ",", "pitch shift" ],
 					"maxclass" : "umenu",
 					"menumode" : 3,
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 49.0, 204.0, 204.0, 22.0 ],
+					"patching_rect" : [ 49.0, 204.0, 258.0, 22.0 ],
 					"pattrmode" : 1,
 					"prefix_mode" : 1,
 					"presentation" : 1,
@@ -188,7 +188,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-82", 0 ],
-					"midpoints" : [ 151.0, 312.0, 26.5, 312.0, 26.5, 91.0, 58.5, 91.0 ],
+					"midpoints" : [ 178.0, 312.0, 26.5, 312.0, 26.5, 91.0, 58.5, 91.0 ],
 					"source" : [ "obj-47", 0 ]
 				}
 

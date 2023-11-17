@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 3762.0, 323.0, 503.0, 318.0 ],
+		"rect" : [ 492.0, 387.0, 503.0, 318.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,23 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 190.333333333333314, 169.0, 112.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"filename" : "djazz_dispatch.js",
+						"parameter_enable" : 0
+					}
+,
+					"text" : "js djazz_dispatch.js"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "led",
@@ -75,16 +92,16 @@
 					"id" : "obj-30",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 190.333333333333314, 92.0, 248.0, 22.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 190.333333333333314, 92.0, 247.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_midi_out_track_view_components.js",
+						"filename" : "djazz_components_midi_out_track_view.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_midi_out_track_view_components.js",
-					"varname" : "effects"
+					"text" : "js djazz_components_midi_out_track_view.js",
+					"varname" : "components"
 				}
 
 			}
@@ -96,6 +113,13 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 178.0, 17.0, 56.0, 22.0 ],
+					"restore" : 					{
+						"components" : [ 							{
+								"effects" : ""
+							}
+ ]
+					}
+,
 					"text" : "autopattr",
 					"varname" : "u758005487"
 				}
@@ -122,8 +146,8 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-30", 0 ],
-					"source" : [ "obj-7", 1 ]
+					"destination" : [ "obj-4", 0 ],
+					"source" : [ "obj-30", 0 ]
 				}
 
 			}
@@ -136,7 +160,14 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_midi_out_track_view_components.js",
+				"name" : "djazz_components_midi_out_track_view.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_dispatch.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",

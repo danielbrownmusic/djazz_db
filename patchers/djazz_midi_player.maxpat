@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1730.0, 290.0, 776.0, 895.0 ],
+		"rect" : [ 379.0, 171.0, 776.0, 895.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -67,7 +67,7 @@
 				"box" : 				{
 					"id" : "obj-7",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 24.999986000000035, 326.5, 190.0, 22.0 ],
@@ -160,7 +160,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 24.999986000000035, 528.166666666666629, 385.666666666666629, 22.0 ],
 					"text" : "djazz_midi_out_bank",
-					"varname" : "midi_out"
+					"varname" : "midi_out_bank"
 				}
 
 			}

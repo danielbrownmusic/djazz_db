@@ -148,13 +148,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 34.0, 168.0, 323.0, 22.0 ],
+					"patching_rect" : [ 34.0, 168.0, 266.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_midi_out_view_window_effect_slot_components.js",
+						"filename" : "djazz_components_midi_out_effect_window.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_midi_out_view_window_effect_slot_components.js",
+					"text" : "js djazz_components_midi_out_effect_window.js",
 					"varname" : "components"
 				}
 
@@ -233,7 +233,37 @@
 				}
 
 			}
- ]
+ ],
+		"parameters" : 		{
+			"obj-4" : [ "effect_name[1]", "effect_name[1]", 0 ],
+			"parameterbanks" : 			{
+				"0" : 				{
+					"index" : 0,
+					"name" : "",
+					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+				}
+
+			}
+,
+			"inherited_shortname" : 1
+		}
+,
+		"dependency_cache" : [ 			{
+				"name" : "djazz_components_midi_out_effect_window.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_dispatch.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }

@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 615.0, 257.0, 1302.0, 777.0 ],
+		"rect" : [ 392.0, 257.0, 1302.0, 777.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -111,13 +111,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 457.0, 90.0, 295.0, 22.0 ],
+					"patching_rect" : [ 457.0, 90.0, 263.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_midi_out_view_window_bank_components.js",
+						"filename" : "djazz_components_midi_out_bank_window.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_midi_out_view_window_bank_components.js",
+					"text" : "js djazz_components_midi_out_bank_window.js",
 					"varname" : "midi_out_1[3]"
 				}
 
@@ -148,7 +148,7 @@
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-54", 0 ],
 					"watchpoint_flags" : 5,
-					"watchpoint_id" : 4
+					"watchpoint_id" : 16
 				}
 
 			}
