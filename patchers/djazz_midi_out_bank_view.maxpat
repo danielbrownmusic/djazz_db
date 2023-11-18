@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 300.0, 180.0, 624.0, 726.0 ],
+		"rect" : [ 300.0, 180.0, 851.0, 730.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,19 @@
 		"subpatcher_template" : "djazz_empty_object",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"comment" : "components messages",
+					"id" : "obj-5",
+					"index" : 0,
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 416.0, 158.5, 30.0, 30.0 ],
+					"varname" : "components_out"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-4",
 					"maxclass" : "newobj",
@@ -202,7 +215,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 244.666666666666742, 164.5, 112.0, 22.0 ],
+					"patching_rect" : [ 188.0, 162.5, 112.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_dispatch.js",
 						"parameter_enable" : 0
@@ -259,10 +272,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 300.666666666666686, 24.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"components" : [ 							{
-								"tracks" : ""
-							}
- ]
+
 					}
 ,
 					"text" : "autopattr",
@@ -275,8 +285,8 @@
 					"id" : "obj-308",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 188.0, 93.5, 247.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_components_midi_out_bank_view.js",
@@ -306,9 +316,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
-					"source" : [ "obj-308", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 33
+					"source" : [ "obj-308", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-308", 1 ]
 				}
 
 			}

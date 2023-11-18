@@ -40,6 +40,18 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-19",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 934.0, 660.0, 67.0, 22.0 ],
+					"text" : "FUCKYOU"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-22",
 					"maxclass" : "button",
 					"numinlets" : 1,
@@ -57,8 +69,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1055.0, 745.0, 287.0, 22.0 ],
-					"text" : "prepend midi_player_1::midi_out_bank::components"
+					"patching_rect" : [ 1055.0, 745.0, 185.0, 22.0 ],
+					"text" : "prepend midi_player_1 set_value"
 				}
 
 			}
@@ -97,8 +109,8 @@
 					"id" : "obj-11",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 3,
-					"outlettype" : [ "bang", "", "" ],
+					"numoutlets" : 4,
+					"outlettype" : [ "bang", "", "", "" ],
 					"patching_rect" : [ 503.0, 217.0, 109.0, 22.0 ],
 					"text" : "djazz_view.maxpat",
 					"varname" : "djazz_view"
@@ -207,9 +219,9 @@
 					"maxclass" : "bpatcher",
 					"name" : "djazz_view.maxpat",
 					"numinlets" : 2,
-					"numoutlets" : 3,
+					"numoutlets" : 4,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "bang", "", "" ],
+					"outlettype" : [ "bang", "", "", "" ],
 					"patching_rect" : [ 75.0, 239.934081999999989, 677.0, 546.0 ],
 					"varname" : "patcher[1]",
 					"viewvisibility" : 1
@@ -4033,15 +4045,15 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-20", 0 ],
-					"source" : [ "obj-16", 0 ]
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-18", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-18", 0 ]
+					"destination" : [ "obj-20", 0 ],
+					"source" : [ "obj-19", 0 ]
 				}
 
 			}
@@ -4054,7 +4066,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-65", 0 ],
+					"destination" : [ "obj-65", 1 ],
 					"source" : [ "obj-20", 0 ]
 				}
 
@@ -4119,7 +4131,9 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-57", 2 ],
-					"source" : [ "obj-65", 2 ]
+					"source" : [ "obj-65", 3 ],
+					"watchpoint_flags" : 5,
+					"watchpoint_id" : 1
 				}
 
 			}
@@ -4296,6 +4310,13 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_component_messages.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{

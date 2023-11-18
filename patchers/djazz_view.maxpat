@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 70.0, 146.0, 1158.0, 768.0 ],
+		"rect" : [ 70.0, 146.0, 931.0, 857.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-8",
+					"index" : 4,
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1223.5, 643.131835968750011, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-7",
 					"maxclass" : "newobj",
@@ -287,7 +299,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1300.0, 730.131835968750011, 30.0, 30.0 ]
+					"patching_rect" : [ 449.0, 677.131835968750011, 30.0, 30.0 ]
 				}
 
 			}
@@ -310,7 +322,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 1300.0, 526.0, 56.0, 22.0 ],
+					"patching_rect" : [ 449.0, 473.0, 56.0, 22.0 ],
 					"restore" : 					{
 						"tempo_out" : [ 0.0 ]
 					}
@@ -328,7 +340,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1300.0, 573.131835968750011, 103.0, 49.0 ],
+					"patching_rect" : [ 449.0, 520.131835968750011, 103.0, 49.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ -521, 279, -113, 1013 ],
 						"parameter_enable" : 0,
@@ -343,6 +355,7 @@
 			}
 , 			{
 				"box" : 				{
+					"args" : [ "midi_player_1" ],
 					"bgmode" : 1,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -354,9 +367,9 @@
 					"maxclass" : "bpatcher",
 					"name" : "djazz_midi_player_view.maxpat",
 					"numinlets" : 2,
-					"numoutlets" : 1,
+					"numoutlets" : 2,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "" ],
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 790.5, 262.06591796875, 463.0, 332.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.362881999999985, 209.0, 463.0, 332.0 ],
@@ -431,9 +444,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-1", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 28
+					"source" : [ "obj-1", 0 ]
 				}
 
 			}
@@ -462,6 +473,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-63", 0 ],
 					"source" : [ "obj-37", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-37", 1 ]
 				}
 
 			}

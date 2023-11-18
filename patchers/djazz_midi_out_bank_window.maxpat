@@ -146,9 +146,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-54", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 15
+					"source" : [ "obj-54", 0 ]
 				}
 
 			}

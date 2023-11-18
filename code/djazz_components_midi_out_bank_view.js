@@ -1,6 +1,7 @@
 var dutils = require("db_dictionary_array_utils");
 
 autowatch = 1;
+outlets = 2;
 
 var effect_database_    = null;
 var tracks_             = [];
@@ -30,16 +31,11 @@ function set_effect_database(effect_database_name)
 }
 
 
-function setvalueof()
+function set_value(bank_dict_name)
 {
-    if (arguments[0] !== "dictionary")
-    {
-        post("Error -- trying to set midi out bank to a value that is not a dictionary.");
-        return;
-    }
-    var bank_dict = new Dict(arguments[1]);
-
     clear();
+
+    var bank_dict   = new Dict(bank_dict_name);
     var track_array = dutils.get_dict_array(bank_dict, "tracks");
 
     for (var i = 0; i < track_array.length; i++)
@@ -49,7 +45,7 @@ function setvalueof()
 }
 
 
-function getvalueof()
+function get_value()
 {
     var d = new Dict ("midi_bank_fuck_you");
     post (tracks_.length, " is the number of tracks.\n");
@@ -90,6 +86,13 @@ function add_tracks(n)
 }
 
 
+function forward_message(msg)
+{
+    post ("forwarding message", msg.get("effects")[0], "\n");
+    outlet(1, arrayfromargs(msg));
+}
+
+
 //----------------------------------------------------------------------------------------------------
 
 function add_track_()
@@ -99,30 +102,32 @@ function add_track_()
     var patching_rect       = [x_patch, y_patch, w_track, h_track];
     var presentation_rect   = [x_pres, y_pres, w_track, h_track];
 
+    var track_name = "track_" + i;
     var track = this.patcher.newdefault
                                     (
                                     x_patch, 
                                     y_patch, 
                                     "bpatcher", 
                                     "@name",                "djazz_midi_out_track_view", 
-                                    "@args",                i,
+                                    "@args",                track_name,
                                     "@presentation",        1,
                                     "@patching_rect",       patching_rect,
                                     "@presentation_rect",   presentation_rect
                                     );
-    track.varname = "track_" + i;
+    track.varname = track_name;
     tracks_.push(track);
 
     var track_dict = arguments ? arguments[0] : null;
 
-    message_track_(track, "set_value_silent", track_dict);
-    message_track_(track, "set_effect_database", effect_database_.name);
-
+    message_track_(track, "set_effect_database",    effect_database_.name);    
+    message_track_(track, "set_value_silent",       track_dict);
+    message_track_(track, "set_bank_listener",      this);
     set_size_();
 
     return track;
 }
 add_track_.local = 1;
+
 
 function remove_last_track_()
 {
@@ -135,13 +140,6 @@ function remove_last_track_()
 remove_last_track_.local = 1;
 
 
-/* function get_track_components_mgr_(track)
-{
-    return track.subpatcher().getnamed("components");
-}
-get_track_components_mgr_.local = 1; */
-
-
 function message_track_(track, msg, args)
 {
     var addr = [track.varname, "components"].join("::");
@@ -152,9 +150,10 @@ message_track_.local = 1;
 
 function get_track_value_(track)
 {
-    return track.subpatcher().getnamed("components").getvalueof();
+    return track.subpatcher().getnamed("components").get_value();
 }
 get_track_value_.local = 1;
+
 
 function set_size_()
 {
@@ -163,6 +162,12 @@ function set_size_()
 }
 set_size_.local = 1;
 
+
+/* function get_track_components_mgr_(track)
+{
+    return track.subpatcher().getnamed("components");
+}
+get_track_components_mgr_.local = 1; */
 
 
 

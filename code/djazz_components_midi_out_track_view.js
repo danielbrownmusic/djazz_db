@@ -2,6 +2,11 @@ var dutils = require("db_dictionary_array_utils");
 
 autowatch = 1;
 
+outlets = 2;
+
+
+var bank_listener_ = null;
+
 var effect_database_    = null;
 var effects_ = [];
 
@@ -9,15 +14,19 @@ var w_effect = 128;
 var h_effect = 22;
 
 
-function set_effect_database(effect_database_name)
+function set_bank_listener(bank_listener)
 {
-    effect_database_ = new Dict(effect_database_name);
-    post ("track. name =", effect_database_name);
-    post (effect_database_.get("items")[1]);
+    bank_listener_ = bank_listener;
 }
 
 
-function getvalueof()
+function set_effect_database(effect_database_name)
+{
+    effect_database_ = new Dict(effect_database_name);
+}
+
+
+function get_value()
 {
     var d   = new Dict ();
     var a = effects_.map(get_effect_name_);
@@ -26,9 +35,10 @@ function getvalueof()
 }
 
 
-function setvalueof(track_dict)
+function set_value(track_dict)
 {
     set_value_silent(track_dict);
+    bank_listener_.forward_message(get_value());
 }
 
 
@@ -91,9 +101,10 @@ function add_effect()
 }
 
 
-function effect_changed()
+function effect_changed(effect_slot_name, effect_name)
 {
-    var names = effects_.map(get_name_);
+    post ("effect changed \n");
+    var names = effects_.map(get_effect_name_);
     for (var i = names.length - 1; i >= 0; i++)
     {
         if (names[i] !== "")
@@ -102,7 +113,7 @@ function effect_changed()
     }
     var d = new Dict();
     dutils.set_dict_array(d, "effects", names);
-    setvalueof(d);
+    set_value(d);
 }
 
 
@@ -135,10 +146,7 @@ function make_effect_()
 
     effect.varname          = "effect_" + i;
 
-    post ("messaging");
-    post (effect_database_.name);
     message_effect_(effect, "set_effect_database", effect_database_.name);
-    post ("messaged");
     this.patcher.connect(effect, 0, this.box, 0);
 
     return effect;

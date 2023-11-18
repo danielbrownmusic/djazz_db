@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 492.0, 387.0, 503.0, 318.0 ],
+		"rect" : [ 492.0, 387.0, 645.0, 457.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 190.333333333333314, 169.0, 112.0, 22.0 ],
+					"patching_rect" : [ 164.333333333333314, 195.0, 112.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_dispatch.js",
 						"parameter_enable" : 0
@@ -92,9 +92,9 @@
 					"id" : "obj-30",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 190.333333333333314, 92.0, 247.0, 22.0 ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 164.333333333333314, 71.0, 247.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_components_midi_out_track_view.js",
 						"parameter_enable" : 0
@@ -112,12 +112,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 178.0, 17.0, 56.0, 22.0 ],
+					"patching_rect" : [ 164.333333333333258, 13.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"components" : [ 							{
-								"effects" : ""
-							}
- ]
+
 					}
 ,
 					"text" : "autopattr",

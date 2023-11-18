@@ -18,8 +18,8 @@ function set_effect_database(effect_database_name)
 
 function set_effect()
 {
-    var set_new_name = set_value_silent(arguments);
-    if (set_new_name) 
+    var is_new_name = set_value_silent(arguments);
+    if (is_new_name) 
     {
         outlet (1, "effect_changed");
     }
