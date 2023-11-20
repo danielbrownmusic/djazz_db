@@ -5,7 +5,7 @@ autowatch = 1;
 outlets = 2;
 
 
-var bank_listener_ = null;
+//var listener_ = null;
 
 var effect_database_    = null;
 var effects_ = [];
@@ -13,11 +13,12 @@ var effects_ = [];
 var w_effect = 128;
 var h_effect = 22;
 
+declareattribute("effects", "get_effects", "set_effects");
 
-function set_bank_listener(bank_listener)
+/* function set_listener(listener)
 {
-    bank_listener_ = bank_listener;
-}
+    listener_ = listener;
+} */
 
 
 function set_effect_database(effect_database_name)
@@ -26,7 +27,8 @@ function set_effect_database(effect_database_name)
 }
 
 
-function get_value()
+
+function get_effects()
 {
     var d   = new Dict ();
     var a = effects_.map(get_effect_name_);
@@ -35,14 +37,18 @@ function get_value()
 }
 
 
-function set_value(track_dict)
+function set_effects(track_dict)
 {
-    set_value_silent(track_dict);
-    bank_listener_.forward_message(get_value());
+    set_effects(track_dict);
+    outlet (0, effect_name);
+    if (listener_)
+    {
+        listener_.notify_changed();            
+    }
 }
 
 
-function set_value_silent()
+function set_effects_silent()
 {
     var track_dict      = arguments  ? arguments[0] : null;
     var effect_names    = track_dict ? dutils.get_dict_array(track_dict, "effects") : [];
@@ -147,11 +153,45 @@ function make_effect_()
     effect.varname          = "effect_" + i;
 
     message_effect_(effect, "set_effect_database", effect_database_.name);
-    this.patcher.connect(effect, 0, this.box, 0);
+    connect_effects_();
 
     return effect;
 }
 make_effect_.local = 1;
+
+
+function connect_effects_()
+{
+    var x_spray     = 200;
+    var y_spray     = 44;
+    var x_funnel    = 200;
+    var y_funnel    = 244;
+
+    var spray = this.patcher.getnamed("spray");
+    var funnel = this.patcher.getnaned("funnel");
+
+    if (spray)
+    {
+        this.patcher.remove(funnel);
+    }
+    if (funnel)
+    {
+        this.patcher.remove(funnel);
+    }
+
+    var n   = effects_.length;
+
+    spray   = this.patcher.newdefault(x_spray,  y_spray,  "spray",  n);
+    funnel  = this.patcher.newdefault(x_funnel, y_funnel, "funnel", n);
+
+    this.patcher,connect(funnel, 0, this.box, 0);
+    for (var i = 0; i < effects_.length; i++)
+    {
+        this.patcher.connect(   spray,         i,   effects_[i],    0);
+        this.patcher.connect(   effects_[i],   0,   funnel,         i);
+    }
+
+}
 
 
 function remove_last_effect_()
