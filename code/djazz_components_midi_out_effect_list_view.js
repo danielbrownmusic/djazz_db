@@ -4,6 +4,8 @@ autowatch = 1;
 
 outlets = 2;
 
+var EMPTY_STRING = "empty_string";
+
 
 var effect_database_    = null;
 var effects_ = [];
@@ -60,7 +62,6 @@ function clear()
     {
         remove_last_effect_();
     }
-    //set_size_();
 }
 
 
@@ -81,7 +82,7 @@ function add_effect()
     var i = effects_.length - 1;
     if (effect_database_)
     {
-        outlet(0, [i , "set_effect_database", effect_database_.name]);
+        outlet(0, i , "set_effect_database", effect_database_.name);
     }
 }
 
@@ -93,11 +94,18 @@ function effect_changed(i, effect_name)
     var n = names.length - 1;
     for (var i = n; i >= 0; i--)
     {
-        if (names[i] !== "")
+        if (names[i] !== EMPTY_STRING)
             break;
         names.pop();
     }
-    post (names);
+    post ("names: \n");
+
+    for (var i = 0; i < names.length; i++)
+    {
+        post (names[i]);
+    }
+    post ("\n");
+    post ("args length: ", names.length, "\n");
     set_effects_(names);
 }
 
@@ -112,7 +120,6 @@ function remove_last_effect_()
 
     var effect = effects_.pop();
     this.patcher.remove(effect);
-    connect_effects_();
 }
 remove_last_effect_.local = 1;
 
@@ -149,12 +156,14 @@ function make_effect_()
 make_effect_.local = 1;
 
 
-function set_effects_()
+function set_effects_(effect_names)
 {
-    var effect_names    = arguments ? arguments : [];
-    
+    post ("effect_names length: ", effect_names.length, "\n");
     var l_old           = effects_.length;
     var l_new           = effect_names.length;
+
+    post (l_old, l_new, "\n");
+
 
     if (l_old < l_new)
     {
@@ -163,20 +172,25 @@ function set_effects_()
             add_effect();
         }
     }
-    else
+     else
     {
         for (var i = l_new; i < l_old; i++)
         {
             remove_last_effect_();
         }
     }
-    
+    /*
+    connect_effects_();
     for (var i = 0; i < effects_.length; i++)
     {
-        outlet(0, [i, "set_effect_silently", effect_names[i]]);
-    }
+        outlet(0, i, ["set_effect_silently", effect_names[i]]);
+    } */
 }
 set_effects_.local = 1;
+
+
+
+//-----------------------------------------------------------------------------------------------
 
 
 function connect_effects_()
@@ -260,6 +274,7 @@ make_funnel_.local = 1;
 
 
 
+//-----------------------------------------------------------------------------------------------
 
 
 /* function message_effect_(effect, msg, args)

@@ -1,14 +1,17 @@
+
+
 autowatch  = 1;
 
 outlets =  2;
 
+
+var EMPTY_STRING = "empty_string";
+
+
 var effect_database_    = null;
-var effect_name         = "";
+var effect_name         = EMPTY_STRING;
 var effect              = null;
 /* var listener_           = null; */
-
-
-
 declareattribute("effect_name");
 
 
@@ -36,9 +39,18 @@ function set_effect(effect_name_in)
 }
 
 
+function set_effect_number(i)
+{
+   var effect_name =    i === 0 ?
+                        EMPTY_STRING :
+                        effect_database_.get("items")[i];
+   set_effect(effect_name);
+}
+
+
 function set_effect_silently(effect_name_in)
 {
-    var no_effect = effect_name_in === "" ? true : false;
+    var no_effect = effect_name_in === EMPTY_STRING ? true : false;
 
     if (effect_name_in === effect_name)
         return false;
@@ -65,7 +77,7 @@ function window_open()
 }
 
 
-//----------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------
 
 function remove_effect_()
 {
