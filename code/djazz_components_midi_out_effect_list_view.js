@@ -2,7 +2,7 @@ var dutils = require("db_dictionary_array_utils");
 
 autowatch = 1;
 
-outlets = 2;
+outlets = 3;
 
 var EMPTY_STRING = "empty_string";
 
@@ -27,36 +27,55 @@ function get_effects()
     var d   = new Dict ();
     var a = effects_.map(get_effect_name_);
     dutils.set_dict_array(d, "effects", a);
+    post (effects_.length);
+    post (a.length);
+    post (a, "\n");
     return d;
 }
 
 
 function set_effects()
 {
-    var track_dict      = arguments  ? arguments[0] : null;
-    var effect_names    = track_dict ? dutils.get_dict_array(track_dict, "effects") : [];
-    
-    set_effects_(effect_names);
+    var effects_dict    = arguments  ? arguments[0] : null;
+    var effect_names    = effects_dict ? dutils.get_dict_array(effects_dict, "effects") : [];
+
+    var l_old           = effects_.length;
+    var l_new           = effect_names.length;
+
+    if (l_old < l_new)
+    {
+        for (var i = l_old; i < l_new; i++)
+        {
+            add_effect();
+        }
+    }
+     else
+    {
+        for (var i = l_new; i < l_old; i++)
+        {
+            remove_last_effect_();
+        }
+    }
+    /*
+    connect_effects_();
+    for (var i = 0; i < effects_.length; i++)
+    {
+        outlet(0, i, ["set_effect_silently", effect_names[i]]);
+    } */
+
 }
 
 
 function effect()
 {
-    //var a       = arrayfromargs(arguments);
     outlet(0, arrayfromargs(arguments));
-/*     var i       = a[0];
-    var msg     = a[1];
-    var args    = a.slice(2);
-    var effect  = effects_[i];
-
-    message_effect_(effect, msg, args);
- */}
+}
 
 
 function clear()
 {
-    remove_spray_();
-    remove_funnel_();
+/*     remove_spray_();
+    remove_funnel_(); */
     var n = effects_.length;
     for (var i = 0; i < n; i++)
     {
@@ -67,6 +86,7 @@ function clear()
 
 function add_effects(n)
 {
+    post ("adding effects", n, "\n");
     for (var i = 0; i < n; i++)
     {
         add_effect();
@@ -82,14 +102,13 @@ function add_effect()
     var i = effects_.length - 1;
     if (effect_database_)
     {
-        outlet(0, i , "set_effect_database", effect_database_.name);
+        message_effect_(effects_[i], "set_effect_database", effect_database_.name);
     }
 }
 
 
-function effect_changed(i, effect_name)
+function effect_changed() //j, effect_name)
 {
-    post ("effect changed \n");
     var names = effects_.map(get_effect_name_);
     var n = names.length - 1;
     for (var i = n; i >= 0; i--)
@@ -98,20 +117,24 @@ function effect_changed(i, effect_name)
             break;
         names.pop();
     }
-    post ("names: \n");
+    var d = new Dict ();
+    dutils.set_dict_array(d, "effects", names);
+    set_effects(d);
 
-    for (var i = 0; i < names.length; i++)
-    {
-        post (names[i]);
-    }
-    post ("\n");
-    post ("args length: ", names.length, "\n");
-    set_effects_(names);
+    message_pattr_(get_effects());
+    message_pattr_("invisible", 0);
 }
 
 
-//--------------------------------------------------------------------------------
 
+
+
+
+
+
+
+
+//--------------------------------------------------------------------------------
 
 function remove_last_effect_()
 {
@@ -156,60 +179,30 @@ function make_effect_()
 make_effect_.local = 1;
 
 
-function set_effects_(effect_names)
-{
-    post ("effect_names length: ", effect_names.length, "\n");
-    var l_old           = effects_.length;
-    var l_new           = effect_names.length;
-
-    post (l_old, l_new, "\n");
-
-
-    if (l_old < l_new)
-    {
-        for (var i = l_old; i < l_new; i++)
-        {
-            add_effect();
-        }
-    }
-     else
-    {
-        for (var i = l_new; i < l_old; i++)
-        {
-            remove_last_effect_();
-        }
-    }
-    /*
-    connect_effects_();
-    for (var i = 0; i < effects_.length; i++)
-    {
-        outlet(0, i, ["set_effect_silently", effect_names[i]]);
-    } */
-}
-set_effects_.local = 1;
-
-
-
 //-----------------------------------------------------------------------------------------------
 
 
 function connect_effects_()
 {
-    remove_spray_();
-    remove_funnel_();
+/*     remove_spray_();
+    remove_funnel_(); */
 
     var n = effects_.length;
 
     if (n === 0)
         return;
 
-    var spray   = make_spray_(n);
-    var funnel  = make_funnel_(n);
+/*     var spray   = make_spray_(n);
+    var funnel  = make_funnel_(n); */
+
+
+    var connect_in = this.patcher.getnamed("connect_in");
 
     for (var i = 0; i < n; i++)
     {
-        this.patcher.connect(   spray,         i,   effects_[i],    0);
+/*         this.patcher.connect(   spray,         i,   effects_[i],    0);
         this.patcher.connect(   effects_[i],   0,   funnel,         i);
+ */        this.patcher.connect(   effects_[i],   0,   connect_in,         0);
     }
 }
 connect_effects_.local = 1;
@@ -277,12 +270,19 @@ make_funnel_.local = 1;
 //-----------------------------------------------------------------------------------------------
 
 
-/* function message_effect_(effect, msg, args)
+function message_effect_(effect, msg, args)
 {
     var addr = [effect.varname, "components"].join("::");
-    outlet (0, addr, msg, args);
+    outlet (1, addr, msg, args);
 }
-message_effect_.local = 1; */
+message_effect_.local = 1;
+
+
+function message_pattr_(msg, args)
+{
+    outlet (2, msg, args);
+}
+message_pattr_.local = 1;
 
 
 function get_effect_name_(effect)

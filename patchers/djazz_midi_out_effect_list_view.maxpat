@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1295.0, 533.0, 732.0, 616.0 ],
+		"rect" : [ -1342.0, 297.0, 732.0, 591.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,31 +40,51 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-23",
+					"id" : "obj-36",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 39.0, 536.0, 157.0, 22.0 ],
+					"patching_rect" : [ 398.0, 376.0, 112.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "global_djazz_constants.js",
+						"filename" : "djazz_dispatch.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js global_djazz_constants.js"
+					"text" : "js djazz_dispatch.js"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-142",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"id" : "obj-10",
+					"maxclass" : "message",
+					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 193.0, 191.0, 138.0, 22.0 ],
-					"text" : "prepend effect_changed",
-					"varname" : "connect_funnel"
+					"patching_rect" : [ 161.0, 213.0, 90.0, 22.0 ],
+					"text" : "effect_changed",
+					"varname" : "connect_in"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 524.5, 376.0, 79.0, 49.0 ],
+					"restore" : [ "jsobject", -1266631809240568 ],
+					"saved_object_attributes" : 					{
+						"parameter_enable" : 0,
+						"parameter_mappable" : 0
+					}
+,
+					"text" : "pattr components @invisible 1",
+					"varname" : "components"
 				}
 
 			}
@@ -75,7 +95,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 497.0, 93.0, 35.0, 22.0 ],
+					"patching_rect" : [ 390.0, 91.0, 35.0, 22.0 ],
 					"text" : "clear"
 				}
 
@@ -87,7 +107,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 497.0, 12.0, 206.0, 22.0 ],
+					"patching_rect" : [ 390.0, 10.0, 206.0, 22.0 ],
 					"text" : "set_effect_database MIDI_EFFECTS"
 				}
 
@@ -99,7 +119,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 497.0, 51.0, 80.0, 22.0 ],
+					"patching_rect" : [ 390.0, 49.0, 80.0, 22.0 ],
 					"text" : "add_effects 4"
 				}
 
@@ -109,9 +129,9 @@
 					"id" : "obj-5",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 378.5, 263.0, 272.0, 22.0 ],
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 271.5, 261.0, 272.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_components_midi_out_effect_list_view.js",
 						"parameter_enable" : 0
@@ -129,7 +149,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 378.5, 465.0, 30.0, 30.0 ],
+					"patching_rect" : [ 271.5, 456.0, 30.0, 30.0 ],
 					"varname" : "connect_out"
 				}
 
@@ -143,7 +163,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 378.5, 12.0, 30.0, 30.0 ]
+					"patching_rect" : [ 271.5, 10.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -176,7 +196,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-142", 0 ]
+					"source" : [ "obj-10", 0 ]
 				}
 
 			}
@@ -191,6 +211,24 @@
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-5", 2 ],
+					"watchpoint_flags" : 5,
+					"watchpoint_id" : 2
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-36", 0 ],
+					"source" : [ "obj-5", 1 ],
+					"watchpoint_flags" : 5,
+					"watchpoint_id" : 4
 				}
 
 			}
@@ -224,7 +262,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "global_djazz_constants.js",
+				"name" : "djazz_dispatch.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
