@@ -52,6 +52,11 @@ function track()
     var i       = a[0];
     var msg     = a[1];
     var args    = a.slice(2);
+    if (i >= tracks_.length)
+    {
+        post ("There is no track", i + ".\n");
+        return;
+    }
 
     message_track_(tracks_[i], msg, args);
 }

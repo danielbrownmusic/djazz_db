@@ -12,7 +12,7 @@
 		"classnamespace" : "box",
 		"rect" : [ -1342.0, 297.0, 732.0, 591.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 0,
+		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -179,7 +179,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 0.0, 0.0, 128.0, 384.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 64.0, 128.0, 192.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 128.0, 384.0 ],
 					"proportion" : 0.5,
 					"varname" : "effects_panel"
 				}
@@ -219,7 +219,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-5", 2 ],
 					"watchpoint_flags" : 5,
-					"watchpoint_id" : 2
+					"watchpoint_id" : 47
 				}
 
 			}
@@ -228,7 +228,7 @@
 					"destination" : [ "obj-36", 0 ],
 					"source" : [ "obj-5", 1 ],
 					"watchpoint_flags" : 5,
-					"watchpoint_id" : 4
+					"watchpoint_id" : 48
 				}
 
 			}

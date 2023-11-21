@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1397.0, 803.0, 996.0, 1009.0 ],
+		"rect" : [ -1604.0, 324.0, 996.0, 1009.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -46,7 +46,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 416.0, 158.5, 30.0, 30.0 ],
+					"patching_rect" : [ 395.0, 370.5, 30.0, 30.0 ],
 					"varname" : "components_out"
 				}
 
@@ -59,7 +59,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 28.0, 651.0, 98.0, 49.0 ],
+					"patching_rect" : [ 21.0, 236.5, 98.0, 49.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ -521, 279, -113, 1013 ],
 						"parameter_enable" : 0,
@@ -80,7 +80,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 28.0, 809.0, 30.0, 30.0 ]
+					"patching_rect" : [ 21.0, 370.5, 30.0, 30.0 ]
 				}
 
 			}
@@ -216,7 +216,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 188.0, 162.5, 112.0, 22.0 ],
+					"patching_rect" : [ 167.0, 161.0, 112.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_dispatch.js",
 						"parameter_enable" : 0
@@ -235,7 +235,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 188.0, 24.0, 30.0, 30.0 ]
+					"patching_rect" : [ 167.0, 16.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -246,7 +246,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 21.0, 102.0, 53.0, 22.0 ],
+					"patching_rect" : [ 21.0, 85.5, 53.0, 22.0 ],
 					"text" : "pattrhub"
 				}
 
@@ -271,7 +271,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 300.666666666666686, 24.0, 56.0, 22.0 ],
+					"patching_rect" : [ 21.0, 161.0, 56.0, 22.0 ],
 					"restore" : 					{
 
 					}
@@ -288,7 +288,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 188.0, 93.5, 247.0, 22.0 ],
+					"patching_rect" : [ 167.0, 85.5, 247.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_components_midi_out_bank_view.js",
 						"parameter_enable" : 0
@@ -366,7 +366,7 @@
 			}
  ],
 		"autosave" : 0,
-		"bgcolor" : [ 0.490196078431373, 0.490196078431373, 0.490196078431373, 1.0 ],
+		"bgcolor" : [ 0.682352941176471, 0.76078431372549, 0.768627450980392, 1.0 ],
 		"editing_bgcolor" : [ 0.796078431372549, 0.796078431372549, 0.796078431372549, 1.0 ]
 	}
 
