@@ -1,5 +1,7 @@
 autowatch  = 1;
 
+var EMPTY_STRING        = "empty_string";
+
 var effect_database_    = null;
 var effect_name         = "";
 
@@ -11,22 +13,21 @@ function set_effect_database(effect_database_name)
 }
 
 
-function set_effect_silent()
+function set_effect(effect_name_in)
 {
-    var no_effect       = arguments ? true          : false;
-    var effect_name_in  = no_effect ? arguments[0]  : "";
+    var no_effect = effect_name_in === EMPTY_STRING ? true : false;
     
     if (effect_name_in === effect_name)
-        return false;
+        return;
 
     effect_name = effect_name_in;
+
     remove_effect_();
 
     if (no_effect)
-        return true;
+        return ;
 
     make_effect_(effect_name);
-        return true;
 }
 
 
@@ -58,9 +59,11 @@ function make_effect_(effect_name)
 
     var patcher_class   = get_patcher_class_(effect_name, effect_database_);
 
-    var effect          = this.patcher.newdefault(x, y, patcher_class);
+    if (!patcher_class)
+    return;
 
-    effect.varname = "effect";
+    var effect          = this.patcher.newdefault(x, y, patcher_class);
+    effect.varname      = "effect";
 
     this.patcher.disconnect (bypass_switch, 1, midi_outlet,  0);
     this.patcher.connect    (bypass_switch, 1, effect,       0);
@@ -71,10 +74,10 @@ make_effect_.local = 1;
 
 function get_patcher_class_(effect_name, effect_menu_items_dict)
 {
-    var d               = effect_menu_items_dict.get("effects");
-    var patcher_class   = d.contains(effect_name) ?
-                          d.get(effect_name).get("patcher") :
-                          null;
-    return patcher_class;
+    var d = new Dict (effect_database_.get("effects").name);
+    var p = d.contains(effect_name) === 1 ?
+            d.get(effect_name).get("patcher") :
+            null;
+    return p;
 }
 get_patcher_class_.local = 1;

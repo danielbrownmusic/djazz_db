@@ -5,8 +5,9 @@ autowatch = 1;
 var effect_database_    = null;
 var effects_            = [];
 
-var w = 128;
-var h = 44;
+var w                   = 128;
+var h                   = 44;
+
 
 function set_effect_database(effect_database_name)
 {
@@ -14,19 +15,13 @@ function set_effect_database(effect_database_name)
 }
 
 
-function setvalueof(track_dict)
+function set_effects()
 {
-    set_value_silent(track_dict);
-}
+    var effects_dict    = arguments  ? arguments[0] : null;
+    var effect_names    = effects_dict ? dutils.get_dict_array(effects_dict, "effects") : [];
 
-
-function set_value_silent(track_dict)
-{
-    var track_dict      = arguments  ? arguments[0] : null;
-    var effect_names    = track_dict ? dutils.get_dict_array(track_dict, "effects") : [];
-    
-    var l_old   = effects_.length;
-    var l_new   = effect_name_array.length;
+    var l_old           = effects_.length;
+    var l_new           = effect_names.length;
 
     if (l_old < l_new)
     {
@@ -35,6 +30,7 @@ function set_value_silent(track_dict)
             add_effect();
         }
     }
+    
     else
     {
         for (var i = l_new; i < l_old; i++)
@@ -42,10 +38,10 @@ function set_value_silent(track_dict)
             remove_last_effect_();
         }
     }
-
+    
     for (var i = 0; i < effects_.length; i++)
     {
-        message_effect_(effects_[i], "set_value_silent", effect_names[i]);
+        message_effect_(effects_[i], "set_effect", effect_names[i]);
     }
 }
 
@@ -56,11 +52,14 @@ function effect()
     var i       = a[0];
     var msg     = a[1];
     var args    = a.slice(2);
-    var effect  = effects_[i];
+    if (i >= effects_.length)
+    {
+        post ("There is no effect", i + ".\n");
+        return;
+    }
 
-    message_effect_(effect, msg, args);
+    message_effect_(effects_[i], msg, args);
 }
-
 
 function clear()
 {
@@ -72,14 +71,17 @@ function clear()
 }
 
 
-function add_effect()
+function add_effects(n)
 {
-    effects_.push(make_effect_());
+    post ("adding effects", n, "\n");
+    for (var i = 0; i < n; i++)
+    {
+        add_effect();
+    }
 }
 
-//--------------------------------------------------------------------------------
 
-function make_effect_(i)
+function add_effect()
 {
     var inl 	    = this.patcher.getnamed("events_inlet");
 
@@ -97,10 +99,14 @@ function make_effect_(i)
 
     effect.varname  = "effect_" + i;
 
+    effects_.push(effect);
     message_effect_(effect, "set_effect_database", effect_database_.name);
+    
     return effect;
 }
-make_effect_.local = 1;
+
+
+//--------------------------------------------------------------------------------
 
 
 function remove_last_effect_()
@@ -108,8 +114,7 @@ function remove_last_effect_()
     if (effects_.length === 0)
         return;
 
-    var effect = effects_.pop();
-    this.patcher.remove(effect);
+    this.patcher.remove(effects_.pop());
 }
 remove_last_effect_.local = 1;
 

@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 224.0, 230.0, 726.0, 447.0 ],
+		"rect" : [ 1339.0, 366.0, 726.0, 447.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -88,13 +88,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 254.333333333333314, 106.0, 217.0, 22.0 ],
+					"patching_rect" : [ 254.333333333333314, 106.0, 242.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_components_midi_out_track.js",
+						"filename" : "djazz_components_midi_out_effect_list.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_components_midi_out_track.js",
+					"text" : "js djazz_components_midi_out_effect_list.js",
 					"varname" : "components"
 				}
 
