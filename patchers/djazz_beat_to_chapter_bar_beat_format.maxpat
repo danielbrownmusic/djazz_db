@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 813.0, 284.0, 254.0, 643.0 ],
+		"rect" : [ 813.0, 284.0, 337.0, 637.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,7 +40,7 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "(int int int) beat, bar, chapter",
 					"id" : "obj-13",
 					"index" : 1,
 					"maxclass" : "outlet",
@@ -95,7 +95,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 36.0, 179.0, 70.0, 35.0 ],
+					"patching_rect" : [ 36.0, 179.0, 73.0, 35.0 ],
 					"text" : "dict.unpack beats:"
 				}
 
@@ -127,7 +127,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "(dict) ",
+					"comment" : "dict name",
 					"id" : "obj-42",
 					"index" : 1,
 					"maxclass" : "inlet",
