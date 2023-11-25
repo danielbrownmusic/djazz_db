@@ -119,7 +119,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 184.0, 518.0, 50.0, 22.0 ]
+					"patching_rect" : [ 184.0, 518.0, 50.0, 22.0 ],
+					"varname" : "number[1]"
 				}
 
 			}
@@ -241,7 +242,7 @@
 							"parameter_initial" : [ 1.0 ],
 							"parameter_initial_enable" : 1,
 							"parameter_invisible" : 1,
-							"parameter_longname" : "step[1]",
+							"parameter_longname" : "step[2]",
 							"parameter_mmin" : -127.0,
 							"parameter_shortname" : "step",
 							"parameter_type" : 1,

@@ -40,31 +40,6 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "",
-					"id" : "obj-12",
-					"index" : 2,
-					"maxclass" : "outlet",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 896.0, 382.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-10",
-					"index" : 2,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 831.0, 57.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-3",
 					"linecount" : 2,
 					"maxclass" : "message",
@@ -72,7 +47,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 312.0, 274.0, 127.0, 35.0 ],
-					"presentation_linecount" : 2,
 					"text" : "speed_control::speed $1"
 				}
 
@@ -85,7 +59,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 451.0, 274.0, 128.0, 35.0 ],
+					"patching_rect" : [ 451.0, 274.0, 129.0, 35.0 ],
 					"text" : "beat_clock::next_beat $1"
 				}
 
@@ -156,7 +130,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 171.0, 274.0, 126.0, 35.0 ],
+					"patching_rect" : [ 171.0, 274.0, 127.0, 35.0 ],
 					"text" : "speed_control::tempo $1"
 				}
 
@@ -202,7 +176,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 363.5, 27.0, 48.0, 35.0 ],
-					"restore" : [ 1 ],
+					"restore" : [ 0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -254,7 +228,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 877.25, 37.0, 153.75, 127.0 ],
+					"patching_rect" : [ 827.25, 37.0, 153.75, 127.0 ],
 					"text" : "CTRL SURFACE PARAMS\n\n1. cbb numbers\n2. cbb view params\n3. loop chapter button\n3. tempo\n4. metro on/off\n5. speed\n6. loop length button"
 				}
 
@@ -304,7 +278,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 903.0, 175.0, 179.0, 60.0 ],
+					"patching_rect" : [ 853.0, 175.0, 179.0, 60.0 ],
 					"text" : "OUT PARAMS (FROM MODEL)\n\nbeat number just played\ntempo just played"
 				}
 
@@ -316,7 +290,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1235.0, 37.0, 171.0, 127.0 ],
+					"patching_rect" : [ 1185.0, 37.0, 171.0, 127.0 ],
 					"text" : "THRU PARAMS (TO MODEL)\n\n1. beat in\n2. tempo\n3. bangs per tap (count)\n4. loop record\n5. loop play\n6. loop section min beat\n7. loop section max beat"
 				}
 
@@ -328,7 +302,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1033.0, 37.0, 200.0, 127.0 ],
+					"patching_rect" : [ 983.0, 37.0, 200.0, 127.0 ],
 					"text" : "IN PARAMS (FROM CTRL)\n(these are the params that must be\n saved in a pattrstorage preset)\n\n1. beat in\n2. tempo in\n3. speed\n4. loop length\n5. loop section min & max beat list"
 				}
 
@@ -372,6 +346,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
 					"source" : [ "obj-14", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-56", 0 ],
+					"source" : [ "obj-15", 0 ]
 				}
 
 			}
