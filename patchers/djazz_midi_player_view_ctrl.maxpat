@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 59.0, 119.0, 992.0, 530.0 ],
+		"rect" : [ 1158.0, 649.0, 1142.0, 621.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,19 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "",
+					"id" : "obj-3",
+					"index" : 0,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 426.0, 20.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -50,7 +63,7 @@
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "djazz_select_score_file_view.maxpat",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
@@ -71,7 +84,8 @@
 					"patching_rect" : [ 285.0, 100.0, 51.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 247.0, 46.0, 45.0, 20.0 ],
-					"text" : "LOOP"
+					"text" : "LOOP",
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
 			}
@@ -84,7 +98,8 @@
 					"patching_rect" : [ 95.0, 100.0, 51.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 12.0, 46.0, 51.0, 20.0 ],
-					"text" : "SPEED"
+					"text" : "SPEED",
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
 			}
@@ -130,7 +145,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 50.0, 134.0, 141.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 67.0, 46.0, 141.0, 33.0 ],
+					"presentation_rect" : [ 73.0, 46.0, 141.0, 33.0 ],
 					"varname" : "djazz_navigate_view_speed_ctrl",
 					"viewvisibility" : 1
 				}
@@ -222,6 +237,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-39", 0 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
 					"source" : [ "obj-39", 0 ]
 				}
@@ -257,7 +279,9 @@
 				"implicit" : 1
 			}
  ],
-		"autosave" : 0
+		"autosave" : 0,
+		"bgcolor" : [ 0.219607843137255, 0.443137254901961, 0.462745098039216, 1.0 ],
+		"editing_bgcolor" : [ 0.219607843137255, 0.443137254901961, 0.462745098039216, 1.0 ]
 	}
 
 }

@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 70.0, 536.0, 1036.0, 512.0 ],
+		"rect" : [ 549.0, 266.0, 1216.0, 600.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 777.166666666666742, 108.0, 88.999999833333504, 22.0 ],
+					"patching_rect" : [ 812.166666666666742, 111.0, 88.999999833333504, 22.0 ],
 					"text" : "t s s"
 				}
 
@@ -62,7 +62,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -189,7 +189,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 847.166666500000247, 198.06591796875, 109.0, 22.0 ],
+					"patching_rect" : [ 882.166666500000247, 201.06591796875, 109.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -208,7 +208,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 847.166666500000247, 255.06591796875, 59.0, 22.0 ],
+					"patching_rect" : [ 882.166666500000247, 258.06591796875, 59.0, 22.0 ],
 					"text" : "tempo $1"
 				}
 
@@ -222,7 +222,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 777.166666666666742, 20.0, 30.0, 30.0 ]
+					"patching_rect" : [ 812.166666666666742, 15.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -241,7 +241,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 289.166666666666686, 269.687217968750019, 507.000000000000057, 218.0 ],
+					"patching_rect" : [ 289.166666666666686, 269.687217968750019, 542.0, 213.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 6.0, 81.687217968750019, 521.0, 218.0 ],
 					"varname" : "clock",
@@ -257,7 +257,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 978.166666833333238, 453.687217968750019, 30.0, 30.0 ]
+					"patching_rect" : [ 1013.166666833333238, 456.687217968750019, 30.0, 30.0 ]
 				}
 
 			}
@@ -271,7 +271,7 @@
 					"outlettype" : [ "bang" ],
 					"outlinecolor" : [ 0.764705882352941, 0.349019607843137, 0.349019607843137, 1.0 ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 978.166666833333238, 321.687217968750019, 33.0, 33.0 ],
+					"patching_rect" : [ 1013.166666833333238, 324.687217968750019, 33.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 6.0, 4.75, 33.0, 33.0 ]
 				}
@@ -376,7 +376,7 @@
 					"numoutlets" : 2,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "", "int" ],
-					"patching_rect" : [ 847.166666500000247, 321.687217968750019, 110.0, 33.0 ],
+					"patching_rect" : [ 882.166666500000247, 324.687217968750019, 110.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 218.0, 5.0, 109.0, 33.0 ],
 					"varname" : "metro",
