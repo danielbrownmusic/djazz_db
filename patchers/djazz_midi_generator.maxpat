@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -108,7 +108,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 289.0, 111.0, 119.0, 22.0 ],
 					"text" : "djazz_speed_control",
-					"varname" : "djazz_speed_control"
+					"varname" : "speed_ctrl"
 				}
 
 			}
@@ -134,7 +134,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 50.0, 369.5, 190.0, 22.0 ],
 					"text" : "djazz_loop_beats_settable_length",
-					"varname" : "loop_beats"
+					"varname" : "loop_beat_ctrl"
 				}
 
 			}
@@ -147,7 +147,7 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 50.0, 188.833333333333314, 76.0, 22.0 ],
 					"text" : "djazz_bangs",
-					"varname" : "tap"
+					"varname" : "bang_ctrl"
 				}
 
 			}
@@ -172,7 +172,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 50.0, 40.0, 30.0, 30.0 ]
 				}
 

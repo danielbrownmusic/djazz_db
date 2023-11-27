@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1158.0, 649.0, 1142.0, 621.0 ],
+		"rect" : [ 960.0, 630.0, 1142.0, 621.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,7 +40,7 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "score_file",
 					"id" : "obj-3",
 					"index" : 0,
 					"maxclass" : "inlet",
@@ -153,7 +153,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "speed",
 					"id" : "obj-9",
 					"index" : 0,
 					"maxclass" : "inlet",
@@ -166,7 +166,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "loop_length",
 					"id" : "obj-10",
 					"index" : 0,
 					"maxclass" : "inlet",
@@ -179,7 +179,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "speed",
 					"id" : "obj-11",
 					"index" : 0,
 					"maxclass" : "outlet",
@@ -191,7 +191,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "loop",
 					"id" : "obj-12",
 					"index" : 0,
 					"maxclass" : "outlet",
@@ -203,7 +203,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "score_file",
 					"id" : "obj-13",
 					"index" : 0,
 					"maxclass" : "outlet",

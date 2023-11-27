@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 686.0, 525.0, 735.0, 644.0 ],
+		"rect" : [ 665.0, 657.0, 735.0, 644.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,39 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"comment" : "ctrl variables",
+					"id" : "obj-4",
+					"index" : 2,
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 401.0, 361.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 401.0, 266.0, 130.0, 49.0 ],
+					"saved_object_attributes" : 					{
+						"client_rect" : [ 1162, 173, 1602, 636 ],
+						"parameter_enable" : 0,
+						"parameter_mappable" : 0,
+						"storage_rect" : [ 583, 100, 1520, 798 ]
+					}
+,
+					"text" : "pattrstorage midiplayerpattrstorage @outputmode 2",
+					"varname" : "midiplayerpattrstorage"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-10",
 					"maxclass" : "newobj",
@@ -222,7 +255,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 28.0, 198.5, 123.0, 22.0 ],
 					"text" : "djazz_midi_generator",
-					"varname" : "djazz_midi_generator"
+					"varname" : "midi_generator"
 				}
 
 			}
@@ -259,7 +292,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 28.0, 332.0, 30.0, 30.0 ]
+					"patching_rect" : [ 28.0, 361.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -301,6 +334,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"source" : [ "obj-11", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}

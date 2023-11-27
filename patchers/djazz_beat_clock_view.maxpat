@@ -550,8 +550,6 @@
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "", "int", "int" ],
 					"patching_rect" : [ 155.00000099999977, 134.0, 516.0, 175.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ -1.0, -1.0, 529.0, 172.0 ],
 					"varname" : "chapter_bar_beat",
 					"viewvisibility" : 1
 				}
@@ -575,7 +573,7 @@
 					"outlettype" : [ "", "", "", "", "" ],
 					"patching_rect" : [ 268.0, 489.0, 394.0, 63.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ -1.0, 173.0, 390.0, 61.0 ],
+					"presentation_rect" : [ -4.0, 2.0, 390.0, 61.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -659,7 +657,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
-					"order" : 0,
+					"order" : 1,
 					"source" : [ "obj-5", 0 ]
 				}
 
@@ -668,7 +666,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"midpoints" : [ 164.50000099999977, 430.0, 115.50000099999977, 430.0, 115.50000099999977, 109.0, 164.50000099999977, 109.0 ],
-					"order" : 1,
+					"order" : 0,
 					"source" : [ "obj-5", 0 ]
 				}
 
