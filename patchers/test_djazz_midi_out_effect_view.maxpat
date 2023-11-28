@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1195.0, 770.0, 660.0, 395.0 ],
+		"rect" : [ 539.0, 554.0, 304.0, 395.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -46,7 +46,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 52.0, 297.0, 24.0, 24.0 ]
+					"patching_rect" : [ 24.0, 319.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -58,7 +58,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 256.0, 187.0, 24.0, 24.0 ]
+					"patching_rect" : [ 122.0, 214.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -69,7 +69,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 363.0, 326.0, 50.0, 22.0 ]
+					"patching_rect" : [ 91.0, 319.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -80,7 +80,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 231.0, 251.0, 84.0, 22.0 ],
+					"patching_rect" : [ 122.0, 270.0, 84.0, 22.0 ],
 					"text" : "combine :: a ::"
 				}
 
@@ -88,24 +88,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-17",
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 176.0, 21.0, 206.0, 22.0 ],
+					"patching_rect" : [ 159.0, 54.0, 121.0, 35.0 ],
 					"text" : "set_effect_database MIDI_EFFECTS"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 294.0, 77.0, 50.0, 22.0 ],
-					"text" : "symbol"
 				}
 
 			}
@@ -117,7 +106,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 41.0, 215.0, 50.0, 35.0 ],
+					"patching_rect" : [ 24.0, 248.0, 50.0, 35.0 ],
 					"text" : "\"pitch shift\""
 				}
 
@@ -130,7 +119,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 75.0, 19.0, 24.0, 24.0 ]
+					"patching_rect" : [ 24.0, 12.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -141,7 +130,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 68.0, 88.0, 117.0, 22.0 ],
+					"patching_rect" : [ 24.0, 67.0, 117.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0,
@@ -168,7 +157,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 68.0, 155.0, 129.0, 25.0 ],
+					"patching_rect" : [ 24.0, 134.0, 129.0, 25.0 ],
 					"varname" : "djazz_midi_out_effect_view",
 					"viewvisibility" : 1
 				}
@@ -217,13 +206,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-7", 1 ],
 					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-3", 0 ]
 				}
 
 			}

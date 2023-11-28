@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2162.0, 312.0, 641.0, 355.0 ],
+		"rect" : [ 1940.0, 133.0, 775.0, 627.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,41 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-18",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 0,
+					"patching_rect" : [ 52.0, 543.0, 118.0, 22.0 ],
+					"text" : "noteout"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-17",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 52.0, 393.0, 49.0, 22.0 ],
+					"text" : "zl.rot -1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 4,
+					"numoutlets" : 3,
+					"outlettype" : [ "float", "float", "float" ],
+					"patching_rect" : [ 52.0, 471.0, 118.0, 22.0 ],
+					"text" : "makenote 100 500 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-5",
 					"maxclass" : "button",
 					"numinlets" : 1,
@@ -66,7 +101,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 138.0, 45.223404228687286, 481.446808815002441, 173.553191542625427 ],
+					"patching_rect" : [ 138.0, 45.223404228687286, 487.446808815002441, 204.553191542625427 ],
 					"varname" : "view",
 					"viewvisibility" : 1
 				}
@@ -78,27 +113,14 @@
 						"model::midiplayerpattrstorage" : 0,
 						"model::midi_generator" : 0,
 						"model::midi_generator::composer" : 0,
-						"model::midi_generator::composer::score_file" : 0,
-						"model::midi_generator::composer::tempo" : 0,
 						"model::midi_generator::bang_ctrl" : 0,
-						"model::midi_generator::bang_ctrl::tempo" : 0,
-						"model::midi_generator::bang_ctrl::count" : 0,
 						"model::midi_generator::loop_beat_ctrl" : 0,
 						"model::midi_generator::loop_beat_ctrl::loop_length" : 0,
-						"model::midi_generator::loop_beat_ctrl::loop_length::loop_length" : 0,
 						"model::midi_generator::loop_beat_ctrl::loop_beats" : 0,
-						"model::midi_generator::loop_beat_ctrl::loop_beats::mode" : 0,
 						"model::midi_generator::beat_clock" : 0,
-						"model::midi_generator::beat_clock::next_beat" : 0,
 						"model::midi_generator::beat_clock::loop_section" : 0,
-						"model::midi_generator::beat_clock::loop_section::start" : 0,
-						"model::midi_generator::beat_clock::loop_section::end" : 0,
 						"model::midi_generator::beat_clock::beats" : 0,
-						"model::midi_generator::beat_clock::beats::end" : 0,
-						"model::midi_generator::beat_clock::beats::start" : 0,
 						"model::midi_generator::speed_ctrl" : 0,
-						"model::midi_generator::speed_ctrl::speed" : 0,
-						"model::midi_generator::speed_ctrl::tempo" : 0,
 						"view::midiplayerviewpattrstorage" : 0,
 						"view::view" : 0,
 						"view::view::score_file" : 0
@@ -109,9 +131,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 459.0, 248.0, 157.0, 22.0 ],
+					"patching_rect" : [ 462.446808815002441, 309.0, 157.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 107, 163, 535, 1189 ],
+						"client_rect" : [ 4, 100, 358, 228 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
 						"storage_rect" : [ 583, 69, 1034, 197 ]
@@ -138,20 +160,53 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"midpoints" : [ 147.5, 336.0, 13.0, 336.0, 13.0, 11.0, 147.5, 11.0 ],
-					"source" : [ "obj-1", 1 ],
+					"source" : [ "obj-1", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"source" : [ "obj-17", 0 ],
 					"watchpoint_flags" : 5,
-					"watchpoint_id" : 2
+					"watchpoint_id" : 4
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 1 ],
-					"source" : [ "obj-3", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 1
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 2 ],
+					"source" : [ "obj-4", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 1 ],
+					"source" : [ "obj-4", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}

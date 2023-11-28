@@ -158,7 +158,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "float" ],
-					"patching_rect" : [ 21.0, 443.333333333333258, 218.0, 22.0 ],
+					"patching_rect" : [ 21.0, 440.333333333333258, 218.0, 22.0 ],
 					"text" : "djazz_composer mnote",
 					"varname" : "composer"
 				}

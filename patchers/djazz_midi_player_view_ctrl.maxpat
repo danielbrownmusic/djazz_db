@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 960.0, 630.0, 1142.0, 621.0 ],
+		"rect" : [ 700.0, 564.0, 1577.0, 621.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,97 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-23",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 1018.0, 200.0, 153.0, 22.0 ],
+					"text" : "t b s"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-22",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 1018.0, 453.0, 59.0, 22.0 ],
+					"text" : "route text"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1152.0, 272.0, 41.0, 22.0 ],
+					"text" : "set $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-19",
+					"linecount" : 9,
+					"maxclass" : "textedit",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1018.0, 348.0, 100.0, 50.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 3,
+					"presentation_rect" : [ 73.0, 9.0, 369.0, 70.0 ],
+					"text" : "\"Macintosh HD:/Users/danielbrown/Desktop/song_data/AutumnleavesDoMin/new/AutumnleavesDoMin-new-2013.10.27-19h14.txt\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-18",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1018.0, 11.0, 47.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 16.0, 9.0, 47.0, 22.0 ],
+					"text" : "browse"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-16",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1018.0, 70.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"patching_rect" : [ 1018.0, 130.5, 67.0, 22.0 ],
+					"text" : "opendialog"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "score_file",
 					"id" : "obj-3",
 					"index" : 0,
@@ -67,9 +158,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 426.0, 134.0, 300.0, 22.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 12.0, 10.0, 300.0, 22.0 ],
+					"patching_rect" : [ 426.0, 192.0, 300.0, 22.0 ],
 					"varname" : "score_file",
 					"viewvisibility" : 1
 				}
@@ -83,7 +172,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 285.0, 100.0, 51.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 247.0, 46.0, 45.0, 20.0 ],
+					"presentation_rect" : [ 247.0, 88.0, 45.0, 20.0 ],
 					"text" : "LOOP",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -97,7 +186,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 95.0, 100.0, 51.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 12.0, 46.0, 51.0, 20.0 ],
+					"presentation_rect" : [ 12.0, 88.0, 51.0, 20.0 ],
 					"text" : "SPEED",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -121,7 +210,7 @@
 					"outlettype" : [ "int" ],
 					"patching_rect" : [ 231.0, 134.0, 141.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 301.0, 46.0, 141.0, 33.0 ],
+					"presentation_rect" : [ 301.0, 88.0, 141.0, 33.0 ],
 					"varname" : "djazz_navigate_view_loop_ctrl",
 					"viewvisibility" : 1
 				}
@@ -145,7 +234,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 50.0, 134.0, 141.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 73.0, 46.0, 141.0, 33.0 ],
+					"presentation_rect" : [ 73.0, 88.0, 141.0, 33.0 ],
 					"varname" : "djazz_navigate_view_speed_ctrl",
 					"viewvisibility" : 1
 				}
@@ -230,6 +319,27 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
 					"source" : [ "obj-2", 0 ]
 				}
@@ -237,7 +347,37 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-39", 0 ],
+					"destination" : [ "obj-19", 0 ],
+					"source" : [ "obj-21", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"source" : [ "obj-22", 0 ],
+					"watchpoint_flags" : 5,
+					"watchpoint_id" : 1
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-19", 0 ],
+					"source" : [ "obj-23", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
+					"source" : [ "obj-23", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -246,6 +386,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
 					"source" : [ "obj-39", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
