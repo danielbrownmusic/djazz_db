@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1266.0, 719.0, 2065.0, 645.0 ],
+		"rect" : [ 641.0, 764.0, 1784.0, 429.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -46,7 +46,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1612.0, 248.0, 131.0, 35.0 ],
+					"patching_rect" : [ 1605.0, 248.0, 132.0, 35.0 ],
 					"text" : "beat_clock::beats::end $1"
 				}
 
@@ -59,7 +59,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1458.0, 248.0, 133.0, 35.0 ],
+					"patching_rect" : [ 1451.0, 248.0, 135.0, 35.0 ],
 					"text" : "beat_clock::beats::start $1"
 				}
 
@@ -72,7 +72,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1612.0, 138.0, 50.0, 22.0 ],
+					"patching_rect" : [ 1605.0, 138.0, 50.0, 22.0 ],
 					"varname" : "number[4]"
 				}
 
@@ -85,7 +85,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1458.0, 138.0, 50.0, 22.0 ],
+					"patching_rect" : [ 1451.0, 138.0, 50.0, 22.0 ],
 					"varname" : "number[3]"
 				}
 
@@ -98,8 +98,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 1590.0, 27.0, 63.0, 35.0 ],
-					"restore" : [ 0 ],
+					"patching_rect" : [ 1583.0, 27.0, 63.0, 35.0 ],
+					"restore" : [ 153 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -118,7 +118,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 1436.0, 27.0, 63.0, 35.0 ],
+					"patching_rect" : [ 1429.0, 27.0, 63.0, 35.0 ],
 					"restore" : [ 0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
@@ -138,7 +138,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1228.0, 248.0, 169.0, 35.0 ],
+					"patching_rect" : [ 1261.0, 248.0, 170.0, 35.0 ],
 					"text" : "beat_clock::loop_section::end $1"
 				}
 
@@ -151,7 +151,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 998.0, 248.0, 171.0, 35.0 ],
+					"patching_rect" : [ 1067.0, 248.0, 173.0, 35.0 ],
 					"text" : "beat_clock::loop_section::start $1"
 				}
 
@@ -164,7 +164,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1228.0, 138.0, 50.0, 22.0 ],
+					"patching_rect" : [ 1261.0, 138.0, 50.0, 22.0 ],
 					"varname" : "number[2]"
 				}
 
@@ -177,7 +177,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 998.0, 138.0, 50.0, 22.0 ],
+					"patching_rect" : [ 1067.0, 138.0, 50.0, 22.0 ],
 					"varname" : "number[1]"
 				}
 
@@ -190,8 +190,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 1186.0, 27.0, 103.0, 35.0 ],
-					"restore" : [ 0 ],
+					"patching_rect" : [ 1219.0, 27.0, 103.0, 35.0 ],
+					"restore" : [ 57 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -210,8 +210,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 952.0, 27.0, 111.0, 35.0 ],
-					"restore" : [ 0 ],
+					"patching_rect" : [ 1021.0, 27.0, 111.0, 35.0 ],
+					"restore" : [ 45 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -230,8 +230,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 821.5, 248.0, 139.0, 35.0 ],
-					"text" : "loop_beats::loop_length $1"
+					"patching_rect" : [ 821.5, 248.0, 226.0, 35.0 ],
+					"text" : "loop_beat_ctrl::loop_length::loop_length $1"
 				}
 
 			}
@@ -257,7 +257,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 794.0, 27.0, 74.0, 35.0 ],
-					"restore" : [ 0 ],
+					"restore" : [ 3 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -271,13 +271,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-3",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 398.0, 248.0, 127.0, 35.0 ],
-					"text" : "speed_control::speed $1"
+					"patching_rect" : [ 398.0, 248.0, 120.0, 22.0 ],
+					"text" : "speed_ctrl::speed $1"
 				}
 
 			}
@@ -328,7 +327,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 667.0, 27.0, 64.0, 35.0 ],
-					"restore" : [ 0 ],
+					"restore" : [ "Macintosh HD:/Users/danielbrown/Desktop/song_data/AutumnleavesDoMin/new/AutumnleavesDoMin-new-02.24.2013-17-20.txt" ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -355,13 +354,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-27",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 257.0, 248.0, 127.0, 35.0 ],
-					"text" : "speed_control::tempo $1"
+					"patching_rect" : [ 257.0, 248.0, 121.0, 22.0 ],
+					"text" : "speed_ctrl::tempo $1"
 				}
 
 			}
@@ -374,7 +372,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 537.0, 27.0, 37.0, 35.0 ],
-					"restore" : [ 0 ],
+					"restore" : [ 29 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -406,7 +404,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 398.0, 27.0, 48.0, 35.0 ],
-					"restore" : [ 0 ],
+					"restore" : [ 2 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -426,7 +424,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 132.0, 27.0, 54.0, 35.0 ],
-					"restore" : [ 0 ],
+					"restore" : [ 187.800000000000011 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0

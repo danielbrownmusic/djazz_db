@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 989.0, 862.0, 652.0, 416.0 ],
+		"rect" : [ -2162.0, 312.0, 641.0, 355.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -66,7 +66,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 138.0, 53.765957355499268, 481.446808815002441, 173.553191542625427 ],
+					"patching_rect" : [ 138.0, 45.223404228687286, 481.446808815002441, 173.553191542625427 ],
 					"varname" : "view",
 					"viewvisibility" : 1
 				}
@@ -75,6 +75,7 @@
 , 			{
 				"box" : 				{
 					"active" : 					{
+						"model::midiplayerpattrstorage" : 0,
 						"model::midi_generator" : 0,
 						"model::midi_generator::composer" : 0,
 						"model::midi_generator::composer::score_file" : 0,
@@ -98,18 +99,9 @@
 						"model::midi_generator::speed_ctrl" : 0,
 						"model::midi_generator::speed_ctrl::speed" : 0,
 						"model::midi_generator::speed_ctrl::tempo" : 0,
-						"model::midiplayerpattrstorage" : 0,
-						"view::view" : 0,
-						"view::view::score_file" : 0,
 						"view::midiplayerviewpattrstorage" : 0,
-						"view::clock" : 0,
-						"view::clock::u191004082" : 0,
-						"view::clock::next_beat" : 0,
-						"view::clock::chapter_bar_beat" : 0,
-						"view::clock::chapter_bar_beat::view" : 0,
-						"view::clock::chapter_bar_beat::ctrl" : 0,
-						"view::clock::loop_section" : 0,
-						"view::clock::beats" : 0
+						"view::view" : 0,
+						"view::view::score_file" : 0
 					}
 ,
 					"id" : "obj-2",
@@ -117,9 +109,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 389.0, 326.0, 157.0, 22.0 ],
+					"patching_rect" : [ 459.0, 248.0, 157.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 80, 117, 700, 1330 ],
+						"client_rect" : [ 107, 163, 535, 1189 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
 						"storage_rect" : [ 583, 69, 1034, 197 ]
@@ -147,7 +139,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
-					"midpoints" : [ 147.5, 398.0, 13.0, 398.0, 13.0, 11.0, 147.5, 11.0 ],
+					"midpoints" : [ 147.5, 336.0, 13.0, 336.0, 13.0, 11.0, 147.5, 11.0 ],
 					"source" : [ "obj-1", 1 ],
 					"watchpoint_flags" : 5,
 					"watchpoint_id" : 2
