@@ -17,7 +17,8 @@ function set_effect_database(effect_database_name)
 
 function set_effects()
 {
-    var effects_dict    = arguments  ? arguments[0] : null;
+    var effects_dict    = arguments.length > 0  ? arguments[0] : null;
+    post (effects_dict);
     var effect_names    = effects_dict ? dutils.get_dict_array(effects_dict, "effects") : [];
 
     var l_old           = effects_.length;

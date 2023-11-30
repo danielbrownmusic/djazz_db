@@ -2,7 +2,7 @@ var dutils = require("db_dictionary_array_utils");
 
 
 autowatch               = 1;
-outlets                 = 2;
+outlets                 = 4;
 
 
 var effect_database_    = null;
@@ -19,18 +19,16 @@ var h_track             = 216;
 //declareattribute("size");
 
 
-function set_effect_database(effect_database_name)
+function getvalueof()
 {
-    effect_database_ = new Dict (effect_database_name);
+    return make_bank_dict_();
 }
 
 
-function get_tracks()
+function set_effect_database(effect_database_name)
 {
-    var d = new Dict ();
-    var a = tracks_.map(get_track_value_);
-    dutils.set_dict_array(d, "tracks", a);
-    return d;
+    effect_database_ = new Dict (effect_database_name);
+    outlet( 1, effect_database_name);
 }
 
 
@@ -46,8 +44,12 @@ function load(bank_dict_name)
 
     for (var i = 0; i < track_array.length; i++)
     {      
-        add_track(track_array[i]);
+        var track = add_track_();
+        message_track_(track, "set_effects", track_array[i]); 
     }
+
+    set_solo_bank_ctrl_();
+    outlet( 2, bank_dict_name);
 }
 
 
@@ -75,7 +77,7 @@ function clear()
     {
         remove_last_track_();
     }
-    //set_size_();
+    set_solo_bank_ctrl_();
 }
 
 
@@ -83,12 +85,18 @@ function add_tracks(n)
 {
     for (var i = 0; i < n; i++)
     {
-        add_track();
+        add_track_();
     }
+    set_solo_bank_ctrl_()
+    var d = make_bank_dict_();
+    post ("sending d.name", d.name, "\n");
+    outlet (2, d.name);
+    outlet (3, d.name);
 }
 
+// ---------------------------------------------------------------------------------------
 
-function add_track()
+function add_track_()
 {
     var i                   = tracks_.length;
 
@@ -117,13 +125,10 @@ function add_track()
     tracks_.push(track);
     message_track_(track, "set_effect_database", effect_database_.name);
 
-    var effects_dict    = arguments  ? arguments[0] : null;
-    message_track_(track, "set_effects", effects_dict); 
     return track;
 }
+add_track_.local = 1;
 
-
-// ---------------------------------------------------------------------------------------
 
 function remove_last_track_()
 {
@@ -151,7 +156,7 @@ message_pattr_.local = 1;
 
 function get_track_value_(track)
 {
-    return track.subpatcher().getnamed("effect_list").get_value();
+    return track.subpatcher().getnamed("effect_list").subpatcher().getnamed("components").getvalueof();
 }
 get_track_value_.local = 1;
 
@@ -162,3 +167,39 @@ function set_size_()
     size = [0, 0, x_pres, y_pres];
 }
 set_size_.local = 1;
+
+
+function set_solo_bank_ctrl_()
+{
+    var solo_bank_ctrl = this.patcher.getnamed("solo_bank_ctrl");
+    if (solo_bank_ctrl)
+    {
+        this.patcher.remove(solo_bank_ctrl);
+    }
+
+    var n = tracks_.length;
+    if (n === 0)
+        return;
+
+    var x = 66;
+    var y = 704;
+
+    solo_bank_ctrl = this.patcher.newdefault(x, y, "js", "djazz_solo_bank_ctrl.js", n);
+    solo_bank_ctrl.varname = "solo_bank_ctrl";
+    for (var i = 0; i < n; i++)
+    {      
+        this.patcher.connect(tracks_[i], 1, solo_bank_ctrl, i);
+    }
+}
+set_solo_bank_ctrl_.local = 1;
+
+
+function make_bank_dict_()
+{
+    var d = new Dict ();
+    var a = tracks_.map(get_track_value_);
+    dutils.set_dict_array(d, "tracks", a);
+    post ("d.name =", d.name, "\n");
+    return d;
+}
+make_bank_dict_.local = 1;

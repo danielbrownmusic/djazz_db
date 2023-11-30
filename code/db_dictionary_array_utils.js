@@ -176,7 +176,7 @@ exports.get_dict_array = function (d, key)
 
     if (contains === 0)
     {
-        post ("DUTILS WARNING: get_array(", d.name, ", ", key, ") returned NULL.\n")
+        //post ("DUTILS WARNING: get_array(", d.name, ", ", key, ") returned NULL.\n")
         return null;
     }
 
@@ -240,7 +240,7 @@ exports.get_dict_array_at = function (d, key, index)
 
     if (contains === 0)
     {
-        post ("WARNING: get_subscript(", d.name, ", ", key, ", ", index, ") called on an array which is null. Null returned.\n")
+        //post ("WARNING: get_subscript(", d.name, ", ", key, ", ", index, ") called on an array which is null. Null returned.\n")
         return null;
     }
 
@@ -254,7 +254,7 @@ exports.set_dict_array_at = function (d, key, index, value)
 
     if (contains === 0)
     {
-        post ("WARNING: set_subscript(", d.name, ", ", key, ", ", index, ") called on a nonexistent key. Nothing done. Null returned.\n")
+        //post ("WARNING: set_subscript(", d.name, ", ", key, ", ", index, ") called on a nonexistent key. Nothing done. Null returned.\n")
         return null;
     }
 
@@ -279,7 +279,7 @@ exports.remove_from_dict_array = function (d, key, index)
 
     if (contains === 0)
     {
-        post ("WARNING: remove_from_array(", d.name, ", ", key, ", ", index, ") called on a nonexistent key. Nothing done. Null returned.\n")
+        //post ("WARNING: remove_from_array(", d.name, ", ", key, ", ", index, ") called on a nonexistent key. Nothing done. Null returned.\n")
         return null;
     }
 
@@ -295,7 +295,7 @@ exports.trim_dict_array = function (d, key, value)
 
     if (contains === 0)
     {
-        post ("WARNING: trim_array(", d.name, ", ", key, ", ", value, ") called on a nonexistent key. Nothing done. Null returned.\n")
+        //post ("WARNING: trim_array(", d.name, ", ", key, ", ", value, ") called on a nonexistent key. Nothing done. Null returned.\n")
         return null;
     }
 
@@ -316,7 +316,7 @@ exports.get_dict_array_length = function (d, key)
 
     if (contains === 0)
     {
-        post ("WARNING: get_array_length(", d.name, ", ", key, ") returned NULL.\n")
+        //post ("WARNING: get_array_length(", d.name, ", ", key, ") returned NULL.\n")
         return null;
     }
 
@@ -340,7 +340,7 @@ exports.is_dict_array_empty = function (d, key)
 
     if (contains === 0)
     {
-        post ("WARNING: get_arrayis_array_empty_length(", d.name, ", ", key, ") called on a nonexistent key. Null returned.\n")
+        //post ("WARNING: get_arrayis_array_empty_length(", d.name, ", ", key, ") called on a nonexistent key. Null returned.\n")
         return null;
     }
 
