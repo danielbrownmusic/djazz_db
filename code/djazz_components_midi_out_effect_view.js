@@ -30,6 +30,7 @@ function set_effect_number(i)
    var effect_name =    i === 0 ?
                         EMPTY_STRING :
                         effect_database_.get("items")[i];
+    post ("effect name from number is", effect_name, "\n");
    set_effect(effect_name);
 }
 
@@ -41,14 +42,11 @@ function set_effect(effect_name_in)
     {
         outlet (0, effect_name_in);
     }
-    return is_new_name;
 }
 
 
 function set_effect_silently(effect_name_in)
 {
-    var no_effect = effect_name_in === EMPTY_STRING ? true : false;
-
     if (effect_name_in === effect_name)
         return false;
 
@@ -57,7 +55,7 @@ function set_effect_silently(effect_name_in)
     outlet (1, "setsymbol", effect_name);
     remove_effect_();
 
-    if (no_effect)
+    if (effect_name === EMPTY_STRING)
         return true;
 
     make_effect_(effect_name);

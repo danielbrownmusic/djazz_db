@@ -148,6 +148,7 @@ function anything()
     dutils.set_dict_array(d, "effects", names);
     set_effects(d);
 
+    message_pattr_("init");
     message_pattr_(get_effects());
     message_pattr_("invisible", 0);
 }
