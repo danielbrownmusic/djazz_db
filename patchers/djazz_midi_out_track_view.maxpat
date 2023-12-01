@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 328.0, 519.0, 770.0, 791.0 ],
+		"rect" : [ 1147.0, 106.0, 519.0, 681.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,9 +40,21 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "",
+					"id" : "obj-9",
+					"index" : 0,
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 361.0, 619.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "to solo bank",
 					"id" : "obj-7",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -59,7 +71,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 522.0, 53.0, 105.0, 35.0 ],
+					"patching_rect" : [ 216.0, 51.0, 105.0, 35.0 ],
 					"restore" : [ 0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
@@ -79,7 +91,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 415.5, 53.0, 96.0, 35.0 ],
+					"patching_rect" : [ 109.5, 51.0, 96.0, 35.0 ],
 					"restore" : [ 0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
@@ -97,7 +109,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 309.0, 176.0, 54.0, 20.0 ],
+					"patching_rect" : [ 194.0, 227.5, 54.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 7.475000000000001, 95.0, 54.0, 20.0 ],
 					"text" : "midi out",
@@ -111,7 +123,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 309.0, 148.0, 47.0, 20.0 ],
+					"patching_rect" : [ 194.0, 199.5, 47.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 7.066248199217946, 69.0, 47.0, 20.0 ],
 					"text" : "midi in",
@@ -136,7 +148,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 565.0, 175.0, 54.0, 22.0 ],
+					"patching_rect" : [ 259.0, 145.0, 54.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 62.475000000000001, 94.0, 61.0, 22.0 ],
 					"varname" : "umenu[1]"
@@ -160,7 +172,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 454.0, 147.0, 54.0, 22.0 ],
+					"patching_rect" : [ 148.0, 145.0, 54.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 62.977160938464706, 68.0, 61.0, 22.0 ],
 					"varname" : "umenu"
@@ -191,7 +203,7 @@
 				"box" : 				{
 					"comment" : "ctrl variable",
 					"id" : "obj-6",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -215,11 +227,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-3",
+					"linecount" : 4,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 23.0, 472.0, 319.0, 22.0 ],
+					"patching_rect" : [ 23.0, 472.0, 103.0, 62.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 4, 44, 358, 172 ],
 						"parameter_enable" : 0,
@@ -228,7 +241,7 @@
 					}
 ,
 					"text" : "pattrstorage @greedy 1 @changemode 1 @outputmode 6",
-					"varname" : "u425006642"
+					"varname" : "#1"
 				}
 
 			}
@@ -236,12 +249,12 @@
 				"box" : 				{
 					"comment" : "component messages",
 					"id" : "obj-14",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 163.0, 14.0, 30.0, 30.0 ]
+					"patching_rect" : [ 361.0, 14.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -261,7 +274,7 @@
 				"box" : 				{
 					"comment" : "ctrl variables",
 					"id" : "obj-12",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -283,9 +296,10 @@
 					"maxclass" : "bpatcher",
 					"name" : "djazz_midi_out_effect_list_view.maxpat",
 					"numinlets" : 1,
-					"numoutlets" : 0,
+					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 163.0, 134.0, 127.0, 179.5 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 361.0, 134.0, 127.0, 179.5 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 120.0, 128.0, 146.0 ],
 					"varname" : "effect_list",
@@ -354,7 +368,7 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 305.0, 175.0, 120.0, 22.0 ],
+					"patching_rect" : [ 190.0, 226.5, 120.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 3.0, 68.0, 120.0, 22.0 ],
 					"proportion" : 0.5
@@ -371,7 +385,7 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 305.0, 147.0, 120.0, 22.0 ],
+					"patching_rect" : [ 190.0, 198.5, 120.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 3.475000000000001, 94.0, 120.0, 22.0 ],
 					"proportion" : 0.5
@@ -388,7 +402,7 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 301.0, 134.0, 128.0, 128.0 ],
+					"patching_rect" : [ 186.0, 185.5, 128.0, 128.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 64.0, 128.0, 128.0 ],
 					"proportion" : 0.5,
@@ -401,6 +415,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"source" : [ "obj-10", 0 ]
 				}
 
 			}
@@ -453,7 +474,37 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "db_dictionary_array_utils.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_components_midi_out_effect_list_view.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_dispatch.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_midi_out_effect_list_view.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }
