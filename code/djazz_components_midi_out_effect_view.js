@@ -1,7 +1,10 @@
 autowatch               = 1;
+
+inlets                  = 2;
 outlets                 = 2;
 
-var EMPTY_STRING        = "empty_string";
+var EMPTY_STRING        = "EMPTY STRING";
+var NO_EFFECT           = "NO EFFECT";
 
 var effect_database_    = null;
 var effect              = null;
@@ -9,38 +12,48 @@ var effect_name         = EMPTY_STRING;
 declareattribute("effect_name");
 
 
-function window_open()
+/* function window_open()
 {
     var effect = this.patcher.getnamed("effect");
     if (!effect)
         return;
-    effect.subpatcher().wind.visible = arguments[0];    
+    effect.subpatcher().wind.visible = arguments[0];
+} */
+
+
+function set_effect_database(file_full_path)
+{
+    effect_database_ = new Dict();
+    effect_database_.import_json("djazz_midi_effects.json");
+    outlet (1, "dictionary", effect_database_.name);
 }
 
 
-function set_effect_database(effect_database_name)
+function msg_int(i)
 {
-    effect_database_ = new Dict(effect_database_name);
-    outlet (1, "dictionary", effect_database_name);
-}
+    if (inlet !== 1)
+        return;
 
-
-function set_effect_number(i)
-{
-   var effect_name =    i === 0 ?
+    var effect_name =   i === 0 ?
                         EMPTY_STRING :
                         effect_database_.get("items")[i];
-    post ("effect name from number is", effect_name, "\n");
-   set_effect(effect_name);
+    //post ("effect name from number is", effect_name, "\n");
+    
+    set_effect(effect_name);
 }
 
 
-function set_effect(effect_name_in)
+function set_effect(effect_name)
 {
-    var is_new_name = set_effect_silently(effect_name_in);
+    var is_new_name = set_effect_silently(effect_name);
+
     if (is_new_name)
     {
-        outlet (0, effect_name_in);
+        var patcher_name = 
+            effect_name === EMPTY_STRING ?
+            NO_EFFECT :
+            effect_database_.get("effects").get(effect_name).get("patcher");
+        outlet (0, patcher_name);
     }
 }
 

@@ -1,5 +1,5 @@
 autowatch = 1;
-
+outlets = 2;
 
 var effects_dict_ = new Dict();
 
@@ -10,6 +10,16 @@ d.replace("tracks");
 function load_from_file(file_full_path)
 {
     d.import(file_full_path);
+}
+
+
+function clear()
+{
+    var n = get_track_count_();
+    for (var i = 0; i < n; i++)
+    {
+        remove_last_track();
+    }
 }
 
 
@@ -34,6 +44,15 @@ function add_track()
 }
 
 
+function add_tracks(n)
+{
+    for (var i = 0; i < n; i++)
+    {
+        add_track();
+    }
+}
+
+
 function remove_last_track()
 {
     remove_last_track_();
@@ -45,6 +64,15 @@ function add_effect(track_index)
 {
     add_effect_(track_index);
     announce_add_effect_(track_index);
+}
+
+
+function add_effects(n, track_index)
+{
+    for (var i = 0; i < n; i++)
+    {
+        add_effect(track_index);
+    }
 }
 
 
@@ -146,6 +174,13 @@ function announce_set_effect_(track_index)
 //------------------------------------------------------------------------------------------
 
 
+function get_track_count_()
+{
+    return get_track_array_.length;
+}
+get_track_count_.local = 1;
+
+
 function get_track_array_()
 {
     return dutils.get_dict_array(d, "tracks");    
@@ -158,6 +193,13 @@ function set_track_array_(track_array)
     dutils.set_dict_array(d, "tracks", track_array);
 }
 set_track_array_.local = 1;
+
+
+function get_effect_count_(track_index)
+{
+    return get_effect_array_(track_index).length;
+}
+get_effect_count_.local = 1;
 
 
 function get_effect_array_(track_index)

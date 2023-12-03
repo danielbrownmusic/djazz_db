@@ -2,19 +2,105 @@ var dutils = require("db_dictionary_array_utils");
 
 autowatch = 1;
 
-var effect_database_    = null;
+//var effect_database_    = null;
 var effects_            = [];
 
 var w                   = 128;
 var h                   = 44;
 
 
-function set_effect_database(effect_database_name)
+/* function set_effect_database(effect_database_name)
 {
     effect_database_ = new Dict(effect_database_name);
+} */
+
+function clear()
+{
+    remove_last_effects(effects_.length);
 }
 
 
+function add_effects(n)
+{
+    for (var i = 0; i < n; i++)
+    {
+        add_effect();
+    }
+}
+
+
+function add_effect()
+{
+    post ("in model: adding effect. \n");
+    var inl 	    = this.patcher.getnamed("events_inlet");
+
+    var x_inlet     = inl.rect[0];
+    var y_inlet     = inl.rect[3];
+
+    var i           = effects_.length;
+	var x           = x_inlet;
+	var y           = y_inlet + h * (i + 1);
+
+    var effect      = this.patcher.newdefault(
+                                    x, 
+                                    y, 
+                                    "djazz_midi_out_effect");
+
+    effect.varname  = "effect_" + i;
+
+    effects_.push(effect);
+    //message_effect_(effect, "set_effect_database", effect_database_.name);
+    
+    return effect;
+}
+
+
+function remove_last_effects(n)
+{
+    //post ("remove_last_effects in model:", n, "\n");
+    for (var i = 0; i < n; i++)
+    {
+        remove_last_effect();
+    }
+}
+
+
+function remove_last_effect()
+{   
+    if (effects_.length === 0)
+        return;
+
+    this.patcher.remove(effects_.pop());
+}
+
+
+function set_effect(effect_index, patcher_name)
+{
+    get_effect_components_mgr_(effects_[effect_index]).message("set_effect", patcher_name);
+    outlet (0, "effect", effect_index, "set_effect", patcher_name)
+}
+
+
+//--------------------------------------------------------------------------------
+
+function get_effect_components_mgr_(effect)
+{
+    return effect.subpatcher().getnamed("components");
+}
+get_effect_components_mgr_.local = 1;
+
+
+/* function message_effect_(effect, msg, args)
+{
+    var addr = [effect.varname, "components"].join("::");    
+    outlet (0, addr, msg, args);
+}
+message_effect_.local = 1;
+ */
+
+
+
+/* 
 function set_effects()
 {
     var effects_dict    = arguments.length > 0  ? arguments[0] : null;
@@ -47,10 +133,10 @@ function set_effects()
     {
         message_effect_(effects_[i], "set_effect", effect_names[i]);
     }
-}
+} */
 
 
-function effect()
+/* function effect()
 {
     var a       = arrayfromargs(arguments);
     var i       = a[0];
@@ -63,69 +149,4 @@ function effect()
     }
 
     message_effect_(effects_[i], msg, args);
-}
-
-function clear()
-{
-    var l = tracks_.length;
-    for (var i = 0; i < l; i++)
-    {
-        remove_last_effect_();
-    }
-}
-
-
-function add_effects(n)
-{
-    post ("adding effects", n, "\n");
-    for (var i = 0; i < n; i++)
-    {
-        add_effect();
-    }
-}
-
-
-function add_effect()
-{
-    var inl 	    = this.patcher.getnamed("events_inlet");
-
-    var x_inlet     = inl.rect[0];
-    var y_inlet     = inl.rect[3];
-
-    var i           = effects_.length;
-	var x           = x_inlet;
-	var y           = y_inlet + h * (i + 1);
-
-    var effect      = this.patcher.newdefault(
-                                    x, 
-                                    y, 
-                                    "djazz_midi_out_effect");
-
-    effect.varname  = "effect_" + i;
-
-    effects_.push(effect);
-    message_effect_(effect, "set_effect_database", effect_database_.name);
-    
-    return effect;
-}
-
-
-//--------------------------------------------------------------------------------
-
-
-function remove_last_effect_()
-{   
-    if (effects_.length === 0)
-        return;
-
-    this.patcher.remove(effects_.pop());
-}
-remove_last_effect_.local = 1;
-
-
-function message_effect_(effect, msg, args)
-{
-    var addr = [effect.varname, "components"].join("::");    
-    outlet (0, addr, msg, args);
-}
-message_effect_.local = 1;
+} */

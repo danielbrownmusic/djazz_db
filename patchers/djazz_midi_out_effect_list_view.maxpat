@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1660.0, 119.0, 471.0, 544.0 ],
+		"rect" : [ 319.0, 273.0, 723.0, 651.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -46,25 +46,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 21.5, 440.0, 30.0, 30.0 ],
+					"patching_rect" : [ 21.5, 241.0, 30.0, 30.0 ],
 					"varname" : "components_outlet"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-36",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 21.5, 310.0, 112.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"filename" : "djazz_dispatch.js",
-						"parameter_enable" : 0
-					}
-,
-					"text" : "js djazz_dispatch.js"
 				}
 
 			}
@@ -75,14 +58,14 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 21.5, 202.0, 272.0, 22.0 ],
+					"patching_rect" : [ 21.5, 129.0, 272.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_components_midi_out_effect_list_view.js",
 						"parameter_enable" : 0
 					}
 ,
 					"text" : "js djazz_components_midi_out_effect_list_view.js",
-					"varname" : "control"
+					"varname" : "components"
 				}
 
 			}
@@ -127,10 +110,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-36", 0 ],
-					"source" : [ "obj-5", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 1
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
@@ -144,13 +125,6 @@
 			}
 , 			{
 				"name" : "djazz_components_midi_out_effect_list_view.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_dispatch.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",

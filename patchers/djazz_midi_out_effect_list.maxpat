@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1413.0, 214.0, 918.0, 627.0 ],
+		"rect" : [ 119.0, 217.0, 918.0, 627.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -53,18 +53,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 446.999999999999943, 117.0, 114.0, 22.0 ],
-					"text" : "prepend set_effects"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-10",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -72,24 +60,6 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 207.333333333333258, 117.0, 53.0, 22.0 ],
 					"text" : "pattrhub"
-				}
-
-			}
-
-, 			{
-				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 363.499999999999943, 288.0, 112.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"filename" : "djazz_dispatch.js",
-						"parameter_enable" : 0
-					}
-,
-					"text" : "js djazz_dispatch.js"
 				}
 
 			}
@@ -113,7 +83,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 207.333333333333258, 196.0, 56.0, 22.0 ],
+					"patching_rect" : [ 207.333333333333258, 201.0, 56.0, 22.0 ],
 					"restore" : 					{
 
 					}
@@ -130,14 +100,14 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 363.499999999999943, 204.0, 242.0, 22.0 ],
+					"patching_rect" : [ 363.499999999999943, 117.0, 242.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_components_midi_out_effect_list.js",
 						"parameter_enable" : 0
 					}
 ,
 					"text" : "js djazz_components_midi_out_effect_list.js",
-					"varname" : "control"
+					"varname" : "components"
 				}
 
 			}
@@ -168,32 +138,6 @@
 				}
 
 			}
-, 			{
-				"box" : 				{
-					"id" : "obj-11",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 91.0, 124.0, 22.0 ],
-					"text" : "djazz_midi_out_effect",
-					"varname" : "effect_0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-12",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 135.0, 124.0, 22.0 ],
-					"text" : "djazz_midi_out_effect",
-					"varname" : "effect_1"
-				}
-
-			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -212,30 +156,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-6", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-7", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
-					"source" : [ "obj-9", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 3
 				}
 
 			}

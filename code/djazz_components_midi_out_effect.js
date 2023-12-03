@@ -1,33 +1,22 @@
 autowatch  = 1;
 
-var EMPTY_STRING        = "empty_string";
-
-var effect_database_    = null;
-var effect_name         = "";
+var NO_EFFECT       = "NO EFFECT";
+var patcher_name_   = NO_EFFECT;
 
 
-function set_effect_database(effect_database_name)
+function set_effect(patcher_name)
 {
-    effect_database_ = new Dict(effect_database_name);
-    outlet(0, "dictionary", effect_database_.name);
-}
-
-
-function set_effect(effect_name_in)
-{
-    var no_effect = effect_name_in === EMPTY_STRING ? true : false;
-    
-    if (effect_name_in === effect_name)
+    if (patcher_name === patcher_name_)
         return;
 
-    effect_name = effect_name_in;
+    patcher_name_ = patcher_name;
 
     remove_effect_();
 
-    if (no_effect)
+    if (patcher_name_ === NO_EFFECT)
         return ;
 
-    make_effect_(effect_name);
+    make_effect_(patcher_name_);
 }
 
 
@@ -49,18 +38,13 @@ function remove_effect_()
 remove_effect_.local = 1;
 
 
-function make_effect_(effect_name)
+function make_effect_(patcher_class)
 {
     var bypass_switch   = this.patcher.getnamed("active");
     var midi_outlet     = this.patcher.getnamed("midi_out");
 
     var x               = bypass_switch.rect[0] + 22;
     var y               = bypass_switch.rect[3] + 22;
-
-    var patcher_class   = get_patcher_class_(effect_name, effect_database_);
-
-    if (!patcher_class)
-    return;
 
     var effect          = this.patcher.newdefault(x, y, patcher_class);
     effect.varname      = "effect";
@@ -72,7 +56,15 @@ function make_effect_(effect_name)
 make_effect_.local = 1;
 
 
-function get_patcher_class_(effect_name, effect_menu_items_dict)
+/* function set_effect_database(effect_database_name)
+{
+    effect_database_ = new Dict(effect_database_name);
+    outlet(0, "dictionary", effect_database_.name);
+}
+ */
+
+
+/* function get_patcher_class_(effect_name, effect_menu_items_dict)
 {
     var d = new Dict (effect_database_.get("effects").name);
     var p = d.contains(effect_name) === 1 ?
@@ -80,4 +72,4 @@ function get_patcher_class_(effect_name, effect_menu_items_dict)
             null;
     return p;
 }
-get_patcher_class_.local = 1;
+get_patcher_class_.local = 1; */
