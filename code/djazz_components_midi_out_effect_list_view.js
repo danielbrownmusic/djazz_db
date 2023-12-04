@@ -9,15 +9,57 @@ var EMPTY_STRING        = "EMPTY STRING";
 var w_effect            = 128;
 var h_effect            = 22;
 
-//var effect_database_    = null;
 var effects_            = [];
 
 
-/* function set_effect_database(effect_database_name)
-{
-    effect_database_ = new Dict(effect_database_name);
-}*/
+declareattribute("effects_dict", "get_effects_dict", "set_effects_dict");
 
+
+function loadbang()
+{
+    set_effects_dict();
+}
+
+
+function get_effects_dict()
+{
+    var d   = new Dict ();
+    var a   = effects_.map(get_effect_name_);
+    if (a[a.length - 1] === EMPTY_STRING)
+    {
+        a.pop();
+    }
+    post (a);
+    dutils.set_dict_array(d, "effects", a);
+    return d.name;
+}
+
+
+function set_effects_dict(effects_dict_name)
+{
+    clear_();
+
+    var effects_dict =  effects_dict_name                               ? 
+                        new Dict (effects_dict_name)                    : 
+                        null;
+
+    var effect_names =  effects_dict                                    ? 
+                        dutils.get_dict_array(effects_dict, "effects")  : 
+                        [];
+
+    for (var i = 0; i < effect_names.length; i++)
+    {
+        var effect      = add_effect_();
+        var effect_name = effect_names[i];
+
+        get_effect_component_mgr_(effect).message("effect_name", effect_name);
+    }
+    post ("adding last effect slot \n");
+    add_effect_();
+    // Don't send message to model! This is handled by the bank dict.
+}
+
+//----------------------------------------------------------------------------
 
 function clear()
 {
@@ -55,6 +97,8 @@ function remove_last_effect()
 
 
 //--------------------------------------------------------------------------------
+
+
 
 
 function clear_()
@@ -216,73 +260,22 @@ function make_funnel_()
 
 function get_effect_name_(effect)
 {
-    return effect.subpatcher().getnamed("components").getattr("effect_name");
+    return get_effect_component_mgr_(effect).getattr("effect_name");
 }
 get_effect_name_.local = 1;
 
 
-/* function get_patcher_name_(effect_name)
+function get_effect_component_mgr_(effect)
 {
-    post (effect_name);
-    var patcher_name    = effect_database_.get("effects").get(effect_name).get("patcher");
-    post (patcher_name);
-
-    return patcher_name;
-} */
-
-
-
-/* function message_effect_(effect, msg, args)
-{
-    var addr = [effect.varname, "components"].join("::");
-    outlet (0, addr, msg, args);
+    return effect.subpatcher().getnamed("components");
 }
-message_effect_.local = 1; */
+get_effect_component_mgr_.local = 1;
 
 
 
 
-/*
-function get_effects()
-{
-    var d   = new Dict ();
-    var a   = effects_.map(get_effect_name_);
-    dutils.set_dict_array(d, "effects", a);
-    return d;
-} */
 
-/* 
-function set_effects()
-{
-    var effects_dict    = arguments  ? arguments[0] : null;
-    var effect_names    = effects_dict ? dutils.get_dict_array(effects_dict, "effects") : [];
 
-    var l_old           = effects_.length;
-    var l_new           = effect_names.length;
-
-    if (l_old < l_new)
-    {
-        for (var i = l_old; i < l_new; i++)
-        {
-            add_effect();
-        }
-    }
-    
-    else
-    {
-        for (var i = l_new; i < l_old; i++)
-        {
-            remove_last_effect();
-        }
-    }
-    
-    for (var i = 0; i < effects_.length; i++)
-    {
-        message_effect_(effects_[i], "set_effect_silently", effect_names[i]);
-    }
-
-    add_effect();
-} */
 
 
 /* function effect()

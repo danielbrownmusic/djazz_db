@@ -8,17 +8,9 @@ var NO_EFFECT           = "NO EFFECT";
 
 var effect_database_    = null;
 var effect              = null;
+
 var effect_name         = EMPTY_STRING;
-declareattribute("effect_name");
-
-
-/* function window_open()
-{
-    var effect = this.patcher.getnamed("effect");
-    if (!effect)
-        return;
-    effect.subpatcher().wind.visible = arguments[0];
-} */
+declareattribute("effect_name", null, "set_effect_silently");
 
 
 function set_effect_database(file_full_path)
@@ -119,3 +111,14 @@ function get_patcher_class_(effect_name)
     return p;
 }
 get_patcher_class_.local = 1;
+
+
+
+
+/* function window_open()
+{
+    var effect = this.patcher.getnamed("effect");
+    if (!effect)
+        return;
+    effect.subpatcher().wind.visible = arguments[0];
+} */

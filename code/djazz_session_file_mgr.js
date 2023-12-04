@@ -1,15 +1,42 @@
 autowatch = 1;
 
-function load_session_file()
+outlets = 2;
+
+
+function load(file_path)
 {
-    var session_file_full_path  = arguments[0];
-    var d                       = new Dict ();
-    d.import_json(session_file_full_path);
-
-    var mgr     = this.patcher.getnamed("session_components_mgr");
-    var msg     = "load_from_file";
-    var args    = d.get("components");
-    mgr.message(msg, args);
-
-
+    var bank_dict = new Dict ();
+    bank_dict.import_json(file_path);
+    outlet (1, "name", bank_dict.name);
+    outlet (1, "bang");
+    var comp_mgr = get_midi_out_bank_component_mgr_();
+    comp_mgr.message("bank_dict", bank_dict.name);
 }
+
+
+function save(file_path)
+{
+    var comp_mgr    = get_midi_out_bank_component_mgr_();
+    var bank_dict   = new Dict (comp_mgr.getattr("bank_dict"));
+    bank_dict.export_json(file_path);
+}
+
+
+function print()
+{
+    var comp_mgr    = get_midi_out_bank_component_mgr_();
+    var bank_dict   = new Dict (comp_mgr.getattr("bank_dict"));
+    outlet (1, "name", bank_dict.name);
+    outlet (1, "bang");
+}
+
+
+function get_midi_out_bank_component_mgr_()
+{
+    //var view            = this.patcher.getnamed("view");
+    //var midi_out_bank   = get_child_(view, "midi_out_bank");
+    var midi_out_bank   = this.patcher.getnamed("midi_out_bank");
+    var comp_mgr        = midi_out_bank.subpatcher().getnamed("components");
+    return comp_mgr;
+}
+get_midi_out_bank_component_mgr_.local = 1;

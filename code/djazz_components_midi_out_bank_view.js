@@ -6,15 +6,21 @@ outlets         = 2;
 
 var tracks_     = [];
 
-var x_patch_0   = 286;
+var x_patch_0   = 792;
 var y_patch_0   = 66;
 var x_pres_0    = 0;
-var y_pres_0    = 0;
+var y_pres_0    = 52;
 var w_track     = 128;
-var h_track     = 216;
+var h_track     = 282;
+
+var x_solo_bank_ctrl = 792;
+var y_solo_bank_ctrl = 374;
+
+var x_funnel = 990;
+var y_funnel = 374;
 
 
-var bank_dict = null;
+//var bank_dict = null;
 declareattribute("bank_dict", "get_bank_dict", "set_bank_dict");
 
 var size = [0, 0, x_pres_0, y_pres_0];
@@ -23,15 +29,23 @@ declareattribute("size");
 
 function get_bank_dict()
 {
-    var d = new Dict ();
-    var a = tracks_.map(get_track_dict_);
-    dutils.set_dict_array(d, "tracks", a);
-    return d;
+    var bank_dict = new Dict ();
+    //bank_dict.replace("tracks");
+    for (var i = 0; i < tracks_.length; i++)
+    {
+        var track           = tracks_[i];
+        var comp_mgr        = get_track_components_mgr_(track);
+        var track_dict_name = comp_mgr.getattr("effects_dict");
+        var track_dict      = new Dict (track_dict_name);
+        bank_dict.append("tracks", track_dict);
+    }
+    return bank_dict.name;
 }
 
 
 function set_bank_dict(bank_dict_name)
 {
+    post ("setting attribute.\n");
     set_bank_dict_(bank_dict_name);
     outlet( 0, "set_bank_dict", bank_dict_name);
 }
@@ -65,7 +79,7 @@ function remove_last_tracks(n)
 }
 
 
-function remove_last_track_()
+function remove_last_track()
 {
     remove_last_track_()
     outlet (0, "remove_last_track");
@@ -89,12 +103,25 @@ function track()
     outlet (1, "track", i, msg, args);
 }
 
+
+function set_global(parameter, value)
+{
+    tracks_.forEach
+    (
+        function (track)
+        {
+            track.subpatcher().getnamed(parameter).setvalueof(value);
+        }
+    );
+}
+
+
 //----------------------------------------------------------------
 
 
 function set_bank_dict_(bank_dict_name)
 {
-    clear();
+    clear_();
 
     var bank_dict   = new Dict(bank_dict_name);
     var track_array = dutils.get_dict_array(bank_dict, "tracks");
@@ -107,7 +134,7 @@ function set_bank_dict_(bank_dict_name)
         var track           = add_track_();
         var comp            = get_track_components_mgr_(track);
         var effects_dict    = track_array[i];
-        comp.message("setattr", "effects_dict", effects_dict); 
+        comp.message("effects_dict", effects_dict.name); 
     }
     set_solo_bank_ctrl_();
 }
@@ -221,13 +248,6 @@ function get_track_components_mgr_(track)
 get_track_components_mgr_.local = 1;
 
 
-function get_track_dict_(track)
-{
-    return get_track_components_mgr_(track).getattr("effects_dict");
-}
-get_track_dict_.local = 1;
-
-
 function set_solo_bank_ctrl_()
 {
     var solo_bank_ctrl = this.patcher.getnamed("solo_bank_ctrl");
@@ -240,10 +260,7 @@ function set_solo_bank_ctrl_()
     if (n === 0)
         return;
 
-    var x = 286;
-    var y = 374;
-
-    solo_bank_ctrl = this.patcher.newdefault(x, y, "js", "djazz_solo_bank_ctrl.js", n);
+    solo_bank_ctrl = this.patcher.newdefault(x_solo_bank_ctrl, y_solo_bank_ctrl, "js", "djazz_solo_bank_ctrl.js", n);
     solo_bank_ctrl.varname = "solo_bank_ctrl";
     for (var i = 0; i < n; i++)
     {      
@@ -265,10 +282,7 @@ function make_funnel_()
     if (n === 0)
         return;
 
-    var x = 454;//this.box.rect[0] + 44;
-    var y = 374;//this.box.rect[1] - 44;
-
-    var funnel = this.patcher.newdefault(x, y, "funnel", n);
+    var funnel = this.patcher.newdefault(x_funnel, y_funnel, "funnel", n);
     this.patcher.connect(funnel, 0, this.box, 1);
     for (var i = 0; i < n; i++)
     {
