@@ -33,10 +33,11 @@ function print()
 
 function get_midi_out_bank_component_mgr_()
 {
-    //var view            = this.patcher.getnamed("view");
-    //var midi_out_bank   = get_child_(view, "midi_out_bank");
-    var midi_out_bank   = this.patcher.getnamed("midi_out_bank");
+    //var midi_out_bank   = this.patcher.getnamed("midi_out_bank");
+    var view            = this.patcher.getnamed("view");
+    var midi_out_bank   = view.subpatcher().getnamed("midi_out_bank");
     var comp_mgr        = midi_out_bank.subpatcher().getnamed("components");
+
     return comp_mgr;
 }
 get_midi_out_bank_component_mgr_.local = 1;
