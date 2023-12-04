@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1067.0, 280.0, 404.0, 374.0 ],
+		"rect" : [ 689.0, 161.0, 522.0, 575.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,38 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "components, midi effects dict",
+					"id" : "obj-1",
+					"index" : 0,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 184.0, 19.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 234.0, 19.0, 135.0, 49.0 ],
+					"text" : "loadmess set_effect_database djazz_midi_effects.json"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-5",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 254.0, 99.0, 56.0, 22.0 ],
+					"patching_rect" : [ 387.0, 19.0, 56.0, 22.0 ],
 					"restore" : 					{
 						"active" : [ 0 ]
 					}
@@ -63,7 +89,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 19.333333333333343, 99.0, 37.666666666666657, 34.0 ],
+					"patching_rect" : [ 19.333333333333343, 143.0, 37.666666666666657, 34.0 ],
 					"varname" : "active"
 				}
 
@@ -75,7 +101,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 107.0, 23.0, 220.0, 22.0 ],
+					"patching_rect" : [ 184.0, 149.0, 220.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_components_midi_out_effect.js",
 						"parameter_enable" : 0
@@ -94,7 +120,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 19.333333333333343, 219.0, 30.0, 30.0 ],
+					"patching_rect" : [ 19.333333333333343, 348.0, 30.0, 30.0 ],
 					"varname" : "midi_out"
 				}
 
@@ -116,8 +142,22 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-9", 1 ],
 					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}

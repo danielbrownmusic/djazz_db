@@ -217,6 +217,13 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-16", 2 ],
+					"source" : [ "obj-1", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-12", 0 ]
 				}
@@ -287,10 +294,10 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-16::obj-27::obj-7" : [ "number", "number", 0 ],
-			"obj-16::obj-29::obj-7" : [ "number[4]", "number", 0 ],
-			"obj-16::obj-31::obj-7" : [ "number[5]", "number", 0 ],
-			"obj-16::obj-33::obj-7" : [ "number[6]", "number", 0 ],
+			"obj-16::obj-10::obj-7" : [ "number[1]", "number", 0 ],
+			"obj-16::obj-12::obj-7" : [ "number[2]", "number", 0 ],
+			"obj-16::obj-14::obj-7" : [ "number[3]", "number", 0 ],
+			"obj-16::obj-8::obj-7" : [ "number", "number", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
@@ -325,6 +332,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "djazz_add_semitones.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "djazz_components_midi_out_bank.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
@@ -333,6 +347,13 @@
 			}
 , 			{
 				"name" : "djazz_components_midi_out_bank_view.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_components_midi_out_effect.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
@@ -382,6 +403,13 @@
 			}
 , 			{
 				"name" : "djazz_midi_out_bank_view_track_number_ctrl.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_midi_out_effect.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",

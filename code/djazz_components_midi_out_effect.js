@@ -1,24 +1,38 @@
 autowatch  = 1;
 
-var NO_EFFECT       = "NO EFFECT";
-var patcher_name_   = NO_EFFECT;
+var EMPTY_STRING        = "EMPTY STRING";
+//var NO_EFFECT           = "NO EFFECT";
+
+var effect_database_    = null;
+
+var effect_name         = EMPTY_STRING;
+declareattribute("effect_name", null, "set_effect");
 
 
-function set_effect(patcher_name)
+function set_effect(effect_name_in)
 {
-    if (patcher_name === patcher_name_)
-        return;
+    if (effect_name_in === effect_name)
+        return false;
 
-    patcher_name_ = patcher_name;
+    effect_name = effect_name_in;
 
+    outlet (1, "setsymbol", effect_name);
     remove_effect_();
 
-    if (patcher_name_ === NO_EFFECT)
-        return ;
+    if (effect_name === EMPTY_STRING)
+        return true;
 
-    make_effect_(patcher_name_);
+    make_effect_(effect_name);
+        return true;
 }
 
+
+function set_effect_database(file_path)
+{
+    effect_database_ = new Dict();
+    effect_database_.import_json(file_path);
+    outlet (1, "dictionary", effect_database_.name);
+}
 
 //----------------------------------------------------------------------------------------------------
 
@@ -45,6 +59,10 @@ function make_effect_(patcher_class)
 
     var x               = bypass_switch.rect[0] + 22;
     var y               = bypass_switch.rect[3] + 22;
+    var patcher_class   = get_patcher_class_(effect_name);
+
+    if (!patcher_class)
+    return;
 
     var effect          = this.patcher.newdefault(x, y, patcher_class);
     effect.varname      = "effect";
@@ -56,20 +74,12 @@ function make_effect_(patcher_class)
 make_effect_.local = 1;
 
 
-/* function set_effect_database(effect_database_name)
-{
-    effect_database_ = new Dict(effect_database_name);
-    outlet(0, "dictionary", effect_database_.name);
-}
- */
-
-
-/* function get_patcher_class_(effect_name, effect_menu_items_dict)
+function get_patcher_class_(effect_name)
 {
     var d = new Dict (effect_database_.get("effects").name);
-    var p = d.contains(effect_name) === 1 ?
-            d.get(effect_name).get("patcher") :
+    var p = d.contains(effect_name) === 1       ?
+            d.get(effect_name).get("patcher")   :
             null;
     return p;
 }
-get_patcher_class_.local = 1; */
+get_patcher_class_.local = 1;

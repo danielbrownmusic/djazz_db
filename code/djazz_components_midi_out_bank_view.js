@@ -20,7 +20,6 @@ var x_funnel = 990;
 var y_funnel = 374;
 
 
-//var bank_dict = null;
 declareattribute("bank_dict", "get_bank_dict", "set_bank_dict");
 
 var size = [0, 0, x_pres_0, y_pres_0];
@@ -30,7 +29,6 @@ declareattribute("size");
 function get_bank_dict()
 {
     var bank_dict = new Dict ();
-    //bank_dict.replace("tracks");
     for (var i = 0; i < tracks_.length; i++)
     {
         var track           = tracks_[i];
@@ -298,12 +296,3 @@ function set_size_()
     size = [0, 0, x_pres, y_pres];
 }
 set_size_.local = 1;
-
-
-
-
-/* function set_effect_database(effect_database_name)
-{
-    effect_database_ = new Dict (effect_database_name);
-    outlet( 1, effect_database_name);
-} */

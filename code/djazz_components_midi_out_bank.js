@@ -4,8 +4,7 @@ autowatch   = 1;
 
 var tracks_             = [];
 
-
-var bank_dict = null;
+//var bank_dict = null;
 declareattribute("bank_dict", null, "set_bank_dict");
 
 
@@ -24,7 +23,7 @@ function set_bank_dict(bank_dict_name)
         var track           = add_track();
         var comp            = get_track_components_mgr_(track);
         var effects_dict    = track_array[i];
-        comp.message("setattr", "effects_dict", effects_dict); 
+        comp.message("effects_dict", effects_dict.name);
     }
 }
 

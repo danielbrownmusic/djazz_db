@@ -11,7 +11,6 @@ var h_effect            = 22;
 
 var effects_            = [];
 
-
 declareattribute("effects_dict", "get_effects_dict", "set_effects_dict");
 
 
@@ -49,17 +48,15 @@ function set_effects_dict(effects_dict_name)
 
     for (var i = 0; i < effect_names.length; i++)
     {
-        var effect      = add_effect_();
-        var effect_name = effect_names[i];
-
-        get_effect_component_mgr_(effect).message("effect_name", effect_name);
+        var effect = add_effect_();
+        set_effect_(effect, effect_names[i]);
     }
     post ("adding last effect slot \n");
     add_effect_();
     // Don't send message to model! This is handled by the bank dict.
 }
 
-//----------------------------------------------------------------------------
+//--------------------------------------------------------------------------------
 
 function clear()
 {
@@ -97,8 +94,6 @@ function remove_last_effect()
 
 
 //--------------------------------------------------------------------------------
-
-
 
 
 function clear_()
@@ -149,9 +144,8 @@ function add_effect_()
     effect.varname          = "effect_" + i;
     
     effects_.push(effect);
-    //this.patcher.connect(effect, 0, this.box, 1);
     make_funnel_();
-    //message_effect_(effect, "set_effect_database", effect_database_.name);
+
     return effect;
 }
 add_effect_.local = 1;
@@ -182,6 +176,12 @@ function remove_last_effects_(n)
 remove_last_effects_.local = 1;
 
 
+function set_effect_(effect, effect_name)
+{
+    get_effect_components_mgr_(effect).message("effect_name", effect_name);    
+}
+set_effect_.local = 1;
+
 //--------------------------------------------------------------------------------
 
 
@@ -211,20 +211,12 @@ function remove_empty_effects_at_end_()
     var names                   = effects_.map(get_effect_name_);
     var n                       = names.length - 1; // because last effect slot is always empty
 
-    //post ("NAMES: ");
-/*     for (var i = 0; i < names.length; i++)
-    {
-        post (names[i]);
-    } */
-    //post ("\n");
     for (var i = n; i >= 0; i--)
     {
         if (names[i] !== EMPTY_STRING)
         {
-            //post (names[i], "is not the empty string.\n");
             break;
         }
-        //post (names[i], "is the empty string.\n");
         n_empty_effects_at_end++;
     }
     remove_last_effects(n_empty_effects_at_end);
@@ -260,34 +252,13 @@ function make_funnel_()
 
 function get_effect_name_(effect)
 {
-    return get_effect_component_mgr_(effect).getattr("effect_name");
+    return get_effect_components_mgr_(effect).getattr("effect_name");
 }
 get_effect_name_.local = 1;
 
 
-function get_effect_component_mgr_(effect)
+function get_effect_components_mgr_(effect)
 {
     return effect.subpatcher().getnamed("components");
 }
-get_effect_component_mgr_.local = 1;
-
-
-
-
-
-
-
-
-/* function effect()
-{
-    var a       = arrayfromargs(arguments);
-    var i       = a[0];
-    var msg     = a[1];
-    var args    = a.slice(2);
-    if (i >= effects_.length)
-    {
-        post ("There is no effect", i + ".\n");
-        return;
-    }
-    message_effect_(effects_[i], msg, args);
-} */
+get_effect_components_mgr_.local = 1;

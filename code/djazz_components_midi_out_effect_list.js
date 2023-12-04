@@ -2,17 +2,38 @@ var dutils = require("db_dictionary_array_utils");
 
 autowatch = 1;
 
-//var effect_database_    = null;
 var effects_            = [];
 
 var w                   = 128;
 var h                   = 44;
 
+declareattribute("effects_dict", "get_effects_dict", "set_effects_dict");
 
-/* function set_effect_database(effect_database_name)
+
+function set_effects_dict(effects_dict_name)
 {
-    effect_database_ = new Dict(effect_database_name);
-} */
+    clear();
+
+    var effects_dict =  effects_dict_name                               ? 
+                        new Dict (effects_dict_name)                    : 
+                        null;
+
+    var effect_names =  effects_dict                                    ? 
+                        dutils.get_dict_array(effects_dict, "effects")  : 
+                        [];
+
+    for (var i = 0; i < effect_names.length; i++)
+    {
+        var effect      = add_effect();
+        var effect_name = effect_names[i];
+
+        set_effect(effect, effect_name);
+    }
+    post ("adding last effect slot in model\n");
+    add_effect();
+}
+
+//--------------------------------------------------------------------------------
 
 function clear()
 {
@@ -74,10 +95,9 @@ function remove_last_effect()
 }
 
 
-function set_effect(effect_index, patcher_name)
+function set_effect(effect, effect_name)
 {
-    get_effect_components_mgr_(effects_[effect_index]).message("set_effect", patcher_name);
-    outlet (0, "effect", effect_index, "set_effect", patcher_name)
+    get_effect_components_mgr_(effect).message("effect_name", effect_name);
 }
 
 
@@ -90,63 +110,3 @@ function get_effect_components_mgr_(effect)
 get_effect_components_mgr_.local = 1;
 
 
-/* function message_effect_(effect, msg, args)
-{
-    var addr = [effect.varname, "components"].join("::");    
-    outlet (0, addr, msg, args);
-}
-message_effect_.local = 1;
- */
-
-
-
-/* 
-function set_effects()
-{
-    var effects_dict    = arguments.length > 0  ? arguments[0] : null;
-    post ("setting effect list value: \n");
-    post (effects_dict);
-    post (effects_dict.get("effects")[0]);
-    post ("\n");
-    var effect_names    = effects_dict ? dutils.get_dict_array(effects_dict, "effects") : [];
-
-    var l_old           = effects_.length;
-    var l_new           = effect_names.length;
-
-    if (l_old < l_new)
-    {
-        for (var i = l_old; i < l_new; i++)
-        {
-            add_effect();
-        }
-    }
-    
-    else
-    {
-        for (var i = l_new; i < l_old; i++)
-        {
-            remove_last_effect_();
-        }
-    }
-    
-    for (var i = 0; i < effects_.length; i++)
-    {
-        message_effect_(effects_[i], "set_effect", effect_names[i]);
-    }
-} */
-
-
-/* function effect()
-{
-    var a       = arrayfromargs(arguments);
-    var i       = a[0];
-    var msg     = a[1];
-    var args    = a.slice(2);
-    if (i >= effects_.length)
-    {
-        post ("There is no effect", i + ".\n");
-        return;
-    }
-
-    message_effect_(effects_[i], msg, args);
-} */
