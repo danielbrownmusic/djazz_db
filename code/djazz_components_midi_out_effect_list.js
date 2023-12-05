@@ -26,11 +26,11 @@ function set_effects_dict(effects_dict_name)
     {
         var effect      = add_effect();
         var effect_name = effect_names[i];
-
-        set_effect(effect, effect_name);
+        post ("trying to FUCKING  set the effect. varname of effect is", effect.varname, "\n");
+        set_effect_(effect, effect_name);
     }
-    post ("adding last effect slot in model\n");
-    add_effect();
+/*     post ("adding last effect slot in model\n");
+    add_effect(); */
 }
 
 //--------------------------------------------------------------------------------
@@ -60,7 +60,7 @@ function add_effect()
 
     var i           = effects_.length;
 	var x           = x_inlet;
-	var y           = y_inlet + h * (i + 1);
+	var y           = y_inlet + h * (i + 2);
 
     var effect      = this.patcher.newdefault(
                                     x, 
@@ -95,13 +95,20 @@ function remove_last_effect()
 }
 
 
-function set_effect(effect, effect_name)
+function set_effect(effect_index, effect_name)
 {
-    get_effect_components_mgr_(effect).message("effect_name", effect_name);
+    set_effect_(effects_[effect_index], effect_name);
 }
 
 
 //--------------------------------------------------------------------------------
+
+function set_effect_(effect, effect_name)
+{
+    get_effect_components_mgr_(effect).message("effect_name", effect_name);
+}
+set_effect_.local = 1;
+
 
 function get_effect_components_mgr_(effect)
 {

@@ -8,16 +8,16 @@ var EMPTY_STRING        = "EMPTY STRING";
 
 var w_effect            = 128;
 var h_effect            = 22;
-
+var h_offset            = 30;
 var effects_            = [];
 
 declareattribute("effects_dict", "get_effects_dict", "set_effects_dict");
 
 
-function loadbang()
+/* function loadbang()
 {
     set_effects_dict();
-}
+} */
 
 
 function get_effects_dict()
@@ -51,8 +51,8 @@ function set_effects_dict(effects_dict_name)
         var effect = add_effect_();
         set_effect_(effect, effect_names[i]);
     }
-    post ("adding last effect slot \n");
-    add_effect_();
+/*     post ("adding last effect slot \n");
+    add_effect_(); */
     // Don't send message to model! This is handled by the bank dict.
 }
 
@@ -122,12 +122,12 @@ function add_effect_()
     var effects_panel       = this.patcher.getnamed("effects_panel");
 
 	var x_patch             = effects_panel.rect[0];
-	var y_patch             = effects_panel.rect[1] + h_effect * i;
+	var y_patch             = effects_panel.rect[1] + h_effect * (i + 1);
 
     var patching_rect       = [x_patch, y_patch, w_effect, h_effect];
 
 	var x_pres              = effects_panel.getattr("presentation_rect")[0];
-	var y_pres              = effects_panel.getattr("presentation_rect")[1] + h_effect * i;
+	var y_pres              = effects_panel.getattr("presentation_rect")[1] + h_offset + h_effect * i;
 
     var presentation_rect   = [x_pres, y_pres, w_effect, h_effect];
 
@@ -190,22 +190,22 @@ function list()
     if (inlet !== 1)
         return;
 
-    var effect_index    = arguments[0];
-    var patcher_name   = arguments[1];
+    var effect_index   = arguments[0];
+    var effect_name   = arguments[1];
 
-    outlet (0, "set_effect", effect_index, patcher_name);
+    outlet (0, "set_effect", effect_index, effect_name);
 
-    var n_empty_effects_at_end = remove_empty_effects_at_end_();
-    outlet (0, "remove_last_effects", n_empty_effects_at_end - 1); // subtract 1 because we do not count the empty slot that is always at the end in ctrl but not in model
+    //var n_empty_effects_at_end = remove_empty_effects_at_end_();
+    //outlet (0, "remove_last_effects", n_empty_effects_at_end - 1); // subtract 1 because we do not count the empty slot that is always at the end in ctrl but not in model
 
-    add_effect();
+    //add_effect();
 }
 
 
 //--------------------------------------------------------------------------------
 
 
-function remove_empty_effects_at_end_()
+/* function remove_empty_effects_at_end_()
 {
     var n_empty_effects_at_end  = 0;
     var names                   = effects_.map(get_effect_name_);
@@ -221,7 +221,7 @@ function remove_empty_effects_at_end_()
     }
     remove_last_effects(n_empty_effects_at_end);
     return n_empty_effects_at_end;
-}
+} */
 
 
 function make_funnel_()

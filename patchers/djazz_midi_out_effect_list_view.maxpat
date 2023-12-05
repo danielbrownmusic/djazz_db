@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 319.0, 273.0, 723.0, 651.0 ],
+		"rect" : [ 851.0, 202.0, 448.0, 887.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,13 +40,87 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 252.0, 353.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 4.0, 4.0, 72.0, 20.0 ],
+					"text" : "midi effects",
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-24",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 122.0, 290.0, 110.0, 22.0 ],
+					"text" : "remove_last_effect"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-22",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 55.0, 290.0, 64.0, 22.0 ],
+					"text" : "add_effect"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.309803921568627, 0.305882352941176, 0.305882352941176, 1.0 ],
+					"fontsize" : 16.0,
+					"id" : "obj-9",
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 124.5, 217.0, 22.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 102.0, 4.0, 22.0, 22.0 ],
+					"text" : "-",
+					"texton" : "-"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.309803921568627, 0.305882352941176, 0.305882352941176, 1.0 ],
+					"fontsize" : 16.0,
+					"id" : "obj-8",
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 57.5, 217.0, 22.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 76.0, 4.0, 22.0, 22.0 ],
+					"text" : "+",
+					"texton" : "+"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "components messages",
 					"id" : "obj-2",
 					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 21.5, 241.0, 30.0, 30.0 ],
+					"patching_rect" : [ 21.5, 490.0, 30.0, 30.0 ],
 					"varname" : "components_outlet"
 				}
 
@@ -58,7 +132,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 21.5, 129.0, 272.0, 22.0 ],
+					"patching_rect" : [ 21.5, 372.0, 272.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_components_midi_out_effect_list_view.js",
 						"parameter_enable" : 0
@@ -96,7 +170,21 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 128.0, 384.0 ],
 					"proportion" : 0.5,
+					"rounded" : 0,
 					"varname" : "effects_panel"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "list" ],
+					"patching_rect" : [ 65.0, 85.0, 100.0, 22.0 ],
+					"text" : "funnel 1",
+					"varname" : "funnel"
 				}
 
 			}
@@ -110,8 +198,43 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-22", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 1 ],
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-24", 0 ],
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}

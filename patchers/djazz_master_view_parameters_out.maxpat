@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -42,11 +42,11 @@
 				"box" : 				{
 					"comment" : "tempo",
 					"id" : "obj-31",
-					"index" : 1,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 40.625, 290.0, 30.0, 30.0 ]
+					"patching_rect" : [ 118.625, 263.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -54,12 +54,12 @@
 				"box" : 				{
 					"comment" : "tempo",
 					"id" : "obj-7",
-					"index" : 1,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 40.625, 46.0, 30.0, 30.0 ]
+					"patching_rect" : [ 118.625, 19.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -71,7 +71,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 40.625, 144.0, 54.0, 35.0 ],
+					"patching_rect" : [ 118.625, 117.0, 54.0, 35.0 ],
 					"restore" : [ 0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
@@ -92,7 +92,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 81.25, 237.0, 50.0, 22.0 ],
+					"patching_rect" : [ 159.25, 210.0, 50.0, 22.0 ],
 					"varname" : "number[2]"
 				}
 
@@ -101,11 +101,11 @@
 				"box" : 				{
 					"comment" : "beat",
 					"id" : "obj-26",
-					"index" : 2,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 194.25, 290.0, 30.0, 30.0 ]
+					"patching_rect" : [ 21.25, 263.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -117,7 +117,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 194.25, 144.0, 36.0, 35.0 ],
+					"patching_rect" : [ 21.25, 117.0, 36.0, 35.0 ],
 					"restore" : [ 0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
@@ -137,7 +137,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 211.25, 237.0, 50.0, 22.0 ],
+					"patching_rect" : [ 38.25, 210.0, 50.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
@@ -156,12 +156,12 @@
 				"box" : 				{
 					"comment" : "beat",
 					"id" : "obj-114",
-					"index" : 2,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 194.25, 46.0, 30.0, 30.0 ]
+					"patching_rect" : [ 21.25, 19.0, 30.0, 30.0 ]
 				}
 
 			}

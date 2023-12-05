@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 928.0, 362.0, 457.0, 669.0 ],
+		"rect" : [ 928.0, 362.0, 783.0, 827.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,24 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 265.0, 564.0, 91.0, 22.0 ],
+					"text" : "route dictionary"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-12",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 89.5, 127.0, 91.5, 22.0 ],
+					"patching_rect" : [ 30.5, 103.0, 91.5, 22.0 ],
 					"text" : "t b s"
 				}
 
@@ -59,7 +71,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 89.5, 17.0, 30.0, 30.0 ]
+					"patching_rect" : [ 30.5, 17.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -70,7 +82,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 89.5, 329.0, 80.0, 22.0 ],
+					"patching_rect" : [ 30.5, 278.0, 80.0, 22.0 ],
 					"text" : "t s s"
 				}
 
@@ -82,7 +94,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 219.0, 127.0, 174.0, 22.0 ],
+					"patching_rect" : [ 265.0, 103.0, 54.0, 22.0 ],
 					"text" : "t s s"
 				}
 
@@ -94,7 +106,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 249.0, 180.0, 144.0, 22.0 ]
+					"patching_rect" : [ 289.0, 192.0, 382.0, 22.0 ],
+					"text" : "\"Macintosh HD:/Users/danielbrown/Desktop/song_data/BluesFamaj/\""
 				}
 
 			}
@@ -106,7 +119,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 89.5, 524.666666666666742, 30.0, 30.0 ]
+					"patching_rect" : [ 30.5, 721.666666666666742, 30.0, 30.0 ]
 				}
 
 			}
@@ -117,7 +130,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 150.5, 392.333333333333371, 55.0, 22.0 ],
+					"patching_rect" : [ 91.5, 364.333333333333371, 55.0, 22.0 ],
 					"text" : "name $1"
 				}
 
@@ -129,20 +142,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 89.5, 232.0, 91.5, 22.0 ],
+					"patching_rect" : [ 30.5, 180.0, 179.0, 22.0 ],
 					"text" : "#1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 21.5, 127.0, 58.0, 22.0 ],
-					"text" : "loadbang"
 				}
 
 			}
@@ -153,7 +154,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 219.0, 476.666666666666742, 50.5, 22.0 ],
+					"patching_rect" : [ 265.0, 492.666666666666742, 50.5, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0,
@@ -171,7 +172,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 219.0, 392.333333333333371, 92.0, 22.0 ],
+					"patching_rect" : [ 265.0, 364.333333333333371, 92.0, 22.0 ],
 					"text" : "import $1, bang"
 				}
 
@@ -183,7 +184,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 219.0, 232.0, 211.0, 22.0 ],
+					"patching_rect" : [ 265.0, 278.0, 211.0, 22.0 ],
 					"text" : "djazz_get_navigation_file_from_folder"
 				}
 
@@ -197,20 +198,12 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 219.0, 17.0, 30.0, 30.0 ]
+					"patching_rect" : [ 265.0, 17.0, 30.0, 30.0 ]
 				}
 
 			}
  ],
 		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"midpoints" : [ 31.0, 183.5, 99.0, 183.5 ],
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"source" : [ "obj-10", 1 ]
@@ -234,6 +227,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-3", 1 ],
+					"midpoints" : [ 112.5, 148.0, 200.0, 148.0 ],
 					"source" : [ "obj-12", 1 ]
 				}
 
@@ -269,8 +263,23 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-63", 0 ],
-					"midpoints" : [ 160.0, 445.000000000000057, 228.5, 445.000000000000057 ],
+					"midpoints" : [ 101.0, 445.000000000000057, 274.5, 445.000000000000057 ],
 					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"midpoints" : [ 274.5, 642.0, 40.0, 642.0 ],
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-63", 0 ]
 				}
 
 			}
@@ -291,6 +300,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 1 ],
+					"midpoints" : [ 309.5, 165.0, 661.5, 165.0 ],
 					"source" : [ "obj-9", 1 ]
 				}
 

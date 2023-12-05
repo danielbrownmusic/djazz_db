@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -59,7 +59,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 449.0, 404.5, 47.0, 35.0 ],
-					"restore" : [ 0 ],
+					"restore" : [ 1 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -93,7 +93,7 @@
 					"bgfillcolor_proportion" : 0.5,
 					"bgfillcolor_type" : "color",
 					"id" : "obj-16",
-					"items" : "<empty>",
+					"items" : [ "AU DLS Synth 1", ",", "from Max 1", ",", "from Max 2" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -439,7 +439,8 @@
 					"patching_rect" : [ 190.0, 226.5, 120.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 3.0, 68.0, 120.0, 22.0 ],
-					"proportion" : 0.5
+					"proportion" : 0.5,
+					"rounded" : 0
 				}
 
 			}
@@ -456,7 +457,8 @@
 					"patching_rect" : [ 190.0, 198.5, 120.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 3.475000000000001, 94.0, 120.0, 22.0 ],
-					"proportion" : 0.5
+					"proportion" : 0.5,
+					"rounded" : 0
 				}
 
 			}

@@ -93,8 +93,9 @@ function make_song_metadata_dict(song_name, tempo, beats_per_measure, chapter_st
 	var d = new Dict();
 	d.set("name", song_name);
 	d.set("tempo", tempo);
-	d.set("beats_per_measure", beats_per_measure)
+	d.set("beats_per_measure", beats_per_measure);
 	d.set("chapter_count", chapter_start_measures.length - 1);
+	d.set("beat_count", beats_per_measure * chapter_start_measures[chapter_start_measures.length - 1]); 
 	return d;
 }
 

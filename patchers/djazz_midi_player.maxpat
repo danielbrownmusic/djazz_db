@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 665.0, 657.0, 735.0, 644.0 ],
+		"rect" : [ 597.0, 444.0, 735.0, 644.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -58,12 +58,12 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 401.0, 266.0, 130.0, 49.0 ],
+					"patching_rect" : [ 401.0, 266.0, 131.0, 49.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 1162, 173, 1602, 636 ],
+						"client_rect" : [ 4, 100, 358, 228 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
-						"storage_rect" : [ 583, 100, 1520, 798 ]
+						"storage_rect" : [ 583, 69, 1034, 197 ]
 					}
 ,
 					"text" : "pattrstorage midiplayerpattrstorage @outputmode 2",

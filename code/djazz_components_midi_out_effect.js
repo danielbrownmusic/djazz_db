@@ -11,27 +11,31 @@ declareattribute("effect_name", null, "set_effect");
 
 function set_effect(effect_name_in)
 {
+    post ("WTFFFFFFFFFFFFFF \n");
     if (effect_name_in === effect_name)
         return false;
-
+    post ("1\n");
     effect_name = effect_name_in;
+    post ("2\n");
 
-    outlet (1, "setsymbol", effect_name);
     remove_effect_();
+    post ("3\n");
 
     if (effect_name === EMPTY_STRING)
         return true;
+        post ("4\n");
 
     make_effect_(effect_name);
         return true;
-}
+        post ("5\n");
+
+    }
 
 
 function set_effect_database(file_path)
 {
     effect_database_ = new Dict();
     effect_database_.import_json(file_path);
-    outlet (1, "dictionary", effect_database_.name);
 }
 
 //----------------------------------------------------------------------------------------------------

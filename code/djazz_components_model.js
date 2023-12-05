@@ -1,9 +1,9 @@
 autowatch = 1;
 
-function list()
+function anything()
 {
-    var a               = arrayfromargs(arguments);
-    var addr            = a[0];
+    var a               = arrayfromargs(messagename, arguments);
+    var addr            = messagename;
     var msg             = a[1];
     var args            = a.slice(2);
     var comp_mgr        = get_components_mgr_(addr);
