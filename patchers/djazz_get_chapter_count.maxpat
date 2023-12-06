@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 587.0, 275.0, 607.0, 721.0 ],
+		"rect" : [ 466.0, 241.0, 607.0, 721.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,19 +40,43 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 26.666666666666742, 404.25, 29.5, 22.0 ],
+					"text" : "1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 26.666666666666742, 132.0, 65.0, 22.0 ],
+					"text" : "route clear"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "chapter count",
 					"id" : "obj-2",
 					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 26.666666666666742, 423.0, 30.0, 30.0 ]
+					"patching_rect" : [ 72.666666666666742, 503.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "dict name",
+					"comment" : "dict name; \"clear\" outputs 1",
 					"id" : "obj-4",
 					"index" : 1,
 					"maxclass" : "inlet",
@@ -70,7 +94,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 26.666666666666742, 324.25, 152.0, 22.0 ],
+					"patching_rect" : [ 72.666666666666742, 404.25, 152.0, 22.0 ],
 					"text" : "dict.unpack chapter_count:"
 				}
 
@@ -82,7 +106,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 26.666666666666742, 225.5, 126.0, 22.0 ],
+					"patching_rect" : [ 72.666666666666742, 305.5, 126.0, 22.0 ],
 					"text" : "dict.unpack metadata:"
 				}
 
@@ -94,7 +118,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 26.666666666666742, 126.75, 77.0, 22.0 ],
+					"patching_rect" : [ 72.666666666666742, 206.75, 77.0, 22.0 ],
 					"text" : "dictionary $1"
 				}
 
@@ -116,8 +140,29 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-3", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
