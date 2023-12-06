@@ -141,9 +141,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
-					"source" : [ "obj-11", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 22
+					"source" : [ "obj-11", 0 ]
 				}
 
 			}

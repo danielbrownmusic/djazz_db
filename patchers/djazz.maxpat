@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 93.0, 143.0, 1878.0, 1088.0 ],
+		"rect" : [ 309.0, 90.0, 1696.0, 1097.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,13 +40,14 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-17",
-					"maxclass" : "toggle",
-					"numinlets" : 1,
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
 					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 1120.0, 17.0, 24.0, 24.0 ]
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 728.047652244567871, 1564.620535702750203, 111.0, 22.0 ],
+					"text" : "djazz_master_sync",
+					"varname" : "djazz_master_sync"
 				}
 
 			}
@@ -57,7 +58,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1437.0, 436.0, 48.0, 22.0 ],
+					"patching_rect" : [ 1554.904785215854645, 231.783299476320281, 48.0, 22.0 ],
 					"text" : "load $1"
 				}
 
@@ -69,7 +70,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
-					"patching_rect" : [ 1437.0, 380.0, 67.0, 22.0 ],
+					"patching_rect" : [ 1554.904785215854645, 175.783299476320281, 67.0, 22.0 ],
 					"text" : "opendialog"
 				}
 
@@ -82,7 +83,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1437.0, 317.0, 24.0, 24.0 ]
+					"patching_rect" : [ 1554.904785215854645, 112.783299476320281, 24.0, 24.0 ]
 				}
 
 			}
@@ -93,7 +94,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1323.0, 436.0, 51.0, 22.0 ],
+					"patching_rect" : [ 1440.904785215854645, 231.783299476320281, 51.0, 22.0 ],
 					"text" : "save $1"
 				}
 
@@ -106,7 +107,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1323.0, 317.0, 24.0, 24.0 ]
+					"patching_rect" : [ 1440.904785215854645, 112.783299476320281, 24.0, 24.0 ]
 				}
 
 			}
@@ -117,7 +118,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "bang" ],
-					"patching_rect" : [ 1323.0, 380.0, 66.0, 22.0 ],
+					"patching_rect" : [ 1440.904785215854645, 175.783299476320281, 66.0, 22.0 ],
 					"text" : "savedialog"
 				}
 
@@ -129,7 +130,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1453.0, 516.0, 35.0, 22.0 ],
+					"patching_rect" : [ 1570.904785215854645, 311.783299476320281, 35.0, 22.0 ],
 					"text" : "clear"
 				}
 
@@ -141,7 +142,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1269.0, 317.0, 32.0, 22.0 ],
+					"patching_rect" : [ 1386.904785215854645, 112.783299476320281, 32.0, 22.0 ],
 					"text" : "print"
 				}
 
@@ -152,7 +153,7 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1269.0, 631.0, 275.0, 240.0 ]
+					"patching_rect" : [ 1524.904785215854645, 430.783299476320281, 275.0, 240.0 ]
 				}
 
 			}
@@ -163,7 +164,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 1269.0, 579.0, 50.5, 22.0 ],
+					"patching_rect" : [ 1524.904785215854645, 378.783299476320281, 50.5, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0,
@@ -181,7 +182,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1269.0, 516.0, 157.0, 22.0 ],
+					"patching_rect" : [ 1386.904785215854645, 311.783299476320281, 157.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_session_file_mgr.js",
 						"parameter_enable" : 0
@@ -207,7 +208,7 @@
 					"numoutlets" : 3,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "bang", "", "" ],
-					"patching_rect" : [ 46.0, 73.0, 1093.0, 929.0 ],
+					"patching_rect" : [ 109.142882406711578, 449.33468631033611, 1123.0, 977.0 ],
 					"varname" : "view",
 					"viewvisibility" : 1
 				}
@@ -220,7 +221,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 46.0, 1044.0, 76.0, 22.0 ],
+					"patching_rect" : [ 109.142882406711578, 1639.953745157763478, 1123.0, 22.0 ],
 					"text" : "djazz_model",
 					"varname" : "model"
 				}
@@ -233,7 +234,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1323.0, 181.396696099560813, 156.0, 22.0 ],
+					"patching_rect" : [ 1183.142882406711578, 382.560000758251135, 156.0, 22.0 ],
 					"text" : "djazz_session_components",
 					"varname" : "djazz_session_components"
 				}
@@ -245,7 +246,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 2596.33333420753479, 185.633365869522095, 132.0, 22.0 ],
+					"patching_rect" : [ 2288.238119423389435, 273.634715826556203, 132.0, 22.0 ],
 					"text" : "djazz_device_manager"
 				}
 
@@ -256,7 +257,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 2601.585233184770459, 232.684142050445644, 220.0, 22.0 ],
+					"patching_rect" : [ 2293.490018400625104, 320.685492007479752, 220.0, 22.0 ],
 					"text" : "djazz_ui_navigate_launchpad_pro_mk3",
 					"varname" : "djazz_ui_navigate_launchpad_pro_mk3"
 				}
@@ -269,7 +270,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 7,
 					"outlettype" : [ "int", "int", "int", "int", "int", "int", "int" ],
-					"patching_rect" : [ 2422.083354525659161, 20.149003033472127, 269.500013113021851, 22.0 ],
+					"patching_rect" : [ 1405.988139741513805, 45.626556372521463, 269.500013113021851, 22.0 ],
 					"save" : [ "#N", "menubar", 7, 0, ";", "#X", "about", "About", "Max", ";", "#X", "closeitem", ";", "#X", "end", ";" ],
 					"text" : "menubar 7",
 					"varname" : "kjhkjhk"
@@ -284,7 +285,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 3244.633354246616364, 103.082447419201799, 187.0, 89.0 ],
+					"patching_rect" : [ 2936.538139462471008, 191.083797376235907, 187.0, 89.0 ],
 					"text" : "navigate dictionary *NAVIGATE*, midi_out dictionary *VIEW_BUTTON_COLOR*, colors dictionary *COLORS_LAUNCHPAD_PRO_MK3*"
 				}
 
@@ -297,7 +298,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 2925.55438182828766, 145.633365869522095, 85.0, 102.0 ],
+					"patching_rect" : [ 2617.459167044142305, 233.634715826556203, 85.0, 102.0 ],
 					"text" : "set red 5, set orange 9, set yellow 13, set green 21, set blue 37, set indigo 41, set purple 49"
 				}
 
@@ -310,7 +311,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "dictionary" ],
-					"patching_rect" : [ 2921.55438182828766, 271.633337736129761, 216.0, 35.0 ],
+					"patching_rect" : [ 2613.459167044142305, 359.634687693163869, 216.0, 35.0 ],
 					"text" : "djazz_database *COLORS_LAUNCHPAD_PRO_MK3*"
 				}
 
@@ -322,7 +323,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 3130.33333420753479, 198.833336353302002, 35.0, 22.0 ],
+					"patching_rect" : [ 2822.238119423389435, 286.83468631033611, 35.0, 22.0 ],
 					"text" : "clear"
 				}
 
@@ -334,7 +335,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 3167.133354246616364, 227.633365869522095, 107.0, 22.0 ],
+					"patching_rect" : [ 2859.038139462471008, 315.634715826556203, 107.0, 22.0 ],
 					"text" : "routepass clientlist"
 				}
 
@@ -355,7 +356,7 @@
 					"numoutlets" : 2,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "dictionary", "" ],
-					"patching_rect" : [ 2374.33333420753479, 361.333336353302002, 1113.0, 412.0 ],
+					"patching_rect" : [ 2066.238119423389435, 449.33468631033611, 1113.0, 412.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -376,7 +377,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 2601.585233184770459, 278.603448591859888, 231.0, 41.0 ],
+					"patching_rect" : [ 2293.490018400625104, 366.604798548893996, 231.0, 41.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -388,7 +389,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 3255.133354246616364, 273.633337736129761, 162.0, 22.0 ],
+					"patching_rect" : [ 2947.038139462471008, 361.634687693163869, 162.0, 22.0 ],
 					"text" : "djazz_view_send_launchpad"
 				}
 
@@ -400,7 +401,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 2601.585233184770459, 93.082447419201799, 123.0, 33.0 ],
+					"patching_rect" : [ 2293.490018400625104, 181.083797376235907, 123.0, 33.0 ],
 					"text" : "DEVICE"
 				}
 
@@ -421,7 +422,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 2601.585233184770459, 145.633365869522095, 164.000001072883606, 23.999996900558472 ],
+					"patching_rect" : [ 2293.490018400625104, 233.634715826556203, 164.000001072883606, 23.999996900558472 ],
 					"viewvisibility" : 1
 				}
 
@@ -442,7 +443,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1323.0, 60.008188374102701, 121.0, 38.595115526336485 ],
+					"patching_rect" : [ 120.904785215854645, 303.485741713152038, 121.0, 38.595115526336485 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 453.0, 29.071552292686647, 121.0, 56.595115526336485 ],
 					"viewvisibility" : 1
@@ -525,7 +526,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 3170.691818676828916, 847.831459903595032, 187.0, 62.0 ],
+					"patching_rect" : [ 2862.596603892683561, 935.832809860629141, 187.0, 62.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -614,7 +615,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 3141.539625330231502, 855.406108291193959, 183.0, 62.0 ],
+					"patching_rect" : [ 2833.444410546086146, 943.407458248228068, 183.0, 62.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -703,7 +704,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 3151.039625330231502, 842.257340516549903, 141.0, 62.0 ],
+					"patching_rect" : [ 2842.944410546086146, 930.258690473584011, 141.0, 62.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -792,7 +793,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 3158.956283970139339, 854.072770507380483, 137.0, 62.0 ],
+					"patching_rect" : [ 2850.861069185993983, 942.074120464414591, 137.0, 62.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -881,7 +882,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 3230.33333420753479, 842.257340516549903, 137.0, 62.0 ],
+					"patching_rect" : [ 2922.238119423389435, 930.258690473584011, 137.0, 62.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -901,7 +902,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1323.0, 138.0, 203.0, 22.0 ],
+					"patching_rect" : [ 120.904785215854645, 381.477553339049337, 203.0, 22.0 ],
 					"text" : "djazz_make_song_navigation_files"
 				}
 
@@ -982,7 +983,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 3189.691818676828916, 847.831459903595032, 168.0, 62.0 ],
+					"patching_rect" : [ 2881.596603892683561, 935.832809860629141, 168.0, 62.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1071,7 +1072,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 3151.039625330231502, 832.831459903595032, 164.0, 62.0 ],
+					"patching_rect" : [ 2842.944410546086146, 920.832809860629141, 164.0, 62.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1146,7 +1147,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 3127.372960551045253, 855.406108291193959, 247.0, 26.0 ],
+					"patching_rect" : [ 2819.277745766899898, 943.407458248228068, 247.0, 26.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1235,7 +1236,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 3207.33333420753479, 836.331459903595032, 160.0, 62.0 ],
+					"patching_rect" : [ 2899.238119423389435, 924.332809860629141, 160.0, 62.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1324,7 +1325,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 3197.691818676828916, 832.831459903595032, 160.0, 62.0 ],
+					"patching_rect" : [ 2889.596603892683561, 920.832809860629141, 160.0, 62.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1412,7 +1413,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 3135.95629958655627, 865.831459903595032, 207.0, 26.0 ],
+					"patching_rect" : [ 2827.861084802410915, 953.832809860629141, 207.0, 26.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1501,7 +1502,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 3183.539625330231502, 842.257340516549903, 141.0, 62.0 ],
+					"patching_rect" : [ 2875.444410546086146, 930.258690473584011, 141.0, 62.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1590,7 +1591,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 3158.956283970139339, 842.257340516549903, 173.0, 62.0 ],
+					"patching_rect" : [ 2850.861069185993983, 930.258690473584011, 173.0, 62.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1679,7 +1680,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 3214.191818676828916, 847.831459903595032, 119.0, 62.0 ],
+					"patching_rect" : [ 2906.096603892683561, 935.832809860629141, 119.0, 62.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1694,6 +1695,13 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-65", 1 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
 					"source" : [ "obj-101", 1 ]
@@ -1808,6 +1816,14 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"order" : 0,
+					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
 					"source" : [ "obj-16", 1 ]
 				}
@@ -1815,8 +1831,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-65", 1 ],
-					"source" : [ "obj-17", 0 ]
+					"destination" : [ "obj-7", 1 ],
+					"midpoints" : [ 1396.404785215854645, 1472.701917589535242, 829.547652244567871, 1472.701917589535242 ],
+					"order" : 1,
+					"source" : [ "obj-16", 0 ]
 				}
 
 			}
@@ -1865,6 +1883,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-57", 1 ],
+					"order" : 1,
 					"source" : [ "obj-65", 1 ]
 				}
 
@@ -1873,6 +1892,21 @@
 				"patchline" : 				{
 					"destination" : [ "obj-57", 0 ],
 					"source" : [ "obj-65", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"order" : 0,
+					"source" : [ "obj-65", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-57", 1 ],
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}
@@ -1909,8 +1943,8 @@
 			"obj-57::obj-2::obj-11::obj-29::obj-1" : [ "score_file", "score_file", 0 ],
 			"obj-57::obj-2::obj-11::obj-33::obj-4" : [ "step[3]", "step", 0 ],
 			"obj-57::obj-2::obj-11::obj-7::obj-23::obj-8::obj-64" : [ "gswitch2[1]", "gswitch2[1]", 0 ],
-			"obj-57::obj-67::obj-13::obj-7" : [ "number[3]", "number", 0 ],
-			"obj-57::obj-6::obj-42::obj-4" : [ "step[2]", "step", 0 ],
+			"obj-57::obj-6::obj-42::obj-4" : [ "step[1]", "step", 0 ],
+			"obj-65::obj-47::obj-23" : [ "tempo_out", "tempo_out", 0 ],
 			"obj-65::obj-47::obj-3::obj-5" : [ "number[1]", "number", 0 ],
 			"obj-65::obj-47::obj-7::obj-2" : [ "number", "number", 0 ],
 			"parameterbanks" : 			{
@@ -1918,6 +1952,14 @@
 					"index" : 0,
 					"name" : "",
 					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+				}
+
+			}
+,
+			"parameter_overrides" : 			{
+				"obj-65::obj-47::obj-23" : 				{
+					"parameter_initial" : 60.0,
+					"parameter_initial_enable" : 1
 				}
 
 			}
@@ -2021,34 +2063,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_components_midi_out_effect.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_components_midi_out_effect_list.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_components_midi_out_effect_list_view.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_components_midi_out_effect_view.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_components_model.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
@@ -2119,14 +2133,21 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_get_navigation_file_from_folder.maxpat",
+				"name" : "djazz_init_all_pattrs.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_launchpad_pro_mk3_init.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_launchpad_pro_mk3_init.maxpat",
+				"name" : "djazz_load_song_navigation_database.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -2176,6 +2197,13 @@
 			}
 , 			{
 				"name" : "djazz_master_clock_view_ctrl.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_master_sync.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -2238,56 +2266,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_midi_out_effect.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_effect_list.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_effect_list_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_effect_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_track.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_track_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_midi_player.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_player_comm.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -2350,13 +2329,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_navigate_view_get_chapter_bars.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_navigate_view_loop_ctrl.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
@@ -2403,27 +2375,6 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_solo_bank.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_solo_bank_ctrl.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_song_navigation_database.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{

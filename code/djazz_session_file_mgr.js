@@ -7,8 +7,12 @@ function load(file_path)
 {
     var bank_dict = new Dict ();
     bank_dict.import_json(file_path);
+
+    outlet (0, "name", bank_dict.name);
+
     outlet (1, "name", bank_dict.name);
     outlet (1, "bang");
+
     var comp_mgr = get_midi_out_bank_component_mgr_();
     comp_mgr.message("bank_dict", bank_dict.name);
 }
@@ -26,6 +30,7 @@ function print()
 {
     var comp_mgr    = get_midi_out_bank_component_mgr_();
     var bank_dict   = new Dict (comp_mgr.getattr("bank_dict"));
+    
     outlet (1, "name", bank_dict.name);
     outlet (1, "bang");
 }

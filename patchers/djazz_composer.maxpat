@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1691.0, 577.0, 596.0, 663.0 ],
+		"rect" : [ 125.0, 431.0, 596.0, 663.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -111,13 +111,11 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-24",
-									"linecount" : 9,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 138.5, 343.5, 89.0, 129.0 ],
-									"text" : "\"Macintosh HD:/Users/danielbrown/Desktop/song_data/AutumnleavesDoMin/grid/AutumnleavesDoMin-grid-param.txt\""
+									"patching_rect" : [ 138.5, 343.5, 89.0, 129.0 ]
 								}
 
 							}
@@ -227,13 +225,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-3",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 445.166666666666742, 91.0, 69.0, 22.0 ],
-					"restore" : [ 0.0 ],
+					"patching_rect" : [ 454.166666666666742, 91.0, 51.0, 35.0 ],
 					"saved_object_attributes" : 					{
+						"initial" : [ 60 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
 					}
@@ -246,11 +245,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-1",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 305.666666666666515, 91.0, 87.0, 22.0 ],
+					"patching_rect" : [ 305.666666666666515, 91.0, 66.0, 35.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_initial" : [ "" ],
@@ -742,6 +742,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-2",
+									"int" : 1,
 									"maxclass" : "gswitch2",
 									"numinlets" : 2,
 									"numoutlets" : 2,
