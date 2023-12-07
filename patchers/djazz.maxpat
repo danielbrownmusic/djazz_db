@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 309.0, 90.0, 1696.0, 1097.0 ],
+		"rect" : [ 315.0, 94.0, 1696.0, 1013.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,26 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-17",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1458.0, 1511.0, 166.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"client_rect" : [ 2279, 115, 2765, 796 ],
+						"parameter_enable" : 0,
+						"parameter_mappable" : 0,
+						"storage_rect" : [ 583, 69, 1034, 197 ]
+					}
+,
+					"text" : "pattrstorage djazz @greedy 1",
+					"varname" : "djazz"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-7",
 					"maxclass" : "newobj",
@@ -1883,7 +1903,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-57", 1 ],
-					"order" : 1,
 					"source" : [ "obj-65", 1 ]
 				}
 
@@ -1892,21 +1911,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-57", 0 ],
 					"source" : [ "obj-65", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"order" : 0,
-					"source" : [ "obj-65", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-57", 1 ],
-					"source" : [ "obj-7", 0 ]
 				}
 
 			}
@@ -1940,10 +1944,10 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-57::obj-2::obj-11::obj-29::obj-1" : [ "score_file", "score_file", 0 ],
-			"obj-57::obj-2::obj-11::obj-33::obj-4" : [ "step[3]", "step", 0 ],
-			"obj-57::obj-2::obj-11::obj-7::obj-23::obj-8::obj-64" : [ "gswitch2[1]", "gswitch2[1]", 0 ],
 			"obj-57::obj-6::obj-42::obj-4" : [ "step[1]", "step", 0 ],
+			"obj-57::obj-9::obj-2::obj-11::obj-29::obj-1" : [ "score_file", "score_file", 0 ],
+			"obj-57::obj-9::obj-2::obj-11::obj-33::obj-4" : [ "step[2]", "step", 0 ],
+			"obj-57::obj-9::obj-2::obj-11::obj-7::obj-23::obj-8::obj-64" : [ "gswitch2[1]", "gswitch2[1]", 0 ],
 			"obj-65::obj-47::obj-23" : [ "tempo_out", "tempo_out", 0 ],
 			"obj-65::obj-47::obj-3::obj-5" : [ "number[1]", "number", 0 ],
 			"obj-65::obj-47::obj-7::obj-2" : [ "number", "number", 0 ],
