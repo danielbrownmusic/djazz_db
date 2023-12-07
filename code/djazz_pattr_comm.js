@@ -3,6 +3,12 @@ autowatch = 1;
 var deep = 0;
 declareattribute("deep");
 
+if (jsarguments.length > 1)
+{
+    deep = jsarguments[1];
+}
+
+
 
 /* function bang()
 {
@@ -44,13 +50,11 @@ function broadcast_deep_()
 
     if (!obj)
         return;
-    //post ("broadcast deep \n");
+
     var a = arrayfromargs(arguments);
     var msg = a[0];
-    var args = a.slice(1);//a.length > 2 ? a.slice(1) : a[1];
-/*     post ("..........");
-    post (msg);
-    post (args); */
+    var args = a.slice(1);
+
     obj.subpatcher().applydeepif(
         function (subobj)
         {
@@ -66,9 +70,11 @@ function broadcast_()
     var obj = get_connected_obj_();
     if (!obj)
         return;
-        var a = arrayfromargs(arguments);
-        var msg = a[0];
-        var args = a.slice(1);//a.length > 2 ? a.slice(1) : a[1];
+
+    var a = arrayfromargs(arguments);
+    var msg = a[0];
+    var args = a.slice(1);
+
     obj.subpatcher().applyif(
         function (subobj)
         {
@@ -83,9 +89,14 @@ function get_connected_obj_()
 {
     var obj = this.box.patchcords.outputs[0].dstobject;
     return obj;
-    //post (obj.varname);
-
 }
+
+
+function is_pattr(obj)
+{
+    return obj.maxclass === "pattr";
+}
+
 
 
 
@@ -105,9 +116,3 @@ function init_pattr(obj)
 {
     obj.message("init");
 } */
-
-
-function is_pattr(obj)
-{
-    return obj.maxclass === "pattr";
-}
