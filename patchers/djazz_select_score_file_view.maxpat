@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 281.0, 188.0, 803.0, 669.0 ],
+		"rect" : [ 473.0, 437.0, 803.0, 669.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -208,7 +208,7 @@
 					"patching_rect" : [ 197.5, 535.0, 208.0, 22.0 ],
 					"prefix" : "~/Documents/Max 8/Packages/Djazz MIDI 2023/AutumnleavesDoMin/grid/",
 					"presentation" : 1,
-					"presentation_rect" : [ 88.0, 0.0, 242.0, 22.0 ],
+					"presentation_rect" : [ 88.0, 0.0, 392.0, 22.0 ],
 					"types" : "TEXT",
 					"varname" : "umenu[1]"
 				}

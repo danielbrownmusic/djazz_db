@@ -40,16 +40,16 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontsize" : 24.0,
+					"fontsize" : 12.0,
 					"id" : "obj-57",
 					"maxclass" : "textbutton",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 21.0, 17.0, 88.0, 44.0 ],
+					"patching_rect" : [ 21.0, 17.0, 41.0, 25.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 196.0, 4.0, 88.0, 44.0 ],
+					"presentation_rect" : [ 136.0, 4.0, 43.0, 22.0 ],
 					"text" : "clear",
 					"texton" : "clear"
 				}
@@ -141,16 +141,16 @@
 			}
 , 			{
 				"box" : 				{
-					"fontsize" : 36.0,
+					"fontsize" : 12.0,
 					"id" : "obj-10",
 					"maxclass" : "textbutton",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 324.25, 17.0, 88.0, 44.0 ],
+					"patching_rect" : [ 324.25, 17.0, 41.0, 25.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 52.0, 4.0, 88.0, 44.0 ],
+					"presentation_rect" : [ 34.0, 4.0, 43.0, 22.0 ],
 					"text" : "+...",
 					"texton" : "+..."
 				}
@@ -158,16 +158,16 @@
 			}
 , 			{
 				"box" : 				{
-					"fontsize" : 36.0,
+					"fontsize" : 12.0,
 					"id" : "obj-9",
 					"maxclass" : "textbutton",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 206.0, 17.0, 44.0, 44.0 ],
+					"patching_rect" : [ 206.0, 17.0, 29.0, 25.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 144.0, 4.0, 44.0, 44.0 ],
+					"presentation_rect" : [ 84.0, 4.0, 22.0, 22.0 ],
 					"text" : "-",
 					"texton" : "-"
 				}
@@ -175,16 +175,16 @@
 			}
 , 			{
 				"box" : 				{
-					"fontsize" : 36.0,
+					"fontsize" : 12.0,
 					"id" : "obj-8",
 					"maxclass" : "textbutton",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 139.0, 17.0, 44.0, 44.0 ],
+					"patching_rect" : [ 139.0, 17.0, 29.0, 25.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 4.0, 4.0, 44.0, 44.0 ],
+					"presentation_rect" : [ 4.0, 4.0, 22.0, 22.0 ],
 					"text" : "+",
 					"texton" : "+"
 				}
@@ -272,7 +272,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-50", 0 ],
-					"midpoints" : [ 65.0, 527.0, 215.5, 527.0 ],
+					"midpoints" : [ 41.5, 527.0, 215.5, 527.0 ],
 					"source" : [ "obj-57", 1 ]
 				}
 

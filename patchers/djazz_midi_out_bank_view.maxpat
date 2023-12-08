@@ -56,7 +56,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 558.0, 460.0, 126.0, 31.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 308.0, 0.0, 126.0, 31.0 ],
+					"presentation_rect" : [ 213.0, 0.0, 126.0, 31.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -77,7 +77,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 250.0, 460.0, 297.0, 59.0 ],
+					"patching_rect" : [ 250.0, 460.0, 187.0, 31.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 297.0, 59.0 ],
 					"viewvisibility" : 1
