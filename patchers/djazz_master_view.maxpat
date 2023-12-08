@@ -40,6 +40,26 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-3",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 121.166666666666686, 83.0, 59.0, 35.0 ],
+					"saved_object_attributes" : 					{
+						"initial" : [ 0 ],
+						"parameter_enable" : 0,
+						"parameter_mappable" : 0
+					}
+,
+					"text" : "pattr beat_out",
+					"varname" : "beat_out"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-18",
 					"linecount" : 2,
 					"maxclass" : "newobj",
@@ -589,7 +609,7 @@
 					"patching_rect" : [ 121.166666666666686, 296.0, 532.0, 177.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 6.0, 43.0, 529.0, 172.0 ],
-					"varname" : "chapter_bar_beat",
+					"varname" : "grid_view",
 					"viewvisibility" : 1
 				}
 
@@ -1203,7 +1223,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
-					"patching_rect" : [ 121.166666666666686, 218.0, 65.5, 22.0 ],
+					"patching_rect" : [ 121.166666666666686, 148.0, 65.5, 22.0 ],
 					"text" : "t i b"
 				}
 
@@ -1235,48 +1255,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 121.166666666666686, 153.0, 201.0, 22.0 ],
-					"text" : "djazz_master_view_parameters_out",
-					"varname" : "from_model"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontsize" : 22.0,
-					"format" : 6,
-					"id" : "obj-23",
-					"maxclass" : "flonum",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 303.166666666666686, 207.0, 67.0, 33.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 111.0, 4.75, 67.0, 33.0 ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_initial" : [ 60.0 ],
-							"parameter_initial_enable" : 1,
-							"parameter_invisible" : 1,
-							"parameter_longname" : "tempo_out",
-							"parameter_shortname" : "tempo_out",
-							"parameter_type" : 3
-						}
-
-					}
-,
-					"varname" : "tempo_out"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-59",
 					"maxclass" : "led",
 					"numinlets" : 1,
@@ -1285,7 +1263,7 @@
 					"oncolor" : [ 0.0, 1.0, 0.945098039215686, 1.0 ],
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 248.666666666666686, 207.0, 33.0, 33.0 ],
+					"patching_rect" : [ 167.666666666666686, 216.0, 33.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 182.0, 4.75, 33.0, 33.0 ]
 				}
@@ -1462,6 +1440,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-27", 5 ],
 					"midpoints" : [ 903.5, 471.59360898437501, 864.916665666667086, 471.59360898437501 ],
 					"source" : [ "obj-4", 0 ]
@@ -1477,41 +1462,12 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-14", 0 ],
-					"source" : [ "obj-7", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-23", 0 ],
-					"source" : [ "obj-7", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-9", 0 ]
 				}
 
 			}
  ],
-		"parameters" : 		{
-			"obj-23" : [ "tempo_out", "tempo_out", 0 ],
-			"obj-7::obj-2" : [ "number", "number", 0 ],
-			"parameterbanks" : 			{
-				"0" : 				{
-					"index" : 0,
-					"name" : "",
-					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-				}
-
-			}
-,
-			"inherited_shortname" : 1
-		}
-,
 		"dependency_cache" : [ 			{
 				"name" : "djazz_beat_to_chapter_bar_beat_format.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
@@ -1563,13 +1519,6 @@
 			}
 , 			{
 				"name" : "djazz_master_clock_view_ctrl.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_master_view_parameters_out.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 356.0, 203.0, 1128.0, 748.0 ],
+		"rect" : [ 356.0, 203.0, 639.0, 748.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -963,8 +963,8 @@
 										"tags" : ""
 									}
 ,
-									"text" : "p PARAMS_ctrl",
-									"varname" : "ctrl"
+									"text" : "p PARAMS",
+									"varname" : "params"
 								}
 
 							}
@@ -1326,7 +1326,7 @@
 					}
 ,
 					"text" : "p ctrl",
-					"varname" : "patcher[1]"
+					"varname" : "ctrl"
 				}
 
 			}
@@ -1348,7 +1348,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 369.0, 186.0, 867.0, 904.0 ],
+						"rect" : [ 369.0, 179.0, 867.0, 904.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2002,7 +2002,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 62.5, 197.5, 50.0, 35.0 ],
-													"text" : "waiting 0 32 0"
+													"text" : "waiting 0 0 0"
 												}
 
 											}
@@ -2124,7 +2124,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 116.0, 777.054297099999872, 198.0, 22.0 ],
+									"patching_rect" : [ 116.0, 777.054297099999872, 68.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -2132,8 +2132,8 @@
 										"tags" : ""
 									}
 ,
-									"text" : "p PARAMS_view",
-									"varname" : "view"
+									"text" : "p PARAMS",
+									"varname" : "params"
 								}
 
 							}
@@ -2236,7 +2236,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-5", 1 ],
-									"midpoints" : [ 567.5, 741.527148549999993, 304.5, 741.527148549999993 ],
+									"midpoints" : [ 567.5, 741.527148549999993, 174.5, 741.527148549999993 ],
 									"source" : [ "obj-25", 0 ]
 								}
 
@@ -2262,7 +2262,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-5", 1 ],
-									"midpoints" : [ 732.5, 742.974607375000005, 304.5, 742.974607375000005 ],
+									"midpoints" : [ 732.5, 742.974607375000005, 174.5, 742.974607375000005 ],
 									"source" : [ "obj-3", 0 ]
 								}
 
@@ -2409,7 +2409,7 @@
 					}
 ,
 					"text" : "p view",
-					"varname" : "patcher"
+					"varname" : "view"
 				}
 
 			}

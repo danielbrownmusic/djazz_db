@@ -181,12 +181,12 @@
 				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 225.0, 284.228516000000013, 154.0, 22.0 ],
 					"text" : "djazz_midi_player player_1",
-					"varname" : "midi_player_1"
+					"varname" : "midi_gen_1"
 				}
 
 			}
