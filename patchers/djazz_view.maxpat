@@ -338,12 +338,11 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-1",
-					"linecount" : 5,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 130.0, 831.0, 104.0, 76.0 ],
+					"patching_rect" : [ 130.0, 831.0, 410.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 4, 100, 358, 228 ],
 						"parameter_enable" : 0,
@@ -351,7 +350,7 @@
 						"storage_rect" : [ 583, 69, 1034, 197 ]
 					}
 ,
-					"text" : "pattrstorage viewpattrstorage @greedy 1 @changemode 1 @outputmode 6",
+					"text" : "pattrstorage viewpattrstorage @greedy 1 @changemode 1 @outputmode 4",
 					"varname" : "viewpattrstorage"
 				}
 
@@ -586,21 +585,6 @@
 
 			}
  ],
-		"parameters" : 		{
-			"obj-47::obj-23" : [ "tempo_out", "tempo_out", 0 ],
-			"obj-47::obj-7::obj-2" : [ "number", "number", 0 ],
-			"parameterbanks" : 			{
-				"0" : 				{
-					"index" : 0,
-					"name" : "",
-					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-				}
-
-			}
-,
-			"inherited_shortname" : 1
-		}
-,
 		"dependency_cache" : [ 			{
 				"name" : "db_dictionary_array_utils.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
@@ -687,13 +671,6 @@
 			}
 , 			{
 				"name" : "djazz_master_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_master_view_parameters_out.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",

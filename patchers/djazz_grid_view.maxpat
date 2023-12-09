@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 356.0, 203.0, 639.0, 748.0 ],
+		"rect" : [ 1313.0, 203.0, 639.0, 748.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -2612,7 +2612,9 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
-					"source" : [ "obj-94", 1 ]
+					"source" : [ "obj-94", 1 ],
+					"watchpoint_flags" : 1,
+					"watchpoint_id" : 19
 				}
 
 			}
