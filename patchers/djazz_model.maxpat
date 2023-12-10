@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 492.0, 324.0, 927.0, 730.0 ],
+		"rect" : [ 143.0, 240.0, 927.0, 730.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -113,16 +113,16 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 702.666652666666778, 284.228516000000013, 109.0, 76.0 ],
+					"patching_rect" : [ 702.666652666666778, 284.228516000000013, 113.0, 76.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 4, 100, 358, 228 ],
+						"client_rect" : [ 1216, 379, 1661, 1037 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
 						"storage_rect" : [ 583, 69, 1034, 197 ]
 					}
 ,
-					"text" : "pattrstorage modelpattrstorage @greedy 1 @changemode 1 @outputmode 2",
-					"varname" : "modelpattrstorage"
+					"text" : "pattrstorage model_pattrstorage @greedy 1 @changemode 1 @outputmode 2",
+					"varname" : "model_pattrstorage"
 				}
 
 			}

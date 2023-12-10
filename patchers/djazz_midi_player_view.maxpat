@@ -129,7 +129,8 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 487.0, 241.0, 110.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 79.0, 7.0, 363.0, 22.0 ]
+					"presentation_rect" : [ 79.0, 7.0, 363.0, 22.0 ],
+					"text" : "booyeah"
 				}
 
 			}
@@ -312,7 +313,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 43.0, 285.0, 30.0, 30.0 ]
+									"patching_rect" : [ 101.0, 285.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -324,7 +325,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 143.0, 285.0, 30.0, 30.0 ]
+									"patching_rect" : [ 234.0, 285.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -337,7 +338,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 30.5, 14.0, 30.0, 30.0 ]
+									"patching_rect" : [ 101.0, 14.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -349,7 +350,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 30.5, 108.0, 44.0, 35.0 ],
+									"patching_rect" : [ 29.0, 82.0, 44.0, 35.0 ],
 									"restore" : [ 0.0 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0,
@@ -369,7 +370,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 134.0, 108.0, 37.0, 35.0 ],
+									"patching_rect" : [ 182.0, 82.0, 37.0, 35.0 ],
 									"restore" : [ 0 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0,
@@ -390,7 +391,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 134.0, 14.0, 30.0, 30.0 ]
+									"patching_rect" : [ 234.0, 14.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -403,7 +404,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 43.0, 201.0, 50.0, 22.0 ],
+									"patching_rect" : [ 101.0, 174.0, 50.0, 22.0 ],
 									"varname" : "number[1]"
 								}
 
@@ -416,7 +417,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 143.0, 201.0, 50.0, 22.0 ],
+									"patching_rect" : [ 234.0, 174.0, 50.0, 22.0 ],
 									"varname" : "number"
 								}
 
@@ -424,7 +425,7 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"destination" : [ "obj-3", 0 ],
+									"destination" : [ "obj-11", 0 ],
 									"source" : [ "obj-1", 0 ]
 								}
 
@@ -459,7 +460,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-4", 0 ],
+									"destination" : [ "obj-17", 0 ],
 									"source" : [ "obj-5", 0 ]
 								}
 
@@ -542,39 +543,6 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 9.0, 113.0, 390.0, 61.0 ],
 					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "params",
-					"id" : "obj-8",
-					"index" : 0,
-					"maxclass" : "outlet",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 19.0, 353.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-5",
-					"linecount" : 4,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 19.0, 221.0, 151.0, 62.0 ],
-					"saved_object_attributes" : 					{
-						"client_rect" : [ 4, 100, 358, 228 ],
-						"parameter_enable" : 0,
-						"parameter_mappable" : 0,
-						"storage_rect" : [ 583, 69, 1034, 197 ]
-					}
-,
-					"text" : "pattrstorage midiplayerviewpattrstorage @changemode 1 @outputmode 6",
-					"varname" : "midiplayerviewpattrstorage"
 				}
 
 			}
@@ -877,13 +845,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-24", 0 ],
 					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"source" : [ "obj-5", 0 ]
 				}
 
 			}

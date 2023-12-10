@@ -145,16 +145,16 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 21.0, 429.0, 141.0, 62.0 ],
+					"patching_rect" : [ 21.0, 429.0, 163.0, 62.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 4, 44, 358, 172 ],
+						"client_rect" : [ 1216, 379, 1661, 1037 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
 						"storage_rect" : [ 583, 69, 1034, 197 ]
 					}
 ,
-					"text" : "pattrstorage midioutbankpattrstorage @greedy 1 @outputmode 4",
-					"varname" : "midioutbankpattrstorage"
+					"text" : "pattrstorage midi_out_bank_pattrstorage @greedy 1 @changemode 1 @outputmode 6",
+					"varname" : "midi_out_bank_pattrstorage"
 				}
 
 			}
