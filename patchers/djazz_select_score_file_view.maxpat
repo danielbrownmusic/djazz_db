@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 473.0, 437.0, 803.0, 669.0 ],
+		"rect" : [ 527.0, 217.0, 789.0, 932.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 388.0, 67.0, 77.0, 22.0 ],
+					"patching_rect" : [ 435.0, 26.0, 77.0, 22.0 ],
 					"text" : "loadmess #1"
 				}
 
@@ -57,7 +57,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 339.0, 156.0, 63.0, 22.0 ],
+					"patching_rect" : [ 339.0, 147.0, 63.0, 22.0 ],
 					"text" : "symbol $1"
 				}
 
@@ -83,7 +83,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 292.0, 627.0, 30.0, 30.0 ]
+					"patching_rect" : [ 292.0, 684.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -95,7 +95,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 292.0, 410.0, 65.0, 35.0 ],
+					"patching_rect" : [ 292.0, 416.0, 65.0, 35.0 ],
 					"restore" : [ 0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
@@ -115,7 +115,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 211.5, 156.0, 62.0, 35.0 ],
+					"patching_rect" : [ 211.5, 147.0, 62.0, 35.0 ],
 					"restore" : [ 0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
@@ -134,7 +134,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 31.0, 132.0, 91.0, 22.0 ],
+					"patching_rect" : [ 31.0, 123.0, 91.0, 22.0 ],
 					"text" : "routepass clear"
 				}
 
@@ -147,7 +147,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 197.5, 396.0, 76.0, 49.0 ],
+					"patching_rect" : [ 197.5, 402.0, 76.0, 49.0 ],
 					"text" : "types TEXT, prefix $1, populate"
 				}
 
@@ -173,7 +173,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 103.0, 199.0, 68.0, 49.0 ],
+					"patching_rect" : [ 103.0, 190.0, 68.0, 49.0 ],
 					"text" : "types fold, prefix $1, populate"
 				}
 
@@ -187,7 +187,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 103.0, 316.0, 208.0, 22.0 ],
+					"patching_rect" : [ 103.0, 322.0, 208.0, 22.0 ],
 					"prefix" : "~/Documents/Max 8/Packages/Djazz MIDI 2023/AutumnleavesDoMin/",
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 85.0, 22.0 ],
@@ -205,8 +205,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 197.5, 535.0, 208.0, 22.0 ],
-					"prefix" : "~/Documents/Max 8/Packages/Djazz MIDI 2023/AutumnleavesDoMin/grid/",
+					"patching_rect" : [ 197.5, 556.0, 208.0, 22.0 ],
+					"prefix" : "~/Documents/Max 8/Packages/Djazz MIDI 2023/AutumnleavesDoMin/grid",
 					"presentation" : 1,
 					"presentation_rect" : [ 88.0, 0.0, 392.0, 22.0 ],
 					"types" : "TEXT",
@@ -218,6 +218,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
+					"midpoints" : [ 444.5, 104.5, 348.5, 104.5 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -225,7 +226,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
-					"midpoints" : [ 348.5, 284.5, 112.5, 284.5 ],
+					"midpoints" : [ 348.5, 275.5, 112.5, 275.5 ],
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -254,7 +255,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
-					"midpoints" : [ 242.5, 284.0, 112.5, 284.0 ],
+					"midpoints" : [ 242.5, 275.0, 112.5, 275.0 ],
 					"source" : [ "obj-2", 1 ]
 				}
 
@@ -276,7 +277,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
-					"midpoints" : [ 40.5, 282.5, 112.5, 282.5 ],
+					"midpoints" : [ 40.5, 273.5, 112.5, 273.5 ],
 					"order" : 1,
 					"source" : [ "obj-3", 0 ]
 				}
@@ -285,7 +286,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
-					"midpoints" : [ 40.5, 492.0, 207.0, 492.0 ],
+					"midpoints" : [ 40.5, 502.0, 207.0, 502.0 ],
 					"order" : 0,
 					"source" : [ "obj-3", 0 ]
 				}
@@ -301,7 +302,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
-					"midpoints" : [ 324.5, 495.5, 207.0, 495.5 ],
+					"midpoints" : [ 324.5, 501.5, 207.0, 501.5 ],
 					"source" : [ "obj-4", 1 ]
 				}
 

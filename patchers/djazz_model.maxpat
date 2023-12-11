@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 143.0, 240.0, 927.0, 730.0 ],
+		"rect" : [ 1055.0, 330.0, 927.0, 730.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -73,7 +73,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 457.666652666666778, 284.228516000000013, 134.666666666666742, 22.0 ],
+					"patching_rect" : [ 457.666652666666778, 278.228516000000013, 134.666666666666742, 22.0 ],
 					"text" : "djazz_midi_out_bank",
 					"varname" : "midi_out_bank"
 				}
@@ -113,9 +113,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 702.666652666666778, 284.228516000000013, 113.0, 76.0 ],
+					"patching_rect" : [ 702.666652666666778, 284.228516000000013, 115.0, 76.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 1216, 379, 1661, 1037 ],
+						"client_rect" : [ 3772, -59, 4391, 498 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
 						"storage_rect" : [ 583, 69, 1034, 197 ]
@@ -184,7 +184,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 225.0, 284.228516000000013, 154.0, 22.0 ],
+					"patching_rect" : [ 225.0, 278.228516000000013, 154.0, 22.0 ],
 					"text" : "djazz_midi_player player_1",
 					"varname" : "midi_gen_1"
 				}

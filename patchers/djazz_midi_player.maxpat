@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 219.0, 272.0, 735.0, 644.0 ],
+		"rect" : [ 738.0, 113.0, 575.0, 623.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -90,7 +90,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -250,7 +250,7 @@
 					}
 ,
 					"text" : "p djazz_midi_player_out_parameters",
-					"varname" : "parameters_out"
+					"varname" : "view_params"
 				}
 
 			}
@@ -276,7 +276,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 295.0, 159.0, 191.0, 22.0 ],
 					"text" : "djazz_midi_generator_parameters",
-					"varname" : "parameters_in"
+					"varname" : "params"
 				}
 
 			}
