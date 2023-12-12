@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 193.0, 103.0, 1292.0, 1058.0 ],
+		"rect" : [ 38.0, 108.0, 1135.0, 930.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -240,7 +240,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 76.142882406711578, 889.953745157763478, 1047.0, 22.0 ],
+					"patching_rect" : [ 76.142882406711578, 889.953745157763478, 76.0, 22.0 ],
 					"text" : "djazz_model",
 					"varname" : "model"
 				}
@@ -437,21 +437,14 @@
  ],
 		"parameters" : 		{
 			"obj-57::obj-2::obj-11::obj-29::obj-1" : [ "score_file", "score_file", 0 ],
-			"obj-57::obj-2::obj-11::obj-33::obj-4" : [ "step[2]", "step", 0 ],
+			"obj-57::obj-2::obj-11::obj-33::obj-4" : [ "step[3]", "step", 0 ],
 			"obj-57::obj-2::obj-11::obj-7::obj-23::obj-8::obj-64" : [ "gswitch2[1]", "gswitch2[1]", 0 ],
-			"obj-57::obj-6::obj-42::obj-4" : [ "step[3]", "step", 0 ],
+			"obj-57::obj-6::obj-42::obj-4" : [ "step[4]", "step", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
 					"name" : "",
 					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-				}
-
-			}
-,
-			"parameter_overrides" : 			{
-				"obj-57::obj-2::obj-11::obj-29::obj-1" : 				{
-					"parameter_initial" : ""
 				}
 
 			}

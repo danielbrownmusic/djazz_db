@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 2682.0, 157.0, 916.0, 537.0 ],
+		"rect" : [ 778.0, 157.0, 916.0, 537.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 572.666652666666778, 115.228515625, 53.0, 22.0 ],
+					"text" : "pattrhub"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-3",
 					"maxclass" : "newobj",
@@ -112,7 +124,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 572.666652666666778, 115.228515625, 115.0, 76.0 ],
+					"patching_rect" : [ 572.666652666666778, 213.228515625, 115.0, 76.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 4, 87, 598, 1129 ],
 						"parameter_enable" : 0,
@@ -120,7 +132,7 @@
 						"storage_rect" : [ 583, 69, 1034, 197 ]
 					}
 ,
-					"text" : "pattrstorage model_pattrstorage @greedy 1 @changemode 1 @outputmode 4",
+					"text" : "pattrstorage model_pattrstorage @greedy 1 @changemode 1 @outputmode 2",
 					"varname" : "model_pattrstorage"
 				}
 
@@ -172,7 +184,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 572.666652666666778, 298.45703125, 30.0, 30.0 ]
+					"patching_rect" : [ 572.666652666666778, 396.45703125, 30.0, 30.0 ]
 				}
 
 			}
@@ -206,7 +218,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-113", 0 ]
 				}
 

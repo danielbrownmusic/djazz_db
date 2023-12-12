@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -384,7 +384,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
-					"order" : 4,
+					"order" : 1,
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -400,7 +400,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
-					"order" : 2,
+					"order" : 4,
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -416,7 +416,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-59", 0 ],
-					"order" : 1,
+					"order" : 2,
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -451,14 +451,14 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "djazz_PARAMS_MIDI_GEN.maxpat",
+				"name" : "djazz_PARAMS_VIEW_midi_gen.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_PARAMS_VIEW_MIDI_GEN.maxpat",
+				"name" : "djazz_PARAMS_midi_gen.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
