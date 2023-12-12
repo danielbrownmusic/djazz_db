@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 470.0, 215.0, 1520.0, 666.0 ],
+		"rect" : [ 4005.0, 92.0, 1520.0, 666.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -47,18 +47,6 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 21.0, 104.0, 53.0, 22.0 ],
 					"text" : "pattrhub"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-16",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 668.0625, 413.0, 59.0, 22.0 ],
-					"text" : "route text"
 				}
 
 			}
@@ -173,13 +161,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-29",
+					"linecount" : 7,
 					"maxclass" : "textedit",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 555.5, 287.0, 135.0, 59.0 ],
-					"text" : "NONE",
+					"text" : "Macintosh HD:/Users/danielbrown/Desktop/song_data/AutumnleavesDoMin/new/AutumnleavesDoMin-new-07.04.2012-11-15.txt",
 					"varname" : "textedit"
 				}
 
@@ -472,13 +461,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-47", 0 ],
-					"source" : [ "obj-16", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-43", 0 ],
 					"source" : [ "obj-17", 0 ]
 				}
@@ -530,13 +512,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-55", 0 ],
 					"source" : [ "obj-28", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-16", 0 ],
-					"source" : [ "obj-29", 0 ]
 				}
 
 			}
@@ -643,6 +618,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
 					"source" : [ "obj-6", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-47", 0 ],
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
