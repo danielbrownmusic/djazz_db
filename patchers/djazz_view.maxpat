@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -45,7 +45,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 39.0, 108.0, 53.0, 22.0 ],
+					"patching_rect" : [ 143.0, 24.0, 53.0, 22.0 ],
 					"text" : "pattrhub"
 				}
 
@@ -268,20 +268,20 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-1",
-					"linecount" : 5,
+					"linecount" : 4,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 87.0, 179.000000031250011, 112.0, 76.0 ],
+					"patching_rect" : [ 39.0, 199.0, 108.0, 62.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 4, 87, 598, 1129 ],
+						"client_rect" : [ 100, 100, 500, 600 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
-						"storage_rect" : [ 583, 69, 1034, 197 ]
+						"storage_rect" : [ 200, 200, 800, 500 ]
 					}
 ,
-					"text" : "pattrstorage view_pattrstorage @greedy 1 @changemode 1 @outputmode 4",
+					"text" : "pattrstorage view_pattrstorage @greedy 1 @outputmode 4",
 					"varname" : "view_pattrstorage"
 				}
 
@@ -354,7 +354,7 @@
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-1", 0 ],
 					"watchpoint_flags" : 1,
-					"watchpoint_id" : 21
+					"watchpoint_id" : 22
 				}
 
 			}
@@ -444,7 +444,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
+					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-60", 0 ]
 				}
 
@@ -462,6 +462,13 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_PARAMS_VIEW_master.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{

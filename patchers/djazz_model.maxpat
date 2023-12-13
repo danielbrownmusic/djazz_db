@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 778.0, 157.0, 916.0, 537.0 ],
+		"rect" : [ 233.0, 148.0, 916.0, 537.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -97,7 +97,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 368.666652666666778, 260.228516000000013, 134.666666666666742, 22.0 ],
+					"patching_rect" : [ 368.666652666666778, 270.228516000000013, 134.666666666666742, 22.0 ],
 					"text" : "djazz_midi_out_bank",
 					"varname" : "midi_out_bank"
 				}
@@ -119,12 +119,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-1",
-					"linecount" : 5,
+					"linecount" : 4,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 572.666652666666778, 213.228515625, 115.0, 76.0 ],
+					"patching_rect" : [ 572.666652666666778, 213.228515625, 116.0, 62.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 4, 87, 598, 1129 ],
 						"parameter_enable" : 0,
@@ -132,7 +132,7 @@
 						"storage_rect" : [ 583, 69, 1034, 197 ]
 					}
 ,
-					"text" : "pattrstorage model_pattrstorage @greedy 1 @changemode 1 @outputmode 2",
+					"text" : "pattrstorage model_pattrstorage @greedy 1 @outputmode 4",
 					"varname" : "model_pattrstorage"
 				}
 
@@ -195,7 +195,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 136.0, 260.228516000000013, 154.0, 22.0 ],
+					"patching_rect" : [ 136.0, 270.228516000000013, 154.0, 22.0 ],
 					"text" : "djazz_midi_player player_1",
 					"varname" : "midi_gen_1"
 				}

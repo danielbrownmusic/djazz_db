@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 681.0, 142.0, 906.0, 993.0 ],
+		"rect" : [ 440.0, 202.0, 906.0, 993.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 97.0, 110.0, 63.0, 22.0 ],
+					"text" : "route beat"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-22",
 					"maxclass" : "newobj",
@@ -408,7 +420,7 @@
 									"destination" : [ "obj-13", 0 ],
 									"source" : [ "obj-10", 0 ],
 									"watchpoint_flags" : 1,
-									"watchpoint_id" : 18
+									"watchpoint_id" : 30
 								}
 
 							}
@@ -447,7 +459,7 @@
 									"destination" : [ "obj-9", 0 ],
 									"source" : [ "obj-12", 0 ],
 									"watchpoint_flags" : 1,
-									"watchpoint_id" : 19
+									"watchpoint_id" : 31
 								}
 
 							}
@@ -994,8 +1006,15 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-52", 0 ],
+					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-79", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-52", 0 ],
+					"source" : [ "obj-8", 0 ]
 				}
 
 			}
