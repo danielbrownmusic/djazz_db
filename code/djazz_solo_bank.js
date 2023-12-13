@@ -14,6 +14,6 @@ function setvalueof(solos)
 {
     for (var i = 0; i < count; i++)
     {
-        outlet(i, solos[i]);
+        outlet(i, "active", solos[i]);
     }
 }

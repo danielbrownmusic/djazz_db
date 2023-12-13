@@ -248,21 +248,21 @@ get_track_components_mgr_.local = 1;
 
 function set_solo_bank_ctrl_()
 {
-    var solo_bank_ctrl = this.patcher.getnamed("solo_bank_ctrl");
-    if (solo_bank_ctrl)
+    var solo_bank = this.patcher.getnamed("solo_bank");
+    if (solo_bank)
     {
-        this.patcher.remove(solo_bank_ctrl);
+        this.patcher.remove(solo_bank);
     }
 
     var n = tracks_.length;
     if (n === 0)
         return;
 
-    solo_bank_ctrl = this.patcher.newdefault(x_solo_bank_ctrl, y_solo_bank_ctrl, "js", "djazz_solo_bank_ctrl.js", n);
-    solo_bank_ctrl.varname = "solo_bank_ctrl";
+    solo_bank = this.patcher.newdefault(x_solo_bank_ctrl, y_solo_bank_ctrl, "js", "djazz_solo_bank_ctrl.js", n);
+    solo_bank.varname = "solo_bank";
     for (var i = 0; i < n; i++)
     {      
-        this.patcher.connect(tracks_[i], 0, solo_bank_ctrl, i);
+        this.patcher.connect(tracks_[i], 0, solo_bank, i);
     }
 }
 set_solo_bank_ctrl_.local = 1;
