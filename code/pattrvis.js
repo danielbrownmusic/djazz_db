@@ -1,22 +1,52 @@
 autowatch = 1;
 
-var deep = 0;
+var deep    = 0;
+var vis     = 1;
 declareattribute("deep");
+
+
+function loadbang()
+{
+    if (jsarguments.length > 1)
+    {
+        var a = arrayfromargs(jsarguments)
+        post (a);
+        vis = jsarguments[1];
+        set_visibility_();
+    }
+}
+
+
+function bang()
+{
+    loadbang();
+}
+
 
 
 function msg_int(s)
 {
+    vis = s;
+    set_visibility_();
+}
+
+//------------------------------------------------------
+
+
+function set_visibility_()
+{
+    post (vis);
     var objs = get_connected_objs_();
     if (!objs)
         return;
-
+    post ("deep =", deep,"\n");
     objs.forEach 
     (
         function (obj)
         {
             var p = obj.subpatcher();
 
-            var func = s === 0 ? make_invisible_ : make_visible_;
+            var func = (vis === 0) ? make_invisible_ : make_visible_;
         
             if (deep > 0)
                 p.applydeepif(func, is_pattr_);
@@ -25,8 +55,8 @@ function msg_int(s)
         }        
     )
 }
+set_visibility_.local = 1;
 
-//------------------------------------------------------
 
 function make_invisible_(obj)
 {

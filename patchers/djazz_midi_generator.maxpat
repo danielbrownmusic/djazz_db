@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 210.0, 225.0, 871.0, 935.0 ],
+		"rect" : [ 193.0, 124.0, 604.0, 935.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -50,13 +50,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+						"rect" : [ 487.0, 211.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -84,6 +84,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-14",
@@ -104,7 +105,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 157.5, 100.0, 62.0, 35.0 ],
+									"patching_rect" : [ 157.5, 72.0, 62.0, 35.0 ],
 									"restore" : [ 0 ],
 									"saved_object_attributes" : 									{
 										"parameter_enable" : 0,
@@ -138,7 +139,7 @@
 									"outlettype" : [ "int" ],
 									"patching_rect" : [ 50.0, 289.0, 93.0, 22.0 ],
 									"text" : "djazz_beat_incr",
-									"varname" : "beat_clock"
+									"varname" : "beat_incr"
 								}
 
 							}
@@ -225,7 +226,7 @@
 					}
 ,
 					"text" : "p beat_clock",
-					"varname" : "patcher"
+					"varname" : "beat_clock"
 				}
 
 			}
