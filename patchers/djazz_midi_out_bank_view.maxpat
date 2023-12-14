@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 91.0, 107.0, 687.0, 778.0 ],
+		"rect" : [ 542.0, 116.0, 804.0, 870.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -145,7 +145,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 21.0, 429.0, 166.0, 62.0 ],
+					"patching_rect" : [ 21.0, 429.0, 133.0, 62.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 4, 44, 358, 172 ],
 						"parameter_enable" : 0,
@@ -153,8 +153,8 @@
 						"storage_rect" : [ 583, 69, 1034, 197 ]
 					}
 ,
-					"text" : "pattrstorage midi_out_bank_pattrstorage @greedy 1 @changemode 1 @outputmode 6",
-					"varname" : "midi_out_bank_pattrstorage"
+					"text" : "pattrstorage midi_out_pattrstorage @greedy 1 @outputmode 4",
+					"varname" : "midi_out_pattrstorage"
 				}
 
 			}

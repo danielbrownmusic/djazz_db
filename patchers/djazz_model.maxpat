@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 418.0, 288.0, 916.0, 537.0 ],
+		"rect" : [ 513.0, 320.0, 778.0, 519.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -41,11 +41,12 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-1",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 568.0, 306.0, 260.0, 22.0 ],
+					"patching_rect" : [ 620.666652666666778, 299.0, 334.0, 35.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 4, 44, 358, 172 ],
 						"parameter_enable" : 0,
@@ -53,8 +54,8 @@
 						"storage_rect" : [ 583, 69, 1034, 197 ]
 					}
 ,
-					"text" : "pattrstorage model @greedy 1 @outputmode 4",
-					"varname" : "model"
+					"text" : "pattrstorage model_pattrstorage @greedy 1 @outputmode 4 @activewritemode 1",
+					"varname" : "model_pattrstorage"
 				}
 
 			}
@@ -65,7 +66,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 629.666652666666778, 107.228515625, 53.0, 22.0 ],
+					"patching_rect" : [ 620.666652666666778, 115.228515625, 53.0, 22.0 ],
 					"text" : "pattrhub"
 				}
 
@@ -88,7 +89,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 719.666652666666778, 209.228515625, 78.0, 22.0 ],
+					"patching_rect" : [ 830.666652666666778, 209.228515625, 78.0, 22.0 ],
 					"text" : "print MODEL"
 				}
 
@@ -100,7 +101,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 719.666652666666778, 115.228515625, 172.0, 22.0 ],
+					"patching_rect" : [ 830.666652666666778, 115.228515625, 172.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_components_model.js",
 						"parameter_enable" : 0
@@ -158,7 +159,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 572.666652666666778, 18.999999624999987, 30.0, 30.0 ]
+					"patching_rect" : [ 620.666652666666778, 18.999999624999987, 30.0, 30.0 ]
 				}
 
 			}
@@ -171,7 +172,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 719.666652666666778, 18.999999624999987, 30.0, 30.0 ]
+					"patching_rect" : [ 830.666652666666778, 18.999999624999987, 30.0, 30.0 ]
 				}
 
 			}
@@ -183,7 +184,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 572.666652666666778, 396.45703125, 30.0, 30.0 ]
+					"patching_rect" : [ 620.666652666666778, 452.45703125, 30.0, 30.0 ]
 				}
 
 			}

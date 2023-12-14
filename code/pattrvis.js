@@ -3,31 +3,27 @@ autowatch = 1;
 var deep = 0;
 declareattribute("deep");
 
-if (jsarguments.length > 1)
+
+function msg_int(s)
 {
-    deep = jsarguments[1];
-}
-
-
-function bang()
-{
-
-    var obj     = get_connected_obj_();
-    if (!obj)
+    var objs = get_connected_objs_();
+    if (!objs)
         return;
 
-    var p = obj.subpatcher();
+    objs.forEach 
+    (
+        function (obj)
+        {
+            var p = obj.subpatcher();
 
-    if (deep >= 0)
-        p.applydeepif(make_invisible_, is_pattr_);
-    else
-        p.applyif(make_invisible_, is_pattr_);
-}
-
-
-function loadbang()
-{
-    bang();
+            var func = s === 0 ? make_invisible_ : make_visible_;
+        
+            if (deep > 0)
+                p.applydeepif(func, is_pattr_);
+            else
+                p.applyif(func, is_pattr_);        
+        }        
+    )
 }
 
 //------------------------------------------------------
@@ -39,12 +35,20 @@ function make_invisible_(obj)
 make_invisible_.local = 1;
 
 
-function get_connected_obj_()
+function make_visible_(obj)
 {
-    var obj = this.box.patchcords.outputs[0].dstobject;
-    return obj;
+    obj.message("invisible", 0);
 }
-get_connected_obj_.local = 1;
+make_visible_.local = 1;
+
+//------------------------------------------------------
+
+function get_connected_objs_()
+{
+    var objs = this.box.patchcords.outputs.map(function (obj) { return obj.dstobject; } );
+    return objs;
+}
+get_connected_objs_.local = 1;
 
 
 function is_pattr_(obj)

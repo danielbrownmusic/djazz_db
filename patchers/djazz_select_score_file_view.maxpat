@@ -96,7 +96,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 292.0, 416.0, 65.0, 35.0 ],
-					"restore" : [ 0 ],
+					"restore" : [ "AutumnleavesDoMin-grid.txt" ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -206,6 +206,7 @@
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 197.5, 556.0, 208.0, 22.0 ],
+					"pattrmode" : 1,
 					"prefix" : "~/Documents/Max 8/Packages/Djazz MIDI 2023/AutumnleavesDoMin/grid",
 					"presentation" : 1,
 					"presentation_rect" : [ 88.0, 0.0, 392.0, 22.0 ],

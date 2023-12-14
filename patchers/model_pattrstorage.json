@@ -1,0 +1,17 @@
+{
+	"pattrstorage" : 	{
+		"name" : "model_pattrstorage",
+		"slots" : 		{
+
+		}
+,
+		"clientstate" : 		{
+			"active" : 			{
+				"master::params" : 0
+			}
+
+		}
+
+	}
+
+}
