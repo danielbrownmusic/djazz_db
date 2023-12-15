@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 120.0, 192.0, 684.0, 764.0 ],
+		"rect" : [ 4241.0, 194.0, 684.0, 764.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,17 +40,6 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 426.0, 260.0, 117.0, 22.0 ],
-					"text" : "print BANK_MODEL"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"comment" : "component messages",
 					"id" : "obj-6",
 					"index" : 3,
@@ -58,7 +47,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 426.0, 27.0, 30.0, 30.0 ]
+					"patching_rect" : [ 438.0, 27.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -69,7 +58,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 195.0, 169.0, 56.0, 22.0 ],
+					"patching_rect" : [ 313.25, 169.0, 56.0, 22.0 ],
 					"restore" : 					{
 
 					}
@@ -86,7 +75,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 195.0, 105.0, 53.0, 22.0 ],
+					"patching_rect" : [ 191.5, 169.0, 53.0, 22.0 ],
 					"text" : "pattrhub"
 				}
 
@@ -113,7 +102,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 195.0, 27.0, 30.0, 30.0 ]
+					"patching_rect" : [ 191.5, 27.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -138,7 +127,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 426.0, 169.0, 217.0, 22.0 ],
+					"patching_rect" : [ 438.0, 169.0, 217.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_components_midi_out_bank.js",
 						"parameter_enable" : 0
@@ -146,37 +135,6 @@
 ,
 					"text" : "js djazz_components_midi_out_bank.js",
 					"varname" : "components"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-8",
-					"maxclass" : "newobj",
-					"numinlets" : 3,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 33.0, 440.0, 121.0, 22.0 ],
-					"text" : "djazz_midi_out_track",
-					"varname" : "track_0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-9",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 84.0, 260.0, 132.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"filename" : "djazz_solo_bank.js",
-						"parameter_enable" : 0
-					}
-,
-					"text" : "js djazz_solo_bank.js 1",
-					"varname" : "solo_bank"
 				}
 
 			}
@@ -190,36 +148,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
-					"source" : [ "obj-308", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-308", 0 ],
 					"source" : [ "obj-6", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"source" : [ "obj-8", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 1 ],
-					"source" : [ "obj-9", 0 ]
 				}
 
 			}

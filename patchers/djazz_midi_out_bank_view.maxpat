@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 542.0, 116.0, 804.0, 870.0 ],
+		"rect" : [ 542.0, 116.0, 1363.0, 1001.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -54,7 +54,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 454.0, 460.0, 126.0, 31.0 ],
+					"patching_rect" : [ 21.0, 435.0, 126.0, 31.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 213.0, 0.0, 126.0, 31.0 ],
 					"viewvisibility" : 1
@@ -77,21 +77,10 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 250.0, 460.0, 187.0, 31.0 ],
+					"patching_rect" : [ 21.0, 340.0, 187.0, 31.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 297.0, 59.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 194.0, 31.0 ],
 					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 454.0, 687.5, 105.0, 22.0 ],
-					"text" : "print BANK_VIEW"
 				}
 
 			}
@@ -103,7 +92,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 225.0, 687.5, 30.0, 30.0 ],
+					"patching_rect" : [ 225.0, 775.5, 30.0, 30.0 ],
 					"varname" : "components_outlet"
 				}
 
@@ -133,7 +122,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 21.0, 609.5, 30.0, 30.0 ]
+					"patching_rect" : [ 21.0, 775.5, 30.0, 30.0 ]
 				}
 
 			}
@@ -145,7 +134,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 21.0, 429.0, 133.0, 62.0 ],
+					"patching_rect" : [ 21.0, 612.0, 133.0, 62.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 4, 44, 358, 172 ],
 						"parameter_enable" : 0,
@@ -203,7 +192,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 225.0, 547.0, 248.0, 22.0 ],
+					"patching_rect" : [ 225.0, 652.0, 248.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_components_midi_out_bank_view.js",
 						"parameter_enable" : 0
@@ -226,13 +215,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-308", 0 ],
 					"source" : [ "obj-12", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-308", 1 ]
 				}
 
 			}

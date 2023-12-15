@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 436.0, 162.0, 400.0, 845.0 ],
+		"rect" : [ 436.0, 162.0, 1115.0, 919.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,7 +40,7 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "params to grid_ctrl (name + value): bar, chapter, loop_chapter",
+					"comment" : "(name + value): bar, chapter, loop_chapter",
 					"id" : "obj-12",
 					"index" : 0,
 					"maxclass" : "outlet",
@@ -210,7 +210,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "params from grid_view_ctrl (name + value): grid, chapter_count",
+					"comment" : "(name + value): grid, chapter_count",
 					"id" : "obj-104",
 					"index" : 0,
 					"maxclass" : "inlet",
@@ -239,6 +239,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
+					"midpoints" : [ 731.5, 694.5, 36.500000000000007, 694.5 ],
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -340,6 +341,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
+					"midpoints" : [ 466.0, 694.5, 36.500000000000007, 694.5 ],
 					"source" : [ "obj-9", 0 ]
 				}
 

@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 73.0, 195.0, 1511.0, 703.0 ],
+		"rect" : [ 175.0, 327.0, 1511.0, 703.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,13 +40,26 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-10",
-					"maxclass" : "message",
+					"id" : "obj-12",
+					"maxclass" : "newobj",
 					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 138.0, 269.0, 133.0, 22.0 ],
+					"text" : "routepass clientwindow"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-9",
+					"index" : 0,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 89.0, 107.0, 217.0, 22.0 ],
-					"text" : "midi_gen_1::view_params::beat 34"
+					"patching_rect" : [ 145.0, 16.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -119,7 +132,7 @@
 					"patching_rect" : [ 1027.0, 356.499999937499979, 980.5, 296.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 6.0, 485.499999968749989, 1028.0, 319.0 ],
-					"varname" : "midi_out",
+					"varname" : "midi_out_bank",
 					"viewvisibility" : 1
 				}
 
@@ -379,6 +392,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-12", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-37", 0 ],
 					"source" : [ "obj-13", 0 ]
 				}
@@ -460,16 +480,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 1 ],
-					"order" : 0,
-					"source" : [ "obj-60", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
-					"order" : 1,
 					"source" : [ "obj-60", 0 ]
 				}
 
@@ -479,6 +490,13 @@
 					"destination" : [ "obj-47", 1 ],
 					"midpoints" : [ 349.5, 336.749999953124984, 847.5, 336.749999953124984 ],
 					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}

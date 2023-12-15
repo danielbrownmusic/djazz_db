@@ -6,6 +6,12 @@ var value   = make_array_(count, 1);
 
 inlets      = count !== 0 ? count : 1;
 
+for (var i = 0; i < count; i++)
+{
+    var str = ["(int: 0 or 1) from solo out of track view", i].join(" ");
+    setinletassist(i, str);
+}
+setoutletassist(0, "(list) outputs list of active tracks when a new solo value is sent in");
 
 function clear()
 {

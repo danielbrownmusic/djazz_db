@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 59.0, 119.0, 663.0, 749.0 ],
+		"rect" : [ 333.0, 160.0, 663.0, 749.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -152,7 +152,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "(list: symbol int int) status, bar, bar count",
 					"id" : "obj-33",
 					"index" : 0,
 					"maxclass" : "inlet",
@@ -165,7 +165,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "(int) bar",
 					"id" : "obj-34",
 					"index" : 0,
 					"maxclass" : "outlet",
