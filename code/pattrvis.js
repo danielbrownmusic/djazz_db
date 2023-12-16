@@ -1,19 +1,14 @@
 autowatch = 1;
 
-var deep    = 0;
-var vis     = 1;
+var vis     = jsarguments.length > 1 ? jsarguments[1] : 1;
+var deep    = jsarguments.length > 2 ? jsarguments[2] : 0;
+
 declareattribute("deep");
 
 
 function loadbang()
 {
-    if (jsarguments.length > 1)
-    {
-        var a = arrayfromargs(jsarguments)
-        post (a);
-        vis = jsarguments[1];
-        set_visibility_();
-    }
+    set_visibility_();
 }
 
 
@@ -21,7 +16,6 @@ function bang()
 {
     loadbang();
 }
-
 
 
 function msg_int(s)
@@ -35,11 +29,11 @@ function msg_int(s)
 
 function set_visibility_()
 {
-    post (vis);
+    //post (vis);
     var objs = get_connected_objs_();
     if (!objs)
         return;
-    post ("deep =", deep,"\n");
+    //post ("deep =", deep,"\n");
     objs.forEach 
     (
         function (obj)

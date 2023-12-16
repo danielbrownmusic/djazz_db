@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1016.0, 151.0, 756.0, 869.0 ],
+		"rect" : [ 814.0, 110.0, 756.0, 869.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -60,7 +60,7 @@
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 524.666666666666515, 92.0, 207.0, 76.0 ],
-					"text" : "Macintosh HD:/Users/danielbrown/Desktop/test_djazz/AutumnleavesDoMin/new/AutumnleavesDoMin-new-2013.10.28-08h12.txt",
+					"text" : "Macintosh HD:/Users/danielbrown/Desktop/test_djazz/AutumnleavesDoMin/new/AutumnleavesDoMin-new-2013.10.28-08h29.txt",
 					"varname" : "textedit"
 				}
 
@@ -503,9 +503,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-3", 0 ],
-									"source" : [ "obj-10", 0 ],
-									"watchpoint_flags" : 1,
-									"watchpoint_id" : 2
+									"source" : [ "obj-10", 0 ]
 								}
 
 							}
@@ -533,18 +531,14 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-7", 0 ],
-									"source" : [ "obj-25", 0 ],
-									"watchpoint_flags" : 5,
-									"watchpoint_id" : 6
+									"source" : [ "obj-25", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-4", 0 ],
-									"source" : [ "obj-3", 1 ],
-									"watchpoint_flags" : 1,
-									"watchpoint_id" : 3
+									"source" : [ "obj-3", 1 ]
 								}
 
 							}
@@ -560,9 +554,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-10", 0 ],
-									"source" : [ "obj-41", 0 ],
-									"watchpoint_flags" : 1,
-									"watchpoint_id" : 1
+									"source" : [ "obj-41", 0 ]
 								}
 
 							}
@@ -1344,9 +1336,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-20", 0 ],
-					"source" : [ "obj-29", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 9
+					"source" : [ "obj-29", 0 ]
 				}
 
 			}
@@ -1409,9 +1399,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-6", 0 ],
-					"source" : [ "obj-5", 1 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 10
+					"source" : [ "obj-5", 1 ]
 				}
 
 			}
@@ -1425,18 +1413,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-44", 0 ],
-					"source" : [ "obj-6", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 5
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-33", 0 ],
-					"source" : [ "obj-7", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 8
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}
@@ -1450,9 +1434,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
-					"source" : [ "obj-9", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 4
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}

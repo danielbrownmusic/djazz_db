@@ -284,7 +284,7 @@ function make_funnel_()
     this.patcher.connect(funnel, 0, this.box, 1);
     for (var i = 0; i < n; i++)
     {
-        this.patcher.connect(tracks_[i], 2, funnel, i);
+        this.patcher.connect(tracks_[i], 1, funnel, i);
     }
     funnel.varname = "funnel";
 }
