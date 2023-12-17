@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 64.0, 128.0, 1588.0, 859.0 ],
+		"rect" : [ 43.0, 150.0, 1649.0, 866.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,32 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-6",
+					"lockeddragscroll" : 0,
+					"lockedsize" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "djazz_master_view_beat_out.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ 599.766680999999949, 370.0, 33.0, 33.5 ],
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-21",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
-					"patching_rect" : [ 141.916681533334213, 499.0, 176.0, 22.0 ],
+					"patching_rect" : [ 141.916681533334213, 160.0, 176.0, 22.0 ],
 					"text" : "t s b"
 				}
 
@@ -570,32 +590,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-48",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 599.766681333334418, 376.5, 32.0, 32.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 492.766681333334418, 2.25, 32.0, 32.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-46",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 599.766681333334418, 327.5, 63.0, 22.0 ],
-					"text" : "route beat"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-38",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -776,10 +770,10 @@
 				"box" : 				{
 					"id" : "obj-17",
 					"maxclass" : "newobj",
-					"numinlets" : 0,
+					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 472.916681533334213, 206.0, 204.0, 22.0 ],
+					"patching_rect" : [ 472.916681533334213, 248.0, 204.0, 22.0 ],
 					"text" : "djazz_PARAMS_VIEW_master_view",
 					"textcolor" : [ 1.0, 0.792156862745098, 0.909803921568627, 1.0 ],
 					"varname" : "view_params"
@@ -972,7 +966,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 298.833363066668426, 583.0, 82.0, 22.0 ],
+					"patching_rect" : [ 298.916681533334213, 218.0, 82.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "pattrinit.js",
 						"parameter_enable" : 0
@@ -1059,8 +1053,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-46", 0 ],
-					"midpoints" : [ 482.416681533334213, 297.0, 609.266681333334418, 297.0 ],
+					"destination" : [ "obj-6", 0 ],
+					"midpoints" : [ 482.416681533334213, 297.5, 609.266680999999949, 297.5 ],
 					"order" : 1,
 					"source" : [ "obj-17", 0 ]
 				}
@@ -1071,7 +1065,9 @@
 					"destination" : [ "obj-85", 0 ],
 					"midpoints" : [ 482.416681533334213, 297.0, 1255.416681533334213, 297.0 ],
 					"order" : 0,
-					"source" : [ "obj-17", 0 ]
+					"source" : [ "obj-17", 0 ],
+					"watchpoint_flags" : 5,
+					"watchpoint_id" : 8
 				}
 
 			}
@@ -1086,7 +1082,9 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
-					"source" : [ "obj-21", 1 ]
+					"source" : [ "obj-21", 1 ],
+					"watchpoint_flags" : 1,
+					"watchpoint_id" : 10
 				}
 
 			}
@@ -1107,15 +1105,8 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-27", 0 ],
-					"midpoints" : [ 308.333363066668426, 658.09360898437501, 151.333363533334222, 658.09360898437501 ],
+					"midpoints" : [ 308.416681533334213, 658.09360898437501, 151.333363533334222, 658.09360898437501 ],
 					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-48", 0 ],
-					"source" : [ "obj-46", 0 ]
 				}
 
 			}
@@ -1243,6 +1234,13 @@
 			}
 , 			{
 				"name" : "djazz_master_clock_view_ctrl.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_master_view_beat_out.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",

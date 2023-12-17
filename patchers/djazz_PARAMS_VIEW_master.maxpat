@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 117.0, 501.0, 1337.0, 480.0 ],
+		"rect" : [ 117.0, 501.0, 458.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -111,7 +111,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 31.0, 131.0, 38.0, 35.0 ],
+					"patching_rect" : [ 31.0, 131.0, 39.0, 35.0 ],
 					"text" : "route beat"
 				}
 
@@ -308,8 +308,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 80.0, 131.0, 36.0, 35.0 ],
-					"restore" : [ 192 ],
 					"saved_object_attributes" : 					{
+						"initial" : [ -1 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
 					}
@@ -323,7 +323,7 @@
 				"box" : 				{
 					"id" : "obj-50",
 					"maxclass" : "number",
-					"minimum" : 0,
+					"minimum" : -1,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],

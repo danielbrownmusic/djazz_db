@@ -12,12 +12,12 @@ function loadbang()
 
 function bang()
 {
-    set_visibility_()
+    init_pattrs_()
 }
 
 // ---------------------------------------------------------
 
-function set_visibility_()
+function init_pattrs_()
 {
     var objs = get_connected_objs_();
 
@@ -36,7 +36,7 @@ function set_visibility_()
         }        
     )
 }
-set_visibility_.local = 1;
+init_pattrs_.local = 1;
 
 
 function get_connected_objs_()
@@ -56,6 +56,7 @@ is_pattr_.local = 1;
 
 function init_pattr_(obj)
 {
+    post (obj.varname);
     obj.message("init");
 }
 init_pattr_.local = 1;

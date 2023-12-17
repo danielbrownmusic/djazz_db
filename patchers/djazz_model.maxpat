@@ -66,7 +66,13 @@
 , 			{
 				"box" : 				{
 					"active" : 					{
-						"master::params" : 0
+						"master::params" : 0,
+						"master::params::loop_section_start" : 0,
+						"master::params::loop_section_end" : 0,
+						"master::params::start_beat" : 0,
+						"master::params::end_beat" : 0,
+						"master::params::tempo" : 0,
+						"master::params::metro" : 0
 					}
 ,
 					"autorestore" : "model_pattrstorage.json",
@@ -76,15 +82,15 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 680.666652666666778, 179.0, 115.0, 62.0 ],
+					"patching_rect" : [ 680.666652666666778, 179.0, 122.0, 62.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 4, 100, 358, 526 ],
+						"client_rect" : [ 1227, 100, 1699, 930 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
 						"storage_rect" : [ 583, 69, 1034, 197 ]
 					}
 ,
-					"text" : "pattrstorage model_pattrstorage @greedy 1 @outputmode 4",
+					"text" : "pattrstorage model_pattrstorage @greedy 1 @outputmode 3",
 					"varname" : "model_pattrstorage"
 				}
 
@@ -135,9 +141,9 @@
 				"box" : 				{
 					"id" : "obj-6",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
+					"outlettype" : [ "clear" ],
 					"patching_rect" : [ 32.0, 115.228516000000013, 123.0, 22.0 ],
 					"text" : "djazz_master_control",
 					"varname" : "master"

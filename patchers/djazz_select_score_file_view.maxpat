@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 527.0, 217.0, 789.0, 932.0 ],
+		"rect" : [ 485.0, 215.0, 789.0, 778.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -77,7 +77,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "(symbol) full path of chosen score file",
+					"comment" : "(symbol) full path of chosen score file; \"clear\" if cleared",
 					"id" : "obj-5",
 					"index" : 0,
 					"maxclass" : "outlet",
@@ -207,7 +207,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 197.5, 556.0, 208.0, 22.0 ],
 					"pattrmode" : 1,
-					"prefix" : "~/Documents/Max 8/Packages/Djazz MIDI 2023/AutumnleavesDoMin/grid",
+					"prefix" : "~/Documents/Max 8/Packages/Djazz MIDI 2023/AutumnleavesDoMin/grid/",
 					"presentation" : 1,
 					"presentation_rect" : [ 88.0, 0.0, 392.0, 22.0 ],
 					"types" : "TEXT",
@@ -279,7 +279,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
 					"midpoints" : [ 40.5, 273.5, 112.5, 273.5 ],
-					"order" : 1,
+					"order" : 2,
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -288,7 +288,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
 					"midpoints" : [ 40.5, 502.0, 207.0, 502.0 ],
-					"order" : 0,
+					"order" : 1,
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -297,6 +297,15 @@
 				"patchline" : 				{
 					"destination" : [ "obj-18", 0 ],
 					"source" : [ "obj-3", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"midpoints" : [ 40.5, 636.0, 301.5, 636.0 ],
+					"order" : 0,
+					"source" : [ "obj-3", 0 ]
 				}
 
 			}
