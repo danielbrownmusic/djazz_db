@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 285.0, 100.0, 1447.0, 945.0 ],
+		"rect" : [ 247.0, 100.0, 1447.0, 945.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -110,8 +110,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 500.5, 138.5, 29.5, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 4.0, 68.0, 29.5, 22.0 ],
-					"text" : "#1"
+					"presentation_rect" : [ 4.0, 68.0, 29.5, 22.0 ]
 				}
 
 			}
@@ -164,7 +163,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -332,8 +331,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 149.0, 425.5, 47.0, 22.0 ],
-					"text" : "solo $1"
+					"patching_rect" : [ 149.0, 425.5, 64.0, 22.0 ],
+					"text" : "solo #1 $1"
 				}
 
 			}

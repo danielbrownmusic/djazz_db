@@ -50,7 +50,7 @@ function solo()
 /*     if (s !== 0 || s !== 1)
         return; */      
     solos_[track_index] = soloed;
-    setvalueof(get_value_());
+    notifyclients();
 }
 
 

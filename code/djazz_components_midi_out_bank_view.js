@@ -188,7 +188,7 @@ function add_track_()
     track.subpatcher().getnamed("midi_out_channel").setvalueof(i + 1);
 
     var solo_bank = this.patcher.getnamed("solo_bank");
-    this.patcher.connect(track, 1, solo_bank, 0);    
+    this.patcher.connect(track, 0, solo_bank, 0);    
     solo_bank.message("count", tracks_.length);
     //make_funnel_();
 

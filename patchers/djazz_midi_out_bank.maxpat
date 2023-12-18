@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 531.0, 237.0, 1256.0, 857.0 ],
+		"rect" : [ 438.0, 237.0, 1256.0, 857.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -90,7 +90,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 481.25, 169.0, 56.0, 22.0 ],
 					"restore" : 					{
-
+						"solo_bank" : [ 1, 0, 0, 0 ]
 					}
 ,
 					"text" : "autopattr",
@@ -179,7 +179,9 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
-					"source" : [ "obj-4", 0 ]
+					"source" : [ "obj-4", 0 ],
+					"watchpoint_flags" : 5,
+					"watchpoint_id" : 8
 				}
 
 			}

@@ -38,7 +38,7 @@ function setvalueof()
     var any = any_();
     for (var i = 0; i < count; i++)
     {
-        var msg     = ["track_", i, "::active"].join();
+        var msg     = ["track_", i, "::active"].join("");
         var active  = any ? solos_[i] : 1;
         outlet(0, msg, active);
     }
