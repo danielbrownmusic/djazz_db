@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 107.0, 724.0, 976.0 ],
+		"rect" : [ 2462.0, 192.0, 724.0, 976.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -72,7 +72,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 345.0, 106.0, 119.0, 22.0 ],
 					"text" : "djazz_speed_control",
-					"varname" : "speed_ctrl"
+					"varname" : "speed"
 				}
 
 			}
@@ -85,7 +85,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 35.0, 703.666666666666742, 190.0, 22.0 ],
 					"text" : "djazz_loop_beats_settable_length",
-					"varname" : "loop_beat_ctrl"
+					"varname" : "loop_beats"
 				}
 
 			}

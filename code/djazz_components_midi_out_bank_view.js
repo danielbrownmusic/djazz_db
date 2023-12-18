@@ -175,7 +175,7 @@ function add_track_()
                                     y_patch, 
                                     "bpatcher", 
                                     "@name",                "djazz_midi_out_track_view", 
-                                    "@args",                track_name,
+                                    "@args",                i,
                                     "@presentation",        1,
                                     "@patching_rect",       patching_rect,
                                     "@presentation_rect",   presentation_rect
@@ -187,8 +187,10 @@ function add_track_()
     track.subpatcher().getnamed("midi_in_channel").setvalueof(i + 1);
     track.subpatcher().getnamed("midi_out_channel").setvalueof(i + 1);
 
-    set_solo_bank_ctrl_();
-    make_funnel_();
+    var solo_bank = this.patcher.getnamed("solo_bank");
+    this.patcher.connect(track, 1, solo_bank, 0);    
+    solo_bank.message("count", tracks_.length);
+    //make_funnel_();
 
     return track;
 }
@@ -210,8 +212,9 @@ function remove_last_track_()
     if (tracks_.length === 0)
         return;
     this.patcher.remove(tracks_.pop());
-    set_solo_bank_ctrl_();
-    make_funnel_();
+    this.patcher.getnamed("solo_bank").message("count", tracks_.length);
+    //set_solo_bank_ctrl_();
+    //make_funnel_();
 }
 remove_last_track_.local = 1;
 
@@ -246,29 +249,38 @@ function get_track_components_mgr_(track)
 get_track_components_mgr_.local = 1;
 
 
-function set_solo_bank_ctrl_()
+function set_size_()
 {
-    var solo_bank = this.patcher.getnamed("solo_bank");
-    if (solo_bank)
+    x_pres = tracks_.length * w_track;
+    size = [0, 0, x_pres, y_pres];
+}
+set_size_.local = 1;
+
+/* function set_solo_bank_ctrl_size_()
+{
+    var solo_bank = this.patcher.getnamed("solo_bank"); */
+/*     if (solo_bank)
     {
         this.patcher.remove(solo_bank);
-    }
+    } */
+/* 
+    var n = tracks_.length; */
 
-    var n = tracks_.length;
-    if (n === 0)
-        return;
 
-    solo_bank = this.patcher.newdefault(x_solo_bank_ctrl, y_solo_bank_ctrl, "js", "djazz_solo_bank_ctrl.js", n);
-    solo_bank.varname = "solo_bank";
-    for (var i = 0; i < n; i++)
+    /*     if (n === 0)
+        return; */
+
+    //solo_bank = this.patcher.newdefault(x_solo_bank_ctrl, y_solo_bank_ctrl, "js", "djazz_solo_bank_ctrl.js", n);
+    //solo_bank.varname = "solo_bank";
+    /* for (var i = 0; i < n; i++)
     {      
         this.patcher.connect(tracks_[i], 0, solo_bank, i);
-    }
-}
-set_solo_bank_ctrl_.local = 1;
+    } */
+/* } */
+/* set_solo_bank_ctrl_.local = 1; */
 
 
-function make_funnel_()
+/* function make_funnel_()
 {
     var funnel = this.patcher.getnamed("funnel");
     if (funnel)
@@ -287,12 +299,6 @@ function make_funnel_()
         this.patcher.connect(tracks_[i], 1, funnel, i);
     }
     funnel.varname = "funnel";
-}
+} */
 
 
-function set_size_()
-{
-    x_pres = tracks_.length * w_track;
-    size = [0, 0, x_pres, y_pres];
-}
-set_size_.local = 1;

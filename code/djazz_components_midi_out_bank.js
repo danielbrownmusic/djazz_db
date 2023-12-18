@@ -55,7 +55,7 @@ function add_track()
     var x               = events_inlet.rect[0] + w * i;
     var y               = 440;//this.box.rect[3] + 2 * h;
 
-    var track 		    = this.patcher.newdefault(x, y, "djazz_midi_out_track");
+    var track 		    = this.patcher.newdefault(x, y, "djazz_midi_out_track", i);
     track.varname 	    = "track_" + i;
 
     tracks_.push(track);
@@ -66,7 +66,8 @@ function add_track()
     this.patcher.connect(events_inlet, 0, track, 0);
     this.patcher.connect(track, 0, events_outlet, 0);
 
-    set_solo_bank_();
+    this.patcher.getnamed("solo_bank").message("count", tracks_.length);
+    //set_solo_bank_();
 
     return track;
 }
@@ -86,7 +87,8 @@ function remove_last_track()
     if (tracks_.length === 0)
         return;
     this.patcher.remove(tracks_.pop());
-    set_solo_bank_();
+    this.patcher.getnamed("solo_bank").message("count", tracks_.length);
+    //set_solo_bank_();
 }
 
 
@@ -135,7 +137,7 @@ function get_track_components_mgr_(track)
 get_track_components_mgr_.local = 1;
 
 
-function set_solo_bank_()
+/* function set_solo_bank_()
 {
     var solo_bank_ = this.patcher.getnamed("solo_bank");
     if (solo_bank_)
@@ -157,4 +159,4 @@ function set_solo_bank_()
         this.patcher.connect(solo_bank_, i, tracks_[i], 1);
     }
 }
-set_solo_bank_.local = 1;
+set_solo_bank_.local = 1; */

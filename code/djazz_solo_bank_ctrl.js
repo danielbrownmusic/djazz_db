@@ -1,86 +1,75 @@
 autowatch = 1;
 
-var count   = jsarguments.length > 1 ? jsarguments[1] : 0;
-var solos   = make_array_(count, 0);
-var value   = make_array_(count, 1);
+var solos_  = [];
+var count   = 0;
+declareattribute("count", null, "set_count");
 
-inlets      = count !== 0 ? count : 1;
+//var value   = make_array_(count, 1);
+//inlets      = count !== 0 ? count : 1;
 
-for (var i = 0; i < count; i++)
+setinletassist(0, "set_size + int; solo + track_index + soloed (0 or 1)");
+/* for (var i = 0; i < count; i++)
 {
     var str = ["(int: 0 or 1) from solo out of track view", i].join(" ");
     setinletassist(i, str);
-}
+} */
 setoutletassist(0, "(list) outputs list of active tracks when a new solo value is sent in");
+
+
+function set_count(n)
+{
+    if (n < count)
+    {
+        solos_.splice(n, count - n);
+    }
+    else if (n > count)
+    {
+        for (var i = count; i < n; i++)
+        {
+            solos_.push(0);
+        }
+    }
+    count = n;
+}
+
 
 function clear()
 {
     for (var i = 0; i < count; i++)
     {
-        solos[i] = 0;
+        solos_[i] = 0;
     }
     setvalueof(get_value_());
-    notifyclients();
 }
 
 
-function msg_int(s)
+function solo()
 {
+    var track_index = arguments[0];
+    var soloed      = arguments[1];
 /*     if (s !== 0 || s !== 1)
-        return; */
-    solos[inlet] = s;
+        return; */      
+    solos_[track_index] = soloed;
     setvalueof(get_value_());
-    notifyclients();
 }
 
 
-
-function setvalueof(val)
+function setvalueof()
 {
-    value = val;
-    outlet (0, value);
+    post ("setting value in view:\n");
+    solos_ = arrayfromargs(arguments);
+    for (var i = 0; i < count; i++)
+    {
+        outlet (0, "solo", i, solos_[i]);
+    }
+    post (solos_, "\n");
 }
 
 
 function getvalueof()
 {
-    return value;
+    post ("getting value in view:\n");
+    post (solos_);
+    post("\n");
+    return solos_;
 }
-
-
-// ---------------------
-
-function get_value_()
-{
-    return any_() ? solos : all_ones_();    
-}
-
-
-function any_()
-{
-    return sum_array_(solos) > 0;
-}
-any_.local = 1;
-
-
-function sum_array_(a)
-{
-    return a.reduce( function (partial_sum, s) { return partial_sum + s; } )
-}
-sum_array_.local = 1
-
-
-function make_array_(len, val)
-{
-    return Array.apply(null, Array(len)).map( function() { return val; });
-}
-make_array_.local = 1;
-
-
-function all_ones_()
-{
-    return make_array_(count, 1);
-}
-all_ones_.local = 1;
-
-
