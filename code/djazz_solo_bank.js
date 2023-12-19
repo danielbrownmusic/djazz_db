@@ -32,7 +32,7 @@ function set_count(n)
 
 function setvalueof()
 {
-    post ("setting value in model:\n");
+    //post ("setting value in model:\n");
     solos_ = arrayfromargs(arguments);
 
     var any = any_();
@@ -42,15 +42,15 @@ function setvalueof()
         var active  = any ? solos_[i] : 1;
         outlet(0, msg, active);
     }
-    post (solos_, "\n");
+    //post (solos_, "\n");
 }
 
 
 function getvalueof()
 {
-    post ("getting value in model:\n");
+/*     post ("getting value in model:\n");
     post (solos_);
-    post("\n");
+    post("\n"); */
     return solos_;
 }
 

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 758.0, 108.0, 863.0, 1001.0 ],
+		"rect" : [ 3169.0, 134.0, 863.0, 1001.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -124,7 +124,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 21.0, 197.0, 56.0, 22.0 ],
 					"restore" : 					{
-
+						"solo_bank" : [ 0, 0 ]
 					}
 ,
 					"text" : "autopattr",
@@ -154,7 +154,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 21.0, 612.0, 133.0, 62.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 4, 44, 358, 172 ],
+						"client_rect" : [ 1729, 109, 2207, 640 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
 						"storage_rect" : [ 583, 69, 1034, 197 ]

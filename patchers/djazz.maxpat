@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 38.0, 100.0, 1144.0, 972.0 ],
+		"rect" : [ 57.0, 136.0, 1144.0, 972.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 982.142882406711578, 884.0, 31.0, 22.0 ],
+					"text" : "t s s"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-13",
 					"maxclass" : "message",
@@ -242,7 +254,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "bang", "", "" ],
+					"outlettype" : [ "", "bang", "" ],
 					"patching_rect" : [ 32.142882406711578, 12.33468631033611, 1047.0, 815.0 ],
 					"varname" : "view",
 					"viewvisibility" : 1
@@ -349,17 +361,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-57", 3 ],
-					"order" : 1,
-					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-65", 1 ],
-					"midpoints" : [ 991.642882406711578, 868.0, 1086.642882406711578, 868.0, 1086.642882406711578, 1.33468631033611, 1069.642882406711578, 1.33468631033611 ],
-					"order" : 0,
+					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -401,6 +403,21 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-57", 3 ],
+					"source" : [ "obj-4", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-65", 1 ],
+					"midpoints" : [ 991.642882406711578, 948.0, 1086.642882406711578, 948.0, 1086.642882406711578, 1.33468631033611, 1069.642882406711578, 1.33468631033611 ],
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-5", 0 ]
 				}
@@ -430,17 +447,17 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-57", 1 ],
-					"source" : [ "obj-65", 1 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 1
+					"destination" : [ "obj-57", 0 ],
+					"source" : [ "obj-65", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-57", 0 ],
-					"source" : [ "obj-65", 0 ]
+					"destination" : [ "obj-57", 1 ],
+					"source" : [ "obj-65", 0 ],
+					"watchpoint_flags" : 5,
+					"watchpoint_id" : 5
 				}
 
 			}
@@ -593,6 +610,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "djazz_beat_bar_chapter_to_beat.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "djazz_beat_incr.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
@@ -607,14 +631,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_beat_to_chapter_bar_beat_format.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_chapter_bar_beat_format_to_beat.maxpat",
+				"name" : "djazz_beat_to_beat_bar_chapter.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -898,13 +915,6 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_pattr_comm.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{

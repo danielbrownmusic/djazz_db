@@ -2,12 +2,12 @@
     "items" : ["", "add octaves", "pitch shift"],
     "effects" : {
         "add octaves" : {
-            "patcher" : "djazz_add_semitones",
+            "patcher" : "djazz_add_octaves",
             "controller" : "djazz_add_octaves_controller" 
         }
         ,
         "pitch shift" : {
-            "patcher" : "djazz_add_semitones",
+            "patcher" : "djazz_pitch_shift",
             "controller" : "djazz_pitch_shift_controller" 
         }
     }

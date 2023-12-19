@@ -56,20 +56,20 @@ function solo()
 
 function setvalueof()
 {
-    post ("setting value in view:\n");
+    //post ("setting value in view:\n");
     solos_ = arrayfromargs(arguments);
     for (var i = 0; i < count; i++)
     {
         outlet (0, "solo", i, solos_[i]);
     }
-    post (solos_, "\n");
+    //post (solos_, "\n");
 }
 
 
 function getvalueof()
 {
-    post ("getting value in view:\n");
+/*     post ("getting value in view:\n");
     post (solos_);
-    post("\n");
+    post("\n"); */
     return solos_;
 }

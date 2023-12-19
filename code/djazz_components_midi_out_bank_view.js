@@ -1,5 +1,8 @@
 var dutils = require("db_dictionary_array_utils");
 
+setinletassist  (0, "messages: clear, add_track, add_tracks + int, remove_last_track, remove_last_tracks + n, set_global (midi out port), track + int + msg + args");
+setoutletassist (0, "for log/debug: component messages sent to tracks");
+
 autowatch       = 1;
 inlets          = 2;
 outlets         = 2;
@@ -187,8 +190,10 @@ function add_track_()
     track.subpatcher().getnamed("midi_in_channel").setvalueof(i + 1);
     track.subpatcher().getnamed("midi_out_channel").setvalueof(i + 1);
 
+    this.patcher.connect(track, 0, this.box, 1);
+
     var solo_bank = this.patcher.getnamed("solo_bank");
-    this.patcher.connect(track, 0, solo_bank, 0);    
+    this.patcher.connect(track, 1, solo_bank, 0);    
     solo_bank.message("count", tracks_.length);
     //make_funnel_();
 
@@ -279,8 +284,8 @@ set_size_.local = 1;
 /* } */
 /* set_solo_bank_ctrl_.local = 1; */
 
-
-/* function make_funnel_()
+/* 
+function make_funnel_()
 {
     var funnel = this.patcher.getnamed("funnel");
     if (funnel)
@@ -299,6 +304,7 @@ set_size_.local = 1;
         this.patcher.connect(tracks_[i], 1, funnel, i);
     }
     funnel.varname = "funnel";
-} */
+}
 
 
+ */

@@ -121,8 +121,8 @@ function add_effect_()
     var i                   = effects_.length;
     var effects_panel       = this.patcher.getnamed("effects_panel");
 
-	var x_patch             = effects_panel.rect[0];
-	var y_patch             = effects_panel.rect[1] + h_effect * (i + 1);
+	var x_patch             = effects_panel.getattr("patching_rect")[0];
+	var y_patch             = effects_panel.getattr("patching_rect")[1] + h_offset + h_effect * i;
 
     var patching_rect       = [x_patch, y_patch, w_effect, h_effect];
 
@@ -237,8 +237,8 @@ function make_funnel_()
     if (n === 0)
         return;
 
-    var x = this.box.rect[0] + 44;
-    var y = this.box.rect[1] - 44;
+    var x = 274.;
+    var y = 290.;
 
     var funnel = this.patcher.newdefault(x, y, "funnel", n);
     this.patcher.connect(funnel, 0, this.box, 1);

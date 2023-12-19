@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 228.0, 398.0, 1093.0, 548.0 ],
+		"rect" : [ 773.0, 554.0, 1093.0, 548.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -72,7 +72,8 @@
 						"master::params::start_beat" : 0,
 						"master::params::end_beat" : 0,
 						"master::params::tempo" : 0,
-						"master::params::metro" : 0
+						"master::params::metro" : 0,
+						"master::params::loop_section_active" : 0
 					}
 ,
 					"autorestore" : "model_pattrstorage.json",
@@ -84,7 +85,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 680.666652666666778, 179.0, 123.0, 62.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 1715, 102, 2187, 932 ],
+						"client_rect" : [ 1729, 109, 2207, 640 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
 						"storage_rect" : [ 583, 69, 1034, 197 ]
@@ -131,7 +132,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 447.666652666666778, 115.228516000000013, 134.666666666666742, 22.0 ],
+					"patching_rect" : [ 447.666652666666778, 122.228516000000013, 134.666666666666742, 22.0 ],
 					"text" : "djazz_midi_out_bank",
 					"varname" : "midi_out_bank"
 				}
@@ -144,7 +145,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 32.0, 115.228516000000013, 123.0, 22.0 ],
+					"patching_rect" : [ 32.0, 122.228516000000013, 123.0, 22.0 ],
 					"text" : "djazz_master_control",
 					"varname" : "master"
 				}
@@ -208,7 +209,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 217.0, 115.228516000000013, 154.0, 22.0 ],
+					"patching_rect" : [ 217.0, 122.228516000000013, 154.0, 22.0 ],
 					"text" : "djazz_midi_player player_1",
 					"varname" : "midi_gen_1"
 				}
@@ -239,7 +240,9 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
-					"source" : [ "obj-114", 0 ]
+					"source" : [ "obj-114", 0 ],
+					"watchpoint_flags" : 1,
+					"watchpoint_id" : 3
 				}
 
 			}

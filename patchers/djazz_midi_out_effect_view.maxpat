@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -39,6 +39,44 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 357.0, 22.0, 56.0, 22.0 ],
+					"restore" : 					{
+						"umenu" : [ "", 0 ],
+						"window_open" : [ 0 ]
+					}
+,
+					"text" : "autopattr",
+					"varname" : "u905011520"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 348.0, 291.0, 49.0, 35.0 ],
+					"saved_object_attributes" : 					{
+						"initial" : [ 1 ],
+						"parameter_enable" : 0,
+						"parameter_mappable" : 0
+					}
+,
+					"text" : "pattr active",
+					"varname" : "active"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-4",
 					"linecount" : 3,
@@ -136,7 +174,7 @@
 					"patching_rect" : [ 582.833333333333258, 18.0, 24.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 22.0, 22.0 ],
-					"varname" : "window_open[1]"
+					"varname" : "window_open"
 				}
 
 			}
@@ -167,7 +205,7 @@
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 419.0, 365.0, 24.0, 24.0 ],
-					"varname" : "active"
+					"varname" : "toggle"
 				}
 
 			}
@@ -222,6 +260,13 @@
 					"destination" : [ "obj-82", 1 ],
 					"midpoints" : [ 283.5, 405.0, 465.5, 405.0, 465.5, 125.0, 283.5, 125.0 ],
 					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"source" : [ "obj-3", 1 ]
 				}
 
 			}

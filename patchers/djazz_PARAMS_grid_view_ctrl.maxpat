@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 253.0, 234.0, 843.0, 737.0 ],
+		"rect" : [ 311.0, 386.0, 843.0, 737.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 30.0, 259.0, 29.5, 22.0 ],
+					"text" : "t b l"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-11",
 					"maxclass" : "newobj",
@@ -71,7 +83,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 30.0, 157.999998000000005, 36.0, 35.0 ],
+					"patching_rect" : [ 30.0, 157.999998000000005, 39.0, 35.0 ],
 					"text" : "route grid"
 				}
 
@@ -97,7 +109,7 @@
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 143.5, 294.999998000000005, 100.0, 50.0 ],
-					"text" : "waiting 3 12 0",
+					"text" : "waiting 0 32 0",
 					"varname" : "textedit"
 				}
 
@@ -225,9 +237,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"midpoints" : [ 39.5, 266.499999000000003, 153.0, 266.499999000000003 ],
-					"source" : [ "obj-11", 0 ]
+					"destination" : [ "obj-9", 0 ],
+					"source" : [ "obj-11", 0 ],
+					"watchpoint_flags" : 5,
+					"watchpoint_id" : 4
 				}
 
 			}
@@ -255,7 +268,9 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
-					"source" : [ "obj-3", 0 ]
+					"source" : [ "obj-3", 0 ],
+					"watchpoint_flags" : 5,
+					"watchpoint_id" : 8
 				}
 
 			}
@@ -269,14 +284,18 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-4", 0 ]
+					"source" : [ "obj-4", 0 ],
+					"watchpoint_flags" : 5,
+					"watchpoint_id" : 9
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
-					"source" : [ "obj-5", 0 ]
+					"source" : [ "obj-5", 0 ],
+					"watchpoint_flags" : 5,
+					"watchpoint_id" : 10
 				}
 
 			}
@@ -293,6 +312,20 @@
 					"destination" : [ "obj-8", 0 ],
 					"midpoints" : [ 443.5, 547.499998000000005, 153.0, 547.499998000000005 ],
 					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-9", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}
