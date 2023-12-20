@@ -62,14 +62,16 @@ function add_effect()
 	var x           = x_inlet;
 	var y           = y_inlet + h * (i + 2);
 
+    disconnect_effects_();
     var effect      = this.patcher.newdefault(
                                     x, 
                                     y, 
-                                    "djazz_midi_out_effect");
+                                    "djazz_midi_out_effect",
+                                    i);
 
     effect.varname  = "effect_" + i;
-
     effects_.push(effect);
+    connect_effects_();
     //message_effect_(effect, "set_effect_database", effect_database_.name);
     
     return effect;
@@ -88,16 +90,19 @@ function remove_last_effects(n)
 
 function remove_last_effect()
 {   
-    if (effects_.length === 0)
-        return;
-
-    this.patcher.remove(effects_.pop());
+    disconnect_effects_();
+    if (effects_.length !== 0)
+    {
+        this.patcher.remove(effects_.pop());
+    }
+    connect_effects_();
 }
 
 
 function set_effect(effect_index, effect_name)
 {
     set_effect_(effects_[effect_index], effect_name);
+    post ("setting effect in model:", effect_name, "\n");
 }
 
 
@@ -117,3 +122,42 @@ function get_effect_components_mgr_(effect)
 get_effect_components_mgr_.local = 1;
 
 
+function connect_effects_()
+{
+    var inl     = this.patcher.getnamed("events_inlet");
+    var outl    = this.patcher.getnamed("events_outlet");
+
+    if (effects_.length === 0)
+    {
+        this.patcher.connect(inl, 0, outl, 0);
+        return;
+    }
+    this.patcher.connect(inl, 0, effects_[0], 0);
+    this.patcher.connect(effects_.slice(-1)[0], 0, outl, 0);
+    for (var i = 0; i < effects_.length - 1; i++)
+    {
+        this.patcher.connect(effects_[i], 0, effects_[i+1], 0);
+    }
+}
+
+connect_effects_.local = 1;
+
+
+function disconnect_effects_()
+{
+    var inl     = this.patcher.getnamed("events_inlet");
+    var outl    = this.patcher.getnamed("events_outlet");
+
+    if (effects_.length === 0)
+    {
+        this.patcher.disconnect(inl, 0, outl, 0);
+        return;
+    }
+    this.patcher.disconnect(inl, 0, effects_[0], 0);
+    this.patcher.disconnect(effects_.slice(-1)[0], 0, outl, 0);
+    for (var i = 0; i < effects_.length - 1; i++)
+    {
+        this.patcher.disconnect(effects_[i], 0, effects_[i+1], 0);
+    }
+}
+disconnect_effects_.local = 1;

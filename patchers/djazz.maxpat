@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 57.0, 136.0, 1144.0, 972.0 ],
+		"rect" : [ 61.0, 110.0, 1120.0, 1045.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -69,7 +69,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 160.142882406711578, 937.0, 113.0, 22.0 ],
+					"patching_rect" : [ 714.142882406711578, 979.0, 113.0, 22.0 ],
 					"text" : "djazz_filter_params"
 				}
 
@@ -81,7 +81,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 287.142882406711578, 937.0, 113.0, 22.0 ],
+					"patching_rect" : [ 714.142882406711578, 948.0, 113.0, 22.0 ],
 					"text" : "djazz_filter_params"
 				}
 
@@ -268,7 +268,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 33.142882406711578, 878.953745157763478, 76.0, 22.0 ],
+					"patching_rect" : [ 103.142882406711578, 957.953745157763478, 76.0, 22.0 ],
 					"text" : "djazz_model",
 					"varname" : "model"
 				}
@@ -426,7 +426,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-65", 0 ],
-					"midpoints" : [ 42.642882406711578, 958.0, 15.642882406711578, 958.0, 15.642882406711578, 3.33468631033611, 41.642882406711578, 3.33468631033611 ],
+					"midpoints" : [ 112.642882406711578, 996.0, 15.642882406711578, 996.0, 15.642882406711578, 3.33468631033611, 41.642882406711578, 3.33468631033611 ],
 					"source" : [ "obj-57", 0 ]
 				}
 
@@ -455,9 +455,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-57", 1 ],
-					"source" : [ "obj-65", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 5
+					"source" : [ "obj-65", 0 ]
 				}
 
 			}
@@ -673,13 +671,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_dict_get.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_filter_params.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
@@ -786,8 +777,8 @@
 			}
 , 			{
 				"name" : "djazz_master_view_beat_out.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db",
-				"patcherrelativepath" : "..",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 851.0, 202.0, 686.0, 887.0 ],
+		"rect" : [ 491.0, 218.0, 686.0, 887.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 95.0, 25.0, 56.0, 22.0 ],
+					"patching_rect" : [ 96.0, 10.0, 56.0, 22.0 ],
 					"restore" : 					{
 
 					}
@@ -61,7 +61,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 252.0, 353.0, 150.0, 20.0 ],
+					"patching_rect" : [ 353.0, 10.0, 73.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 4.0, 4.0, 72.0, 20.0 ],
 					"text" : "midi effects",
@@ -183,25 +183,12 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 306.0, 10.0, 128.0, 384.0 ],
+					"patching_rect" : [ 348.0, 10.0, 128.0, 384.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 128.0, 384.0 ],
 					"proportion" : 0.5,
 					"rounded" : 0,
 					"varname" : "effects_panel"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "list" ],
-					"patching_rect" : [ 65.0, 85.0, 100.0, 22.0 ],
-					"text" : "funnel 1",
-					"varname" : "funnel"
 				}
 
 			}
@@ -231,13 +218,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 1 ],
-					"source" : [ "obj-7", 0 ]
 				}
 
 			}

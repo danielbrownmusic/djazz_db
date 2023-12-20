@@ -14,12 +14,6 @@ var effects_            = [];
 declareattribute("effects_dict", "get_effects_dict", "set_effects_dict");
 
 
-/* function loadbang()
-{
-    set_effects_dict();
-} */
-
-
 function get_effects_dict()
 {
     var d   = new Dict ();
@@ -51,8 +45,6 @@ function set_effects_dict(effects_dict_name)
         var effect = add_effect_();
         set_effect_(effect, effect_names[i]);
     }
-/*     post ("adding last effect slot \n");
-    add_effect_(); */
     // Don't send message to model! This is handled by the bank dict.
 }
 
@@ -144,7 +136,7 @@ function add_effect_()
     effect.varname          = "effect_" + i;
     
     effects_.push(effect);
-    make_funnel_();
+    this.patcher.connect(effect, 0, this.box, 1);
 
     return effect;
 }
@@ -161,7 +153,7 @@ function remove_last_effect_()
     {
         this.patcher.remove(effect);
     }
-    make_funnel_();
+    //make_funnel_();
 }
 remove_last_effect_.local = 1;
 
@@ -194,15 +186,28 @@ function list()
     var effect_name   = arguments[1];
 
     outlet (0, "set_effect", effect_index, effect_name);
-
-    //var n_empty_effects_at_end = remove_empty_effects_at_end_();
-    //outlet (0, "remove_last_effects", n_empty_effects_at_end - 1); // subtract 1 because we do not count the empty slot that is always at the end in ctrl but not in model
-
-    //add_effect();
 }
 
 
 //--------------------------------------------------------------------------------
+
+
+function get_effect_name_(effect)
+{
+    return get_effect_components_mgr_(effect).getattr("effect_name");
+}
+get_effect_name_.local = 1;
+
+
+function get_effect_components_mgr_(effect)
+{
+    return effect.subpatcher().getnamed("components");
+}
+get_effect_components_mgr_.local = 1;
+
+
+
+
 
 
 /* function remove_empty_effects_at_end_()
@@ -224,7 +229,7 @@ function list()
 } */
 
 
-function make_funnel_()
+/* function make_funnel_()
 {
     var funnel = this.patcher.getnamed("funnel");
     if (funnel)
@@ -247,18 +252,4 @@ function make_funnel_()
         this.patcher.connect(effects_[i], 0, funnel, i);
     }
     funnel.varname = "funnel";
-}
-
-
-function get_effect_name_(effect)
-{
-    return get_effect_components_mgr_(effect).getattr("effect_name");
-}
-get_effect_name_.local = 1;
-
-
-function get_effect_components_mgr_(effect)
-{
-    return effect.subpatcher().getnamed("components");
-}
-get_effect_components_mgr_.local = 1;
+} */

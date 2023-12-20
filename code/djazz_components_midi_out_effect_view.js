@@ -92,7 +92,7 @@ function make_effect_(effect_name)
         return;
 
     var effect          = this.patcher.newdefault(x, y, patcher_class);
-    effect.varname      = "effect";
+    effect.varname      = make_varname_(effect_name);
     
     this.patcher.connect(pcontrol, 0, effect, 0);
 
@@ -110,3 +110,10 @@ function get_patcher_class_(effect_name)
     return p;
 }
 get_patcher_class_.local = 1;
+
+
+function make_varname_(effect_name)
+{
+    return effect_name.split(" ").join("_");
+}
+make_varname_.local = 1;
