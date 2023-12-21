@@ -1,0 +1,18 @@
+{
+	"parameter_map" : 	{
+		"midi" : 		{
+			"loop_2[1]" : 			{
+				"srcname"   :   "11.note.0.chan.midi",
+				"color"     :   "red" 
+			}
+,
+			"loop_2[2]" : 			{
+				"srcname"   :   "29.ctrl.0.chan.midi",
+				"color"     :   "green",
+			}
+
+		}
+
+	}
+
+}

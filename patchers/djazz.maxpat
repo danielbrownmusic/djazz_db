@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 123.0, 112.0, 1676.0, 1045.0 ],
+		"rect" : [ 303.0, 338.0, 2010.0, 1045.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -44,7 +44,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1490.0, 724.0, 55.0, 22.0 ],
+					"patching_rect" : [ 1267.904785215854645, 688.0, 55.0, 22.0 ],
 					"text" : "print PIP"
 				}
 
@@ -56,7 +56,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1494.0, 536.0, 189.0, 22.0 ],
+					"patching_rect" : [ 1271.904785215854645, 500.0, 189.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_device_param_handler.js",
 						"parameter_enable" : 0
@@ -415,11 +415,13 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-57::obj-2::obj-11::obj-29::obj-1" : [ "score_file", "score_file", 0 ],
-			"obj-57::obj-2::obj-11::obj-33::obj-4" : [ "step[4]", "step", 0 ],
-			"obj-57::obj-2::obj-11::obj-7::obj-23::obj-8::obj-64" : [ "gswitch2[1]", "gswitch2[1]", 0 ],
-			"obj-57::obj-6::obj-42::obj-4" : [ "step[1]", "step", 0 ],
-			"obj-65::obj-47::obj-5" : [ "button", "button", 0 ],
+			"obj-65::obj-37::obj-17::obj-2::obj-24" : [ "loop_2[1]", "loop_2[1]", 0 ],
+			"obj-65::obj-37::obj-17::obj-4::obj-24" : [ "loop_2[2]", "loop_2[2]", 0 ],
+			"obj-65::obj-47::obj-85::obj-5::obj-21" : [ "grid", "grid", 0 ],
+			"obj-65::obj-47::obj-85::obj-5::obj-28" : [ "chapter_count", "chapter_count", 0 ],
+			"obj-65::obj-47::obj-94::obj-22::obj-24" : [ "chapter", "chapter", 0 ],
+			"obj-65::obj-47::obj-94::obj-22::obj-25" : [ "bar", "bar", 0 ],
+			"obj-65::obj-47::obj-94::obj-22::obj-7" : [ "loop_chapter", "loop_chapter", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
@@ -430,6 +432,26 @@
 			}
 ,
 			"inherited_shortname" : 1
+		}
+,
+		"parameter_map" : 		{
+			"midi" : 			{
+				"loop_2[1]" : 				{
+					"srcname" : "11.note.0.chan.midi",
+					"min" : 0.0,
+					"max" : 1.0,
+					"flags" : 3
+				}
+,
+				"loop_2[2]" : 				{
+					"srcname" : "29.ctrl.0.chan.midi",
+					"min" : 0.0,
+					"max" : 1.0,
+					"flags" : 2
+				}
+
+			}
+
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -711,8 +733,8 @@
 			}
 , 			{
 				"name" : "djazz_master_view_beat_out.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db",
-				"patcherrelativepath" : "..",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}

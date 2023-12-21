@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1217.0, 341.0, 1221.0, 785.0 ],
+		"rect" : [ 3494.0, -65.0, 858.0, 778.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,31 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"linecount" : 4,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 151.0, 351.0, 129.0, 62.0 ],
+					"text" : "loadmess load_device_map \"Launchpad Pro MK3 LPProMK3 DAW\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 33.0, 351.0, 67.0, 22.0 ],
+					"text" : "connect $1"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-38",
 					"maxclass" : "message",
@@ -80,7 +105,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+						"rect" : [ 59.0, 106.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -163,7 +188,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 638.0, 319.0, 62.0, 22.0 ],
+					"patching_rect" : [ 704.0, 351.0, 62.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -193,7 +218,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 1654.0, 209.0, 1034.0, 450.0 ],
+						"rect" : [ 3110.0, 305.0, 1034.0, 450.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -279,7 +304,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 682.0, 99.5, 189.0, 49.0 ],
+									"patching_rect" : [ 682.0, 99.5, 191.0, 49.0 ],
 									"text" : "v ENTER_PROGRAMMER_MODE 0 17 0 0 247"
 								}
 
@@ -317,7 +342,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 682.0, 23.0, 141.0, 49.0 ],
+									"patching_rect" : [ 682.0, 23.0, 143.0, 49.0 ],
 									"text" : "v SYSEX_MSG_HEADER 240 0 32 41 2 14"
 								}
 
@@ -426,7 +451,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 335.5, 323.0, 131.0, 22.0 ],
+					"patching_rect" : [ 368.5, 351.0, 131.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -445,7 +470,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "int", "bang" ],
-					"patching_rect" : [ 33.0, 259.0, 624.0, 22.0 ],
+					"patching_rect" : [ 33.0, 259.0, 690.0, 22.0 ],
 					"text" : "t i i b"
 				}
 
@@ -454,16 +479,16 @@
 				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 33.0, 323.0, 271.0, 22.0 ],
+					"numinlets" : 2,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 33.0, 468.5, 217.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_connect_launchpad_pro_mk3_patcher.js",
+						"filename" : "djazz_device_launchpad_pro_mk3.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_connect_launchpad_pro_mk3_patcher.js"
+					"text" : "js djazz_device_launchpad_pro_mk3.js"
 				}
 
 			}
@@ -503,7 +528,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 638.0, 380.0, 47.0, 22.0 ],
+					"patching_rect" : [ 704.0, 468.5, 47.0, 22.0 ],
 					"text" : "midiout"
 				}
 
@@ -525,7 +550,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -533,6 +558,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
+					"midpoints" : [ 378.0, 420.25, 713.5, 420.25 ],
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -562,6 +588,20 @@
 				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
 					"source" : [ "obj-38", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}

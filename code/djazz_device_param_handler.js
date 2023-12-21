@@ -3,6 +3,8 @@ autowatch = 1;
 var pip         = new ParameterInfoProvider(on_pip_changed);
 var param_dict  = new Dict ();
 
+param_dict.import_json("data/dict_LAUNCHPAD_MK3_PRO_VIEW.json");
+
 function on_pip_changed(data)
 {
     for (var i = 0; i < data.removed.length; i++)
@@ -17,7 +19,7 @@ function on_pip_changed(data)
         var listener_key    = [param_name, "key"].join("::");
         var listener        = new ParameterListener(param_name, on_param_changed);
 
-        param_dict.replace(color_key, "none");
+        param_dict.replace(color_key, "red");
         param_dict.replace(listener_key, listener);
     }
 
@@ -31,5 +33,11 @@ function on_pip_changed(data)
 
 function on_param_changed(data)
 {
-    outlet (0, data.name, data.value);
+    outlet (0, "parameter", data.name, data.value);
+
+    var info = pip.getinfo(data.name);
+    for (var i in info) 
+    {
+        post(i + ": " + info[i] + "\n");
+    }
 }

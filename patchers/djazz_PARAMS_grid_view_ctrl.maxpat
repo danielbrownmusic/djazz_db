@@ -109,7 +109,7 @@
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 143.5, 294.999998000000005, 100.0, 50.0 ],
-					"text" : "waiting 0 32 0",
+					"text" : "waiting 0 1 0",
 					"varname" : "textedit"
 				}
 
@@ -173,10 +173,22 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 399.5, 157.999998000000005, 88.0, 35.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_initial" : [ 1.0 ],
+							"parameter_initial_enable" : 1,
+							"parameter_linknames" : 1,
+							"parameter_longname" : "chapter_count",
+							"parameter_shortname" : "chapter_count",
+							"parameter_type" : 1,
+							"parameter_unitstyle" : 0
+						}
+
+					}
+,
 					"saved_object_attributes" : 					{
-						"initial" : [ 1 ],
-						"parameter_enable" : 0,
-						"parameter_mappable" : 0
+						"initial" : [ 1.0 ],
+						"parameter_enable" : 1
 					}
 ,
 					"text" : "pattr chapter_count",
@@ -193,9 +205,22 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 135.0, 157.999998000000005, 36.0, 35.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_initial" : [ "waiting 0 1 0" ],
+							"parameter_initial_enable" : 1,
+							"parameter_invisible" : 1,
+							"parameter_linknames" : 1,
+							"parameter_longname" : "grid",
+							"parameter_shortname" : "grid",
+							"parameter_type" : 3
+						}
+
+					}
+,
 					"saved_object_attributes" : 					{
-						"initial" : [ "waiting", 0, 1, 0 ],
-						"parameter_enable" : 0,
+						"initial" : [ "waiting 0 1 0" ],
+						"parameter_enable" : 1,
 						"parameter_mappable" : 0
 					}
 ,
@@ -240,7 +265,7 @@
 					"destination" : [ "obj-9", 0 ],
 					"source" : [ "obj-11", 0 ],
 					"watchpoint_flags" : 5,
-					"watchpoint_id" : 4
+					"watchpoint_id" : 81
 				}
 
 			}
@@ -270,7 +295,7 @@
 					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-3", 0 ],
 					"watchpoint_flags" : 5,
-					"watchpoint_id" : 8
+					"watchpoint_id" : 82
 				}
 
 			}
@@ -286,7 +311,7 @@
 					"destination" : [ "obj-5", 0 ],
 					"source" : [ "obj-4", 0 ],
 					"watchpoint_flags" : 5,
-					"watchpoint_id" : 9
+					"watchpoint_id" : 83
 				}
 
 			}
@@ -295,7 +320,7 @@
 					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-5", 0 ],
 					"watchpoint_flags" : 5,
-					"watchpoint_id" : 10
+					"watchpoint_id" : 84
 				}
 
 			}

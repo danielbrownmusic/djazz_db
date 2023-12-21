@@ -73,12 +73,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-13",
-					"int" : 1,
 					"maxclass" : "gswitch2",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
+					"parameter_mappable" : 0,
 					"patching_rect" : [ 121.0, 483.0, 108.0, 48.0 ],
 					"varname" : "gswitch2"
 				}

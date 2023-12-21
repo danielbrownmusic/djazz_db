@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 3828.0, 213.0, 384.0, 595.0 ],
+		"rect" : [ 458.0, 372.0, 384.0, 595.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -420,22 +420,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 1,
+					"parameter_enable" : 0,
+					"parameter_mappable" : 0,
 					"patching_rect" : [ 157.500013499999966, 160.0, 50.0, 22.0 ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_initial" : [ 1.0 ],
-							"parameter_initial_enable" : 1,
-							"parameter_invisible" : 1,
-							"parameter_longname" : "step[4]",
-							"parameter_mmin" : -127.0,
-							"parameter_shortname" : "step",
-							"parameter_type" : 1,
-							"parameter_unitstyle" : 0
-						}
-
-					}
-,
 					"varname" : "number[1]"
 				}
 

@@ -153,7 +153,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "int" ],
 					"patching_rect" : [ 86.895833999999923, 13.0, 30.0, 30.0 ]
 				}
 
@@ -276,12 +276,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-13",
-					"int" : 1,
 					"maxclass" : "gswitch",
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
+					"parameter_mappable" : 0,
 					"patching_rect" : [ 44.895833999999923, 241.657756838466639, 61.0, 32.0 ]
 				}
 

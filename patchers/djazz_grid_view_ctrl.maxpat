@@ -104,8 +104,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 129.0, 321.914062545454499, 200.0, 22.0 ],
-					"text" : "NAVIGATION_DATABASE"
+					"patching_rect" : [ 129.0, 321.914062545454499, 200.0, 22.0 ]
 				}
 
 			}
@@ -167,6 +166,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-23",
@@ -187,6 +187,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 0,
+									"parameter_mappable" : 0,
 									"patching_rect" : [ 230.25, 319.0, 75.25, 36.0 ]
 								}
 
@@ -224,6 +225,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 0,
+									"parameter_mappable" : 0,
 									"patching_rect" : [ 65.25, 319.0, 75.25, 36.0 ]
 								}
 

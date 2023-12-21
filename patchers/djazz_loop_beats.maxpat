@@ -227,7 +227,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ -1065.0, 555.0, 604.0, 738.0 ],
+						"rect" : [ 875.0, 236.0, 604.0, 738.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -255,6 +255,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-1",
@@ -310,21 +311,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"parameter_enable" : 1,
+									"parameter_enable" : 0,
+									"parameter_mappable" : 0,
 									"patching_rect" : [ 156.5, 208.0, 91.0, 46.0 ],
-									"saved_attribute_attributes" : 									{
-										"valueof" : 										{
-											"parameter_enum" : [ "0", "1" ],
-											"parameter_initial" : [ 0 ],
-											"parameter_initial_enable" : 1,
-											"parameter_longname" : "gswitch2[1]",
-											"parameter_mmax" : 1,
-											"parameter_shortname" : "gswitch2[1]",
-											"parameter_type" : 2
-										}
-
-									}
-,
 									"varname" : "gswitch2"
 								}
 
@@ -337,7 +326,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "int" ],
 									"patching_rect" : [ 23.0, 21.0, 30.0, 30.0 ]
 								}
 
@@ -507,6 +496,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-13",
@@ -667,12 +657,12 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-4",
-									"int" : 1,
 									"maxclass" : "gswitch",
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
+									"parameter_mappable" : 0,
 									"patching_rect" : [ 107.0, 110.0, 65.0, 33.0 ]
 								}
 
@@ -721,7 +711,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
+									"outlettype" : [ "int" ],
 									"patching_rect" : [ 29.0, 18.0, 30.0, 30.0 ]
 								}
 
@@ -874,7 +864,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "int" ],
 					"patching_rect" : [ 93.0, 26.0, 30.0, 30.0 ]
 				}
 

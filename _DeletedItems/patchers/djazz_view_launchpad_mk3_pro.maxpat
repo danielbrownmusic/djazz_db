@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 126.0, 334.0, 1328.0, 549.0 ],
+		"rect" : [ 1307.0, 120.0, 666.0, 284.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
-					"patching_rect" : [ 1068.0, 221.0, 67.0, 22.0 ],
+					"patching_rect" : [ 556.0, 144.0, 67.0, 22.0 ],
 					"text" : "opendialog"
 				}
 
@@ -57,7 +57,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "bang", "" ],
-					"patching_rect" : [ 1042.0, 163.0, 44.0, 22.0 ],
+					"patching_rect" : [ 530.0, 86.0, 44.0, 22.0 ],
 					"text" : "sel 1 2"
 				}
 
@@ -71,7 +71,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1042.0, 91.0, 100.0, 22.0 ]
+					"patching_rect" : [ 530.0, 14.0, 100.0, 22.0 ]
 				}
 
 			}
@@ -82,7 +82,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
-					"patching_rect" : [ 974.0, 216.0, 67.0, 22.0 ],
+					"patching_rect" : [ 462.0, 139.0, 67.0, 22.0 ],
 					"text" : "opendialog"
 				}
 
@@ -91,12 +91,12 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-5",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 891.0, 129.0, 30.0, 30.0 ]
+					"patching_rect" : [ 379.0, 52.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -107,7 +107,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 827.0, 195.0, 50.5, 22.0 ],
+					"patching_rect" : [ 315.0, 118.0, 50.5, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0,
@@ -125,7 +125,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 552.0, 195.0, 233.0, 22.0 ],
+					"patching_rect" : [ 40.0, 118.0, 233.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_view_launchpad_mk3_pro_mgr.js",
 						"parameter_enable" : 0
@@ -139,11 +139,11 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-2",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 129.0, 468.0, 30.0, 30.0 ]
+					"patching_rect" : [ 349.0, 214.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -151,12 +151,12 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-1",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 663.0, 91.0, 30.0, 30.0 ]
+					"patching_rect" : [ 151.0, 14.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -198,7 +198,9 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [  ],
+		"autosave" : 0
 	}
 
 }
