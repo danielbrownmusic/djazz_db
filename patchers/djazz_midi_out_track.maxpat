@@ -590,8 +590,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 29.0, 318.0, 92.0, 28.0 ],
-					"varname" : "gswitch2"
+					"parameter_mappable" : 0,
+					"patching_rect" : [ 29.0, 318.0, 92.0, 28.0 ]
 				}
 
 			}
@@ -599,7 +599,7 @@
 				"box" : 				{
 					"comment" : "components messages",
 					"id" : "obj-9",
-					"index" : 3,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -612,7 +612,7 @@
 				"box" : 				{
 					"comment" : "ctrl variables",
 					"id" : "obj-20",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -641,6 +641,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
+					"parameter_mappable" : 0,
 					"patching_rect" : [ 362.5, 318.0, 50.0, 22.0 ],
 					"varname" : "number[1]"
 				}
@@ -718,21 +719,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 1,
+					"parameter_enable" : 0,
 					"patching_rect" : [ 202.0, 318.0, 50.0, 22.0 ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_initial" : [ 1 ],
-							"parameter_initial_enable" : 1,
-							"parameter_invisible" : 1,
-							"parameter_linknames" : 1,
-							"parameter_longname" : "number",
-							"parameter_shortname" : "number",
-							"parameter_type" : 3
-						}
-
-					}
-,
 					"varname" : "number"
 				}
 
@@ -746,8 +734,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 30.0, 141.0, 92.0, 28.0 ],
-					"varname" : "gswitch2[1]"
+					"parameter_mappable" : 0,
+					"patching_rect" : [ 30.0, 141.0, 92.0, 28.0 ]
 				}
 
 			}
@@ -755,7 +743,7 @@
 				"box" : 				{
 					"comment" : "midi events",
 					"id" : "obj-8",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -768,7 +756,7 @@
 				"box" : 				{
 					"comment" : "midi events",
 					"id" : "obj-5",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -793,9 +781,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
-					"source" : [ "obj-1", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 17
+					"source" : [ "obj-1", 0 ]
 				}
 
 			}
@@ -929,9 +915,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-11", 1 ],
-					"source" : [ "obj-3", 1 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 18
+					"source" : [ "obj-3", 1 ]
 				}
 
 			}
@@ -977,7 +961,43 @@
 				}
 
 			}
- ]
+ ],
+		"parameters" : 		{
+			"parameterbanks" : 			{
+				"0" : 				{
+					"index" : 0,
+					"name" : "",
+					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+				}
+
+			}
+,
+			"inherited_shortname" : 1
+		}
+,
+		"dependency_cache" : [ 			{
+				"name" : "db_dictionary_array_utils.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_components_midi_out_effect_list.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_midi_out_effect_list.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }

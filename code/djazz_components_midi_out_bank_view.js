@@ -14,7 +14,7 @@ var y_patch_0   = 66;
 var x_pres_0    = 0;
 var y_pres_0    = 52;
 var w_track     = 128;
-var h_track     = 282;
+var h_track     = 440;
 
 var x_solo_bank_ctrl = 396;
 var y_solo_bank_ctrl = 374;

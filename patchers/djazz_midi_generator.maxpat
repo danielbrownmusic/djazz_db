@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 2462.0, 192.0, 724.0, 976.0 ],
+		"rect" : [ 468.0, 182.0, 724.0, 976.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -109,8 +109,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 35.0, 824.333333333333485, 329.0, 22.0 ],
-					"text" : "djazz_composer mnote",
+					"patching_rect" : [ 35.0, 824.333333333333485, 113.0, 22.0 ],
+					"text" : "djazz_composer #1",
 					"varname" : "composer"
 				}
 

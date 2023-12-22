@@ -546,8 +546,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 28.0, 664.5, 339.0, 22.0 ],
-					"text" : "djazz_midi_generator",
+					"patching_rect" : [ 28.0, 664.5, 173.0, 22.0 ],
+					"text" : "djazz_midi_generator #1",
 					"varname" : "midi_generator"
 				}
 

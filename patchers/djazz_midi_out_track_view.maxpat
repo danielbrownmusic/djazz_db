@@ -45,7 +45,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 130.0, 425.5, 69.0, 22.0 ],
+					"patching_rect" : [ 130.0, 472.5, 69.0, 22.0 ],
 					"text" : "prepend #1"
 				}
 
@@ -738,7 +738,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 489.0, 425.5, 64.0, 22.0 ],
+					"patching_rect" : [ 489.0, 472.5, 64.0, 22.0 ],
 					"text" : "solo #1 $1"
 				}
 
@@ -839,7 +839,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 130.0, 525.5, 30.0, 30.0 ]
+					"patching_rect" : [ 130.0, 572.5, 30.0, 30.0 ]
 				}
 
 			}
@@ -851,7 +851,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 489.0, 525.5, 30.0, 30.0 ],
+					"patching_rect" : [ 489.0, 572.5, 30.0, 30.0 ],
 					"varname" : "to"
 				}
 
@@ -1046,9 +1046,9 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 130.0, 134.0, 127.0, 180.0 ],
+					"patching_rect" : [ 130.0, 134.0, 129.0, 268.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 188.0, 128.0, 146.0 ],
+					"presentation_rect" : [ 0.0, 188.0, 128.0, 250.0 ],
 					"varname" : "effect_list",
 					"viewvisibility" : 1
 				}
