@@ -26,7 +26,7 @@ function on_pip_changed(data)
     var names = data.provider.getnames();
     for (var i = 0; i < names.length; i++)
     {
-        post (names[i]);
+        //post (names[i]);
     }
 }
 

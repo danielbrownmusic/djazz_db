@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 58.0, 111.0, 2079.0, 1024.0 ],
+		"rect" : [ 71.0, 132.0, 1163.0, 914.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -366,8 +366,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-65", 0 ],
-					"midpoints" : [ 162.642882406711578, 1002.0, 130.642882406711578, 1002.0, 130.642882406711578, 56.33468631033611, 162.642882406711578, 56.33468631033611 ],
+					"destination" : [ "obj-65", 1 ],
+					"midpoints" : [ 162.642882406711578, 1002.0, 130.642882406711578, 1002.0, 130.642882406711578, 56.33468631033611, 2205.642882406711578, 56.33468631033611 ],
 					"source" : [ "obj-57", 0 ]
 				}
 
@@ -536,13 +536,6 @@
 			}
 , 			{
 				"name" : "djazz_add_multiple_tracks_view_window.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_bang_if_next_beat.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -945,6 +938,13 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_set_next_beat.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{

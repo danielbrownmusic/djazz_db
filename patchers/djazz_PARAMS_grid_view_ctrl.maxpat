@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 311.0, 386.0, 843.0, 737.0 ],
+		"rect" : [ 302.0, 165.0, 843.0, 737.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -109,7 +109,7 @@
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 143.5, 294.999998000000005, 100.0, 50.0 ],
-					"text" : "waiting 0 1 0",
+					"text" : "waiting 0 8 0",
 					"varname" : "textedit"
 				}
 
@@ -188,7 +188,8 @@
 ,
 					"saved_object_attributes" : 					{
 						"initial" : [ 1.0 ],
-						"parameter_enable" : 1
+						"parameter_enable" : 1,
+						"parameter_mappable" : 0
 					}
 ,
 					"text" : "pattr chapter_count",
@@ -263,9 +264,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
-					"source" : [ "obj-11", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 81
+					"source" : [ "obj-11", 0 ]
 				}
 
 			}
@@ -293,9 +292,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
-					"source" : [ "obj-3", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 82
+					"source" : [ "obj-3", 0 ]
 				}
 
 			}
@@ -309,18 +306,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-4", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 83
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
-					"source" : [ "obj-5", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 84
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
