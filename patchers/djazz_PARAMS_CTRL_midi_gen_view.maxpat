@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 74.0, 232.0, 2038.0, 720.0 ],
+		"rect" : [ 279.0, 246.0, 366.0, 720.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -46,7 +46,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1010.0, 468.0, 116.0, 35.0 ],
+					"patching_rect" : [ 1010.0, 468.0, 117.0, 35.0 ],
 					"text" : "loop_section_active $1"
 				}
 
@@ -364,7 +364,6 @@
 					"outputmode" : 1,
 					"parameter_enable" : 0,
 					"patching_rect" : [ 1747.5, 240.0, 225.0, 98.0 ],
-					"text" : "NONE",
 					"varname" : "textedit"
 				}
 
@@ -549,7 +548,7 @@
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 1725.0, 122.0, 64.0, 35.0 ],
 					"saved_object_attributes" : 					{
-						"initial" : [ "NONE" ],
+						"initial" : [ " " ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
 					}
