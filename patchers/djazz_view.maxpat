@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 230.0, 210.0, 503.0, 806.0 ],
+		"rect" : [ 230.0, 210.0, 1382.0, 806.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 553.5, 400.0, 110.0, 22.0 ],
+					"patching_rect" : [ 644.5, 417.0, 110.0, 22.0 ],
 					"text" : "t s s"
 				}
 
@@ -68,7 +68,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 1054.0, 624.0, 640.0, 480.0 ],
+						"rect" : [ 920.0, 452.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -903,6 +903,7 @@
 			}
 , 			{
 				"box" : 				{
+					"autorestore" : "view_pattrstorage.json",
 					"id" : "obj-1",
 					"linecount" : 4,
 					"maxclass" : "newobj",
@@ -993,20 +994,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-18", 0 ],
-					"source" : [ "obj-10", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-47", 1 ],
-					"source" : [ "obj-10", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-25", 0 ],
 					"source" : [ "obj-14", 2 ]
 				}
@@ -1023,14 +1010,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-14", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"midpoints" : [ 654.0, 965.499999937499979, 50.0, 965.499999937499979 ],
-					"source" : [ "obj-18", 0 ]
 				}
 
 			}
@@ -1065,7 +1044,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
+					"destination" : [ "obj-47", 1 ],
 					"source" : [ "obj-8", 0 ]
 				}
 
@@ -1231,8 +1210,8 @@
 			}
 , 			{
 				"name" : "djazz_master_view_beat_out.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db",
-				"patcherrelativepath" : "..",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 356.0, 145.0, 823.0, 886.0 ],
+		"rect" : [ 154.0, 143.0, 823.0, 886.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,24 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 23.0, 109.0, 193.0, 22.0 ],
+					"text" : "route bang"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-12",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 236.333333333333343, 222.0, 62.0, 22.0 ],
+					"patching_rect" : [ 661.333333333333371, 270.0, 62.0, 22.0 ],
 					"text" : "start_beat"
 				}
 
@@ -57,7 +69,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 236.333333333333343, 343.0, 72.0, 22.0 ],
+					"patching_rect" : [ 661.333333333333371, 391.0, 72.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "pattrinit.js",
 						"parameter_enable" : 0
@@ -74,7 +86,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 343.0, 582.0, 243.0, 22.0 ],
+					"patching_rect" : [ 197.0, 377.0, 243.0, 22.0 ],
 					"text" : "djazz_midi_generator_translate_parameters"
 				}
 
@@ -87,7 +99,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 96.0, 569.0, 75.0, 35.0 ],
+					"patching_rect" : [ 78.0, 515.0, 75.0, 35.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "pattrvis.js",
 						"parameter_enable" : 0
@@ -104,7 +116,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 23.0, 129.0, 339.0, 22.0 ],
+					"patching_rect" : [ 448.0, 177.0, 339.0, 22.0 ],
 					"text" : "route bang clear init"
 				}
 
@@ -115,7 +127,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 343.0, 796.0, 186.0, 22.0 ],
+					"patching_rect" : [ 197.0, 768.0, 186.0, 22.0 ],
 					"text" : "djazz_PARAMS_VIEW_midi_gen",
 					"textcolor" : [ 0.941176470588235, 0.776470588235294, 0.945098039215686, 1.0 ],
 					"varname" : "view_params"
@@ -129,7 +141,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 23.0, 690.5, 339.0, 22.0 ],
+					"patching_rect" : [ 23.0, 643.5, 193.0, 22.0 ],
 					"text" : "djazz_midi_generator #1",
 					"varname" : "midi_generator"
 				}
@@ -142,7 +154,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 343.0, 475.0, 186.0, 22.0 ],
+					"patching_rect" : [ 197.0, 270.0, 186.0, 22.0 ],
 					"text" : "djazz_PARAMS_CTRL_midi_gen",
 					"textcolor" : [ 0.941176470588235, 0.776470588235294, 0.945098039215686, 1.0 ],
 					"varname" : "params"
@@ -205,16 +217,15 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"midpoints" : [ 245.833333333333343, 403.0, 352.5, 403.0 ],
-					"source" : [ "obj-3", 0 ]
+					"destination" : [ "obj-11", 0 ],
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"source" : [ "obj-5", 0 ]
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-4", 1 ]
 				}
 
 			}
@@ -228,15 +239,8 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
-					"midpoints" : [ 139.166666666666686, 295.5, 245.833333333333343, 295.5 ],
+					"midpoints" : [ 564.166666666666629, 343.5, 670.833333333333371, 343.5 ],
 					"source" : [ "obj-5", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"source" : [ "obj-5", 3 ]
 				}
 
 			}
@@ -256,7 +260,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-87", 0 ]
 				}
 

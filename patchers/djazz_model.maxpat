@@ -79,7 +79,14 @@
 , 			{
 				"box" : 				{
 					"active" : 					{
-						"master::params" : 0
+						"master::params" : 0,
+						"master::params::loop_section_start" : 0,
+						"master::params::loop_section_end" : 0,
+						"master::params::start_beat" : 0,
+						"master::params::end_beat" : 0,
+						"master::params::tempo" : 0,
+						"master::params::metro" : 0,
+						"master::params::loop_section_active" : 0
 					}
 ,
 					"autorestore" : "model_pattrstorage.json",
@@ -151,7 +158,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 32.0, 155.228516000000013, 123.0, 22.0 ],
+					"patching_rect" : [ 32.0, 144.228516000000013, 123.0, 22.0 ],
 					"text" : "djazz_master_control",
 					"varname" : "master"
 				}
