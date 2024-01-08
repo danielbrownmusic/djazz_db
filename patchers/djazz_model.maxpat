@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -79,7 +79,14 @@
 , 			{
 				"box" : 				{
 					"active" : 					{
-						"master::params" : 0
+						"master::params" : 0,
+						"master::params::loop_section_start" : 0,
+						"master::params::loop_section_end" : 0,
+						"master::params::start_beat" : 0,
+						"master::params::end_beat" : 0,
+						"master::params::tempo" : 0,
+						"master::params::metro" : 0,
+						"master::params::loop_section_active" : 0
 					}
 ,
 					"autorestore" : "model_pattrstorage.json",

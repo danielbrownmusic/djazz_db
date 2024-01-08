@@ -3,7 +3,7 @@ autowatch = 1;
 outlets = 2;
 
 
-function load(file_path)
+function load_session(file_path)
 {
     var bank_dict = new Dict ();
     bank_dict.import_json(file_path);
@@ -18,7 +18,7 @@ function load(file_path)
 }
 
 
-function save(file_path)
+function save_session(file_path)
 {
     var comp_mgr    = get_midi_out_bank_component_mgr_();
     var bank_dict   = new Dict (comp_mgr.getattr("bank_dict"));
