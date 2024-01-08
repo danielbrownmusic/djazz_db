@@ -52,35 +52,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-12",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 661.333333333333371, 270.0, 62.0, 22.0 ],
-					"text" : "start_beat"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 661.333333333333371, 391.0, 72.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"filename" : "pattrinit.js",
-						"parameter_enable" : 0
-					}
-,
-					"text" : "js pattrinit.js"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -106,18 +77,6 @@
 					}
 ,
 					"text" : "js pattrvis.js 0 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 4,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 448.0, 177.0, 339.0, 22.0 ],
-					"text" : "route bang clear init"
 				}
 
 			}
@@ -203,13 +162,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"source" : [ "obj-12", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-11", 1 ],
 					"source" : [ "obj-2", 0 ]
 				}
@@ -226,21 +178,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-4", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
-					"source" : [ "obj-5", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"midpoints" : [ 564.166666666666629, 343.5, 670.833333333333371, 343.5 ],
-					"source" : [ "obj-5", 1 ]
 				}
 
 			}

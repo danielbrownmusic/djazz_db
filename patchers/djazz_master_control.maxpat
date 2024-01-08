@@ -102,7 +102,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-6",
@@ -399,7 +398,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 119.5, 473.500000999999997, 151.0, 22.0 ],
+					"patching_rect" : [ 119.5, 475.500000999999997, 151.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -422,47 +421,6 @@
 					"text" : "djazz_PARAMS_VIEW_master",
 					"textcolor" : [ 1.0, 0.792156862745098, 0.909803921568627, 1.0 ],
 					"varname" : "view_params"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-50",
-					"maxclass" : "newobj",
-					"numinlets" : 3,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 566.0, 80.500001375000238, 157.0, 22.0 ],
-					"text" : "route init clear"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-46",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 566.0, 131.500001375000238, 62.0, 22.0 ],
-					"text" : "start_beat"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 566.0, 229.250003218750294, 72.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"filename" : "pattrinit.js",
-						"parameter_enable" : 0
-					}
-,
-					"text" : "js pattrinit.js"
 				}
 
 			}
@@ -524,7 +482,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-11",
@@ -1012,28 +969,6 @@
 					"midpoints" : [ 261.0, 322.250001562500245, 494.0, 322.250001562500245 ],
 					"order" : 0,
 					"source" : [ "obj-27", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"source" : [ "obj-46", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"midpoints" : [ 644.5, 191.375002296875209, 575.5, 191.375002296875209 ],
-					"source" : [ "obj-50", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-46", 0 ],
-					"source" : [ "obj-50", 0 ]
 				}
 
 			}

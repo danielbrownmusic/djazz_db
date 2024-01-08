@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 91.0, 166.0, 1178.0, 615.0 ],
+		"rect" : [ 91.0, 166.0, 801.0, 615.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -59,7 +59,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 188.0, 349.0, 148.0, 22.0 ],
 					"text" : "djazz_midi_player mnote2",
-					"varname" : "djazz_midi_player"
+					"varname" : "midi_gen_2"
 				}
 
 			}
@@ -79,14 +79,7 @@
 , 			{
 				"box" : 				{
 					"active" : 					{
-						"master::params" : 0,
-						"master::params::loop_section_start" : 0,
-						"master::params::loop_section_end" : 0,
-						"master::params::start_beat" : 0,
-						"master::params::end_beat" : 0,
-						"master::params::tempo" : 0,
-						"master::params::metro" : 0,
-						"master::params::loop_section_active" : 0
+						"master::params" : 0
 					}
 ,
 					"autorestore" : "model_pattrstorage.json",
@@ -145,7 +138,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 463.666652666666778, 155.228516000000013, 134.666666666666742, 22.0 ],
+					"patching_rect" : [ 463.666652666666778, 155.228516000000013, 121.0, 22.0 ],
 					"text" : "djazz_midi_out_bank",
 					"varname" : "midi_out_bank"
 				}

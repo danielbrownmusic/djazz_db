@@ -124,6 +124,21 @@ function track()
 }
 
 
+function set_global()
+{
+    var a       = arrayfromargs(arguments);
+    var name    = a[0];
+    var val     = a.length === 2 ? a[1] : a.slice(1);
+
+    for (var i = 0; i < tracks_.length; i++)
+    {
+        var msg     = ["track_", i, "::", name].join("");
+        var args    = val;
+        outlet(0, msg, args);
+    }
+}
+
+
 // ---------------------------------------------------------------------------------------
 
 

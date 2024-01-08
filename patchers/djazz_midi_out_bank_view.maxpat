@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 3169.0, 134.0, 863.0, 1001.0 ],
+		"rect" : [ 462.0, 222.0, 863.0, 519.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -67,14 +67,14 @@
 					"lockeddragscroll" : 0,
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "djazz_midi_out_bank_view_global_port_ctrl.maxpat",
+					"name" : "djazz_midi_out_bank_view_global_port.maxpat",
 					"numinlets" : 0,
-					"numoutlets" : 1,
+					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "" ],
 					"patching_rect" : [ 21.0, 435.0, 126.0, 31.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 213.0, 0.0, 126.0, 31.0 ],
+					"varname" : "global_outport",
 					"viewvisibility" : 1
 				}
 
@@ -252,13 +252,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-308", 0 ],
-					"source" : [ "obj-53", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-6", 0 ]
 				}
@@ -287,7 +280,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_midi_out_bank_view_global_port_ctrl.maxpat",
+				"name" : "djazz_midi_out_bank_view_global_port.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",

@@ -262,7 +262,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 521.0, 711.0, 205.0, 22.0 ],
+					"patching_rect" : [ 521.0, 714.0, 205.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -428,13 +428,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-8",
+					"linecount" : 7,
 					"maxclass" : "textedit",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 271.666666666666515, 166.0, 197.0, 22.0 ],
-					"text" : "NONE",
+					"text" : "Macintosh HD:/Users/danielbrown/Documents/Max 8/Projects/djazz_db/data/Scores-Djazz-MIDI/AutumnleavesDoMin/new/AutumnleavesDoMin-new-2016.12.02-18h16.txt",
 					"varname" : "textedit"
 				}
 
@@ -621,6 +622,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-5",
+					"int" : 1,
 					"maxclass" : "gswitch2",
 					"numinlets" : 2,
 					"numoutlets" : 2,

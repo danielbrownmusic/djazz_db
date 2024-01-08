@@ -105,18 +105,6 @@ function track()
 }
 
 
-function set_global(parameter, value)
-{
-    tracks_.forEach
-    (
-        function (track)
-        {
-            track.subpatcher().getnamed(parameter).setvalueof(value);
-        }
-    );
-}
-
-
 //----------------------------------------------------------------
 
 

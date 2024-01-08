@@ -40,12 +40,32 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-2",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 29.0, 158.0, 43.0, 35.0 ],
+					"saved_object_attributes" : 					{
+						"initial" : [ 0 ],
+						"parameter_enable" : 0,
+						"parameter_mappable" : 0
+					}
+,
+					"text" : "pattr index",
+					"varname" : "index"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-47",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 105.0, 150.0, 63.0, 22.0 ],
+					"patching_rect" : [ 224.0, 158.0, 63.0, 22.0 ],
 					"text" : "insert 0 \" \""
 				}
 
@@ -57,7 +77,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 18.0, 150.0, 35.0, 22.0 ],
+					"patching_rect" : [ 137.0, 158.0, 35.0, 22.0 ],
 					"text" : "set 0"
 				}
 
@@ -69,7 +89,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 18.0, 19.0, 58.0, 22.0 ],
+					"patching_rect" : [ 137.0, 27.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -81,7 +101,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "bang", "int" ],
-					"patching_rect" : [ 18.0, 80.0, 193.0, 22.0 ],
+					"patching_rect" : [ 137.0, 88.0, 193.0, 22.0 ],
 					"text" : "t b b 1"
 				}
 
@@ -93,7 +113,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 192.0, 150.0, 50.0, 22.0 ],
+					"patching_rect" : [ 311.0, 158.0, 50.0, 22.0 ],
 					"text" : "midiinfo"
 				}
 
@@ -115,10 +135,9 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 18.0, 240.0, 100.0, 22.0 ],
+					"patching_rect" : [ 137.0, 248.0, 100.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 4.0, 4.0, 120.0, 22.0 ],
-					"varname" : "index"
+					"presentation_rect" : [ 4.0, 4.0, 120.0, 22.0 ]
 				}
 
 			}
@@ -127,6 +146,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
 					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"source" : [ "obj-2", 1 ]
 				}
 
 			}
