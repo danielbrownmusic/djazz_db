@@ -52,42 +52,42 @@
         {
             "unused" : {
                 "color" : {
-                    "hue" : ""
+                    "hue" : "no color"
                     ,
-                    "value" : ""
+                    "value" : "dim"
                 }
                 ,
-                "behavior" : ""
+                "behavior" : "static"
             }
             ,
             "off" : {
                 "color" : {
-                    "hue" : ""
+                    "hue" : "yellow"
                     ,
-                    "value" : ""
+                    "value" : "bright"
                 }
                 ,
-                "behavior" : ""
+                "behavior" : "static"
             }
             ,  
             "waiting" : {
                 "color" : {
-                    "hue" : ""
+                    "hue" : "red"
                     ,
-                    "value" : ""
+                    "value" : "dim"
                 }
                 ,
-                "behavior" : ""
+                "behavior" : "static"
             }
             ,
             "playing" : {
                 "color" : {
-                    "hue" : ""
+                    "hue" : "red"
                     ,
-                    "value" : ""
+                    "value" : "bright"
                 }
                 ,
-                "behavior" : ""
+                "behavior" : "static"
             }
         }
     }

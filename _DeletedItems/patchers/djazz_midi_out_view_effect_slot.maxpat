@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 350.0, 419.0, 415.0, 296.0 ],
+		"rect" : [ 644.0, 347.0, 418.0, 478.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,26 +40,58 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-8",
-					"maxclass" : "number",
+					"id" : "obj-47",
+					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 76.33333300000001, 136.0, 50.0, 22.0 ],
-					"varname" : "effect_number"
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 141.5, 266.0, 86.0, 22.0 ],
+					"text" : "prepend name"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-6",
-					"maxclass" : "message",
-					"numinlets" : 2,
+					"comment" : "",
+					"id" : "obj-28",
+					"index" : 0,
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 311.0, 375.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "led",
+					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 76.33333300000001, 194.0, 41.0, 22.0 ],
-					"text" : "set $1"
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 276.0, 204.0, 24.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 0.0, 22.0, 22.0 ],
+					"varname" : "window_open"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-82",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 49.0, 102.0, 250.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"filename" : "djazz_components_midi_out_effect_view.js",
+						"parameter_enable" : 0
+					}
+,
+					"text" : "js djazz_components_midi_out_effect_view.js",
+					"varname" : "components"
 				}
 
 			}
@@ -71,7 +103,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 185.333333000000039, 194.0, 24.0, 24.0 ],
+					"patching_rect" : [ 234.0, 324.0, 24.0, 24.0 ],
 					"varname" : "active"
 				}
 
@@ -83,7 +115,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 185.333333000000039, 136.0, 29.5, 22.0 ],
+					"patching_rect" : [ 234.0, 266.0, 29.5, 22.0 ],
 					"text" : "$2"
 				}
 
@@ -91,17 +123,18 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-2",
-					"items" : [ "", ",", "add octaves", ",", "pitch shift" ],
+					"items" : [ "hi", ",", "yo", ",", "hi", ",", "yo" ],
 					"maxclass" : "umenu",
 					"menumode" : 3,
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 76.33333300000001, 75.0, 128.0, 22.0 ],
+					"patching_rect" : [ 49.0, 204.0, 204.0, 22.0 ],
+					"pattrmode" : 1,
+					"prefix_mode" : 1,
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 128.0, 22.0 ],
-					"varname" : "umenu"
+					"presentation_rect" : [ 22.0, 0.0, 106.0, 22.0 ]
 				}
 
 			}
@@ -112,10 +145,10 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 63.999999666666668, 2.0, 56.0, 22.0 ],
+					"patching_rect" : [ 36.666666666666657, 14.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"active" : [ 1 ],
-						"effect_number" : [ 0 ]
+						"active" : [ 0 ],
+						"window_open" : [ 0 ]
 					}
 ,
 					"text" : "autopattr",
@@ -126,7 +159,7 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
+					"destination" : [ "obj-82", 0 ],
 					"source" : [ "obj-1", 1 ]
 				}
 
@@ -147,28 +180,35 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"source" : [ "obj-2", 0 ]
+					"destination" : [ "obj-47", 0 ],
+					"source" : [ "obj-2", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-82", 0 ],
+					"midpoints" : [ 151.0, 312.0, 26.5, 312.0, 26.5, 91.0, 58.5, 91.0 ],
+					"source" : [ "obj-47", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"midpoints" : [ 85.83333300000001, 226.0, 56.83333300000001, 226.0, 56.83333300000001, 64.0, 85.83333300000001, 64.0 ],
-					"source" : [ "obj-6", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"source" : [ "obj-8", 0 ]
+					"source" : [ "obj-82", 0 ]
 				}
 
 			}
  ],
-		"dependency_cache" : [  ],
+		"dependency_cache" : [ 			{
+				"name" : "djazz_components_midi_out_effect_view.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+ ],
 		"autosave" : 0
 	}
 

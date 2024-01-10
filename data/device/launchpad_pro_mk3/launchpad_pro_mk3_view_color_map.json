@@ -6,6 +6,11 @@
     }
 ,
 	"colors" : 	{
+        "no color" : {
+            "bright" : 0,
+            "dim" : 0
+        }
+        ,
 		"white" : {
             "dim" :     1,
             "bright" :  3

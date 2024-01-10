@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -221,9 +221,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-64", 0 ],
-					"source" : [ "obj-92", 1 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 26
+					"source" : [ "obj-92", 1 ]
 				}
 
 			}

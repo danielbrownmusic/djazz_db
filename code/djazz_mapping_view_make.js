@@ -3,8 +3,6 @@ autowatch = 1;
 var pip         = new ParameterInfoProvider(on_pip_changed);
 var param_dict  = new Dict ();
 
-param_dict.import_json("data/device/launchpad_pro_mk3/parameter_view_map_example.json");
-
 function on_pip_changed(data)
 {
     for (var i = 0; i < data.removed.length; i++)
@@ -27,17 +25,5 @@ function on_pip_changed(data)
     for (var i = 0; i < names.length; i++)
     {
         post (names[i]);
-    }
-}
-
-
-function on_param_changed(data)
-{
-    outlet (0, "parameter", data.name, data.value);
-
-    var info = pip.getinfo(data.name);
-    for (var i in info) 
-    {
-        post(i + ": " + info[i] + "\n");
     }
 }

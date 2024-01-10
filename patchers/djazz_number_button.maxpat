@@ -143,13 +143,25 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
-					"parameter_enable" : 0,
+					"parameter_enable" : 1,
 					"patching_rect" : [ 144.0, 298.0, 36.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 33.0, 33.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_enum" : [ "off", "on" ],
+							"parameter_initial" : [ 0.0 ],
+							"parameter_initial_enable" : 1,
+							"parameter_longname" : "loop_4",
+							"parameter_mmax" : 1,
+							"parameter_shortname" : "loop_4",
+							"parameter_type" : 2
+						}
+
+					}
+,
 					"text" : "#1",
-					"texton" : "#1",
-					"varname" : "loop_2[1]"
+					"texton" : "#1"
 				}
 
 			}
