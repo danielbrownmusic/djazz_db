@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 83.0, 115.0, 1347.0, 957.0 ],
+		"rect" : [ 92.0, 121.0, 1434.0, 1011.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -447,12 +447,24 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-65::obj-37::obj-15::obj-40::obj-24" : [ "loop_2[1]", "loop_2[1]", 0 ],
-			"obj-65::obj-37::obj-15::obj-41::obj-24" : [ "loop_2[2]", "loop_2[2]", 0 ],
-			"obj-65::obj-37::obj-17::obj-2::obj-24" : [ "loop_2[3]", "loop_2[3]", 0 ],
-			"obj-65::obj-37::obj-17::obj-4::obj-24" : [ "loop_2[4]", "loop_2[4]", 0 ],
-			"obj-65::obj-37::obj-17::obj-5::obj-24" : [ "loop_2[5]", "loop_2[5]", 0 ],
-			"obj-65::obj-37::obj-17::obj-6::obj-24" : [ "loop_4", "loop_4", 0 ],
+			"obj-65::obj-25::obj-15::obj-40::obj-24" : [ "loop_button[4]", "loop_button", 0 ],
+			"obj-65::obj-25::obj-15::obj-41::obj-24" : [ "loop_button[3]", "loop_button", 0 ],
+			"obj-65::obj-25::obj-15::obj-44::obj-24" : [ "loop_button[2]", "loop_button", 0 ],
+			"obj-65::obj-25::obj-15::obj-45::obj-24" : [ "loop_button[1]", "loop_button", 0 ],
+			"obj-65::obj-25::obj-15::obj-46::obj-24" : [ "loop_button", "loop_button", 0 ],
+			"obj-65::obj-25::obj-17::obj-2::obj-24" : [ "speed_button[3]", "speed_button", 0 ],
+			"obj-65::obj-25::obj-17::obj-4::obj-24" : [ "speed_button[2]", "speed_button", 0 ],
+			"obj-65::obj-25::obj-17::obj-5::obj-24" : [ "speed_button[1]", "speed_button", 0 ],
+			"obj-65::obj-25::obj-17::obj-6::obj-24" : [ "speed_button", "speed_button", 0 ],
+			"obj-65::obj-37::obj-15::obj-40::obj-24" : [ "loop_button[9]", "loop_button", 0 ],
+			"obj-65::obj-37::obj-15::obj-41::obj-24" : [ "loop_button[8]", "loop_button", 0 ],
+			"obj-65::obj-37::obj-15::obj-44::obj-24" : [ "loop_button[7]", "loop_button", 0 ],
+			"obj-65::obj-37::obj-15::obj-45::obj-24" : [ "loop_button[6]", "loop_button", 0 ],
+			"obj-65::obj-37::obj-15::obj-46::obj-24" : [ "loop_button[5]", "loop_button", 0 ],
+			"obj-65::obj-37::obj-17::obj-2::obj-24" : [ "speed_button[7]", "speed_button", 0 ],
+			"obj-65::obj-37::obj-17::obj-4::obj-24" : [ "speed_button[6]", "speed_button", 0 ],
+			"obj-65::obj-37::obj-17::obj-5::obj-24" : [ "speed_button[5]", "speed_button", 0 ],
+			"obj-65::obj-37::obj-17::obj-6::obj-24" : [ "speed_button[4]", "speed_button", 0 ],
 			"obj-65::obj-47::obj-85::obj-5::obj-21" : [ "grid", "grid", 0 ],
 			"obj-65::obj-47::obj-85::obj-5::obj-28" : [ "chapter_count", "chapter_count", 0 ],
 			"obj-65::obj-47::obj-94::obj-22::obj-24" : [ "chapter", "chapter", 0 ],
@@ -468,26 +480,6 @@
 			}
 ,
 			"inherited_shortname" : 1
-		}
-,
-		"parameter_map" : 		{
-			"midi" : 			{
-				"loop_2[1]" : 				{
-					"srcname" : "11.note.0.chan.midi",
-					"min" : 0.0,
-					"max" : 1.0,
-					"flags" : 3
-				}
-,
-				"loop_2[2]" : 				{
-					"srcname" : "29.ctrl.0.chan.midi",
-					"min" : 0.0,
-					"max" : 1.0,
-					"flags" : 2
-				}
-
-			}
-
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -733,6 +725,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "djazz_loop_button.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "djazz_loop_section.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/beatclock",
 				"patcherrelativepath" : "./beatclock",
@@ -901,13 +900,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_number_button.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_range.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
@@ -968,6 +960,13 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_speed_button.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{

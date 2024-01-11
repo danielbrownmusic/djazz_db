@@ -74,7 +74,7 @@
 					"lockeddragscroll" : 0,
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "djazz_number_button.maxpat",
+					"name" : "djazz_loop_button.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -98,7 +98,7 @@
 					"lockeddragscroll" : 0,
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "djazz_number_button.maxpat",
+					"name" : "djazz_loop_button.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -122,7 +122,7 @@
 					"lockeddragscroll" : 0,
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "djazz_number_button.maxpat",
+					"name" : "djazz_loop_button.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -146,7 +146,7 @@
 					"lockeddragscroll" : 0,
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "djazz_number_button.maxpat",
+					"name" : "djazz_loop_button.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -170,7 +170,7 @@
 					"lockeddragscroll" : 0,
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "djazz_number_button.maxpat",
+					"name" : "djazz_loop_button.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -225,7 +225,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-40", 0 ],
-					"order" : 0,
+					"order" : 4,
 					"source" : [ "obj-22", 0 ]
 				}
 
@@ -233,7 +233,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-41", 0 ],
-					"order" : 1,
+					"order" : 3,
 					"source" : [ "obj-22", 0 ]
 				}
 
@@ -249,7 +249,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-45", 0 ],
-					"order" : 3,
+					"order" : 1,
 					"source" : [ "obj-22", 0 ]
 				}
 
@@ -257,7 +257,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-46", 0 ],
-					"order" : 4,
+					"order" : 0,
 					"source" : [ "obj-22", 0 ]
 				}
 
@@ -298,8 +298,26 @@
 
 			}
  ],
+		"parameters" : 		{
+			"obj-40::obj-24" : [ "loop_4", "loop_4", 0 ],
+			"obj-41::obj-24" : [ "loop_4[1]", "loop_4", 0 ],
+			"obj-44::obj-24" : [ "loop_4[2]", "loop_4", 0 ],
+			"obj-45::obj-24" : [ "loop_4[3]", "loop_4", 0 ],
+			"obj-46::obj-24" : [ "loop_4[4]", "loop_4", 0 ],
+			"parameterbanks" : 			{
+				"0" : 				{
+					"index" : 0,
+					"name" : "",
+					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+				}
+
+			}
+,
+			"inherited_shortname" : 1
+		}
+,
 		"dependency_cache" : [ 			{
-				"name" : "djazz_number_button.maxpat",
+				"name" : "djazz_loop_button.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",

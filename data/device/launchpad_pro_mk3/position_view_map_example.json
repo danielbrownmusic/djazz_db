@@ -91,4 +91,10 @@
             }
         }
     }
+    ,
+    "loop_button" : "blue",
+    "speed_button" : "green",
+    "loop_chapter" : "orange",
+    "solo" : "red",
+    "mute" : "blue"
 }

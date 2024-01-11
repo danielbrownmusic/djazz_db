@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -259,7 +259,7 @@
 				"box" : 				{
 					"comment" : "score file full path, \"clear\"",
 					"id" : "obj-6",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -336,7 +336,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
 					"midpoints" : [ 90.600000000000023, 472.5, 978.599999999999909, 472.5 ],
-					"order" : 0,
+					"order" : 3,
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -354,7 +354,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
 					"midpoints" : [ 90.600000000000023, 472.5, 90.600000000000023, 472.5 ],
-					"order" : 3,
+					"order" : 1,
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -363,7 +363,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-59", 0 ],
 					"midpoints" : [ 90.600000000000023, 472.5, 502.0, 472.5 ],
-					"order" : 1,
+					"order" : 0,
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -392,6 +392,100 @@
 
 			}
  ],
+		"parameters" : 		{
+			"obj-15::obj-40::obj-24" : [ "loop_button", "loop_button", 0 ],
+			"obj-15::obj-41::obj-24" : [ "loop_button[1]", "loop_button", 0 ],
+			"obj-15::obj-44::obj-24" : [ "loop_button[2]", "loop_button", 0 ],
+			"obj-15::obj-45::obj-24" : [ "loop_button[3]", "loop_button", 0 ],
+			"obj-15::obj-46::obj-24" : [ "loop_button[4]", "loop_button", 0 ],
+			"obj-17::obj-2::obj-24" : [ "speed_button", "speed_button", 0 ],
+			"obj-17::obj-4::obj-24" : [ "speed_button[1]", "speed_button", 0 ],
+			"obj-17::obj-5::obj-24" : [ "speed_button[2]", "speed_button", 0 ],
+			"obj-17::obj-6::obj-24" : [ "speed_button[3]", "speed_button", 0 ],
+			"parameterbanks" : 			{
+				"0" : 				{
+					"index" : 0,
+					"name" : "",
+					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+				}
+
+			}
+,
+			"inherited_shortname" : 1
+		}
+,
+		"dependency_cache" : [ 			{
+				"name" : "djazz_PARAMS_CTRL_midi_gen_view.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/params",
+				"patcherrelativepath" : "../params",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_PARAMS_VIEW_midi_gen_view.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/params",
+				"patcherrelativepath" : "../params",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_loop_button.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : "..",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_master_clock_view_ctrl.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : "..",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_midi_gen_view_tempo_view.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiplayer",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_navigate_view_loop_ctrl.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : "..",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_navigate_view_speed_ctrl.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : "..",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_score_file_view.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : "..",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_speed_button.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
+				"patcherrelativepath" : "..",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "pattrinit.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
+				"patcherrelativepath" : "../../code",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0,
 		"bgcolor" : [ 0.219607843137255, 0.443137254901961, 0.462745098039216, 1.0 ],
 		"editing_bgcolor" : [ 0.337254901960784, 0.525490196078431, 0.541176470588235, 1.0 ]
 	}
