@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 978.0, 216.0, 436.0, 682.0 ],
+		"rect" : [ 440.0, 224.0, 1013.0, 729.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -88,7 +88,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ 4, 4 ],
+					"args" : [ 4, 4, "#1_speed_4" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -98,7 +98,7 @@
 					"lockeddragscroll" : 0,
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "djazz_speed_button.maxpat",
+					"name" : "djazz_number_button.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -112,7 +112,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ 3, 3 ],
+					"args" : [ 3, 3, "#1_speed_3" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -122,7 +122,7 @@
 					"lockeddragscroll" : 0,
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "djazz_speed_button.maxpat",
+					"name" : "djazz_number_button.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -136,7 +136,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ 2, 2 ],
+					"args" : [ 2, 2, "#1_speed_2" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -146,7 +146,7 @@
 					"lockeddragscroll" : 0,
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "djazz_speed_button.maxpat",
+					"name" : "djazz_number_button.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -160,7 +160,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "1/2", 0.5 ],
+					"args" : [ "1/2", 0.5, "#1_speed_1/2" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -170,7 +170,7 @@
 					"lockeddragscroll" : 0,
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "djazz_speed_button.maxpat",
+					"name" : "djazz_number_button.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -186,7 +186,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-1",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -198,7 +198,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-3",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -297,32 +297,6 @@
 
 			}
  ],
-		"parameters" : 		{
-			"obj-2::obj-24" : [ "player_1_quadruple_speed", "player_1_quadruple_speed", 0 ],
-			"obj-4::obj-24" : [ "player_1_quadruple_speed[1]", "player_1_quadruple_speed", 0 ],
-			"obj-5::obj-24" : [ "player_1_quadruple_speed[2]", "player_1_quadruple_speed", 0 ],
-			"obj-6::obj-24" : [ "player_1_quadruple_speed[3]", "player_1_quadruple_speed", 0 ],
-			"parameterbanks" : 			{
-				"0" : 				{
-					"index" : 0,
-					"name" : "",
-					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-				}
-
-			}
-,
-			"inherited_shortname" : 1
-		}
-,
-		"dependency_cache" : [ 			{
-				"name" : "djazz_speed_button.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0,
 		"textcolor_inverse" : [ 0.968627450980392, 0.968627450980392, 0.968627450980392, 1.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ]
 	}

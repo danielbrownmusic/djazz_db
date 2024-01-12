@@ -155,6 +155,7 @@
 			}
 , 			{
 				"box" : 				{
+					"args" : [ "#1" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -179,6 +180,7 @@
 			}
 , 			{
 				"box" : 				{
+					"args" : [ "#1" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -393,15 +395,15 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-15::obj-40::obj-24" : [ "loop_button", "loop_button", 0 ],
-			"obj-15::obj-41::obj-24" : [ "loop_button[1]", "loop_button", 0 ],
-			"obj-15::obj-44::obj-24" : [ "loop_button[2]", "loop_button", 0 ],
-			"obj-15::obj-45::obj-24" : [ "loop_button[3]", "loop_button", 0 ],
-			"obj-15::obj-46::obj-24" : [ "loop_button[4]", "loop_button", 0 ],
-			"obj-17::obj-2::obj-24" : [ "speed_button", "speed_button", 0 ],
-			"obj-17::obj-4::obj-24" : [ "speed_button[1]", "speed_button", 0 ],
-			"obj-17::obj-5::obj-24" : [ "speed_button[2]", "speed_button", 0 ],
-			"obj-17::obj-6::obj-24" : [ "speed_button[3]", "speed_button", 0 ],
+			"obj-15::obj-40::obj-24" : [ "#1_loop_1", "loop_button", 0 ],
+			"obj-15::obj-41::obj-24" : [ "#1_loop_2", "loop_button", 0 ],
+			"obj-15::obj-44::obj-24" : [ "#1_loop_3", "loop_button", 0 ],
+			"obj-15::obj-45::obj-24" : [ "#1_loop_4", "loop_button", 0 ],
+			"obj-15::obj-46::obj-24" : [ "#1_loop_8", "loop_button", 0 ],
+			"obj-17::obj-2::obj-7" : [ "#1_speed_1/2", "#1_speed_1/2", 0 ],
+			"obj-17::obj-4::obj-7" : [ "#1_speed_2", "#1_speed_2", 0 ],
+			"obj-17::obj-5::obj-7" : [ "#1_speed_3", "#1_speed_3", 0 ],
+			"obj-17::obj-6::obj-7" : [ "#1_speed_4", "#1_speed_4", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
@@ -464,14 +466,14 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_score_file_view.maxpat",
+				"name" : "djazz_number_button.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : "..",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_speed_button.maxpat",
+				"name" : "djazz_score_file_view.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : "..",
 				"type" : "JSON",

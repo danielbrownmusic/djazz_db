@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1108.0, 346.0, 517.0, 705.0 ],
+		"rect" : [ 772.0, 327.0, 517.0, 705.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -64,7 +64,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ 8, 8 ],
+					"args" : [ 8, 8, "#1_loop_8" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -88,7 +88,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ 4, 4 ],
+					"args" : [ 4, 4, "#1_loop_4" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -112,7 +112,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ 3, 3 ],
+					"args" : [ 3, 3, "#1_loop_3" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -136,7 +136,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ 2, 2 ],
+					"args" : [ 2, 2, "#1_loop_2" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -160,7 +160,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ 1, 1 ],
+					"args" : [ 1, 1, "#1_loop_1" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -186,7 +186,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-2",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -199,7 +199,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-1",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -297,34 +297,7 @@
 				}
 
 			}
- ],
-		"parameters" : 		{
-			"obj-40::obj-24" : [ "loop_4", "loop_4", 0 ],
-			"obj-41::obj-24" : [ "loop_4[1]", "loop_4", 0 ],
-			"obj-44::obj-24" : [ "loop_4[2]", "loop_4", 0 ],
-			"obj-45::obj-24" : [ "loop_4[3]", "loop_4", 0 ],
-			"obj-46::obj-24" : [ "loop_4[4]", "loop_4", 0 ],
-			"parameterbanks" : 			{
-				"0" : 				{
-					"index" : 0,
-					"name" : "",
-					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-				}
-
-			}
-,
-			"inherited_shortname" : 1
-		}
-,
-		"dependency_cache" : [ 			{
-				"name" : "djazz_loop_button.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }
