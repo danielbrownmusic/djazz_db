@@ -1,48 +1,68 @@
 {
 	"parameter_map" : 	{
 		"midi" : 		{
-			"speed_button[4]" : 			{
+			"midi_gen_1_speed_1/2" : 			{
 				"srcname" : "11.note.0.chan.midi",
 				"min" : 0.0,
 				"max" : 1.0,
 				"flags" : 3
 			}
 ,
-			"loop_button" : 			{
+			"midi_gen_1_speed_2" : 			{
+				"srcname" : "12.note.0.chan.midi",
+				"min" : 0.0,
+				"max" : 1.0,
+				"flags" : 3
+			}
+,
+			"midi_gen_1_speed_3" : 			{
+				"srcname" : "13.note.0.chan.midi",
+				"min" : 0.0,
+				"max" : 1.0,
+				"flags" : 3
+			}
+,
+			"midi_gen_1_speed_4" : 			{
+				"srcname" : "14.note.0.chan.midi",
+				"min" : 0.0,
+				"max" : 1.0,
+				"flags" : 3
+			}
+,
+			"midi_gen_1_loop_1" : 			{
 				"srcname" : "21.note.0.chan.midi",
 				"min" : 0.0,
 				"max" : 1.0,
 				"flags" : 3
 			}
 ,
-			"loop_button[1]" : 			{
+			"midi_gen_1_loop_2" : 			{
 				"srcname" : "22.note.0.chan.midi",
 				"min" : 0.0,
 				"max" : 1.0,
 				"flags" : 3
 			}
 ,
-			"loop_button[2]" : 			{
+			"midi_gen_1_loop_3" : 			{
 				"srcname" : "23.note.0.chan.midi",
 				"min" : 0.0,
 				"max" : 1.0,
 				"flags" : 3
 			}
 ,
-			"loop_button[3]" : 			{
+			"midi_gen_1_loop_4" : 			{
 				"srcname" : "24.note.0.chan.midi",
 				"min" : 0.0,
 				"max" : 1.0,
 				"flags" : 3
 			}
 ,
-			"loop_button[4]" : 			{
+			"midi_gen_1_loop_8" : 			{
 				"srcname" : "25.note.0.chan.midi",
 				"min" : 0.0,
 				"max" : 1.0,
 				"flags" : 3
 			}
-
 		}
 
 	}

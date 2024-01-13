@@ -1,63 +1,83 @@
 autowatch = 1;
 
-outlets = 3;
+var pip             = new ParameterInfoProvider(on_pip_changed);
+var param_listeners = [];
 
-var pip         = new ParameterInfoProvider(on_pip_changed);
-var param_dict  = new Dict ();
 
-//param_dict.import_json("data/device/launchpad_pro_mk3/parameter_view_map_example.json");
+function loadbang()
+{
+    bang();
+}
 
-var d_name = "PARAMS_MAYBE";
-var d = new Dict (d_name);
+
 function bang()
 {
-    //outlet (1, pip.getnames());
-    pip.getnames().forEach(
-        function (name)
-        {
-            post (name);
-            var listener        = new Lcycli(name, on_param_changed);
-            d.append(name, "");
-        }
-    );
-    outlet (1, "dictionary", d_name)
-    outlet (2, d_name)
+    pip.getnames().forEach(add_parameter_);
 }
 
 
 function on_pip_changed(data)
 {
-/*     for (var i = 0; i < data.removed.length; i++)
-    {
-        param_dict.remove(data.removed[i]);
-    }
-
-    for (var i = 0; i < data.added.length; i++) 
-    {
-        var param_name      = data.added[i];
-        var color_key       = [param_name, "color"].join("::");
-        var listener_key    = [param_name, "key"].join("::");
-        var listener        = new ParameterListener(param_name, on_param_changed);
-
-        param_dict.replace(color_key, "red");
-        param_dict.replace(listener_key, listener);
-    } */
+    if (data.added.length) {
+        data.added.forEach(add_parameter_);
+      }
+      if (data.removed.length) {
+        data.removed.forEach(remove_parameter_);
+      }
 
     var names = data.provider.getnames();
-    for (var i = 0; i < names.length; i++)
-    {
-        post (names[i]);
-    }
+
 }
+
+
+function get_names()
+{
+    post ("PARAMETER NAMES: \n");
+    param_listeners.forEach(
+        function (listener)
+        {
+            post (listener.name);
+        }
+    )
+    post ("\n");
+}
+
+//------------------------------------------------------------------------------------------
 
 
 function on_param_changed(data)
 {
     outlet (0, "parameter", data.name, data.value);
-
-/*     var info = pip.getinfo(data.name);
-    for (var i in info) 
-    {
-        post(i + ": " + info[i] + "\n");
-    } */
 }
+
+
+/* function add_parameter_(name)
+{
+    if (is_param_already_there_(name))
+        return;
+
+    param_listeners.push(new ParameterListener(name, on_param_changed));
+}
+add_parameter_.local = 1;
+
+
+function remove_parameter_(name)
+{
+    d.remove(name, "");
+}
+remove_parameter_.local = 1;
+
+
+function is_param_already_there_(name)
+{
+    var result = false;
+    for (var i = 0; i < param_listeners.length; i++)
+    {
+        if (param_listeners[i].name === name)
+            return true;
+    }
+    return false;
+}
+is_param_already_there_.local = 1; */
+
+

@@ -46,7 +46,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 140.0, 272.0, 24.0, 24.0 ],
+					"patching_rect" : [ 144.0, 292.0, 24.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 3.0, 5.0, 24.0, 24.0 ],
 					"saved_attribute_attributes" : 					{
@@ -172,24 +172,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 252.0, 19.0, 80.0, 22.0 ],
 					"text" : "loadmess #2"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-24",
-					"maxclass" : "textbutton",
-					"mode" : 1,
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "int" ],
-					"outputmode" : 0,
-					"parameter_enable" : 0,
-					"patching_rect" : [ 452.0, 329.0, 346.0, 35.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 184.0, 119.0, 33.0, 33.0 ],
-					"text" : "#1",
-					"texton" : "#1"
 				}
 
 			}

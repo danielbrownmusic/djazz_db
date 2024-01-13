@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 103.0, 179.0, 785.0, 888.0 ],
+		"rect" : [ 255.0, 303.0, 1815.0, 905.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -50,7 +50,7 @@
 					"lockeddragscroll" : 0,
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "djazz_midi_generator_view.maxpat",
+					"name" : "djazz_midi_player_view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
@@ -74,7 +74,7 @@
 					"lockeddragscroll" : 0,
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "djazz_midi_generator_view.maxpat",
+					"name" : "djazz_midi_player_view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
@@ -381,24 +381,24 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-10::obj-15::obj-40::obj-24" : [ "loop_button", "loop_button", 0 ],
-			"obj-10::obj-15::obj-41::obj-24" : [ "loop_button[10]", "loop_button", 0 ],
-			"obj-10::obj-15::obj-44::obj-24" : [ "loop_button[11]", "loop_button", 0 ],
-			"obj-10::obj-15::obj-45::obj-24" : [ "loop_button[12]", "loop_button", 0 ],
-			"obj-10::obj-15::obj-46::obj-24" : [ "loop_button[13]", "loop_button", 0 ],
-			"obj-10::obj-17::obj-2::obj-24" : [ "speed_button", "speed_button", 0 ],
-			"obj-10::obj-17::obj-4::obj-24" : [ "speed_button[8]", "speed_button", 0 ],
-			"obj-10::obj-17::obj-5::obj-24" : [ "speed_button[9]", "speed_button", 0 ],
-			"obj-10::obj-17::obj-6::obj-24" : [ "speed_button[10]", "speed_button", 0 ],
-			"obj-12::obj-15::obj-40::obj-24" : [ "loop_button[7]", "loop_button", 0 ],
-			"obj-12::obj-15::obj-41::obj-24" : [ "loop_button[14]", "loop_button", 0 ],
-			"obj-12::obj-15::obj-44::obj-24" : [ "loop_button[8]", "loop_button", 0 ],
-			"obj-12::obj-15::obj-45::obj-24" : [ "loop_button[15]", "loop_button", 0 ],
-			"obj-12::obj-15::obj-46::obj-24" : [ "loop_button[16]", "loop_button", 0 ],
-			"obj-12::obj-17::obj-2::obj-24" : [ "speed_button[7]", "speed_button", 0 ],
-			"obj-12::obj-17::obj-4::obj-24" : [ "speed_button[11]", "speed_button", 0 ],
-			"obj-12::obj-17::obj-5::obj-24" : [ "speed_button[12]", "speed_button", 0 ],
-			"obj-12::obj-17::obj-6::obj-24" : [ "speed_button[13]", "speed_button", 0 ],
+			"obj-10::obj-15::obj-40::obj-7" : [ "midi_gen_1_loop_1", "midi_gen_1_loop_1", 0 ],
+			"obj-10::obj-15::obj-41::obj-7" : [ "midi_gen_1_loop_2", "midi_gen_1_loop_2", 0 ],
+			"obj-10::obj-15::obj-44::obj-7" : [ "midi_gen_1_loop_3", "midi_gen_1_loop_3", 0 ],
+			"obj-10::obj-15::obj-45::obj-7" : [ "midi_gen_1_loop_4", "midi_gen_1_loop_4", 0 ],
+			"obj-10::obj-15::obj-46::obj-7" : [ "midi_gen_1_loop_8", "midi_gen_1_loop_8", 0 ],
+			"obj-10::obj-17::obj-2::obj-7" : [ "midi_gen_1_speed_1/2", "midi_gen_1_speed_1/2", 0 ],
+			"obj-10::obj-17::obj-4::obj-7" : [ "midi_gen_1_speed_2", "midi_gen_1_speed_2", 0 ],
+			"obj-10::obj-17::obj-5::obj-7" : [ "midi_gen_1_speed_3", "midi_gen_1_speed_3", 0 ],
+			"obj-10::obj-17::obj-6::obj-7" : [ "midi_gen_1_speed_4", "midi_gen_1_speed_4", 0 ],
+			"obj-12::obj-15::obj-40::obj-7" : [ "midi_gen_2_loop_1", "midi_gen_2_loop_1", 0 ],
+			"obj-12::obj-15::obj-41::obj-7" : [ "midi_gen_2_loop_2", "midi_gen_2_loop_2", 0 ],
+			"obj-12::obj-15::obj-44::obj-7" : [ "midi_gen_2_loop_3", "midi_gen_2_loop_3", 0 ],
+			"obj-12::obj-15::obj-45::obj-7" : [ "midi_gen_2_loop_4", "midi_gen_2_loop_4", 0 ],
+			"obj-12::obj-15::obj-46::obj-7" : [ "midi_gen_2_loop_8", "midi_gen_2_loop_8", 0 ],
+			"obj-12::obj-17::obj-2::obj-7" : [ "midi_gen_2_speed_1/2", "midi_gen_2_speed_1/2", 0 ],
+			"obj-12::obj-17::obj-4::obj-7" : [ "midi_gen_2_speed_2", "midi_gen_2_speed_2", 0 ],
+			"obj-12::obj-17::obj-5::obj-7" : [ "midi_gen_2_speed_3", "midi_gen_2_speed_3", 0 ],
+			"obj-12::obj-17::obj-6::obj-7" : [ "midi_gen_2_speed_4", "midi_gen_2_speed_4", 0 ],
 			"obj-47::obj-85::obj-5::obj-21" : [ "grid", "grid", 0 ],
 			"obj-47::obj-85::obj-5::obj-28" : [ "chapter_count", "chapter_count", 0 ],
 			"obj-47::obj-94::obj-22::obj-24" : [ "chapter", "chapter", 0 ],
@@ -536,7 +536,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_loop_button.maxpat",
+				"name" : "djazz_loop_control_view.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -578,13 +578,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_midi_generator_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiplayer",
-				"patcherrelativepath" : "./midiplayer",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_midi_out_bank_view.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
 				"patcherrelativepath" : "./midiout",
@@ -602,6 +595,13 @@
 				"name" : "djazz_midi_out_bank_view_track_number_ctrl.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
 				"patcherrelativepath" : "./midiout",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_midi_player_view.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiplayer",
+				"patcherrelativepath" : "./midiplayer",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -627,14 +627,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_navigate_view_loop_ctrl.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_navigate_view_speed_ctrl.maxpat",
+				"name" : "djazz_number_button.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -669,7 +662,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_speed_button.maxpat",
+				"name" : "djazz_speed_control_view.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
