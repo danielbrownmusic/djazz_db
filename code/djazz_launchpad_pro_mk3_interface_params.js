@@ -3,10 +3,11 @@ var dutils = require("db_dictionary_array_utils");
 autowatch = 1;
 outlets = 2;
 
-var pip             = new ParameterInfoProvider(on_pip_changed);
-var param_dict      = new Dict ();
-var param_listeners = [];
-
+var pip                 = new ParameterInfoProvider(on_pip_changed);
+var param_dict          = new Dict ();
+var param_listeners     = [];
+var chapter_listener    = undefined;
+var bar_listener        = undefined;
 
 function initialize(params_dict_name)
 {
@@ -66,6 +67,17 @@ function on_param_changed(data)
 }
 
 
+function anything()
+{
+    var param_name  = messagename;
+    var param_value = arrayfromargs(messagename, arguments).slice(1);
+    var listener    = get_listener_(param_name);
+    if (!listener)
+        return null;
+    listener.setvalue(param_value);
+}
+
+
 function get_names()
 {
     post ("PARAMETER NAMES: \n");
@@ -82,7 +94,16 @@ function get_names()
 
 function send_param_msg_(name, value)
 {
-    outlet (0, "parameter", name, value);
+    var position_params = ["chapter_count", "grid"];
+    var ignore_params   = ["chapter", "bar"];
+    if (position_params.indexOf(name) > -1)
+    {
+        outlet (0, name, value);
+    }
+    else if (!ignore_params.indexOf(name) > -1)
+    {
+        outlet (1, name, value);
+    }
 }
 send_param_msg_.local = 1;
 
@@ -140,3 +161,15 @@ function is_param_already_there_(name)
     return param_dict.contains(name) === 1 ? true : false;
 }
 is_param_already_there_.local = 1;
+
+
+function get_listener_(name)
+{
+    for (var i = 0; i < param_listeners.length; i++)
+    {
+        if (param_listeners[i].name === name)
+            return param_listeners[i];
+    }
+    return null;
+}
+get_listener_.local = 1;
