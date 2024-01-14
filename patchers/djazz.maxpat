@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 4083.0, 101.0, 1794.0, 1011.0 ],
+		"rect" : [ 221.0, 202.0, 943.0, 755.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -100,15 +100,9 @@
 					"id" : "obj-29",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 2243.904785215854645, 946.0, 189.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"filename" : "djazz_device_param_handler.js",
-						"parameter_enable" : 0
-					}
-,
-					"text" : "js djazz_device_param_handler.js"
+					"numoutlets" : 0,
+					"patching_rect" : [ 2243.904785215854645, 946.0, 205.0, 22.0 ],
+					"text" : "no js djazz_device_param_handler.js"
 				}
 
 			}
@@ -389,15 +383,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
-					"source" : [ "obj-29", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 5
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-3", 0 ]
 				}
@@ -503,11 +488,9 @@
 			"obj-65::obj-12::obj-17::obj-4::obj-7" : [ "midi_gen_2_speed_2", "midi_gen_2_speed_2", 0 ],
 			"obj-65::obj-12::obj-17::obj-5::obj-7" : [ "midi_gen_2_speed_3", "midi_gen_2_speed_3", 0 ],
 			"obj-65::obj-12::obj-17::obj-6::obj-7" : [ "midi_gen_2_speed_4", "midi_gen_2_speed_4", 0 ],
+			"obj-65::obj-47::obj-16::obj-1" : [ "loop_chapter", "loop_chapter", 0 ],
 			"obj-65::obj-47::obj-85::obj-5::obj-21" : [ "grid", "grid", 0 ],
 			"obj-65::obj-47::obj-85::obj-5::obj-28" : [ "chapter_count", "chapter_count", 0 ],
-			"obj-65::obj-47::obj-94::obj-22::obj-24" : [ "chapter", "chapter", 0 ],
-			"obj-65::obj-47::obj-94::obj-22::obj-25" : [ "bar", "bar", 0 ],
-			"obj-65::obj-47::obj-94::obj-22::obj-7" : [ "loop_chapter", "loop_chapter", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
@@ -519,16 +502,10 @@
 ,
 			"parameter_overrides" : 			{
 				"obj-65::obj-10::obj-15::obj-40::obj-7" : 				{
-					"parameter_initial" : 0.0,
+					"parameter_initial" : 1.0,
 					"parameter_invisible" : 0,
 					"parameter_modmode" : 0,
 					"parameter_unitstyle" : 9
-				}
-,
-				"obj-65::obj-47::obj-94::obj-22::obj-7" : 				{
-					"parameter_invisible" : 0,
-					"parameter_modmode" : 0,
-					"parameter_unitstyle" : 10
 				}
 
 			}
@@ -538,64 +515,8 @@
 ,
 		"parameter_map" : 		{
 			"midi" : 			{
-				"midi_gen_1_speed_1/2" : 				{
-					"srcname" : "11.note.0.chan.midi",
-					"min" : 0.0,
-					"max" : 1.0,
-					"flags" : 3
-				}
-,
-				"midi_gen_1_speed_2" : 				{
-					"srcname" : "12.note.0.chan.midi",
-					"min" : 0.0,
-					"max" : 1.0,
-					"flags" : 3
-				}
-,
-				"midi_gen_1_speed_3" : 				{
-					"srcname" : "13.note.0.chan.midi",
-					"min" : 0.0,
-					"max" : 1.0,
-					"flags" : 3
-				}
-,
-				"midi_gen_1_speed_4" : 				{
-					"srcname" : "14.note.0.chan.midi",
-					"min" : 0.0,
-					"max" : 1.0,
-					"flags" : 3
-				}
-,
-				"midi_gen_1_loop_1" : 				{
-					"srcname" : "21.note.0.chan.midi",
-					"min" : 0.0,
-					"max" : 1.0,
-					"flags" : 3
-				}
-,
-				"midi_gen_1_loop_2" : 				{
-					"srcname" : "22.note.0.chan.midi",
-					"min" : 0.0,
-					"max" : 1.0,
-					"flags" : 3
-				}
-,
-				"midi_gen_1_loop_3" : 				{
-					"srcname" : "23.note.0.chan.midi",
-					"min" : 0.0,
-					"max" : 1.0,
-					"flags" : 3
-				}
-,
-				"midi_gen_1_loop_4" : 				{
-					"srcname" : "24.note.0.chan.midi",
-					"min" : 0.0,
-					"max" : 1.0,
-					"flags" : 3
-				}
-,
-				"midi_gen_1_loop_8" : 				{
-					"srcname" : "25.note.0.chan.midi",
+				"loop_chapter" : 				{
+					"srcname" : "18.note.0.chan.midi",
 					"min" : 0.0,
 					"max" : 1.0,
 					"flags" : 3
@@ -768,13 +689,6 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_device_param_handler.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
-				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{

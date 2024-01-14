@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 436.0, 162.0, 1115.0, 919.0 ],
+		"rect" : [ 436.0, 162.0, 237.0, 919.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -200,10 +200,22 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
+					"parameter_enable" : 1,
 					"patching_rect" : [ 722.0, 479.0, 24.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 109.0, 52.940783160924866, 19.5, 19.5 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_enum" : [ "off", "on" ],
+							"parameter_linknames" : 1,
+							"parameter_longname" : "loop_chapter",
+							"parameter_mmax" : 1,
+							"parameter_shortname" : "loop_chapter",
+							"parameter_type" : 2
+						}
+
+					}
+,
 					"varname" : "loop_chapter"
 				}
 
@@ -347,6 +359,20 @@
 
 			}
  ],
+		"parameters" : 		{
+			"obj-1" : [ "loop_chapter", "loop_chapter", 0 ],
+			"parameterbanks" : 			{
+				"0" : 				{
+					"index" : 0,
+					"name" : "",
+					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+				}
+
+			}
+,
+			"inherited_shortname" : 1
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "djazz_navigate_bar_ctrl.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
