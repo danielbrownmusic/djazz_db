@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 689.0, 161.0, 522.0, 575.0 ],
+		"rect" : [ 1195.0, 390.0, 522.0, 575.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -54,13 +54,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-4",
-					"linecount" : 3,
+					"linecount" : 4,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 234.0, 19.0, 135.0, 49.0 ],
-					"text" : "loadmess set_effect_database djazz_midi_effects.json"
+					"patching_rect" : [ 257.5, 19.0, 73.0, 62.0 ],
+					"text" : "loadmess set_folder \"djazz midi effects\""
 				}
 
 			}
@@ -171,8 +171,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "djazz_components_midi_out_effect.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
+				"patcherrelativepath" : "../../code/midiout",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

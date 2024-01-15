@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 460.0, 365.0, 780.0, 544.0 ],
+		"rect" : [ 3059.0, 44.0, 1552.0, 957.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,73 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 110.0, 127.0, 77.0, 22.0 ],
+					"text" : "absolutepath"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-16",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 361.5, 482.0, 111.5, 22.0 ],
+					"text" : "pack 0 name"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 110.0, 200.0, 78.0, 22.0 ],
+					"text" : "set_folder $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-20",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 110.0, 18.0, 169.0, 22.0 ],
+					"text" : "loadmess \"djazz midi effects\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"linecount" : 5,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 361.5, 200.0, 89.0, 76.0 ],
+					"text" : "types fold, prefix $1, prefix_mode 2, populate, insert 0 \" \""
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-8",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 354.0, 18.0, 29.5, 22.0 ],
+					"patching_rect" : [ 437.333333333333258, 18.0, 29.5, 22.0 ],
 					"text" : "#1"
 				}
 
@@ -57,7 +118,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 35.0, 263.0, 69.0, 22.0 ],
+					"patching_rect" : [ 35.0, 404.0, 69.0, 22.0 ],
 					"text" : "prepend #1"
 				}
 
@@ -69,9 +130,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 274.0, 18.0, 56.0, 22.0 ],
+					"patching_rect" : [ 493.333333333333258, 18.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"umenu" : [ "", 0 ],
+						"umenu" : [ "pitch shift", 0 ],
 						"window_open" : [ 0 ]
 					}
 ,
@@ -88,7 +149,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 348.0, 317.0, 49.0, 35.0 ],
+					"patching_rect" : [ 480.0, 539.5, 49.0, 35.0 ],
 					"saved_object_attributes" : 					{
 						"initial" : [ 1 ],
 						"parameter_enable" : 0,
@@ -102,26 +163,13 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-4",
-					"linecount" : 3,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 116.0, 18.0, 135.0, 49.0 ],
-					"text" : "loadmess set_effect_database djazz_midi_effects.json"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"comment" : "",
 					"id" : "obj-105",
 					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 35.0, 445.0, 30.0, 30.0 ]
+					"patching_rect" : [ 35.0, 648.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -145,7 +193,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 640.333333333333258, 181.0, 35.0, 22.0 ],
+					"patching_rect" : [ 776.333333333333258, 363.0, 35.0, 22.0 ],
 					"text" : "open"
 				}
 
@@ -157,7 +205,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 582.833333333333258, 181.0, 37.0, 22.0 ],
+					"patching_rect" : [ 718.833333333333258, 363.0, 37.0, 22.0 ],
 					"text" : "close"
 				}
 
@@ -169,7 +217,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "bang", "" ],
-					"patching_rect" : [ 582.833333333333258, 92.0, 134.0, 22.0 ],
+					"patching_rect" : [ 718.833333333333258, 274.0, 134.0, 22.0 ],
 					"text" : "sel 0 1"
 				}
 
@@ -181,7 +229,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 582.833333333333258, 286.0, 51.0, 22.0 ],
+					"patching_rect" : [ 718.833333333333258, 468.0, 51.0, 22.0 ],
 					"text" : "pcontrol",
 					"varname" : "pcontrol"
 				}
@@ -195,7 +243,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 582.833333333333258, 18.0, 24.0, 24.0 ],
+					"patching_rect" : [ 718.833333333333258, 200.0, 24.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 22.0, 22.0 ],
 					"varname" : "window_open"
@@ -209,7 +257,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 35.0, 170.0, 258.0, 22.0 ],
+					"patching_rect" : [ 35.0, 302.0, 250.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_components_midi_out_effect_view.js",
 						"parameter_enable" : 0
@@ -228,7 +276,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 419.0, 391.0, 24.0, 24.0 ],
+					"patching_rect" : [ 546.5, 623.0, 24.0, 24.0 ],
 					"varname" : "toggle"
 				}
 
@@ -240,7 +288,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 419.0, 330.0, 29.5, 22.0 ],
+					"patching_rect" : [ 546.5, 482.0, 29.5, 22.0 ],
 					"text" : "$2"
 				}
 
@@ -248,18 +296,20 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-2",
-					"items" : [ "", ",", "add octaves", ",", "pitch shift" ],
+					"items" : [ " ", ",", "add octaves", ",", "pitch shift" ],
 					"maxclass" : "umenu",
 					"menumode" : 3,
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 274.0, 263.0, 164.0, 22.0 ],
+					"patching_rect" : [ 361.5, 391.0, 204.0, 22.0 ],
 					"pattrmode" : 1,
-					"prefix_mode" : 1,
+					"prefix" : "~/Documents/Max 8/Projects/djazz_db/patchers/djazz midi effects/",
+					"prefix_mode" : 2,
 					"presentation" : 1,
 					"presentation_rect" : [ 22.0, 0.0, 106.0, 22.0 ],
+					"types" : "fold",
 					"varname" : "umenu"
 				}
 
@@ -274,6 +324,21 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-82", 0 ],
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-82", 1 ],
+					"midpoints" : [ 371.0, 686.0, 616.5, 686.0, 616.5, 153.0, 275.5, 153.0 ],
+					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"source" : [ "obj-2", 2 ]
 				}
@@ -281,9 +346,32 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-82", 1 ],
-					"midpoints" : [ 283.5, 475.0, 465.5, 475.0, 465.5, 125.0, 283.5, 125.0 ],
+					"destination" : [ "obj-16", 1 ],
+					"source" : [ "obj-2", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
 					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"order" : 1,
+					"source" : [ "obj-20", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"midpoints" : [ 119.5, 97.5, 371.0, 97.5 ],
+					"order" : 0,
+					"source" : [ "obj-20", 0 ]
 				}
 
 			}
@@ -296,7 +384,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-82", 0 ],
+					"destination" : [ "obj-11", 0 ],
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -359,6 +447,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-9", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-82", 0 ],
 					"source" : [ "obj-97", 0 ]
 				}
@@ -367,8 +462,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "djazz_components_midi_out_effect_view.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
-				"patcherrelativepath" : "../code",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
+				"patcherrelativepath" : "../../code/midiout",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

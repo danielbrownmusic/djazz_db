@@ -1,0 +1,22 @@
+{
+	"parameter_map" : 	{
+		"midi" : 		{
+			"midi_gen_1_speed_1/2" : 			{
+				"srcname" : "11.note.0.chan.midi",
+				"min" : 0.0,
+				"max" : 1.0,
+				"flags" : 3
+			}
+,
+			"midi_gen_1_speed_2" : 			{
+				"srcname" : "12.note.0.chan.midi",
+				"min" : 0.0,
+				"max" : 1.0,
+				"flags" : 3
+			}
+
+		}
+
+	}
+
+}
