@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 129.0, 126.0, 1388.0, 998.0 ],
+		"rect" : [ 38.0, 111.0, 1783.0, 1002.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -570,6 +570,41 @@
 					"max" : 1.0,
 					"flags" : 3
 				}
+,
+				"midi_gen_1_speed_3" : 				{
+					"srcname" : "13.note.0.chan.midi",
+					"min" : 0.0,
+					"max" : 1.0,
+					"flags" : 3
+				}
+,
+				"midi_gen_1_speed_4" : 				{
+					"srcname" : "14.note.0.chan.midi",
+					"min" : 0.0,
+					"max" : 1.0,
+					"flags" : 3
+				}
+,
+				"midi_gen_1_loop_1" : 				{
+					"srcname" : "21.note.0.chan.midi",
+					"min" : 0.0,
+					"max" : 1.0,
+					"flags" : 3
+				}
+,
+				"midi_gen_1_loop_2" : 				{
+					"srcname" : "22.note.0.chan.midi",
+					"min" : 0.0,
+					"max" : 1.0,
+					"flags" : 3
+				}
+,
+				"midi_gen_1_loop_3" : 				{
+					"srcname" : "23.note.0.chan.midi",
+					"min" : 0.0,
+					"max" : 1.0,
+					"flags" : 3
+				}
 
 			}
 
@@ -713,34 +748,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_components_midi_out_effect.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
-				"patcherrelativepath" : "../code/midiout",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_components_midi_out_effect_list.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
-				"patcherrelativepath" : "../code/midiout",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_components_midi_out_effect_list_view.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
-				"patcherrelativepath" : "../code/midiout",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_components_midi_out_effect_view.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
-				"patcherrelativepath" : "../code/midiout",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_components_model.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code",
 				"patcherrelativepath" : "../code",
@@ -762,7 +769,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_device_list_view.maxpat",
+				"name" : "djazz_device_manager.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -966,55 +973,6 @@
 			}
 , 			{
 				"name" : "djazz_midi_out_bank_view_track_number_ctrl.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
-				"patcherrelativepath" : "./midiout",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_effect.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
-				"patcherrelativepath" : "./midiout",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_effect_list.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
-				"patcherrelativepath" : "./midiout",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_effect_list_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
-				"patcherrelativepath" : "./midiout",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_effect_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
-				"patcherrelativepath" : "./midiout",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_track.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
-				"patcherrelativepath" : "./midiout",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_track_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
-				"patcherrelativepath" : "./midiout",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_track_view_outport.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
 				"patcherrelativepath" : "./midiout",
 				"type" : "JSON",
