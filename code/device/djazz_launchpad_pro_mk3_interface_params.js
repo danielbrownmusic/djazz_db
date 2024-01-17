@@ -1,11 +1,12 @@
 var dutils = require("db_dictionary_array_utils");
 
 autowatch = 1;
+inlets = 2;
 outlets = 2;
 
 var pip_                = new ParameterInfoProvider(on_pip_changed);
-var param_dict_         = new Dict ();
-var view_dict_          = new Dict ();
+var view_dict_          = null;
+var params_dict_         = null;
 var param_listeners_    = [];
 
 
@@ -37,9 +38,14 @@ function on_param_changed(data)
 //------------------------------------------------------------------------------------------
 
 
-function initialize(params_dict_name)
+function initialize(file_path, view_dict_name, params_dict_name)
 {
-    param_dict_.name = params_dict_name;
+    view_dict_ = new Dict (view_dict_name);
+    //var filepath = get_view_dict_file_path_(device_data_folder_path, device_name);
+    //post ("File path = ", filepath, "\n");
+    view_dict_.import_json(file_path);
+
+    params_dict_ = new Dict (params_dict_name);
     reset_param_dict_();
 
     param_listeners_ = [];
@@ -51,7 +57,8 @@ function initialize(params_dict_name)
     );
 }
 
-function read(file_path)
+
+function load_mapping(file_path)
 {
     reset_param_dict_();
 
@@ -77,11 +84,11 @@ function read(file_path)
             type = (type === 'ctrl') ? 'cc' : type;
 
             var msg_key = make_key_('messages', type, value);
-            param_dict_.replace(msg_key, param_name);
+            params_dict_.replace(msg_key, param_name);
             
             var param_key = make_key_('parameters', param_name);
             var param_value = [type, value].join(" ");
-            param_dict_.replace(param_key, param_value);
+            params_dict_.replace(param_key, param_value);
         }
     );
 
@@ -96,30 +103,40 @@ function read(file_path)
 }
 
 
-function midi_in(value)
+function clear_mapping()
 {
-    if (param_dict_.get('messages').get('midi').contains(value) === 1)
-    {
-        var name        = param_dict_.get('messages').get('midi').get(value);
-        var listener    = get_listener_(name);
-        post ("MIDI_IN:,", listener.name, listener.getvalue(), "\n");
-        //listener.setvalue(value);
-    }
+    reset_param_dict_();
+}
 
-    else if (view_dict_.get('midi')[value] !== -1)
+
+
+function msg_int(n)
+{
+    post ("!!!!!|n");
+    switch (inlet)
     {
-        var bar = view_dict_.get('midi')[value];
-        var listener = get_listener_('bar');
-        listener.set_value(bar);
+        case (0) :
+        {
+            cc_in_(n);
+            break;
+        }
+        case (1) :
+        {
+            midi_in_(n);
+            break;
+        }
     }
 }
 
 
-function cc_in(value)
+//------------------------------------------------------------------------------------------
+
+
+function cc_in_(value)
 {
-    if (param_dict_.get('messages').get('cc').contains(value) === 1)
+    if (params_dict_.get('messages').get('cc').contains(value) === 1)
     {
-        var name        = param_dict_.get('messages').get('cc').get(value);
+        var name        = params_dict_.get('messages').get('cc').get(value);
         var listener    = get_listener_(name);
         post ("CC_IN:,", listener.name, listener.getvalue(), "\n");
 
@@ -133,19 +150,28 @@ function cc_in(value)
         listener.set_value(chapter);
     }    
 }
+cc_in_.local = 1;
 
 
-function get_names()
+function midi_in_(value)
 {
-    post ("PARAMETER NAMES: \n");
-    param_listeners_.forEach(
-        function (listener)
-        {
-            post (listener.name, listener.getvalue());
-        }
-    )
-    post ("\n");
+    if (params_dict_.get('messages').get('midi').contains(value) === 1)
+    {
+        var name        = params_dict_.get('messages').get('midi').get(value);
+        var listener    = get_listener_(name);
+        post ("MIDI_IN:,", listener.name, listener.getvalue(), "\n");
+        //listener.setvalue(value);
+    }
+
+    else if (view_dict_.get('midi')[value] !== -1)
+    {
+        var bar = view_dict_.get('midi')[value];
+        var listener = get_listener_('bar');
+        listener.set_value(bar);
+    }
 }
+midi_in_.local = 1;
+
 
 //------------------------------------------------------------------------------------------
 
@@ -169,6 +195,50 @@ send_param_msg_.local = 1;
 //------------------------------------------------------------------------------------------
 
 
+function reset_param_dict_()
+{
+    params_dict_.clear();
+
+    params_dict_.replace('messages::cc', "");
+    params_dict_.replace('messages::midi');
+
+    var exclude_params = ['grid', 'chapter_count', 'bar', 'chapter'];
+
+    pip_.getnames().forEach(
+        function (param_name)
+        {
+            if (exclude_params.indexOf(param_name) === -1)
+            {
+                params_dict_.replace(make_key_('parameters', param_name));
+            }
+        }
+    )
+}
+reset_param_dict_.local = 1;
+
+
+function get_view_dict_file_path_(device_data_folder_path, device_name)
+{
+    var folder_path = [device_data_folder_path, device_name, "view"].join("/");
+    post ("folder path = ", folder_path, "\n");
+    var f           = new Folder ( folder_path );
+    //f.reset();
+    while (!f.end)
+    {
+        if (f.filetype === "JSON")
+        {
+            post (f.filename);
+            return f.filename;
+        }
+        f.next();
+    }
+}
+get_view_dict_file_path_.local = 1;
+
+
+//------------------------------------------------------------------------------------------
+
+
 function get_listener_(name)
 {
     for (var i = 0; i < param_listeners_.length; i++)
@@ -181,30 +251,24 @@ function get_listener_(name)
 get_listener_.local = 1;
 
 
-function reset_param_dict_()
-{
-    param_dict_.clear();
-
-    param_dict_.replace('messages::cc', "");
-    param_dict_.replace('messages::midi');
-
-    var exclude_params = ['grid', 'chapter_count', 'bar', 'chapter'];
-
-    pip_.getnames().forEach(
-        function (param_name)
-        {
-            if (exclude_params.indexOf(param_name) === -1)
-            {
-                param_dict_.replace(make_key_('parameters', param_name));
-            }
-        }
-    )
-}
-reset_param_dict_.local = 1;
-
-
 function make_key_()
 {
     return Array.prototype.slice.call(arguments).join("::");
 }
 make_key_.local = 1;
+
+
+//------------------------------------------------------------------------------------------
+
+
+function get_names()
+{
+    post ("PARAMETER NAMES: \n");
+    param_listeners_.forEach(
+        function (listener)
+        {
+            post (listener.name, listener.getvalue());
+        }
+    )
+    post ("\n");
+}
