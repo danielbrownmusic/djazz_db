@@ -1,278 +1,79 @@
 {
-    "behaviors" : {
-        "static" : 1,
-		"flashing" : 2,
-		"pulsing" : 3    
-    }
-,
-	"colors" : 	{
-        "no color" : {
-            "bright" : 0,
-            "dim" : 0
-        }
-        ,
-		"white" : {
-            "dim" :     1,
-            "bright" :  3
-        }
-        ,
-		"red" : {
-            "dim" :     4,
-            "bright" :  5
-        }
-        ,
-        "orange" : {
-            "dim" :     8,
-            "bright" :  9
-        }
-        ,
-        "yellow" : {
-            "dim" :     12,
-            "bright" :  13
-        }
-        ,
-        "green" : {
-            "dim" :     20,
-            "bright" :  21
-        }
-        ,
-        "blue" : {
-            "dim" :     36,
-            "bright" :  37
-        }
-        ,
-        "purple" : {
-            "dim" :     44,
-            "bright" :  45
-        }
+	"ctrl" :
+	{
+		"midi" :
+		{
+			"11" : "midi_gen_1_speed_1/2"
+			,
+			"12" : "midi_gen_1_speed_2"
+			,
+			"13" : "midi_gen_1_speed_3"
+			,
+			"14" : "midi_gen_1_speed_4"
+			,
+		 	"21" : "midi_gen_1_loop_1"
+			,
+		 	"22" : "midi_gen_1_loop_2"
+			,
+			"23" :	"midi_gen_1_loop_3"
+			,
+			"31" :	"loop_chapter"
+		}
+		,
+		"cc" :
+		{
+		}
 	}
-    ,
-    "midi" : [  
-    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-
-    -1, 24, 25, 26, 27, 28, 29, 30, 31, -1,
-    -1, 16, 17, 18, 19, 20, 21, 22, 23, -1,
-    -1,  8,  9, 10, 11, 12, 13, 14, 15, -1,
-    -1,  0,  1,  2,  3,  4,  5,  6,  7, -1    
-    ]
-    ,
-    "cc" : [
-        -1, -1, -1, -1, -1, -1, -1, -1, -1,  9,
-        -1, -1, -1, -1, -1, -1, -1, -1, -1,  8,
-        -1, -1, -1, -1, -1, -1, -1, -1, -1,  7,
-        -1, -1, -1, -1, -1, -1, -1, -1, -1,  6,
-        -1, -1, -1, -1, -1, -1, -1, -1, -1,  5,
-        -1, -1, -1, -1, -1, -1, -1, -1, -1,  4,
-        -1, -1, -1, -1, -1, -1, -1, -1, -1,  3,
-        -1, -1, -1, -1, -1, -1, -1, -1, -1,  2,
-        -1, -1, -1, -1, -1, -1, -1, -1, -1,  1,
-        -1, -1, -1, -1, -1, -1, -1, -1, -1,  0
-    ]
-    ,
-    "chapter" : {
-        "cells" : ["cc 89", "cc 79", "cc 69", "cc 59", "cc 49", "cc 39", "cc 29", "cc 19"]
-        ,
-        "states" :  {
-            "unused" : {
-                "color" : {
-                    "hue" : ""
-                    ,
-                    "value" : ""
-                }
-                ,
-                "behavior" : ""
-            }
-            ,
-            "off" : {
-                "color" : {
-                    "hue" : ""
-                    ,
-                    "value" : ""
-                }
-                ,
-                "behavior" : ""
-            }
-            ,        
-            "waiting" : {
-                "color" : {
-                    "hue" : ""
-                    ,
-                    "value" : ""
-                }
-                ,
-                "behavior" : ""
-            }
-            ,
-            "playing" : {
-                "color" : {
-                    "hue" : ""
-                    ,
-                    "value" : ""
-                }
-                ,
-                "behavior" : ""
-            } 
-        }
-    }
-    ,
-    "bar" : {
-        "cells" : ["midi 81", "midi 82", "midi 83", "midi 84", "midi 85", "midi 86", "midi 87", "midi 88", "midi 71", "midi 72", "midi 73", "midi 74", "midi 75", "midi 76", "midi 77", "midi 78", "midi 61", "midi 62", "midi 63", "midi 64", "midi 65", "midi 66", "midi 67", "midi 68", "midi 51", "midi 52", "midi 53", "midi 54", "midi 55", "midi 56", "midi 57", "midi 58"]
-        ,
-        "states" :
-        {
-            "unused" : {
-                "color" : {
-                    "hue" : "no color"
-                    ,
-                    "value" : "dim"
-                }
-                ,
-                "behavior" : "static"
-            }
-            ,
-            "off" : {
-                "color" : {
-                    "hue" : "yellow"
-                    ,
-                    "value" : "bright"
-                }
-                ,
-                "behavior" : "static"
-            }
-            ,  
-            "waiting" : {
-                "color" : {
-                    "hue" : "red"
-                    ,
-                    "value" : "dim"
-                }
-                ,
-                "behavior" : "static"
-            }
-            ,
-            "playing" : {
-                "color" : {
-                    "hue" : "red"
-                    ,
-                    "value" : "bright"
-                }
-                ,
-                "behavior" : "static"
-            }
-        }
-    }
-    ,
-    "loop_button" : {
-        "0" : {
-            "color" : {
-                "hue" : "blue"
-                ,
-                "value" : "dim"
-            }
-            ,
-            "behavior" : "static"
-        }
-        ,
-        "1" : {
-            "color" : {
-                "hue" : "blue"
-                ,
-                "value" : "bright"
-            }
-            ,
-            "behavior" : "static"
-        }
-    }
-    ,    
-    "speed_button" : {
-        "0" : {
-            "color" : {
-                "hue" : "green"
-                ,
-                "value" : "dim"
-            }
-            ,
-            "behavior" : "static"
-        }
-        ,
-        "1" : {
-            "color" : {
-                "hue" : "green"
-                ,
-                "value" : "bright"
-            }
-            ,
-            "behavior" : "static"
-        }
-    }
-    ,
-    "loop_chapter" : {
-        "0" : {
-            "color" : {
-                "hue" : "orange"
-                ,
-                "value" : "dim"
-            }
-            ,
-            "behavior" : "static"
-        }
-        ,
-        "1" : {
-            "color" : {
-                "hue" : "orange"
-                ,
-                "value" : "bright"
-            }
-            ,
-            "behavior" : "static"
-        }
-    }
-    ,   
-    "solo" : {
-        "0" : {
-            "color" : {
-                "hue" : "red"
-                ,
-                "value" : "dim"
-            }
-            ,
-            "behavior" : "static"
-        }
-        ,
-        "1" : {
-            "color" : {
-                "hue" : "red"
-                ,
-                "value" : "bright"
-            }
-            ,
-            "behavior" : "static"
-        }
-    }
-    ,   
-    "mute" : {
-        "0" : {
-            "color" : {
-                "hue" : "blue"
-                ,
-                "value" : "dim"
-            }
-            ,
-            "behavior" : "static"
-        }
-        ,
-        "1" : {
-            "color" : {
-                "hue" : "blue"
-                ,
-                "value" : "bright"
-            }
-            ,
-            "behavior" : "static"
-        }
-    }
+	,
+	"view" :
+	{
+		"midi_gen_1_speed_1/2" :	{
+			"msg" : "midi 11"
+,
+			"color" : "green"
+		}
+,
+		"midi_gen_1_speed_2" : 		{
+			"msg" : "midi 12"
+			,
+			"color" : "green"
+		}
+,
+		"midi_gen_1_speed_3" :		{
+			"msg" : "midi 13"
+			,
+			"color" : "green"
+		}
+,
+		"midi_gen_1_speed_4" : 		{
+			"msg" : "midi 14"
+			,
+			"color" : "green"
+		}
+,
+		"midi_gen_1_loop_1" : 		{
+			"msg" : "midi 21"
+			,
+			"color" : "blue"
+		}
+,
+		"midi_gen_1_loop_2" : 		{
+			"msg" : "midi 22"
+			,
+			"color" : "blue"
+		}
+,
+		"midi_gen_1_loop_3" : 		{
+			"msg" : "midi 23"
+			,
+			"color" : "blue"
+		}
+,
+		"loop_chapter"		: 		{
+			"msg" : "midi 31"
+			,
+			"color" : "orange"
+		}
+	}
 }
+

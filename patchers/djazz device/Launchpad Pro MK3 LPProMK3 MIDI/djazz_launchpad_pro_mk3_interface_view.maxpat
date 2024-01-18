@@ -40,6 +40,22 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 290.0, 27.5, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 237.0, 3.0, 100.0, 20.0 ],
+					"text" : "Clear Mapping",
+					"texton" : "Clear Mapping"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "",
 					"id" : "obj-3",
 					"index" : 0,
@@ -59,42 +75,6 @@
 					"outlettype" : [ "", "bang" ],
 					"patching_rect" : [ 167.0, 95.0, 67.0, 22.0 ],
 					"text" : "opendialog"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-77",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 531.0, 180.0, 85.0, 22.0 ],
-					"text" : "view_mapping"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-75",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 415.0, 180.0, 87.0, 22.0 ],
-					"text" : "save_mapping"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-73",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 296.0, 180.0, 83.0, 22.0 ],
-					"text" : "new_mapping"
 				}
 
 			}
@@ -149,57 +129,9 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 167.0, 27.5, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 147.0, 3.0, 100.0, 20.0 ],
+					"presentation_rect" : [ 127.0, 3.0, 100.0, 20.0 ],
 					"text" : "Load Mapping",
 					"texton" : "Load Mapping"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-50",
-					"maxclass" : "textbutton",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 531.0, 27.5, 100.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 467.0, 3.0, 100.0, 20.0 ],
-					"text" : "View Mapping",
-					"texton" : "View Mapping"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-47",
-					"maxclass" : "textbutton",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 415.0, 27.5, 100.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 360.0, 3.0, 100.0, 20.0 ],
-					"text" : "Save Mapping",
-					"texton" : "Save Mapping"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-43",
-					"maxclass" : "textbutton",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 296.0, 27.5, 100.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 255.0, 3.0, 100.0, 20.0 ],
-					"text" : "New Mapping",
-					"texton" : "New Mapping"
 				}
 
 			}
@@ -227,22 +159,9 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-73", 0 ],
-					"source" : [ "obj-43", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-75", 0 ],
-					"source" : [ "obj-47", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-77", 0 ],
-					"source" : [ "obj-50", 0 ]
+					"destination" : [ "obj-3", 0 ],
+					"midpoints" : [ 340.0, 285.75, 49.0, 285.75 ],
+					"source" : [ "obj-4", 1 ]
 				}
 
 			}
@@ -256,28 +175,8 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
+					"midpoints" : [ 176.5, 285.0, 49.0, 285.0 ],
 					"source" : [ "obj-71", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"source" : [ "obj-73", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"source" : [ "obj-75", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"source" : [ "obj-77", 0 ]
 				}
 
 			}
