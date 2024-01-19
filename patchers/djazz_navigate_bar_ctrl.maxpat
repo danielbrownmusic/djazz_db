@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 333.0, 160.0, 663.0, 749.0 ],
+		"rect" : [ 4296.0, 144.0, 663.0, 749.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -112,6 +112,7 @@
 			}
 , 			{
 				"box" : 				{
+					"htabcolor" : [ 1.0, 0.0, 0.0, 1.0 ],
 					"id" : "obj-14",
 					"maxclass" : "tab",
 					"numinlets" : 1,
@@ -121,7 +122,7 @@
 					"patching_rect" : [ 246.333333333333343, 461.100000000000023, 212.0, 81.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 397.0, 65.0 ],
-					"tabs" : [ "1", "2", "3", "4", "5", "6", "7", "8" ],
+					"tabs" : [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32" ],
 					"varname" : "bar"
 				}
 
@@ -154,7 +155,7 @@
 				"box" : 				{
 					"comment" : "(list: symbol int int) status, bar, bar count",
 					"id" : "obj-33",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -167,7 +168,7 @@
 				"box" : 				{
 					"comment" : "(int) bar",
 					"id" : "obj-34",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -269,16 +270,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_range.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

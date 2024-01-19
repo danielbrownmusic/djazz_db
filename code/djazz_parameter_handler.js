@@ -42,6 +42,7 @@ function on_pip_changed(data)
 
 function on_param_changed(data)
 {
+    post ("param changed, mode =", mode, "\n");
     switch (mode)
     {
         case 0:         // do nothing
