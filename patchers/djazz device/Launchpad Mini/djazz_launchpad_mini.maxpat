@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 3741.0, -15.0, 1484.0, 1121.0 ],
+		"rect" : [ 50.0, 138.0, 1635.0, 929.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -4665,7 +4665,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"comment" : "(s) params dict name",
@@ -6951,8 +6950,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 639.5, 88.0, 216.0, 22.0 ],
-					"text" : "\"Launchpad Pro MK3 LPProMK3 MIDI\""
+					"patching_rect" : [ 639.5, 88.0, 102.0, 22.0 ],
+					"text" : "\"Launchpad Mini\""
 				}
 
 			}
@@ -6995,13 +6994,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-7",
-					"linecount" : 9,
+					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1205.999999999999545, 244.5, 116.0, 129.0 ],
-					"text" : "\"/Users/danielbrown/Documents/Max 8/Projects/djazz_db/data/device/Launchpad Pro MK3 LPProMK3 MIDI/view/launchpad_pro_mk3_example_view.json\""
+					"patching_rect" : [ 1205.999999999999545, 293.5, 244.0, 49.0 ],
+					"text" : "\"/Users/danielbrown/Documents/Max 8/Projects/djazz_db/data/device/Launchpad Mini/view/launchpad_mini_view.json\""
 				}
 
 			}
@@ -7882,13 +7881,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-19", 2 ],
 					"source" : [ "obj-85", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-36", 0 ],
-					"source" : [ "obj-86", 0 ]
 				}
 
 			}
