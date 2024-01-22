@@ -51,7 +51,46 @@
             "bright" :  45
         }
 	}
+    ,
+    "cells" :       [
+        ""   , "cc"  , "cc"  , "cc"  , "cc"  , "cc"  , "cc"  , "cc"  , "cc"  , ""  ,
+        "cc" , "midi", "midi", "midi", "midi", "midi", "midi", "midi", "midi", "cc",
+        "cc" , "midi", "midi", "midi", "midi", "midi", "midi", "midi", "midi", "cc",
+        "cc" , "midi", "midi", "midi", "midi", "midi", "midi", "midi", "midi", "cc",
+        "cc" , "midi", "midi", "midi", "midi", "midi", "midi", "midi", "midi", "cc",
+        "cc" , "midi", "midi", "midi", "midi", "midi", "midi", "midi", "midi", "cc",
+        "cc" , "midi", "midi", "midi", "midi", "midi", "midi", "midi", "midi", "cc",
+        "cc" , "midi", "midi", "midi", "midi", "midi", "midi", "midi", "midi", "cc",
+        "cc" , "midi", "midi", "midi", "midi", "midi", "midi", "midi", "midi", "cc",
+        "cc" , "cc"  , "cc"  , "cc"  , "cc"  , "cc"  , "cc"  , "cc"  , "cc"  , "cc"  , 
+        ""   , "cc"  , "cc"  , "cc"  , "cc"  , "cc"  , "cc"  , "cc"  , "cc"
+    ]
+    ,
+    "midi" :        [  
+    "", "", "", "", "", "", "", "", "", "",
+    "", "", "", "", "", "", "", "", "", "",
+    "", "", "", "", "", "", "", "", "", "",
+    "", "", "", "", "", "", "", "", "", "",
+    "", "", "", "", "", "", "", "", "", "",
 
+    "", "bar 24", "bar 25", "bar 26", "bar 27", "bar 28", "bar 29", "bar 30", "bar 31", "",
+    "", "bar 16", "bar 17", "bar 18", "bar 19", "bar 20", "bar 21", "bar 22", "bar 23", "",
+    "",  "bar 8", "bar 9", "bar 10", "bar 11", "bar 12", "bar 13", "bar 14", "bar 15", "",
+    "",  "bar 0", "bar 1", "bar 2", "bar 3", "bar 4", "bar 5", "bar 6", "bar 7", ""    
+    ]
+    ,
+    "cc" :          [
+        "", "", "", "", "", "", "", "", "", "chapter 9",
+        "", "", "", "", "", "", "", "", "", "chapter 8",
+        "", "", "", "", "", "", "", "", "", "chapter 7",
+        "", "", "", "", "", "", "", "", "", "chapter 6",
+        "", "", "", "", "", "", "", "", "", "chapter 5",
+        "", "", "", "", "", "", "", "", "", "chapter 4",
+        "", "", "", "", "", "", "", "", "", "chapter 3",
+        "", "", "", "", "", "", "", "", "", "chapter 2",
+        "", "", "", "", "", "", "", "", "", "chapter 1",
+        "", "", "", "", "", "", "", "", "", "chapter 0"
+    ]
     ,
     "chapter" :     {
         "cells" : ["cc 89", "cc 79", "cc 69", "cc 59", "cc 49", "cc 39", "cc 29", "cc 19"]

@@ -61,6 +61,16 @@ function on_param_changed(data)
 }
 
 
+function refresh()
+{
+    param_listeners_.forEach(
+        function (listener)
+        {
+            outlet (0, "parameter", listener.name, listener.getvalue())
+        }
+    )
+}
+
 function get_all()
 {
     param_listeners_.forEach(

@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 49.0, 133.0, 2137.0, 1070.0 ],
+		"rect" : [ 66.0, 101.0, 1025.0, 910.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -68,17 +68,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 2633.0, 393.783299476320281, 127.0, 22.0 ],
 					"text" : "djazz_launchpad_mini"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-18",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 582.0, 973.0, 100.0, 22.0 ]
 				}
 
 			}
@@ -471,9 +460,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"order" : 1,
-					"source" : [ "obj-14", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 18
+					"source" : [ "obj-14", 0 ]
 				}
 
 			}
@@ -913,6 +900,13 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/djazz device/Launchpad Mini",
 				"patcherrelativepath" : "./djazz device/Launchpad Mini",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_launchpad_mini_make_view_dict.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/device",
+				"patcherrelativepath" : "../code/device",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
