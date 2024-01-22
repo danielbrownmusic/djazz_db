@@ -1,74 +1,48 @@
 {
-	"ctrl" :
-	{
-		"midi" :
-		{
-			"112" : "midi_gen_1_speed_1/2"
-			,
-			"113" : "midi_gen_1_speed_2"
-			,
-			"114" : "midi_gen_1_speed_3"
-			,
-			"115" : "midi_gen_1_speed_4"
-			,
-		 	"96" : "midi_gen_1_loop_1"
-			,
-		 	"97" : "midi_gen_1_loop_2"
-			,
-			"98" :	"midi_gen_1_loop_3"
-			,
-			"80" :	"loop_chapter"
-		}
-		,
-		"cc" :
-		{
-		}
-	}
-	,
-	"view" :
+	"parameters" : 
 	{
 		"midi_gen_1_speed_1/2" :	{
 			"msg" : "midi 112"
-,
+	,
 			"color" : "green"
 		}
-,
+	,
 		"midi_gen_1_speed_2" : 		{
 			"msg" : "midi 113"
 			,
 			"color" : "green"
 		}
-,
+	,
 		"midi_gen_1_speed_3" :		{
 			"msg" : "midi 114"
 			,
 			"color" : "green"
 		}
-,
+	,
 		"midi_gen_1_speed_4" : 		{
 			"msg" : "midi 115"
 			,
 			"color" : "green"
 		}
-,
+	,
 		"midi_gen_1_loop_1" : 		{
 			"msg" : "midi 96"
 			,
 			"color" : "orange"
 		}
-,
+	,
 		"midi_gen_1_loop_2" : 		{
 			"msg" : "midi 97"
 			,
 			"color" : "orange"
 		}
-,
+	,
 		"midi_gen_1_loop_3" : 		{
 			"msg" : "midi 98"
 			,
 			"color" : "orange"
 		}
-,
+	,
 		"loop_chapter"		: 		{
 			"msg" : "midi 80"
 			,

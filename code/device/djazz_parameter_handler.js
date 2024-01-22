@@ -8,6 +8,12 @@ declareattribute("mode");
 var pip_                = new ParameterInfoProvider(on_pip_changed);
 var param_listeners_    = [];
 
+if (jsarguments.length > 1)
+{
+    mode = jsarguments[1];
+}
+
+
 //------------------------------------------------------------------------------------------
 
 
@@ -112,7 +118,12 @@ remove_parameter_.local = 1;
 
 function set_param(name, value)
 {
+    post ("setting param", name, "to", value,"\n");
     var listener    = get_listener_(name);
+    if (!listener)
+    {
+        post ("no listener for param", name, "\n");        
+    }
     listener.setvalue(value);
 }
 

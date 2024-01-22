@@ -1,0 +1,49 @@
+{
+    "midi" : {
+        "min" : 0,
+        "max" : 120
+    }
+    ,
+    "cc" : {
+        "min" : 0,
+        "max" : 0
+    }
+    ,
+	"colors" : 	    {
+        "none" : {
+            "bright"    : 12
+            ,
+            "dim"       : 12
+        }
+        ,
+		"red" : {
+            "dim"       : 13
+            ,
+            "bright"    : 15
+        }
+        ,
+        "orange" : {
+            "dim"       : 29
+            ,
+            "bright"    : 63
+        }
+        ,
+        "yellow" : {
+            "dim"       : 62
+            , 
+            "bright"    : 62
+        }
+        ,
+        "green" : {
+            "dim"       : 28
+            ,
+            "bright"    : 60
+        }
+    }
+    ,
+    "behaviors" : {
+        "static"        : 0
+        ,
+        "flashing"      : 0
+    }
+}
