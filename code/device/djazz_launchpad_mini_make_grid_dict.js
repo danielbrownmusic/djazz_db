@@ -29,7 +29,7 @@ function load(grid_dict_name, file_path)
     ['chapter', 'bar'].forEach(
         function (param_type)
         {        
-            var view_cells      = dutils.get_dict_array(grid_dict.get("chapter"), "cells");
+            var view_cells      = dutils.get_dict_array(grid_dict.get(param_type), "cells");
             var midi_ctrl_cells = Array.apply(null, Array(midi_cell_count)).map(Number.prototype.valueOf, -1);
             var cc_ctrl_cells   = Array.apply(null, Array(midi_cell_count)).map(Number.prototype.valueOf, -1);
         
@@ -45,7 +45,8 @@ function load(grid_dict_name, file_path)
                 {
                     var key = [param_type, msg_type].join("::")
                     grid_dict.replace(key);
-                    dutils.set_dict_array(grid_dict, key, midi_ctrl_cells);
+                    var ctrl_cells = (msg_type === "midi") ? midi_ctrl_cells : cc_ctrl_cells;
+                    dutils.set_dict_array(grid_dict, key, ctrl_cells);
                 }
             );
         }
