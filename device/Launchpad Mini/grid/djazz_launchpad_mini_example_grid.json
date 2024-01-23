@@ -8,11 +8,11 @@
         "colors" : {
             "unused"    : "none"
             ,
-            "off"       : "yellow bright static"
+            "off"       : "green dim static"
             ,  
-            "waiting"   : "red dim static"
+            "waiting"   : "green dim static"
             ,
-            "playing"   : "red bright static"
+            "playing"   : "green bright static"
         }
     }
     ,
