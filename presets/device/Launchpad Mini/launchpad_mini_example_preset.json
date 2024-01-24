@@ -1,164 +1,160 @@
 {
-	"parameters" : 
-	{
-		"midi_gen_1_speed_1/2" :	{
-			"msg" : "midi 112"
-	,
-			"color" : "yellow"
-		}
-	,
-		"midi_gen_1_speed_2" : 		{
-			"msg" : "midi 113"
-			,
-			"color" : "green"
-		}
-	,
-		"midi_gen_1_speed_3" :		{
-			"msg" : "midi 114"
-			,
-			"color" : "green"
-		}
-	,
-		"midi_gen_1_speed_4" : 		{
-			"msg" : "midi 115"
-			,
-			"color" : "green"
-		}
-	,
+	"midi_gen_1_speed_1/2" :	{
+		"msg" : "midi 112"
+,
+		"color" : "yellow"
+	}
+,
+	"midi_gen_1_speed_2" : 		{
+		"msg" : "midi 113"
+		,
+		"color" : "green"
+	}
+,
+	"midi_gen_1_speed_3" :		{
+		"msg" : "midi 114"
+		,
+		"color" : "green"
+	}
+,
+	"midi_gen_1_speed_4" : 		{
+		"msg" : "midi 115"
+		,
+		"color" : "green"
+	}
+,
 
 
-		"midi_gen_1_loop_1" : 		{
-			"msg" : "midi 71"
-			,
-			"color" : "yellow"
-		}
+	"midi_gen_1_loop_1" : 		{
+		"msg" : "midi 71"
+		,
+		"color" : "yellow"
+	}
+,
+	"midi_gen_1_loop_2" : 		{
+		"msg" : "midi 87"
+		,
+		"color" : "yellow"
+	}
+,
+	"midi_gen_1_loop_3" : 		{
+		"msg" : "midi 103"
+		,
+		"color" : "yellow"
+	}
+,
+	"midi_gen_1_loop_4" : 		{
+		"msg" : "midi 119"
+		,
+		"color" : "yellow"
+	},
+	"midi_gen_1_loop_5" : 		{
+		"msg" : "midi 70"
+		,
+		"color" : "yellow"
+	},
+	"midi_gen_1_loop_6" : 		{
+		"msg" : "midi 88"
+		,
+		"color" : "yellow"
+	},
+	"midi_gen_1_loop_7" : 		{
+		"msg" : "midi 102"
+		,
+		"color" : "yellow"
+	},
+	"midi_gen_1_loop_7" : 		{
+		"msg" : "midi 118"
+		,
+		"color" : "yellow"
+	},
+
+
+	"mute_8"		: 		{
+		"msg" : "midi 65"
+		,
+		"color" : "green"
+	}
 	,
-		"midi_gen_1_loop_2" : 		{
-			"msg" : "midi 87"
-			,
-			"color" : "yellow"
-		}
+	"mute_9"		: 		{
+		"msg" : "midi 66"
+		,
+		"color" : "green"
+	}
 	,
-		"midi_gen_1_loop_3" : 		{
-			"msg" : "midi 103"
-			,
-			"color" : "yellow"
-		}
+	"mute_10"		: 		{
+		"msg" : "midi 67"
+		,
+		"color" : "green"
+	}
 	,
-		"midi_gen_1_loop_4" : 		{
-			"msg" : "midi 119"
-			,
-			"color" : "yellow"
-		},
-		"midi_gen_1_loop_5" : 		{
-			"msg" : "midi 70"
-			,
-			"color" : "yellow"
-		},
-		"midi_gen_1_loop_6" : 		{
-			"msg" : "midi 88"
-			,
-			"color" : "yellow"
-		},
-		"midi_gen_1_loop_7" : 		{
-			"msg" : "midi 102"
-			,
-			"color" : "yellow"
-		},
-		"midi_gen_1_loop_7" : 		{
-			"msg" : "midi 118"
-			,
-			"color" : "yellow"
-		},
+	"mute_11"		: 		{
+		"msg" : "midi 68"
+		,
+		"color" : "green"
+	}
+	,
+	"mute_12"		: 		{
+		"msg" : "midi 69"
+		,
+		"color" : "green"
+	}
+	,
+	"mute_13"		: 		{
+		"msg" : "midi 81"
+		,
+		"color" : "green"
+	}
+	,		
+	"mute_14"		: 		{
+		"msg" : "midi 82"
+		,
+		"color" : "green"
+	}
+	,
 
+	"mute_3"		: 		{
+		"msg" : "midi 97"
+		,
+		"color" : "green"
+	}
+	,		"mute_4"		: 		{
+		"msg" : "midi 98"
+		,
+		"color" : "green"
+	}
+	,		"mute_5"		: 		{
+		"msg" : "midi 99"
+		,
+		"color" : "green"
+	}
+	,		"mute_6"		: 		{
+		"msg" : "midi 100"
+		,
+		"color" : "green"
+	}
+	,		"mute_7"		: 		{
+		"msg" : "midi 101"
+		,
+		"color" : "green"
+	}
+	,
 
-		"mute_8"		: 		{
-			"msg" : "midi 65"
-			,
-			"color" : "green"
-		}
+	"midi_player_1_octave_loco"		: 		{
+		"msg" : "midi 83"
 		,
-		"mute_9"		: 		{
-			"msg" : "midi 66"
-			,
-			"color" : "green"
-		}
+		"color" : "green"
+	}
+	,
+	"midi_player_1_octave_8va"		: 		{
+		"msg" : "midi 84"
 		,
-		"mute_10"		: 		{
-			"msg" : "midi 67"
-			,
-			"color" : "green"
-		}
+		"color" : "green"
+	}
+	,
+	"midi_player_1_octave_8vb"		: 		{
+		"msg" : "midi 85"
 		,
-		"mute_11"		: 		{
-			"msg" : "midi 68"
-			,
-			"color" : "green"
-		}
-		,
-		"mute_12"		: 		{
-			"msg" : "midi 69"
-			,
-			"color" : "green"
-		}
-		,
-		"mute_13"		: 		{
-			"msg" : "midi 81"
-			,
-			"color" : "green"
-		}
-		,		
-		"mute_14"		: 		{
-			"msg" : "midi 82"
-			,
-			"color" : "green"
-		}
-		,
-
-		"mute_3"		: 		{
-			"msg" : "midi 97"
-			,
-			"color" : "green"
-		}
-		,		"mute_4"		: 		{
-			"msg" : "midi 98"
-			,
-			"color" : "green"
-		}
-		,		"mute_5"		: 		{
-			"msg" : "midi 99"
-			,
-			"color" : "green"
-		}
-		,		"mute_6"		: 		{
-			"msg" : "midi 100"
-			,
-			"color" : "green"
-		}
-		,		"mute_7"		: 		{
-			"msg" : "midi 101"
-			,
-			"color" : "green"
-		}
-		,
-
-		"midi_player_1_octave_loco"		: 		{
-			"msg" : "midi 83"
-			,
-			"color" : "green"
-		}
-		,
-		"midi_player_1_octave_8va"		: 		{
-			"msg" : "midi 84"
-			,
-			"color" : "green"
-		}
-		,
-		"midi_player_1_octave_8vb"		: 		{
-			"msg" : "midi 85"
-			,
-			"color" : "green"
-		}
+		"color" : "green"
 	}
 }
-
