@@ -1,4 +1,6 @@
 {
+	"device" : "launchpad_pro_mk3"
+	,
 	"parameters" : 
 	{
 		"midi_gen_1_speed_1/2" :	{
