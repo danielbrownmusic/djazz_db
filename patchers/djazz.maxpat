@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1242.0, 91.0, 845.0, 1075.0 ],
+		"rect" : [ 44.0, 100.0, 429.0, 336.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -54,7 +54,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 2566.0, 311.04646471183969, 347.0, 27.0 ],
+					"patching_rect" : [ 2275.657884836196899, 24.04646471183969, 347.0, 27.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -66,7 +66,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "refresh" ],
-					"patching_rect" : [ 2373.157884836196899, 416.999998569488525, 152.0, 22.0 ],
+					"patching_rect" : [ 2272.157884836196899, 80.999998569488525, 152.0, 22.0 ],
 					"text" : "djazz_launchpad_pro_mk3"
 				}
 

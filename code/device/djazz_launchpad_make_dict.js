@@ -3,10 +3,18 @@ autowatch = 1;
 var dutils = require("db_dictionary_array_utils");
 
 var device_dict_ = new Dict();
-var device = "";
+var device = jsarguments.length > 1 ? jsarguments[1] : "";
 declareattribute(device);
 
+
+
 // ----------------------------------------------------------------------------------------------------------------------------
+
+
+function clear_dict()
+{
+    device_dict_.clear();
+}
 
 
 function make_dict(dict_name, view_file_path, grid_file_path)
@@ -16,43 +24,33 @@ function make_dict(dict_name, view_file_path, grid_file_path)
     device_dict_.set( "grid",       make_grid_dict_     (grid_file_path));
 
     reset_parameters_and_messages_();
+
+    outlet (0, "name", device_dict_.name);
+    outlet (0, "bang");
 }
 
 
-function load_parameters(file_path)
+function clear_mapping()
+{
+    reset_parameters_and_messages_();
+}
+
+
+function load_mapping(file_path)
 {
     reset_parameters_and_messages_();
 
     var d = new Dict ();
     d.import_json(file_path);
-
     if (d.get("device") !== device)
     {
         post ( "Wrong type of preset file loaded:", d.get("device"), "instead of", device, "\n");
     }
-
-    device_dict_.set("parameters", d.get("parameters"));
-    param_names = dutils.get_dict_key_array(device_dict_.get("parameters"));
-    param_names.forEach(
-        function (param_name)
-        {        
-            var msg = device_dict_.get("parameters").get(param_name).get("msg");
-            var msg_key = ["messages", msg].join("::");
-            device_dict_.set(msg_key, param_name);
-        }
-    );
-
-    outlet (0, preset_dict.name);
+    import_parameters_(d);
 }
 
 
-function clear_parameters()
-{
-    reset_parameters_and_messages_();
-}
-
-
-// ----------------------------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------
 
 
 function make_view_dict_(file_path)
@@ -125,10 +123,39 @@ function make_grid_messages_()
             }
         }
     );
-
-    outlet (0, device_dict_.name);
 }
 make_grid_messages_.local = 1;
+
+
+function import_parameters_(d)
+{
+    param_names = dutils.get_dict_key_array(d.get("parameters"));
+    param_names.forEach(
+        function (param_name)
+        {   
+            var val = undefined;
+            var key = undefined;
+
+            var msg = d.get("parameters").get(param_name).get("msg");
+            key = to_key_("messages", msg);
+            val = param_name;
+            device_dict_.replace(key, val);
+
+            var color = d.get("parameters").get(param_name).get("color");
+            key = to_key_("parameters", param_name, "colors", 0);
+            val = to_symbol_(color, "dim", "static");
+            device_dict_.replace(key, val);
+
+            key = to_key_("parameters", param_name, "colors", 1);
+            val = to_symbol_(color, "bright", "static");
+            device_dict_.replace(key, val);
+        }
+    );
+}
+import_parameters_.local = 1;
+
+
+// ----------------------------------------------------------------------------------------
 
 
 function to_key_()

@@ -11,39 +11,39 @@
     ,
 	"colors" : 	    {
         "none" : {
-            "bright"    : 12
+            "bright"    : 0
             ,
-            "dim"       : 12
+            "dim"       : 0
         }
         ,
 		"red" : {
-            "dim"       : 13
+            "dim"       : 1
             ,
-            "bright"    : 15
+            "bright"    : 3
         }
         ,
         "orange" : {
-            "dim"       : 29
+            "dim"       : 17
             ,
-            "bright"    : 63
+            "bright"    : 51
         }
         ,
         "yellow" : {
-            "dim"       : 62
+            "dim"       : 50
             , 
-            "bright"    : 62
+            "bright"    : 50
         }
         ,
         "green" : {
-            "dim"       : 28
+            "dim"       : 14
             ,
-            "bright"    : 60
+            "bright"    : 48
         }
     }
     ,
     "behaviors" : {
-        "static"        : 0
+        "static"        : 12
         ,
-        "flashing"      : 0
+        "flashing"      : 8
     }
 }
