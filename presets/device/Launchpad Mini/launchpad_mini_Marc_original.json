@@ -4,49 +4,49 @@
 	"parameters" : 
 	{
 		"midi_gen_1_speed_1/2" :	{
-			"msg" : "midi 64"
+			"cell" : "midi 64"
 	,
 			"color" : "orange"
 		}
 	,
 		"midi_gen_1_speed_1_and_1/2" : 		{
-			"msg" : "midi 80"
+			"cell" : "midi 80"
 			,
 			"color" : "orange"
 		}
 	,
 		"midi_gen_1_speed_2" :		{
-			"msg" : "midi 96"
+			"cell" : "midi 96"
 			,
 			"color" : "orange"
 		}
 	,
 		"midi_gen_1_speed_4" : 		{
-			"msg" : "midi 112"
+			"cell" : "midi 112"
 			,
 			"color" : "orange"
 		}
 	,
 		"midi_gen_1_loop_1" : 		{
-			"msg" : "midi 96"
+			"cell" : "midi 96"
 			,
 			"color" : "orange"
 		}
 	,
 		"midi_gen_1_loop_2" : 		{
-			"msg" : "midi 97"
+			"cell" : "midi 97"
 			,
 			"color" : "orange"
 		}
 	,
 		"midi_gen_1_loop_3" : 		{
-			"msg" : "midi 98"
+			"cell" : "midi 98"
 			,
 			"color" : "orange"
 		}
 	,
 		"loop_chapter"		: 		{
-			"msg" : "midi 80"
+			"cell" : "midi 80"
 			,
 			"color" : "red"
 		}

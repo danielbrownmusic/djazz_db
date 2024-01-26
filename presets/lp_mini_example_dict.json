@@ -1,0 +1,74 @@
+{
+    "parameters" : 
+    {
+        "midi_player_1_speed_button_3/2" : {
+            "cell" : {
+                "type"  : "midi",
+                "value" : 11
+            }
+            ,
+            "color" : {
+                "0" : {
+                    "hue"       : "green",
+                    "value"     : "bright",
+                    "behavior"  : "static"
+                }
+                ,
+                "1" : {
+                    "hue"       : "green",
+                    "value"     : "dim",
+                    "behavior"  : "static"
+                }
+            }
+        }
+        ,
+        "bar 1" : {
+            "cell" : {
+                "type" : "midi",
+                "value" : 1
+            }
+            ,
+            "color" :  {
+                "unused"    : {
+                    "hue"       : "green",
+                    "value"     : "dim",
+                    "behavior"  : "static"
+                }
+                ,
+                "off"       : {
+                    "hue"       : "yellow",
+                    "value"     : "bright",
+                    "behavior"  : "static"
+                }
+                ,
+                "waiting"   : {
+                    "hue"       : "red",
+                    "value"     : "dim",
+                    "behavior"  : "static"
+                }
+                ,
+                "playing"   : {
+                    "hue"       : "red",
+                    "value"     : "bright",
+                    "behavior"  : "static"
+                }
+            }
+        }        
+    }
+    ,
+    "cells" :
+    {
+        "midi 11" : {
+            "operator" : "toggle_param",
+            "parameter" : "midi_player_1_speed_button_3/2",
+            "arguments" : ""
+        }
+        ,
+        "midi 1" : {
+            "operator" : "set_param",
+            "parameter" : "bar",
+            "arguments" : "1"
+        }
+
+    }
+}

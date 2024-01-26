@@ -6,12 +6,9 @@
         ]
         ,
         "colors" : {
-            "unused"    : "none"
-            ,
-            "off"       : "green dim static"
-            ,  
-            "waiting"   : "green dim static"
-            ,
+            "unused"    : "none",
+            "off"       : "green dim static",  
+            "waiting"   : "green dim static",
             "playing"   : "green bright static"
         }
     }
@@ -24,12 +21,9 @@
             "midi 48", "midi 49", "midi 50", "midi 51", "midi 52", "midi 53", "midi 54", "midi 55"]
         ,
         "colors" :  {
-            "unused"    : "none"
-            ,
-            "off"       : "yellow bright static"
-            ,  
-            "waiting"   : "red dim static"
-            ,
+            "unused"    : "none",
+            "off"       : "yellow bright static",  
+            "waiting"   : "red dim static",
             "playing"   : "red bright static"
         }
     }

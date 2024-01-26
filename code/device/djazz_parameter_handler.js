@@ -48,7 +48,6 @@ function on_pip_changed(data)
 
 function on_param_changed(data)
 {
-    post ("param changed, mode =", mode, "\n");
     switch (mode)
     {
         case 0:         // do nothing
@@ -118,7 +117,6 @@ remove_parameter_.local = 1;
 
 function set_param(name, value)
 {
-    post ("setting param", name, "to", value,"\n");
     var listener    = get_listener_(name);
     if (!listener)
     {
