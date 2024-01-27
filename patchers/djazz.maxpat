@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -785,13 +785,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_dict_get_if_key_exists.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
-				"patcherrelativepath" : "./tools",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_get_bar_count.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/grid",
 				"patcherrelativepath" : "./grid",
@@ -809,20 +802,6 @@
 				"name" : "djazz_get_chapter_start_and_end_beats.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/grid",
 				"patcherrelativepath" : "./grid",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_get_path.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/tools",
-				"patcherrelativepath" : "../code/tools",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_get_path.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
-				"patcherrelativepath" : "./tools",
 				"type" : "JSON",
 				"implicit" : 1
 			}

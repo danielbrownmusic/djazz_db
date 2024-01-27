@@ -1,4 +1,46 @@
 {
+    "midi_count" : 120 
+    ,
+    "cc_count" : 0
+    ,
+	"colors" : 	    {
+        "none" : {
+            "bright"    : 0
+            ,
+            "dim"       : 0
+        }
+        ,
+		"red" : {
+            "dim"       : 1
+            ,
+            "bright"    : 3
+        }
+        ,
+        "orange" : {
+            "dim"       : 17
+            ,
+            "bright"    : 51
+        }
+        ,
+        "yellow" : {
+            "dim"       : 50
+            , 
+            "bright"    : 50
+        }
+        ,
+        "green" : {
+            "dim"       : 14
+            ,
+            "bright"    : 48
+        }
+    }
+    ,
+    "behaviors" : {
+        "static"        : 12
+        ,
+        "flashing"      : 8
+    }
+    ,
     "chapter" :     {
         "cells" : [
             "midi 8",   "midi 24",  "midi 40",  "midi 56", 
@@ -27,4 +69,5 @@
             "playing"   : "red bright static"
         }
     }
+
 }
