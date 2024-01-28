@@ -14,6 +14,19 @@ exports.read = function (file_path)
 }
 
 
+exports.parameters = function()
+{
+    var params = []
+    dutils.get_dict_key_array(d.get("parameters")).forEach(
+        function (name)
+        {
+            params.push([name].concat[d.get("parameters").get(name).split(" ")]);            
+        }
+    )
+    return params;
+}
+
+
 exports.get_parameter_names = function ()
 {
     return dutils.get_dict_key_array(d.get("parameters"))

@@ -2,12 +2,14 @@ autowatch       = 1;
 outlets         = 2;
 
 //var dutils      = require("db_dictionary_array_utils");
-var ddb         = require("djazz_device_database");
-var mapdb       = require('djazz_mapping_database');
+var dev_         = require("djazz_device_database");
+var map_       = require('djazz_mapping_database');
+var ctrl_      =  require('djazz_device_ctrl_database');
+var view_ = require('djazz_device_view_database');
 
 //var device_     = undefined;
-var view_dict_  = new Dict();
-var ctrl_dict_  = new Dict();
+/* var view_dict_  = new Dict();
+var ctrl_dict_  = new Dict(); */
 
 // ------------------------------------------------------------------------------
 
@@ -21,10 +23,10 @@ function clear_dicts()
 function init_dicts(device_name, view_dict_name, ctrl_dict_name)
 {
     device_             = device_name;
-    view_dict_.name     = view_dict_name;
-    ctrl_dict_.name     = ctrl_dict_name;
+    view_.set_name(view_dict_name);
+    ctrl_.set_name(ctrl_dict_name);
 
-    ddb.load(device_name);
+    dev_.load(device_name);
     reset_dicts_();
     output_when_done_();
     outlet (1, ddb.name());
@@ -41,25 +43,32 @@ function load_mapping(file_path)
 {
     reset_dicts_();
 
-    if (!mapdb.read(file_path))
+    if (!map_.read(file_path))
         return;
 
-    mapdb.get_parameter_names().forEach(
-        function (param)
+    map_.parameters().forEach(add_parameter_);
+/* 
+        function (data)
         {   
-            var [cell_type, cell_value, color] = mapdb.get_mapping_(param);
-            add_parameter_(param, cell_type, cell_value, color);
+            var [param, cell_type, cell_value, color] = data;
+            (param, cell_type, cell_value, color);
        }
     );
-    
+ */    
     output_when_done_();
 }
 
 
 function add_parameter(param_name, cell_type, cell_value, color)
 {
-    add_parameter_(param_name, cell_type, cell_value, color);
+    add_parameter_([param_name, cell_type, cell_value, color]);
     output_when_done_();
+}
+
+
+function add_parameter_(data)
+{
+
 }
 
 
@@ -71,8 +80,8 @@ function remove_parameter(param_name)
     var key     = to_key_(param, 0);
     var cell    = param_to_cell_(key);
 
-    view_dict_.remove(param);
-    ctrl_dict_.remove(cell);
+    view_.remove(param);
+    ctrl_.remove(cell);
 
     output_when_done_();
 }
@@ -82,8 +91,8 @@ function remove_parameter(param_name)
 
 function clear_dicts_()
 {
-    view_dict_.clear();
-    ctrl_dict_.clear();
+    view_.clear();
+    ctrl_.clear();
 }
 clear_dicts_.local = 1;
 
@@ -99,19 +108,15 @@ reset_dicts_.local = 1;
 
 function add_parameter_(param, cell_type, cell_value, color)
 {
-    var cell = to_symbol_(cell_type, cell_value);
-
     [0, 1].forEach(
         function (state)
         {
-            var color_code  = ddb.color_code(make_mapping_color_(color, state));
-            var key         = to_key_(param, state);
-            var val         = to_symbol_(cell, color_code);
-            view_dict_.replace(key, val)        
+            var color_code  = dev_.color_code(make_mapping_color_(color, state));
+            view_.set_param(param, state, cell_type, color_code);
         }
     )
 
-    ctrl_dict_.replace(cell, make_mapping_value_(param));
+    ctrl_.set_param(cell_type, cell_value, param);
 }
 add_parameter_.local = 1;
 
@@ -170,19 +175,7 @@ function add_grid_parameters_()
 add_grid_parameters_.local = 1;
 
 
-function make_mapping_color_(color, state)
-{
-    var brightness = (state === 0) ? "dim" : "bright";
-    var color = [color, brightness, "static"].join(" ");    
-}
-make_mapping_color_.local = 1;
 
-
-function make_mapping_value_(param)
-{
-    return to_symbol_("toggle_param", param);
-}
-make_mapping_value_.local = 1;
 
 
 function make_grid_mapping_value_(param, value)

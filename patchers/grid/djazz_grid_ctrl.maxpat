@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 159.0, 1432.0, 1067.0 ],
+		"rect" : [ 112.0, 191.0, 1432.0, 655.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -69,8 +69,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1062.0, 425.0, 79.0, 22.0 ],
-					"text" : "route chapter"
+					"patching_rect" : [ 1062.0, 425.0, 119.0, 22.0 ],
+					"text" : "route chapter_button"
 				}
 
 			}
@@ -86,7 +86,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -400,8 +400,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 195.5, 425.0, 79.0, 22.0 ],
-					"text" : "route chapter"
+					"patching_rect" : [ 195.5, 425.0, 119.0, 22.0 ],
+					"text" : "route chapter_button"
 				}
 
 			}
@@ -446,7 +446,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -699,8 +699,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 590.0, 425.0, 57.0, 22.0 ],
-					"text" : "route bar"
+					"patching_rect" : [ 590.0, 425.0, 97.0, 22.0 ],
+					"text" : "route bar_button"
 				}
 
 			}
