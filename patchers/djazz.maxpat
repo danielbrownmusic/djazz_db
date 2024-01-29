@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 44.0, 100.0, 633.0, 311.0 ],
+		"rect" : [ 2677.0, -4.0, 1913.0, 910.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -54,7 +54,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 2517.157884836196899, 74.0, 424.0, 27.0 ],
+					"patching_rect" : [ 2517.157884836196899, 74.0, 593.0, 26.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -583,8 +583,6 @@
 			"obj-65::obj-47::obj-16::obj-1" : [ "loop_chapter", "loop_chapter", 0 ],
 			"obj-65::obj-47::obj-85::obj-5::obj-21" : [ "grid", "grid", 0 ],
 			"obj-65::obj-47::obj-85::obj-5::obj-28" : [ "chapter_count", "chapter_count", 0 ],
-			"obj-65::obj-47::obj-94::obj-22::obj-24" : [ "chapter", "chapter", 0 ],
-			"obj-65::obj-47::obj-94::obj-22::obj-25" : [ "bar", "bar", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
@@ -817,13 +815,6 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/grid",
 				"patcherrelativepath" : "./grid",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_launchpad_make_dict.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/device",
-				"patcherrelativepath" : "../code/device",
-				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{

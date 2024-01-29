@@ -2,6 +2,43 @@
 var d = new Dict ();
 
 
+
+function make_color_database(d)
+{
+    var color_database = new Dict();
+    d.get("colors").getkeys().forEach(
+        function (hue)
+        {
+            d.get("colors").get(hue).getkeys().forEach(
+                function (value)
+                {
+                    d.get("behaviors").getkeys().forEach(
+                        function (behavior)
+                        {
+                            var color_code = d.get("colors").get(hue).get(value);
+                            var behavior_code = d.get("behaviors").get(behavior);
+                            var key = [hue, value, behavior].join(" ");
+                            var val = ["midi", color_code + behavior_code, 1];
+                            color_database.set(key, val);
+                        }
+                    )
+                }
+            )
+        }    
+    )
+    return color_database;
+}
+
+
+
+
+
+
+
+
+
+
+
 exports.name = function ()
 {
     return d.name;

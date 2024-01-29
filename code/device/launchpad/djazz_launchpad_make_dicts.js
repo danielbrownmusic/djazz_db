@@ -2,10 +2,21 @@ autowatch       = 1;
 outlets         = 2;
 
 //var dutils      = require("db_dictionary_array_utils");
-var dev_         = require("djazz_device_database");
-var map_       = require('djazz_mapping_database');
-var ctrl_      =  require('djazz_device_ctrl_database');
-var view_ = require('djazz_device_view_database');
+//var dev_    = require("djazz_device_database");
+//var map_    = require('djazz_mapping_database');
+var ctrl_   =  require('djazz_device_ctrl_database');
+var view_   = require('djazz_device_view_database');
+
+var DEV_DICT_NAME = "DEV_DICT";
+var GRID_DICT_NAME = "GRID_DICT";
+var MAPPING_DICT_NAME = "MAPPING_DICT";
+
+
+var CTRL_DICT_NAME = undefined;
+var VIEW_DICT_NAME = undefined;
+var view_dict = new Dict();
+var ctrl_dict = new Dict();
+
 
 //var device_     = undefined;
 /* var view_dict_  = new Dict();
@@ -22,26 +33,51 @@ function clear_dicts()
 
 function init_dicts(device_name, view_dict_name, ctrl_dict_name)
 {
-    device_             = device_name;
-    view_.set_name(view_dict_name);
-    ctrl_.set_name(ctrl_dict_name);
+    device_  = device_name;
 
-    dev_.load(device_name);
-    reset_dicts_();
+    VIEW_DICT_NAME = view_dict_name;
+    view_dict = new Dict(VIEW_DICT_NAME);
+
+    CTRL_DICT_NAME = ctrl_dict_name;
+    ctrl_dict = new Dict(CTRL_DICT_NAME);
+
+    view_.set_dict(VIEW_DICT_NAME);
+    ctrl_.set_dict(CTRL_DICT_NAME);
+
+    var device_dict = new Dict (DEV_DICT_NAME);
+    var file_path = get_dev_dict_file_path(device_name);
+    device_dict.import_json(file_path);
+
+    view_.load_device_dict(device_dict);
+    ctrl_.load_device_dict(device_dict);
+
+    
+    var grid_dict = new Dict (GRID_DICT_NAME);
+    file_path = get_grid_dict_file_path(device_name);
+    grid_dict.import_json(file_path);
+
+    view_.load_grid(grid_dict);
+    ctrl_.load_grid(grid_dict);
+
+
     output_when_done_();
-    outlet (1, ddb.name());
 }
 
 function clear_mapping()
 {
-    reset_dicts_();
+    view_.clear_mapping();
+    ctrl_.clear_mapping();
     output_when_done_();
 }
 
 
 function load_mapping(file_path)
 {
-    reset_dicts_();
+    clear_mapping()
+
+    var mapping_dict = new Dict(MAPPING_DICT_NAME);
+    view_.load_mapping(mapping_dict);
+    ctrl_.load_mapping(mapping_dict);
 
     if (!map_.read(file_path))
         return;
