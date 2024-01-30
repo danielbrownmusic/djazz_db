@@ -1,8 +1,45 @@
 
-var d = new Dict ();
+var d = undefined;
 
 
+function load(device_dict_name)
+{
+    d = new Dict (device_dict_name);
+    if (!is_dict_ok(d))
+    {
+        post_error_(d);
+        return;
+    }
+}
 
+
+function midi_count()
+{
+    return d.get("midi_count");
+}
+
+function cc_count()
+{
+    return d.get("cc_count");
+}
+
+
+function color_code(color)
+{
+    var data            = color.split(" ");
+    var hue             = data[0];
+    var is_none         = (hue === 'none'); 
+    var value           = is_none? 'bright' : data[1];
+    var behavior        = is_none ? 'static' : data[2];
+
+    var color_code      = d.get("colors").get(hue).get(value);
+    var behavior_code   = d.get("behaviors").get(behavior);
+    var velocity        = color_code + behavior_code;
+    var channel         = 1;
+    return [velocity, channel];
+}
+
+/* 
 function make_color_database(d)
 {
     var color_database = new Dict();
@@ -28,7 +65,7 @@ function make_color_database(d)
     )
     return color_database;
 }
-
+ */
 
 
 
