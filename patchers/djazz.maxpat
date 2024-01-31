@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 2677.0, -4.0, 1913.0, 910.0 ],
+		"rect" : [ 2343.0, -93.0, 1084.0, 495.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -75,7 +75,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 2598.157884836196899, 116.783299476320281, 343.0, 27.0 ],
+					"patching_rect" : [ 2598.157884836196899, 116.783299476320281, 470.0, 27.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -777,8 +777,15 @@
 			}
 , 			{
 				"name" : "djazz_device_io.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/device",
-				"patcherrelativepath" : "./device",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/device_patchers",
+				"patcherrelativepath" : "./device_patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_get_absolute_path.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
+				"patcherrelativepath" : "./tools",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -804,6 +811,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "djazz_get_system_absolute_path.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
+				"patcherrelativepath" : "./tools",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "djazz_grid_ctrl.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/grid",
 				"patcherrelativepath" : "./grid",
@@ -818,23 +832,37 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "djazz_launchpad_dict_builder_map.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/device_code/launchpad/common",
+				"patcherrelativepath" : "../code/device_code/launchpad/common",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_launchpad_make_dicts.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/device_code/launchpad/common",
+				"patcherrelativepath" : "../code/device_code/launchpad/common",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "djazz_launchpad_mini_make_mapping.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/device",
-				"patcherrelativepath" : "./device",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/device_patchers",
+				"patcherrelativepath" : "./device_patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "djazz_launchpad_pro_mk3.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/device/Launchpad Pro MK3 LPProMK3 MIDI",
-				"patcherrelativepath" : "./device/Launchpad Pro MK3 LPProMK3 MIDI",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/device_patchers/Launchpad Pro MK3 LPProMK3 MIDI",
+				"patcherrelativepath" : "./device_patchers/Launchpad Pro MK3 LPProMK3 MIDI",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "djazz_launchpad_pro_mk3_interface_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/device/Launchpad Pro MK3 LPProMK3 MIDI",
-				"patcherrelativepath" : "./device/Launchpad Pro MK3 LPProMK3 MIDI",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/device_patchers/Launchpad Pro MK3 LPProMK3 MIDI",
+				"patcherrelativepath" : "./device_patchers/Launchpad Pro MK3 LPProMK3 MIDI",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1029,15 +1057,15 @@
 			}
 , 			{
 				"name" : "djazz_parameter_handler.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/device",
-				"patcherrelativepath" : "../code/device",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/parameters",
+				"patcherrelativepath" : "../code/parameters",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "djazz_parameter_info_provider.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/device",
-				"patcherrelativepath" : "../code/device",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/parameters",
+				"patcherrelativepath" : "../code/parameters",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
