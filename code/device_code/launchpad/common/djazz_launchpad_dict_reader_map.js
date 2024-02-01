@@ -24,12 +24,17 @@ exports.set_dict = function (device_name, mapping_dict_name)
         post_error_();
         return false;
     }
-    d_.replace("parameters");
     post (d_.name);
     post ("HUERER ASRRE THR FUCKING KEYS ");
     post (d_.getkeys());
     post ("THOSE WERE THE FUCKING KEYS");
     return true;
+}
+
+
+exports.close = function()
+{
+    d_ = new Dict();
 }
 
 
@@ -133,7 +138,7 @@ get_grid_param_states_.local = 1;
 
 function get_param_cell_data_(param)
 {
-    return d_.get("params").get(param).split(" ");
+    return d_.get("parameters").get(param).split(" ").slice(0, 2);
 }
 get_param_cell_data_.local;
 
@@ -151,7 +156,7 @@ get_grid_param_cell_data_.local = 1;
 function get_param_color_(param, state)
 {
     post ("param =",param, "state =", state, "\n");
-    var hue         = get_param_hue_(param)[2];
+    var hue         = d_.get("parameters").get(param).split(" ")[2];
     var value       = state === 0 ? "dim" : "bright";
     var behavior    = "static";
     post ("param color =", hue, value, behavior, "\n");

@@ -10,9 +10,9 @@
             ,
             "colors" : {
                 "unused"    : "none",
-                "off"       : "green dim static",  
-                "waiting"   : "green dim static",
-                "playing"   : "green bright static"
+                "off"       : "red dim static",  
+                "waiting"   : "red dim static",
+                "playing"   : "red bright static"
             }
         }
         ,

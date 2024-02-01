@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 91.0, 166.0, 801.0, 615.0 ],
+		"rect" : [ 91.0, 166.0, 1007.0, 679.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,19 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 188.0, 280.0, 138.0, 22.0 ],
+					"text" : "djazz_transpose_octave",
+					"varname" : "transpose_octave"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"comment" : "MIDI events",
 					"id" : "obj-8",
@@ -79,17 +92,9 @@
 , 			{
 				"box" : 				{
 					"active" : 					{
-						"master::params" : 0,
-						"master::params::loop_section_start" : 0,
-						"master::params::loop_section_end" : 0,
-						"master::params::start_beat" : 0,
-						"master::params::end_beat" : 0,
-						"master::params::tempo" : 0,
-						"master::params::metro" : 0,
-						"master::params::loop_section_active" : 0
+						"master::params" : 0
 					}
 ,
-					"autorestore" : "model_pattrstorage.json",
 					"id" : "obj-1",
 					"linecount" : 4,
 					"maxclass" : "newobj",
@@ -98,7 +103,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1178.0, 140.228516000000013, 123.0, 62.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 1037, 128, 1515, 659 ],
+						"client_rect" : [ 1304, 164, 1782, 695 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
 						"storage_rect" : [ 583, 69, 1034, 197 ]
@@ -259,8 +264,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-67", 0 ],
-					"midpoints" : [ 197.5, 288.228516000000013, 383.333326333333389, 288.228516000000013, 383.333326333333389, 129.228516000000013, 473.166652666666778, 129.228516000000013 ],
+					"destination" : [ "obj-9", 0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -302,6 +306,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-67", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-67", 0 ],
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}
