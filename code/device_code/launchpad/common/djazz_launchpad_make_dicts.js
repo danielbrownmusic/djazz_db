@@ -2,13 +2,13 @@ autowatch       = 1;
 //outlets         = 2;
 //var f = require('djazz_file');
 
-var view_bldr_  = require ('djazz_launchpad_dict_builder_view');
-var ctrl_bldr_  = require ('djazz_launchpad_dict_builder_ctrl');
 var map_rdr_    = require ('djazz_launchpad_dict_reader_map');
-var map_bldr_   = require ('djazz_launchpad_dict_builder_map');
+var map_bldr_   = require ('djazz_launchpad_dict_writer_map');
+var view_bldr_  = require ('djazz_launchpad_dict_writer_view');
+var ctrl_bldr_  = require ('djazz_launchpad_dict_writer_ctrl');
 
-var view_dict_  = undefined;
-var ctrl_dict_  = undefined;
+var view_dict_  = new Dict ();
+var ctrl_dict_  = new Dict ();
 
 
 // ------------------------------------------------------------------------------
@@ -17,9 +17,11 @@ var ctrl_dict_  = undefined;
 function init(device_file_path, view_dict_name, ctrl_dict_name)
 {
     load_device_file(device_file_path);
-    view_dict_ = new Dict(view_dict_name);
+    view_dict_.name = view_dict_name;
+    //view_dict_ = new Dict(view_dict_name);
     view_bldr_.set_dict(view_dict_name);
-    ctrl_dict_ = new Dict(ctrl_dict_name);
+    ctrl_dict_.name = ctrl_dict_name;
+    //ctrl_dict_ = new Dict(ctrl_dict_name);
     ctrl_bldr_.set_dict(ctrl_dict_name);
     //output_when_done_();
 }
@@ -42,17 +44,24 @@ function clear_mapping()
 }
 
 
-function load_mapping(mapping_file_path)
+function load_mapping(device_name, mapping_dict_name)
 {
-    var mapping_dict = new Dict();
-    mapping_dict.import_json(mapping_file_path);
+    var mapping_dict = new Dict(mapping_dict_name);
 
-    if (!map_rdr_.load(mapping_dict.name))
+    if (!map_rdr_.set_dict(device_name, mapping_dict.name))
         return;
 
     clear_mapping();
 
-    map_rdr_.grid_params().forEach(
+    map_rdr_.params().forEach(
+        function (param)
+        {
+            var [cell_type, cell_value] = map_rdr_.cell_data(param);
+            add_param_(param, cell_type, cell_value);
+        }
+    )
+
+/*     map_rdr_.grid_params().forEach(
         function (param) {
             for (var i = 0; i < map_rdr_.grid_param_count(param); i++)
             {
@@ -71,7 +80,7 @@ function load_mapping(mapping_file_path)
             add_param_(param, cell_type, cell_value);
         }
     )
-
+ */
     output_when_done_();
 }
 
@@ -101,33 +110,32 @@ function remove_parameter(param_name)
 //-------------------------------------------------------------------------------
 
 
-function add_param_(param, cell_type, cell_value)
+/* function add_grid_param_(param, i, cell_type, cell_value)
 {
-    map_rdr_.get_param_states_(param).forEach(
-        function (state)
-        {
-            var color = map_rdr_.param_color(param, state);
-            view_bldr_.add_param(param, state, cell_type, cell_value, color);
-        }
-    )
-    ctrl_bldr_.add_param(param, cell);
-}
-add_param_.local = 1;
-
-
-function add_grid_param_(param, i, cell_type, cell_value)
-{
-    map_rdr_.param_states(param).forEach(
+    map_rdr_.grid_param_states(param).forEach(
         function (state)
         {
             var color = map_rdr_.grid_param_color(param, state);
-            param = to_symbol_(param, i);
+            view_bldr_.add_grid_param(param, i, state, cell_type, cell_value, color);
+        }
+    )
+    ctrl_bldr_.add_grid_param(param, cell_type, cell_value);
+}
+add_grid_param_.local = 1; */
+
+
+function add_param_(param, cell_type, cell_value)
+{
+    map_rdr_.states(param).forEach(
+        function (state)
+        {
+            var color = map_rdr_.color(param, state);
             view_bldr_.add_param(param, state, cell_type, cell_value, color);
         }
     )
-    ctrl_bldr_.add_param(param, cell);
+    ctrl_bldr_.add_param(param, cell_type, cell_value);
 }
-add_grid_param_.local = 1;
+add_param_.local = 1;
 
 
 //------------------------------------------------------------------

@@ -1,4 +1,6 @@
 {
+    "device" : "Launchpad Mini"
+    ,
     "grid" : {
         "chapter" :     {
             "cells" : [

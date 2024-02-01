@@ -133,6 +133,12 @@ exports.get_array = function (a)
 
 exports.get_dict_key_array = function(d)
 {
+    if (!d)
+    {
+        //post ("DUTILS: Dictionary is NULL! Converting tp empty array.\n");
+        return [];        
+    }
+
     var entry = d.getkeys();
 
     if (!entry)

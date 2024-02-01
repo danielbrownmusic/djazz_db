@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 2343.0, -93.0, 1084.0, 495.0 ],
+		"rect" : [ -740.0, -273.0, 641.0, 177.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -832,7 +832,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_launchpad_dict_builder_map.js",
+				"name" : "djazz_launchpad_dict_writer_ctrl.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/device_code/launchpad/common",
 				"patcherrelativepath" : "../code/device_code/launchpad/common",
 				"type" : "TEXT",

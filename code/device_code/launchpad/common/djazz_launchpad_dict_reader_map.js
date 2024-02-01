@@ -1,120 +1,167 @@
-var dutils      = require("db_dictionary_array_utils");
+/*
+CONVENTION for grid stuff:
+'grid param' = "bar" or "chapter"
+'param' = "bar i", "chapter j"
+*/
 
-var d_ = undefined;
+
+var dutils = require("db_dictionary_array_utils");
+
+var GRID_PARAMS_    = ['bar', 'chapter'];
+var PARAM_STATES_   = [0, 1];
+
+var d_              = undefined;
+
+// -------------------------------------------------------------
 
 
-exports.load = function (mapping_dict_name)
+exports.set_dict = function (device_name, mapping_dict_name)
 {
-    d_  = new Dict (mapping_dict_name);
+    d_ = new Dict (mapping_dict_name);
 
-    if (!is_dict_ok_(d_))
+    if (!is_dict_ok_(device_name))
     {
         post_error_();
         return false;
     }
+    d_.replace("parameters");
+    post (d_.getkeys());
     return true;
 }
 
-exports.get_dict = function ()
-{
-    return d_.name;
-}
-
 // -------------------------------------------------------------
 
 
-exports.params = function()
+exports.params = function ()
 {
-    return dutils.get_dict_key_array(d_);
+    post ("getting param names \n");    
+    return get_grid_params_().concat(get_params_());
 }
 
 
-exports.param_cell_type = function (param)
+exports.states = function (param)
 {
-    return param_val_as_array_(param)[0];
+    var     grid_param = find_grid_param_in_param_name_(param);
+    return  grid_param ? get_grid_param_states_(grid_param) : PARAM_STATES_;
 }
 
 
-exports.param_cell_value = function (param)
+exports.cell_data = function (param)
 {
-    return parseInt(param_val_as_array_(param)[1]);
+    var     grid_param = find_grid_param_in_param_name_(param);
+    return  grid_param ? 
+            get_grid_param_cell_data_   (param) : 
+            get_param_cell_data_        (param);
 }
 
 
-exports.param_color = function (param, state)
+exports.color = function (param, state)
 {
-    var hue         = param_val_as_array_(param)[2];
+    var     grid_param = find_grid_param_in_param_name_(param);
+    return  grid_param ? 
+            get_grid_param_color_   (grid_param, state) : 
+            get_param_color_        (param, state);
+}
+
+
+
+// -------------------------------------------------------------
+
+function get_grid_params_()
+{
+    var result = [];
+    GRID_PARAMS_.forEach(
+        function (param)
+        {
+            for (var i = 0; i < get_grid_param_count_(param); i++)
+            {
+                result.push(to_symbol_(param, i));
+            }
+        }
+    )
+    return result;
+}
+get_grid_params_.local = 1;
+
+
+function get_params_()
+{
+    return params = dutils.get_dict_key_array(d_.get("parameters"));
+}
+
+function find_grid_param_in_param_name_(param)
+{
+    var a = param.split(" ");
+    if (a.length > 1)
+    {
+        var k = GRID_PARAMS_.indexOf(a[0]);
+        if (k > -1)
+        {
+            return GRID_PARAMS_[k];
+        }
+    }
+    return null;
+
+}
+find_grid_param_in_param_name_.local = 1;
+
+
+function get_grid_param_states_ (grid_param)
+{
+    return dutils.get_dict_key_array(d_.get("grid").get(grid_param).get("colors"));
+}
+get_grid_param_states_.local = 1;
+
+
+function get_param_cell_data_(param)
+{
+    return d_.get("params").get(param).split(" ");
+}
+get_param_cell_data_.local;
+
+
+function get_grid_param_cell_data_(param)
+{
+    var [grid_param, i] = param.split(" ");
+    post ("get_grid_param_cell_data_");
+    post (grid_param, i);
+    return d_.get("grid").get(grid_param).get("cells")[i].split(" ");
+}
+get_grid_param_cell_data_.local = 1;
+
+
+function get_param_color_(param, state)
+{
+    post ("param =",param, "state =", state, "\n");
+    var hue         = get_param_hue_(param)[2];
     var value       = state === 0 ? "dim" : "bright";
     var behavior    = "static";
+    post ("param color =", hue, value, behavior, "\n");
     return [hue, value, behavior].join(" ");
 }
+get_param_color_.local = 1;
 
 
-exports.param_states = function (param)
+function get_grid_param_color_(grid_param, state)
 {
-    return [0, 1];
+    return d_.get("grid").get(grid_param).get("colors").get(state);
 }
+get_grid_param_color_.local = 1;
 
 
-// -------------------------------------------------------------
-
-
-exports.grid_params = function()
-{
-    return ["bar", "chapter"];
-}
-
-
-exports.grid_param_cell_type = function (param, i)
-{
-    return grid_param_val_as_array_(param, i)[0];
-}
-
-
-exports.grid_param_cell_value = function (param, i)
-{
-    return grid_param_val_as_array_(param, i)[1];
-}
-
-
-exports.grid_param_color = function (param, state)
-{
-    return d_.get("grid").get(param).get("colors").get(state);
-}
-
-
-exports.grid_param_states = function (param)
-{
-    return dutils.get_dict_key_array(d_.get("grid").get(param).get("colors"));
-}
-
-
-exports.grid_param_count = function (param)
+function get_grid_param_count_(param)
 {
     return d_.getsize(to_key_("grid", param, "cells"));
 }
+get_grid_param_count_.local = 1;
 
 
 // -------------------------------------------------------------
 
-
-function param_val_as_array_(param)
+function is_dict_ok_(device_name)
 {
-    return d_.get(param).split(" ");
-}
-param_val_as_array_.local = 1;
-
-
-function grid_param_val_as_array_(param, i)
-{
-    return d_.get("grid").get(param).get("cells")[i].split(" ");
-}
-grid_param_val_as_array_.local = 1;
-
-
-function is_dict_ok_(d)
-{
-    return true;//d_.get("device") !== device_;
+    post (d_.get("device"), "\n");
+    return d_.get("device") == device_name;
 }
 is_dict_ok_.local = 1;
 
@@ -138,3 +185,99 @@ function to_key_()
     return Array.prototype.slice.call(arguments).join("::");
 }
 to_key_.local = 1;
+
+
+
+
+
+
+/* exports.grid_param_cell_value = function (param, i)
+{
+    return grid_param_val_as_array_(param, i)[1];
+}
+
+
+exports.grid_param_color = function (param, state)
+{
+    post ("param =",param, "state =", state, "\n");
+    post ("grid param color =", d_.get("grid").get(param).get("colors").get(state), "\n");
+    return d_.get("grid").get(param).get("colors").get(state);
+}
+
+
+exports.grid_param_count = function (param)
+{
+    return grid_param_count_(param);
+} */
+
+
+
+/* 
+exports.grid_params = function()
+{
+    return GRID_PARAMS_;
+}
+
+
+exports.grid_param_cell_type = function (param, i)
+{
+    return grid_param_val_as_array_(param, i)[0];
+}
+
+
+exports.grid_param_cell_value = function (param, i)
+{
+    return grid_param_val_as_array_(param, i)[1];
+}
+
+
+exports.grid_param_color = function (param, state)
+{
+    post ("param =",param, "state =", state, "\n");
+    post ("grid param color =", d_.get("grid").get(param).get("colors").get(state), "\n");
+    return d_.get("grid").get(param).get("colors").get(state);
+}
+
+
+exports.grid_param_states = function (param)
+{
+    return dutils.get_dict_key_array(d_.get("grid").get(param).get("colors"));
+}
+
+
+exports.grid_param_count = function (param)
+{
+    return grid_param_count_(param);
+} */
+
+
+
+
+
+
+
+
+
+
+/* function param_val_as_array_(param)
+{
+    return d_.get(param).split(" ");
+}
+param_val_as_array_.local = 1;
+
+
+function grid_param_val_as_array_(grid_param)
+{
+    var [param, i] = grid_param.split(" ");
+    return d_.get("grid").get(param).get("cells")[i].split(" ");
+}
+grid_param_val_as_array_.local = 1; */
+
+
+
+
+
+/* exports.get_dict = function ()
+{
+    return d_.name;
+} */
