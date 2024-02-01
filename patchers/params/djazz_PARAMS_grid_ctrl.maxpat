@@ -146,8 +146,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 331.0, 243.0, 50.0, 22.0 ],
-					"varname" : "number"
+					"patching_rect" : [ 331.0, 243.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -159,8 +158,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 133.0, 243.0, 50.0, 22.0 ],
-					"varname" : "number[1]"
+					"parameter_mappable" : 0,
+					"patching_rect" : [ 133.0, 243.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -207,9 +206,20 @@
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 109.5, 173.0, 66.0, 35.0 ],
 					"restore" : [ 0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_initial" : [ 0.0 ],
+							"parameter_initial_enable" : 1,
+							"parameter_linknames" : 1,
+							"parameter_longname" : "bar_button",
+							"parameter_shortname" : "bar_button",
+							"parameter_type" : 1
+						}
+
+					}
+,
 					"saved_object_attributes" : 					{
-						"parameter_enable" : 0,
-						"parameter_mappable" : 0
+						"parameter_enable" : 1
 					}
 ,
 					"text" : "pattr bar_button",
@@ -227,9 +237,20 @@
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 293.0, 173.0, 95.0, 35.0 ],
 					"restore" : [ 0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_initial" : [ 0.0 ],
+							"parameter_initial_enable" : 1,
+							"parameter_linknames" : 1,
+							"parameter_longname" : "chapter_button",
+							"parameter_shortname" : "chapter_button",
+							"parameter_type" : 1
+						}
+
+					}
+,
 					"saved_object_attributes" : 					{
-						"parameter_enable" : 0,
-						"parameter_mappable" : 0
+						"parameter_enable" : 1
 					}
 ,
 					"text" : "pattr chapter_button",

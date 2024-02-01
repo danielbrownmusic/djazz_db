@@ -10,14 +10,14 @@ var dutils = require("db_dictionary_array_utils");
 var GRID_PARAMS_    = ['bar', 'chapter'];
 var PARAM_STATES_   = [0, 1];
 
-var d_              = undefined;
+var d_              = new Dict();
 
 // -------------------------------------------------------------
 
 
 exports.set_dict = function (device_name, mapping_dict_name)
 {
-    d_ = new Dict (mapping_dict_name);
+    d_.name = mapping_dict_name;
 
     if (!is_dict_ok_(device_name))
     {
@@ -25,12 +25,30 @@ exports.set_dict = function (device_name, mapping_dict_name)
         return false;
     }
     d_.replace("parameters");
+    post (d_.name);
+    post ("HUERER ASRRE THR FUCKING KEYS ");
     post (d_.getkeys());
+    post ("THOSE WERE THE FUCKING KEYS");
     return true;
 }
 
+
 // -------------------------------------------------------------
 
+
+exports.chapter_count = function()
+{
+    post ("FUCK EVERYTHING FOREVVERRRRRRRRRRRRRRRRR")
+    var fuckyou = get_grid_param_count_("chapter"); 
+    post ("FUCK YOU@!!@!@!@!@@!", fuckyou, "fuck fuck fuckfuck \n"); 
+    return get_grid_param_count_("chapter");
+}
+
+
+exports.bar_count = function()
+{
+    return get_grid_param_count_("bar");
+}
 
 exports.params = function ()
 {
@@ -151,7 +169,7 @@ get_grid_param_color_.local = 1;
 
 function get_grid_param_count_(param)
 {
-    return d_.getsize(to_key_("grid", param, "cells"));
+    return dutils.get_dict_array_length(d_, to_key_("grid", param, "cells"));
 }
 get_grid_param_count_.local = 1;
 

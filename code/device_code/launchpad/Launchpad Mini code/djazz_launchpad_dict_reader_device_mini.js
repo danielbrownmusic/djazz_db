@@ -1,10 +1,12 @@
 
-var d_ = undefined;
+var d_ = new Dict();
 
 
 exports.load = function (device_dict_name)
 {
-    d_ = new Dict (device_dict_name);
+    d_.name = device_dict_name;
+    post (d_.getkeys());
+    post ("FUCK YOU MAX DICTS");
     if (!is_dict_ok_(d_))
     {
         post_error_(d_);
@@ -38,7 +40,9 @@ exports.cc_count = function ()
 
 exports.chapter_count = function()
 {
-    return d_.getsize("grid::chapter::cells");
+    var FUCKYOU = d_.getsize("grid::chapter::cells");
+    post ("FUUUUUUUUUUUCK YOUUUUUUUU");
+    return FUCKYOU;
 }
 
 

@@ -1,4 +1,6 @@
 {
+    "device" : "Launchpad Mini"
+    ,
     "midi_count" : 120 
     ,
     "cc_count" : 0

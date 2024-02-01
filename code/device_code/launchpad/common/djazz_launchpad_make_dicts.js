@@ -2,56 +2,53 @@ autowatch       = 1;
 //outlets         = 2;
 //var f = require('djazz_file');
 
-var map_rdr_    = require ('djazz_launchpad_dict_reader_map');
-var map_bldr_   = require ('djazz_launchpad_dict_writer_map');
-var view_bldr_  = require ('djazz_launchpad_dict_writer_view');
-var ctrl_bldr_  = require ('djazz_launchpad_dict_writer_ctrl');
+var map_rdr_        = require ('djazz_launchpad_dict_reader_map');
+var map_wrtr_       = require ('djazz_launchpad_dict_writer_map');
+var view_wrtr_      = require ('djazz_launchpad_dict_writer_view');
+var ctrl_wrtr_      = require ('djazz_launchpad_dict_writer_ctrl');
 
-var view_dict_  = new Dict ();
-var ctrl_dict_  = new Dict ();
-
-
+var view_dict_      = new Dict ();
+var ctrl_dict_      = new Dict ();
+var map_dict_       = new Dict ();
+var device_dict_    = new Dict ();
+var device_name_    = "";
 // ------------------------------------------------------------------------------
 
 
-function init(device_file_path, view_dict_name, ctrl_dict_name)
+function init(device_dict_file_path, device_dict_name, view_dict_name, ctrl_dict_name)
 {
-    load_device_file(device_file_path);
+
+    device_dict_.name = device_dict_name;
+    device_dict_.import_json(device_dict_file_path);
+
+    device_name_ = device_dict_.get("device");
+
     view_dict_.name = view_dict_name;
-    //view_dict_ = new Dict(view_dict_name);
-    view_bldr_.set_dict(view_dict_name);
+    post ("FUCK YOU ONCE");
+    view_wrtr_.load(device_dict_.name, view_dict_.name);
+
     ctrl_dict_.name = ctrl_dict_name;
-    //ctrl_dict_ = new Dict(ctrl_dict_name);
-    ctrl_bldr_.set_dict(ctrl_dict_name);
-    //output_when_done_();
+    post ("FUCK YOU TWICE");
+
+    ctrl_wrtr_.set_dict(ctrl_dict_.name);
+    post ("FUCK YOU FOREVER");
+
 }
 
 
-function load_device_file(device_file_path)
+function load_mapping(map_dict_file_path, map_dict_name)
 {
-    var device_dict = new Dict();
-    device_dict.import_json(device_file_path);
-    view_bldr_.load_device_dict(device_dict.name);
-    //output_when_done_();
-}
+    clear_mapping_();
 
+    map_dict_.name = map_dict_name;
+    map_dict_.import_json(map_dict_file_path);
 
-function clear_mapping()
-{
-    view_dict_.clear();
-    ctrl_dict_.clear();
-    output_when_done_();
-}
-
-
-function load_mapping(device_name, mapping_dict_name)
-{
-    var mapping_dict = new Dict(mapping_dict_name);
-
-    if (!map_rdr_.set_dict(device_name, mapping_dict.name))
+    if (!map_rdr_.set_dict(device_name_, map_dict_.name))
         return;
 
-    clear_mapping();
+    view_dict_.set("chapter_cell_count", map_rdr_.chapter_count());
+    view_dict_.set("bar_cell_count",     map_rdr_.bar_count());
+
 
     map_rdr_.params().forEach(
         function (param)
@@ -61,33 +58,20 @@ function load_mapping(device_name, mapping_dict_name)
         }
     )
 
-/*     map_rdr_.grid_params().forEach(
-        function (param) {
-            for (var i = 0; i < map_rdr_.grid_param_count(param); i++)
-            {
-                var cell_type = map_rdr_.grid_param_cell_type(param, i);
-                var cell_value = map_rdr_.grid_param_cell_value(param, i);
-                add_grid_param_(param, i, cell_type, cell_value);
-            }
-        }
-    )
+    output_when_done_();
+}
 
-    map_rdr_.params().forEach(
-        function (param)
-        {
-            var cell_type = map_rdr_.param_cell_type(param);
-            var cell_value = map_rdr_.param_cell_value(param);
-            add_param_(param, cell_type, cell_value);
-        }
-    )
- */
+
+function clear_mapping()
+{
+    clear_mapping_();
     output_when_done_();
 }
 
 
 function add_parameter(param, cell_type, cell_value, hue)
 {
-    map_bldr_.add_param(param, cell_type, cell_value, hue);
+    map_wrtr_.add_param(param, cell_type, cell_value, hue);
     add_param_(param, cell_type, cell_value);
     output_when_done_();
 }
@@ -116,10 +100,10 @@ function remove_parameter(param_name)
         function (state)
         {
             var color = map_rdr_.grid_param_color(param, state);
-            view_bldr_.add_grid_param(param, i, state, cell_type, cell_value, color);
+            view_wrtr_.add_grid_param(param, i, state, cell_type, cell_value, color);
         }
     )
-    ctrl_bldr_.add_grid_param(param, cell_type, cell_value);
+    ctrl_wrtr_.add_grid_param(param, cell_type, cell_value);
 }
 add_grid_param_.local = 1; */
 
@@ -130,15 +114,23 @@ function add_param_(param, cell_type, cell_value)
         function (state)
         {
             var color = map_rdr_.color(param, state);
-            view_bldr_.add_param(param, state, cell_type, cell_value, color);
+            view_wrtr_.add_param(param, state, cell_type, cell_value, color);
         }
     )
-    ctrl_bldr_.add_param(param, cell_type, cell_value);
+    ctrl_wrtr_.add_param(param, cell_type, cell_value);
 }
 add_param_.local = 1;
 
 
 //------------------------------------------------------------------
+
+function clear_mapping_()
+{
+    view_dict_.clear();
+    ctrl_dict_.clear();
+    map_dict_.clear();
+}
+clear_mapping_.local = 1;
 
 
 function output_when_done_()
@@ -389,3 +381,27 @@ function cell_symbol_to_dict_(cell_symbol)
 }
 cell_symbol_to_dict_.local = 1; */
 
+
+
+
+
+/*     map_rdr_.grid_params().forEach(
+        function (param) {
+            for (var i = 0; i < map_rdr_.grid_param_count(param); i++)
+            {
+                var cell_type = map_rdr_.grid_param_cell_type(param, i);
+                var cell_value = map_rdr_.grid_param_cell_value(param, i);
+                add_grid_param_(param, i, cell_type, cell_value);
+            }
+        }
+    )
+
+    map_rdr_.params().forEach(
+        function (param)
+        {
+            var cell_type = map_rdr_.param_cell_type(param);
+            var cell_value = map_rdr_.param_cell_value(param);
+            add_param_(param, cell_type, cell_value);
+        }
+    )
+ */
