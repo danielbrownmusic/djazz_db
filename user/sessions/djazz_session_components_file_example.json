@@ -1,0 +1,41 @@
+{
+    "tracks" : [    { 
+            "effects": [    {
+                    "name" : "", 
+                    "active" : 1
+                }
+                ,
+                {
+                    "name" : "add octaves",
+                    "active" : 1
+                }
+            ]
+        }
+        ,
+        { 
+            "effects": [    {
+                    "name" : "", 
+                    "active" : 1
+                }
+                ,
+                {
+                    "name" : "add octaves",
+                    "active" : 1
+                }
+            ]
+        }
+        ,
+        { 
+            "effects": [    {
+                    "name" : "", 
+                    "active" : 1
+                }
+                ,
+                {
+                    "name" : "add octaves",
+                    "active" : 1
+                }
+            ]
+        }
+    ]
+}
