@@ -20,13 +20,16 @@ function set_folder(effects_folder_path)
 
 function set_effect_silently(effect_name_in)
 {
+    post ("setting effect silently \n");
+    post (effect_name_in, "\n");
+
     if (effect_name_in === effect_name)
         return false;
 
-    effect_name = effect_name_in;
-
-    outlet (1, "setsymbol", effect_name);
     remove_effect_();
+
+    effect_name = effect_name_in;
+    outlet (1, "setsymbol", effect_name);
 
     if (effect_name === EMPTY_STRING)
         return true;
@@ -67,10 +70,19 @@ function list()
 
 function remove_effect_()
 {
-    var effect  = this.patcher.getnamed("effect");
-    if (!effect)
+    if (effect_name === EMPTY_STRING)
+    {
+        post ("no effect name\n");
         return;
+    }
 
+    var effect = this.patcher.getnamed(make_varname_(effect_name));
+    
+    if (!effect || (effect.valid === 0))
+    {
+        post ("no effect named", make_varname_(effect_name), "\n");
+        return;
+    }
     this.patcher.remove(effect);
 }
 remove_effect_.local = 1;
@@ -99,17 +111,25 @@ make_effect_.local = 1;
 
 function get_patcher_class_(effect_name)
 {
-    var folder_path = [effects_folder_path_, effect_name, "view"].join("/");
-    var f           = new Folder ( folder_path );
+    var f = new Folder (get_effect_folder_path_(effect_name));
+    post ("\n");
+    post (">>>IN VIEW<<<\n");
+    post (effects_folder_path_);
+    post (get_effect_folder_path_(effect_name));
+    post ("count =", f.count, "\n");
     f.reset();
+    post ("count =", f.count, "\n");
     while (!f.end)
     {
+        post ("filename =", f.filename);
         if (f.filetype === "JSON")
         {
             return f.filename;
         }
         f.next();
     }
+    post (">>>END VIEW<<<\n");
+    post ("\n");
 }
 get_patcher_class_.local = 1;
 
@@ -119,3 +139,11 @@ function make_varname_(effect_name)
     return effect_name.split(" ").join("_");
 }
 make_varname_.local = 1;
+
+
+function get_effect_folder_path_(effect_name)
+{
+    var f = new Folder (effects_folder_path_);
+    return [f.pathname, effect_name, "view"].join("/");
+}
+get_effect_folder_path_.local = 1;

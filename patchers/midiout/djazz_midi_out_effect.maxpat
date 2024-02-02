@@ -54,13 +54,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-4",
-					"linecount" : 4,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 257.5, 19.0, 73.0, 62.0 ],
-					"text" : "loadmess set_folder \"djazz midi effects\""
+					"patching_rect" : [ 257.5, 19.0, 188.0, 22.0 ],
+					"text" : "loadmess set_folder \"midi effects\""
 				}
 
 			}

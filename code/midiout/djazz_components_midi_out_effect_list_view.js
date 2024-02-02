@@ -43,6 +43,8 @@ function set_effects_dict(effects_dict_name)
     for (var i = 0; i < effect_names.length; i++)
     {
         var effect = add_effect_();
+        post ("setting effects dict at", i,  " \n");
+        post (effect_names[i], "\n");
         set_effect_(effect, effect_names[i]);
     }
     // Don't send message to model! This is handled by the bank dict.
@@ -194,6 +196,7 @@ function list()
 
 function get_effect_name_(effect)
 {
+    post (get_effect_components_mgr_(effect).getattr("effect_name"));
     return get_effect_components_mgr_(effect).getattr("effect_name");
 }
 get_effect_name_.local = 1;

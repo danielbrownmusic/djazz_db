@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 3059.0, 44.0, 1552.0, 957.0 ],
+		"rect" : [ 1417.0, 314.0, 1552.0, 957.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 110.0, 127.0, 77.0, 22.0 ],
+					"patching_rect" : [ 82.0, 132.0, 77.0, 22.0 ],
 					"text" : "absolutepath"
 				}
 
@@ -81,8 +81,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 110.0, 18.0, 169.0, 22.0 ],
-					"text" : "loadmess \"djazz midi effects\""
+					"patching_rect" : [ 110.0, 18.0, 132.0, 22.0 ],
+					"text" : "loadmess \"midi effects\""
 				}
 
 			}
@@ -94,7 +94,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 361.5, 200.0, 89.0, 76.0 ],
+					"patching_rect" : [ 361.5, 200.0, 94.0, 76.0 ],
 					"text" : "types fold, prefix $1, prefix_mode 2, populate, insert 0 \" \""
 				}
 
@@ -132,7 +132,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 493.333333333333258, 18.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"umenu" : [ "pitch shift", 0 ],
+						"umenu" : [ " ", 0 ],
 						"window_open" : [ 0 ]
 					}
 ,
@@ -296,7 +296,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-2",
-					"items" : [ " ", ",", "add octaves", ",", "pitch shift" ],
+					"items" : [ " ", ",", "add octaves", ",", "pitch shift", ",", "transpose octave", ",", "transpose_pitch" ],
 					"maxclass" : "umenu",
 					"menumode" : 3,
 					"numinlets" : 1,
@@ -305,7 +305,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 361.5, 391.0, 204.0, 22.0 ],
 					"pattrmode" : 1,
-					"prefix" : "~/Documents/Max 8/Projects/djazz_db/patchers/djazz midi effects/",
+					"prefix" : "~/Documents/Max 8/Projects/djazz_db/patchers/midi effects/",
 					"prefix_mode" : 2,
 					"presentation" : 1,
 					"presentation_rect" : [ 22.0, 0.0, 106.0, 22.0 ],
@@ -360,7 +360,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
+					"destination" : [ "obj-11", 0 ],
 					"order" : 1,
 					"source" : [ "obj-20", 0 ]
 				}
@@ -379,13 +379,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
 					"source" : [ "obj-3", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"source" : [ "obj-4", 0 ]
 				}
 
 			}

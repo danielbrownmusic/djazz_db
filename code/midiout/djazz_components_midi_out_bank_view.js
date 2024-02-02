@@ -16,17 +16,29 @@ var y_pres_0    = 52;
 var w_track     = 128;
 var h_track     = 440;
 
-var x_solo_bank_ctrl = 396;
-var y_solo_bank_ctrl = 374;
-
-var x_funnel = 600;
-var y_funnel = 374;
-
 
 declareattribute("bank_dict", "get_bank_dict", "set_bank_dict");
 
 var size = [0, 0, x_pres_0, y_pres_0];
 declareattribute("size");
+
+// ---------------------------------------------------------------------------
+
+
+function save_bank(file_path)
+{
+    var bank_dict = new Dict (get_bank_dict());
+    bank_dict.export_json(file_path);
+}
+
+
+function load_bank(file_path)
+{
+    var bank_dict = new Dict ();
+    bank_dict.import_json(file_path);
+    set_bank_dict(bank_dict.name)
+}
+
 
 
 function get_bank_dict()
@@ -125,7 +137,7 @@ function set_bank_dict_(bank_dict_name)
         var effects_dict    = track_array[i];
         comp.message("effects_dict", effects_dict.name); 
     }
-    set_solo_bank_ctrl_();
+    //set_solo_bank_ctrl_();
 }
 set_bank_dict_.local = 1;
 
@@ -248,6 +260,20 @@ function set_size_()
     size = [0, 0, x_pres, y_pres];
 }
 set_size_.local = 1;
+
+
+
+
+
+
+
+/* var x_solo_bank_ctrl = 396;
+var y_solo_bank_ctrl = 374;
+
+var x_funnel = 600;
+var y_funnel = 374; */
+
+
 
 /* function set_solo_bank_ctrl_size_()
 {
