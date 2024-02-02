@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 265.0, 160.0, 883.0, 850.0 ],
+		"rect" : [ 2687.0, 415.0, 490.0, 84.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,18 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 188.0, 385.0, 39.0, 22.0 ],
+					"text" : "$1 $2"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "",
 					"id" : "obj-3",
 					"index" : 1,
@@ -63,7 +75,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -218,7 +230,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 105.0, 363.0, 102.0, 22.0 ],
+					"patching_rect" : [ 105.0, 341.0, 102.0, 22.0 ],
 					"text" : "t b l"
 				}
 
@@ -235,7 +247,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -447,7 +459,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -820,7 +832,7 @@
 					"patching_rect" : [ 105.0, 417.0, 102.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 2.0, 2.0, 103.0, 22.0 ],
-					"text" : "midi 112 127 1"
+					"text" : "midi 1"
 				}
 
 			}
@@ -839,7 +851,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-20",
-					"items" : [ "loop_chapter", ",", "midi_gen_1_loop_1", ",", "midi_gen_1_loop_2", ",", "midi_gen_1_loop_3", ",", "midi_gen_1_loop_4", ",", "midi_gen_1_loop_8", ",", "midi_gen_1_speed_1/2", ",", "midi_gen_1_speed_2", ",", "midi_gen_1_speed_3", ",", "midi_gen_1_speed_4", ",", "midi_gen_2_loop_1", ",", "midi_gen_2_loop_2", ",", "midi_gen_2_loop_3", ",", "midi_gen_2_loop_4", ",", "midi_gen_2_loop_8", ",", "midi_gen_2_speed_1/2", ",", "midi_gen_2_speed_2", ",", "midi_gen_2_speed_3", ",", "midi_gen_2_speed_4", ",", "number[3]", ",", "number[4]", ",", "speed", ",", "speed[1]", null, null, null, ",", ",", "bar_button", ",", "chapter_button", ",", "loop_chapter", ",", "midi_gen_1_loop_1", ",", "midi_gen_1_loop_2", ",", "midi_gen_1_loop_3", ",", "midi_gen_1_loop_4", ",", "midi_gen_1_loop_8", ",", "midi_gen_1_speed_1/2", ",", "midi_gen_1_speed_2", ",", "midi_gen_1_speed_3", ",", "midi_gen_1_speed_4", ",", "midi_gen_2_loop_1", ",", "midi_gen_2_loop_2", ",", "midi_gen_2_loop_3", ",", "midi_gen_2_loop_4", ",", "midi_gen_2_loop_8", ",", "midi_gen_2_speed_1/2", ",", "midi_gen_2_speed_2", ",", "midi_gen_2_speed_3", ",", "midi_gen_2_speed_4", ",", "number[3]", ",", "number[4]", ",", "speed", ",", "speed[1]", null, null ],
+					"items" : [ "loop_chapter", ",", "midi_gen_1_loop_1", ",", "midi_gen_1_loop_2", ",", "midi_gen_1_loop_3", ",", "midi_gen_1_loop_4", ",", "midi_gen_1_loop_8", ",", "midi_gen_1_speed_1/2", ",", "midi_gen_1_speed_2", ",", "midi_gen_1_speed_3", ",", "midi_gen_1_speed_4", ",", "midi_gen_2_loop_1", ",", "midi_gen_2_loop_2", ",", "midi_gen_2_loop_3", ",", "midi_gen_2_loop_4", ",", "midi_gen_2_loop_8", ",", "midi_gen_2_speed_1/2", ",", "midi_gen_2_speed_2", ",", "midi_gen_2_speed_3", ",", "midi_gen_2_speed_4", ",", "number[3]", ",", "number[4]", ",", "speed", ",", "speed[1]", null, null, null, ",", ",", "bar_button", ",", "chapter_button", ",", "loop_chapter", ",", "midi_gen_1_loop_1", ",", "midi_gen_1_loop_2", ",", "midi_gen_1_loop_3", ",", "midi_gen_1_loop_4", ",", "midi_gen_1_loop_8", ",", "midi_gen_1_speed_1/2", ",", "midi_gen_1_speed_2", ",", "midi_gen_1_speed_3", ",", "midi_gen_1_speed_4", ",", "midi_gen_2_loop_1", ",", "midi_gen_2_loop_2", ",", "midi_gen_2_loop_3", ",", "midi_gen_2_loop_4", ",", "midi_gen_2_loop_8", ",", "midi_gen_2_speed_1/2", ",", "midi_gen_2_speed_2", ",", "midi_gen_2_speed_3", ",", "midi_gen_2_speed_4", ",", "number[3]", ",", "number[4]", ",", "speed", ",", "speed[1]", null, null, ",", ",", "bar_button", ",", "chapter_button", ",", "loop_chapter", ",", "midi_gen_1_loop_1", ",", "midi_gen_1_loop_2", ",", "midi_gen_1_loop_3", ",", "midi_gen_1_loop_4", ",", "midi_gen_1_loop_8", ",", "midi_gen_1_speed_1/2", ",", "midi_gen_1_speed_2", ",", "midi_gen_1_speed_3", ",", "midi_gen_1_speed_4", ",", "midi_gen_2_loop_1", ",", "midi_gen_2_loop_2", ",", "midi_gen_2_loop_3", ",", "midi_gen_2_loop_4", ",", "midi_gen_2_loop_8", ",", "midi_gen_2_speed_1/2", ",", "midi_gen_2_speed_2", ",", "midi_gen_2_speed_3", ",", "midi_gen_2_speed_4", ",", "no_octave", ",", "number[3]", ",", "number[4]", ",", "octave_down_1", ",", "octave_down_2", ",", "octave_down_3", ",", "octave_down_4", ",", "octave_transposition", ",", "octave_up_1", ",", "octave_up_2", ",", "octave_up_3", ",", "octave_up_4", ",", "speed", ",", "speed[1]" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -969,13 +981,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 1 ],
-					"source" : [ "obj-5", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"source" : [ "obj-5", 0 ]
 				}
@@ -983,8 +988,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-5", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
 					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 1 ],
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}

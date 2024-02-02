@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 495.0, 100.0, 902.0, 983.0 ],
+		"rect" : [ 869.0, 159.0, 902.0, 983.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,13 +40,26 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 46.625030000000038, 722.370370370370324, 154.0, 22.0 ],
+					"text" : "djazz_loop_previous_beats",
+					"varname" : "loop_previous_beats"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "(int) next beat",
 					"id" : "obj-27",
 					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 46.625030000000038, 824.962962962963047, 30.0, 30.0 ]
+					"patching_rect" : [ 46.625030000000038, 840.962962962962933, 30.0, 30.0 ]
 				}
 
 			}
@@ -62,7 +75,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -269,9 +282,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 46.625030000000038, 675.629629629629335, 190.0, 22.0 ],
-					"text" : "djazz_loop_beats_settable_length",
-					"varname" : "loop_beats"
+					"patching_rect" : [ 46.625030000000038, 603.777777777777715, 131.0, 22.0 ],
+					"text" : "djazz_loop_next_beats",
+					"varname" : "loop_next_beats"
 				}
 
 			}
@@ -287,7 +300,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -435,7 +448,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 46.625030000000038, 518.611111111110858, 123.999972999999954, 22.0 ],
+					"patching_rect" : [ 46.625030000000038, 485.185185185185105, 123.999972999999954, 22.0 ],
 					"text" : "djazz_loop_section",
 					"varname" : "loop_section"
 				}
@@ -539,7 +552,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-27", 0 ],
+					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -577,6 +590,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"source" : [ "obj-3", 0 ]
 				}
 
 			}

@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 166.0, 231.0, 1453.0, 771.0 ],
+		"rect" : [ 1618.0, 309.0, 1453.0, 771.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -76,7 +76,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -379,7 +379,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1596.0, 296.666666666666629, 171.0, 35.0 ],
+					"patching_rect" : [ 1596.0, 296.666666666666629, 173.0, 35.0 ],
 					"text" : "beat_clock::loop_section::start $1"
 				}
 
@@ -392,8 +392,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 278.0, 296.666666666666629, 272.0, 35.0 ],
-					"text" : "beat_clock::loop_beats::loop_length::loop_length $1"
+					"patching_rect" : [ 278.0, 296.666666666666629, 192.0, 35.0 ],
+					"text" : "beat_clock::loop_previous_beats::loop_length $1"
 				}
 
 			}

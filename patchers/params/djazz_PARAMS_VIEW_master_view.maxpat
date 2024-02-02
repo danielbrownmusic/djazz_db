@@ -146,7 +146,7 @@
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 144.0, 26.0, 36.0, 35.0 ],
 					"saved_object_attributes" : 					{
-						"initial" : [ -1 ],
+						"initial" : [ 0 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
 					}
