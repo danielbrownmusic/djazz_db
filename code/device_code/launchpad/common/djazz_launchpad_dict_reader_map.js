@@ -25,9 +25,7 @@ exports.set_dict = function (device_name, mapping_dict_name)
         return false;
     }
     post (d_.name);
-    post ("HUERER ASRRE THR FUCKING KEYS ");
     post (d_.getkeys());
-    post ("THOSE WERE THE FUCKING KEYS");
     return true;
 }
 
@@ -43,9 +41,6 @@ exports.close = function()
 
 exports.chapter_count = function()
 {
-    post ("FUCK EVERYTHING FOREVVERRRRRRRRRRRRRRRRR")
-    var fuckyou = get_grid_param_count_("chapter"); 
-    post ("FUCK YOU@!!@!@!@!@@!", fuckyou, "fuck fuck fuckfuck \n"); 
     return get_grid_param_count_("chapter");
 }
 
@@ -57,7 +52,6 @@ exports.bar_count = function()
 
 exports.params = function ()
 {
-    post ("getting param names \n");    
     return get_grid_params_().concat(get_params_());
 }
 

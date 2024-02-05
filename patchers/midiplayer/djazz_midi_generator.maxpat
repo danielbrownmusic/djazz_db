@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 413.0, 100.0, 497.0, 983.0 ],
+		"rect" : [ 413.0, 100.0, 465.0, 1011.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -81,7 +81,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "int" ],
 					"patching_rect" : [ 107.0, 621.499998624999762, 101.0, 22.0 ],
 					"text" : "djazz_beat_clock",
 					"varname" : "beat_clock"
@@ -294,6 +294,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
+					"order" : 0,
 					"source" : [ "obj-29", 1 ]
 				}
 
@@ -302,6 +303,15 @@
 				"patchline" : 				{
 					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-29", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"midpoints" : [ 177.0, 783.333333333333485, 337.25, 783.333333333333485, 337.25, 81.0, 119.5, 81.0 ],
+					"order" : 1,
+					"source" : [ "obj-29", 1 ]
 				}
 
 			}

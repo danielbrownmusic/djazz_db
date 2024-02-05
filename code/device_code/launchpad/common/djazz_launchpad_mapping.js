@@ -84,8 +84,6 @@ function clear_mapping()
 
 function add_parameter(param, cell_type, cell_value, hue)
 {
-    post ("adding parameter", param, cell_type, cell_value, hue, "\n");
-
     map_wrtr_.set_dict(map_dict_.name);
     map_wrtr_.add_param(param, cell_type, cell_value, hue);
     map_wrtr_.close();
@@ -114,20 +112,6 @@ function remove_parameter(param_name)
 
 
 //-------------------------------------------------------------------------------
-
-
-/* function add_grid_param_(param, i, cell_type, cell_value)
-{
-    map_rdr_.grid_param_states(param).forEach(
-        function (state)
-        {
-            var color = map_rdr_.grid_param_color(param, state);
-            view_wrtr_.add_grid_param(param, i, state, cell_type, cell_value, color);
-        }
-    )
-    ctrl_wrtr_.add_grid_param(param, cell_type, cell_value);
-}
-add_grid_param_.local = 1; */
 
 
 function add_param_(param, cell_type, cell_value)
@@ -167,6 +151,13 @@ function to_symbol_()
     return Array.prototype.slice.call(arguments).join(" ");
 }
 to_symbol_.local = 1;
+
+
+
+
+
+
+
 
 
 

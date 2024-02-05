@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1839.0, 309.0, 823.0, 886.0 ],
+		"rect" : [ -1188.0, 418.0, 823.0, 886.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,18 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 57.0, 296.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-4",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -57,7 +69,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 197.0, 377.0, 243.0, 22.0 ],
+					"patching_rect" : [ 197.0, 334.0, 243.0, 22.0 ],
 					"text" : "djazz_midi_generator_translate_parameters"
 				}
 
@@ -70,7 +82,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 78.0, 515.0, 75.0, 35.0 ],
+					"patching_rect" : [ 57.0, 368.0, 75.0, 35.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "pattrvis.js",
 						"parameter_enable" : 0
@@ -86,7 +98,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 197.0, 768.0, 186.0, 22.0 ],
+					"patching_rect" : [ 197.0, 570.0, 186.0, 22.0 ],
 					"text" : "djazz_PARAMS_VIEW_midi_gen",
 					"textcolor" : [ 0.941176470588235, 0.776470588235294, 0.945098039215686, 1.0 ],
 					"varname" : "view_params"
@@ -100,7 +112,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 23.0, 643.5, 193.0, 22.0 ],
+					"patching_rect" : [ 23.0, 450.5, 193.0, 22.0 ],
 					"text" : "djazz_midi_generator #1",
 					"varname" : "midi_generator"
 				}
@@ -113,7 +125,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 197.0, 270.0, 186.0, 22.0 ],
+					"patching_rect" : [ 197.0, 223.0, 186.0, 22.0 ],
 					"text" : "djazz_PARAMS_CTRL_midi_gen",
 					"textcolor" : [ 0.941176470588235, 0.776470588235294, 0.945098039215686, 1.0 ],
 					"varname" : "params"
@@ -128,7 +140,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 23.0, 796.0, 30.0, 30.0 ]
+					"patching_rect" : [ 23.0, 570.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -199,6 +211,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-87", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}
