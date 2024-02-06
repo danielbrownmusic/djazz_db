@@ -40,9 +40,7 @@ exports.cc_count = function ()
 
 exports.chapter_count = function()
 {
-    var FUCKYOU = d_.getsize("grid::chapter::cells");
-    post ("FUUUUUUUUUUUCK YOUUUUUUUU");
-    return FUCKYOU;
+    return d_.getsize("grid::chapter::cells");
 }
 
 

@@ -25,15 +25,6 @@ exports.add_param = function(param, state, cell_type, cell_value, color)
 }
 
 
-/* exports.add_grid_param = function(param, i, state, cell_type, cell_value, color)
-{
-    var color_code  = to_symbol_(dev_rdr_.color_code(color));
-    var key         = to_symbol_(param, state);
-    var val         = to_symbol_(cell_type, cell_value, color_code); 
-    d_.set(key, val);
-}
- */
-
 //------------------------------------------------------------------
 
 
@@ -55,5 +46,15 @@ to_symbol_.local = 1;
 /* exports.get_dict = function()
 {
     return d_.name;
+}
+ */
+
+
+/* exports.add_grid_param = function(param, i, state, cell_type, cell_value, color)
+{
+    var color_code  = to_symbol_(dev_rdr_.color_code(color));
+    var key         = to_symbol_(param, state);
+    var val         = to_symbol_(cell_type, cell_value, color_code); 
+    d_.set(key, val);
 }
  */

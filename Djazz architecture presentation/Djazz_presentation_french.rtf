@@ -1,0 +1,256 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fswiss\fcharset0 Helvetica-Oblique;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww13580\viewh18960\viewkind1
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 1. Description du logiciel et des objectifs\
+2. Flux de contr\'f4le MVC utilisant pattr\
+3. Cr\'e9ation et destruction dynamique d'objets : tableaux et dicts\
+4. Param\'e8tres et auditeurs\
+5. Lecteurs et r\'e9dacteurs de dictionnaires\
+6. Python\
+7. R\'e9flexions sur les param\'e8tres
+\f1\b0 \
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b \cf0 1. Description du logiciel et des objectifs\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\b0 \cf0 \
+	Djazz joue de la musique de deux mani\'e8res : en s\'e9lectionnant des sections \'e0 partir de partitions, et en calculant des improvisations \'e0 l'aide de l'algorithme de l'oracle des facteurs, modifi\'e9 par des m\'e9thodes de recherche de motifs. L'oracle factoriel est aliment\'e9 par des partitions et des donn\'e9es en temps r\'e9el, audio ou MIDI, et est restitu\'e9 sous forme audio ou MIDI. Il est (en cours d'\'e9criture) en Max avec l'oracle factoriel et le calcul de pattern-matching en Python. Il utilise Antescofo pour g\'e9n\'e9rer des notes \'e0 partir de partitions et des improvisations dans le tempo.\
+\
+	Djazz improvise sur des chansons en utilisant des fichiers mod\'e8les, qui sont des listes de temps repr\'e9sentant des positions dans les chansons.  Aucune autre information n'est encod\'e9e dans ces mod\'e8les : les changements d'accords et les notes se trouvent dans des fichiers diff\'e9rents : les partitions utilis\'e9es par Antescofo et les bases de donn\'e9es utilis\'e9es par l'oracle des facteurs. Les mod\'e8les de chansons permettent simplement \'e0 Antescofo et \'e0 l'oracle des facteurs de savoir sur quel rythme nous nous trouvons \'e0 un moment donn\'e9.  Pour les chansons dont la structure formelle comprend des couplets ou des sections, cette structure plus large est \'e9galement incluse dans le mod\'e8le. Il est \'e9galement possible d'improviser sur une structure "libre" en utilisant un mod\'e8le trivial, c'est-\'e0-dire une courte liste de rythmes en boucle.\
+\
+	Le Djazz est jou\'e9 en entrant un rythme - manuellement, \'e0 partir d'un m\'e9tronome int\'e9gr\'e9 ou d'une autre application. Le tap d\'e9clenche un rythme, qui d\'e9clenche la sortie de notes de l'oracle des facteurs ou de la partition, qui d\'e9clenche la sortie de donn\'e9es de notes de l'antescofo, qui d\'e9clenche la sortie de sons par les sorties audio ou midi. [DIAPO]\
+\
+	Vous pouvez voir ce flux de contr\'f4le. Le tap entre \'e0 gauche et sort sous forme de son de la banque midi \'e0 droite. Les traductions interm\'e9diaires du tap au beat se produisent dans les objets en cours de route.\
+	L'architecture : plusieurs lecteurs qui peuvent \'eatre de diff\'e9rents types (tous les types possibles sont \'e0 d\'e9terminer). Chacun fonctionne de mani\'e8re ind\'e9pendante, mais il existe un contr\'f4le principal pour la synchronisation du temps et la diffusion des commandes globales.\
+	Le flux de contr\'f4le est repr\'e9sent\'e9 de mani\'e8re fonctionnelle comme suit [DIAPO], o\'f9 les "p" sont des vecteurs de param\'e8tres qui modifient la mani\'e8re dont chaque traduction est effectu\'e9e. C'est du flux de contr\'f4le de ces p que je vais parler.\
+\
+\
+
+\f0\b\fs30 1. Flux de contr\'f4le MVC utilisant pattr\
+
+\f1\b0\fs24 \
+\
+Les objectifs de la r\'e9\'e9criture de Djazz sont les suivants.\
+\
+	- pr\'e9parer le logiciel \'e0 \'eatre distribu\'e9 en tant que logiciel autonome\
+	- concevoir une architecture extensible :\
+	\uc0\u8259  des changements peuvent \'eatre apport\'e9s dans un domaine sans cr\'e9er de bogues dans d'autres domaines (d\'e9pendance et modularit\'e9) \
+	\uc0\u8259  de nouvelles fonctionnalit\'e9s peuvent \'eatre ajout\'e9es sans modifier la base de code existante \
+	\uc0\u8259  les nouvelles fonctionnalit\'e9s sont faciles \'e0 int\'e9grer. Il existe des m\'e9thodes (pas tout \'e0 fait un SDK) pour ajouter des fonctionnalit\'e9s. Certaines m\'e9thodes sont plus approfondies que d'autres ; certaines n\'e9cessitent simplement de placer les nouveaux patchs max dans des dossiers correctement nomm\'e9s et organis\'e9s.\
+	- le d\'e9bogage est facile\
+\
+MVC :\
+\
+Djazz utilise le mod\'e8le de conception Mod\'e8le-Vue-Contr\'f4le.\
+\
+Le mod\'e8le est constitu\'e9 des objets qui effectuent le traitement. Au niveau sup\'e9rieur, il y a diff\'e9rents acteurs et le contr\'f4le principal que nous venons de d\'e9crire.\
+\
+Le mod\'e8le est enti\'e8rement contr\'f4l\'e9 par le passage de param\'e8tres nomm\'e9s (pas ce que Max appelle "param\'e8tres" - je parlerai de ceux-ci dans une section ult\'e9rieure) dans le format de message <nom de la variable> <valeur de la variable>. Ces param\'e8tres sont re\'e7us dans l'entr\'e9e la plus \'e0 gauche. L'entr\'e9e la plus \'e0 droite sert \'e0 modifier l'architecture, c'est-\'e0-dire \'e0 ajouter et \'e0 soustraire des composants, ce dont je parlerai plus loin.\
+\
+Le contr\'f4le est \'e9galement la vue, puisqu'il s'agit de contr\'f4les graphiques. Je qualifierai donc de vue le bpatcher contenant le contr\'f4le et la vue combin\'e9s.\
+\
+Chaque param\'e8tre est stock\'e9 dans un objet pattr.\
+\
+\'c0 titre d'exemple, voici un objet lecteur midi, qui contient, entre autres, une horloge de rythme. L'horloge contient elle-m\'eame plusieurs composants. Voici l'un d'entre eux, " loop_section " et les objets pattr qu'il contient. [DIAPORAMA]\
+\
+L'objet pattrhub les invoque, ainsi un message "step 2" mettra l'objet pattr step dans beat_clock \'e0 2.\
+\
+Les pattrs agissent de mani\'e8re hi\'e9rarchique. L'horloge est nomm\'e9e "beat_clock" [SLIDE], et la variable step peut donc \'eatre invoqu\'e9e en envoyant \'e0 l'horloge le message "beat_clock::step 2". Ce format \'e0 deux points se poursuit \'e0 mesure que l'objet pattr est imbriqu\'e9 dans les niveaux sup\'e9rieurs d'une hi\'e9rarchie.\
+\
+Le contr\'f4le est constitu\'e9 de bpatchers. Il n'y a pas de bpatchers dans le mod\'e8le. Ils g\'e8rent toute la logique de l'interface utilisateur, comme les boutons et la s\'e9lection des fichiers. Pour modifier un param\'e8tre dans le mod\'e8le, un objet pattr doit exister dans la vue avec le m\'eame nom que l'objet correspondant dans le mod\'e8le. Ces noms n'entrent pas en conflit car ils se trouvent dans des sous-patchers diff\'e9rents.\
+\
+Un objet pattrstorage dans le contr\'f4le garde la trace des changements de motifs. Lorsque l'attribut outputmode est diff\'e9rent de z\'e9ro, il envoie les noms et les valeurs des param\'e8tres modifi\'e9s \'e0 sa sortie.  Ainsi, pour communiquer les modifications de param\'e8tres au mod\'e8le, la sortie de pattrstorage est envoy\'e9e hors du contr\'f4le et dans un objet pattrthub au niveau sup\'e9rieur du mod\'e8le, qui diffuse ensuite les modifications aux endroits appropri\'e9s.\
+\
+Remarque : avec cette m\'e9thode, les objets pattrhub int\'e9rieurs finissent par ne plus \'eatre utilis\'e9s du tout, mais il est toujours bon de les laisser en place afin que ces objets puissent \'eatre r\'e9utilis\'e9s et ne d\'e9pendent pas de cette fa\'e7on d'\'eatre appel\'e9s.\
+\
+\
+ La nature hi\'e9rarchique du mod\'e8le signifie cependant que les noms des param\'e8tres envoy\'e9s par la commande doivent avoir la m\'eame structure hi\'e9rarchique que ceux du mod\'e8le. Ainsi, pour contr\'f4ler le param\'e8tre "midi_player_1::beat_clock::loop_length", il doit y avoir un bpatcher de contr\'f4le appel\'e9 "midi_player_1" qui contient un bpatcher "beat_clock" qui contient un pattr "loop_length".\
+\
+	Pour les petits syst\'e8mes, cette m\'e9thode peut \'eatre int\'e9ressante : le contr\'f4le et le mod\'e8le sont des hi\'e9rarchies parall\'e8les.\
+\
+Cependant, cette m\'e9thode pose trois probl\'e8mes. La s\'e9paration du mod\'e8le et de la commande est cens\'e9e vous donner la libert\'e9 de concevoir la commande sans vous soucier de la mani\'e8re dont les choses sont trait\'e9es dans le mod\'e8le.\
+\
+ 1. L'architecture de contr\'f4le est enti\'e8rement li\'e9e \'e0 l'architecture du mod\'e8le, ce qui devient tr\'e8s contraignant, d'autant plus que la logique de contr\'f4le d'un syst\'e8me compliqu\'e9 ne refl\'e8te probablement pas la mani\'e8re dont les choses sont trait\'e9es.\
+  \
+ 2. Vous ne souhaitez pas n\'e9cessairement contr\'f4ler tous les patrons du mod\'e8le. Certains peuvent \'eatre jug\'e9s inutiles. Ce n'est pas un gros probl\'e8me, mais il y en a un autre qui est li\'e9 :\
+ 3. Certains pattrs du mod\'e8le ne sont pas r\'e9ellement ind\'e9pendants les uns des autres au moment de l'ex\'e9cution.    Les objets ont \'e9t\'e9 cr\'e9\'e9s ind\'e9pendamment, mais leurs fonctions dans le syst\'e8me d\'e9pendent les unes des autres ou d'autres objets\
+\
+Il est utile de concevoir des objets en pensant \'e0 leur fonction ind\'e9pendamment des autres objets, m\'eame si dans le syst\'e8me ils ne seront pas ind\'e9pendants. \
+\
+Par exemple : \
+	\
+Il y a un objet qui produit un nombre donn\'e9 de coups \'e0 un tempo donn\'e9 : il a deux pattrs, "tempo" et "count" : le nombre de coups \'e0 produire. \
+\
+Il existe un autre objet qui modifie le tempo du syst\'e8me. \
+\
+L'objet tempo peut \'eatre utilis\'e9 pour ajuster le tempo en lui-m\'eame. Mais il est \'e9galement utilis\'e9 pour contr\'f4ler un param\'e8tre appel\'e9 "vitesse".\
+ La vitesse permet \'e0 la sortie musicale d'\'eatre jou\'e9e deux fois plus vite (double time), ou en triolets, etc. Changer la vitesse \'e0 deux signifie \'e0 la fois doubler le tempo et r\'e9gler le nombre de coups \'e0 deux. \
+\
+Ainsi, la correspondance entre les patrons de contr\'f4le et les patrons de mod\'e8le n'est pas biunivoque. Nous pouvons imaginer des r\'e9seaux plus complexes de d\'e9pendances entre les param\'e8tres du mod\'e8le que nous ne voulons pas refl\'e9ter dans la commande.\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2\i \cf0 [
+\f1\i0  
+\f2\i Remarque avant la resolution :\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+Il est utile de concevoir ces deux objets s\'e9par\'e9ment, car ils peuvent alors \'eatre test\'e9s et \'e9ventuellement r\'e9utilis\'e9s ult\'e9rieurement. Nous nous retrouvons avec un mod\'e8le "riche en fonctionnalit\'e9s", et il s'agit maintenant de d\'e9cider quelles fonctionnalit\'e9s nous voulons utiliser, et comment elles seront refl\'e9t\'e9es dans le contr\'f4le.\
+\
+En termes de conception ax\'e9e sur le domaine, il est important de ne pas passer trop de temps \'e0 construire des objets qui font beaucoup de choses que nous n'avons pas forc\'e9ment envie d'utiliser au bout du compte. Nous ne construisons pas une biblioth\'e8que, mais une application. D'un autre c\'f4t\'e9, la construction de petits objets s\'e9par\'e9s qui g\'e8rent des fonctions ind\'e9pendantes sp\'e9cifiques est un moyen utile de cr\'e9er des blocs de construction pour notre application. Il faut donc faire un compromis : concevoir pour l'application en tenant compte du type d'objets ind\'e9pendants et r\'e9utilisables qui constitueront une biblioth\'e8que.  ]
+\f1\i0 \
+\
+\
+Pour r\'e9soudre ces trois probl\'e8mes, Djazz utilise la m\'e9thode suivante :\
+\
+Pour chaque objet important constitu\'e9 de composants plus petits contenant des pattrs, comme le " lecteur midi ", il existe une banque de param\'e8tres. [Cette banque ne contient que les pattrs de surface que la commande appellera.\
+\
+ Le lecteur midi et la banque de param\'e8tres sont envelopp\'e9s dans un objet plus grand, et les param\'e8tres de la banque sont transmis au lecteur midi par l'interm\'e9diaire d'un objet traducteur.\
+\
+ Ce traducteur g\'e8re les trois probl\'e8mes ci-dessus. Il traduit les param\'e8tres de surface en leurs pattrs correspondants nomm\'e9s hi\'e9rarchiquement, ce qui est tr\'e8s facile. Dans cet objet sont \'e9galement plac\'e9s les objets qui traduisent les variables de contr\'f4le en variables de mod\'e8le d\'e9pendantes, comme f(speed)->[bang_count, tempo]. \
+	Enfin, les variables inutilis\'e9es ne sont tout simplement pas appel\'e9es. Mais pour \'eatre absolument s\'fbr que les variables non appel\'e9es ne nous causent pas d'ennuis, en stockant des \'e9tats que nous avons oubli\'e9s, ou en \'e9tant accidentellement appel\'e9es, parce qu'elles partagent accidentellement des noms avec une variable de contr\'f4le, nous pouvons d\'e9sactiver leur visibilit\'e9 dans le syst\'e8me pattrstorage, ce qui signifie qu'elles ne peuvent jamais \'eatre appel\'e9es. J'ai \'e9crit un objet javascript qui d\'e9sactive tous les pattrs d'un objet. Le premier argument lui indique la visibilit\'e9, le second permet de changer r\'e9cursivement la visibilit\'e9 des sous-patches. [EXEMPLE]\
+\
+Maintenant, dans le bpatcher de contr\'f4le, il y a une banque de param\'e8tres similaire.\
+Les architectures du contr\'f4le et du mod\'e8le sont d\'e9sormais s\'e9par\'e9es, et nous sommes libres de concevoir le contr\'f4le comme nous le souhaitons. Tant que nos commandes envoient un message \'e0 la banque de param\'e8tres avec le bon nom, il sera envoy\'e9 au mod\'e8le. [Nous pouvons maintenant configurer les commandes comme nous le souhaitons, et toute la logique de commande (fonctionnement des boutons, etc.) est totalement ind\'e9pendante de ce qui se passe dans le mod\'e8le, et vice versa.\
+\
+Comme l'objet pattrstorage se trouve \'e0 l'int\'e9rieur de la vue, l'espace de noms "view" n'est pas inclus dans les noms de param\'e8tres. \
+\
+Le mod\'e8le produit des sorties midi et audio, mais il produit \'e9galement des pattrs pour toute vue qui souhaite les recevoir. Il proc\'e8de de la m\'eame mani\'e8re que le contr\'f4le : un objet pattrstorage se trouve au niveau sup\'e9rieur du patcheur de mod\'e8le, et lorsqu'une valeur de pattr est mise \'e0 jour, il \'e9met le nom et la valeur du pattr.\
+	Le mod\'e8le produit deux types de pattrs : ceux qui sont sp\'e9cifiques \'e0 une vue et les param\'e8tres envoy\'e9s par le contr\'f4le.\
+[DIAPOSITIVE]\
+Comme le contr\'f4le est la vue, ce flux de pattrs devient une boucle.[Le pattrstorage du contr\'f4le/de la vue envoie des valeurs au pattrhub du mod\'e8le, et le pattrstorage du mod\'e8le envoie des valeurs au pattrhub du contr\'f4le/de la vue.\
+\
+Pour \'e9viter une boucle infinie, nous utilisons l'attribut outputmode du pattrstorage.\
+\
+ Dans le mod\'e8le, le mode de sortie est 2 : toutes les valeurs modifi\'e9es sont envoy\'e9es.\
+ Mais dans la vue, le mode de sortie est 6 : les valeurs modifi\'e9es par les objets du syst\'e8me pattr ne sont pas envoy\'e9es.En d'autres termes, seules les valeurs modifi\'e9es par l'interaction de l'utilisateur sont envoy\'e9es. Ainsi, les valeurs re\'e7ues par pattrhub sont d\'e9finies mais ne sont pas transmises.La boucle est rompue. [DIAPOSITIVE] Le flux de contr\'f4le est clair\
+ Tout l'\'e9tat est centralis\'e9 dans les banques de param\'e8tres.\
+ L'\'e9tat peut \'eatre lu en temps r\'e9el par les fen\'eatres du client (facile \'e0 d\'e9boguer).\
+ L'\'e9tat peut \'eatre sauvegard\'e9 sous forme de fichiers pr\'e9d\'e9finis et recharg\'e9.\
+\
+______________________________________________________________\
+\page 
+\f0\b 2. Cr\'e9ation et destruction dynamiques d'objets : tableaux et dicts\
+	Hi\'e9rarchies\
+	Sauvegarde et rechargement de l'architecture
+\f1\b0 \
+\
+Les objets dans djazz peuvent \'eatre cr\'e9\'e9s et d\'e9truits, de sorte que vous pouvez configurer un nombre variable de diff\'e9rents types de lecteurs, ainsi que diff\'e9rentes sorties midi et audio.  Les configurations r\'e9sultantes peuvent ensuite \'eatre sauvegard\'e9es et recharg\'e9es.\
+\
+Il existe deux structures de donn\'e9es pour sauvegarder les objets : les dictionnaires et les tableaux, car certains objets se pr\'e9sentent sous la forme d'ensembles ordonn\'e9s [pistes midi, effets], alors que d'autres ne le sont pas (les lecteurs, bien qu'ils puissent l'\'eatre).Les ensembles ordonn\'e9s sont plac\'e9s dans des tableaux \'e0 l'aide de javascript.De cette fa\'e7on, ils peuvent \'eatre adress\'e9s en utilisant leurs indices dans le tableau, et les op\'e9rations de tableau peuvent \'eatre utilis\'e9es pour les suivre et les modifier.\
+\
+ En javascript, vous pouvez cr\'e9er des tableaux d'objets.\
+ Pour les supprimer, vous devez \'e0 la fois les supprimer du patcher et les supprimer du tableau, sinon vous obtiendrez des choses non d\'e9finies.\
+\
+ La banque de sorties midi est un exemple de hi\'e9rarchie d'objets contenant des tableaux. La banque contient des pistes, et les pistes contiennent (entre autres) des effets midi.Les pistes peuvent \'eatre cr\'e9\'e9es et supprim\'e9es, tout comme les effets. [DIAPOSITIVE : arbre]\
+En outre, certains effets s'appliquent \'e0 des groupes de pistes.\
+\
+BANQUE\
+GROUPE DE PISTES\
+PISTE\
+EFFECT_LIST\
+EFFECT\
+\
+Pour r\'e9aliser cette structure :\
+\
+ Chaque objet de la hi\'e9rarchie contient un objet javascript portant le nom de variable " components ", qui est responsable de la cr\'e9ation, de la suppression, de l'envoi de messages et de la collecte de donn\'e9es aupr\'e8s des objets de la hi\'e9rarchie qu'il contient. Chaque objet " component " contient un tableau d'objets. [DIAPOSITIVE]\
+\
+ Lorsque des objets sont cr\'e9\'e9s, ils sont \'e9galement plac\'e9s dans le tableau.\
+\
+ Le code de chacun de ces objets composants est similaire, et ils pourraient \'eatre abstraits dans des classes (prototypes) dont les composants sont d\'e9riv\'e9s, si cette m\'e9thode semble suffisamment importante pour le faire.\
+\
+La banque peut \'eatre sauvegard\'e9e sous forme de dictionnaire.\
+\
+Les entr\'e9es du dictionnaire peuvent \'eatre des dictionnaires et des tableaux, et les entr\'e9es des tableaux peuvent \'eatre des dictionnaires et des tableaux. \
+Le dictionnaire de la banque midi contient des tableaux qui contiennent des dictionnaires qui contiennent des tableaux. L'imbrication arbitraire de dictionnaires et de tableaux est possible. L'acc\'e8s et la modification deviennent compliqu\'e9s, ce dont je parlerai dans la section 4.\
+\
+Sauvegarder une banque midi :\
+\
+ Les objets Javascript peuvent d\'e9clarer des attributs : des valeurs qui peuvent \'eatre acc\'e9d\'e9es comme des objets max normaux.  Les attributs peuvent \'eatre des dictionnaires. Les valeurs d'attributs peuvent \'e9galement avoir des getters et setters personnalis\'e9s, ce qui signifie que la valeur de l'attribut n'a pas besoin d'\'eatre quelque chose de r\'e9ellement stock\'e9. Un getter peut la construire dynamiquement lorsqu'il est invoqu\'e9, et un setter peut faire autre chose que sauvegarder la valeur donn\'e9e.\
+\
+\
+ La banque midi a donc un attribut " bank_dict " qui, lorsqu'il est interrog\'e9, construit un dictionnaire \'e0 partir des donn\'e9es de ses composants.\
+\
+Elle \'e9crit un tableau de ses pistes, appelant chacune de ses pistes pour lui donner les donn\'e9es n\'e9cessaires pour l'indice de tableau donn\'e9.  Il appelle chaque piste en demandant un attribut dict \'e0 la piste repr\'e9sentant ses composants.La piste construit un dict de la m\'eame mani\'e8re, en appelant ses composants d'effet. Ce processus se poursuit jusqu'\'e0 ce qu'un dictionnaire r\'e9cursivement construit soit achev\'e9, puis la banque midi le transmet \'e0 l'appelant qui l'\'e9crit sous forme de fichier json.\
+\
+ Pour recharger la banque midi, l'inverse se produit : l'attribut setter construit la liste des pistes en cr\'e9ant chaque piste et en lui envoyant le dict de piste correspondant afin qu'il puisse se construire lui-m\'eame.\
+\
+ Les valeurs r\'e9elles du dict ne sont \'e0 aucun moment sauvegard\'e9es. \
+\
+[EXEMPLE]\
+\
+Cette m\'e9thode peut \'eatre appliqu\'e9e \'e0 l'ensemble de l'architecture d'une session, y compris \'e0 tous les acteurs. Ce sera le cas une fois que nous aurons d\'e9termin\'e9 quels seront les acteurs et comment ils seront dispos\'e9s.\
+\
+ En raison de la disposition hi\'e9rarchique des dictionnaires, la banque midi peut avoir son propre ensemble de pr\'e9r\'e9glages qui peuvent \'eatre charg\'e9s et sauvegard\'e9s dans le pr\'e9r\'e9glage d'une session enti\'e8re.Pour charger une session enti\'e8re, y compris les pr\'e9r\'e9glages pattr, il faut d'abord charger le dictionnaire d'architecture, puis le fichier de pr\'e9r\'e9glages.Le mod\'e8le et la vue contiennent tous deux ces objets composants.La communication entre la vue et le mod\'e8le se fait par le fil de droite.\
+ En construisant \'e0 partir de ces dictionnaires, le mod\'e8le et la vue traitent le dictionnaire comme un mod\'e8le, et le mod\'e8le et la vue deviennent ses vues.\
+\
+ La communication entre le contr\'f4le et le mod\'e8le pendant la construction doit \'eatre g\'e9r\'e9e avec soin et je suis int\'e9ress\'e9 par la fa\'e7on de mieux le faire.\'c0 l'origine, j'ai pens\'e9 qu'il serait formidable d'inclure les attributs dict dans le syst\'e8me pattr.Ils pourraient alors \'eatre contr\'f4l\'e9s de la m\'eame mani\'e8re que le reste des param\'e8tres.\
+Le probl\'e8me est le suivant. [Javascript fonctionne sur un thread diff\'e9rent (\'e0 faible priorit\'e9) de celui des objets Max. Lorsqu'il appelle Max pour cr\'e9er un objet (nouveau d\'e9faut), il passe le contr\'f4le \'e0 ce thread et passe \'e0 la commande Javascript suivante - nous ne savons pas quand la commande Max se terminera par rapport \'e0 la commande Javascript.  Au fur et \'e0 mesure que les composants de la hi\'e9rarchie de la vue sont construits, nous ne pouvons pas supposer que leurs analogues dans le mod\'e8le sont construits en m\'eame temps. Les messages ne peuvent donc pas \'eatre transmis de l'un \'e0 l'autre. Nous ne pouvons donc pas compter sur le fait que le syst\'e8me pattr fonctionne lorsque les hi\'e9rarchies sont construites.Il faut utiliser un autre syst\'e8me.\
+\
+\
+Cr\'e9ation d'effets : pour cr\'e9er un effet MIDI, plusieurs normes simples doivent \'eatre respect\'e9es :Les notes MIDI suivent une valeur donn\'e9e (liste de nombres)\
+	Le MIDI entre par l'entr\'e9e gauche et sort par l'entr\'e9e gauche.\
+	Un contr\'f4le/vue et un patch de mod\'e8le\
+	La communication entre le contr\'f4le et le mod\'e8le se fait par pattr, donc des pattrs avec le m\'eame nom (\'e9ventuellement hi\'e9rarchique) doivent exister dans les deux patchs.\
+	Les patches de contr\'f4le et de mod\'e8le doivent \'eatre plac\'e9s dans des sous-dossiers correctement nomm\'e9s d'un dossier intitul\'e9 par le nom de l'effet.\
+ \
+ Si vous faites cela, l'effet appara\'eetra dans la liste des effets.\
+Cela permet aux d\'e9veloppeurs d'ajouter facilement leurs propres effets.\
+\
+______________________________________________________________3.Param\'e8tres et r\'e9cepteurs\
+\
+La vue/contr\'f4le expose les variables qui peuvent \'eatre modifi\'e9es par l'utilisateur.Il expose \'e9galement les fa\'e7ons dont ces contr\'f4les peuvent \'eatre modifi\'e9s : en tant que bools, ints, floats, bounded, etc.\
+\
+ Pour attacher un appareil ou une t\'e9l\'e9commande au syst\'e8me, nous pouvons utiliser le syst\'e8me de param\'e8tres, qui est ind\'e9pendant du syst\'e8me de pattr mais dont les fonctionnalit\'e9s se chevauchent utilement avec lui.  \
+ \
+\
+ Chaque pattr peut \'eatre sauvegard\'e9 en tant que param\'e8tre. En outre, chaque objet de surface de contr\'f4le peut \'eatre enregistr\'e9 en tant que param\'e8tre. Lorsque des objets contenant des param\'e8tres sont cr\'e9\'e9s (comme des pistes midi), de nouveaux param\'e8tres sont cr\'e9\'e9s. \
+\
+ Deux objets javascript permettent ensuite la connexion des p\'e9riph\'e9riques. Le ParameterInfoProvider liste tous les param\'e8tres et nous alerte lorsque des param\'e8tres sont ajout\'e9s ou supprim\'e9s. Un objet javascript contient un parameterInfoProvider et un tableau de ParameterListeners. Chaque fois qu'un param\'e8tre est ajout\'e9, un \'e9couteur de param\'e8tre est cr\'e9\'e9 pour lui.Cet objet javascript centralise la communication des param\'e8tres.Lorsqu'un param\'e8tre est modifi\'e9, il envoie son nom et sa valeur. Il re\'e7oit \'e9galement des valeurs.\
+Il s'agit essentiellement d'une r\'e9plique de l'objet pattrstorage. Pourquoi l'utiliser ?\
+Parce que les param\'e8tres sont mapp\'e9s sur notre surface de contr\'f4le, et non sur le mod\'e8le. Nous pouvons prendre en compte la logique de l'objet de contr\'f4le ; plusieurs boutons qui modifient le m\'eame pattr peuvent \'eatre enregistr\'e9s en tant que param\'e8tres diff\'e9rents.Nous disposons alors de plusieurs types d'interface avec la variable : nous pouvons la contr\'f4ler en tant que bascule ou en tant qu'int.Par exemple, la variable loop peut \'eatre contr\'f4l\'e9e par des boutons avec un launchpad, et par la bo\'eete \'e0 chiffres avec l'anneau. Tout ce que vous avez \'e0 faire est d'exposer le type de contr\'f4le d\'e9sir\'e9 et de le d\'e9finir en tant que param\'e8tre. L\'e0 encore, le mod\'e8le sous-jacent n'est pas affect\'e9. \
+\
+ Les auditeurs de param\'e8tres et les maxobjlisteners sont difficiles \'e0 g\'e9rer car vous ne pouvez pas les supprimer.\
+\
+4.Lecteurs et r\'e9dacteurs de dictionnaires\
+\
+Les dictionnaires sont utilis\'e9s de diff\'e9rentes mani\'e8res, pour repr\'e9senter les chansons, l'architecture et, comme autre exemple pour la rampe de lancement, pour garder une trace de la fa\'e7on dont les boutons sont associ\'e9s aux param\'e8tres et dont les param\'e8tres sont associ\'e9s aux lumi\'e8res.Pour ce faire, plusieurs types de dictionnaires ont \'e9t\'e9 n\'e9cessaires : \
+\
+DICTS ET TABLEAUX\
+\
+\
+l'un contenant les donn\'e9es sp\'e9cifiques \'e0 l'appareil, qui permettent de faire correspondre les lumi\'e8res aux valeurs midi et aux valeurs de contr\'f4le (" DEVICE ")un contenant les correspondances r\'e9elles cr\'e9\'e9es par l'utilisateur (" MAP ")\
+\
+un fichier que le syst\'e8me doit lire pour \'e9tablir la correspondance entre les entr\'e9es du launchpad et les param\'e8tres (" CTRL ") Et une autre pour que le syst\'e8me lise la correspondance entre les param\'e8tres et les lumi\'e8res.(" VIEW ")\
+\
+\
+La structure de chacun de ces fichiers peut \'eatre d\'e9finie de diff\'e9rentes mani\'e8res. Il existe certains crit\'e8res :Le dict cr\'e9\'e9 par l'utilisateur doit \'eatre facile \'e0 cr\'e9er, soit en \'e9ditant le texte, soit en utilisant un objet max.\
+\
+Le dict lu par le programme doit \'eatre efficace, facilement lisible par le programme.\
+\
+Ces deux crit\'e8res sont diff\'e9rents et requi\'e8rent des structures diff\'e9rentes. De plus, il n'existe pas de structure id\'e9ale pour l'un ou l'autre de ces fichiers, et il se peut que nous voulions les modifier ult\'e9rieurement.Il se peut m\'eame que nous soyons oblig\'e9s de le faire, car les nouvelles rampes de lancement et les nouveaux appareils utilisent des formats diff\'e9rents.\
+\
+ Il n'existe donc pas de m\'e9thode g\'e9n\'e9rale pour structurer ces fichiers. Mais nous voulons quelque chose de g\'e9n\'e9ral pour ne pas avoir \'e0 r\'e9\'e9crire un nouveau patch et des accesseurs de dict pour chaque nouvelle rampe de lancement.\
+\
+ Pour r\'e9soudre ce probl\'e8me, nous cr\'e9ons des dict-readers et des dict-writes, deux types d'objets javascript.Chacun d'entre eux exporte un ensemble de m\'e9thodes qui acc\'e8dent aux donn\'e9es ou les modifient. L'impl\'e9mentation des m\'e9thodes est cach\'e9e \'e0 l'utilisateur.\
+Chacune est sp\'e9cifique au contexte dans lequel elle agit. Les m\'e9thodes export\'e9es ont les m\'eames noms, mais l'impl\'e9mentation est diff\'e9rente en fonction de la structure du dict dans lequel elles lisent ou \'e9crivent.\
+Ainsi, nous pouvons utiliser un seul objet javascript pour lire les dictionnaires souhait\'e9s et les traduire dans le format dont le syst\'e8me a besoin.\
+Chaque lecteur et \'e9crivain est import\'e9 dans le module \'e0 l'aide d'une instruction require.Si nous modifions ou ajoutons un nouveau format de dict, nous \'e9crivons un nouveau lecteur - ce qui implique seulement de r\'e9\'e9crire l'impl\'e9mentation des m\'e9thodes export\'e9es - et nous le rempla\'e7ons dans le champ require appropri\'e9. Il peut \'e9galement s'agir de jsarguments.De cette fa\'e7on, nous avons des traducteurs : des objets qui prennent un lecteur et un r\'e9dacteur.\
+\
+6. Python\
+\
+Le code Python n'est pas compliqu\'e9.\
+\
+Les agents sont cr\'e9\'e9s par la boucle principale et maintiennent leur propre boucle asynchrone pour communiquer avec leurs appelants max.Un ajout \'e0 ce syst\'e8me est que les objets n'h\'e9ritent pas d'un objet OSC. Ils ne contiennent pas de logique d'oscillation mais sont de simples objets Python.Ils sont envelopp\'e9s dans des objets qui g\'e8rent leurs files d'attente de commandes et la communication osc. De cette fa\'e7on, leurs analogues max peuvent \'eatre appel\'e9s comme des objets max ordinaires.\
+\
+Les objets Python peuvent \'eatre cr\'e9\'e9s et d\'e9truits en m\'eame temps que leurs objets max, comme d\'e9crit dans la section 2. Cela n\'e9cessite que le code javascript qui cr\'e9e les objets appelle \'e9galement (via sa sortie) le serveur OSC avec l'appel de constructeur appropri\'e9.\
+ }

@@ -1,0 +1,30 @@
+{
+	"tracks" : [ 		{
+			"effects" : [ "transpose_pitch", "add octaves" ]
+		}
+, 		{
+
+		}
+, 		{
+			"effects" : [ "EMPTY STRING", "add octaves", "transpose_pitch" ]
+		}
+, 		{
+			"effects" : ""
+		}
+, 		{
+			"effects" : [ "EMPTY STRING", "transpose octave" ]
+		}
+, 		{
+			"effects" : "pitch shift"
+		}
+, 		{
+			"effects" : ""
+		}
+, 		{
+			"effects" : ""
+		}
+, 		{
+			"effects" : ""
+		}
+ ]
+}
