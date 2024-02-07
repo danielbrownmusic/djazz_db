@@ -7,10 +7,6 @@ var d_ = new Dict();
 exports.set_dict = function (mapping_dict_name)
 {
     d_.name = mapping_dict_name;
-    post (d_.name);
-    post ("HUERER ASRRE THR FUCKING KEYS ");
-    post (d_.getkeys());
-    post ("THOSE WERE THE FUCKING KEYS");
     return true;
 }
 

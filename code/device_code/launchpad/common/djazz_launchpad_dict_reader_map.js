@@ -18,14 +18,13 @@ var d_              = new Dict();
 exports.set_dict = function (device_name, mapping_dict_name)
 {
     d_.name = mapping_dict_name;
-
+    //post (d_.name);
+    //post (d_.getkeys());
     if (!is_dict_ok_(device_name))
     {
-        post_error_();
+        post_error_(device_name);
         return false;
     }
-    post (d_.name);
-    post (d_.getkeys());
     return true;
 }
 
@@ -140,8 +139,8 @@ get_param_cell_data_.local;
 function get_grid_param_cell_data_(param)
 {
     var [grid_param, i] = param.split(" ");
-    post ("get_grid_param_cell_data_");
-    post (grid_param, i);
+/*     post ("get_grid_param_cell_data_");
+    post (grid_param, i); */
     return d_.get("grid").get(grid_param).get("cells")[i].split(" ");
 }
 get_grid_param_cell_data_.local = 1;
@@ -149,11 +148,11 @@ get_grid_param_cell_data_.local = 1;
 
 function get_param_color_(param, state)
 {
-    post ("param =",param, "state =", state, "\n");
+    //post ("param =",param, "state =", state, "\n");
     var hue         = d_.get("parameters").get(param).split(" ")[2];
     var value       = state === 0 ? "dim" : "bright";
     var behavior    = "static";
-    post ("param color =", hue, value, behavior, "\n");
+    //post ("param color =", hue, value, behavior, "\n");
     return [hue, value, behavior].join(" ");
 }
 get_param_color_.local = 1;
@@ -177,15 +176,15 @@ get_grid_param_count_.local = 1;
 
 function is_dict_ok_(device_name)
 {
-    post (d_.get("device"), "\n");
+    // (d_.get("device"), "\n");
     return d_.get("device") == device_name;
 }
 is_dict_ok_.local = 1;
 
 
-function post_error_(d)
+function post_error_(device_name)
 {
-    post ( "Wrong type of preset file loaded:", d_.get("device"), "instead of", device_, "\n");
+    post ( "Wrong type of preset file loaded:", d_.get("device"), "instead of", device_name, "\n");
 }
 post_error_.local = 1;
 

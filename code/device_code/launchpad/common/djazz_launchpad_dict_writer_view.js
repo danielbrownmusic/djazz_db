@@ -12,7 +12,6 @@ exports.load = function(device_dict_name, view_dict_name)
     dev_rdr_.load (device_dict_name);
     d_.name = view_dict_name;
     init_dict_();
-    post ("view dict loaded FUCK YOU YOU FUCK")
 }
 
 

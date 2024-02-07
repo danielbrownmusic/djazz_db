@@ -2,6 +2,12 @@ autowatch       = 1;
 //outlets         = 2;
 //var f = require('djazz_file');
 
+var device_dict_file_path_ = jsarguments.length > 1 ? jsarguments[1] : "";
+var default_map_file_path_ = jsarguments.length > 2 ? jsarguments[2] : "";
+post (device_dict_file_path_);
+post (default_map_file_path_);
+
+
 var map_rdr_        = require ('djazz_launchpad_dict_reader_map');
 var map_wrtr_       = require ('djazz_launchpad_dict_writer_map');
 var view_wrtr_      = require ('djazz_launchpad_dict_writer_view');
@@ -13,18 +19,17 @@ var map_dict_       = new Dict ();
 var device_dict_    = new Dict ();
 var device_name_    = "";
 
-var default_map_file_path_ = "";
 // ------------------------------------------------------------------------------
 
 
-function init(device_dict_file_path, default_map_file_path, device_dict_name, map_dict_name, view_dict_name, ctrl_dict_name)
+function init(device_dict_name, map_dict_name, view_dict_name, ctrl_dict_name)
 {
 
     device_dict_.name = device_dict_name;
-    device_dict_.import_json(device_dict_file_path);
+    device_dict_.import_json(device_dict_file_path_);
     device_name_ = device_dict_.get("device");
 
-    default_map_file_path_ = default_map_file_path;
+    //default_map_file_path_ = default_map_file_path;
 
     map_dict_.name = map_dict_name;
 
@@ -33,6 +38,9 @@ function init(device_dict_file_path, default_map_file_path, device_dict_name, ma
 
     ctrl_dict_.name = ctrl_dict_name;
     ctrl_wrtr_.set_dict(ctrl_dict_.name);
+
+    reset_mapping()
+    
 }
 
 
@@ -42,16 +50,23 @@ function save_mapping(map_file_path)
 }
 
 
-function new_mapping()
+function reset_mapping()
 {
+    post ("clear mapping\n");
     load_mapping(default_map_file_path_);
 }
+
+
+/* function clear_mapping()
+{
+    new_mapping()
+} */
 
 
 function load_mapping(map_dict_file_path)
 {
     clear_mapping_();
-
+    post ("map file path:", map_dict_file_path);
     map_dict_.import_json(map_dict_file_path);
 
     if (!map_rdr_.set_dict(device_name_, map_dict_.name))
@@ -75,11 +90,6 @@ function load_mapping(map_dict_file_path)
 }
 
 
-function clear_mapping()
-{
-    clear_mapping_();
-    output_when_done_();
-}
 
 
 function add_parameter(param, cell_type, cell_value, hue)

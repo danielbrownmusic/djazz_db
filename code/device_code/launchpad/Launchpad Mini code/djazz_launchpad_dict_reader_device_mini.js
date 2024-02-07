@@ -5,8 +5,6 @@ var d_ = new Dict();
 exports.load = function (device_dict_name)
 {
     d_.name = device_dict_name;
-    post (d_.getkeys());
-    post ("FUCK YOU MAX DICTS");
     if (!is_dict_ok_(d_))
     {
         post_error_(d_);

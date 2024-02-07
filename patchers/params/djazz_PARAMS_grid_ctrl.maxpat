@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 369.0, 326.0, 925.0, 593.0 ],
+		"rect" : [ 369.0, 326.0, 1050.0, 805.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -146,7 +146,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 331.0, 243.0, 50.0, 22.0 ]
+					"patching_rect" : [ 331.0, 243.0, 50.0, 22.0 ],
+					"varname" : "number"
 				}
 
 			}
@@ -159,7 +160,8 @@
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
 					"parameter_mappable" : 0,
-					"patching_rect" : [ 133.0, 243.0, 50.0, 22.0 ]
+					"patching_rect" : [ 133.0, 243.0, 50.0, 22.0 ],
+					"varname" : "number[1]"
 				}
 
 			}
@@ -205,7 +207,6 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 109.5, 173.0, 66.0, 35.0 ],
-					"restore" : [ 0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_initial" : [ 0.0 ],
@@ -219,7 +220,9 @@
 					}
 ,
 					"saved_object_attributes" : 					{
-						"parameter_enable" : 1
+						"initial" : [ 0.0 ],
+						"parameter_enable" : 1,
+						"parameter_mappable" : 0
 					}
 ,
 					"text" : "pattr bar_button",
@@ -236,7 +239,6 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 293.0, 173.0, 95.0, 35.0 ],
-					"restore" : [ 0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_initial" : [ 0.0 ],
@@ -250,7 +252,9 @@
 					}
 ,
 					"saved_object_attributes" : 					{
-						"parameter_enable" : 1
+						"initial" : [ 0.0 ],
+						"parameter_enable" : 1,
+						"parameter_mappable" : 0
 					}
 ,
 					"text" : "pattr chapter_button",
