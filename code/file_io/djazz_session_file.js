@@ -17,10 +17,26 @@ function save_session(file_path)
     var d = new Dict();
     d.import_json(file_path);
     var midi_out_bank_comp = this.patcher.getnamed("midi_out_bank").subpatcher().getnamed("components");
-    var comp_dict = new Dict (midi_out_bank_comp.get_bank_dict());
+    var comp_dict = new Dict (midi_out_bank_comp.getattr("bank_dict"));
     d.replace("components", comp_dict);
     d.export_json(file_path);
 }
+
+
+function load_session(file_path)
+{
+    var d = new Dict();
+    d.import_json(file_path);
+    var midi_out_bank_comp = this.patcher.getnamed("midi_out_bank").subpatcher().getnamed("components");
+    midi_out_bank_comp.setattr("bank_dict", d.get("components").name);
+
+    outlet (0, "read", file_path);
+    outlet( 0, 1);
+}
+
+
+
+
 
 /* 
 function load_session(folder_path)

@@ -1,0 +1,66 @@
+{
+	"pattrstorage" : 	{
+		"name" : "view_pattrstorage",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"master::params::loop_section_start" : [ 0 ],
+					"master::params::loop_section_end" : [ 128 ],
+					"master::params::start_beat" : [ 0 ],
+					"master::params::end_beat" : [ 160 ],
+					"master::params::tempo" : [ 135.0 ],
+					"master::params::metro" : [ 0 ],
+					"master::params::loop_section_active" : [ 0 ],
+					"master::grid_view::params::grid" : [ "waiting 0 32 0" ],
+					"master::grid_view::params::chapter_count" : [ 2 ],
+					"master::grid_ctrl::params::chapter_button" : [ 0 ],
+					"master::grid_ctrl::params::bar_button" : [ 0 ],
+					"master::grid_ctrl::params::loop_chapter" : [ 0 ],
+					"master::view_params::beat" : [ 0 ],
+					"master::view_params::tempo" : [ 60.0 ],
+					"files::score_file_1::subfolder" : [ 1 ],
+					"files::score_file_1::file_name" : [ "AllOfMe-new-2017.01.05-22h41.txt" ],
+					"files::score_file_2::subfolder" : [ 2 ],
+					"files::score_file_2::file_name" : [ "AllOfMe-new2-2017.01.05-22h41.txt" ],
+					"files::djazz_view_select_song_folder::song_folder" : [ "Macintosh HD:/Users/danielbrown/Documents/Max 8/Projects/djazz_db/user/scores/AllOfMe/" ],
+					"midi_out_bank::midi_out_pattrstorage" : [ -1 ],
+					"midi_out_bank::components" : [  ],
+					"midi_out_bank::solo_bank" : [ 0, 0 ],
+					"midi_out_bank::global_outport::index" : [ 0 ],
+					"midi_gen_1::params::loop_length" : [ 4 ],
+					"midi_gen_1::params::speed_numerator" : [ 0 ],
+					"midi_gen_1::params::score_file" : [ "\"Macintosh HD:/Users/danielbrown/Documents/Max 8/Projects/djazz_db/user/scores/AllOfMe/new/AllOfMe-new-2017.01.05-22h41.txt\"" ],
+					"midi_gen_1::params::tempo" : [ 60.0 ],
+					"midi_gen_1::params::loop_section_start" : [ 0 ],
+					"midi_gen_1::params::loop_section_end" : [ 0 ],
+					"midi_gen_1::params::start_beat" : [ 0 ],
+					"midi_gen_1::params::end_beat" : [ -1 ],
+					"midi_gen_1::params::loop_section_active" : [ 0 ],
+					"midi_gen_1::params::speed_denominator" : [ 0 ],
+					"midi_gen_1::params::speed_active" : [ 0 ],
+					"midi_gen_1::view_params::tempo" : [ 60.0 ],
+					"midi_gen_1::view_params::beat" : [ 0 ],
+					"midi_gen_2::params::loop_length" : [ 0 ],
+					"midi_gen_2::params::speed_numerator" : [ 0 ],
+					"midi_gen_2::params::score_file" : [ "\"Macintosh HD:/Users/danielbrown/Documents/Max 8/Projects/djazz_db/user/scores/AllOfMe/new2/AllOfMe-new2-2017.01.05-22h41.txt\"" ],
+					"midi_gen_2::params::tempo" : [ 60.0 ],
+					"midi_gen_2::params::loop_section_start" : [ 0 ],
+					"midi_gen_2::params::loop_section_end" : [ 0 ],
+					"midi_gen_2::params::start_beat" : [ 0 ],
+					"midi_gen_2::params::end_beat" : [ -1 ],
+					"midi_gen_2::params::loop_section_active" : [ 0 ],
+					"midi_gen_2::params::speed_denominator" : [ 0 ],
+					"midi_gen_2::params::speed_active" : [ 0 ],
+					"midi_gen_2::view_params::tempo" : [ 60.0 ],
+					"midi_gen_2::view_params::beat" : [ 0 ],
+					"transpose_octave::semitones" : [ 36 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}

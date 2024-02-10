@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 174.0, 257.0, 2032.0, 868.0 ],
+		"rect" : [ 58.0, 182.0, 1389.0, 493.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -97,7 +97,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1490.599999999999909, 537.0, 52.0, 63.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 395.0, 111.0, 54.0, 52.0 ],
+					"presentation_rect" : [ 432.0, 112.0, 54.0, 52.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -133,7 +133,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 394.100000000000023, 510.0, 51.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 288.0, 66.0, 45.0, 20.0 ],
+					"presentation_rect" : [ 2.0, 63.0, 45.0, 20.0 ],
 					"text" : "LOOP",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -147,7 +147,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 102.100000000000023, 510.0, 51.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 6.0, 66.0, 51.0, 20.0 ],
+					"presentation_rect" : [ 225.0, 67.0, 51.0, 20.0 ],
 					"text" : "SPEED",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -172,7 +172,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 370.5, 537.0, 175.0, 54.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 329.0, 55.375, 172.0, 49.5 ],
+					"presentation_rect" : [ 43.0, 52.375, 172.0, 49.5 ],
 					"varname" : "djazz_navigate_view_loop_ctrl",
 					"viewvisibility" : 1
 				}
@@ -195,9 +195,9 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 81.100000000000023, 537.0, 225.0, 67.0 ],
+					"patching_rect" : [ 81.100000000000023, 537.0, 248.0, 54.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 59.0, 51.25, 208.0, 57.75 ],
+					"presentation_rect" : [ 278.0, 52.25, 252.0, 57.75 ],
 					"varname" : "djazz_navigate_view_speed_ctrl",
 					"viewvisibility" : 1
 				}
@@ -236,7 +236,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1066.099999999999909, 537.0, 396.0, 63.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 6.0, 111.0, 388.0, 61.0 ],
+					"presentation_rect" : [ 43.0, 112.0, 388.0, 61.0 ],
 					"varname" : "djazz_master_clock_view_ctrl",
 					"viewvisibility" : 1
 				}
@@ -401,11 +401,9 @@
 			"obj-15::obj-45::obj-7" : [ "#1_loop_4", "#1_loop_4", 0 ],
 			"obj-15::obj-46::obj-7" : [ "#1_loop_8", "#1_loop_8", 0 ],
 			"obj-17::obj-34::obj-7" : [ "#1", "#1", 0 ],
-			"obj-17::obj-37::obj-7" : [ "#1[1]", "#1", 0 ],
-			"obj-17::obj-38::obj-7" : [ "#1[2]", "#1", 0 ],
-			"obj-17::obj-39::obj-7" : [ "#1[3]", "#1", 0 ],
-			"obj-4::obj-17" : [ "number[3]", "number[3]", 0 ],
-			"obj-4::obj-23" : [ "speed", "speed", 0 ],
+			"obj-17::obj-37::obj-7" : [ "#1[6]", "#1", 0 ],
+			"obj-17::obj-38::obj-7" : [ "#1[10]", "#1", 0 ],
+			"obj-17::obj-39::obj-7" : [ "#1[9]", "#1", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
