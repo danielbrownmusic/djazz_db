@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 73.0, 100.0, 890.0, 916.0 ],
+		"rect" : [ 73.0, 100.0, 876.0, 916.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -336,14 +336,38 @@
 			"obj-65::obj-47::obj-85::obj-5::obj-28" : [ "chapter_count", "chapter_count", 0 ],
 			"obj-65::obj-47::obj-94::obj-22::obj-24" : [ "chapter_button", "chapter_button", 0 ],
 			"obj-65::obj-47::obj-94::obj-22::obj-25" : [ "bar_button", "bar_button", 0 ],
-			"obj-65::obj-6::obj-27::obj-1" : [ "0_track_solo", "led[1]", 0 ],
-			"obj-65::obj-6::obj-27::obj-2" : [ "0_track_mute", "led", 0 ],
-			"obj-65::obj-6::obj-29::obj-1" : [ "1_track_solo", "led[1]", 0 ],
-			"obj-65::obj-6::obj-29::obj-2" : [ "1_track_mute", "led", 0 ],
-			"obj-65::obj-6::obj-31::obj-1" : [ "2_track_solo", "led[1]", 0 ],
-			"obj-65::obj-6::obj-31::obj-2" : [ "2_track_mute", "led", 0 ],
-			"obj-65::obj-6::obj-33::obj-1" : [ "3_track_solo", "led[1]", 0 ],
-			"obj-65::obj-6::obj-33::obj-2" : [ "3_track_mute", "led", 0 ],
+			"obj-65::obj-6::obj-14::obj-1" : [ "0_track_solo", "led[1]", 0 ],
+			"obj-65::obj-6::obj-14::obj-2" : [ "0_track_mute", "led", 0 ],
+			"obj-65::obj-6::obj-20::obj-1" : [ "1_track_solo", "led[1]", 0 ],
+			"obj-65::obj-6::obj-20::obj-2" : [ "1_track_mute", "led", 0 ],
+			"obj-65::obj-6::obj-23::obj-1" : [ "2_track_solo", "led[1]", 0 ],
+			"obj-65::obj-6::obj-23::obj-2" : [ "2_track_mute", "led", 0 ],
+			"obj-65::obj-6::obj-25::obj-1" : [ "3_track_solo", "led[1]", 0 ],
+			"obj-65::obj-6::obj-25::obj-2" : [ "3_track_mute", "led", 0 ],
+			"obj-65::obj-6::obj-27::obj-1" : [ "4_track_solo", "led[1]", 0 ],
+			"obj-65::obj-6::obj-27::obj-2" : [ "4_track_mute", "led", 0 ],
+			"obj-65::obj-6::obj-29::obj-1" : [ "5_track_solo", "led[1]", 0 ],
+			"obj-65::obj-6::obj-29::obj-2" : [ "5_track_mute", "led", 0 ],
+			"obj-65::obj-6::obj-31::obj-1" : [ "6_track_solo", "led[1]", 0 ],
+			"obj-65::obj-6::obj-31::obj-2" : [ "6_track_mute", "led", 0 ],
+			"obj-65::obj-6::obj-33::obj-1" : [ "7_track_solo", "led[1]", 0 ],
+			"obj-65::obj-6::obj-33::obj-2" : [ "7_track_mute", "led", 0 ],
+			"obj-65::obj-6::obj-35::obj-1" : [ "8_track_solo", "led[1]", 0 ],
+			"obj-65::obj-6::obj-35::obj-2" : [ "8_track_mute", "led", 0 ],
+			"obj-65::obj-6::obj-37::obj-1" : [ "9_track_solo", "led[1]", 0 ],
+			"obj-65::obj-6::obj-37::obj-2" : [ "9_track_mute", "led", 0 ],
+			"obj-65::obj-6::obj-39::obj-1" : [ "10_track_solo", "led[1]", 0 ],
+			"obj-65::obj-6::obj-39::obj-2" : [ "10_track_mute", "led", 0 ],
+			"obj-65::obj-6::obj-41::obj-1" : [ "11_track_solo", "led[1]", 0 ],
+			"obj-65::obj-6::obj-41::obj-2" : [ "11_track_mute", "led", 0 ],
+			"obj-65::obj-6::obj-43::obj-1" : [ "12_track_solo", "led[1]", 0 ],
+			"obj-65::obj-6::obj-43::obj-2" : [ "12_track_mute", "led", 0 ],
+			"obj-65::obj-6::obj-45::obj-1" : [ "13_track_solo", "led[1]", 0 ],
+			"obj-65::obj-6::obj-45::obj-2" : [ "13_track_mute", "led", 0 ],
+			"obj-65::obj-6::obj-47::obj-1" : [ "14_track_solo", "led[1]", 0 ],
+			"obj-65::obj-6::obj-47::obj-2" : [ "14_track_mute", "led", 0 ],
+			"obj-65::obj-6::obj-49::obj-1" : [ "15_track_solo", "led[1]", 0 ],
+			"obj-65::obj-6::obj-49::obj-2" : [ "15_track_mute", "led", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
@@ -479,6 +503,13 @@
 				"name" : "djazz_add_octaves_controller.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midi effects/add octaves/view",
 				"patcherrelativepath" : "./midi effects/add octaves/view",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_ask_to_save_gate.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/device_patchers",
+				"patcherrelativepath" : "./device_patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -662,6 +693,20 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/device_code/launchpad/common",
 				"patcherrelativepath" : "../code/device_code/launchpad/common",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_launchpad_mapping.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/device_code/launchpad/common",
+				"patcherrelativepath" : "../code/device_code/launchpad/common",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_launchpad_mappings.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/device_patchers",
+				"patcherrelativepath" : "./device_patchers",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
