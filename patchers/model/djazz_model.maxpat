@@ -46,8 +46,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 809.0, 63.0, 162.0, 49.0 ],
-					"text" : "loadmess priority midi_out_bank::components -1"
+					"patching_rect" : [ 809.0, 63.0, 160.0, 49.0 ],
+					"text" : "loadmess priority midi_out_bank::components 1"
 				}
 
 			}
@@ -966,7 +966,14 @@
 , 			{
 				"box" : 				{
 					"active" : 					{
-						"master::params" : 0
+						"master::params" : 0,
+						"master::params::loop_section_start" : 0,
+						"master::params::loop_section_end" : 0,
+						"master::params::start_beat" : 0,
+						"master::params::end_beat" : 0,
+						"master::params::tempo" : 0,
+						"master::params::metro" : 0,
+						"master::params::loop_section_active" : 0
 					}
 ,
 					"autorestore" : "model_presets.json",
