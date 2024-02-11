@@ -1,9 +1,9 @@
 autowatch = 1;
 //outlets = 2;
-var pip_  = new ParameterInfoProvider(on_pip_changed);
+var pip_  = new ParameterInfoProvider(get_names);
 
 
-function on_pip_changed(data)
+/* function on_pip_changed(data)
 {
     var names = pip_.getnames();
     for (var i = 0; i < names.length; i++)
@@ -21,7 +21,7 @@ function on_pip_changed(data)
     if (data.removed.length)
     {
     }
- */}
+ }*/
 
 
 function get_names()
@@ -36,7 +36,7 @@ function get_names()
 }
 
 
-function send_added_msg_(name)
+/* function send_added_msg_(name)
 {
     outlet (0, "add", name);
 }
@@ -48,3 +48,4 @@ function send_removed_msg_(name)
     outlet (0, "remove", name);
 }
 send_removed_msg_.local = 1;
+ */

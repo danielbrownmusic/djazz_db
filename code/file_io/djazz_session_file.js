@@ -25,8 +25,6 @@ function save_session(folder_path)
     outlet( 0, "store", 1);
     outlet (0, "write", model_presets_file_path);
 
-
-
     var model_components_file_path = make_file_path_(folder_path, model_components_file_name);
     outlet( 2, "midi_out_bank", "save_bank", model_components_file_path);
 
@@ -75,15 +73,28 @@ function load_session(folder_path)
     var midi_out_bank_comp = this.patcher.getnamed("midi_out_bank").subpatcher().getnamed("components");
     midi_out_bank_comp.setattr("bank_dict", d.get("components").name);
  */
-    outlet (0, "read", model_presets_file_path);
-    outlet( 0, 1);
+    //outlet (2, "midi_out_bank", "load_bank", model_components_file_path);
 
-    outlet (1, "read", view_presets_file_path);
-    outlet( 1, 1);
+    var tsk = new Task 
+    ( 
+        function ()
+        {
+            outlet (0, "read", model_presets_file_path);
+            outlet( 0, 1);
+        }
+    )
+    tsk.schedule(1000);
 
-    outlet (2, "midi_out_bank", "load_bank", model_components_file_path);
-
-
+    var tsk2 = new Task
+    (
+        function ()
+        {
+            outlet (1, "read", view_presets_file_path);
+            outlet( 1, 1);
+        }
+    )
+    
+    tsk2.schedule(1000);
 }
 
 

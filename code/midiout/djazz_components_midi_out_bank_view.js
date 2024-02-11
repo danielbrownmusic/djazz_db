@@ -194,11 +194,9 @@ function add_track_()
     track.subpatcher().getnamed("midi_out_channel").setvalueof(i + 1);
 
     this.patcher.connect(track, 0, this.box, 1);
+    this.patcher.connect(track, 1, get_solo_bank_(), 0);
 
-    var solo_bank = this.patcher.getnamed("solo_bank");
-    this.patcher.connect(track, 1, solo_bank, 0);    
-    solo_bank.message("count", tracks_.length);
-    //make_funnel_();
+    set_solo_bank_count_();
 
     return track;
 }
@@ -220,9 +218,8 @@ function remove_last_track_()
     if (tracks_.length === 0)
         return;
     this.patcher.remove(tracks_.pop());
-    this.patcher.getnamed("solo_bank").message("count", tracks_.length);
-    //set_solo_bank_ctrl_();
-    //make_funnel_();
+
+    set_solo_bank_count_();
 }
 remove_last_track_.local = 1;
 
@@ -257,13 +254,27 @@ function get_track_components_mgr_(track)
 get_track_components_mgr_.local = 1;
 
 
-function set_size_()
+function get_solo_bank_()
+{
+    return this.patcher.getnamed("solo_bank");
+}
+get_solo_bank_.local = 1;
+
+
+function set_solo_bank_count_()
+{
+    get_solo_bank_().message("count", tracks_.length)
+}
+set_solo_bank_count_.local = 1;
+
+
+/* function set_size_()
 {
     x_pres = tracks_.length * w_track;
     size = [0, 0, x_pres, y_pres];
 }
 set_size_.local = 1;
-
+ */
 
 
 

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 319.0, 163.0, 1347.0, 729.0 ],
+		"rect" : [ 319.0, 163.0, 711.0, 729.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -529,7 +529,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ 4, 1, "#1" ],
+					"args" : [ 4, 1, "#1_speed_button_4" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -553,7 +553,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ 2, 1, "#1" ],
+					"args" : [ 2, 1, "#1_speed_button_2" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -577,7 +577,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ 3, 2, "#1" ],
+					"args" : [ 3, 2, "#1_speed_button_3/2" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -601,7 +601,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ 1, 2, "#1" ],
+					"args" : [ 1, 2, "#1_speed_button_1/2" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -907,10 +907,6 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-34::obj-7" : [ "#1", "#1", 0 ],
-			"obj-37::obj-7" : [ "#1[3]", "#1", 0 ],
-			"obj-38::obj-7" : [ "#1[5]", "#1", 0 ],
-			"obj-39::obj-7" : [ "#1[6]", "#1", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
@@ -931,7 +927,6 @@
 				"implicit" : 1
 			}
  ],
-		"autosave" : 0,
 		"textcolor_inverse" : [ 0.968627450980392, 0.968627450980392, 0.968627450980392, 1.0 ],
 		"bgcolor" : [ 0.764705882352941, 0.701960784313725, 0.701960784313725, 0.0 ],
 		"editing_bgcolor" : [ 0.76078431372549, 0.76078431372549, 0.76078431372549, 1.0 ]

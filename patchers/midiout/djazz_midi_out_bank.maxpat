@@ -306,13 +306,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 300.0, 169.0, 122.0, 22.0 ],
+					"patching_rect" : [ 300.0, 169.0, 174.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "djazz_solo_bank.js",
+						"filename" : "djazz_midi_out_solo_bank.js",
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js djazz_solo_bank.js",
+					"text" : "js djazz_midi_out_solo_bank.js",
 					"varname" : "solo_bank"
 				}
 
@@ -339,7 +339,10 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 105.25, 248.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"solo_bank" : [ 0, 0 ]
+						"components" : [ 							{
+
+							}
+ ]
 					}
 ,
 					"text" : "autopattr",

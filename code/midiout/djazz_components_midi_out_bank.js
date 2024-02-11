@@ -103,6 +103,7 @@ function add_track()
 
     this.patcher.connect(events_inlet, 0, track, 0);
     this.patcher.connect(track, 0, events_outlet, 0);
+    set_solo_bank_count_();
 
     return track;
 }
@@ -122,6 +123,8 @@ function remove_last_track()
     if (tracks_.length === 0)
         return;
     this.patcher.remove(tracks_.pop());
+
+    set_solo_bank_count_();
 }
 
 
@@ -174,3 +177,17 @@ function get_track_components_mgr_(track)
 
 }
 get_track_components_mgr_.local = 1;
+
+
+function get_solo_bank_()
+{
+    return this.patcher.getnamed("solo_bank");
+}
+get_solo_bank_.local = 1;
+
+
+function set_solo_bank_count_()
+{
+    get_solo_bank_().message("count", tracks_.length)
+}
+set_solo_bank_count_.local = 1;

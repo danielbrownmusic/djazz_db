@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 73.0, 100.0, 876.0, 916.0 ],
+		"rect" : [ 73.0, 100.0, 1538.0, 916.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -223,6 +223,13 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"color" : [ 0.595981121063232, 0.71068662405014, 0.792471170425415, 1.0 ],
 					"destination" : [ "obj-136", 0 ],
 					"source" : [ "obj-108", 0 ]
@@ -233,6 +240,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"source" : [ "obj-14", 0 ]
 				}
 
 			}
@@ -303,24 +317,24 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-65::obj-10::obj-15::obj-40::obj-7" : [ "midi_gen_1_loop_1", "midi_gen_1_loop_1", 0 ],
-			"obj-65::obj-10::obj-15::obj-41::obj-7" : [ "midi_gen_1_loop_2", "midi_gen_1_loop_2", 0 ],
-			"obj-65::obj-10::obj-15::obj-44::obj-7" : [ "midi_gen_1_loop_3", "midi_gen_1_loop_3", 0 ],
-			"obj-65::obj-10::obj-15::obj-45::obj-7" : [ "midi_gen_1_loop_4", "midi_gen_1_loop_4", 0 ],
-			"obj-65::obj-10::obj-15::obj-46::obj-7" : [ "midi_gen_1_loop_8", "midi_gen_1_loop_8", 0 ],
-			"obj-65::obj-10::obj-17::obj-34::obj-7" : [ "midi_gen_1", "midi_gen_1", 0 ],
-			"obj-65::obj-10::obj-17::obj-37::obj-7" : [ "midi_gen_1[13]", "midi_gen_1", 0 ],
-			"obj-65::obj-10::obj-17::obj-38::obj-7" : [ "midi_gen_1[9]", "midi_gen_1", 0 ],
-			"obj-65::obj-10::obj-17::obj-39::obj-7" : [ "midi_gen_1[12]", "midi_gen_1", 0 ],
-			"obj-65::obj-12::obj-15::obj-40::obj-7" : [ "midi_gen_2_loop_1", "midi_gen_2_loop_1", 0 ],
-			"obj-65::obj-12::obj-15::obj-41::obj-7" : [ "midi_gen_2_loop_2", "midi_gen_2_loop_2", 0 ],
-			"obj-65::obj-12::obj-15::obj-44::obj-7" : [ "midi_gen_2_loop_3", "midi_gen_2_loop_3", 0 ],
-			"obj-65::obj-12::obj-15::obj-45::obj-7" : [ "midi_gen_2_loop_4", "midi_gen_2_loop_4", 0 ],
-			"obj-65::obj-12::obj-15::obj-46::obj-7" : [ "midi_gen_2_loop_8", "midi_gen_2_loop_8", 0 ],
-			"obj-65::obj-12::obj-17::obj-34::obj-7" : [ "midi_gen_2", "midi_gen_2", 0 ],
-			"obj-65::obj-12::obj-17::obj-37::obj-7" : [ "midi_gen_2[13]", "midi_gen_2", 0 ],
-			"obj-65::obj-12::obj-17::obj-38::obj-7" : [ "midi_gen_2[9]", "midi_gen_2", 0 ],
-			"obj-65::obj-12::obj-17::obj-39::obj-7" : [ "midi_gen_2[12]", "midi_gen_2", 0 ],
+			"obj-65::obj-10::obj-15::obj-40::obj-7" : [ "midi_player_1_loop_1", "midi_player_1_loop_1", 0 ],
+			"obj-65::obj-10::obj-15::obj-41::obj-7" : [ "midi_player_1_loop_2", "midi_player_1_loop_2", 0 ],
+			"obj-65::obj-10::obj-15::obj-44::obj-7" : [ "midi_player_1_loop_3", "midi_player_1_loop_3", 0 ],
+			"obj-65::obj-10::obj-15::obj-45::obj-7" : [ "midi_player_1_loop_4", "midi_player_1_loop_4", 0 ],
+			"obj-65::obj-10::obj-15::obj-46::obj-7" : [ "midi_player_1_loop_8", "midi_player_1_loop_8", 0 ],
+			"obj-65::obj-10::obj-17::obj-34::obj-7" : [ "midi_player_1_speed_button_1/2", "midi_player_1_speed_button_1/2", 0 ],
+			"obj-65::obj-10::obj-17::obj-37::obj-7" : [ "midi_player_1_speed_button_3/2", "midi_player_1_speed_button_3/2", 0 ],
+			"obj-65::obj-10::obj-17::obj-38::obj-7" : [ "midi_player_1_speed_button_2", "midi_player_1_speed_button_2", 0 ],
+			"obj-65::obj-10::obj-17::obj-39::obj-7" : [ "midi_player_1_speed_button_4", "midi_player_1_speed_button_4", 0 ],
+			"obj-65::obj-12::obj-15::obj-40::obj-7" : [ "midi_player_2_loop_1", "midi_player_2_loop_1", 0 ],
+			"obj-65::obj-12::obj-15::obj-41::obj-7" : [ "midi_player_2_loop_2", "midi_player_2_loop_2", 0 ],
+			"obj-65::obj-12::obj-15::obj-44::obj-7" : [ "midi_player_2_loop_3", "midi_player_2_loop_3", 0 ],
+			"obj-65::obj-12::obj-15::obj-45::obj-7" : [ "midi_player_2_loop_4", "midi_player_2_loop_4", 0 ],
+			"obj-65::obj-12::obj-15::obj-46::obj-7" : [ "midi_player_2_loop_8", "midi_player_2_loop_8", 0 ],
+			"obj-65::obj-12::obj-17::obj-34::obj-7" : [ "midi_player_2_speed_button_1/2", "midi_player_2_speed_button_1/2", 0 ],
+			"obj-65::obj-12::obj-17::obj-37::obj-7" : [ "midi_player_2_speed_button_3/2", "midi_player_2_speed_button_3/2", 0 ],
+			"obj-65::obj-12::obj-17::obj-38::obj-7" : [ "midi_player_2_speed_button_2", "midi_player_2_speed_button_2", 0 ],
+			"obj-65::obj-12::obj-17::obj-39::obj-7" : [ "midi_player_2_speed_button_4", "midi_player_2_speed_button_4", 0 ],
 			"obj-65::obj-13::obj-11::obj-7" : [ "octave_up_2", "octave_up_2", 0 ],
 			"obj-65::obj-13::obj-12::obj-7" : [ "octave_up_3", "octave_up_3", 0 ],
 			"obj-65::obj-13::obj-13::obj-7" : [ "octave_up_4", "octave_up_4", 0 ],
@@ -340,34 +354,6 @@
 			"obj-65::obj-6::obj-14::obj-2" : [ "0_track_mute", "led", 0 ],
 			"obj-65::obj-6::obj-20::obj-1" : [ "1_track_solo", "led[1]", 0 ],
 			"obj-65::obj-6::obj-20::obj-2" : [ "1_track_mute", "led", 0 ],
-			"obj-65::obj-6::obj-23::obj-1" : [ "2_track_solo", "led[1]", 0 ],
-			"obj-65::obj-6::obj-23::obj-2" : [ "2_track_mute", "led", 0 ],
-			"obj-65::obj-6::obj-25::obj-1" : [ "3_track_solo", "led[1]", 0 ],
-			"obj-65::obj-6::obj-25::obj-2" : [ "3_track_mute", "led", 0 ],
-			"obj-65::obj-6::obj-27::obj-1" : [ "4_track_solo", "led[1]", 0 ],
-			"obj-65::obj-6::obj-27::obj-2" : [ "4_track_mute", "led", 0 ],
-			"obj-65::obj-6::obj-29::obj-1" : [ "5_track_solo", "led[1]", 0 ],
-			"obj-65::obj-6::obj-29::obj-2" : [ "5_track_mute", "led", 0 ],
-			"obj-65::obj-6::obj-31::obj-1" : [ "6_track_solo", "led[1]", 0 ],
-			"obj-65::obj-6::obj-31::obj-2" : [ "6_track_mute", "led", 0 ],
-			"obj-65::obj-6::obj-33::obj-1" : [ "7_track_solo", "led[1]", 0 ],
-			"obj-65::obj-6::obj-33::obj-2" : [ "7_track_mute", "led", 0 ],
-			"obj-65::obj-6::obj-35::obj-1" : [ "8_track_solo", "led[1]", 0 ],
-			"obj-65::obj-6::obj-35::obj-2" : [ "8_track_mute", "led", 0 ],
-			"obj-65::obj-6::obj-37::obj-1" : [ "9_track_solo", "led[1]", 0 ],
-			"obj-65::obj-6::obj-37::obj-2" : [ "9_track_mute", "led", 0 ],
-			"obj-65::obj-6::obj-39::obj-1" : [ "10_track_solo", "led[1]", 0 ],
-			"obj-65::obj-6::obj-39::obj-2" : [ "10_track_mute", "led", 0 ],
-			"obj-65::obj-6::obj-41::obj-1" : [ "11_track_solo", "led[1]", 0 ],
-			"obj-65::obj-6::obj-41::obj-2" : [ "11_track_mute", "led", 0 ],
-			"obj-65::obj-6::obj-43::obj-1" : [ "12_track_solo", "led[1]", 0 ],
-			"obj-65::obj-6::obj-43::obj-2" : [ "12_track_mute", "led", 0 ],
-			"obj-65::obj-6::obj-45::obj-1" : [ "13_track_solo", "led[1]", 0 ],
-			"obj-65::obj-6::obj-45::obj-2" : [ "13_track_mute", "led", 0 ],
-			"obj-65::obj-6::obj-47::obj-1" : [ "14_track_solo", "led[1]", 0 ],
-			"obj-65::obj-6::obj-47::obj-2" : [ "14_track_mute", "led", 0 ],
-			"obj-65::obj-6::obj-49::obj-1" : [ "15_track_solo", "led[1]", 0 ],
-			"obj-65::obj-6::obj-49::obj-2" : [ "15_track_mute", "led", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
@@ -493,20 +479,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_add_octaves.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midi effects/add octaves/patcher",
-				"patcherrelativepath" : "./midi effects/add octaves/patcher",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_add_octaves_controller.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midi effects/add octaves/view",
-				"patcherrelativepath" : "./midi effects/add octaves/view",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_ask_to_save_gate.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/device_patchers",
 				"patcherrelativepath" : "./device_patchers",
@@ -563,13 +535,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_components_midi_out_effect.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
-				"patcherrelativepath" : "../code/midiout",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_components_midi_out_effect_list.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
 				"patcherrelativepath" : "../code/midiout",
@@ -578,13 +543,6 @@
 			}
 , 			{
 				"name" : "djazz_components_midi_out_effect_list_view.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
-				"patcherrelativepath" : "../code/midiout",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_components_midi_out_effect_view.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
 				"patcherrelativepath" : "../code/midiout",
 				"type" : "TEXT",
@@ -892,13 +850,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_midi_out_effect.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
-				"patcherrelativepath" : "./midiout",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_midi_out_effect_list.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
 				"patcherrelativepath" : "./midiout",
@@ -913,10 +864,17 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_midi_out_effect_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
-				"patcherrelativepath" : "./midiout",
-				"type" : "JSON",
+				"name" : "djazz_midi_out_solo_bank.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
+				"patcherrelativepath" : "../code/midiout",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_midi_out_solo_bank_view.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
+				"patcherrelativepath" : "../code/midiout",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
@@ -1004,20 +962,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_pitch_shift.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midi effects/pitch shift/patcher",
-				"patcherrelativepath" : "./midi effects/pitch shift/patcher",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_pitch_shift_controller.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midi effects/pitch shift/view",
-				"patcherrelativepath" : "./midi effects/pitch shift/view",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_range.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
 				"patcherrelativepath" : "./tools",
@@ -1064,20 +1008,6 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiplayer",
 				"patcherrelativepath" : "./midiplayer",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_solo_bank.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
-				"patcherrelativepath" : "../code/midiout",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_solo_bank_ctrl.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
-				"patcherrelativepath" : "../code/midiout",
-				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
@@ -1152,8 +1082,7 @@
 			}
 , 			{
 				"name" : "model_presets.json",
-				"bootpath" : "~/Desktop/woodie",
-				"patcherrelativepath" : "../../../../../Desktop/woodie",
+				"bootpath" : "C74:/help/max",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1169,13 +1098,6 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/pattr",
 				"patcherrelativepath" : "../code/pattr",
 				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "view_presets.json",
-				"bootpath" : "~/Desktop/woodie",
-				"patcherrelativepath" : "../../../../../Desktop/woodie",
-				"type" : "JSON",
 				"implicit" : 1
 			}
  ],
