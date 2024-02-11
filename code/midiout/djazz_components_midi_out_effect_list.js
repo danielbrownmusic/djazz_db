@@ -1,13 +1,26 @@
-var dutils = require("db_dictionary_array_utils");
+var dutils      = require("db_dictionary_array_utils");
+autowatch       = 1;
 
-autowatch = 1;
-
-var effects_            = [];
-
-var w                   = 128;
-var h                   = 44;
+var effects_    = [];
+var w           = 128;
+var h           = 44;
 
 declareattribute("effects_dict", "get_effects_dict", "set_effects_dict");
+
+//--------------------------------------------------------------------------------
+
+function get_effects_dict()
+{
+    //post ("getting effects dict \n");
+    var d   = new Dict ();
+    var a   = effects_.map(get_effect_name_);
+/*     if (a[a.length - 1] === EMPTY_STRING)
+    {
+        a.pop();
+    } */
+    dutils.set_dict_array(d, "effects", a);
+    return d.name;
+}
 
 
 function set_effects_dict(effects_dict_name)
@@ -26,11 +39,8 @@ function set_effects_dict(effects_dict_name)
     {
         var effect      = add_effect();
         var effect_name = effect_names[i];
-        post ("trying to FUCKING  set the effect. varname of effect is", effect.varname, "\n");
         set_effect_(effect, effect_name);
     }
-/*     post ("adding last effect slot in model\n");
-    add_effect(); */
 }
 
 //--------------------------------------------------------------------------------
@@ -52,7 +62,7 @@ function add_effects(n)
 
 function add_effect()
 {
-    post ("in model: adding effect. \n");
+    //post ("in model: adding effect. \n");
     var inl 	    = this.patcher.getnamed("events_inlet");
 
     var x_inlet     = inl.rect[0];
@@ -72,7 +82,6 @@ function add_effect()
     effect.varname  = "effect_" + i;
     effects_.push(effect);
     connect_effects_();
-    //message_effect_(effect, "set_effect_database", effect_database_.name);
     
     return effect;
 }
@@ -80,7 +89,6 @@ function add_effect()
 
 function remove_last_effects(n)
 {
-    //post ("remove_last_effects in model:", n, "\n");
     for (var i = 0; i < n; i++)
     {
         remove_last_effect();
@@ -102,11 +110,26 @@ function remove_last_effect()
 function set_effect(effect_index, effect_name)
 {
     set_effect_(effects_[effect_index], effect_name);
-    post ("setting effect in model:", effect_name, "\n");
 }
 
 
 //--------------------------------------------------------------------------------
+
+
+function get_effect_components_mgr_(effect)
+{
+    return effect.subpatcher().getnamed("components");
+}
+get_effect_components_mgr_.local = 1;
+
+
+function get_effect_name_(effect)
+{
+    //post (get_effect_components_mgr_(effect).getattr("effect_name"));
+    return get_effect_components_mgr_(effect).getattr("effect_name");
+}
+get_effect_name_.local = 1;
+
 
 function set_effect_(effect, effect_name)
 {
@@ -115,11 +138,7 @@ function set_effect_(effect, effect_name)
 set_effect_.local = 1;
 
 
-function get_effect_components_mgr_(effect)
-{
-    return effect.subpatcher().getnamed("components");
-}
-get_effect_components_mgr_.local = 1;
+//--------------------------------------------------------------------------------
 
 
 function connect_effects_()

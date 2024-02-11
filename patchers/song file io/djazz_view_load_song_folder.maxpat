@@ -186,80 +186,6 @@
 , 			{
 				"box" : 				{
 					"comment" : "",
-					"id" : "obj-4",
-					"index" : 0,
-					"maxclass" : "outlet",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 556.25, 723.500000031250011, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-1",
-					"index" : 0,
-					"maxclass" : "outlet",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 134.25, 723.500000031250011, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ "new2" ],
-					"bgmode" : 1,
-					"border" : 1,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-24",
-					"lockeddragscroll" : 0,
-					"lockedsize" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "djazz_select_score_file_view.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "clear" ],
-					"patching_rect" : [ 556.0, 605.500000031250011, 432.25, 21.5 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 16.0, 134.500000031250011, 480.75, 22.5 ],
-					"varname" : "score_file_2",
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ "new" ],
-					"bgmode" : 1,
-					"border" : 1,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-39",
-					"lockeddragscroll" : 0,
-					"lockedsize" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "djazz_select_score_file_view.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "clear" ],
-					"patching_rect" : [ 134.0, 605.500000031250011, 402.75, 22.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 16.0, 96.500000031250011, 480.75, 23.0 ],
-					"varname" : "score_file_1",
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
 					"id" : "obj-13",
 					"index" : 0,
 					"maxclass" : "outlet",
@@ -294,33 +220,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
-					"order" : 0,
 					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-24", 0 ],
-					"midpoints" : [ 62.75, 578.750000015625005, 565.5, 578.750000015625005 ],
-					"order" : 2,
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-39", 0 ],
-					"midpoints" : [ 62.75, 578.750000015625005, 143.5, 578.750000015625005 ],
-					"order" : 1,
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
-					"source" : [ "obj-24", 0 ]
 				}
 
 			}
@@ -328,13 +228,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
 					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-39", 0 ]
 				}
 
 			}
@@ -379,14 +272,7 @@
 
 			}
  ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_select_score_file_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/song file io",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
+		"dependency_cache" : [  ],
 		"autosave" : 0
 	}
 

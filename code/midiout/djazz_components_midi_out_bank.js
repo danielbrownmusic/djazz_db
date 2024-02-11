@@ -1,18 +1,24 @@
 var dutils  = require("db_dictionary_array_utils");
-
 autowatch   = 1;
 
-var tracks_             = [];
+var tracks_ = [];
 
-//var bank_dict = null;
-declareattribute("bank_dict", null, "set_bank_dict");
+//declareattribute("bank_dict", "get_bank_dict", "set_bank_dict");
+
+/*
+You can send dicts as dicts to other json objects, 
+but to insert dicts into a dict, you have to pass them by name, 
+or they will be inserted as a js object!
+*/
 
 
-function set_bank_dict(bank_dict_name)
+// ---------------------------------------------------------------
+
+
+function setvalueof(bank_dict)
 {
     clear();
     
-    var bank_dict   = new Dict (bank_dict_name);
     var track_array = dutils.get_dict_array(bank_dict, "tracks");
 
     if (track_array === null)
@@ -26,6 +32,38 @@ function set_bank_dict(bank_dict_name)
         comp.message("effects_dict", effects_dict.name);
     }
 }
+
+
+function getvalueof()
+{
+    var bank_dict = new Dict ();
+    for (var i = 0; i < tracks_.length; i++)
+    {
+        var track           = tracks_[i];
+        var comp_mgr        = get_track_components_mgr_(track);
+        var track_dict_name = comp_mgr.getattr("effects_dict");
+        var track_dict      = new Dict (track_dict_name);
+        bank_dict.append("tracks", track_dict);
+    }
+    return bank_dict;
+}
+
+
+function save_bank(file_path)
+{
+    var bank_dict = getvalueof();
+    bank_dict.export_json(file_path);
+}
+
+
+function load_bank(file_path)
+{
+    var bank_dict = new Dict ();
+    bank_dict.import_json(file_path);
+    setvalueof(bank_dict);
+    notifyclients();
+}
+
 
 
 function clear()
@@ -66,9 +104,6 @@ function add_track()
     this.patcher.connect(events_inlet, 0, track, 0);
     this.patcher.connect(track, 0, events_outlet, 0);
 
-    this.patcher.getnamed("solo_bank").message("count", tracks_.length);
-    //set_solo_bank_();
-
     return track;
 }
 
@@ -87,8 +122,6 @@ function remove_last_track()
     if (tracks_.length === 0)
         return;
     this.patcher.remove(tracks_.pop());
-    this.patcher.getnamed("solo_bank").message("count", tracks_.length);
-    //set_solo_bank_();
 }
 
 
@@ -110,15 +143,6 @@ function track()
     {
         post ("couldn't find comp. \n");
     }
-    post ("comp =",comp,"\n");
-    post ("msg =", msg, "\n");
-    post ("args =");
-    for (var i = 0; i < args.length; i++)
-    {
-        post (args[i]);
-    }
-    post ("\n");
-
     comp.message(msg, args);
     outlet (0, "track", i, msg, args);
 }
@@ -139,7 +163,7 @@ function set_global()
 }
 
 
-// ---------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------
 
 
 function get_track_components_mgr_(track)
@@ -150,28 +174,3 @@ function get_track_components_mgr_(track)
 
 }
 get_track_components_mgr_.local = 1;
-
-
-/* function set_solo_bank_()
-{
-    var solo_bank_ = this.patcher.getnamed("solo_bank");
-    if (solo_bank_)
-    {
-        this.patcher.remove(solo_bank_);
-    }
-
-    var n = tracks_.length;
-    if (n === 0)
-        return;
-
-    var x = 84;
-    var y = 260;
-
-    solo_bank_ = this.patcher.newdefault(x, y, "js", "djazz_solo_bank.js", n);
-    solo_bank_.varname = "solo_bank";
-    for (var i = 0; i < n; i++)
-    {      
-        this.patcher.connect(solo_bank_, i, tracks_[i], 1);
-    }
-}
-set_solo_bank_.local = 1; */

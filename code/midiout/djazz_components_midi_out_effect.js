@@ -84,17 +84,17 @@ make_effect_.local = 1;
 function get_patcher_class_(effect_name)
 {
     var f = new Folder (get_effect_folder_path_(effect_name));
-    post ("\n");
+    //post ("\n");
 
-    post (">>>IN MODEL<<<\n");
-    post (effects_folder_path_);
-    post (get_effect_folder_path_(effect_name));
-    post ("count =", f.count, "\n");
+    //post (">>>IN MODEL<<<\n");
+    //post (effects_folder_path_);
+    //post (get_effect_folder_path_(effect_name));
+    //post ("count =", f.count, "\n");
     f.reset();
-    post ("count =", f.count, "\n");
+    //post ("count =", f.count, "\n");
     while (!f.end)
     {
-        post ("filename =", f.filename);
+        //post ("filename =", f.filename);
         if (f.filetype === "JSON")
         {
             
@@ -102,8 +102,8 @@ function get_patcher_class_(effect_name)
         }
         f.next();
     }
-    post (">>>END MODEL<<<\n");
-    post ("\n");
+    //post (">>>END MODEL<<<\n");
+    //post ("\n");
 }
 get_patcher_class_.local = 1;
 

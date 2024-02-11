@@ -14,18 +14,7 @@ var effects_            = [];
 declareattribute("effects_dict", "get_effects_dict", "set_effects_dict");
 
 
-function get_effects_dict()
-{
-    var d   = new Dict ();
-    var a   = effects_.map(get_effect_name_);
-    if (a[a.length - 1] === EMPTY_STRING)
-    {
-        a.pop();
-    }
-    post (a);
-    dutils.set_dict_array(d, "effects", a);
-    return d.name;
-}
+//--------------------------------------------------------------------------------
 
 
 function set_effects_dict(effects_dict_name)
@@ -47,10 +36,11 @@ function set_effects_dict(effects_dict_name)
         post (effect_names[i], "\n");
         set_effect_(effect, effect_names[i]);
     }
-    // Don't send message to model! This is handled by the bank dict.
 }
 
+
 //--------------------------------------------------------------------------------
+
 
 function clear()
 {
@@ -155,7 +145,6 @@ function remove_last_effect_()
     {
         this.patcher.remove(effect);
     }
-    //make_funnel_();
 }
 remove_last_effect_.local = 1;
 
@@ -194,7 +183,29 @@ function list()
 //--------------------------------------------------------------------------------
 
 
-function get_effect_name_(effect)
+function get_effect_components_mgr_(effect)
+{
+    return effect.subpatcher().getnamed("components");
+}
+get_effect_components_mgr_.local = 1;
+
+
+/* function get_effects_dict()
+{
+    var d   = new Dict ();
+    var a   = effects_.map(get_effect_name_);
+    if (a[a.length - 1] === EMPTY_STRING)
+    {
+        a.pop();
+    }
+    post (a);
+    dutils.set_dict_array(d, "effects", a);
+    return d.name;
+} */
+
+
+
+/* function get_effect_name_(effect)
 {
     post (get_effect_components_mgr_(effect).getattr("effect_name"));
     return get_effect_components_mgr_(effect).getattr("effect_name");
@@ -202,11 +213,7 @@ function get_effect_name_(effect)
 get_effect_name_.local = 1;
 
 
-function get_effect_components_mgr_(effect)
-{
-    return effect.subpatcher().getnamed("components");
-}
-get_effect_components_mgr_.local = 1;
+ */
 
 
 
