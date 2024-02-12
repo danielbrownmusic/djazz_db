@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -40,19 +40,6 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-10",
-					"linecount" : 3,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 809.0, 63.0, 160.0, 49.0 ],
-					"text" : "loadmess priority midi_out_bank::components 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-12",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -62,7 +49,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -122,7 +109,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 5,
-											"revision" : 4,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -168,7 +155,7 @@
 														"appversion" : 														{
 															"major" : 8,
 															"minor" : 5,
-															"revision" : 4,
+															"revision" : 5,
 															"architecture" : "x64",
 															"modernui" : 1
 														}
@@ -357,7 +344,7 @@
 														"appversion" : 														{
 															"major" : 8,
 															"minor" : 5,
-															"revision" : 4,
+															"revision" : 5,
 															"architecture" : "x64",
 															"modernui" : 1
 														}
@@ -616,7 +603,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 5,
-											"revision" : 4,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -758,7 +745,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 5,
-											"revision" : 4,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -966,14 +953,7 @@
 , 			{
 				"box" : 				{
 					"active" : 					{
-						"master::params" : 0,
-						"master::params::loop_section_start" : 0,
-						"master::params::loop_section_end" : 0,
-						"master::params::start_beat" : 0,
-						"master::params::end_beat" : 0,
-						"master::params::tempo" : 0,
-						"master::params::metro" : 0,
-						"master::params::loop_section_active" : 0
+						"master::params" : 0
 					}
 ,
 					"autorestore" : "model_presets.json",
@@ -983,13 +963,13 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 775.0, 140.228516000000013, 123.0, 62.0 ],
+					"patching_rect" : [ 775.0, 155.228516000000013, 123.0, 62.0 ],
 					"priority" : 					{
 						"midi_out_bank::components" : -1
 					}
 ,
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 1250, 164, 1728, 695 ],
+						"client_rect" : [ 1037, 128, 1515, 659 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
 						"storage_rect" : [ 583, 69, 1034, 197 ]
@@ -1019,7 +999,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 987.666652666666778, 155.228516000000013, 172.0, 22.0 ],
+					"patching_rect" : [ 942.666652666666778, 155.228516000000013, 172.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_components_model.js",
 						"parameter_enable" : 0
@@ -1090,7 +1070,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 987.666652666666778, 18.999999624999987, 30.0, 30.0 ]
+					"patching_rect" : [ 942.666652666666778, 18.999999624999987, 30.0, 30.0 ]
 				}
 
 			}
@@ -1124,13 +1104,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-115", 0 ],
 					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-10", 0 ]
 				}
 
 			}
@@ -1211,6 +1184,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-67", 0 ],
+					"midpoints" : [ 197.5, 312.0, 335.333326333333389, 312.0, 335.333326333333389, 127.228516000000013, 473.166652666666778, 127.228516000000013 ],
 					"source" : [ "obj-9", 0 ]
 				}
 

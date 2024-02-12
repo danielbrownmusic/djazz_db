@@ -18,12 +18,12 @@ var model_components_file_name  = "model_components.json";
 function save_session(folder_path)
 {
     var view_presets_file_path = make_file_path_(folder_path, view_presets_file_name);
-    outlet( 1, "store", 1);
-    outlet (1, "write", view_presets_file_path);
+    outlet( 0, "store", 1);
+    outlet (0, "write", view_presets_file_path);
 
     var model_presets_file_path = make_file_path_(folder_path, model_presets_file_name);
-    outlet( 0, "store", 1);
-    outlet (0, "write", model_presets_file_path);
+    outlet( 1, "store", 1);
+    outlet (1, "write", model_presets_file_path);
 
     var model_components_file_path = make_file_path_(folder_path, model_components_file_name);
     outlet( 2, "midi_out_bank", "save_bank", model_components_file_path);
@@ -33,8 +33,8 @@ function save_session(folder_path)
     var midi_out_bank_comp = this.patcher.getnamed("midi_out_bank").subpatcher().getnamed("components");
     var comp_dict = new Dict (midi_out_bank_comp.getattr("bank_dict"));
     d.replace("components", comp_dict);
-    d.export_json(file_path);
- */}
+    d.export_json(file_path); */
+}
 
 
 function load_session(folder_path)
@@ -71,16 +71,21 @@ function load_session(folder_path)
 /*     var d = new Dict();
     d.import_json(file_path);
     var midi_out_bank_comp = this.patcher.getnamed("midi_out_bank").subpatcher().getnamed("components");
-    midi_out_bank_comp.setattr("bank_dict", d.get("components").name);
- */
-    //outlet (2, "midi_out_bank", "load_bank", model_components_file_path);
+    midi_out_bank_comp.setattr("bank_dict", d.get("components").name); */
 
-    var tsk = new Task 
+    outlet (2, "midi_out_bank", "load_bank", model_components_file_path);
+
+    outlet (0, "read", view_presets_file_path);
+    outlet( 0, 1);
+    outlet (1, "read", model_presets_file_path);
+    outlet( 1, 1);
+
+/*     var tsk = new Task 
     ( 
         function ()
         {
-            outlet (0, "read", model_presets_file_path);
-            outlet( 0, 1);
+            outlet (1, "read", model_presets_file_path);
+            outlet( 1, 1);
         }
     )
     tsk.schedule(1000);
@@ -89,12 +94,12 @@ function load_session(folder_path)
     (
         function ()
         {
-            outlet (1, "read", view_presets_file_path);
-            outlet( 1, 1);
+            outlet (0, "read", view_presets_file_path);
+            outlet( 0, 1);
         }
     )
     
-    tsk2.schedule(1000);
+    tsk2.schedule(1000); */
 }
 
 

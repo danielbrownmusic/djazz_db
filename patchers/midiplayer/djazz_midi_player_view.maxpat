@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 58.0, 182.0, 1632.0, 841.0 ],
+		"rect" : [ 58.0, 182.0, 1945.0, 841.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -79,9 +79,9 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1474.599999999999909, 345.0, 52.0, 63.0 ],
+					"patching_rect" : [ 1573.599999999999909, 345.0, 52.0, 63.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 432.0, 112.0, 54.0, 52.0 ],
+					"presentation_rect" : [ 395.0, 159.5, 54.0, 52.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -102,7 +102,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 573.5, 345.0, 451.0, 38.0 ],
+					"patching_rect" : [ 672.5, 345.0, 451.0, 38.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 6.0, 6.5, 449.0, 41.0 ],
 					"viewvisibility" : 1
@@ -131,7 +131,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 86.100000000000023, 318.0, 51.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 225.0, 67.0, 51.0, 20.0 ],
+					"presentation_rect" : [ 2.0, 118.625, 51.0, 20.0 ],
 					"text" : "SPEED",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -154,9 +154,9 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 354.5, 345.0, 175.0, 54.0 ],
+					"patching_rect" : [ 354.5, 345.0, 290.0, 54.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 43.0, 52.375, 172.0, 49.5 ],
+					"presentation_rect" : [ 55.0, 48.25, 287.0, 49.5 ],
 					"varname" : "djazz_navigate_view_loop_ctrl",
 					"viewvisibility" : 1
 				}
@@ -181,7 +181,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 65.100000000000023, 345.0, 248.0, 54.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 278.0, 52.25, 252.0, 57.75 ],
+					"presentation_rect" : [ 55.0, 99.75, 252.0, 57.75 ],
 					"varname" : "djazz_navigate_view_speed_ctrl",
 					"viewvisibility" : 1
 				}
@@ -218,9 +218,9 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1050.099999999999909, 345.0, 396.0, 63.0 ],
+					"patching_rect" : [ 1149.099999999999909, 345.0, 396.0, 63.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 43.0, 112.0, 388.0, 61.0 ],
+					"presentation_rect" : [ 2.0, 159.5, 391.0, 62.0 ],
 					"varname" : "djazz_master_clock_view_ctrl",
 					"viewvisibility" : 1
 				}
@@ -252,7 +252,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
-					"midpoints" : [ 1059.599999999999909, 448.0, 32.599999999999909, 448.0, 32.599999999999909, 184.0, 74.600000000000023, 184.0 ],
+					"midpoints" : [ 1158.599999999999909, 448.0, 32.599999999999909, 448.0, 32.599999999999909, 184.0, 74.600000000000023, 184.0 ],
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -276,7 +276,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
-					"midpoints" : [ 316.599999999999909, 281.5, 1059.599999999999909, 281.5 ],
+					"midpoints" : [ 316.599999999999909, 281.5, 1158.599999999999909, 281.5 ],
 					"order" : 1,
 					"source" : [ "obj-18", 0 ]
 				}
@@ -285,7 +285,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
-					"midpoints" : [ 316.599999999999909, 280.5, 1484.099999999999909, 280.5 ],
+					"midpoints" : [ 316.599999999999909, 280.5, 1583.099999999999909, 280.5 ],
 					"order" : 0,
 					"source" : [ "obj-18", 0 ]
 				}
@@ -294,7 +294,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
-					"midpoints" : [ 74.600000000000023, 280.5, 1059.599999999999909, 280.5 ],
+					"midpoints" : [ 74.600000000000023, 280.5, 1158.599999999999909, 280.5 ],
 					"order" : 3,
 					"source" : [ "obj-4", 0 ]
 				}
@@ -304,7 +304,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
 					"midpoints" : [ 74.600000000000023, 281.0, 364.0, 281.0 ],
-					"order" : 2,
+					"order" : 0,
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -313,7 +313,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
 					"midpoints" : [ 74.600000000000023, 286.0, 74.600000000000023, 286.0 ],
-					"order" : 1,
+					"order" : 2,
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -321,8 +321,8 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-59", 0 ],
-					"midpoints" : [ 74.600000000000023, 280.5, 583.0, 280.5 ],
-					"order" : 0,
+					"midpoints" : [ 74.600000000000023, 280.5, 682.0, 280.5 ],
+					"order" : 1,
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -330,22 +330,25 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
-					"midpoints" : [ 583.0, 448.0, 30.300000000000011, 448.0, 30.300000000000011, 184.0, 74.600000000000023, 184.0 ],
+					"midpoints" : [ 682.0, 448.0, 30.300000000000011, 448.0, 30.300000000000011, 184.0, 74.600000000000023, 184.0 ],
 					"source" : [ "obj-59", 0 ]
 				}
 
 			}
  ],
 		"parameters" : 		{
+			"obj-15::obj-12::obj-7" : [ "#1_loop_5", "#1_loop_5", 0 ],
+			"obj-15::obj-13::obj-7" : [ "#1_loop_6", "#1_loop_6", 0 ],
+			"obj-15::obj-14::obj-7" : [ "#1_loop_7", "#1_loop_7", 0 ],
 			"obj-15::obj-40::obj-7" : [ "#1_loop_1", "#1_loop_1", 0 ],
 			"obj-15::obj-41::obj-7" : [ "#1_loop_2", "#1_loop_2", 0 ],
 			"obj-15::obj-44::obj-7" : [ "#1_loop_3", "#1_loop_3", 0 ],
 			"obj-15::obj-45::obj-7" : [ "#1_loop_4", "#1_loop_4", 0 ],
 			"obj-15::obj-46::obj-7" : [ "#1_loop_8", "#1_loop_8", 0 ],
-			"obj-17::obj-34::obj-7" : [ "#1", "#1", 0 ],
-			"obj-17::obj-37::obj-7" : [ "#1[6]", "#1", 0 ],
-			"obj-17::obj-38::obj-7" : [ "#1[10]", "#1", 0 ],
-			"obj-17::obj-39::obj-7" : [ "#1[9]", "#1", 0 ],
+			"obj-17::obj-34::obj-7" : [ "#1_speed_button_1/2", "#1_speed_button_1/2", 0 ],
+			"obj-17::obj-37::obj-7" : [ "#1_speed_button_3/2", "#1_speed_button_3/2", 0 ],
+			"obj-17::obj-38::obj-7" : [ "#1_speed_button_2", "#1_speed_button_2", 0 ],
+			"obj-17::obj-39::obj-7" : [ "#1_speed_button_4", "#1_speed_button_4", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,

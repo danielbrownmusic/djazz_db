@@ -1,9 +1,10 @@
 var dutils  = require("db_dictionary_array_utils");
 autowatch   = 1;
+outlets = 2;
 
 var tracks_ = [];
 
-//declareattribute("bank_dict", "get_bank_dict", "set_bank_dict");
+declareattribute("bank_dict", "get_bank_dict", "set_bank_dict");
 
 /*
 You can send dicts as dicts to other json objects, 
@@ -15,7 +16,22 @@ or they will be inserted as a js object!
 // ---------------------------------------------------------------
 
 
-function setvalueof(bank_dict)
+function get_bank_dict()
+{
+    var bank_dict = new Dict ();
+    for (var i = 0; i < tracks_.length; i++)
+    {
+        var track           = tracks_[i];
+        var comp_mgr        = get_track_components_mgr_(track);
+        var track_dict_name = comp_mgr.getattr("effects_dict");
+        var track_dict      = new Dict (track_dict_name);
+        bank_dict.append("tracks", track_dict);
+    }
+    return bank_dict;
+}
+
+
+function set_bank_dict(bank_dict)
 {
     clear();
     
@@ -34,34 +50,23 @@ function setvalueof(bank_dict)
 }
 
 
-function getvalueof()
-{
-    var bank_dict = new Dict ();
-    for (var i = 0; i < tracks_.length; i++)
-    {
-        var track           = tracks_[i];
-        var comp_mgr        = get_track_components_mgr_(track);
-        var track_dict_name = comp_mgr.getattr("effects_dict");
-        var track_dict      = new Dict (track_dict_name);
-        bank_dict.append("tracks", track_dict);
-    }
-    return bank_dict;
-}
-
-
 function save_bank(file_path)
 {
-    var bank_dict = getvalueof();
+/*     outlet ( 1, "store", 1 );
+    outlet ( 1, "write", file_path ); */
+    var bank_dict = get_bank_dict();
     bank_dict.export_json(file_path);
 }
 
 
 function load_bank(file_path)
 {
+/*     outlet ( 1, "read", file_path );
+    outlet ( 1, 1 ); */
     var bank_dict = new Dict ();
     bank_dict.import_json(file_path);
-    setvalueof(bank_dict);
-    notifyclients();
+    set_bank_dict(bank_dict);
+
 }
 
 

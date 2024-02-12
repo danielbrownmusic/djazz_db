@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 333.0, 156.0, 1048.0, 868.0 ],
+		"rect" : [ 333.0, 156.0, 1314.0, 989.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -41,11 +41,12 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-21",
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 414.0, 920.0, 81.0, 22.0 ],
+					"patching_rect" : [ 127.0, 584.0, 67.0, 35.0 ],
 					"text" : "load_bank $1"
 				}
 
@@ -53,11 +54,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-19",
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 310.0, 920.0, 83.0, 22.0 ],
+					"patching_rect" : [ 23.0, 584.0, 70.0, 35.0 ],
 					"text" : "save_bank $1"
 				}
 
@@ -69,7 +71,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
-					"patching_rect" : [ 414.0, 826.0, 67.0, 22.0 ],
+					"patching_rect" : [ 127.0, 526.0, 67.0, 22.0 ],
 					"text" : "opendialog"
 				}
 
@@ -81,50 +83,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "bang" ],
-					"patching_rect" : [ 310.0, 826.0, 66.0, 22.0 ],
+					"patching_rect" : [ 23.0, 526.0, 66.0, 22.0 ],
 					"text" : "savedialog"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-15",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 659.0, 813.0, 55.0, 22.0 ],
-					"text" : "name $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-13",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 659.0, 753.0, 141.0, 22.0 ],
-					"text" : "#0_MIDI_BANK_DICT"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-10",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 4,
-					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 659.0, 877.0, 60.5, 22.0 ],
-					"saved_object_attributes" : 					{
-						"embed" : 0,
-						"parameter_enable" : 0,
-						"parameter_mappable" : 0
-					}
-,
-					"text" : "dict"
 				}
 
 			}
@@ -136,7 +96,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 414.0, 735.0, 69.0, 21.0 ],
+					"patching_rect" : [ 127.0, 467.0, 69.0, 21.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 371.0, 5.0, 69.0, 21.0 ],
 					"text" : "Load",
@@ -152,7 +112,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 310.0, 735.0, 69.0, 21.0 ],
+					"patching_rect" : [ 23.0, 467.0, 69.0, 21.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 447.0, 5.0, 69.0, 21.0 ],
 					"text" : "Save",
@@ -167,7 +127,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 636.0, 652.0, 204.0, 22.0 ],
+					"patching_rect" : [ 572.0, 652.0, 204.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_midi_out_solo_bank_view.js",
 						"parameter_enable" : 0
@@ -193,7 +153,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 21.0, 435.0, 126.0, 31.0 ],
+					"patching_rect" : [ 16.0, 270.0, 126.0, 31.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 213.0, 0.0, 126.0, 31.0 ],
 					"varname" : "global_outport",
@@ -228,11 +188,11 @@
 				"box" : 				{
 					"comment" : "components messages",
 					"id" : "obj-7",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 225.0, 775.5, 30.0, 30.0 ],
+					"patching_rect" : [ 225.0, 852.5, 30.0, 30.0 ],
 					"varname" : "components_outlet"
 				}
 
@@ -246,7 +206,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 21.0, 197.0, 56.0, 22.0 ],
 					"restore" : 					{
-
+						"solo_bank" : [ 0, 0, 0, 0, 0, 0, 0, 0 ]
 					}
 ,
 					"text" : "autopattr",
@@ -256,42 +216,9 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
-					"id" : "obj-2",
-					"index" : 1,
-					"maxclass" : "outlet",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 21.0, 775.5, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-1",
-					"linecount" : 4,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 21.0, 612.0, 133.0, 62.0 ],
-					"saved_object_attributes" : 					{
-						"client_rect" : [ 1037, 128, 1515, 659 ],
-						"parameter_enable" : 0,
-						"parameter_mappable" : 0,
-						"storage_rect" : [ 583, 69, 1034, 197 ]
-					}
-,
-					"text" : "pattrstorage midi_out_pattrstorage @greedy 1 @outputmode 4",
-					"varname" : "midi_out_pattrstorage"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"comment" : "component messages in",
 					"id" : "obj-12",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -316,7 +243,7 @@
 				"box" : 				{
 					"comment" : "ctrl variables in name + value",
 					"id" : "obj-6",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -346,29 +273,8 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-308", 0 ],
 					"source" : [ "obj-12", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-15", 0 ],
-					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
-					"source" : [ "obj-15", 0 ]
 				}
 
 			}
@@ -389,6 +295,17 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-308", 0 ],
+					"midpoints" : [ 32.5, 641.0, 234.5, 641.0 ],
+					"order" : 1,
+					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"midpoints" : [ 32.5, 798.75, 234.5, 798.75 ],
+					"order" : 0,
 					"source" : [ "obj-19", 0 ]
 				}
 
@@ -396,6 +313,17 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-308", 0 ],
+					"midpoints" : [ 136.5, 641.0, 234.5, 641.0 ],
+					"order" : 1,
+					"source" : [ "obj-21", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"midpoints" : [ 136.5, 798.75, 234.5, 798.75 ],
+					"order" : 0,
 					"source" : [ "obj-21", 0 ]
 				}
 
@@ -437,6 +365,50 @@
 
 			}
  ],
+		"dependency_cache" : [ 			{
+				"name" : "db_dictionary_array_utils.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/tools",
+				"patcherrelativepath" : "../../code/tools",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_add_multiple_tracks_view_window.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_components_midi_out_bank_view.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
+				"patcherrelativepath" : "../../code/midiout",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_midi_out_bank_view_global_port.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_midi_out_bank_view_track_number_ctrl.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_midi_out_solo_bank_view.js",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
+				"patcherrelativepath" : "../../code/midiout",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0,
 		"bgcolor" : [ 0.682352941176471, 0.76078431372549, 0.768627450980392, 1.0 ],
 		"editing_bgcolor" : [ 0.796078431372549, 0.796078431372549, 0.796078431372549, 1.0 ]
 	}

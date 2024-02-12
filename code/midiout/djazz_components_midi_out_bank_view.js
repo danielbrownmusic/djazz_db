@@ -17,28 +17,12 @@ var w_track     = 128;
 var h_track     = 440;
 
 
-//declareattribute("bank_dict", "get_bank_dict", "set_bank_dict");
+declareattribute("bank_dict", null, "set_bank_dict");
 
 /* var size = [0, 0, x_pres_0, y_pres_0];
 declareattribute("size");
  */
 // ---------------------------------------------------------------------------
-
-/* 
-function save_bank(file_path)
-{
-    var bank_dict = new Dict (get_bank_dict());
-    bank_dict.export_json(file_path);
-}
-
-
-function load_bank(file_path)
-{
-    var bank_dict = new Dict ();
-    bank_dict.import_json(file_path);
-    set_bank_dict(bank_dict.name)
-}
-
 
 
 function get_bank_dict()
@@ -52,20 +36,44 @@ function get_bank_dict()
         var track_dict      = new Dict (track_dict_name);
         bank_dict.append("tracks", track_dict);
     }
-    return bank_dict.name;
+    return bank_dict;
 }
 
 
-
- */
-
-
-function setvalueof(bank_dict)
+function set_bank_dict(bank_dict)
 {
     post ("setting bank dict in view\n");
-    set_bank_dict_(bank_dict);
-    //outlet( 0, "set_bank_dict", bank_dict);
+    clear_();
+
+    var track_array = dutils.get_dict_array(bank_dict, "tracks");
+
+    if (track_array === null)
+        return;
+
+    for (var i = 0; i < track_array.length; i++)
+    {      
+        var track           = add_track_();
+        var comp            = get_track_components_mgr_(track);
+        var effects_dict    = track_array[i];
+        comp.message("effects_dict", effects_dict.name); 
+    }
 }
+
+
+function save_bank(file_path)
+{
+    var bank_dict = get_bank_dict();
+    bank_dict.export_json(file_path);
+}
+
+
+function load_bank(file_path)
+{
+    var bank_dict = new Dict ();
+    bank_dict.import_json(file_path);
+    set_bank_dict(bank_dict.name)
+}
+
 
 function clear()
 {
@@ -121,28 +129,6 @@ function track()
 
 
 //----------------------------------------------------------------
-
-
-function set_bank_dict_(bank_dict)
-{
-    clear_();
-
-    //var bank_dict   = new Dict(bank_dict_name);
-    var track_array = dutils.get_dict_array(bank_dict, "tracks");
-
-    if (track_array === null)
-        return;
-
-    for (var i = 0; i < track_array.length; i++)
-    {      
-        var track           = add_track_();
-        var comp            = get_track_components_mgr_(track);
-        var effects_dict    = track_array[i];
-        comp.message("effects_dict", effects_dict.name); 
-    }
-    //set_solo_bank_ctrl_();
-}
-set_bank_dict_.local = 1;
 
 
 function clear_()
@@ -266,6 +252,37 @@ function set_solo_bank_count_()
     get_solo_bank_().message("count", tracks_.length)
 }
 set_solo_bank_count_.local = 1;
+
+
+
+
+
+
+
+
+
+
+/* function set_bank_dict_(bank_dict)
+{
+    clear_();
+
+    //var bank_dict   = new Dict(bank_dict_name);
+    var track_array = dutils.get_dict_array(bank_dict, "tracks");
+
+    if (track_array === null)
+        return;
+
+    for (var i = 0; i < track_array.length; i++)
+    {      
+        var track           = add_track_();
+        var comp            = get_track_components_mgr_(track);
+        var effects_dict    = track_array[i];
+        comp.message("effects_dict", effects_dict.name); 
+    }
+    //set_solo_bank_ctrl_();
+}
+set_bank_dict_.local = 1; */
+
 
 
 /* function set_size_()
