@@ -18,7 +18,10 @@ function get_effects_dict()
     {
         a.pop();
     } */
+    post ("1\n");
     dutils.set_dict_array(d, "effects", a);
+    post ("2\n");
+
     return d.name;
 }
 

@@ -1138,7 +1138,6 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 23.0, 207.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"#1_track_mute" : [ 0 ],
 						"#1_track_solo" : [ 0 ]
 					}
 ,

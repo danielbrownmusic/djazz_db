@@ -71,7 +71,7 @@ function load_bank(file_path)
 {
     var bank_dict = new Dict ();
     bank_dict.import_json(file_path);
-    set_bank_dict(bank_dict.name)
+    set_bank_dict(bank_dict)
 }
 
 

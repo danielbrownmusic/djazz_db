@@ -41,7 +41,6 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-3",
-					"int" : 1,
 					"maxclass" : "gswitch2",
 					"numinlets" : 2,
 					"numoutlets" : 2,
@@ -1773,11 +1772,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-70",
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 340.857145737644032, 611.273706078529358, 359.0, 22.0 ],
+					"patching_rect" : [ 340.857145737644032, 611.273706078529358, 158.0, 49.0 ],
 					"text" : "djazz_launchpad_mappings launchpad_mini launchpad_mini_grid"
 				}
 
@@ -2662,7 +2662,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 140.0, 682.0, 187.0, 22.0 ],
-									"text" : "1001_VIEW_DICT"
+									"text" : "1085_VIEW_DICT"
 								}
 
 							}
@@ -3494,6 +3494,7 @@
 , 															{
 																"box" : 																{
 																	"id" : "obj-15",
+																	"int" : 1,
 																	"maxclass" : "gswitch2",
 																	"numinlets" : 2,
 																	"numoutlets" : 2,
@@ -4378,6 +4379,7 @@
 , 																			{
 																				"box" : 																				{
 																					"id" : "obj-15",
+																					"int" : 1,
 																					"maxclass" : "gswitch2",
 																					"numinlets" : 2,
 																					"numoutlets" : 2,

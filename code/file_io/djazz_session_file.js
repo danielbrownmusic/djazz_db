@@ -26,7 +26,7 @@ function save_session(folder_path)
     outlet (1, "write", model_presets_file_path);
 
     var model_components_file_path = make_file_path_(folder_path, model_components_file_name);
-    outlet( 2, "midi_out_bank", "save_bank", model_components_file_path);
+    outlet( 2, "save_bank", model_components_file_path);
 
 /*     var d = new Dict();
     d.import_json(file_path);
@@ -73,33 +73,34 @@ function load_session(folder_path)
     var midi_out_bank_comp = this.patcher.getnamed("midi_out_bank").subpatcher().getnamed("components");
     midi_out_bank_comp.setattr("bank_dict", d.get("components").name); */
 
-    outlet (2, "midi_out_bank", "load_bank", model_components_file_path);
+    outlet (2, "load_bank", model_components_file_path);
 
-    outlet (0, "read", view_presets_file_path);
+/*     outlet (0, "read", view_presets_file_path);
     outlet( 0, 1);
     outlet (1, "read", model_presets_file_path);
-    outlet( 1, 1);
+    outlet( 1, 1); */
 
-/*     var tsk = new Task 
+    var tsk = new Task 
     ( 
         function ()
         {
-            outlet (1, "read", model_presets_file_path);
+            outlet (1, "read", view_presets_file_path);
             outlet( 1, 1);
         }
     )
-    tsk.schedule(1000);
+    tsk.schedule(3000);
 
     var tsk2 = new Task
     (
         function ()
         {
-            outlet (0, "read", view_presets_file_path);
+            outlet (0, "read", model_presets_file_path);
             outlet( 0, 1);
         }
     )
-    
-    tsk2.schedule(1000); */
+    post ("reading model\n");
+    tsk2.schedule(3000);
+    post ("model read\n");
 }
 
 

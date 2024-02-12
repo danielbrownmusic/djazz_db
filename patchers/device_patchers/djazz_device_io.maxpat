@@ -45,8 +45,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 524.0, 11.0, 90.0, 22.0 ],
-					"text" : "loadmess none"
+					"patching_rect" : [ 524.0, 11.0, 114.0, 22.0 ],
+					"text" : "loadmess port none"
 				}
 
 			}
