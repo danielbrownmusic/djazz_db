@@ -4,6 +4,9 @@ outlets = 2;
 
 var tracks_ = [];
 
+var presets_file_name     = "presets.json";
+var components_file_name  = "components.json";
+
 declareattribute("bank_dict", "get_bank_dict", "set_bank_dict");
 
 /*
@@ -50,10 +53,13 @@ function set_bank_dict(bank_dict)
 }
 
 
+// -----------------------------------------------------------------------------------------------
+
+
 function save_bank(file_path)
 {
-/*     outlet ( 1, "store", 1 );
-    outlet ( 1, "write", file_path ); */
+    //outlet ( 1, "store", 1 );
+    //outlet ( 1, "write", file_path );
     var bank_dict = get_bank_dict();
     bank_dict.export_json(file_path);
 }
@@ -66,9 +72,60 @@ function load_bank(file_path)
     var bank_dict = new Dict ();
     bank_dict.import_json(file_path);
     set_bank_dict(bank_dict);
-
 }
 
+
+function save_preset(folder_path)
+{
+    var presets_file_path = make_file_path_(folder_path, presets_file_name);
+    outlet( 1, "store", 1);
+    outlet (1, "write", presets_file_path);
+
+    var components_file_path = make_file_path_(folder_path, components_file_name);
+    outlet( 2, "save_bank", components_file_path);
+}
+
+
+function load_preset(folder_path)
+{
+    var presets_file_path;
+    var components_file_path;
+
+    var f = new Folder (folder_path)
+    while (!f.end)
+    {
+        var file_path = make_file_path_(folder_path, f.filename);
+        switch (f.filename)
+        {
+            case presets_file_name:
+            {
+                presets_file_path = file_path;
+                break;
+            }
+            case components_file_name:
+            {
+                components_file_path = file_path;
+                break;
+            }            
+        }
+        f.next();
+    }
+
+    outlet (2, "load_bank", components_file_path);
+
+    var tsk = new Task 
+    ( 
+        function ()
+        {
+            outlet (1, "read", presets_file_path);
+            outlet( 1, 1);
+        }
+    )
+    tsk.schedule(3000);
+}
+
+
+// -----------------------------------------------------------------------------------------------
 
 
 function clear()
@@ -196,3 +253,13 @@ function set_solo_bank_count_()
     get_solo_bank_().message("count", tracks_.length)
 }
 set_solo_bank_count_.local = 1;
+
+
+// -----------------------------------------------------------------------------------------------
+
+
+function make_file_path_(folder_path, file_name)
+{
+    return [folder_path, file_name].join("/");
+}
+make_file_path_.local = 1;

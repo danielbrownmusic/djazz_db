@@ -60,11 +60,11 @@ function set_bank_dict(bank_dict)
 }
 
 
-function save_bank(file_path)
+/* function save_bank(file_path)
 {
     var bank_dict = get_bank_dict();
     bank_dict.export_json(file_path);
-}
+} */
 
 
 function load_bank(file_path)

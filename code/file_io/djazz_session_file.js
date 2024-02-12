@@ -14,6 +14,8 @@ var view_presets_file_name      = "view_presets.json";
 var model_components_file_name  = "model_components.json";
 
 
+// -----------------------------------------------------------------------------------------------
+
 
 function save_session(folder_path)
 {
@@ -103,6 +105,8 @@ function load_session(folder_path)
     post ("model read\n");
 }
 
+
+// -----------------------------------------------------------------------------------------------
 
 
 function make_file_path_(folder_path, file_name)
