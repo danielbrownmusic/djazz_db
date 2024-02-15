@@ -41,26 +41,24 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-21",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 127.0, 584.0, 67.0, 35.0 ],
-					"text" : "load_bank $1"
+					"patching_rect" : [ 127.0, 584.0, 88.0, 22.0 ],
+					"text" : "load_preset $1"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-19",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 23.0, 584.0, 70.0, 35.0 ],
-					"text" : "save_bank $1"
+					"patching_rect" : [ 23.0, 584.0, 91.0, 22.0 ],
+					"text" : "save_preset $1"
 				}
 
 			}

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 132.0, 231.0, 1243.0, 631.0 ],
+		"rect" : [ 628.0, 162.0, 1363.0, 953.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -906,7 +906,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 188.0, 280.0, 138.0, 22.0 ],
+					"patching_rect" : [ 32.0, 408.0, 138.0, 22.0 ],
 					"text" : "djazz_transpose_octave",
 					"varname" : "transpose_octave"
 				}
@@ -920,7 +920,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 463.666652666666778, 485.0, 30.0, 30.0 ]
+					"patching_rect" : [ 32.0, 688.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -931,7 +931,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 188.0, 349.0, 148.0, 22.0 ],
+					"patching_rect" : [ 248.0, 275.228516000000013, 148.0, 22.0 ],
 					"text" : "djazz_midi_player mnote2",
 					"varname" : "midi_player_2"
 				}
@@ -946,7 +946,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 775.0, 18.999999624999987, 30.0, 30.0 ]
+					"patching_rect" : [ 1014.0, 18.999999624999987, 30.0, 30.0 ]
 				}
 
 			}
@@ -963,7 +963,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 775.0, 155.228516000000013, 123.0, 62.0 ],
+					"patching_rect" : [ 1014.0, 155.228516000000013, 123.0, 62.0 ],
 					"priority" : 					{
 						"midi_out_bank::components" : -1
 					}
@@ -987,7 +987,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 643.666652666666778, 155.228516000000013, 53.0, 22.0 ],
+					"patching_rect" : [ 882.666652666666778, 155.228516000000013, 53.0, 22.0 ],
 					"text" : "pattrhub"
 				}
 
@@ -999,7 +999,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 942.666652666666778, 155.228516000000013, 172.0, 22.0 ],
+					"patching_rect" : [ 1181.666652666666778, 155.228516000000013, 172.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_components_model.js",
 						"parameter_enable" : 0
@@ -1016,7 +1016,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 463.666652666666778, 155.228516000000013, 121.0, 22.0 ],
+					"patching_rect" : [ 32.0, 553.228516000000013, 121.0, 22.0 ],
 					"text" : "djazz_midi_out_bank",
 					"varname" : "midi_out_bank"
 				}
@@ -1057,7 +1057,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 643.666652666666778, 18.999999624999987, 30.0, 30.0 ]
+					"patching_rect" : [ 882.666652666666778, 18.999999624999987, 30.0, 30.0 ]
 				}
 
 			}
@@ -1070,7 +1070,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 942.666652666666778, 18.999999624999987, 30.0, 30.0 ]
+					"patching_rect" : [ 1181.666652666666778, 18.999999624999987, 30.0, 30.0 ]
 				}
 
 			}
@@ -1082,7 +1082,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 775.0, 293.685547250000013, 30.0, 30.0 ]
+					"patching_rect" : [ 1014.0, 688.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -1093,7 +1093,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 188.0, 239.228516000000013, 141.0, 22.0 ],
+					"patching_rect" : [ 32.0, 275.228516000000013, 141.0, 22.0 ],
 					"text" : "djazz_midi_player mnote",
 					"varname" : "midi_player_1"
 				}
@@ -1149,7 +1149,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-67", 0 ],
-					"midpoints" : [ 197.5, 403.0, 384.333326333333389, 403.0, 384.333326333333389, 129.228516000000013, 473.166652666666778, 129.228516000000013 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
@@ -1157,7 +1156,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"midpoints" : [ 41.5, 200.228516000000013, 197.5, 200.228516000000013 ],
 					"order" : 1,
 					"source" : [ "obj-6", 0 ],
 					"watchpoint_flags" : 5,
@@ -1168,7 +1166,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
-					"midpoints" : [ 41.5, 321.114258000000007, 197.5, 321.114258000000007 ],
 					"order" : 0,
 					"source" : [ "obj-6", 0 ]
 				}
@@ -1184,7 +1181,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-67", 0 ],
-					"midpoints" : [ 197.5, 312.0, 335.333326333333389, 312.0, 335.333326333333389, 127.228516000000013, 473.166652666666778, 127.228516000000013 ],
 					"source" : [ "obj-9", 0 ]
 				}
 

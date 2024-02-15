@@ -24,11 +24,7 @@ function get_bank_dict()
     var bank_dict = new Dict ();
     for (var i = 0; i < tracks_.length; i++)
     {
-        var track           = tracks_[i];
-        var comp_mgr        = get_track_components_mgr_(track);
-        var track_dict_name = comp_mgr.getattr("effects_dict");
-        var track_dict      = new Dict (track_dict_name);
-        bank_dict.append("tracks", track_dict);
+        bank_dict.append("tracks", get_track_dict_(tracks_[i]));
     }
     return bank_dict;
 }
@@ -45,10 +41,8 @@ function set_bank_dict(bank_dict)
 
     for (var i = 0; i < track_array.length; i++)
     {      
-        var track           = add_track();
-        var comp            = get_track_components_mgr_(track);
-        var effects_dict    = track_array[i];
-        comp.message("effects_dict", effects_dict.name);
+        var track = add_track();
+        set_track_dict_(track, track_array[i]);
     }
 }
 
@@ -86,38 +80,16 @@ function save_preset(folder_path)
 }
 
 
+
 function load_preset(folder_path)
 {
-    var presets_file_path;
-    var components_file_path;
-
-    var f = new Folder (folder_path)
-    while (!f.end)
-    {
-        var file_path = make_file_path_(folder_path, f.filename);
-        switch (f.filename)
-        {
-            case presets_file_name:
-            {
-                presets_file_path = file_path;
-                break;
-            }
-            case components_file_name:
-            {
-                components_file_path = file_path;
-                break;
-            }            
-        }
-        f.next();
-    }
-
-    outlet (2, "load_bank", components_file_path);
+    outlet (2, "load_bank", get_components_file_path_(folder_path));
 
     var tsk = new Task 
     ( 
         function ()
         {
-            outlet (1, "read", presets_file_path);
+            outlet (1, "read", get_presets_file_path_(folder_path));
             outlet( 1, 1);
         }
     )
@@ -241,6 +213,20 @@ function get_track_components_mgr_(track)
 get_track_components_mgr_.local = 1;
 
 
+function get_track_dict_(track)
+{
+    return new Dict (get_track_components_mgr_(track).getattr("effects_dict"));
+}
+get_track_dict_.local = 1;
+
+
+function set_track_dict_(track, d)
+{
+    get_track_components_mgr_(track).message("effects_dict", d.name);
+}
+set_track_dict_.local = 1;
+
+
 function get_solo_bank_()
 {
     return this.patcher.getnamed("solo_bank");
@@ -263,3 +249,41 @@ function make_file_path_(folder_path, file_name)
     return [folder_path, file_name].join("/");
 }
 make_file_path_.local = 1;
+
+
+function get_presets_file_path_(folder_path)
+{
+    var f = new Folder (folder_path)
+    while (!f.end)
+    {
+        var file_path = make_file_path_(folder_path, f.filename);
+        switch (f.filename)
+        {
+            case presets_file_name:
+            {
+                return make_file_path_(folder_path, f.filename);
+            }         
+        }
+        f.next();
+    }
+}
+get_presets_file_.local = 1;
+
+
+function get_components_file_path_(folder_path)
+{
+    var f = new Folder (folder_path)
+    while (!f.end)
+    {
+        var file_path = make_file_path_(folder_path, f.filename);
+        switch (f.filename)
+        {
+            case components_file_name:
+            {
+                return make_file_path_(folder_path, f.filename);
+            }         
+        }
+        f.next();
+    }
+}
+get_components_file_.local = 1;
