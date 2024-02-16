@@ -60,19 +60,60 @@ function set_bank_dict(bank_dict)
 }
 
 
-/* function save_bank(file_path)
+// -----------------------------------------------------------------------------------------------
+
+
+function save_bank(file_path)
 {
     var bank_dict = get_bank_dict();
     bank_dict.export_json(file_path);
-} */
+}
 
 
 function load_bank(file_path)
 {
     var bank_dict = new Dict ();
     bank_dict.import_json(file_path);
-    set_bank_dict(bank_dict)
+    set_bank_dict(bank_dict);
 }
+
+
+function save_preset(file_path)
+{
+    outlet ( 1, "store", 1);
+    outlet ( 1, "write", file_path);
+}
+
+
+function load_preset(file_path)
+{
+    outlet ( 1, "read", file_path);
+    outlet ( 1, 1);
+}
+
+
+function save_bank_with_presets(components_file_path, presets_file_path)
+{
+    save_preset(presets_file_path);
+    save_bank(components_file_path);
+}
+
+
+function load_bank_with_presets(components_file_path, presets_file_path)
+{
+    load_bank(components_file_path);
+    var tsk = new Task
+    (
+        function ()
+        {
+            load_preset(presets_file_path);
+        }
+    )
+    tsk.schedule(3000);
+}
+
+
+// -----------------------------------------------------------------------------------------------
 
 
 function clear()
@@ -124,7 +165,7 @@ function track()
     }
 
     get_track_components_mgr_(tracks_[i]).message(msg, args);
-    outlet (1, "track", i, msg, args);
+    outlet (0, "track", i, msg, args);
 }
 
 

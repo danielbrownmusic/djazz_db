@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 376.0, 232.0, 1291.0, 857.0 ],
+		"rect" : [ -2157.0, 175.0, 1291.0, 857.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,13 +40,14 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"autorestore" : "presets.json",
 					"id" : "obj-8",
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 766.0, 156.0, 145.0, 35.0 ],
+					"patching_rect" : [ 707.0, 248.0, 145.0, 35.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 1037, 128, 1515, 659 ],
 						"parameter_enable" : 0,
@@ -208,7 +209,7 @@
 									"bgfillcolor_proportion" : 0.5,
 									"bgfillcolor_type" : "color",
 									"id" : "obj-17",
-									"items" : [ " ", ",", "AU DLS Synth 1", ",", "Launchpad Mini", ",", "from Max 1", ",", "from Max 2" ],
+									"items" : [ " ", ",", "AU DLS Synth 1", ",", "from Max 1", ",", "from Max 2" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -360,7 +361,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 291.25, 248.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"solo_bank" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+						"solo_bank" : [ 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
 					}
 ,
 					"text" : "autopattr",
@@ -459,6 +460,13 @@
 					"destination" : [ "obj-1", 0 ],
 					"midpoints" : [ 518.5, 219.0, 201.0, 219.0 ],
 					"source" : [ "obj-308", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-308", 1 ]
 				}
 
 			}

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2356.0, -134.0, 1461.0, 1247.0 ],
+		"rect" : [ -1520.0, -52.0, 1266.0, 1104.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,13 +40,26 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-28",
-					"maxclass" : "message",
+					"id" : "obj-18",
+					"maxclass" : "newobj",
 					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 159.5, 80.0, 46.0, 22.0 ],
+					"text" : "route 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-17",
+					"index" : 1,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1187.0, 403.0, 50.0, 22.0 ],
-					"text" : "refresh"
+					"patching_rect" : [ 159.5, 21.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -57,8 +70,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 256.0, 551.0, 111.0, 22.0 ],
-					"text" : "refresh"
+					"patching_rect" : [ 256.0, 551.0, 111.0, 22.0 ]
 				}
 
 			}
@@ -102,7 +114,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-3",
-					"index" : 1,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -975,7 +987,7 @@
 					"patching_rect" : [ 36.0, 737.0, 89.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 2.0, 2.0, 103.0, 22.0 ],
-					"text" : "midi 114"
+					"text" : "midi 96"
 				}
 
 			}
@@ -994,7 +1006,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-20",
-					"items" : [ ",", "0_track_mute", ",", "0_track_solo", ",", "10_track_mute", ",", "10_track_solo", ",", "11_track_mute", ",", "11_track_solo", ",", "12_track_mute", ",", "12_track_solo", ",", "13_track_mute", ",", "13_track_solo", ",", "14_track_mute", ",", "14_track_solo", ",", "15_track_mute", ",", "15_track_solo", ",", "1_track_mute", ",", "1_track_solo", ",", "2_track_mute", ",", "2_track_solo", ",", "3_track_mute", ",", "3_track_solo", ",", "4_track_mute", ",", "4_track_solo", ",", "5_track_mute", ",", "5_track_solo", ",", "6_track_mute", ",", "6_track_solo", ",", "7_track_mute", ",", "7_track_solo", ",", "8_track_mute", ",", "8_track_solo", ",", "9_track_mute", ",", "9_track_solo", ",", "loop_chapter", ",", "midi_player_1_loop_1", ",", "midi_player_1_loop_2", ",", "midi_player_1_loop_3", ",", "midi_player_1_loop_4", ",", "midi_player_1_loop_8", ",", "midi_player_1_speed_button_1/2", ",", "midi_player_1_speed_button_2", ",", "midi_player_1_speed_button_3/2", ",", "midi_player_1_speed_button_4", ",", "midi_player_2_loop_1", ",", "midi_player_2_loop_2", ",", "midi_player_2_loop_3", ",", "midi_player_2_loop_4", ",", "midi_player_2_loop_8", ",", "midi_player_2_speed_button_1/2", ",", "midi_player_2_speed_button_2", ",", "midi_player_2_speed_button_3/2", ",", "midi_player_2_speed_button_4", ",", "no_octave", ",", "octave_down_1", ",", "octave_down_2", ",", "octave_down_3", ",", "octave_down_4", ",", "octave_transposition", ",", "octave_up_1", ",", "octave_up_2", ",", "octave_up_3", ",", "octave_up_4" ],
+					"items" : [ ",", "loop_chapter", ",", "midi_player_1_loop_1", ",", "midi_player_1_loop_2", ",", "midi_player_1_loop_3", ",", "midi_player_1_loop_4", ",", "midi_player_1_loop_5", ",", "midi_player_1_loop_6", ",", "midi_player_1_loop_7", ",", "midi_player_1_loop_8", ",", "midi_player_1_speed_button_1/2", ",", "midi_player_1_speed_button_2", ",", "midi_player_1_speed_button_3/2", ",", "midi_player_1_speed_button_4", ",", "midi_player_2_loop_1", ",", "midi_player_2_loop_2", ",", "midi_player_2_loop_3", ",", "midi_player_2_loop_4", ",", "midi_player_2_loop_5", ",", "midi_player_2_loop_6", ",", "midi_player_2_loop_7", ",", "midi_player_2_loop_8", ",", "midi_player_2_speed_button_1/2", ",", "midi_player_2_speed_button_2", ",", "midi_player_2_speed_button_3/2", ",", "midi_player_2_speed_button_4", ",", "no_octave", ",", "octave_down_1", ",", "octave_down_2", ",", "octave_down_3", ",", "octave_down_4", ",", "octave_transposition", ",", "octave_up_1", ",", "octave_up_2", ",", "octave_up_3", ",", "octave_up_4", ",", "track_1_mute", ",", "track_1_solo", ",", "track_2_mute", ",", "track_2_solo", ",", "track_3_mute", ",", "track_3_solo", ",", "track_4_mute", ",", "track_4_solo", ",", "track_5_mute", ",", "track_5_solo" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1058,6 +1070,20 @@
 					"destination" : [ "obj-14", 0 ],
 					"midpoints" : [ 578.0, 853.5, 45.5, 853.5 ],
 					"source" : [ "obj-15", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"source" : [ "obj-18", 0 ]
 				}
 
 			}
@@ -1140,15 +1166,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-25", 1 ],
-					"order" : 1,
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-28", 1 ],
-					"order" : 0,
 					"source" : [ "obj-3", 0 ]
 				}
 

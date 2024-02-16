@@ -1,0 +1,56 @@
+{
+	"pattrstorage" : 	{
+		"name" : "midioutbank_pattrstorage",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"components" : [  ],
+					"solo_bank" : [ 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+					"global_outport::index" : [ 0 ],
+					"track_0::midi_in_channel" : [ 1 ],
+					"track_0::midi_out_channel" : [ 1 ],
+					"track_0::mute" : [ 0 ],
+					"track_0::active" : [ 0 ],
+					"track_0::effect_list::components" : [  ],
+					"track_0::effect_list::effect_0::active" : [ 0 ],
+					"track_0::effect_list::effect_0::components" : [  ],
+					"track_0::effect_list::effect_1::active" : [ 0 ],
+					"track_0::effect_list::effect_1::components" : [  ],
+					"track_0::view_params::note" : [ 0, 0, 0, 0, 0, 0 ],
+					"track_0::outport::index" : [ 0 ],
+					"track_1::midi_in_channel" : [ 2 ],
+					"track_1::midi_out_channel" : [ 12 ],
+					"track_1::mute" : [ 0 ],
+					"track_1::active" : [ 0 ],
+					"track_1::effect_list::components" : [  ],
+					"track_1::view_params::note" : [ 0, 0, 0, 0, 0, 0 ],
+					"track_1::outport::index" : [ 0 ],
+					"track_2::midi_in_channel" : [ 3 ],
+					"track_2::midi_out_channel" : [ 3 ],
+					"track_2::mute" : [ 0 ],
+					"track_2::active" : [ 1 ],
+					"track_2::effect_list::components" : [  ],
+					"track_2::effect_list::effect_0::active" : [ 0 ],
+					"track_2::effect_list::effect_0::components" : [  ],
+					"track_2::effect_list::effect_0::add_octaves::semitones" : [ "0" ],
+					"track_2::effect_list::effect_1::active" : [ 0 ],
+					"track_2::effect_list::effect_1::components" : [  ],
+					"track_2::view_params::note" : [ 0, 0, 0, 0, 0, 0 ],
+					"track_2::outport::index" : [ 0 ],
+					"track_3::midi_in_channel" : [ 4 ],
+					"track_3::midi_out_channel" : [ 11 ],
+					"track_3::mute" : [ 1 ],
+					"track_3::active" : [ 0 ],
+					"track_3::effect_list::components" : [  ],
+					"track_3::view_params::note" : [ 0, 0, 0, 0, 0, 0 ],
+					"track_3::outport::index" : [ 0 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}
