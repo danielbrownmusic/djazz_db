@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 864.0, 165.0, 830.0, 773.0 ],
+		"rect" : [ -2835.0, 78.0, 1220.0, 849.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-11",
+					"index" : 4,
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 701.0, 698.666655999999989, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-23",
 					"maxclass" : "newobj",
@@ -197,6 +209,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-62",
+									"int" : 1,
 									"maxclass" : "gswitch",
 									"numinlets" : 3,
 									"numoutlets" : 1,
@@ -287,7 +300,7 @@
 									"destination" : [ "obj-58", 1 ],
 									"source" : [ "obj-22", 1 ],
 									"watchpoint_flags" : 1,
-									"watchpoint_id" : 16
+									"watchpoint_id" : 22
 								}
 
 							}
@@ -324,7 +337,7 @@
 									"destination" : [ "obj-63", 0 ],
 									"source" : [ "obj-58", 0 ],
 									"watchpoint_flags" : 1,
-									"watchpoint_id" : 17
+									"watchpoint_id" : 23
 								}
 
 							}
@@ -486,7 +499,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 511.5, 22.0, 40.0, 35.0 ],
-					"restore" : [ 0 ],
+					"restore" : [ 1 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -506,7 +519,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 409.0, 22.0, 42.0, 35.0 ],
-					"restore" : [ 60.0 ],
+					"restore" : [ 181.0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -526,7 +539,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 652.5, 22.0, 76.0, 35.0 ],
-					"restore" : [ 1 ],
+					"restore" : [ 2 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -769,8 +782,17 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-22", 0 ],
+					"destination" : [ "obj-11", 0 ],
+					"midpoints" : [ 531.5, 328.833327999999995, 710.5, 328.833327999999995 ],
 					"order" : 0,
+					"source" : [ "obj-35", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"order" : 1,
 					"source" : [ "obj-35", 0 ]
 				}
 
@@ -779,7 +801,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-23", 0 ],
 					"midpoints" : [ 531.5, 245.0, 460.5, 245.0 ],
-					"order" : 1,
+					"order" : 2,
 					"source" : [ "obj-35", 0 ]
 				}
 
