@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2157.0, 175.0, 1291.0, 857.0 ],
+		"rect" : [ -2058.0, 184.0, 1378.0, 857.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,23 +40,21 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"autorestore" : "presets.json",
 					"id" : "obj-8",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 707.0, 248.0, 145.0, 35.0 ],
+					"patching_rect" : [ 707.0, 248.0, 251.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 1037, 128, 1515, 659 ],
+						"client_rect" : [ -2784, 115, -2306, 646 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
-						"storage_rect" : [ 583, 69, 1034, 197 ]
+						"storage_rect" : [ 583, 87, 1034, 215 ]
 					}
 ,
-					"text" : "pattrstorage midioutbank_pattrstorage",
-					"varname" : "midioutbank_pattrstorage"
+					"text" : "pattrstorage midioutbank_preset_pattrstorage",
+					"varname" : "midioutbank_preset_pattrstorage"
 				}
 
 			}
@@ -361,7 +359,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 291.25, 248.0, 56.0, 22.0 ],
 					"restore" : 					{
-						"solo_bank" : [ 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+						"solo_bank" : [ 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
 					}
 ,
 					"text" : "autopattr",
