@@ -38,6 +38,12 @@ exports.close = function()
 // -------------------------------------------------------------
 
 
+exports.contains = function(param)
+{
+    return (d_.get("parameters").contains(param) === 1) ? true : false;
+}
+
+
 exports.chapter_count = function()
 {
     return get_grid_param_count_("chapter");

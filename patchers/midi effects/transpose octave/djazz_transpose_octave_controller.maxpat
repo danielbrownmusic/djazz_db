@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 161.0, 171.0, 682.0, 676.0 ],
+		"rect" : [ -1582.0, 385.0, 682.0, 676.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,25 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 264.0, 80.0, 71.0, 22.0 ],
+					"restore" : [ 1 ],
+					"saved_object_attributes" : 					{
+						"parameter_enable" : 0,
+						"parameter_mappable" : 0
+					}
+,
+					"text" : "pattr octave",
+					"varname" : "octave"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "newobj",
@@ -575,7 +594,7 @@
 					"order" : 0,
 					"source" : [ "obj-1", 0 ],
 					"watchpoint_flags" : 1,
-					"watchpoint_id" : 14
+					"watchpoint_id" : 8
 				}
 
 			}
@@ -691,6 +710,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-5", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
 					"midpoints" : [ 436.5, 226.0, 139.5, 226.0 ],
 					"source" : [ "obj-6", 0 ]
@@ -711,7 +737,7 @@
 					"midpoints" : [ 139.5, 368.5, 139.5, 368.5 ],
 					"source" : [ "obj-9", 0 ],
 					"watchpoint_flags" : 1,
-					"watchpoint_id" : 15
+					"watchpoint_id" : 16
 				}
 
 			}

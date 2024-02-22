@@ -90,8 +90,6 @@ function load_mapping(map_dict_file_path)
 }
 
 
-
-
 function add_parameter(param, cell_type, cell_value, hue)
 {
     map_wrtr_.set_dict(map_dict_.name);
@@ -107,16 +105,28 @@ function add_parameter(param, cell_type, cell_value, hue)
 }
 
 
-function remove_parameter(param_name)
+function remove_parameter(param)
 {
-    if (view_dict_.contains(param) === 0)
+    if (!map_rdr_.set_dict(device_name_, map_dict_.name))
         return;
 
-    var key     = to_key_(param, 0);
-    var cell    = param_to_cell_(key);
+    if (!map_rdr_.contains(param))
+        return;
 
-    view_.remove(param);
-    ctrl_.remove(cell);
+    var [cell_type, cell_value] = map_rdr_.cell_data(param);
+    ctrl_wrtr_.remove_param(cell_type, cell_value);
+    map_rdr_.states(param).forEach(
+        function (state)
+        {
+            view_wrtr_.remove_param(param, state);
+        }
+    )
+    map_rdr_.close();
+
+    map_wrtr_.set_dict(map_dict_.name);
+    map_wrtr_.remove_param(param);
+    map_wrtr_.close();
+
     output_when_done_();
 }
 
@@ -142,9 +152,12 @@ add_param_.local = 1;
 
 function clear_mapping_()
 {
-    view_dict_.clear();
-    ctrl_dict_.clear();
-    map_dict_.clear();
+    view_wrtr_.clear();
+    ctrl_wrtr_.clear();
+
+    map_wrtr_.set_dict(map_dict_.name);
+    map_wrtr_.clear();
+    map_wrtr_.close();
 }
 clear_mapping_.local = 1;
 

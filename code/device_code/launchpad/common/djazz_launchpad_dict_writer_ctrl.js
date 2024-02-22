@@ -22,6 +22,16 @@ exports.add_param = function(param, cell_type, cell_value)
 }
 
 
+exports.remove_param = function(cell_type, cell_value)
+{
+    d_.remove(to_symbol_(cell_type, cell_value));
+}
+
+
+exports.clear = function()
+{
+    d_.clear();
+}
 
 //------------------------------------------------------------------
 

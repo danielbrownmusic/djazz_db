@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 73.0, 148.0, 938.0, 935.0 ],
+		"rect" : [ -2462.0, -69.0, 1970.0, 1043.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,18 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 4,
+					"outlettype" : [ "int", "int", "int", "int" ],
+					"patching_rect" : [ 866.833278059959412, 2.999999403953552, 50.5, 22.0 ],
+					"text" : "key"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-33",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -50,7 +62,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -84,7 +96,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-13",
@@ -97,7 +108,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 5,
-											"revision" : 4,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -267,7 +278,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 5,
-											"revision" : 4,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -524,7 +535,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 17.333331982294794, 620.500013879196104, 122.0, 22.0 ],
+					"patching_rect" : [ 99.333195209503174, 294.250000533546427, 122.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -552,9 +563,9 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1380.166607856750488, 574.166681553550688, 157.33333420753479, 37.333330631256104 ],
+					"patching_rect" : [ 1091.166605234146118, -46.333333253860474, 157.33333420753479, 37.333330631256104 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 933.696199041396994, 8.833331371971099, 157.33333420753479, 37.333330631256104 ],
+					"presentation_rect" : [ 19.696199041396994, 6.666668176651001, 157.33333420753479, 37.333330631256104 ],
 					"viewvisibility" : 1
 				}
 
@@ -571,7 +582,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -690,6 +701,1773 @@
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 351.666677633921381, 287.166662128227244, 65.666666030883789, 35.0 ],
 									"restore" : [ 										{
+											"metadata" : 											{
+												"name" : "AutumnleavesDoMin",
+												"tempo" : 182,
+												"beats_per_measure" : 4,
+												"chapter_count" : 2,
+												"beat_count" : 192
+											}
+,
+											"chapters" : 											{
+												"0" : 												{
+													"min_measure" : 0,
+													"max_measure" : 32,
+													"min_beat" : 0,
+													"max_beat" : 128
+												}
+,
+												"1" : 												{
+													"min_measure" : 32,
+													"max_measure" : 48,
+													"min_beat" : 128,
+													"max_beat" : 192
+												}
+
+											}
+,
+											"measures" : 											{
+												"0" : 												{
+													"min_beat" : 0,
+													"length_in_beats" : 4
+												}
+,
+												"1" : 												{
+													"min_beat" : 4,
+													"length_in_beats" : 4
+												}
+,
+												"2" : 												{
+													"min_beat" : 8,
+													"length_in_beats" : 4
+												}
+,
+												"3" : 												{
+													"min_beat" : 12,
+													"length_in_beats" : 4
+												}
+,
+												"4" : 												{
+													"min_beat" : 16,
+													"length_in_beats" : 4
+												}
+,
+												"5" : 												{
+													"min_beat" : 20,
+													"length_in_beats" : 4
+												}
+,
+												"6" : 												{
+													"min_beat" : 24,
+													"length_in_beats" : 4
+												}
+,
+												"7" : 												{
+													"min_beat" : 28,
+													"length_in_beats" : 4
+												}
+,
+												"8" : 												{
+													"min_beat" : 32,
+													"length_in_beats" : 4
+												}
+,
+												"9" : 												{
+													"min_beat" : 36,
+													"length_in_beats" : 4
+												}
+,
+												"10" : 												{
+													"min_beat" : 40,
+													"length_in_beats" : 4
+												}
+,
+												"11" : 												{
+													"min_beat" : 44,
+													"length_in_beats" : 4
+												}
+,
+												"12" : 												{
+													"min_beat" : 48,
+													"length_in_beats" : 4
+												}
+,
+												"13" : 												{
+													"min_beat" : 52,
+													"length_in_beats" : 4
+												}
+,
+												"14" : 												{
+													"min_beat" : 56,
+													"length_in_beats" : 4
+												}
+,
+												"15" : 												{
+													"min_beat" : 60,
+													"length_in_beats" : 4
+												}
+,
+												"16" : 												{
+													"min_beat" : 64,
+													"length_in_beats" : 4
+												}
+,
+												"17" : 												{
+													"min_beat" : 68,
+													"length_in_beats" : 4
+												}
+,
+												"18" : 												{
+													"min_beat" : 72,
+													"length_in_beats" : 4
+												}
+,
+												"19" : 												{
+													"min_beat" : 76,
+													"length_in_beats" : 4
+												}
+,
+												"20" : 												{
+													"min_beat" : 80,
+													"length_in_beats" : 4
+												}
+,
+												"21" : 												{
+													"min_beat" : 84,
+													"length_in_beats" : 4
+												}
+,
+												"22" : 												{
+													"min_beat" : 88,
+													"length_in_beats" : 4
+												}
+,
+												"23" : 												{
+													"min_beat" : 92,
+													"length_in_beats" : 4
+												}
+,
+												"24" : 												{
+													"min_beat" : 96,
+													"length_in_beats" : 4
+												}
+,
+												"25" : 												{
+													"min_beat" : 100,
+													"length_in_beats" : 4
+												}
+,
+												"26" : 												{
+													"min_beat" : 104,
+													"length_in_beats" : 4
+												}
+,
+												"27" : 												{
+													"min_beat" : 108,
+													"length_in_beats" : 4
+												}
+,
+												"28" : 												{
+													"min_beat" : 112,
+													"length_in_beats" : 4
+												}
+,
+												"29" : 												{
+													"min_beat" : 116,
+													"length_in_beats" : 4
+												}
+,
+												"30" : 												{
+													"min_beat" : 120,
+													"length_in_beats" : 4
+												}
+,
+												"31" : 												{
+													"min_beat" : 124,
+													"length_in_beats" : 4
+												}
+,
+												"32" : 												{
+													"min_beat" : 128,
+													"length_in_beats" : 4
+												}
+,
+												"33" : 												{
+													"min_beat" : 132,
+													"length_in_beats" : 4
+												}
+,
+												"34" : 												{
+													"min_beat" : 136,
+													"length_in_beats" : 4
+												}
+,
+												"35" : 												{
+													"min_beat" : 140,
+													"length_in_beats" : 4
+												}
+,
+												"36" : 												{
+													"min_beat" : 144,
+													"length_in_beats" : 4
+												}
+,
+												"37" : 												{
+													"min_beat" : 148,
+													"length_in_beats" : 4
+												}
+,
+												"38" : 												{
+													"min_beat" : 152,
+													"length_in_beats" : 4
+												}
+,
+												"39" : 												{
+													"min_beat" : 156,
+													"length_in_beats" : 4
+												}
+,
+												"40" : 												{
+													"min_beat" : 160,
+													"length_in_beats" : 4
+												}
+,
+												"41" : 												{
+													"min_beat" : 164,
+													"length_in_beats" : 4
+												}
+,
+												"42" : 												{
+													"min_beat" : 168,
+													"length_in_beats" : 4
+												}
+,
+												"43" : 												{
+													"min_beat" : 172,
+													"length_in_beats" : 4
+												}
+,
+												"44" : 												{
+													"min_beat" : 176,
+													"length_in_beats" : 4
+												}
+,
+												"45" : 												{
+													"min_beat" : 180,
+													"length_in_beats" : 4
+												}
+,
+												"46" : 												{
+													"min_beat" : 184,
+													"length_in_beats" : 4
+												}
+,
+												"47" : 												{
+													"min_beat" : 188,
+													"length_in_beats" : 4
+												}
+
+											}
+,
+											"beats" : 											{
+												"0" : 												{
+													"chapter" : 0,
+													"measure" : 0,
+													"position" : 0
+												}
+,
+												"1" : 												{
+													"chapter" : 0,
+													"measure" : 0,
+													"position" : 1
+												}
+,
+												"2" : 												{
+													"chapter" : 0,
+													"measure" : 0,
+													"position" : 2
+												}
+,
+												"3" : 												{
+													"chapter" : 0,
+													"measure" : 0,
+													"position" : 3
+												}
+,
+												"4" : 												{
+													"chapter" : 0,
+													"measure" : 1,
+													"position" : 0
+												}
+,
+												"5" : 												{
+													"chapter" : 0,
+													"measure" : 1,
+													"position" : 1
+												}
+,
+												"6" : 												{
+													"chapter" : 0,
+													"measure" : 1,
+													"position" : 2
+												}
+,
+												"7" : 												{
+													"chapter" : 0,
+													"measure" : 1,
+													"position" : 3
+												}
+,
+												"8" : 												{
+													"chapter" : 0,
+													"measure" : 2,
+													"position" : 0
+												}
+,
+												"9" : 												{
+													"chapter" : 0,
+													"measure" : 2,
+													"position" : 1
+												}
+,
+												"10" : 												{
+													"chapter" : 0,
+													"measure" : 2,
+													"position" : 2
+												}
+,
+												"11" : 												{
+													"chapter" : 0,
+													"measure" : 2,
+													"position" : 3
+												}
+,
+												"12" : 												{
+													"chapter" : 0,
+													"measure" : 3,
+													"position" : 0
+												}
+,
+												"13" : 												{
+													"chapter" : 0,
+													"measure" : 3,
+													"position" : 1
+												}
+,
+												"14" : 												{
+													"chapter" : 0,
+													"measure" : 3,
+													"position" : 2
+												}
+,
+												"15" : 												{
+													"chapter" : 0,
+													"measure" : 3,
+													"position" : 3
+												}
+,
+												"16" : 												{
+													"chapter" : 0,
+													"measure" : 4,
+													"position" : 0
+												}
+,
+												"17" : 												{
+													"chapter" : 0,
+													"measure" : 4,
+													"position" : 1
+												}
+,
+												"18" : 												{
+													"chapter" : 0,
+													"measure" : 4,
+													"position" : 2
+												}
+,
+												"19" : 												{
+													"chapter" : 0,
+													"measure" : 4,
+													"position" : 3
+												}
+,
+												"20" : 												{
+													"chapter" : 0,
+													"measure" : 5,
+													"position" : 0
+												}
+,
+												"21" : 												{
+													"chapter" : 0,
+													"measure" : 5,
+													"position" : 1
+												}
+,
+												"22" : 												{
+													"chapter" : 0,
+													"measure" : 5,
+													"position" : 2
+												}
+,
+												"23" : 												{
+													"chapter" : 0,
+													"measure" : 5,
+													"position" : 3
+												}
+,
+												"24" : 												{
+													"chapter" : 0,
+													"measure" : 6,
+													"position" : 0
+												}
+,
+												"25" : 												{
+													"chapter" : 0,
+													"measure" : 6,
+													"position" : 1
+												}
+,
+												"26" : 												{
+													"chapter" : 0,
+													"measure" : 6,
+													"position" : 2
+												}
+,
+												"27" : 												{
+													"chapter" : 0,
+													"measure" : 6,
+													"position" : 3
+												}
+,
+												"28" : 												{
+													"chapter" : 0,
+													"measure" : 7,
+													"position" : 0
+												}
+,
+												"29" : 												{
+													"chapter" : 0,
+													"measure" : 7,
+													"position" : 1
+												}
+,
+												"30" : 												{
+													"chapter" : 0,
+													"measure" : 7,
+													"position" : 2
+												}
+,
+												"31" : 												{
+													"chapter" : 0,
+													"measure" : 7,
+													"position" : 3
+												}
+,
+												"32" : 												{
+													"chapter" : 0,
+													"measure" : 8,
+													"position" : 0
+												}
+,
+												"33" : 												{
+													"chapter" : 0,
+													"measure" : 8,
+													"position" : 1
+												}
+,
+												"34" : 												{
+													"chapter" : 0,
+													"measure" : 8,
+													"position" : 2
+												}
+,
+												"35" : 												{
+													"chapter" : 0,
+													"measure" : 8,
+													"position" : 3
+												}
+,
+												"36" : 												{
+													"chapter" : 0,
+													"measure" : 9,
+													"position" : 0
+												}
+,
+												"37" : 												{
+													"chapter" : 0,
+													"measure" : 9,
+													"position" : 1
+												}
+,
+												"38" : 												{
+													"chapter" : 0,
+													"measure" : 9,
+													"position" : 2
+												}
+,
+												"39" : 												{
+													"chapter" : 0,
+													"measure" : 9,
+													"position" : 3
+												}
+,
+												"40" : 												{
+													"chapter" : 0,
+													"measure" : 10,
+													"position" : 0
+												}
+,
+												"41" : 												{
+													"chapter" : 0,
+													"measure" : 10,
+													"position" : 1
+												}
+,
+												"42" : 												{
+													"chapter" : 0,
+													"measure" : 10,
+													"position" : 2
+												}
+,
+												"43" : 												{
+													"chapter" : 0,
+													"measure" : 10,
+													"position" : 3
+												}
+,
+												"44" : 												{
+													"chapter" : 0,
+													"measure" : 11,
+													"position" : 0
+												}
+,
+												"45" : 												{
+													"chapter" : 0,
+													"measure" : 11,
+													"position" : 1
+												}
+,
+												"46" : 												{
+													"chapter" : 0,
+													"measure" : 11,
+													"position" : 2
+												}
+,
+												"47" : 												{
+													"chapter" : 0,
+													"measure" : 11,
+													"position" : 3
+												}
+,
+												"48" : 												{
+													"chapter" : 0,
+													"measure" : 12,
+													"position" : 0
+												}
+,
+												"49" : 												{
+													"chapter" : 0,
+													"measure" : 12,
+													"position" : 1
+												}
+,
+												"50" : 												{
+													"chapter" : 0,
+													"measure" : 12,
+													"position" : 2
+												}
+,
+												"51" : 												{
+													"chapter" : 0,
+													"measure" : 12,
+													"position" : 3
+												}
+,
+												"52" : 												{
+													"chapter" : 0,
+													"measure" : 13,
+													"position" : 0
+												}
+,
+												"53" : 												{
+													"chapter" : 0,
+													"measure" : 13,
+													"position" : 1
+												}
+,
+												"54" : 												{
+													"chapter" : 0,
+													"measure" : 13,
+													"position" : 2
+												}
+,
+												"55" : 												{
+													"chapter" : 0,
+													"measure" : 13,
+													"position" : 3
+												}
+,
+												"56" : 												{
+													"chapter" : 0,
+													"measure" : 14,
+													"position" : 0
+												}
+,
+												"57" : 												{
+													"chapter" : 0,
+													"measure" : 14,
+													"position" : 1
+												}
+,
+												"58" : 												{
+													"chapter" : 0,
+													"measure" : 14,
+													"position" : 2
+												}
+,
+												"59" : 												{
+													"chapter" : 0,
+													"measure" : 14,
+													"position" : 3
+												}
+,
+												"60" : 												{
+													"chapter" : 0,
+													"measure" : 15,
+													"position" : 0
+												}
+,
+												"61" : 												{
+													"chapter" : 0,
+													"measure" : 15,
+													"position" : 1
+												}
+,
+												"62" : 												{
+													"chapter" : 0,
+													"measure" : 15,
+													"position" : 2
+												}
+,
+												"63" : 												{
+													"chapter" : 0,
+													"measure" : 15,
+													"position" : 3
+												}
+,
+												"64" : 												{
+													"chapter" : 0,
+													"measure" : 16,
+													"position" : 0
+												}
+,
+												"65" : 												{
+													"chapter" : 0,
+													"measure" : 16,
+													"position" : 1
+												}
+,
+												"66" : 												{
+													"chapter" : 0,
+													"measure" : 16,
+													"position" : 2
+												}
+,
+												"67" : 												{
+													"chapter" : 0,
+													"measure" : 16,
+													"position" : 3
+												}
+,
+												"68" : 												{
+													"chapter" : 0,
+													"measure" : 17,
+													"position" : 0
+												}
+,
+												"69" : 												{
+													"chapter" : 0,
+													"measure" : 17,
+													"position" : 1
+												}
+,
+												"70" : 												{
+													"chapter" : 0,
+													"measure" : 17,
+													"position" : 2
+												}
+,
+												"71" : 												{
+													"chapter" : 0,
+													"measure" : 17,
+													"position" : 3
+												}
+,
+												"72" : 												{
+													"chapter" : 0,
+													"measure" : 18,
+													"position" : 0
+												}
+,
+												"73" : 												{
+													"chapter" : 0,
+													"measure" : 18,
+													"position" : 1
+												}
+,
+												"74" : 												{
+													"chapter" : 0,
+													"measure" : 18,
+													"position" : 2
+												}
+,
+												"75" : 												{
+													"chapter" : 0,
+													"measure" : 18,
+													"position" : 3
+												}
+,
+												"76" : 												{
+													"chapter" : 0,
+													"measure" : 19,
+													"position" : 0
+												}
+,
+												"77" : 												{
+													"chapter" : 0,
+													"measure" : 19,
+													"position" : 1
+												}
+,
+												"78" : 												{
+													"chapter" : 0,
+													"measure" : 19,
+													"position" : 2
+												}
+,
+												"79" : 												{
+													"chapter" : 0,
+													"measure" : 19,
+													"position" : 3
+												}
+,
+												"80" : 												{
+													"chapter" : 0,
+													"measure" : 20,
+													"position" : 0
+												}
+,
+												"81" : 												{
+													"chapter" : 0,
+													"measure" : 20,
+													"position" : 1
+												}
+,
+												"82" : 												{
+													"chapter" : 0,
+													"measure" : 20,
+													"position" : 2
+												}
+,
+												"83" : 												{
+													"chapter" : 0,
+													"measure" : 20,
+													"position" : 3
+												}
+,
+												"84" : 												{
+													"chapter" : 0,
+													"measure" : 21,
+													"position" : 0
+												}
+,
+												"85" : 												{
+													"chapter" : 0,
+													"measure" : 21,
+													"position" : 1
+												}
+,
+												"86" : 												{
+													"chapter" : 0,
+													"measure" : 21,
+													"position" : 2
+												}
+,
+												"87" : 												{
+													"chapter" : 0,
+													"measure" : 21,
+													"position" : 3
+												}
+,
+												"88" : 												{
+													"chapter" : 0,
+													"measure" : 22,
+													"position" : 0
+												}
+,
+												"89" : 												{
+													"chapter" : 0,
+													"measure" : 22,
+													"position" : 1
+												}
+,
+												"90" : 												{
+													"chapter" : 0,
+													"measure" : 22,
+													"position" : 2
+												}
+,
+												"91" : 												{
+													"chapter" : 0,
+													"measure" : 22,
+													"position" : 3
+												}
+,
+												"92" : 												{
+													"chapter" : 0,
+													"measure" : 23,
+													"position" : 0
+												}
+,
+												"93" : 												{
+													"chapter" : 0,
+													"measure" : 23,
+													"position" : 1
+												}
+,
+												"94" : 												{
+													"chapter" : 0,
+													"measure" : 23,
+													"position" : 2
+												}
+,
+												"95" : 												{
+													"chapter" : 0,
+													"measure" : 23,
+													"position" : 3
+												}
+,
+												"96" : 												{
+													"chapter" : 0,
+													"measure" : 24,
+													"position" : 0
+												}
+,
+												"97" : 												{
+													"chapter" : 0,
+													"measure" : 24,
+													"position" : 1
+												}
+,
+												"98" : 												{
+													"chapter" : 0,
+													"measure" : 24,
+													"position" : 2
+												}
+,
+												"99" : 												{
+													"chapter" : 0,
+													"measure" : 24,
+													"position" : 3
+												}
+,
+												"100" : 												{
+													"chapter" : 0,
+													"measure" : 25,
+													"position" : 0
+												}
+,
+												"101" : 												{
+													"chapter" : 0,
+													"measure" : 25,
+													"position" : 1
+												}
+,
+												"102" : 												{
+													"chapter" : 0,
+													"measure" : 25,
+													"position" : 2
+												}
+,
+												"103" : 												{
+													"chapter" : 0,
+													"measure" : 25,
+													"position" : 3
+												}
+,
+												"104" : 												{
+													"chapter" : 0,
+													"measure" : 26,
+													"position" : 0
+												}
+,
+												"105" : 												{
+													"chapter" : 0,
+													"measure" : 26,
+													"position" : 1
+												}
+,
+												"106" : 												{
+													"chapter" : 0,
+													"measure" : 26,
+													"position" : 2
+												}
+,
+												"107" : 												{
+													"chapter" : 0,
+													"measure" : 26,
+													"position" : 3
+												}
+,
+												"108" : 												{
+													"chapter" : 0,
+													"measure" : 27,
+													"position" : 0
+												}
+,
+												"109" : 												{
+													"chapter" : 0,
+													"measure" : 27,
+													"position" : 1
+												}
+,
+												"110" : 												{
+													"chapter" : 0,
+													"measure" : 27,
+													"position" : 2
+												}
+,
+												"111" : 												{
+													"chapter" : 0,
+													"measure" : 27,
+													"position" : 3
+												}
+,
+												"112" : 												{
+													"chapter" : 0,
+													"measure" : 28,
+													"position" : 0
+												}
+,
+												"113" : 												{
+													"chapter" : 0,
+													"measure" : 28,
+													"position" : 1
+												}
+,
+												"114" : 												{
+													"chapter" : 0,
+													"measure" : 28,
+													"position" : 2
+												}
+,
+												"115" : 												{
+													"chapter" : 0,
+													"measure" : 28,
+													"position" : 3
+												}
+,
+												"116" : 												{
+													"chapter" : 0,
+													"measure" : 29,
+													"position" : 0
+												}
+,
+												"117" : 												{
+													"chapter" : 0,
+													"measure" : 29,
+													"position" : 1
+												}
+,
+												"118" : 												{
+													"chapter" : 0,
+													"measure" : 29,
+													"position" : 2
+												}
+,
+												"119" : 												{
+													"chapter" : 0,
+													"measure" : 29,
+													"position" : 3
+												}
+,
+												"120" : 												{
+													"chapter" : 0,
+													"measure" : 30,
+													"position" : 0
+												}
+,
+												"121" : 												{
+													"chapter" : 0,
+													"measure" : 30,
+													"position" : 1
+												}
+,
+												"122" : 												{
+													"chapter" : 0,
+													"measure" : 30,
+													"position" : 2
+												}
+,
+												"123" : 												{
+													"chapter" : 0,
+													"measure" : 30,
+													"position" : 3
+												}
+,
+												"124" : 												{
+													"chapter" : 0,
+													"measure" : 31,
+													"position" : 0
+												}
+,
+												"125" : 												{
+													"chapter" : 0,
+													"measure" : 31,
+													"position" : 1
+												}
+,
+												"126" : 												{
+													"chapter" : 0,
+													"measure" : 31,
+													"position" : 2
+												}
+,
+												"127" : 												{
+													"chapter" : 0,
+													"measure" : 31,
+													"position" : 3
+												}
+,
+												"128" : 												{
+													"chapter" : 1,
+													"measure" : 0,
+													"position" : 0
+												}
+,
+												"129" : 												{
+													"chapter" : 1,
+													"measure" : 0,
+													"position" : 1
+												}
+,
+												"130" : 												{
+													"chapter" : 1,
+													"measure" : 0,
+													"position" : 2
+												}
+,
+												"131" : 												{
+													"chapter" : 1,
+													"measure" : 0,
+													"position" : 3
+												}
+,
+												"132" : 												{
+													"chapter" : 1,
+													"measure" : 1,
+													"position" : 0
+												}
+,
+												"133" : 												{
+													"chapter" : 1,
+													"measure" : 1,
+													"position" : 1
+												}
+,
+												"134" : 												{
+													"chapter" : 1,
+													"measure" : 1,
+													"position" : 2
+												}
+,
+												"135" : 												{
+													"chapter" : 1,
+													"measure" : 1,
+													"position" : 3
+												}
+,
+												"136" : 												{
+													"chapter" : 1,
+													"measure" : 2,
+													"position" : 0
+												}
+,
+												"137" : 												{
+													"chapter" : 1,
+													"measure" : 2,
+													"position" : 1
+												}
+,
+												"138" : 												{
+													"chapter" : 1,
+													"measure" : 2,
+													"position" : 2
+												}
+,
+												"139" : 												{
+													"chapter" : 1,
+													"measure" : 2,
+													"position" : 3
+												}
+,
+												"140" : 												{
+													"chapter" : 1,
+													"measure" : 3,
+													"position" : 0
+												}
+,
+												"141" : 												{
+													"chapter" : 1,
+													"measure" : 3,
+													"position" : 1
+												}
+,
+												"142" : 												{
+													"chapter" : 1,
+													"measure" : 3,
+													"position" : 2
+												}
+,
+												"143" : 												{
+													"chapter" : 1,
+													"measure" : 3,
+													"position" : 3
+												}
+,
+												"144" : 												{
+													"chapter" : 1,
+													"measure" : 4,
+													"position" : 0
+												}
+,
+												"145" : 												{
+													"chapter" : 1,
+													"measure" : 4,
+													"position" : 1
+												}
+,
+												"146" : 												{
+													"chapter" : 1,
+													"measure" : 4,
+													"position" : 2
+												}
+,
+												"147" : 												{
+													"chapter" : 1,
+													"measure" : 4,
+													"position" : 3
+												}
+,
+												"148" : 												{
+													"chapter" : 1,
+													"measure" : 5,
+													"position" : 0
+												}
+,
+												"149" : 												{
+													"chapter" : 1,
+													"measure" : 5,
+													"position" : 1
+												}
+,
+												"150" : 												{
+													"chapter" : 1,
+													"measure" : 5,
+													"position" : 2
+												}
+,
+												"151" : 												{
+													"chapter" : 1,
+													"measure" : 5,
+													"position" : 3
+												}
+,
+												"152" : 												{
+													"chapter" : 1,
+													"measure" : 6,
+													"position" : 0
+												}
+,
+												"153" : 												{
+													"chapter" : 1,
+													"measure" : 6,
+													"position" : 1
+												}
+,
+												"154" : 												{
+													"chapter" : 1,
+													"measure" : 6,
+													"position" : 2
+												}
+,
+												"155" : 												{
+													"chapter" : 1,
+													"measure" : 6,
+													"position" : 3
+												}
+,
+												"156" : 												{
+													"chapter" : 1,
+													"measure" : 7,
+													"position" : 0
+												}
+,
+												"157" : 												{
+													"chapter" : 1,
+													"measure" : 7,
+													"position" : 1
+												}
+,
+												"158" : 												{
+													"chapter" : 1,
+													"measure" : 7,
+													"position" : 2
+												}
+,
+												"159" : 												{
+													"chapter" : 1,
+													"measure" : 7,
+													"position" : 3
+												}
+,
+												"160" : 												{
+													"chapter" : 1,
+													"measure" : 8,
+													"position" : 0
+												}
+,
+												"161" : 												{
+													"chapter" : 1,
+													"measure" : 8,
+													"position" : 1
+												}
+,
+												"162" : 												{
+													"chapter" : 1,
+													"measure" : 8,
+													"position" : 2
+												}
+,
+												"163" : 												{
+													"chapter" : 1,
+													"measure" : 8,
+													"position" : 3
+												}
+,
+												"164" : 												{
+													"chapter" : 1,
+													"measure" : 9,
+													"position" : 0
+												}
+,
+												"165" : 												{
+													"chapter" : 1,
+													"measure" : 9,
+													"position" : 1
+												}
+,
+												"166" : 												{
+													"chapter" : 1,
+													"measure" : 9,
+													"position" : 2
+												}
+,
+												"167" : 												{
+													"chapter" : 1,
+													"measure" : 9,
+													"position" : 3
+												}
+,
+												"168" : 												{
+													"chapter" : 1,
+													"measure" : 10,
+													"position" : 0
+												}
+,
+												"169" : 												{
+													"chapter" : 1,
+													"measure" : 10,
+													"position" : 1
+												}
+,
+												"170" : 												{
+													"chapter" : 1,
+													"measure" : 10,
+													"position" : 2
+												}
+,
+												"171" : 												{
+													"chapter" : 1,
+													"measure" : 10,
+													"position" : 3
+												}
+,
+												"172" : 												{
+													"chapter" : 1,
+													"measure" : 11,
+													"position" : 0
+												}
+,
+												"173" : 												{
+													"chapter" : 1,
+													"measure" : 11,
+													"position" : 1
+												}
+,
+												"174" : 												{
+													"chapter" : 1,
+													"measure" : 11,
+													"position" : 2
+												}
+,
+												"175" : 												{
+													"chapter" : 1,
+													"measure" : 11,
+													"position" : 3
+												}
+,
+												"176" : 												{
+													"chapter" : 1,
+													"measure" : 12,
+													"position" : 0
+												}
+,
+												"177" : 												{
+													"chapter" : 1,
+													"measure" : 12,
+													"position" : 1
+												}
+,
+												"178" : 												{
+													"chapter" : 1,
+													"measure" : 12,
+													"position" : 2
+												}
+,
+												"179" : 												{
+													"chapter" : 1,
+													"measure" : 12,
+													"position" : 3
+												}
+,
+												"180" : 												{
+													"chapter" : 1,
+													"measure" : 13,
+													"position" : 0
+												}
+,
+												"181" : 												{
+													"chapter" : 1,
+													"measure" : 13,
+													"position" : 1
+												}
+,
+												"182" : 												{
+													"chapter" : 1,
+													"measure" : 13,
+													"position" : 2
+												}
+,
+												"183" : 												{
+													"chapter" : 1,
+													"measure" : 13,
+													"position" : 3
+												}
+,
+												"184" : 												{
+													"chapter" : 1,
+													"measure" : 14,
+													"position" : 0
+												}
+,
+												"185" : 												{
+													"chapter" : 1,
+													"measure" : 14,
+													"position" : 1
+												}
+,
+												"186" : 												{
+													"chapter" : 1,
+													"measure" : 14,
+													"position" : 2
+												}
+,
+												"187" : 												{
+													"chapter" : 1,
+													"measure" : 14,
+													"position" : 3
+												}
+,
+												"188" : 												{
+													"chapter" : 1,
+													"measure" : 15,
+													"position" : 0
+												}
+,
+												"189" : 												{
+													"chapter" : 1,
+													"measure" : 15,
+													"position" : 1
+												}
+,
+												"190" : 												{
+													"chapter" : 1,
+													"measure" : 15,
+													"position" : 2
+												}
+,
+												"191" : 												{
+													"chapter" : 1,
+													"measure" : 15,
+													"position" : 3
+												}
+
+											}
+,
+											"grid" : 											{
+												"0" : 												{
+													"0" : 													{
+														"0" : 0,
+														"1" : 1,
+														"2" : 2,
+														"3" : 3
+													}
+,
+													"1" : 													{
+														"0" : 4,
+														"1" : 5,
+														"2" : 6,
+														"3" : 7
+													}
+,
+													"2" : 													{
+														"0" : 8,
+														"1" : 9,
+														"2" : 10,
+														"3" : 11
+													}
+,
+													"3" : 													{
+														"0" : 12,
+														"1" : 13,
+														"2" : 14,
+														"3" : 15
+													}
+,
+													"4" : 													{
+														"0" : 16,
+														"1" : 17,
+														"2" : 18,
+														"3" : 19
+													}
+,
+													"5" : 													{
+														"0" : 20,
+														"1" : 21,
+														"2" : 22,
+														"3" : 23
+													}
+,
+													"6" : 													{
+														"0" : 24,
+														"1" : 25,
+														"2" : 26,
+														"3" : 27
+													}
+,
+													"7" : 													{
+														"0" : 28,
+														"1" : 29,
+														"2" : 30,
+														"3" : 31
+													}
+,
+													"8" : 													{
+														"0" : 32,
+														"1" : 33,
+														"2" : 34,
+														"3" : 35
+													}
+,
+													"9" : 													{
+														"0" : 36,
+														"1" : 37,
+														"2" : 38,
+														"3" : 39
+													}
+,
+													"10" : 													{
+														"0" : 40,
+														"1" : 41,
+														"2" : 42,
+														"3" : 43
+													}
+,
+													"11" : 													{
+														"0" : 44,
+														"1" : 45,
+														"2" : 46,
+														"3" : 47
+													}
+,
+													"12" : 													{
+														"0" : 48,
+														"1" : 49,
+														"2" : 50,
+														"3" : 51
+													}
+,
+													"13" : 													{
+														"0" : 52,
+														"1" : 53,
+														"2" : 54,
+														"3" : 55
+													}
+,
+													"14" : 													{
+														"0" : 56,
+														"1" : 57,
+														"2" : 58,
+														"3" : 59
+													}
+,
+													"15" : 													{
+														"0" : 60,
+														"1" : 61,
+														"2" : 62,
+														"3" : 63
+													}
+,
+													"16" : 													{
+														"0" : 64,
+														"1" : 65,
+														"2" : 66,
+														"3" : 67
+													}
+,
+													"17" : 													{
+														"0" : 68,
+														"1" : 69,
+														"2" : 70,
+														"3" : 71
+													}
+,
+													"18" : 													{
+														"0" : 72,
+														"1" : 73,
+														"2" : 74,
+														"3" : 75
+													}
+,
+													"19" : 													{
+														"0" : 76,
+														"1" : 77,
+														"2" : 78,
+														"3" : 79
+													}
+,
+													"20" : 													{
+														"0" : 80,
+														"1" : 81,
+														"2" : 82,
+														"3" : 83
+													}
+,
+													"21" : 													{
+														"0" : 84,
+														"1" : 85,
+														"2" : 86,
+														"3" : 87
+													}
+,
+													"22" : 													{
+														"0" : 88,
+														"1" : 89,
+														"2" : 90,
+														"3" : 91
+													}
+,
+													"23" : 													{
+														"0" : 92,
+														"1" : 93,
+														"2" : 94,
+														"3" : 95
+													}
+,
+													"24" : 													{
+														"0" : 96,
+														"1" : 97,
+														"2" : 98,
+														"3" : 99
+													}
+,
+													"25" : 													{
+														"0" : 100,
+														"1" : 101,
+														"2" : 102,
+														"3" : 103
+													}
+,
+													"26" : 													{
+														"0" : 104,
+														"1" : 105,
+														"2" : 106,
+														"3" : 107
+													}
+,
+													"27" : 													{
+														"0" : 108,
+														"1" : 109,
+														"2" : 110,
+														"3" : 111
+													}
+,
+													"28" : 													{
+														"0" : 112,
+														"1" : 113,
+														"2" : 114,
+														"3" : 115
+													}
+,
+													"29" : 													{
+														"0" : 116,
+														"1" : 117,
+														"2" : 118,
+														"3" : 119
+													}
+,
+													"30" : 													{
+														"0" : 120,
+														"1" : 121,
+														"2" : 122,
+														"3" : 123
+													}
+,
+													"31" : 													{
+														"0" : 124,
+														"1" : 125,
+														"2" : 126,
+														"3" : 127
+													}
+
+												}
+,
+												"1" : 												{
+													"0" : 													{
+														"0" : 128,
+														"1" : 129,
+														"2" : 130,
+														"3" : 131
+													}
+,
+													"1" : 													{
+														"0" : 132,
+														"1" : 133,
+														"2" : 134,
+														"3" : 135
+													}
+,
+													"2" : 													{
+														"0" : 136,
+														"1" : 137,
+														"2" : 138,
+														"3" : 139
+													}
+,
+													"3" : 													{
+														"0" : 140,
+														"1" : 141,
+														"2" : 142,
+														"3" : 143
+													}
+,
+													"4" : 													{
+														"0" : 144,
+														"1" : 145,
+														"2" : 146,
+														"3" : 147
+													}
+,
+													"5" : 													{
+														"0" : 148,
+														"1" : 149,
+														"2" : 150,
+														"3" : 151
+													}
+,
+													"6" : 													{
+														"0" : 152,
+														"1" : 153,
+														"2" : 154,
+														"3" : 155
+													}
+,
+													"7" : 													{
+														"0" : 156,
+														"1" : 157,
+														"2" : 158,
+														"3" : 159
+													}
+,
+													"8" : 													{
+														"0" : 160,
+														"1" : 161,
+														"2" : 162,
+														"3" : 163
+													}
+,
+													"9" : 													{
+														"0" : 164,
+														"1" : 165,
+														"2" : 166,
+														"3" : 167
+													}
+,
+													"10" : 													{
+														"0" : 168,
+														"1" : 169,
+														"2" : 170,
+														"3" : 171
+													}
+,
+													"11" : 													{
+														"0" : 172,
+														"1" : 173,
+														"2" : 174,
+														"3" : 175
+													}
+,
+													"12" : 													{
+														"0" : 176,
+														"1" : 177,
+														"2" : 178,
+														"3" : 179
+													}
+,
+													"13" : 													{
+														"0" : 180,
+														"1" : 181,
+														"2" : 182,
+														"3" : 183
+													}
+,
+													"14" : 													{
+														"0" : 184,
+														"1" : 185,
+														"2" : 186,
+														"3" : 187
+													}
+,
+													"15" : 													{
+														"0" : 188,
+														"1" : 189,
+														"2" : 190,
+														"3" : 191
+													}
+
+												}
+
+											}
 
 										}
  ],
@@ -831,7 +2609,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 56.499987244606018, 212.499992844547251, 99.0, 22.0 ],
+					"patching_rect" : [ 43.666567087173462, 234.916661018302875, 99.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -856,13 +2634,13 @@
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "djazz_view_load_score_files.maxpat",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 159.999902486801147, 150.333336710929871, 462.666676640510559, 78.666665196418762 ],
+					"patching_rect" : [ 226.333239197731018, 175.249995583465534, 606.66667628288269, 73.666665196418762 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 7.333231270313263, 137.000001668930054, 497.333344340324402, 77.333331823348999 ],
+					"presentation_rect" : [ 13.999898135662079, 129.000001668930054, 608.333344340324402, 77.333331823348999 ],
 					"varname" : "djazz_view_load_score_files",
 					"viewvisibility" : 1
 				}
@@ -884,23 +2662,11 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 159.999902486801147, 9.333333611488342, 450.66667628288269, 106.666666030883789 ],
+					"patching_rect" : [ 43.666567087173462, 35.333333253860474, 491.66667628288269, 76.666666030883789 ],
 					"presentation" : 1,
-					"presentation_rect" : [ -0.000102281570435, 50.666668176651001, 490.666677474975586, 71.999998331069946 ],
+					"presentation_rect" : [ 13.999897718429565, 41.666668176651001, 490.666677474975586, 71.999998331069946 ],
 					"varname" : "djazz_view_load_song_folder",
 					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "to model pattrstorage",
-					"id" : "obj-15",
-					"index" : 0,
-					"maxclass" : "outlet",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1401.499942898750305, 1029.833333310569742, 30.0, 30.0 ]
 				}
 
 			}
@@ -909,9 +2675,9 @@
 					"id" : "obj-18",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 1393.833274960517883, 684.500014117614683, 130.0, 22.0 ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 1091.166605234146118, 22.833346179382261, 130.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "djazz_session_file.js",
 						"parameter_enable" : 0
@@ -927,9 +2693,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 722.666655302047729, 241.833327052082041, 59.333330631256104, 20.0 ],
+					"patching_rect" : [ 1400.083303570747375, 667.749998061401357, 59.333330631256104, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 597.333318710327148, 279.000000715255737, 63.0, 20.0 ],
+					"presentation_rect" : [ 648.029533248931784, 261.500000715255737, 63.0, 20.0 ],
 					"text" : "OCTAVE",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -950,9 +2716,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 802.66663658618927, 221.16666137882612, 389.333341121673584, 61.333331346511841 ],
+					"patching_rect" : [ 1469.499967694282532, 647.083332388145436, 389.333341121673584, 61.333331346511841 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 662.333318710327148, 248.000000715255737, 377.0, 57.0 ],
+					"presentation_rect" : [ 713.029533248931784, 243.000000715255737, 377.0, 57.0 ],
 					"varname" : "transpose_octave",
 					"viewvisibility" : 1
 				}
@@ -974,9 +2740,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 686.833322525024414, 327.833332237686136, 520.5, 196.0 ],
+					"patching_rect" : [ 1396.083303570747375, 729.416681794864644, 477.5, 233.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 561.029533248931784, 339.666676044464111, 531.0, 184.0 ],
+					"presentation_rect" : [ 636.029533248931784, 321.666676044464111, 487.0, 226.0 ],
 					"varname" : "midi_player_2",
 					"viewvisibility" : 1
 				}
@@ -998,9 +2764,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 686.833322525024414, 20.666666714889516, 531.5, 273.500002679313639 ],
+					"patching_rect" : [ 1396.083303570747375, 410.333334803581238, 477.5, 307.500002679313639 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 561.029533248931784, 50.666668176651001, 530.0, 281.0 ],
+					"presentation_rect" : [ 636.029533248931784, 6.666668176651001, 487.0, 312.0 ],
 					"varname" : "midi_player_1",
 					"viewvisibility" : 1
 				}
@@ -1010,12 +2776,12 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-9",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1271.499974489212036, 21.333330480796803, 30.0, 30.0 ]
+					"patching_rect" : [ 965.833304643630981, -99.333333253860474, 30.0, 30.0 ]
 				}
 
 			}
@@ -1026,7 +2792,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 32.5, 136.999999937499979, 53.0, 22.0 ],
+					"patching_rect" : [ 23.66661274433136, -19.666667938232422, 53.0, 22.0 ],
 					"text" : "pattrhub"
 				}
 
@@ -1044,12 +2810,12 @@
 					"maxclass" : "bpatcher",
 					"name" : "djazz_midi_out_bank_view.maxpat",
 					"numinlets" : 2,
-					"numoutlets" : 2,
+					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 188.333270788192749, 611.833340701545694, 980.5, 296.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1282.499965071678162, 96.666666746139526, 645.083338499069214, 292.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 13.999898135662079, 533.500009945289548, 1078.029635113269705, 458.999999046325684 ],
+					"presentation_rect" : [ 13.999898135662079, 557.500009945289548, 1411.029635113269705, 450.999999046325684 ],
 					"varname" : "midi_out_bank",
 					"viewvisibility" : 1
 				}
@@ -1058,11 +2824,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-4",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1034.833270788192749, 953.833333310569742, 134.0, 22.0 ],
+					"patching_rect" : [ 1282.499965071678162, 466.333334803581238, 89.0, 35.0 ],
 					"text" : "prepend midi_out_bank"
 				}
 
@@ -1071,11 +2838,11 @@
 				"box" : 				{
 					"comment" : "components messages",
 					"id" : "obj-3",
-					"index" : 0,
+					"index" : 3,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1493.83328104019165, 1029.833333310569742, 30.0, 30.0 ]
+					"patching_rect" : [ 1282.499965071678162, 999.416682033283223, 30.0, 30.0 ]
 				}
 
 			}
@@ -1083,11 +2850,11 @@
 				"box" : 				{
 					"comment" : "BANG",
 					"id" : "obj-5",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 125.499987244606018, 1003.166665253128031, 30.0, 30.0 ]
+					"patching_rect" : [ 353.833278059959412, 999.33334964224241, 30.0, 30.0 ]
 				}
 
 			}
@@ -1095,31 +2862,32 @@
 				"box" : 				{
 					"comment" : "ctrl params",
 					"id" : "obj-2",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1271.499974489212036, 1031.833330449546793, 30.0, 30.0 ]
+					"patching_rect" : [ 965.833304643630981, 999.33334964224241, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"autorestore" : "view_presets.json",
+					"autorestore" : "model_presets.json",
 					"id" : "obj-1",
+					"linecount" : 4,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1271.499974489212036, 819.166684772201506, 322.0, 22.0 ],
+					"patching_rect" : [ 965.833304643630981, 194.916661018302875, 109.999993681907654, 62.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 1221, 408, 1699, 939 ],
+						"client_rect" : [ -2281, 93, -1803, 624 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
 						"storage_rect" : [ 583, 69, 1034, 197 ]
 					}
 ,
-					"text" : "pattrstorage view_pattrstorage @greedy 1 @outputmode 5",
+					"text" : "pattrstorage view_pattrstorage @greedy 1 @outputmode 3",
 					"varname" : "view_pattrstorage"
 				}
 
@@ -1136,13 +2904,13 @@
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "djazz_master_view.maxpat",
-					"numinlets" : 2,
+					"numinlets" : 3,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 121.499987125396729, 269.000001192092896, 532.0, 291.0 ],
+					"patching_rect" : [ 353.833278059959412, 475.583335904819478, 532.0, 291.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 13.999898135662079, 223.666676044464111, 538.362882000000013, 300.0 ],
+					"presentation_rect" : [ 13.999898135662079, 209.666676044464111, 538.362882000000013, 300.0 ],
 					"varname" : "master",
 					"viewvisibility" : 1
 				}
@@ -1152,12 +2920,12 @@
 				"box" : 				{
 					"comment" : "from model out -- view params",
 					"id" : "obj-60",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 32.5, 16.0, 30.0, 30.0 ]
+					"patching_rect" : [ 23.66661274433136, -99.333333253860474, 30.0, 30.0 ]
 				}
 
 			}
@@ -1172,33 +2940,33 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-18", 1 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 36
+					"midpoints" : [ 1100.666605234146118, 104.458340490034061, 975.333304643630981, 104.458340490034061 ],
+					"source" : [ "obj-18", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-15", 0 ],
-					"source" : [ "obj-18", 0 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 37
+					"destination" : [ "obj-4", 0 ],
+					"midpoints" : [ 1211.666605234146118, 424.083340491481749, 1291.999965071678162, 424.083340491481749 ],
+					"order" : 0,
+					"source" : [ "obj-18", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"source" : [ "obj-18", 2 ],
-					"watchpoint_flags" : 5,
-					"watchpoint_id" : 38
+					"destination" : [ "obj-6", 1 ],
+					"midpoints" : [ 1211.666605234146118, 70.250006462760894, 1918.083303570747375, 70.250006462760894 ],
+					"order" : 1,
+					"source" : [ "obj-18", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
+					"midpoints" : [ 108.833195209503174, 336.791666773046472, 975.333304643630981, 336.791666773046472 ],
 					"source" : [ "obj-33", 0 ]
 				}
 
@@ -1213,10 +2981,9 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-41", 0 ],
+					"midpoints" : [ 53.166567087173462, 137.791663941825846, 235.833239197731018, 137.791663941825846 ],
 					"order" : 1,
-					"source" : [ "obj-40", 0 ],
-					"watchpoint_flags" : 2,
-					"watchpoint_id" : 35
+					"source" : [ "obj-40", 0 ]
 				}
 
 			}
@@ -1231,6 +2998,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
+					"midpoints" : [ 235.833239197731018, 336.625000146116236, 975.333304643630981, 336.625000146116236 ],
 					"source" : [ "obj-41", 0 ]
 				}
 
@@ -1238,6 +3006,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-33", 0 ],
+					"midpoints" : [ 53.166567087173462, 278.416664208599059, 108.833195209503174, 278.416664208599059 ],
 					"order" : 1,
 					"source" : [ "obj-45", 0 ]
 				}
@@ -1246,6 +3015,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-47", 1 ],
+					"midpoints" : [ 53.166567087173462, 409.08333308632848, 619.833278059959412, 409.08333308632848 ],
 					"order" : 0,
 					"source" : [ "obj-45", 0 ]
 				}
@@ -1268,7 +3038,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
-					"source" : [ "obj-6", 1 ]
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
@@ -1281,349 +3051,29 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-41", 1 ],
+					"midpoints" : [ 876.333278059959412, 99.624997493709543, 823.499915480613708, 99.624997493709543 ],
+					"order" : 0,
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-47", 2 ],
+					"order" : 1,
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-9", 0 ]
 				}
 
 			}
  ],
-		"parameters" : 		{
-			"obj-13::obj-11::obj-7" : [ "octave_up_2", "octave_up_2", 0 ],
-			"obj-13::obj-12::obj-7" : [ "octave_up_3", "octave_up_3", 0 ],
-			"obj-13::obj-13::obj-7" : [ "octave_up_4", "octave_up_4", 0 ],
-			"obj-13::obj-14::obj-7" : [ "octave_down_1", "octave_down_1", 0 ],
-			"obj-13::obj-15::obj-7" : [ "octave_down_2", "octave_down_2", 0 ],
-			"obj-13::obj-16::obj-7" : [ "octave_down_3", "octave_down_3", 0 ],
-			"obj-13::obj-17::obj-7" : [ "octave_down_4", "octave_down_4", 0 ],
-			"obj-13::obj-24::obj-7" : [ "no_octave", "no_octave", 0 ],
-			"obj-13::obj-6::obj-7" : [ "octave_up_1", "octave_up_1", 0 ],
-			"obj-13::obj-8" : [ "octave_transposition", "octave_transposition", 0 ],
-			"obj-47::obj-16::obj-1" : [ "loop_chapter", "loop_chapter", 0 ],
-			"obj-47::obj-85::obj-5::obj-21" : [ "grid", "grid", 0 ],
-			"obj-47::obj-85::obj-5::obj-28" : [ "chapter_count", "chapter_count", 0 ],
-			"obj-47::obj-94::obj-22::obj-24" : [ "chapter_button", "chapter_button", 0 ],
-			"obj-47::obj-94::obj-22::obj-25" : [ "bar_button", "bar_button", 0 ],
-			"parameterbanks" : 			{
-				"0" : 				{
-					"index" : 0,
-					"name" : "",
-					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-				}
-
-			}
-,
-			"inherited_shortname" : 1
-		}
-,
-		"dependency_cache" : [ 			{
-				"name" : "db_dictionary_array_utils.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/tools",
-				"patcherrelativepath" : "../../code/tools",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_PARAMS_CTRL_master_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/params",
-				"patcherrelativepath" : "../params",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_PARAMS_CTRL_midi_gen_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/params",
-				"patcherrelativepath" : "../params",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_PARAMS_VIEW_master_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/params",
-				"patcherrelativepath" : "../params",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_PARAMS_VIEW_midi_gen_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/params",
-				"patcherrelativepath" : "../params",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_PARAMS_grid_ctrl.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/params",
-				"patcherrelativepath" : "../params",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_PARAMS_grid_view_ctrl.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/params",
-				"patcherrelativepath" : "../params",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_add_multiple_tracks_view_window.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
-				"patcherrelativepath" : "../midiout",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_beat_bar_chapter_to_beat.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/grid",
-				"patcherrelativepath" : "../grid",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_beat_to_beat_bar_chapter.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/grid",
-				"patcherrelativepath" : "../grid",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_components_midi_out_bank_view.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
-				"patcherrelativepath" : "../../code/midiout",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_get_bar_count.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/grid",
-				"patcherrelativepath" : "../grid",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_get_chapter_count.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/grid",
-				"patcherrelativepath" : "../grid",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_get_chapter_start_and_end_beats.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/grid",
-				"patcherrelativepath" : "../grid",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_get_navigation_file_path.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/file_io",
-				"patcherrelativepath" : "../../code/file_io",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_grid_ctrl.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/grid",
-				"patcherrelativepath" : "../grid",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_grid_view_ctrl.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/grid",
-				"patcherrelativepath" : "../grid",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_loop_control_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiplayer",
-				"patcherrelativepath" : "../midiplayer",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_master_clock_view_ctrl.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/master",
-				"patcherrelativepath" : "../master",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_master_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/master",
-				"patcherrelativepath" : "../master",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_master_view_beat_out.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/master",
-				"patcherrelativepath" : "../master",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_metro_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
-				"patcherrelativepath" : "../tools",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_gen_view_tempo_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiplayer",
-				"patcherrelativepath" : "../midiplayer",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_bank_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
-				"patcherrelativepath" : "../midiout",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_bank_view_global_port.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
-				"patcherrelativepath" : "../midiout",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_bank_view_track_number_ctrl.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
-				"patcherrelativepath" : "../midiout",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_solo_bank_view.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
-				"patcherrelativepath" : "../../code/midiout",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_player_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiplayer",
-				"patcherrelativepath" : "../midiplayer",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_navigate_bar_ctrl.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/grid",
-				"patcherrelativepath" : "../grid",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_navigate_chapter_ctrl.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/grid",
-				"patcherrelativepath" : "../grid",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_navigate_view_chapter_bar_beat.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/grid",
-				"patcherrelativepath" : "../grid",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_number_button.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
-				"patcherrelativepath" : "../tools",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_range.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
-				"patcherrelativepath" : "../tools",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_score_file_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/song file io",
-				"patcherrelativepath" : "../song file io",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_select_score_file_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/song file io",
-				"patcherrelativepath" : "../song file io",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_session_file.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/file_io",
-				"patcherrelativepath" : "../../code/file_io",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_speed_button.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
-				"patcherrelativepath" : "../tools",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_speed_control_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiplayer",
-				"patcherrelativepath" : "../midiplayer",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_transpose_octave_controller.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midi effects/transpose octave",
-				"patcherrelativepath" : "../midi effects/transpose octave",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_view_load_score_files.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/song file io",
-				"patcherrelativepath" : "../song file io",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_view_load_song_folder.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/song file io",
-				"patcherrelativepath" : "../song file io",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_view_session_file.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/song file io",
-				"patcherrelativepath" : "../song file io",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "pattrinit.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/pattr",
-				"patcherrelativepath" : "../../code/pattr",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "view_presets.json",
-				"bootpath" : "C74:/help/max",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0,
 		"bgcolor" : [ 0.356862745098039, 0.356862745098039, 0.356862745098039, 1.0 ],
 		"editing_bgcolor" : [ 0.768627450980392, 0.788235294117647, 0.792156862745098, 1.0 ]
 	}

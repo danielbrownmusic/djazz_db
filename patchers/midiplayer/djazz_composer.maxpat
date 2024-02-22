@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -50,7 +50,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -184,7 +184,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 553.0, 613.0, 29.5, 22.0 ],
+					"patching_rect" : [ 553.0, 613.0, 56.5, 22.0 ],
 					"text" : "/ 1."
 				}
 
@@ -201,7 +201,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -423,7 +423,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -650,14 +650,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-8",
-					"linecount" : 5,
 					"maxclass" : "textedit",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 72.666666666666515, 118.0, 246.0, 75.0 ],
-					"text" : "Macintosh HD:/Users/danielbrown/Documents/Max 8/Projects/djazz_db/user/scores/AutumnleavesDoMin/new/AutumnleavesDoMin-new-2016.12.02-18h16.txt",
+					"text" : "NONE",
 					"varname" : "textedit"
 				}
 
@@ -665,7 +664,6 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-5",
-					"int" : 1,
 					"maxclass" : "gswitch2",
 					"numinlets" : 2,
 					"numoutlets" : 2,
@@ -688,7 +686,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -734,7 +732,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 5,
-											"revision" : 4,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -892,7 +890,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 5,
-											"revision" : 4,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -1304,7 +1302,7 @@
 					"destination" : [ "obj-25", 0 ],
 					"source" : [ "obj-19", 1 ],
 					"watchpoint_flags" : 1,
-					"watchpoint_id" : 23
+					"watchpoint_id" : 20
 				}
 
 			}
@@ -1321,7 +1319,7 @@
 					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-25", 0 ],
 					"watchpoint_flags" : 1,
-					"watchpoint_id" : 24
+					"watchpoint_id" : 21
 				}
 
 			}
@@ -1383,6 +1381,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-25", 1 ],
+					"midpoints" : [ 846.5, 574.0, 600.0, 574.0 ],
 					"source" : [ "obj-6", 2 ]
 				}
 

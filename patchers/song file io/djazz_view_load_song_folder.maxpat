@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -60,7 +60,7 @@
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 24.25, 238.5, 77.0, 35.0 ],
 					"saved_object_attributes" : 					{
-						"initial" : [ "clear" ],
+						"initial" : [ "" ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
 					}
@@ -81,7 +81,6 @@
 					"patching_rect" : [ 53.25, 342.0, 294.0, 43.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 12.0, 40.0, 474.0, 32.0 ],
-					"text" : "clear",
 					"varname" : "textedit"
 				}
 

@@ -223,7 +223,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 21.5, 216.0, 132.0, 22.0 ],
+					"patching_rect" : [ 21.5, 213.0, 132.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -281,7 +281,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-23",
@@ -448,7 +447,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 21.5, 123.0, 101.0, 22.0 ],
+					"patching_rect" : [ 21.5, 132.0, 101.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",

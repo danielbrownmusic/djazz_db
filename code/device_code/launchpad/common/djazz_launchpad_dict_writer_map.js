@@ -24,6 +24,22 @@ exports.add_param = function (param, cell_type, cell_value, color)
 }
 
 
+exports.remove_param = function (param)
+{
+    d_.get("parameters").remove(param);
+}
+
+
+exports.clear = function()
+{
+    d_.replace("grid");
+    d_.replace("parameters");
+}
+
+
+// -------------------------------------------------------------
+
+
 function to_key_()
 {
     return Array.prototype.slice.call(arguments).join("::");

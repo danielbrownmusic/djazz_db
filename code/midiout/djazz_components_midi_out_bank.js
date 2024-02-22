@@ -1,9 +1,14 @@
 var dutils  = require("db_dictionary_array_utils");
+
 autowatch   = 1;
+outlets     = 2;
 
 var tracks_ = [];
 
-//declareattribute("bank_dict", "get_bank_dict", "set_bank_dict");
+/* var presets_file_name     = "presets.json";
+var components_file_name  = "components.json"; */
+
+declareattribute("bank_dict", "get_bank_dict", "set_bank_dict");
 
 /*
 You can send dicts as dicts to other json objects, 
@@ -15,7 +20,18 @@ or they will be inserted as a js object!
 // ---------------------------------------------------------------
 
 
-function setvalueof(bank_dict)
+function get_bank_dict()
+{
+    var bank_dict = new Dict ();
+    for (var i = 0; i < tracks_.length; i++)
+    {
+        bank_dict.append("tracks", get_track_dict_(tracks_[i]));
+    }
+    return bank_dict;
+}
+
+
+function set_bank_dict(bank_dict)
 {
     clear();
     
@@ -26,32 +42,18 @@ function setvalueof(bank_dict)
 
     for (var i = 0; i < track_array.length; i++)
     {      
-        var track           = add_track();
-        var comp            = get_track_components_mgr_(track);
-        var effects_dict    = track_array[i];
-        comp.message("effects_dict", effects_dict.name);
+        var track = add_track();
+        set_track_dict_(track, track_array[i]);
     }
 }
 
 
-function getvalueof()
-{
-    var bank_dict = new Dict ();
-    for (var i = 0; i < tracks_.length; i++)
-    {
-        var track           = tracks_[i];
-        var comp_mgr        = get_track_components_mgr_(track);
-        var track_dict_name = comp_mgr.getattr("effects_dict");
-        var track_dict      = new Dict (track_dict_name);
-        bank_dict.append("tracks", track_dict);
-    }
-    return bank_dict;
-}
+// -----------------------------------------------------------------------------------------------
 
 
 function save_bank(file_path)
 {
-    var bank_dict = getvalueof();
+    var bank_dict = get_bank_dict();
     bank_dict.export_json(file_path);
 }
 
@@ -60,10 +62,46 @@ function load_bank(file_path)
 {
     var bank_dict = new Dict ();
     bank_dict.import_json(file_path);
-    setvalueof(bank_dict);
-    notifyclients();
+    set_bank_dict(bank_dict);
 }
 
+
+function save_preset(file_path)
+{
+    outlet( 1, "store", 1);
+    outlet (1, "write", file_path);
+}
+
+
+function load_preset(file_path)
+{
+    outlet( 1, "read", file_path);
+    outlet( 1, 1);
+}
+
+
+function save_bank_with_presets(components_file_path, presets_file_path)
+{
+    save_preset(presets_file_path);
+    save_bank(components_file_path);
+}
+
+
+function load_bank_with_presets(components_file_path, presets_file_path)
+{
+    load_bank(components_file_path);
+    var tsk = new Task
+    (
+        function ()
+        {
+            load_preset(presets_file_path);
+        }
+    )
+    tsk.schedule(3000);
+}
+
+
+// -----------------------------------------------------------------------------------------------
 
 
 function clear()
@@ -177,6 +215,20 @@ function get_track_components_mgr_(track)
 
 }
 get_track_components_mgr_.local = 1;
+
+
+function get_track_dict_(track)
+{
+    return new Dict (get_track_components_mgr_(track).getattr("effects_dict"));
+}
+get_track_dict_.local = 1;
+
+
+function set_track_dict_(track, d)
+{
+    get_track_components_mgr_(track).message("effects_dict", d.name);
+}
+set_track_dict_.local = 1;
 
 
 function get_solo_bank_()
