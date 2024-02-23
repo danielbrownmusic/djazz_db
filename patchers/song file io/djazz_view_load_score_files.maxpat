@@ -157,7 +157,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 459.0, 322.0, 432.25, 21.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 5.0, 43.500000031250011, 596.75, 22.5 ],
+					"presentation_rect" : [ 0.0, 27.500000031250011, 385.75, 22.5 ],
 					"varname" : "score_file_2",
 					"viewvisibility" : 1
 				}
@@ -182,7 +182,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 37.0, 322.0, 402.75, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 5.0, 5.500000031250011, 596.75, 23.0 ],
+					"presentation_rect" : [ 0.0, -0.499999968749989, 385.75, 23.0 ],
 					"varname" : "score_file_1",
 					"viewvisibility" : 1
 				}

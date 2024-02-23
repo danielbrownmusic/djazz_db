@@ -46,7 +46,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 198.0, 202.0, 150.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 16.0, 9.0, 74.0, 20.0 ],
+					"presentation_rect" : [ 2.0, 1.0, 74.0, 20.0 ],
 					"text" : "UDP SEND",
 					"textcolor" : [ 1.0, 0.980392156862745, 0.980392156862745, 1.0 ]
 				}
@@ -60,7 +60,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 291.0, 214.0, 150.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 114.0, 36.0, 42.0, 20.0 ],
+					"presentation_rect" : [ 89.0, 23.0, 42.0, 20.0 ],
 					"text" : "port",
 					"textcolor" : [ 1.0, 0.980392156862745, 0.980392156862745, 1.0 ]
 				}
@@ -74,7 +74,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 239.0, 124.0, 150.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 16.0, 36.0, 42.0, 20.0 ],
+					"presentation_rect" : [ 2.0, 23.0, 42.0, 20.0 ],
 					"text" : "host",
 					"textcolor" : [ 1.0, 0.980392156862745, 0.980392156862745, 1.0 ]
 				}
@@ -84,7 +84,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-12",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -191,7 +191,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 269.0, 104.0, 70.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 114.0, 60.0, 53.0, 22.0 ],
+					"presentation_rect" : [ 89.0, 47.0, 53.0, 22.0 ],
 					"tabmode" : 0,
 					"text" : "7405\n",
 					"varname" : "textedit[1]",
@@ -212,7 +212,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 69.0, 104.0, 139.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 16.0, 60.0, 80.0, 22.0 ],
+					"presentation_rect" : [ 2.0, 47.0, 80.0, 22.0 ],
 					"tabmode" : 0,
 					"text" : "127.0.0.1",
 					"varname" : "textedit",
@@ -278,6 +278,8 @@
 
 			}
  ],
+		"dependency_cache" : [  ],
+		"autosave" : 0,
 		"bgcolor" : [ 0.545098039215686, 0.431372549019608, 0.494117647058824, 1.0 ],
 		"editing_bgcolor" : [ 0.490196078431373, 0.490196078431373, 0.490196078431373, 1.0 ]
 	}

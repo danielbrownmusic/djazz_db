@@ -81,7 +81,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1573.599999999999909, 345.0, 52.0, 63.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 395.0, 159.5, 54.0, 52.0 ],
+					"presentation_rect" : [ 356.0, 111.5, 54.0, 52.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -102,9 +102,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 672.5, 345.0, 451.0, 38.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 6.0, 6.5, 449.0, 41.0 ],
+					"patching_rect" : [ 672.5, 345.0, 446.0, 63.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -117,7 +115,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 378.100000000000023, 318.0, 51.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 2.0, 63.0, 45.0, 20.0 ],
+					"presentation_rect" : [ 2.0, 19.0, 45.0, 20.0 ],
 					"text" : "LOOP",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -131,7 +129,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 86.100000000000023, 318.0, 51.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 2.0, 118.625, 51.0, 20.0 ],
+					"presentation_rect" : [ 2.0, 74.625, 51.0, 20.0 ],
 					"text" : "SPEED",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -156,7 +154,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 354.5, 345.0, 290.0, 54.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 55.0, 48.25, 287.0, 49.5 ],
+					"presentation_rect" : [ 55.0, 4.25, 287.0, 49.5 ],
 					"varname" : "djazz_navigate_view_loop_ctrl",
 					"viewvisibility" : 1
 				}
@@ -181,7 +179,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 65.100000000000023, 345.0, 248.0, 54.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 55.0, 99.75, 252.0, 57.75 ],
+					"presentation_rect" : [ 55.0, 55.75, 252.0, 57.75 ],
 					"varname" : "djazz_navigate_view_speed_ctrl",
 					"viewvisibility" : 1
 				}
@@ -220,7 +218,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1149.099999999999909, 345.0, 396.0, 63.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 2.0, 159.5, 391.0, 62.0 ],
+					"presentation_rect" : [ 2.0, 115.5, 352.0, 48.0 ],
 					"varname" : "djazz_master_clock_view_ctrl",
 					"viewvisibility" : 1
 				}
@@ -304,7 +302,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
 					"midpoints" : [ 74.600000000000023, 281.0, 364.0, 281.0 ],
-					"order" : 0,
+					"order" : 2,
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -313,7 +311,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
 					"midpoints" : [ 74.600000000000023, 286.0, 74.600000000000023, 286.0 ],
-					"order" : 2,
+					"order" : 1,
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -322,7 +320,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-59", 0 ],
 					"midpoints" : [ 74.600000000000023, 280.5, 682.0, 280.5 ],
-					"order" : 1,
+					"order" : 0,
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -426,8 +424,8 @@
 			}
  ],
 		"autosave" : 0,
-		"bgcolor" : [ 0.219607843137255, 0.443137254901961, 0.462745098039216, 1.0 ],
-		"editing_bgcolor" : [ 0.337254901960784, 0.525490196078431, 0.541176470588235, 1.0 ]
+		"bgcolor" : [ 0.309803921568627, 0.482352941176471, 0.63921568627451, 1.0 ],
+		"editing_bgcolor" : [ 0.309803921568627, 0.482352941176471, 0.63921568627451, 1.0 ]
 	}
 
 }

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 224.0, 100.0, 1026.0, 934.0 ],
+		"rect" : [ -1648.0, 191.0, 1026.0, 934.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -96,7 +96,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 426.0, 629.0, 100.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 494.0, 1.0, 100.0, 20.0 ],
+					"presentation_rect" : [ 335.0, 1.0, 47.0, 20.0 ],
 					"text" : "Last",
 					"texton" : "Last"
 				}
@@ -241,7 +241,7 @@
 					"patching_rect" : [ 106.0, 411.0, 208.0, 22.0 ],
 					"prefix" : "~/Documents/Max 8/Projects/djazz_db/user/scores/Allthethingsyouare/",
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 85.0, 22.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 70.0, 22.0 ],
 					"types" : "fold",
 					"varname" : "umenu"
 				}
@@ -260,7 +260,7 @@
 					"pattrmode" : 1,
 					"prefix" : "~/Documents/Max 8/Projects/djazz_db/user/scores/Allthethingsyouare/new/",
 					"presentation" : 1,
-					"presentation_rect" : [ 88.0, 0.0, 392.0, 22.0 ],
+					"presentation_rect" : [ 74.0, 0.0, 254.0, 22.0 ],
 					"types" : "TEXT",
 					"varname" : "umenu[1]"
 				}
