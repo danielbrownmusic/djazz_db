@@ -70,6 +70,7 @@ function load_session(folder_path)
         f.next();
     }
 
+    post (view_presets_file_path);
 /*     var d = new Dict();
     d.import_json(file_path);
     var midi_out_bank_comp = this.patcher.getnamed("midi_out_bank").subpatcher().getnamed("components");

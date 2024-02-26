@@ -186,7 +186,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1276.904728949069977, -78.317596884029399, 177.333334803581238, 93.333332300186157 ],
+					"patching_rect" : [ 1249.904728949069977, -48.333333253860474, 177.333334803581238, 93.333332300186157 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 895.029533248931784, 149.801217428756843, 146.666667222976685, 75.999998450279236 ],
 					"varname" : "udp_send",
@@ -3614,8 +3614,8 @@
 			}
 , 			{
 				"name" : "view_presets.json",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/user/sessions/something",
-				"patcherrelativepath" : "../../user/sessions/something",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/asdfasdfasdf",
+				"patcherrelativepath" : "../../asdfasdfasdf",
 				"type" : "JSON",
 				"implicit" : 1
 			}
