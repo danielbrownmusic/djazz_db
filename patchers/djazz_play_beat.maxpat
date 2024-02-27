@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1214.0, 351.0, 812.0, 615.0 ],
+		"rect" : [ -1904.0, 535.0, 812.0, 615.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,13 +40,25 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-82",
+					"linecount" : 8,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 283.714289665222168, 325.5, 264.0, 127.0 ],
+					"text" : "supervp.scrub input:\n\nstart_time, end_time time_dur \n\nEX:\n\n100, 400 600\ngoes from 100 ms to 400 ms at half speed\n"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "bang to reset buffer",
 					"id" : "obj-7",
 					"index" : 3,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 417.0, 12.0, 30.0, 30.0 ]
 				}
 
@@ -60,18 +72,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 417.0, 191.0, 41.0, 22.0 ],
 					"text" : "set $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 417.0, 124.0, 73.0, 22.0 ],
-					"text" : "pv BUFFER"
 				}
 
 			}
@@ -670,13 +670,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
 					"midpoints" : [ 426.5, 293.671052813529968, 29.490606777282665, 293.671052813529968 ],
 					"source" : [ "obj-6", 0 ]
@@ -685,7 +678,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
+					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-7", 0 ]
 				}
 
