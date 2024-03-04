@@ -57,6 +57,7 @@ function set_bank_dict(bank_dict)
         var effects_dict    = track_array[i];
         comp.message("effects_dict", effects_dict.name); 
     }
+    set_solo_bank_count_();
 }
 
 
@@ -126,6 +127,7 @@ function clear()
 function add_tracks(n)
 {
     add_tracks_(n);
+    set_solo_bank_count_();
     outlet (0, "add_tracks", n);
 }
 
@@ -133,6 +135,7 @@ function add_tracks(n)
 function add_track()
 {
     add_track_();
+    set_solo_bank_count_();
     outlet (0, "add_track");
 }
 
@@ -140,6 +143,7 @@ function add_track()
 function remove_last_tracks(n)
 {
     remove_last_tracks_(n);
+    set_solo_bank_count_();
     outlet (0, "remove_last_tracks", n);
 }
 
@@ -147,6 +151,7 @@ function remove_last_tracks(n)
 function remove_last_track()
 {
     remove_last_track_()
+    set_solo_bank_count_();
     outlet (0, "remove_last_track");
 }
 
@@ -223,8 +228,6 @@ function add_track_()
     this.patcher.connect(track, 0, this.box, 1);
     this.patcher.connect(track, 1, get_solo_bank_(), 0);
 
-    set_solo_bank_count_();
-
     return track;
 }
 add_track_.local = 1;
@@ -245,8 +248,6 @@ function remove_last_track_()
     if (tracks_.length === 0)
         return;
     this.patcher.remove(tracks_.pop());
-
-    set_solo_bank_count_();
 }
 remove_last_track_.local = 1;
 

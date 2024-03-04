@@ -1,0 +1,193 @@
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+EVENT 1
+  AnteOut "bang"
+

@@ -40,10 +40,11 @@ function set_bank_dict(bank_dict)
     if (track_array === null)
         return;
 
+    add_tracks(track_array.length);
+
     for (var i = 0; i < track_array.length; i++)
     {      
-        var track = add_track();
-        set_track_dict_(track, track_array[i]);
+        set_track_dict_(tracks_[i], track_array[i]);
     }
 }
 
@@ -112,56 +113,28 @@ function clear()
 
 function add_tracks(n)
 {
-    for (var i = 0; i < n; i++)
-    {
-        add_track();
-    }
+    add_tracks_(n);
+    set_solo_bank_count_();
 }
 
 
 function add_track()
 {
-    var events_inlet    = this.patcher.getnamed("events_inlet");
-    var events_outlet 	= this.patcher.getnamed("events_outlet");
-
-    var i               = tracks_.length;
-
-    var w               = 160;
-    var h               = 48;
-    var x               = events_inlet.rect[0] + w * i;
-    var y               = 440;//this.box.rect[3] + 2 * h;
-
-    var track 		    = this.patcher.newdefault(x, y, "djazz_midi_out_track", i);
-    track.varname 	    = "track_" + i;
-
-    tracks_.push(track);
-
-    track.subpatcher().getnamed("midi_in_channel").setvalueof(i + 1);
-    track.subpatcher().getnamed("midi_out_channel").setvalueof(i + 1);
-
-    this.patcher.connect(events_inlet, 0, track, 0);
-    this.patcher.connect(track, 0, events_outlet, 0);
+    add_track_();
     set_solo_bank_count_();
-
-    return track;
 }
 
 
 function remove_last_tracks(n)
 {
-    for (var i = 0; i < n; i++)
-    {
-        remove_last_track();
-    }
+    remove_last_tracks_(n);
+    set_solo_bank_count_();
 }
 
 
 function remove_last_track()
 {
-    if (tracks_.length === 0)
-        return;
-    this.patcher.remove(tracks_.pop());
-
+    remove_last_track_();
     set_solo_bank_count_();
 }
 
@@ -202,6 +175,66 @@ function set_global()
         outlet(0, msg, args);
     }
 }
+
+
+// ------------------------------------------------------------------------
+
+
+function add_tracks_(n)
+{
+    for (var i = 0; i < n; i++)
+    {
+        add_track_();
+    }
+}
+add_tracks_.local = 1;
+
+
+function add_track_()
+{
+    var events_inlet    = this.patcher.getnamed("events_inlet");
+    var events_outlet 	= this.patcher.getnamed("events_outlet");
+
+    var i               = tracks_.length;
+
+    var w               = 160;
+    var h               = 48;
+    var x               = events_inlet.rect[0] + w * i;
+    var y               = 440;//this.box.rect[3] + 2 * h;
+
+    var track 		    = this.patcher.newdefault(x, y, "djazz_midi_out_track", i);
+    track.varname 	    = "track_" + i;
+
+    tracks_.push(track);
+
+    track.subpatcher().getnamed("midi_in_channel").setvalueof(i + 1);
+    track.subpatcher().getnamed("midi_out_channel").setvalueof(i + 1);
+
+    this.patcher.connect(events_inlet, 0, track, 0);
+    this.patcher.connect(track, 0, events_outlet, 0);
+
+    return track;
+}
+add_track_.local = 1;
+
+
+function remove_last_tracks_(n)
+{
+    for (var i = 0; i < n; i++)
+    {
+        remove_last_track_();
+    }
+}
+remove_last_tracks_.local = 1;
+
+
+function remove_last_track_()
+{
+    if (tracks_.length === 0)
+        return;
+    this.patcher.remove(tracks_.pop());
+}
+remove_last_track_.local = 1;
 
 
 // ------------------------------------------------------------------------
