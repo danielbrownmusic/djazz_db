@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 505.0, 136.0, 1610.0, 946.0 ],
+		"rect" : [ 43.0, 114.0, 2106.0, 1112.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,42 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1650.642839431762695, 918.0, 96.0, 22.0 ],
+					"text" : "djazz_udp_send",
+					"varname" : "udp_send[1]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgmode" : 1,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-11",
+					"lockeddragscroll" : 0,
+					"lockedsize" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "djazz_udp_send_view.maxpat",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1727.642839431762695, 787.666666746139526, 148.342129588127136, 80.333332300186157 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 895.029533248931784, 149.801217428756843, 146.666667222976685, 75.999998450279236 ],
+					"varname" : "udp_send",
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"bgcolor" : [ 0.192156862745098, 0.192156862745098, 0.211764705882353, 1.0 ],
 					"id" : "obj-1",
@@ -169,8 +205,8 @@
 					"id" : "obj-57",
 					"maxclass" : "newobj",
 					"numinlets" : 4,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
+					"numoutlets" : 3,
+					"outlettype" : [ "bang", "", "" ],
 					"patching_rect" : [ 4.142882406711578, 781.03708437208843, 1665.499957025051117, 22.0 ],
 					"text" : "djazz_model",
 					"varname" : "model"
@@ -269,6 +305,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 1 ],
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-13", 0 ]
 				}
@@ -306,9 +349,40 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"order" : 0,
+					"source" : [ "obj-57", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-57", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-57", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-65", 0 ],
 					"midpoints" : [ 1660.142839431762695, 829.703751714274404, 1702.142873466014862, 829.703751714274404, 1702.142873466014862, 5.33468631033611, 13.642882406711578, 5.33468631033611 ],
-					"source" : [ "obj-57", 1 ]
+					"order" : 1,
+					"source" : [ "obj-57", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"order" : 0,
+					"source" : [ "obj-65", 1 ]
 				}
 
 			}
@@ -322,6 +396,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-57", 1 ],
+					"order" : 1,
 					"source" : [ "obj-65", 1 ]
 				}
 
@@ -549,13 +624,6 @@
 			}
 , 			{
 				"name" : "djazz_components_midi_out_bank_view.js",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
-				"patcherrelativepath" : "../code/midiout",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_components_midi_out_effect_list.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
 				"patcherrelativepath" : "../code/midiout",
 				"type" : "TEXT",
@@ -849,13 +917,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "djazz_midi_out_effect_list.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
-				"patcherrelativepath" : "./midiout",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_midi_out_solo_bank.js",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
 				"patcherrelativepath" : "../code/midiout",
@@ -867,13 +928,6 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/midiout",
 				"patcherrelativepath" : "../code/midiout",
 				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_midi_out_track.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midiout",
-				"patcherrelativepath" : "./midiout",
-				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2505.0, 0.0, 2141.0, 1145.0 ],
+		"rect" : [ 254.0, 87.0, 2141.0, 1139.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -59,30 +59,6 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 857.0, 197.0, 58.0, 22.0 ],
 					"text" : "loadbang"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-11",
-					"lockeddragscroll" : 0,
-					"lockedsize" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "djazz_udp_send_view.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1249.904728949069977, -48.333333253860474, 177.333334803581238, 93.333332300186157 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 895.029533248931784, 149.801217428756843, 146.666667222976685, 75.999998450279236 ],
-					"varname" : "udp_send",
-					"viewvisibility" : 1
 				}
 
 			}
@@ -3473,13 +3449,6 @@
 				"name" : "djazz_transpose_octave_controller.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/midi effects/transpose octave",
 				"patcherrelativepath" : "../midi effects/transpose octave",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "djazz_udp_send_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/udp/send",
-				"patcherrelativepath" : "../udp/send",
 				"type" : "JSON",
 				"implicit" : 1
 			}

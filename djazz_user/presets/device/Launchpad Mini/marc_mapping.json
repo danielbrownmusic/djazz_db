@@ -1,0 +1,48 @@
+{
+	"device" : "Launchpad Mini",
+	"grid" : 	{
+		"chapter" : 		{
+			"cells" : [ "midi 8", "midi 24", "midi 40", "midi 56", "midi 72", "midi 88", "midi 104", "midi 120" ],
+			"colors" : 			{
+				"unused" : "none",
+				"off" : "red dim static",
+				"waiting" : "red dim static",
+				"playing" : "red bright static"
+			}
+
+		}
+,
+		"bar" : 		{
+			"cells" : [ "midi 0", "midi 1", "midi 2", "midi 3", "midi 4", "midi 5", "midi 6", "midi 7", "midi 16", "midi 17", "midi 18", "midi 19", "midi 20", "midi 21", "midi 22", "midi 23", "midi 32", "midi 33", "midi 34", "midi 35", "midi 36", "midi 37", "midi 38", "midi 39", "midi 48", "midi 49", "midi 50", "midi 51", "midi 52", "midi 53", "midi 54", "midi 55" ],
+			"colors" : 			{
+				"unused" : "none",
+				"off" : "yellow bright static",
+				"waiting" : "red dim static",
+				"playing" : "red bright static"
+			}
+
+		}
+
+	}
+,
+	"parameters" : 	{
+		"midi_player_1_speed_button_4" : "midi 112 green",
+		"midi_player_1_speed_button_2" : "midi 96 green",
+		"midi_player_1_speed_button_3/2" : "midi 80 green",
+		"midi_player_1_speed_button_1/2" : "midi 64 green",
+		"midi_player_1_loop_1" : "midi 71 green",
+		"midi_player_1_loop_2" : "midi 87 green",
+		"midi_player_1_loop_3" : "midi 103 green",
+		"midi_player_1_loop_4" : "midi 119 green",
+		"midi_player_1_loop_5" : "midi 70 green",
+		"midi_player_1_loop_6" : "midi 86 green",
+		"midi_player_1_loop_7" : "midi 102 green",
+		"midi_player_1_loop_8" : "midi 118 green",
+		"track_3_mute" : "midi 65 orange",
+		"track_4_mute" : "midi 66 orange",
+		"track_5_mute" : "midi 67 orange",
+		"track_6_mute" : "midi 68 orange",
+		"track_7_mute" : "midi 69 orange"
+	}
+
+}

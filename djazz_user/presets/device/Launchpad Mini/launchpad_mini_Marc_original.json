@@ -1,0 +1,16 @@
+{
+	"device" : "launchpad_pro_mk3"
+	,
+	"parameters" : 
+	{
+		"midi_gen_1_speed_1/2" 	: "midi 64 orange",
+		"midi_gen_1_speed_3/2" 	: "midi 80 orange",
+		"midi_gen_1_speed_2" 	: "midi 96 orange",
+		"midi_gen_1_speed_4" 	: "midi 112 orange",
+		"midi_gen_1_loop_1" 	: "midi 96 orange",
+		"midi_gen_1_loop_2" 	: "midi 97 orange",
+		"midi_gen_1_loop_3" 	: "midi 98 orange",
+		"loop_chapter"			: "midi 80 red"
+	}
+}
+

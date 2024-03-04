@@ -1,0 +1,24 @@
+{
+    "parameters" : 
+    {
+        "midi_player_1_speed_button_3/2" : {
+            "0" : "midi 11 14 1"
+            ,
+            "1" : "midi 11 48 1"
+        }
+        ,
+        "bar 1" : {
+            "unused" : "",
+            "off" : "",
+            "waiting" : "",
+            "playing" : ""
+        }
+    }        
+    ,
+    "cells" :
+    {
+        "midi 11" : "toggle_param midi_player_1_speed_button_3/2"
+        ,
+        "midi 1" : "set_param bar 1"
+    }
+}
