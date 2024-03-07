@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1159.0, 360.0, 640.0, 480.0 ],
+		"rect" : [ 424.0, 578.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -57,7 +57,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 24.0, 184.0, 82.0, 22.0 ],
+					"patching_rect" : [ 24.0, 184.0, 98.0, 22.0 ],
 					"text" : "append #1 $1"
 				}
 
@@ -76,9 +76,9 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "(s) formatted beat dict name",
 					"id" : "obj-3",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -89,9 +89,9 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "(s) beat dict name",
 					"id" : "obj-4",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -102,9 +102,9 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "messages to beat dict",
 					"id" : "obj-5",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -148,16 +148,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "djazz_make_cloned_dict_object_symbol_from_dict_name.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }
