@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 254.0, 87.0, 2141.0, 1139.0 ],
+		"rect" : [ 95.0, 91.0, 1459.0, 1041.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,25 +40,14 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-16",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 857.0, 265.0, 82.0, 22.0 ],
-					"text" : "outputmode 3"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-14",
+					"id" : "obj-11",
+					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 857.0, 197.0, 58.0, 22.0 ],
-					"text" : "loadbang"
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 738.0, 20.833346179382261, 76.833298325538635, 49.0 ],
+					"text" : "loadmess outputmode 3"
 				}
 
 			}
@@ -2897,7 +2886,6 @@
 			}
 , 			{
 				"box" : 				{
-					"autorestore" : "view_presets.json",
 					"id" : "obj-1",
 					"linecount" : 4,
 					"maxclass" : "newobj",
@@ -2964,15 +2952,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-16", 0 ],
-					"source" : [ "obj-14", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-16", 0 ]
+					"source" : [ "obj-11", 0 ]
 				}
 
 			}
@@ -3478,13 +3459,6 @@
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/code/pattr",
 				"patcherrelativepath" : "../../code/pattr",
 				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "view_presets.json",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/asdfasdfasdf",
-				"patcherrelativepath" : "../../asdfasdfasdf",
-				"type" : "JSON",
 				"implicit" : 1
 			}
  ],

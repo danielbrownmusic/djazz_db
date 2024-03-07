@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 480.0, 141.0, 886.0, 1063.0 ],
+		"rect" : [ 93.0, 185.0, 886.0, 1063.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -104,7 +104,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 170.949761825409041, 773.150686400421137, 95.0, 22.0 ],
+					"patching_rect" : [ 170.949761825409041, 786.150686400421137, 95.0, 22.0 ],
 					"text" : "djazz_play_beat"
 				}
 
@@ -155,7 +155,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"comment" : "",
@@ -227,7 +226,6 @@
 										"style" : "",
 										"subpatcher_template" : "",
 										"assistshowspatchername" : 0,
-										"visible" : 1,
 										"boxes" : [ 											{
 												"box" : 												{
 													"id" : "obj-1",
@@ -283,7 +281,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 190.50000022271729, 409.0, 68.0, 22.0 ],
+									"patching_rect" : [ 190.50000022271729, 419.0, 68.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -396,7 +394,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 92.50000022271729, 409.0, 71.0, 22.0 ],
+									"patching_rect" : [ 92.50000022271729, 419.0, 71.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -769,7 +767,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 70.949761825409041, 773.150686400421137, 95.0, 22.0 ],
+					"patching_rect" : [ 70.949761825409041, 786.150686400421137, 95.0, 22.0 ],
 					"text" : "djazz_play_beat"
 				}
 
@@ -804,7 +802,7 @@
 				"box" : 				{
 					"comment" : "(i) beat",
 					"id" : "obj-152",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -817,7 +815,7 @@
 				"box" : 				{
 					"comment" : "(s) buffer name",
 					"id" : "obj-153",
-					"index" : 4,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -830,7 +828,7 @@
 				"box" : 				{
 					"comment" : "(s) beat dict name",
 					"id" : "obj-154",
-					"index" : 3,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -843,7 +841,7 @@
 				"box" : 				{
 					"comment" : "(float) tempo",
 					"id" : "obj-155",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -856,11 +854,11 @@
 				"box" : 				{
 					"comment" : "(signal) svp 1",
 					"id" : "obj-156",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 70.949761825409041, 883.150638427368222, 30.0, 30.0 ]
+					"patching_rect" : [ 70.949761825409041, 896.150638427368222, 30.0, 30.0 ]
 				}
 
 			}
@@ -868,11 +866,11 @@
 				"box" : 				{
 					"comment" : "(signal) svp 2",
 					"id" : "obj-157",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 149.949767999999949, 883.150638427368222, 30.0, 30.0 ]
+					"patching_rect" : [ 149.949767999999949, 896.150638427368222, 30.0, 30.0 ]
 				}
 
 			}
@@ -1067,11 +1065,31 @@
 					"destination" : [ "obj-30", 0 ],
 					"source" : [ "obj-79", 0 ],
 					"watchpoint_flags" : 1,
-					"watchpoint_id" : 3
+					"watchpoint_id" : 6
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "djazz_play_beat.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/audio_record_play",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "djazz_tempo_to_ms.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
+				"patcherrelativepath" : "../tools",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "supervp.scrub~.mxo",
+				"type" : "iLaX"
+			}
+ ],
+		"autosave" : 0
 	}
 
 }
