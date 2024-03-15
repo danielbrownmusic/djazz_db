@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 741.0, 360.0, 640.0, 480.0 ],
+		"rect" : [ 500.0, 227.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,31 +40,31 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-27",
+					"id" : "obj-66",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 50.0, 269.0, 91.0, 22.0 ],
+					"patching_rect" : [ 50.0, 247.0, 91.0, 22.0 ],
 					"text" : "route dictionary"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-6",
+					"id" : "obj-65",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 50.0, 186.0, 130.0, 22.0 ],
-					"text" : "dict.unpack direct_link:"
+					"patching_rect" : [ 50.0, 168.0, 144.0, 22.0 ],
+					"text" : "dict.unpack transposition:"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-5",
+					"id" : "obj-64",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
@@ -76,8 +76,8 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "(sym) state dict name",
-					"id" : "obj-36",
+					"comment" : "(sym) link dict name",
+					"id" : "obj-69",
 					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -89,42 +89,42 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "(sym) direct link dict name",
-					"id" : "obj-37",
+					"comment" : "(int) pitch transposition",
+					"id" : "obj-70",
 					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 50.0, 351.0, 30.0, 30.0 ]
+					"patching_rect" : [ 50.0, 329.0, 30.0, 30.0 ]
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-37", 0 ],
-					"source" : [ "obj-27", 0 ]
+					"destination" : [ "obj-65", 0 ],
+					"source" : [ "obj-64", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-36", 0 ]
+					"destination" : [ "obj-66", 0 ],
+					"source" : [ "obj-65", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"source" : [ "obj-5", 0 ]
+					"destination" : [ "obj-70", 0 ],
+					"source" : [ "obj-66", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-27", 0 ],
-					"source" : [ "obj-6", 0 ]
+					"destination" : [ "obj-64", 0 ],
+					"source" : [ "obj-69", 0 ]
 				}
 
 			}
