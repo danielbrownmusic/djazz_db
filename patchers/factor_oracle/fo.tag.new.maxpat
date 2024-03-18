@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 424.0, 578.0, 640.0, 480.0 ],
+		"rect" : [ 59.0, 106.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,111 +40,111 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-7",
+					"id" : "obj-75",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 24.0, 106.0, 316.0, 22.0 ],
-					"text" : "djazz_make_cloned_dict_object_symbol_from_dict_name"
+					"patching_rect" : [ 50.0, 246.0, 95.0, 22.0 ],
+					"text" : "du.name_to_obj"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-378",
-					"maxclass" : "message",
+					"id" : "obj-78",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 50.0, 161.0, 91.0, 22.0 ],
+					"text" : "route dictionary"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-77",
+					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 24.0, 184.0, 98.0, 22.0 ],
-					"text" : "append #1 $1"
+					"outlettype" : [ "dictionary" ],
+					"patching_rect" : [ 50.0, 100.0, 113.0, 22.0 ],
+					"text" : "dict.pack root: type:"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-375",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 375.0, 180.0, 55.0, 22.0 ],
-					"text" : "name $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "(s) formatted beat dict name",
-					"id" : "obj-3",
+					"comment" : "(int) chord root",
+					"id" : "obj-84",
 					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 24.0, 19.000005066093422, 30.0, 30.0 ]
+					"patching_rect" : [ 50.0, 40.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "(s) beat dict name",
-					"id" : "obj-4",
+					"comment" : "",
+					"id" : "obj-85",
 					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 375.0, 19.000005066093422, 30.0, 30.0 ]
+					"patching_rect" : [ 144.0, 40.0, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "messages to beat dict",
-					"id" : "obj-5",
+					"comment" : "(a) tag",
+					"id" : "obj-86",
 					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 24.0, 285.000005066093422, 30.0, 30.0 ]
+					"patching_rect" : [ 50.0, 325.0, 30.0, 30.0 ]
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"source" : [ "obj-3", 0 ]
+					"destination" : [ "obj-86", 0 ],
+					"source" : [ "obj-75", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-375", 0 ]
+					"destination" : [ "obj-78", 0 ],
+					"source" : [ "obj-77", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-378", 0 ]
+					"destination" : [ "obj-75", 0 ],
+					"source" : [ "obj-78", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-375", 0 ],
-					"source" : [ "obj-4", 0 ]
+					"destination" : [ "obj-77", 0 ],
+					"source" : [ "obj-84", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-378", 0 ],
-					"source" : [ "obj-7", 0 ]
+					"destination" : [ "obj-77", 1 ],
+					"source" : [ "obj-85", 0 ]
 				}
 
 			}

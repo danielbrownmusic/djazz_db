@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -653.0, 659.0, 415.0, 463.0 ],
+		"rect" : [ 1144.0, 383.0, 535.0, 640.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,14 +40,75 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "(s) dict name",
-					"id" : "obj-4",
-					"index" : 1,
+					"comment" : "entries at key, one by one",
+					"id" : "obj-9",
+					"index" : 0,
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 111.0, 484.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 36.0, 103.0, 136.5, 22.0 ],
+					"text" : "t s s"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"patching_rect" : [ 111.0, 403.0, 104.0, 22.0 ],
+					"text" : "du.get_at"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "(sym) key",
+					"id" : "obj-6",
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 36.0, 22.0, 30.0, 30.0 ]
+					"patching_rect" : [ 36.0, 16.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"patching_rect" : [ 36.0, 225.0, 83.0, 22.0 ],
+					"text" : "du.get_size"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "(s) dict name",
+					"id" : "obj-4",
+					"index" : 0,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 196.0, 16.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -55,36 +116,11 @@
 				"box" : 				{
 					"comment" : "bang when done iterating",
 					"id" : "obj-3",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 36.0, 371.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "(a) in succession: each item in array at key (given as argument)",
-					"id" : "obj-2",
-					"index" : 2,
-					"maxclass" : "outlet",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 111.0, 371.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-461",
-					"linecount" : 2,
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 111.0, 283.0, 166.0, 35.0 ],
-					"text" : "djazz_dict_get_at_key_index #1"
+					"patching_rect" : [ 36.0, 484.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -185,7 +221,7 @@
 							}
 , 							{
 								"box" : 								{
-									"comment" : "",
+									"comment" : "(int) 0 up to count, output one ny one",
 									"id" : "obj-316",
 									"index" : 2,
 									"maxclass" : "outlet",
@@ -227,7 +263,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 36.0, 197.499999000000003, 94.0, 22.0 ],
+					"patching_rect" : [ 36.0, 308.499999000000003, 94.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -239,28 +275,8 @@
 				}
 
 			}
-, 			{
-				"box" : 				{
-					"id" : "obj-1",
-					"linecount" : 2,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 36.0, 124.0, 125.0, 35.0 ],
-					"text" : "djazz_dict_get_count #1"
-				}
-
-			}
  ],
 		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-317", 0 ],
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-317", 0 ]
@@ -269,14 +285,14 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-461", 0 ],
+					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-317", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-5", 1 ],
 					"order" : 1,
 					"source" : [ "obj-4", 0 ]
 				}
@@ -284,8 +300,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-461", 1 ],
-					"midpoints" : [ 45.5, 87.0, 267.5, 87.0 ],
+					"destination" : [ "obj-7", 2 ],
 					"order" : 0,
 					"source" : [ "obj-4", 0 ]
 				}
@@ -293,12 +308,77 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-461", 0 ]
+					"destination" : [ "obj-317", 0 ],
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
- ]
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 1 ],
+					"source" : [ "obj-8", 1 ]
+				}
+
+			}
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "du.does_index_exist.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools/dict",
+				"patcherrelativepath" : "./dict",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "du.does_key_exist.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools/dict",
+				"patcherrelativepath" : "./dict",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "du.get_at.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools/dict",
+				"patcherrelativepath" : "./dict",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "du.get_at_no_error_check.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools/dict",
+				"patcherrelativepath" : "./dict",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "du.get_size.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools/dict",
+				"patcherrelativepath" : "./dict",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }

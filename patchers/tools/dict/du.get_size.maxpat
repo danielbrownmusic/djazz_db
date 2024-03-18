@@ -40,6 +40,18 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 106.0, 462.0, 63.0, 22.0 ],
+					"text" : "getsize $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "bang if key doesn't exist",
 					"id" : "obj-17",
 					"index" : 0,
@@ -118,18 +130,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-8",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 106.0, 465.0, 42.0, 22.0 ],
-					"text" : "get $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-3",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -154,7 +154,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "(sym) entry if key it exists",
+					"comment" : "(int) number of entries at key if key it exists",
 					"id" : "obj-29",
 					"index" : 0,
 					"maxclass" : "outlet",
@@ -236,7 +236,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
+					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -273,7 +273,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
-					"source" : [ "obj-8", 0 ]
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
