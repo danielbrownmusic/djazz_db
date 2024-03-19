@@ -104,7 +104,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "(int) index of state added",
 					"id" : "obj-13",
 					"index" : 1,
 					"maxclass" : "outlet",
