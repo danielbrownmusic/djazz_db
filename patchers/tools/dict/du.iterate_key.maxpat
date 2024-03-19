@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -42,7 +42,7 @@
 				"box" : 				{
 					"comment" : "entries at key, one by one",
 					"id" : "obj-9",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -78,11 +78,11 @@
 				"box" : 				{
 					"comment" : "(sym) key",
 					"id" : "obj-6",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "beats" ],
 					"patching_rect" : [ 36.0, 16.0, 30.0, 30.0 ]
 				}
 
@@ -103,7 +103,7 @@
 				"box" : 				{
 					"comment" : "(s) dict name",
 					"id" : "obj-4",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -116,11 +116,11 @@
 				"box" : 				{
 					"comment" : "bang when done iterating",
 					"id" : "obj-3",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 36.0, 484.0, 30.0, 30.0 ]
+					"patching_rect" : [ 285.0, 484.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -136,7 +136,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -279,6 +279,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
+					"midpoints" : [ 45.5, 372.749999500000001, 294.5, 372.749999500000001 ],
 					"source" : [ "obj-317", 0 ]
 				}
 
@@ -293,6 +294,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 1 ],
+					"midpoints" : [ 205.5, 178.0, 109.5, 178.0 ],
 					"order" : 1,
 					"source" : [ "obj-4", 0 ]
 				}
@@ -309,7 +311,9 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-317", 0 ],
-					"source" : [ "obj-5", 0 ]
+					"source" : [ "obj-5", 0 ],
+					"watchpoint_flags" : 1,
+					"watchpoint_id" : 49
 				}
 
 			}
@@ -341,44 +345,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "du.does_index_exist.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools/dict",
-				"patcherrelativepath" : "./dict",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "du.does_key_exist.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools/dict",
-				"patcherrelativepath" : "./dict",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "du.get_at.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools/dict",
-				"patcherrelativepath" : "./dict",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "du.get_at_no_error_check.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools/dict",
-				"patcherrelativepath" : "./dict",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "du.get_size.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools/dict",
-				"patcherrelativepath" : "./dict",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

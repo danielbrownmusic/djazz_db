@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -54,11 +54,11 @@
 				"box" : 				{
 					"id" : "obj-73",
 					"maxclass" : "newobj",
-					"numinlets" : 3,
+					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "dictionary" ],
-					"patching_rect" : [ 50.0, 136.0, 169.0, 22.0 ],
-					"text" : "dict.pack tag: links: suffix_link:"
+					"patching_rect" : [ 50.0, 136.0, 79.0, 22.0 ],
+					"text" : "dict.pack tag:"
 				}
 
 			}
