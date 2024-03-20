@@ -4,32 +4,32 @@
 			"type" : "m7"
 		}
 , 		{
-			"root" : 0,
-			"type" : "m7"
+			"type" : "m7",
+			"root" : 0
 		}
 , 		{
-			"root" : 5,
-			"type" : "m7"
+			"type" : "m7",
+			"root" : 5
 		}
 , 		{
-			"root" : 5,
-			"type" : "m7"
+			"type" : "m7",
+			"root" : 5
 		}
 , 		{
-			"root" : 0,
-			"type" : "m7"
-		}
-, 		{
-			"root" : 0,
-			"type" : "m7"
+			"type" : "m7",
+			"root" : 0
 		}
 , 		{
 			"root" : 7,
-			"type" : "m7"
+			"type" : "7"
 		}
 , 		{
-			"root" : 0,
-			"type" : "m7"
+			"type" : "7",
+			"root" : 7
+		}
+, 		{
+			"type" : "m7",
+			"root" : 0
 		}
  ]
 }
