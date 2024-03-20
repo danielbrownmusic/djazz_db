@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1144.0, 383.0, 535.0, 640.0 ],
+		"rect" : [ -902.0, 385.0, 535.0, 640.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -136,7 +136,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -287,7 +287,9 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
-					"source" : [ "obj-317", 1 ]
+					"source" : [ "obj-317", 1 ],
+					"watchpoint_flags" : 1,
+					"watchpoint_id" : 22
 				}
 
 			}
@@ -311,9 +313,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-317", 0 ],
-					"source" : [ "obj-5", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 49
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
