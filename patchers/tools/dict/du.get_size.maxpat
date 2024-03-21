@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -198,7 +198,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "links" ],
 					"patching_rect" : [ 13.0, 12.0, 30.0, 30.0 ]
 				}
 
@@ -214,9 +214,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
-					"source" : [ "obj-11", 1 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 53
+					"source" : [ "obj-11", 1 ]
 				}
 
 			}
@@ -248,9 +246,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
-					"source" : [ "obj-13", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 54
+					"source" : [ "obj-13", 0 ]
 				}
 
 			}

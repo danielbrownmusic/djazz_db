@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -135,9 +135,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-26", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 17
+					"source" : [ "obj-26", 0 ]
 				}
 
 			}
@@ -165,9 +163,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-26", 0 ],
-					"source" : [ "obj-8", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 40
+					"source" : [ "obj-8", 0 ]
 				}
 
 			}

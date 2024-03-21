@@ -180,7 +180,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "beats" ],
 					"patching_rect" : [ 189.0, 17.0, 30.0, 30.0 ]
 				}
 
@@ -237,9 +237,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-30", 0 ],
-					"source" : [ "obj-1", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 3
+					"source" : [ "obj-1", 0 ]
 				}
 
 			}
@@ -265,18 +263,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-67", 2 ],
 					"order" : 0,
-					"source" : [ "obj-12", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 5
+					"source" : [ "obj-12", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-30", 1 ],
-					"source" : [ "obj-2", 0 ],
-					"watchpoint_flags" : 1,
-					"watchpoint_id" : 4
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}

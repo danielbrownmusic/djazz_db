@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -102,18 +102,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-22",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 130.0, 210.0, 29.5, 22.0 ],
-					"text" : "- 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"comment" : "(int) next int or no output if count is reached",
 					"id" : "obj-15",
 					"index" : 1,
@@ -127,7 +115,6 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-14",
-					"int" : 1,
 					"maxclass" : "gswitch2",
 					"numinlets" : 2,
 					"numoutlets" : 2,
@@ -173,6 +160,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 4 ],
+					"source" : [ "obj-2", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-1", 2 ],
 					"source" : [ "obj-2", 0 ]
 				}
@@ -183,20 +177,6 @@
 					"destination" : [ "obj-14", 0 ],
 					"midpoints" : [ 188.0, 374.0, 22.5, 374.0 ],
 					"source" : [ "obj-2", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-22", 0 ],
-					"source" : [ "obj-2", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 4 ],
-					"source" : [ "obj-22", 0 ]
 				}
 
 			}
