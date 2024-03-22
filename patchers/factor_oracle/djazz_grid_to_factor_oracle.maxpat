@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 196.0, 87.0, 950.0, 1139.0 ],
+		"rect" : [ 196.0, 87.0, 608.0, 1104.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,61 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-23",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 580.0, 115.600007206201553, 67.0, 22.0 ],
+					"text" : "v ORACLE"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-22",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 580.0, 65.5, 58.0, 22.0 ],
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 580.0, 159.5, 55.0, 22.0 ],
+					"text" : "name $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-17",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 556.0, 14.600007206201553, 82.0, 35.0 ],
+					"text" : "v ORACLE #0_ORACLE"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-5",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 536.0, 131.20001083612442, 137.0, 47.0 ],
+					"patching_rect" : [ 684.0, 219.20001083612442, 137.0, 47.0 ],
 					"text" : "link:\n   target_state:   (int)\n   label:              (tag)"
 				}
 
@@ -57,7 +106,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 536.0, 77.70001083612442, 137.0, 47.0 ],
+					"patching_rect" : [ 684.0, 165.70001083612442, 137.0, 47.0 ],
 					"text" : "state:\n   suffix_link:    (int)\n   links:  (array[link])"
 				}
 
@@ -69,7 +118,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 536.0, 11.20001083612442, 137.0, 60.0 ],
+					"patching_rect" : [ 684.0, 99.20001083612442, 137.0, 60.0 ],
 					"text" : "beat:\n   number:       (int)    (?)\n   chord_root:  (int)\n   chord_type: (sym)"
 				}
 
@@ -645,9 +694,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 264.099993864494365, 366.200014412403107, 113.0, 22.0 ],
-					"text" : "djazz_factor_oracle"
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 264.099993864494365, 366.200014412403107, 78.0, 22.0 ],
+					"text" : "factor_oracle"
 				}
 
 			}
@@ -1099,6 +1148,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-21", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-215", 0 ],
 					"source" : [ "obj-214", 0 ]
 				}
@@ -1108,6 +1164,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-220", 0 ],
 					"source" : [ "obj-215", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
+					"source" : [ "obj-22", 0 ]
 				}
 
 			}
@@ -1136,6 +1199,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-229", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
+					"source" : [ "obj-23", 0 ]
 				}
 
 			}
@@ -1221,13 +1291,6 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "djazz_factor_oracle.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/factor_oracle",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "djazz_step_until_count.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools/iterators",
 				"patcherrelativepath" : "../tools/iterators",
@@ -1291,9 +1354,16 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "fo.oracle.add_state.maxpat",
+				"name" : "factor_oracle.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/factor_oracle",
 				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "fo.oracle.add_state.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/factor_oracle/factor_oracle",
+				"patcherrelativepath" : "./factor_oracle",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1306,43 +1376,43 @@
 			}
 , 			{
 				"name" : "fo.state.add_link.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/factor_oracle",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/factor_oracle/state",
+				"patcherrelativepath" : "./state",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fo.state.compare_tags.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/factor_oracle",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/factor_oracle/state",
+				"patcherrelativepath" : "./state",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fo.state.get_link_matching_tag.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/factor_oracle",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/factor_oracle/state",
+				"patcherrelativepath" : "./state",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fo.state.get_suffix_link.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/factor_oracle",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/factor_oracle/state",
+				"patcherrelativepath" : "./state",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fo.state.get_tag.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/factor_oracle",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/factor_oracle/state",
+				"patcherrelativepath" : "./state",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fo.state.set_suffix_link.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/factor_oracle",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/factor_oracle/state",
+				"patcherrelativepath" : "./state",
 				"type" : "JSON",
 				"implicit" : 1
 			}
