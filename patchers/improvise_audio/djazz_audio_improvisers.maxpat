@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2000.0, -117.0, 1811.0, 1134.0 ],
+		"rect" : [ -2898.0, -88.0, 1811.0, 1134.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,23 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-27",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1610.0, 255.0, 102.0, 20.0 ],
+					"text" : "to test playback"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-31",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1011.0, 538.0, 29.5, 22.0 ],
+					"patching_rect" : [ 1612.299654215574265, 290.0, 29.5, 22.0 ],
 					"text" : "0"
 				}
 
@@ -58,7 +69,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1153.0, 441.0, 24.0, 24.0 ]
+					"patching_rect" : [ 1647.880694094146747, 290.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -69,7 +80,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 1055.0, 536.0, 73.0, 22.0 ],
+					"patching_rect" : [ 1647.880694094146747, 337.0, 73.0, 22.0 ],
 					"text" : "random 150"
 				}
 
@@ -81,7 +92,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "bang", "bang", "bang" ],
-					"patching_rect" : [ 1078.299654215574265, 638.0, 119.5, 22.0 ],
+					"patching_rect" : [ 1612.299654215574265, 419.0, 119.5, 22.0 ],
 					"text" : "t i b b b"
 				}
 
@@ -94,7 +105,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1027.418960121427517, 571.387332141399384, 50.0, 22.0 ]
+					"patching_rect" : [ 1612.299654215574265, 372.387332141399384, 58.0, 22.0 ]
 				}
 
 			}
@@ -192,7 +203,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 59.0, 106.0, 640.0, 480.0 ],
+						"rect" : [ -1399.0, 158.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2849,7 +2860,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 1545.352178849878783, 102.927427957536565, 103.0, 22.0 ],
+					"patching_rect" : [ 1104.352178849878783, 126.225560303298948, 103.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -3895,42 +3906,42 @@
 , 			{
 				"name" : "djazz_audio_load.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/audio_record_play",
-				"patcherrelativepath" : ".",
+				"patcherrelativepath" : "../audio_record_play",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "djazz_audio_play.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/audio_record_play",
-				"patcherrelativepath" : ".",
+				"patcherrelativepath" : "../audio_record_play",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "djazz_audio_record.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/audio_record_play",
-				"patcherrelativepath" : ".",
+				"patcherrelativepath" : "../audio_record_play",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "djazz_get_bangs_and_tempo.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/audio_record_play",
-				"patcherrelativepath" : ".",
+				"patcherrelativepath" : "../audio_record_play",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "djazz_play_beat.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/audio_record_play",
-				"patcherrelativepath" : ".",
+				"patcherrelativepath" : "../audio_record_play",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "djazz_tempo_to_ms.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
-				"patcherrelativepath" : "../tools",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools/conversion",
+				"patcherrelativepath" : "../tools/conversion",
 				"type" : "JSON",
 				"implicit" : 1
 			}

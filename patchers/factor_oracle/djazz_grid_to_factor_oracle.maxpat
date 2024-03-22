@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 41.0, 87.0, 325.0, 1130.0 ],
+		"rect" : [ 196.0, 87.0, 950.0, 1139.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,42 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 536.0, 131.20001083612442, 137.0, 47.0 ],
+					"text" : "link:\n   target_state:   (int)\n   label:              (tag)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 536.0, 77.70001083612442, 137.0, 47.0 ],
+					"text" : "state:\n   suffix_link:    (int)\n   links:  (array[link])"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-13",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 536.0, 11.20001083612442, 137.0, 60.0 ],
+					"text" : "beat:\n   number:       (int)    (?)\n   chord_root:  (int)\n   chord_type: (sym)"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-31",
 					"maxclass" : "newobj",
@@ -72,10 +108,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 354.099993864494365, 60.0, 160.0, 33.0 ],
+					"patching_rect" : [ 354.099993864494365, 60.0, 163.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 194.300002137619003, 3.199999928474426, 160.0, 33.0 ],
+					"presentation_rect" : [ 194.300002137619003, 3.199999928474426, 163.0, 33.0 ],
 					"text" : "next CHORD CHANGE beat & just added ORACLE beat"
 				}
 
@@ -869,7 +905,7 @@
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 172.099993864494365, 221.900029849704879, 180.0, 916.400004804134483 ],
+					"patching_rect" : [ 144.599993864494365, 493.900029849704765, 180.0, 916.400004804134483 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 139.30000213761906, 39.900029849704765, 166.0, 1126.400004804134369 ]
 				}
@@ -1276,7 +1312,28 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "fo.state.compare_tags.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/factor_oracle",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "fo.state.get_link_matching_tag.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/factor_oracle",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "fo.state.get_suffix_link.maxpat",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/factor_oracle",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "fo.state.get_tag.maxpat",
 				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/factor_oracle",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
