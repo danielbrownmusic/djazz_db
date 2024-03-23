@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 5,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -50,7 +50,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -84,7 +84,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-31",
@@ -97,7 +96,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 5,
-											"revision" : 5,
+											"revision" : 4,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -461,7 +460,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 34.0, 138.0, 108.0, 22.0 ],
+					"patching_rect" : [ 34.0, 126.0, 108.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -485,7 +484,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 5,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -531,7 +530,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 5,
-											"revision" : 5,
+											"revision" : 4,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -825,7 +824,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 203.0, 138.0, 49.0, 22.0 ],
+					"patching_rect" : [ 203.0, 126.0, 49.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -845,7 +844,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 34.0, 231.113249039855987, 30.0, 30.0 ]
+					"patching_rect" : [ 34.0, 219.113249039855987, 30.0, 30.0 ]
 				}
 
 			}
@@ -896,7 +895,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 203.0, 231.113249039855987, 30.0, 30.0 ]
+					"patching_rect" : [ 203.0, 219.113249039855987, 30.0, 30.0 ]
 				}
 
 			}
@@ -925,6 +924,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
+					"midpoints" : [ 43.5, 85.999999500000001, 212.5, 85.999999500000001 ],
 					"order" : 0,
 					"source" : [ "obj-2", 0 ]
 				}
