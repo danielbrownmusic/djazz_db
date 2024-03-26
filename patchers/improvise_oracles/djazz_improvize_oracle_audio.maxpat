@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 702.0, 253.0, 1053.0, 852.0 ],
+		"rect" : [ -2046.0, 171.0, 1053.0, 852.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -129,7 +129,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 789.0, 381.0, 48.0, 22.0 ],
+					"patching_rect" : [ 576.0, 240.0, 48.0, 22.0 ],
 					"text" : "take $1"
 				}
 
@@ -140,7 +140,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 789.0, 428.0, 85.0, 22.0 ],
+					"patching_rect" : [ 576.0, 287.0, 85.0, 22.0 ],
 					"text" : "djazz.beat_list"
 				}
 
@@ -152,7 +152,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 432.0, 47.0, 59.0, 22.0 ],
+					"patching_rect" : [ 581.0, 177.0, 59.0, 22.0 ],
 					"restore" : [ 0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
