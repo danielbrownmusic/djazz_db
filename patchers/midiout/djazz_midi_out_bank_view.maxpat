@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1795.0, 90.0, 1314.0, 989.0 ],
+		"rect" : [ -3016.0, -53.0, 784.0, 512.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -275,7 +275,7 @@
 					"midpoints" : [ 167.5, 607.5, 237.5, 607.5 ],
 					"source" : [ "obj-8", 1 ],
 					"watchpoint_flags" : 5,
-					"watchpoint_id" : 17
+					"watchpoint_id" : 10
 				}
 
 			}
@@ -311,8 +311,8 @@
 			}
 , 			{
 				"name" : "djazz_make_full_path.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
-				"patcherrelativepath" : "../tools",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools/file_path",
+				"patcherrelativepath" : "../tools/file_path",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -346,7 +346,7 @@
 			}
  ],
 		"autosave" : 0,
-		"bgcolor" : [ 0.533333333333333, 0.6, 0.654901960784314, 1.0 ],
+		"bgcolor" : [ 0.294117647058824, 0.631372549019608, 0.905882352941176, 1.0 ],
 		"editing_bgcolor" : [ 0.796078431372549, 0.796078431372549, 0.796078431372549, 1.0 ]
 	}
 

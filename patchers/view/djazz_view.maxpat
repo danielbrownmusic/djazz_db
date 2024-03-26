@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 95.0, 91.0, 1459.0, 1041.0 ],
+		"rect" : [ -2272.0, 90.0, 1459.0, 1041.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -578,7 +578,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 913.166605234146118, -48.333333253860474, 157.33333420753479, 37.333330631256104 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 19.696199041396994, 6.666668176651001, 157.33333420753479, 37.333330631256104 ],
+					"presentation_rect" : [ 73.39249583441142, 48.666668176651001, 157.33333420753479, 37.333330631256104 ],
 					"viewvisibility" : 1
 				}
 
@@ -2653,7 +2653,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 95.333239197731018, 145.249995583465534, 383.66667628288269, 57.666665196418762 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 296.999897718429565, 47.333334684371948, 386.333344340324402, 54.333331823348999 ],
+					"presentation_rect" : [ 350.696194511443991, 89.333334684371948, 386.333344340324402, 54.333331823348999 ],
 					"varname" : "djazz_view_load_score_files",
 					"viewvisibility" : 1
 				}
@@ -2677,7 +2677,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 43.666567087173462, 35.333333253860474, 271.66667628288269, 62.666666030883789 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 13.999897718429565, 41.666668176651001, 269.666677474975586, 59.999998331069946 ],
+					"presentation_rect" : [ 67.696194511443991, 83.666668176651001, 269.666677474975586, 59.999998331069946 ],
 					"varname" : "djazz_view_load_song_folder",
 					"viewvisibility" : 1
 				}
@@ -2708,7 +2708,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 1238.083303570747375, 669.666665670360544, 59.333330631256104, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 444.029533248931784, 295.166666030883789, 63.0, 20.0 ],
+					"presentation_rect" : [ 659.029533248931784, 363.166666030883789, 63.0, 20.0 ],
 					"text" : "OCTAVE",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -2731,7 +2731,7 @@
 					"offset" : [ 0.0, 0.0 ],
 					"patching_rect" : [ 1307.499967694282532, 648.999999997104624, 389.333341121673584, 61.333331346511841 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 509.029533248931784, 276.666666030883789, 377.0, 57.0 ],
+					"presentation_rect" : [ 751.725829624713697, 336.666666030883789, 377.0, 57.0 ],
 					"varname" : "transpose_octave",
 					"viewvisibility" : 1
 				}
@@ -2780,7 +2780,7 @@
 					"offset" : [ 0.0, 0.0 ],
 					"patching_rect" : [ 1234.083303570747375, 412.250002412540425, 477.5, 307.500002679313639 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 440.029533248931784, 113.333333492279053, 453.0, 228.0 ],
+					"presentation_rect" : [ 616.725829624713697, 170.333333492279053, 550.0, 228.0 ],
 					"varname" : "midi_player_1",
 					"viewvisibility" : 1
 				}
@@ -2829,7 +2829,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1120.499965071678162, 98.583334355098714, 645.083338499069214, 292.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 13.999897718429565, 343.333333492279053, 1099.029635113269705, 362.999999046325684 ],
+					"presentation_rect" : [ 67.696194511443991, 438.333333492279053, 1099.029635113269705, 362.999999046325684 ],
 					"varname" : "midi_out_bank",
 					"viewvisibility" : 1
 				}
@@ -2894,7 +2894,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 677.833304643630981, 143.083328181674915, 109.999993681907654, 62.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ -2281, 93, -1803, 624 ],
+						"client_rect" : [ 1037, 128, 1515, 659 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
 						"storage_rect" : [ 583, 69, 1034, 197 ]
@@ -2923,7 +2923,7 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 52.833278059959412, 447.583335904819478, 532.0, 291.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 13.999897718429565, 113.333333492279053, 420.362882000000013, 228.0 ],
+					"presentation_rect" : [ 67.696194511443991, 170.333333492279053, 529.362882000000013, 228.0 ],
 					"varname" : "master",
 					"viewvisibility" : 1
 				}
@@ -3274,8 +3274,8 @@
 			}
 , 			{
 				"name" : "djazz_make_full_path.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
-				"patcherrelativepath" : "../tools",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools/file_path",
+				"patcherrelativepath" : "../tools/file_path",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -3302,8 +3302,8 @@
 			}
 , 			{
 				"name" : "djazz_metro_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
-				"patcherrelativepath" : "../tools",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/beatclock",
+				"patcherrelativepath" : "../beatclock",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -3379,15 +3379,15 @@
 			}
 , 			{
 				"name" : "djazz_number_button.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
-				"patcherrelativepath" : "../tools",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools/gui",
+				"patcherrelativepath" : "../tools/gui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "djazz_range.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
-				"patcherrelativepath" : "../tools",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools/iterators",
+				"patcherrelativepath" : "../tools/iterators",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -3414,8 +3414,8 @@
 			}
 , 			{
 				"name" : "djazz_speed_button.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
-				"patcherrelativepath" : "../tools",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools/gui",
+				"patcherrelativepath" : "../tools/gui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -3463,8 +3463,8 @@
 			}
  ],
 		"autosave" : 0,
-		"bgcolor" : [ 0.356862745098039, 0.356862745098039, 0.356862745098039, 1.0 ],
-		"editing_bgcolor" : [ 0.768627450980392, 0.788235294117647, 0.792156862745098, 1.0 ]
+		"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+		"editing_bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 	}
 
 }

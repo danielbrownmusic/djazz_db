@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2541.0, 119.0, 1816.0, 918.0 ],
+		"rect" : [ -2541.0, 119.0, 754.0, 635.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -550,7 +550,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
 					"midpoints" : [ 89.916681533334213, 294.5, 284.183362866668631, 294.5 ],
-					"order" : 1,
+					"order" : 2,
 					"source" : [ "obj-27", 0 ]
 				}
 
@@ -559,7 +559,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-19", 0 ],
 					"midpoints" : [ 89.916681533334213, 293.5, 89.916681533334213, 293.5 ],
-					"order" : 2,
+					"order" : 1,
 					"source" : [ "obj-27", 0 ]
 				}
 
@@ -791,8 +791,8 @@
 			}
 , 			{
 				"name" : "djazz_metro_view.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
-				"patcherrelativepath" : "../tools",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/beatclock",
+				"patcherrelativepath" : "../beatclock",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -819,8 +819,8 @@
 			}
 , 			{
 				"name" : "djazz_range.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools",
-				"patcherrelativepath" : "../tools",
+				"bootpath" : "~/Documents/Max 8/Projects/djazz_db/patchers/tools/iterators",
+				"patcherrelativepath" : "../tools/iterators",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -833,7 +833,7 @@
 			}
  ],
 		"autosave" : 0,
-		"bgcolor" : [ 0.490196078431373, 0.490196078431373, 0.490196078431373, 1.0 ],
+		"bgcolor" : [ 0.776470588235294, 0.592156862745098, 0.192156862745098, 1.0 ],
 		"editing_bgcolor" : [ 0.823529411764706, 0.827450980392157, 0.823529411764706, 1.0 ]
 	}
 

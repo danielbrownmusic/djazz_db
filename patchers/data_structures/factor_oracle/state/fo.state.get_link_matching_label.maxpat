@@ -315,7 +315,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "" ],
-					"patching_rect" : [ 147.0, 310.5, 136.0, 22.0 ],
+					"patching_rect" : [ 147.0, 305.5, 136.0, 22.0 ],
 					"text" : "fo.state.compare_labels",
 					"textcolor" : [ 0.862745098039216, 0.925490196078431, 0.380392156862745, 1.0 ],
 					"varname" : "fo.state.compare_tags"

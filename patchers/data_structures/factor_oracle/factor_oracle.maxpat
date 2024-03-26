@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -2197.0, -127.0, 1951.0, 975.0 ],
+		"rect" : [ 152.0, 195.0, 1951.0, 975.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -299,8 +299,9 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
-					"patching_rect" : [ 1147.0, 292.0, 183.0, 22.0 ],
-					"text" : "fo.state.get_link_matching_tag"
+					"patching_rect" : [ 1147.0, 292.0, 180.0, 22.0 ],
+					"text" : "fo.state.get_link_matching_label",
+					"varname" : "fo.state.get_link_matching_tag"
 				}
 
 			}
@@ -323,8 +324,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1147.0, 99.0, 135.0, 22.0 ],
-					"text" : "route get_matching_tag"
+					"patching_rect" : [ 1147.0, 99.0, 136.0, 22.0 ],
+					"text" : "route get_matching_link"
 				}
 
 			}
@@ -533,8 +534,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 581.0, 98.777777777777771, 79.0, 22.0 ],
-					"text" : "route get_tag"
+					"patching_rect" : [ 581.0, 98.777777777777771, 88.0, 22.0 ],
+					"text" : "route get_label"
 				}
 
 			}
@@ -545,8 +546,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 581.0, 278.333333333333314, 92.0, 22.0 ],
-					"text" : "fo.state.get_tag"
+					"patching_rect" : [ 581.0, 278.333333333333314, 100.0, 22.0 ],
+					"text" : "fo.state.get_label"
 				}
 
 			}
@@ -1087,7 +1088,8 @@
 																	"numoutlets" : 3,
 																	"outlettype" : [ "int", "", "" ],
 																	"patching_rect" : [ 102.25, 189.0, 230.0, 22.0 ],
-																	"text" : "fo.state.get_link_matching_tag"
+																	"text" : "fo.state.get_link_matching_tag",
+																	"varname" : "fo.state.get_link_matching_tag"
 																}
 
 															}
@@ -1271,7 +1273,8 @@
 														"tags" : ""
 													}
 ,
-													"text" : "p has_matching_link"
+													"text" : "p has_matching_link",
+													"varname" : "has_matching_link"
 												}
 
 											}
@@ -2011,7 +2014,8 @@
 										"tags" : ""
 									}
 ,
-									"text" : "p add_letter"
+									"text" : "p add_letter",
+									"varname" : "add_letter"
 								}
 
 							}
@@ -2208,7 +2212,8 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p add_state"
+					"text" : "p add_state",
+					"varname" : "add_state"
 				}
 
 			}
@@ -2614,7 +2619,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "clear" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 25.0, 8.0, 30.0, 30.0 ]
 				}
 
@@ -2626,8 +2631,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 227.0, 98.777777777777771, 66.0, 22.0 ],
-					"text" : "route reset"
+					"patching_rect" : [ 227.0, 98.777777777777771, 65.0, 22.0 ],
+					"text" : "route clear"
 				}
 
 			}
@@ -2675,7 +2680,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1768.0, 29.0, 147.0, 35.0 ],
+					"patching_rect" : [ 1525.0, 24.0, 153.0, 35.0 ],
 					"text" : "v ORACLE #0_FACTOR_ORACLE"
 				}
 

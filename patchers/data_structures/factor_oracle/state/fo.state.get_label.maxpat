@@ -70,7 +70,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 50.0, 159.0, 77.0, 22.0 ],
+					"patching_rect" : [ 50.0, 175.0, 77.0, 22.0 ],
 					"text" : "dictionary $1"
 				}
 
@@ -82,7 +82,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 50.0, 221.0, 101.0, 22.0 ],
+					"patching_rect" : [ 50.0, 239.0, 101.0, 22.0 ],
 					"text" : "dict.unpack label:"
 				}
 
@@ -108,7 +108,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 50.0, 299.0, 30.0, 30.0 ]
+					"patching_rect" : [ 50.0, 314.0, 30.0, 30.0 ]
 				}
 
 			}
